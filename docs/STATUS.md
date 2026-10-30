@@ -805,6 +805,6 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Eventos reutilizados:** ya existían en la rama `EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001` (pp. 46–51) y `EVT-DM-V01-BELL-DEFEATS-GOBLIN-AND-GETS-TOOTH-001` (p. 53). No se crearon IDs duplicados; esta tanda los integrará en los índices y catálogo centrales.
 - **Snapshot Bell, PDF p. 54, Lv. 1:** Fuerza I82→H120; Resistencia I13→I42; Destreza I96→H139; Agilidad H172→G225; Magia I0. Magia y Habilidades aparecen vacías. No se atribuyen los aumentos a un solo monstruo.
 - **Límite:** el nuevo ataque sorpresa de p. 54 queda abierto; no se registra un evento cerrado. El próximo folio es p. 55.
-- **Inspección visual:** pp. 49–54 renderizadas e inspeccionadas; seis páginas de texto, sin ilustraciones. La tabla de p. 54 se comprobó a página completa.
+- **Inspección visual:** pp. 49–54 se leyeron mediante el texto extraído; el extractor no entregó imágenes de página y no se hizo render en esa sesión. La inspección visual de esos folios, incluida la tabla de p. 54, permanece pendiente.
 - **Próximo trabajo:** lectura desde p. 55; inspecciones visuales pendientes pp. 19–21 y 23–24; cotejo individual y contraste web permanecen abiertos.
 - **Rama:** `research/danmachi-v1-primary-pp49-54-2026-10-30`, basada en `main` SHA `12f2e60d79b8a3dbe9e1a998a375ecd7cafef684`. No se declara integrada ni validada todavía.
