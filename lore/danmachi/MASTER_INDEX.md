@@ -8,7 +8,7 @@
 - [DANMACHI-RESEARCH-057](research/inbox/DANMACHI-RESEARCH-057-aisha-anya-chloe-capabilities.md) — capacidades secundarias de Aisha Belka, Anya Fromel y Chloe Rollo; cinco páginas comunitarias registradas, diferencia EN/ES conservada y campos no informados cerrados contra repetición.
 
 ## Extracción de acontecimientos por volumen
-- [Volumen 1 — dossier de canon primario](volumes/main/volume-01.md) — extracción secuencial actualizada hasta PDF p. 48; incluye el evento de primer encuentro Bell–Seal Flover y mantiene abierto el combate contra Kobolds.
+- [Volumen 1 — dossier de canon primario](volumes/main/volume-01.md) — extracción secuencial actualizada hasta PDF p. 54; incluye primer encuentro con Seal Flover, combate contra Kobolds, botín de monstruos y snapshot de Estado actualizado.
 - [DANMACHI-RESEARCH-061](research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md) — eventos y pasajes del Volumen 1; traducción privada no cotejada y límites de procedencia registrados.
 
 - [Volumen 2 — eventos temporales y localizadores](volumes/main/volume-02.md) — siete acontecimientos individuales de `CONT-MAIN-LN`, con páginas físicas del PDF y separación entre escenas de combate, adquisición/prueba de magia, traición, rescate y hallazgo de objeto. La traducción española aportada es privada y no está cotejada.\n- [DANMACHI-RESEARCH-060](research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md) — registro de procedencia, localizadores y límites de los siete eventos; no fija fechas absolutas ni convierte rumores en hechos confirmados.
