@@ -2590,6 +2590,82 @@
       ]
     },
     {
+      "id": "EVT-DM-V02-LILI-PARENTS-DIE-IN-DUNGEON-001",
+      "recordId": "EVT-DM-V02-LILI-PARENTS-DIE-IN-DUNGEON-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 735,
+      "title": "Los padres de Lili mueren en el Dungeon buscando recursos para el vino Soma",
+      "dateLabel": "Pasado de Lili · antes de su vida actual como Ayudante; fecha desconocida",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "La narración recuerda que los padres Hobbit de Lili pertenecían a Soma Familia y murieron por un ataque de monstruos mientras buscaban dinero para conseguir el vino Soma. El piso y la fecha no se identifican.",
+      "participants": [
+        {
+          "name": "Padres de Liliruca Arde (sin nombres)",
+          "kind": "character",
+          "role": "aventureros Hobbits fallecidos"
+        },
+        {
+          "name": "Monstruos del Dungeon",
+          "kind": "threat",
+          "role": "causan la muerte durante la expedición"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V02-LILI-PARENTS-DIE-IN-DUNGEON-001.md",
+      "sources": [
+        {
+          "label": "DMR-060 · Volumen 2 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Obra original oficial; traducción privada/no cotejada con el japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-LILI-PARENTS-DIE-IN-DUNGEON-001.md",
+          "kind": "internal",
+          "note": "Ficha con localizador físico y límites de traducción."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "before",
+        "referenceIds": [
+          "EVT-DM-V02-LILI-ABANDONS-BELL-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "Acontecimiento pasado de la infancia de Lili; ocurrió antes de su vida como Ayudante con Bell. No se conoce el intervalo.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-LILI-PARENTS-DIE-IN-DUNGEON-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "dungeon_general",
+        "reason": "El texto dice que los padres murieron atacados por monstruos mientras buscaban recursos en el Dungeon; no especifica el piso."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "dungeon_general",
+          "context": "El texto dice que los padres murieron atacados por monstruos mientras buscaban recursos en el Dungeon; no especifica el piso.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-LILI-PARENTS-DIE-IN-DUNGEON-001.md"
+          ]
+        }
+      ]
+    },
+    {
       "id": "EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001",
       "recordId": "EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001",
       "eraId": "ERA-05-MAIN-START",
@@ -2746,42 +2822,37 @@
       ]
     },
     {
-      "id": "EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001",
-      "recordId": "EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001",
+      "id": "EVT-DM-V02-LILI-REVEALS-HOBBIT-IDENTITY-001",
+      "recordId": "EVT-DM-V02-LILI-REVEALS-HOBBIT-IDENTITY-001",
       "eraId": "ERA-05-MAIN-START",
-      "sortIndex": 760,
-      "title": "Miembros de Soma Familia traicionan a Lili y la dejan como cebo",
-      "dateLabel": "Después de que Lili abandona a Bell; intervalo adicional no especificado.",
+      "sortIndex": 752,
+      "title": "Lili usa Cinder Ella y revela que su apariencia Beastman era un disfraz",
+      "dateLabel": "Después de separarse de Bell · huida desde el piso 10 hacia los pisos superiores",
       "continuityScopes": [
         "CONT-MAIN-LN"
       ],
       "evidenceStatus": "source_checked_translation_unverified",
-      "summary": "Kanu y otros miembros de Soma Familia traicionan a Lili, exigen la llave de su caja fuerte de joyas de Gnomo y la dejan como cebo ante las Hormigas Asesinas. El rescate de Bell se registra por separado.",
+      "summary": "Después de abandonar a Bell, Lili se quita el disfraz Beastman mediante Cinder Ella. El texto revela que es Hobbit y que había utilizado la magia para evadir a los aventureros a quienes robaba. Continúa su huida hacia los pisos 9, 8 y 7.",
       "participants": [
         {
           "id": "CHAR-LILIRUCA-ARDE",
           "name": "Liliruca Arde",
           "kind": "character",
-          "role": "es traicionada"
-        },
-        {
-          "name": "Kanu",
-          "kind": "character",
-          "role": "miembro de Soma Familia que participa en la traición"
+          "role": "usa Cinder Ella y continúa la huida"
         }
       ],
       "relatedEntities": [],
-      "detailPath": "events/timeline/EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001.md",
+      "detailPath": "events/timeline/EVT-DM-V02-LILI-REVEALS-HOBBIT-IDENTITY-001.md",
       "sources": [
         {
           "label": "DMR-060 · Volumen 2 aportado por el usuario",
           "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
           "kind": "user_supplied_source_report",
-          "note": "Obra original oficial; traducción privada/no editorial sin cotejo con el japonés."
+          "note": "Obra original oficial; traducción privada/no cotejada con el japonés."
         },
         {
           "label": "Registro individual del acontecimiento",
-          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001.md",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-LILI-REVEALS-HOBBIT-IDENTITY-001.md",
           "kind": "internal",
           "note": "Ficha con localizador físico y límites de traducción."
         }
@@ -2794,10 +2865,165 @@
         ],
         "distanceKnown": false,
         "precision": "order_only",
-        "qualifier": "Después de que Lili abandona a Bell; no se fija un intervalo adicional.",
+        "qualifier": "La transformación ocurre después de abandonar a Bell; continúa su huida por el Dungeon.",
         "sourceUrls": [
           "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
-          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001.md"
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-LILI-REVEALS-HOBBIT-IDENTITY-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "dungeon_general",
+        "reason": "El pasaje la sitúa en el trayecto desde el piso 10 hacia los pisos superiores del Dungeon."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "dungeon_general",
+          "context": "El pasaje la sitúa en el trayecto desde el piso 10 hacia los pisos superiores del Dungeon.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-LILI-REVEALS-HOBBIT-IDENTITY-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-HESTIA-EINA-DISCUSS-LILI-001",
+      "recordId": "EVT-DM-V02-HESTIA-EINA-DISCUSS-LILI-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 753,
+      "title": "Eina advierte a Hestia sobre Lili y Soma Familia",
+      "dateLabel": "En paralelo a la huida de Lili tras separarse de Bell",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Durante una inspección del Gremio en la tienda donde trabaja Hestia, Eina le pide hablar en privado sobre la Ayudante de Bell. Explica información sobre Soma Familia y pide que Hestia ayude a convencer a Bell para romper el contacto con Lili.",
+      "participants": [
+        {
+          "id": "DM-CHAR-HESTIA",
+          "name": "Hestia",
+          "kind": "character",
+          "role": "escucha la advertencia"
+        },
+        {
+          "id": "DM-CHAR-EINA",
+          "name": "Eina Tulle",
+          "kind": "character",
+          "role": "explica la situación y pide ayuda"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V02-HESTIA-EINA-DISCUSS-LILI-001.md",
+      "sources": [
+        {
+          "label": "DMR-060 · Volumen 2 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Obra original oficial; traducción privada/no cotejada con el japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-HESTIA-EINA-DISCUSS-LILI-001.md",
+          "kind": "internal",
+          "note": "Ficha con localizador físico y límites de traducción."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "overlaps",
+        "referenceIds": [
+          "EVT-DM-V02-LILI-REVEALS-HOBBIT-IDENTITY-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "La escena de Hestia y Eina se intercala con la huida de Lili; no se cuantifica una diferencia temporal.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-HESTIA-EINA-DISCUSS-LILI-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "La conversación ocurre durante una inspección del Gremio en la tienda donde Hestia trabaja, en Orario."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "city_level",
+          "context": "La conversación ocurre durante una inspección del Gremio en la tienda donde Hestia trabaja, en Orario.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-HESTIA-EINA-DISCUSS-LILI-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-GEDO-CAPTURES-LILI-001",
+      "recordId": "EVT-DM-V02-GEDO-CAPTURES-LILI-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 760,
+      "title": "Gedo embosca y captura a Lili en el séptimo piso",
+      "dateLabel": "Después de la huida de Lili desde el piso 10; séptimo piso del Dungeon",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Lili alcanza el séptimo piso después de escapar por rutas superiores. Gedo, un aventurero al que había robado antes, la embosca con colaboradores apostados en rutas de subida, la golpea y le quita parte de sus pertenencias.",
+      "participants": [
+        {
+          "id": "CHAR-LILIRUCA-ARDE",
+          "name": "Liliruca Arde",
+          "kind": "character",
+          "role": "es capturada y golpeada"
+        },
+        {
+          "name": "Gedo",
+          "kind": "character",
+          "role": "antiguo objetivo de robo que organiza la emboscada"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V02-GEDO-CAPTURES-LILI-001.md",
+      "sources": [
+        {
+          "label": "DMR-060 · Volumen 2 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Obra original oficial; traducción privada/no cotejada con el japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-GEDO-CAPTURES-LILI-001.md",
+          "kind": "internal",
+          "note": "Ficha con localizador físico y límites de traducción."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V02-LILI-REVEALS-HOBBIT-IDENTITY-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "La captura sucede al final de la huida de Lili; el texto no indica cuánto tiempo pasó.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-GEDO-CAPTURES-LILI-001.md"
         ]
       },
       "narrativeOrigin": {
@@ -2806,7 +3032,7 @@
       "locationAssessment": {
         "status": "verified",
         "spatialPrecision": "floor_context",
-        "reason": "La traición sucede en el Dungeon durante la huida de Lili."
+        "reason": "El texto identifica el séptimo piso como escenario de la emboscada."
       },
       "locationRefs": [
         {
@@ -2814,10 +3040,97 @@
           "relationship": "event_place",
           "verificationStatus": "verified",
           "spatialPrecision": "floor_context",
-          "context": "La traición sucede en el Dungeon durante la huida de Lili.",
+          "context": "El texto identifica el séptimo piso como escenario de la emboscada.",
           "sourceUrls": [
             "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
-            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001.md"
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-GEDO-CAPTURES-LILI-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-SOMA-ABANDONS-LILI-AS-BAIT-001",
+      "recordId": "EVT-DM-V02-SOMA-ABANDONS-LILI-AS-BAIT-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 765,
+      "title": "Kanu y miembros de Soma traicionan a Gedo y abandonan a Lili como cebo",
+      "dateLabel": "Después de la captura de Lili por Gedo; séptimo piso del Dungeon",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Kanu y otros miembros de Soma Familia revelan su intención de apropiarse de lo que Gedo robó a Lili. La obligan a entregar la llave de una caja fuerte de alquiler y la arrojan como cebo ante las Hormigas Asesinas para escapar.",
+      "participants": [
+        {
+          "id": "CHAR-LILIRUCA-ARDE",
+          "name": "Liliruca Arde",
+          "kind": "character",
+          "role": "entrega la llave y es abandonada como cebo"
+        },
+        {
+          "name": "Kanu",
+          "kind": "character",
+          "role": "miembro de Soma Familia que dirige la traición"
+        },
+        {
+          "name": "Gedo",
+          "kind": "character",
+          "role": "también es traicionado por Kanu"
+        },
+        {
+          "name": "Miembros no individualizados de Soma Familia",
+          "kind": "faction_members",
+          "role": "ayudan a Kanu a escapar"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V02-SOMA-ABANDONS-LILI-AS-BAIT-001.md",
+      "sources": [
+        {
+          "label": "DMR-060 · Volumen 2 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Obra original oficial; traducción privada/no cotejada con el japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-SOMA-ABANDONS-LILI-AS-BAIT-001.md",
+          "kind": "internal",
+          "note": "Ficha con localizador físico y límites de traducción."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V02-GEDO-CAPTURES-LILI-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "Ocurre después de la captura de Lili; la traición continúa dentro de la misma crisis.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-SOMA-ABANDONS-LILI-AS-BAIT-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "floor_context",
+        "reason": "La traición y el uso de Lili como cebo suceden en el séptimo piso del Dungeon."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "floor_context",
+          "context": "La traición y el uso de Lili como cebo suceden en el séptimo piso del Dungeon.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-SOMA-ABANDONS-LILI-AS-BAIT-001.md"
           ]
         }
       ]
@@ -2855,24 +3168,24 @@
           "label": "DMR-060 · Volumen 2 aportado por el usuario",
           "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
           "kind": "user_supplied_source_report",
-          "note": "Obra original oficial; traducción privada/no editorial sin cotejo con el japonés."
+          "note": "Obra original oficial; traducción privada/no cotejada con el japonés."
         },
         {
           "label": "Registro individual del acontecimiento",
           "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001.md",
           "kind": "internal",
-          "note": "Ficha con localizador físico y límites de traducción."
+          "note": "Localizador físico y límites de traducción."
         }
       ],
       "temporal": {
         "kind": "relative_order",
         "relation": "after",
         "referenceIds": [
-          "EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001"
+          "EVT-DM-V02-SOMA-ABANDONS-LILI-AS-BAIT-001"
         ],
         "distanceKnown": false,
         "precision": "order_only",
-        "qualifier": "Firebolt interrumpe la situación y Bell interviene durante la misma secuencia.",
+        "qualifier": "Bell rescata a Lili inmediatamente después de que los miembros de Soma la dejan como cebo.",
         "sourceUrls": [
           "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
           "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001.md"
