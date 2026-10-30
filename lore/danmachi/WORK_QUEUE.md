@@ -1218,3 +1218,16 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - Límite de seis minutos: 11:21:21.
 - Cierre: checkpoint guardado antes del límite; siguiente folio PDF p. 67.
 - Regla: detener la sesión al llegar al límite y esperar nueva confirmación.
+
+
+### Checkpoint DMR-061 · Volumen 1, PDF pp. 73–96 · sesión 2026-10-30
+- **Inicio registrado (Argentina, UTC−03:00):** 12:09:55. **Cierre operativo previsto:** antes de 12:16:55; trabajo de lectura detenido al alcanzar aproximadamente seis minutos.
+- **Lectura:** páginas físicas PDF 73–96 completadas. Siguiente folio exacto: p. 97.
+- **Cambios guardados:** se añadió el bloque pp. 73–96 a `volumes/main/volume-01.md` y al informe `research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md`. Se documentaron Eina/Misha, Frog Shooter, descenso temerario de Bell, llegada al sexto piso, War Shadows, cerco y dedo recogido, retorno herido, conversación con Hestia, nuevo snapshot de Estado y promesa mutua.
+- **Snapshot p. 91:** Lv. 1; Fuerza H 123 → G 221; Resistencia I 42 → H 101; Destreza H 139 → G 232; Agilidad G 225 → F 313; Magia I 0. [Deseo Inquebrantable] sigue siendo conocimiento de Hestia/lector; Hestia oculta deliberadamente nombre y existencia a Bell. Bell recibe solo la explicación de crecimiento extraordinariamente rápido.
+- **Eventos aún no creados:** revisar y separar adecuadamente (a) excursión nocturna/War Shadows pp. 76–85, (b) regreso y cuidado pp. 87–90, (c) actualización, explicación parcial y promesa pp. 91–96. Revisar además si Eina asesora a Bell existente debe ampliar localizadores a pp. 74–76. No asignar IDs hasta comprobar límites/cronología y evitar duplicados.
+- **Visual:** se renderizó e inspeccionó hoja de contactos de pp. 73–96; portadillas/ilustraciones visibles en pp. 73, 79 y 86. La figura de p. 86 no se identificó por semejanza. Se mantienen pendientes revisiones visuales completas anteriores de pp. 19–21, 23–24 y 49–54.
+- **Continuidad/fuente:** solo CONT-MAIN-LN y DMR-061-SRC-001, traducción privada no cotejada con japonés. No se usaron wikis para completar escenas; no hay marcas `+`.
+- **Verificación técnica:** no se ejecutaron pruebas locales ni CI en esta sesión. No PR ni merge. Verificar los commits resultantes y distancia exacta con `main` en la siguiente sesión.
+- **Estado de partida:** el checkpoint de pp. 67–72 y el evento de la taberna ya estaban presentes antes de esta sesión; no se releyeron ni duplicaron. `main` se mantuvo en el SHA comprobado al inicio.
+- **Próximo paso:** desde p. 97, tras revisar HEAD/cola y considerar la catalogación de los tres eventos candidatos descritos arriba.
