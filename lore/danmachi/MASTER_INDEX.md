@@ -11,7 +11,7 @@
 - [Volumen 1 — dossier de canon primario](volumes/main/volume-01.md) — extracción secuencial actualizada hasta PDF p. 177; incluye primer encuentro con Seal Flover, combate inicial, Festival de Monstruos, liberación del Silverback, respuesta de Ganesha y comienzo de la persecución hacia la Calle Dédalo.
 - [DANMACHI-RESEARCH-061](research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md) — eventos y pasajes del Volumen 1; traducción privada no cotejada y límites de procedencia registrados.
 
-- [Volumen 2 — eventos temporales y localizadores](volumes/main/volume-02.md) — siete acontecimientos individuales de `CONT-MAIN-LN`, con páginas físicas del PDF y separación entre escenas de combate, adquisición/prueba de magia, traición, rescate y hallazgo de objeto. La traducción española aportada es privada y no está cotejada.\n- [DANMACHI-RESEARCH-060](research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md) — registro de procedencia, localizadores y límites de los siete eventos; no fija fechas absolutas ni convierte rumores en hechos confirmados.
+- [Volumen 2 — eventos temporales y localizadores](volumes/main/volume-02.md) — acontecimientos individuales de `CONT-MAIN-LN`, con páginas físicas del PDF y segmentación de combate, adquisición/prueba de magia, pasado de Lili, captura, traición, rescate y reencuentro. La traducción española aportada es privada y no está cotejada.\n- [DANMACHI-RESEARCH-060](research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md) — registro de procedencia, localizadores y límites de los siete eventos; no fija fechas absolutas ni convierte rumores en hechos confirmados.
 
 ## Índices de personajes e historias por continuidad
 
@@ -428,7 +428,7 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 
 ## DANMACHI-RESEARCH-060 — ampliación del volumen 2 (CONT-MAIN-LN)
 - [Expediente DMR-060](research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md) — eventos adicionales de Naaza, hostigamiento a Lili, Firebolt observado, rescate y reconciliación, recontratación dos días después y rumor de Ais una semana después de Udaeus.
-- La cronología interactiva incluye ahora 38 acontecimientos, con offsets relativos enlazados a eventos y fuente, sin fechas absolutas inventadas.
+- La cronología interactiva incluye ahora 42 acontecimientos, con offsets relativos enlazados a eventos y fuente, sin fechas absolutas inventadas.
 
 ### DMR-061 — progreso de lectura primaria V1 hasta PDF p. 60
 - Volumen 1 (CONT-MAIN-LN) documentado secuencialmente hasta PDF p. 60 en la rama research/danmachi-v1-primary-pp49-54-2026-10-30. Las pp. 55–60 incorporan el Estado actualizado de Bell y la primera visita al establecimiento de Seal, **La Señora de la Abundancia**.
@@ -445,3 +445,10 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 ### DMR-061 — checkpoint hasta PDF p. 177
 - Hestia localiza a Bell y continúan buscando a Seal; el monedero sigue pendiente. El Festival pasa del espectáculo del Coliseo a la fuga de nueve monstruos, la respuesta de Ganesha/Gremio y la persecución del Silverback hacia la Calle Dédalo.
 - Próxima página: PDF p. 178. Traducción privada no cotejada; pp. 157–177 completadas con tres pasadas obligatorias y cuarta correctiva en pp. 165–167.
+
+
+### DMR-060 — segmentación de la historia de Lili y corrección temporal (2026-10-30)
+- La secuencia antes agrupada bajo `EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001` se retiró de los eventos activos y su ID quedó reservado como `(x) superseded`.
+- La secuencia se conserva en eventos separados: padres de Lili (recuerdo), revelación Hobbit, conversación paralela Eina–Hestia, captura por Gedo, abandono como cebo por Kanu/miembros de Soma y rescate/reconciliación de Bell; la recontratación dos días después sigue en su propio ID.
+- La cronología contiene 42 eventos y el grafo de orden temporal respeta `before`, `after` y `between`, incluidos los offsets anclados a eventos; no convierte intervalos relativos en fechas calendáricas.
+- La auditoría de la rama antigua #209 continúa separando datos únicos de contenido obsoleto; las versiones de V1 y los checkpoints antiguos no reemplazan los registros más recientes de DMR-061.
