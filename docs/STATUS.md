@@ -734,14 +734,15 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **CI post-merge sobre el SHA exacto de main 65c4eb53d50e16c8bcca48393e51e35ebd5bc360:** [Validate WordWaifu #40911471211](https://github.com/jonhararagi/wordwaifu/actions/runs/40911471211) y [DanMachi Lore and Retrieval Integrity #40911471327](https://github.com/jonhararagi/wordwaifu/actions/runs/40911471327), ambos success. El primer intento de Validate falló en el smoke de navegador al esperar 5 s por un retrato remoto (tests/browser_smoke.cjs:517); se repitió únicamente ese job y el segundo intento pasó.
 
 
-## DMR-060 / DMR-061 — integración de cronología y estado de revisión (2026-10-30)
+## DMR-060 / DMR-061 — integración y cierre de consolidación (2026-10-30)
 
-- **DMR-061 / Volumen 1:** PR #215 integrada por squash en `main`, SHA `8e6fcedaeed4e6c38e6f63a7c099cc8e27ad3441`; lectura secuencial documentada hasta PDF p. 177, próxima p. 178. CI pre-merge y post-merge de Validate WordWaifu y DanMachi Lore and Retrieval Integrity: `success` sobre sus SHA exactos.
-- **DMR-060 / Volumen 2:** rama de integración separada desde el main vigente. Se segmenta la historia de Lili en eventos distintos; la cronología pasa a 42 eventos y 36 referencias de ubicación.
-- **ID retirado:** `(x) EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001` queda reservado como superseded, sustituido por captura de Gedo, traición/cebo de Kanu y miembros de Soma, y rescate/reconciliación de Bell; la recontratación permanece aparte.
-- **Lógica temporal:** se corrige la detección de ciclos para respetar dirección `before/after/between` y offsets relativos; las reglas ya existentes de validación de ancla y precisión se conservan.
-- **Rama heredada:** PR #209 sigue abierta y no fusionable como snapshot antiguo (98 commits ahead/6 behind respecto del main previo a #215). No fusionar directamente; sólo portar cambios únicos. La rama de integración actual se basa en el main posterior a #215.
-- **Estado de integración:** los cambios DMR-060 están en rama de preparación; todavía no se declara PR, CI ni merge de esta segunda parte hasta su validación.
+- **DMR-061 / Volumen 1:** PR [#215](https://github.com/jonhararagi/wordwaifu/pull/215) integrada por squash en `main`, SHA `8e6fcedaeed4e6c38e6f63a7c099cc8e27ad3441`; lectura secuencial documentada hasta PDF p. 177, próxima p. 178. CI pre-merge y post-merge de Validate WordWaifu y DanMachi Lore and Retrieval Integrity: `success` en los HEAD exactos.
+- **DMR-060 / Volumen 2:** PR [#216](https://github.com/jonhararagi/wordwaifu/pull/216) integrada por squash en `main`, SHA `7de2acca6975d3700b7c5b5ca71c004211fb308e`; segmentación de cinco acontecimientos nuevos de la secuencia de Lili, actualización de eventos existentes y corrección del grafo temporal. CI pre-merge y post-merge: `success` en los SHA exactos.
+- **Cronología/catálogo:** 42 eventos únicos; 36 referencias de ubicación; 215 registros activos; 30 IDs reservados; 263 relaciones. No hay IDs duplicados en los 42 eventos ni los 215 registros.
+- **ID retirado:** `(x) EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001` queda reservado como `superseded`; los eventos activos y las referencias temporales usan la captura de Gedo, la traición/cebo de Kanu y miembros de Soma, el rescate y la recontratación por separado.
+- **PR heredada:** [#209](https://github.com/jonhararagi/wordwaifu/pull/209) cerrada como `(x) SUPERSEDED BY #216`. No se fusionó su snapshot divergente ni se borró su rama histórica; el trabajo único útil quedó portado y validado en #216.
+- **CI post-merge #216 sobre `7de2acca6975d3700b7c5b5ca71c004211fb308e`:** [Validate WordWaifu run 41129998675](https://github.com/jonhararagi/wordwaifu/actions/runs/41129998675) y [DanMachi Lore and Retrieval Integrity run 41129998580](https://github.com/jonhararagi/wordwaifu/actions/runs/41129998580), ambos `success`.
+- **Límites de investigación:** DMR-060-SRC-001 y DMR-061-SRC-001 son traducciones privadas no cotejadas con japonés. Las pasadas individuales de personajes, las inspecciones visuales integrales y los cotejos lingüísticos pendientes no se declaran completados.
 
 ## DMR-061 — continuación del corpus primario del Volumen 1 (2026-10-30)
 
