@@ -1,5 +1,5 @@
 ---
-research_id: DANMACHI-RESEARCH-060
+id: DANMACHI-RESEARCH-060
 universe: danmachi
 type: source_extraction
 status: source_checked_partial_translation_unverified
