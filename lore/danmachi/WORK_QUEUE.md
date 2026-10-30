@@ -1141,12 +1141,15 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 
 ## DMR-060 / DMR-061 — revisión de volúmenes 1 y 2 en cinco pasadas
 
-- [x] Completar la primera pasada de lectura narrativa secuencial hasta V1 PDF p. 214 y V2 PDF p. 243, con límites de extracción indicados en los informes.
-- [x] Crear registros temporales independientes para nueve acontecimientos adicionales de V1 y siete ampliaciones/segmentaciones de V2; mantener siete eventos V2 anteriores con sus IDs y separar traición, rescate y reencuentro.
-- [x] Añadir a la cronología offsets relativos exactos: una semana después de Udaeus (rumor de Ais), tres días antes de visita a Naaza, un día antes de incursión al piso 10 y dos días después del rescate para recontratación; conservar «unos días» en pisos 8–9 sin inventar cifra.
-- [x] Corregir crédito de traducción: Sorotrans (inglés), Mugetsu123 (traducción inglés-español/corrección/edición); Kurosaki-Vizard es marca de agua.
-- [ ] Completar la inspección visual de todas las ilustraciones y fichas de ambos PDF, registrando página física y detalle extra.
-- [ ] Releer y cotejar sistemáticamente los pasajes iniciales V1 pp. 1–140 con los eventos y personajes existentes, sin duplicar Arrival/Minotaur ni otras IDs.
-- [ ] Auditar las fichas de Bell, Hestia, Liliruca, Ais, Freya y Eina, Estados de Falna, equipo, atributos, relaciones y localizadores exactos. No marcar + por esta extracción grupal.
-- [ ] Ejecutar tests de cronología/recuperación, validadores y workflows CI; solo después integrar por PR en main.
-- **Estado:** IN_PROGRESS; primera pasada sustancial completada, pasadas 2–5 pendientes.
+- [x] Completar la primera pasada de lectura narrativa sustancial hasta V1 PDF p.214 y V2 PDF p.243; se conservan las páginas que no devolvieron texto extraíble y no se afirma lectura perfecta de cada línea.
+- [x] Crear nueve eventos nuevos en V1 y segmentar la secuencia V2 con eventos separados para rumor, pociones, hostigamiento, demostración de Firebolt, huida/identidad de Lili, captura de Gedo, traición/cebo de Soma, rescate y reencuentro. Los siete IDs V2 originales que siguen válidos se conservan.
+- [x] Incorporar offsets relativos explícitos: una semana después de Udaeus (rumor de Ais); tres días antes de la visita a Naaza; un día antes de la incursión al piso 10; dos días después de la separación tras el rescate. Mantener «unos días» para pisos 8–9 sin convertirlo en cifra exacta.
+- [x] Corregir la atribución de créditos: Sorotrans (versión inglesa), Mugetsu123 (traducción inglés-español/corrección/edición); Kurosaki-Vizard es marca de agua.
+- [x] Revisar en hojas de contacto los 24 recursos de imagen V1 y 29 de V2; ampliar las fichas clave de Bell (V1 pp.208–209) y Lili (V2 pp.244–245), además de créditos.
+- [ ] Completar la inspección visual de cada página e ilustración, a resolución completa, registrando detalles y localizadores.
+- [ ] Releer y cotejar sistemáticamente V1 pp.1–140 con Arrival, Bell–Ais–Minotaur y registros existentes; no duplicar IDs.
+- [ ] Auditar por separado las fichas de Bell, Hestia, Liliruca, Ais, Freya y Eina: estados de Falna, equipo, habilidades, relaciones, localizadores, conocimientos y cambios temporales.
+- [ ] Continuar la segmentación de eventos de ambos volúmenes si la relectura inicial descubre omisiones; no suponer que los 42 eventos agotan ambos libros.
+- [ ] Ejecutar las pruebas de cronología, validadores y CI; crear PR a main después de corregir fallos y revisar diff. No declarar integración hasta merge y CI post-merge.
+- **Signo +:** no se añade a los seis personajes por esta pasada grupal. Una pasada individual de 5–10 min debe registrarse por personaje con los cambios concretos y los lugares consultados; no afirmar duración si no se cronometra.
+- **Estado:** IN_PROGRESS. Primera pasada narrativa sustancial terminada hasta el límite extraíble; pasada visual parcial; pasadas 3–5 pendientes.
