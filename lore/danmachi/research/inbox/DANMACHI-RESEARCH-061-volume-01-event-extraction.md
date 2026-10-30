@@ -44,7 +44,7 @@ tags: [volume-01, events, Bell, Hestia, Freya, Silverback, Daga de Hestia]
 - **Orden:** la escena precede a la fuga de monstruos durante la jornada del Festival.
 
 ### EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001 — Freya incapacita guardias y libera un Silverback
-- **Localizador:** PDF pp. 159–164.
+- **Localizador:** PDF pp. 160–164.
 - **Hecho:** Freya utiliza Encanto para neutralizar a guardias/empleados, obtiene las llaves de los establos y libera **un Silverback específico** con la intención de que alcance a Bell.
 - **No inferir:** el texto posterior informa de nueve monstruos escapados; no demuestra que Freya liberara personalmente a los nueve.
 
@@ -54,7 +54,7 @@ tags: [volume-01, events, Bell, Hestia, Freya, Silverback, Daga de Hestia]
 - **No inferir:** la identificación del intruso o la captura del responsable no ocurren en estas páginas.
 
 ### EVT-DM-V01-BELL-HESTIA-SILVERBACK-CHASE-001 — Bell protege a Hestia durante la persecución
-- **Localizador:** PDF pp. 173–190.
+- **Localizador:** PDF pp. 165–190.
 - **Hechos:** el Silverback se dirige a Hestia. Bell la protege, recibe un golpe, utiliza la luz de una lámpara de Piedra Mágica para cegar al monstruo y huye por calles y la Calle Dédalo. Bell decide dejar a Hestia en una alcantarilla y actuar como señuelo; explica que teme perder a su familia porque su abuelo murió por un ataque de monstruo cuando Bell no estaba presente. Hestia vuelve y se niega a abandonarlo; recuerdan su promesa de no dejarse solos.
 - **Relación temporal:** se solapa con la respuesta a la fuga de Ganesha/Gremio.
 
@@ -93,7 +93,7 @@ Una nota conversacional previa atribuyó por error a V1 pp. 153–158 una prueba
 ## Cinco pasadas: estado de esta tanda
 
 1. **Lectura narrativa secuencial:** completada hasta PDF p. 214; primera pasada sustancial, no certifica texto extraíble de cada página.
-2. **Inspección visual:** parcial; se revisaron fichas ilustradas p. 208–209 y varias ilustraciones/localizadores relevantes, pero no cada imagen del PDF.
+2. **Inspección visual:** pasada de contacto parcial de 24 imágenes incrustadas; fichas p. 208–209 y créditos p. 215 ampliados; queda pendiente el examen visual de cada página completa.
 3. **Cotejo de personajes/objetos/relaciones/cronología:** parcial; se identificaron diferencias de estadísticas y objetos; hace falta revisar fichas completas.
 4. **Extracción de eventos:** nueve registros nuevos para V1 más localizador primario añadido al encuentro Bell–Hestia existente.
 5. **Comparación con WordWaifu:** en progreso; se conservan IDs existentes y los eventos no se declaran integrados a `main` hasta pasar validación y CI.
@@ -103,7 +103,7 @@ Una nota conversacional previa atribuyó por error a V1 pp. 153–158 una prueba
 No afirmar que todas las ilustraciones o detalles del volumen quedaron revisados. No importar datos de anime, wiki, juego o spin-off a estos registros de `CONT-MAIN-LN`.
 
 
-## Registro visual inicial (inspección renderizada, no total)
+## Registro visual inicial (contacto de imágenes y ampliación de folios clave, no total)
 
 - **PDF p. 1:** cubierta a color; Bell/Hestia y el arte promocional de volumen.
 - **PDF p. 2:** página interior de arte/ilustración.
@@ -116,4 +116,4 @@ No afirmar que todas las ilustraciones o detalles del volumen quedaron revisados
 - **PDF pp. 208–210:** fichas visuales de Estado, Daga de Hestia, Bell y daga anterior ya transcritas en este expediente.
 - **PDF p. 215:** hoja de créditos visuales, confirma Sorotrans / Mugetsu123 y la marca de agua Kurosaki-Vizard.
 
-No se ha inspeccionado visualmente cada folio. Estos localizadores constituyen un inventario parcial de imágenes comprobadas.
+Se revisaron en hojas de contacto los 24 objetos de imagen incrustados y se ampliaron fichas p. 208–209 y créditos p. 215. No se ha renderizado ni examinado a página completa cada uno de los 215 folios.
