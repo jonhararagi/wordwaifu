@@ -49,3 +49,10 @@ Bell interpreta que Hestia le pregunta por Seal y la describe como una mujer de 
 
 - **Localizador:** PDF p. 165 (descripción recordada por Bell); contraste PDF p. 42 (descripción inicial del narrador).
 - **Estado:** discrepancia interna no resuelta dentro de DMR-061-SRC-001.
+
+## Aparición posterior · regreso del Festival · PDF pp. 203–204
+
+Seal vuelve del Festival de Monstruos y ayuda a Bell a trasladar a Hestia, inconsciente, a La Señora de la Abundancia (p.203). En p.204 se disculpa por haber olvidado su bolso y haber involucrado a Bell en el desastre; le dice que oyó rumores sobre su victoria y que vio la batalla, lo elogia y le susurra al oído. La narración describe su cabello como **gris oscuro**.
+
+- **Comparación textual:** p.42 describía cabello y ojos negros; p.165 Bell recordaba cabello y ojos grises; p.204 el narrador usa «gris oscuro» para el cabello. Esto corrobora parcialmente el recuerdo de cabello gris de p.165, aunque la diferencia entre «negro» y «gris oscuro» de p.42/204 puede depender del matiz de la traducción. Los ojos siguen sin resolución: p.204 no da un color nuevo.
+- **Estado:** mantener la discrepancia ocular abierta; no modificar la ficha a una única descripción canónica sin una fuente adicional.
