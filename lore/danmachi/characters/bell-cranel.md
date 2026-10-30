@@ -96,14 +96,24 @@ Una entrevista de LN News Online de 2020 recoge que, en la historia de Memoria F
 
 ## Volumen 2 · acontecimientos temporales (CONT-MAIN-LN)
 
-- [Ais se enfrenta a Udaeus en el piso 37](../events/timeline/EVT-DM-V02-AIS-UDAEUS-001.md) — PDF pp. 106–111. El rumor de ascenso a nivel 6 permanece atribuido como rumor.
-- [Bell obtiene Firebolt tras leer el Grimorio](../events/timeline/EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001.md) — PDF pp. 136–149.
-- [Bell prueba Firebolt y agota su Mind](../events/timeline/EVT-DM-V02-BELL-FIREBOLT-TEST-001.md) — PDF pp. 150–155 y 167–169.
-- [Emboscada de Ogros en el piso 10](../events/timeline/EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001.md) — PDF pp. 195–213.
-- [Lili toma la Daga de Hestia y deja a Bell atrás](../events/timeline/EVT-DM-V02-LILI-ABANDONS-BELL-001.md) — PDF pp. 213–229.
-- [Traición a Lili y rescate de Bell](../events/timeline/EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001.md) — PDF pp. 213–240.
+- [Ais derrota a Udaeus](../events/timeline/EVT-DM-V02-AIS-UDAEUS-001.md) — PDF pp. 106–111.
+- [Una semana después circula el rumor de que Ais alcanzó nivel 6](../events/timeline/EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001.md) — PDF p. 111; rumor, no Estado confirmado.
+- [Bell obtiene Firebolt](../events/timeline/EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001.md) — PDF pp. 136–149.
+- [Bell prueba Firebolt y sufre agotamiento mental](../events/timeline/EVT-DM-V02-BELL-FIREBOLT-TEST-001.md) — PDF pp. 150–155 y 167–169.
+- [Bell agota sus pociones normales tres días antes de visitar a Naaza](../events/timeline/EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001.md) — PDF p. 167.
+- [Bell compra una poción de Poder Mental a Naaza](../events/timeline/EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001.md) — PDF pp. 167–169.
+- [Bell ve a Lili acosada por aventureros](../events/timeline/EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001.md) — PDF pp. 169–170.
+- [Lili observa a Bell utilizar Firebolt el día anterior al piso 10](../events/timeline/EVT-DM-V02-LILI-OBSERVES-BELL-FIREBOLT-001.md) — PDF p. 198.
+- [Bell y Lili afrontan la emboscada de Ogros](../events/timeline/EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001.md) — PDF pp. 195–212.
+- [Lili abandona a Bell](../events/timeline/EVT-DM-V02-LILI-ABANDONS-BELL-001.md) — PDF pp. 212–214.
+- [Lili revela que es Hobbit](../events/timeline/EVT-DM-V02-LILI-REVEALS-HOBBIT-IDENTITY-001.md) — PDF pp. 214–221.
+- [Gedo captura a Lili](../events/timeline/EVT-DM-V02-GEDO-CAPTURES-LILI-001.md) — PDF pp. 221–224.
+- [Miembros de Soma abandonan a Lili como cebo](../events/timeline/EVT-DM-V02-SOMA-ABANDONS-LILI-AS-BAIT-001.md) — PDF pp. 224–229.
+- [Bell rescata a Lili y ambos se reconcilian](../events/timeline/EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001.md) — PDF pp. 230–237.
+- [Bell y Lili vuelven a formar equipo dos días después](../events/timeline/EVT-DM-V02-BELL-AND-LILI-REHIRE-001.md) — PDF pp. 237–240.
+- [Ais encuentra el Protector de Jade](../events/timeline/EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001.md) — PDF pp. 242–243.
 
-La traducción española aportada es privada y no se ha cotejado con el japonés. Estos localizadores describen el PDF consultado, no una paginación impresa confirmada.
+**Procedencia:** traducción privada/no cotejada. Todas las fechas se conservan como relaciones e intervalos narrativos, no calendario. La atribución a CONT-MAIN-LN se mantiene separada de la adaptación y del material de juegos.
 
 
 ## CONT-MAIN-LN · datos directos de los volúmenes 1 y 2
