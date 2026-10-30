@@ -496,3 +496,15 @@ Fuentes consultadas:
 - **Visual:** V1 pp. 208–209 y V2 pp. 244–245 incorporan fichas y datos no presentes en la narración continua. La inspección visual completa permanece pendiente.
 - **Bitácora de personaje:** no se añade signo + ni se declara pasada individual completa de 5–10 min para Bell, Hestia, Lili, Ais, Freya o Eina; esta tanda es una extracción por volumen, no una revisión individual cronometrada.
 - **Próximo paso:** completar páginas iniciales V1 con localizadores, inspección visual página a página, cotejo de perfiles/objetos/estadísticas y pruebas de cronología interactiva antes de integrar a main.
+
+
+## DMR-060/061 — revisión grupal de personajes, no individual (2026-10-30)
+- **Alcance:** cambios V1/V2 agrupados en la extracción; esto no sustituye auditorías individuales ni justifica el signo +.
+- **Bell:** V1 mantiene las discrepancias de Estado y equipo registradas; V2 incluye Firebolt, agotamiento de Mind, poción de Naaza, Ogros y rescate de Lili.
+- **Hestia:** daga, condiciones de deuda/préstamo y conversación con Eina sobre Lili (V2 pp. 218–219).
+- **Liliruca:** identidad Hobbit/Cinder Ella, historia de sus padres, captura por Gedo, traición de Kanu y grupo de Soma, rescate y recontratación.
+- **Ais:** combate con Udaeus, rumor de nivel 6 una semana después y Protector de Jade del epílogo; el nivel 6 se conserva como rumor.
+- **Freya:** la ficha main más nueva conserva que el Silverback primero busca a Freya y luego recibe la orden de perseguir a una «pequeña Diosa»; no se afirma que Freya liberara los nueve monstruos.
+- **Eina:** respuesta del Gremio y conversación privada con Hestia.
+- **Estado:** ninguna persona recibe marca + por esta pasada grupal; las fichas individuales y cotejos siguen en cola.
+- **Procedencia:** DMR-060-SRC-001 y DMR-061-SRC-001, traducciones privadas no cotejadas con japonés.
