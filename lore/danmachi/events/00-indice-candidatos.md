@@ -68,6 +68,7 @@ Antes de crear otro evento, compara ID, nombres alternativos, participantes, per
 
 - [Ais rescata a Bell del Minotauro](timeline/EVT-DM-BELL-AIS-MINOTAUR-001.md) — PDF pp. 11–18 (rescate pp. 11–14; relato posterior a Eina pp. 16–18); se conserva «Aizu» como grafía de la traducción y la ambigüedad sobre la aparición en el piso 15.
 - [Hestia actualiza el Estado de Bell tras el Minotauro](timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001.md) — PDF pp. 30–36; incluye el snapshot de atributos de p. 33 y `Deseo Inquebrantable` desde la perspectiva de Hestia (pp. 35–36), no conocido por Bell en esa escena.
+- [Bell conoce a Seal Flover](timeline/EVT-DM-V01-BELL-MEETS-SEAL-FLOVER-001.md) — PDF pp. 42–46; Seal devuelve una Piedra Mágica, le ofrece desayuno e invita a Bell a cenar; la cena no se da por sucedida.
 - [Primer encuentro de Bell y Hestia](candidates/EVT-DM-BELL-MEETS-HESTIA-001.md) — recuerdo narrativo en PDF p. 29 (traducción privada); [concesión inicial de Falna](timeline/EVT-DM-V01-BELL-RECEIVES-FALNA-001.md) — evento distinto en PDF pp. 211–214. La actualización posterior al Minotauro se registra en [su propio evento](timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001.md), pp. 30–36, separada de la actualización con daga de pp. 193–196.
 - [Hephaistos entrega la Daga de Hestia](timeline/EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001.md) — pp. 145–146.
 - [Bell y Hestia en el Festival](timeline/EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001.md) — pp. 150–159.
