@@ -53,9 +53,13 @@ Fuente secundaria: [DanMachi Wiki ES — Liliruca Arde](https://danmachi.fandom.
 
 ## Volumen 2 · acontecimientos temporales (CONT-MAIN-LN)
 
-- [Emboscada de Ogros y separación en el piso 10](../events/timeline/EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001.md) — PDF pp. 195–213.
-- [Lili toma la Daga de Hestia y deja a Bell atrás](../events/timeline/EVT-DM-V02-LILI-ABANDONS-BELL-001.md) — PDF pp. 213–229.
-- [Miembros de Soma traicionan a Lili y Bell la rescata](../events/timeline/EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001.md) — PDF pp. 213–240; ambos reanudan el equipo en Babel, pp. 237–240.
+- [Emboscada de Ogros en el piso 10](../events/timeline/EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001.md) — PDF pp. 195–212.
+- [Lili abandona a Bell y toma la Daga de Hestia](../events/timeline/EVT-DM-V02-LILI-ABANDONS-BELL-001.md) — PDF pp. 212–214.
+- [Lili revela su identidad Hobbit mediante Cinder Ella](../events/timeline/EVT-DM-V02-LILI-REVEALS-HOBBIT-IDENTITY-001.md) — PDF pp. 214–221.
+- [Gedo captura a Lili](../events/timeline/EVT-DM-V02-GEDO-CAPTURES-LILI-001.md) — PDF pp. 221–224.
+- [Kanu y miembros de Soma abandonan a Lili como cebo](../events/timeline/EVT-DM-V02-SOMA-ABANDONS-LILI-AS-BAIT-001.md) — PDF pp. 224–229.
+- [Bell rescata a Lili y ambos se reconcilian](../events/timeline/EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001.md) — PDF pp. 230–237.
+- [Bell y Lili vuelven a formar equipo](../events/timeline/EVT-DM-V02-BELL-AND-LILI-REHIRE-001.md) — PDF pp. 237–240.
 
 Los hechos se describen desde la traducción española privada aportada; la obra original es oficial, pero la traducción aún no está cotejada.
 
