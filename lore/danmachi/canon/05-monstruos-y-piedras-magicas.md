@@ -38,3 +38,9 @@ Crear fichas específicas de monstruos solo cuando una escena los necesite. Cons
 - Anya y Ryuu describen la domesticación como una habilidad que existe y cuya eficacia depende de las cualidades de la persona. Explican que se debe mostrar fuerza al monstruo para que se vuelva obediente.
 - Según su explicación, los monstruos del Dungeon son especialmente difíciles de domesticar; normalmente se domestican criaturas de la superficie. Afirman que los miembros centrales de Ganesha Familia tienen suficiente fuerza para domesticar también monstruos del Dungeon.
 - **Alcance:** información expuesta por dos empleadas durante una conversación sobre el Festival de Monstruos. No se da un nombre técnico de habilidad, fórmula, tasa de éxito, duración del control ni una lista de monstruos domesticables. No asumir que cualquier aventurero puede repetirlo ni que los monstruos formen equipos o amistades como regla.
+
+## Piedra Mágica como núcleo y punto débil · CONT-MAIN-LN
+
+- **Fuente:** DMR-061-SRC-001, Volumen 1, PDF pp. 197–200; traducción privada no cotejada.
+- Bell recuerda la enseñanza de Eina: los monstruos tienen una Piedra Mágica en el pecho y ese es el punto débil absoluto para derrotarlos. Bell perfora el pecho del Silverback con la Daga de Hestia, destruye su Piedra Mágica y el cuerpo se convierte en cenizas.
+- **Alcance:** se registra como regla explicada en el pasaje; no inventar ubicaciones alternativas, tamaños, resistencias ni excepciones no descritas.
