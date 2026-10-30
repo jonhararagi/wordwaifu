@@ -5,7 +5,7 @@ type: character
 status: provisional
 confidence: high for general identity; medium for exact dates
 tags: [Hestia, deidad, Familia Hestia, cronología]
-source_refs: [DanMachi light novel Vol. 1; localizador pendiente]
+source_refs: [DMR-061-SRC-001]
 claim_refs:
   - DMR-002-CLM-003
   - DMR-002-CLM-004
@@ -68,3 +68,12 @@ Hestia se encuentra con Bell después de cincuenta intentos fallidos de reclutam
 Hestia consigue de Hephaistos la Daga de Hestia para Bell (pp. 145–146). Más tarde revela que se inclinó en dogeza durante treinta horas y explica el trabajo de creación: cabello, sangre divina y Texto Sagrado. El arma tiene Estado propio y crece con Bell; solo alguien con la Gracia de Hestia puede usarla correctamente (pp. 203–208). La ficha visual consigna préstamo a 35 años y 420 plazos, además de contrato laboral en Babel con Hephaistos Familia (p. 208). No describir la deuda como perdonada.
 
 **Procedencia:** DMR-061-SRC-001; traducción privada/no cotejada. No asignar fechas calendáricas que el volumen no da.
+
+## Actualización del Estado de Bell tras el Minotauro · CONT-MAIN-LN
+
+- **Fuente:** DMR-061-SRC-001, Volumen 1, traducción privada no cotejada; PDF pp. 30–36.
+- **Evento:** [Hestia actualiza el Estado de Bell tras el Minotauro](../events/timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001.md).
+- Hestia continúa la inscripción del Texto Sagrado mediante sangre divina y entrega a Bell un resumen de sus atributos. La hoja que Bell recibe muestra la sección de Habilidades vacía.
+- La narración cambia a la perspectiva de Hestia y revela que el Estado grabado en Bell contiene `[Deseo Inquebrantable]`, con aceleración del crecimiento; duración mientras sus sentimientos no cambien; y efecto proporcional a la fuerza de esos sentimientos (PDF pp. 35–36).
+- El texto atribuye a Hestia la extracción de ese tipo de Puntos de Experiencia y su inscripción personal. Al observar el resultado, comienza a arrepentirse.
+- **Límite:** no convertir esta escena puntual en un rasgo permanente de personalidad ni atribuir a Bell conocimiento de la Habilidad; la ficha distingue la perspectiva interna de Hestia de la información mostrada a Bell.

@@ -801,3 +801,12 @@
 - **Aplicación inmediata:** continuar solo con Volumen 1 en esta rama; checkpoint de lectura hasta PDF pp. 19–24 guardado en `volume-01.md`, DMR-061 y el expediente existente de Eina. El siguiente folio es PDF p. 25.
 - **Límites:** las cinco pasadas siguen abiertas; no marcar personajes con `+` por una extracción grupal ni declarar CI/integración sin evidencia.
 
+### CONV-DM-2026-10-30-019 — Separar el Estado mostrado al personaje del Estado oculto al lector
+
+- **Fecha:** 2026-10-30.
+- **Estado:** ACCEPTED como regla operativa para extracción de canon.
+- **Evidencia de trabajo:** Volumen 1, PDF pp. 30–36, fuente DMR-061-SRC-001, traducción privada no cotejada con japonés.
+- **Regla:** cuando una escena muestre una ficha, resumen o explicación a un personaje y después revele información adicional desde otro punto de vista, WordWaifu conserva ambos ámbitos de conocimiento. Registrar qué ve/oye el personaje y qué conoce el narrador/lector/otro personaje, con localizadores separados.
+- **Aplicación:** Bell recibe una copia de su Estado con la sección de Habilidades vacía (pp. 33–34). La narración desde la perspectiva de Hestia revela `Deseo Inquebrantable` en el Estado grabado en la espalda de Bell (pp. 35–36). No declarar que Bell conoce la habilidad en ese momento.
+- **Separación de eventos:** la actualización posterior al Minotauro (pp. 30–36), la concesión inicial de Falna (pp. 211–214) y la actualización con entrega de Daga de Hestia (pp. 193–196) son acontecimientos distintos y conservan registros separados.
+- **Límite:** la traducción privada no se ha cotejado con japonés; conservar el nombre español tal como aparece y no inventar una forma japonesa.
