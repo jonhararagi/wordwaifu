@@ -7673,10 +7673,11 @@
       "label": "Hestia pide a Hephaistos un arma para Bell y consigue que acepte forjarla",
       "continuity": "CONT-MAIN-LN",
       "interval": "Volumen 1, p.115 y pp.129–133",
-      "evidenceStatus": "source_checked_translation_unverified",
+      "evidenceStatus": "source_checked_excerpt_only",
       "evidenceType": "user_supplied_private_light_novel_translation",
-      "claimPath": "events/timeline/EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001.md",
-      "note": "Petición y aceptación/forja; no es la entrega física de pp.145–146."
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+      "note": "Petición y aceptación/forja; no es la entrega física de pp.145–146.",
+      "claimRef": "DMR-061-CLM-001"
     },
     {
       "id": "REL-HEPHAISTOS-FORGE-REQUEST-DELIVERY-V01",
@@ -7686,10 +7687,11 @@
       "label": "La aceptación y comienzo de la forja preceden a la entrega de la daga a Hestia",
       "continuity": "CONT-MAIN-LN",
       "interval": "Petición p.115, aceptación pp.129–133; entrega pp.145–146",
-      "evidenceStatus": "source_checked_translation_unverified",
+      "evidenceStatus": "source_checked_excerpt_only",
       "evidenceType": "user_supplied_private_light_novel_translation",
-      "claimPath": "events/timeline/EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001.md",
-      "note": "Dos momentos cronológicos separados, vinculados a la misma arma."
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+      "note": "Dos momentos cronológicos separados, vinculados a la misma arma.",
+      "claimRef": "DMR-061-CLM-002"
     },
     {
       "id": "REL-FREYA-LOKI-CAFE-MEETING-V01",
@@ -7699,10 +7701,11 @@
       "label": "Freya se reúne con Loki y Ais durante el Festival y reconoce a Bell entre la multitud",
       "continuity": "CONT-MAIN-LN",
       "interval": "Volumen 1, PDF pp.139–145",
-      "evidenceStatus": "source_checked_translation_unverified",
+      "evidenceStatus": "source_checked_excerpt_only",
       "evidenceType": "user_supplied_private_light_novel_translation",
-      "claimPath": "events/timeline/EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001.md",
-      "note": "Bell es observado desde la cafetería; no interactúa con Freya, Loki o Ais."
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+      "note": "Bell es observado desde la cafetería; no interactúa con Freya, Loki o Ais.",
+      "claimRef": "DMR-061-CLM-003"
     },
     {
       "id": "REL-LOKI-FREYA-CAFE-MEETING-V01",
@@ -7712,10 +7715,11 @@
       "label": "Loki se reúne con Freya y lleva a Ais a la cafetería durante el Festival",
       "continuity": "CONT-MAIN-LN",
       "interval": "Volumen 1, PDF pp.139–145",
-      "evidenceStatus": "source_checked_translation_unverified",
+      "evidenceStatus": "source_checked_excerpt_only",
       "evidenceType": "user_supplied_private_light_novel_translation",
-      "claimPath": "events/timeline/EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001.md",
-      "note": "No se infiere relación formal entre Loki y Ais."
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+      "note": "No se infiere relación formal entre Loki y Ais.",
+      "claimRef": "DMR-061-CLM-004"
     },
     {
       "id": "REL-AIS-FREYA-LOKI-CAFE-MEETING-V01",
@@ -7725,10 +7729,11 @@
       "label": "Ais acompaña a Loki y es presentada ante Freya",
       "continuity": "CONT-MAIN-LN",
       "interval": "Volumen 1, PDF pp.140–145",
-      "evidenceStatus": "source_checked_translation_unverified",
+      "evidenceStatus": "source_checked_excerpt_only",
       "evidenceType": "user_supplied_private_light_novel_translation",
-      "claimPath": "events/timeline/EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001.md",
-      "note": "Ais sigue con la mirada a Bell cuando pasa por la avenida; no se registra interacción."
+      "claimPath": "research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+      "note": "Ais sigue con la mirada a Bell cuando pasa por la avenida; no se registra interacción.",
+      "claimRef": "DMR-061-CLM-005"
     }
   ]
 }
