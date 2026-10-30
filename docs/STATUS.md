@@ -754,5 +754,5 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Inspección visual:** PDF p. 22 inspeccionada a página completa. La identidad de la figura queda sin confirmar por ausencia de rótulo; no se infiere por apariencia.
 - **Próximo punto:** PDF p. 25. La revisión visual integral, la auditoría de personajes/equipo/estadísticas y las restantes pasadas siguen abiertas.
 - **Rama:** `research/danmachi-volume-01-primary-canon-2026-10-30`.
-- **Último checkpoint de esta tanda:** se verificará el HEAD final al cerrar; no declarar PR, CI ni merge hasta contar con sus resultados.
+- **Validación preintegración:** PR [#210](https://github.com/jonhararagi/wordwaifu/pull/210), dirigida a `main`, abierta y mergeable. Sobre el HEAD inicial `9c1fa3af0df755510b9609b66d8275814ac38498`, [Validate WordWaifu #41052288264](https://github.com/jonhararagi/wordwaifu/actions/runs/41052288264) y [DanMachi Lore and Retrieval Integrity #41052288242](https://github.com/jonhararagi/wordwaifu/actions/runs/41052288242) finalizaron `success`; sus jobs y pasos terminaron correctamente. Se corrigieron después dos notas históricas del dossier; el nuevo HEAD requiere volver a validar antes de integrar. No hay merge ni CI post-merge declarados todavía.
 
