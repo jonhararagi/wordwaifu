@@ -40,3 +40,22 @@ Toda revisión debe especificar época/intervalo, continuidad y punto narrativo.
 La premisa de que el OC conoce a su Familia durante la época denominada “Era Oscura” queda registrada como dirección narrativa del autor. La composición de la Familia, el significado exacto de “conoce” y la equivalencia cronológica oficial de esa etiqueta siguen pendientes.
 
 Consultar el [modelo de identidad y variantes temporales](../characters/01-identidad-y-variantes-temporales.md).
+
+
+## Intervalos relativos anclados a acontecimientos
+
+- Conservar literalmente la relación temporal que indique el texto: «una semana después», «tres días antes», «dos días más tarde», «al día siguiente», etc.
+- Un intervalo puede anclarse a T0 o a otro acontecimiento existente mediante `anchorId`; no forzar todos los intervalos a una fecha absoluta ni a T0.
+- Registrar dirección (`before` / `after`), cantidad, unidad y precisión (`exact`, `approximate`, `estimated`). El `anchorLabel` identifica de forma legible el suceso de referencia.
+- Si el texto solo indica «unos días» o una duración indeterminada, mantenerlo como intervalo impreciso o solo como orden relativo; nunca redondearlo a tres, cuatro o siete días por intuición.
+- Si el texto no establece duración, conservar únicamente precedencia, simultaneidad o solapamiento; no inferir una distancia.
+- Si una referencia posterior califica un suceso previo (por ejemplo, un rumor sobre un ascenso), registrar el rumor como evento de conocimiento/difusión separado y no convertirlo en hecho canónico.
+- La validación debe comprobar que cada evento-ancla existe y que el grafo temporal no contiene ciclos.
+- Toda relación temporal debe guardar localizador y fuente. Los localizadores de PDFs aportados por el usuario deben distinguir página física del PDF y paginación impresa cuando exista.
+
+### Ejemplos aplicados a DMR-060
+- Rumor de Ais nivel 6: una semana después de Udaeus; continúa siendo rumor.
+- Bell agota pociones normales: tres días antes de la visita a Naaza.
+- Lili ve Firebolt: un día antes de la incursión al piso 10.
+- Bell y Lili vuelven a formar equipo: dos días después del rescate/reconciliación.
+- Bell y Lili atraviesan pisos 8–9: «unos días», duración exacta desconocida.
