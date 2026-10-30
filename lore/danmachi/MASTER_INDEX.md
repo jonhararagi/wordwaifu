@@ -423,4 +423,13 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 
 ## DANMACHI-RESEARCH-060 — ampliación del volumen 2 (CONT-MAIN-LN)
 - [Expediente DMR-060](research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md) — eventos adicionales de Naaza, hostigamiento a Lili, Firebolt observado, rescate y reconciliación, recontratación dos días después y rumor de Ais una semana después de Udaeus.
-- La cronología interactiva incluye ahora 38 acontecimientos, con offsets relativos enlazados a eventos y fuente, sin fechas absolutas inventadas.
+- La cronología interactiva incluye ahora 42 acontecimientos, con offsets relativos enlazados a eventos y fuente, sin fechas absolutas inventadas.
+
+
+## DMR-060/061 — actualización de la cronología de volúmenes 1 y 2
+
+- La cronología interactiva en la rama de revisión contiene 42 eventos; 28 pertenecen a las extracciones de V1/V2 y se enlazan con sus informes de origen. Mantiene las capas `CONT-MAIN-LN` separadas.
+- Se retiró el registro combinado `EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001` y se segmentó en captura de Gedo, traición/cebo de Soma y rescate/reconciliación de Bell.
+- Las anclas de una semana, tres días, un día y dos días se guardan como relaciones explícitas entre eventos, no como fechas de calendario.
+- La pasada visual de contacto cubrió 24 recursos de imagen V1 y 29 V2, con ampliaciones selectivas; sigue pendiente la inspección de página completa de todas las ilustraciones.
+- Las cinco pasadas continúan abiertas: solo la primera lectura narrativa sustancial llegó al final de cada tramo extraíble.
