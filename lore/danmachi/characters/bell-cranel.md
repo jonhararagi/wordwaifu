@@ -104,3 +104,16 @@ Una entrevista de LN News Online de 2020 recoge que, en la historia de Memoria F
 - [Traición a Lili y rescate de Bell](../events/timeline/EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001.md) — PDF pp. 213–240.
 
 La traducción española aportada es privada y no se ha cotejado con el japonés. Estos localizadores describen el PDF consultado, no una paginación impresa confirmada.
+
+
+## CONT-MAIN-LN · datos directos de los volúmenes 1 y 2
+
+**Volumen 1 (DMR-061-SRC-001):** el epílogo recuerda que el abuelo de Bell murió por un ataque de monstruo cuando Bell no estaba presente; Bell expresa que teme perder de nuevo a su familia (PDF p. 184). Durante la persecución del Silverback se ofrece como señuelo para proteger a Hestia (pp. 183–190). Derrota al Silverback con la Daga de Hestia atacando la Piedra Mágica (pp. 196–200).
+
+**Estado y equipo V1:** narración p. 195 registra Fuerza E403, Resistencia H199, Destreza E412, Agilidad D512 y Magia I0; ficha visual p. 208 registra Agilidad D521. La discrepancia queda abierta. Ficha p. 209: piso alcanzado 6, arma daga, 7.100 Varisu. La daga inicial fue consumible de nivel bajo y costó junto con equipo 8.600 Varisu; el texto visual indica un mes y medio para pagar (p. 209).
+
+**Volumen 2 (DMR-060-SRC-001):** obtiene Firebolt mediante el Grimorio y sufre agotamiento mental al excederse; Naaza le vende una poción de Poder Mental por 8.700 Varisu (PDF pp. 167–169). En el piso 10 combate Ogros con la espada corta que Lili le prepara; el volumen explica que necesita dos Firebolts contra un segundo Ogro (pp. 195–213). Rescata a Lili de las Hormigas Asesinas con Firebolt, la Daga de Hestia y su daga secundaria; la salva porque es Lili, pese a sus engaños (pp. 230–237).
+
+**Cronología relativa:** agotó sus pociones normales tres días antes de visitar a Naaza; dejó que Lili viera Firebolt un día antes de la incursión al piso 10; se reencuentra y vuelve a contratar a Lili dos días después del rescate. No se asignan fechas de calendario.
+
+**Procedencia:** lectura directa de la traducción privada aportada, no cotejada con japonés. No trasladar estos snapshots a otros volúmenes sin una nueva fuente.
