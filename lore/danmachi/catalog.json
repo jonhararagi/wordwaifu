@@ -3019,6 +3019,34 @@
       ],
       "status": "source_checked_translation_unverified",
       "priority": "medium"
+    },
+    {
+      "id": "EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001",
+      "path": "events/timeline/EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001.md",
+      "type": "event",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volume 1",
+        "Bell",
+        "Kobold"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "medium"
+    },
+    {
+      "id": "EVT-DM-V01-BELL-DEFEATS-GOBLIN-AND-GETS-TOOTH-001",
+      "path": "events/timeline/EVT-DM-V01-BELL-DEFEATS-GOBLIN-AND-GETS-TOOTH-001.md",
+      "type": "event",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volume 1",
+        "Bell",
+        "Goblin"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "medium"
     }
   ],
   "reservedIds": [
