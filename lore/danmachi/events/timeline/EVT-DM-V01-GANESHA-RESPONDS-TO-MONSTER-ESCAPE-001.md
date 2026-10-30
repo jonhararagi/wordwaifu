@@ -40,6 +40,14 @@ Ganesha, Eina Tulle, Ais Wallenstein, Loki y empleados del Gremio
 - Eina organiza la comunicación con Familias cercanas y aventureros.
 - Ais y Loki aceptan ayudar; Eina teme especialmente por Bell porque la Calle Principal del Este es su destino.
 
+## Ampliación · PDF pp. 170–173
+
+- **p. 170:** el informe a Ganesha cifra en nueve los monstruos escapados; algunos podrían enfrentarse a aventureros de primera clase. Se comunica que guardias del sótano y empleados del Gremio fueron incapacitados por un desconocido. Ganesha ordena perseguir a los monstruos y solicitar ayuda a otras Familias y dioses.
+- **p. 171:** Ganesha ordena mantener el Festival y no avisar al público para evitar pánico. Prioriza la seguridad civil sobre reputación y decide posponer la captura del intruso, pues podría ser una distracción. El texto dice que la fuga se confirmó menos de cinco minutos antes del informe. Eina recibe aviso; los gerentes fueron enviados a la Entrada Oeste y en el lugar quedan empleados de bajo rango.
+- **pp. 171–172:** Eina organiza la comunicación con Familias cercanas y aventureros pese a la posible desaprobación de los altos mandos. Ais Wallenstein llega, pregunta qué ocurre y llama a Loki; Loki acepta ayudar a Ganesha.
+- **p. 173:** la mayoría de monstruos se dirige a la Calle Principal del Este. Misha enumera Ciervo Espada, Trolls y Silverback; Eina sitúa al Silverback en el piso 11 y a los otros en el piso 20. Eina teme por Bell porque se dirigía a esa calle y apenas había sobrevivido en el piso 5.
+- **Límite:** el informe cuenta nueve monstruos, pero estos folios solo nombran esos tres tipos; no completar la lista de los seis restantes. No atribuir las nueve fugas a Freya.
+
 ## Límites de evidencia
 - No añadir fecha de calendario si el texto no la proporciona.
 - Las páginas citadas son páginas físicas del PDF, no necesariamente la paginación impresa de la edición original.
