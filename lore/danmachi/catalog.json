@@ -3255,7 +3255,7 @@
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-02",
       "path": "volumes/main/volume-02.md",
       "type": "volume_dossier",
-      "status": "present_provisional_summary"
+      "status": "source_checked_partial"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-03",
@@ -3692,12 +3692,6 @@
       "path": "research/inbox/DANMACHI-RESEARCH-056-hestia-familia-support-capabilities.md",
       "type": "research_report",
       "status": "secondary_checked"
-    },
-    {
-      "document_id": "VOL-MAIN-02",
-      "path": "volumes/main/volume-02.md",
-      "type": "volume_dossier",
-      "status": "source_checked_partial"
     }
   ],
   "lastStructuredSync": "2026-10-28",
