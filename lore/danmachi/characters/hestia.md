@@ -68,3 +68,12 @@ Hestia se encuentra con Bell después de cincuenta intentos fallidos de reclutam
 Hestia consigue de Hephaistos la Daga de Hestia para Bell (pp. 145–146). Más tarde revela que se inclinó en dogeza durante treinta horas y explica el trabajo de creación: cabello, sangre divina y Texto Sagrado. El arma tiene Estado propio y crece con Bell; solo alguien con la Gracia de Hestia puede usarla correctamente (pp. 203–208). La ficha visual consigna préstamo a 35 años y 420 plazos, además de contrato laboral en Babel con Hephaistos Familia (p. 208). No describir la deuda como perdonada.
 
 **Procedencia:** DMR-061-SRC-001; traducción privada/no cotejada. No asignar fechas calendáricas que el volumen no da.
+
+
+## Volumen 2 · conversación con Eina sobre Lili (CONT-MAIN-LN)
+
+Durante una inspección del Gremio en el establecimiento donde trabaja Hestia, Eina la lleva aparte y le habla de Lili y del riesgo relacionado con Soma Familia. Le pide que ayude a convencer a Bell de romper el contacto con su Ayudante (V2 PDF pp. 218–219). Hestia escucha; el pasaje no confirma que acepte la solicitud.
+
+- Evento: [Eina advierte a Hestia sobre Lili](../events/timeline/EVT-DM-V02-HESTIA-EINA-DISCUSS-LILI-001.md).
+- **Límite:** no inferir que Hestia consigue cambiar la decisión de Bell en esta escena.
+- **Procedencia:** DMR-060-SRC-001; traducción privada no cotejada.
