@@ -2,45 +2,41 @@
 id: EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001
 universe: danmachi
 type: event
-status: source_checked_partial
+status: source_checked_translation_unverified
 continuity_scope: CONT-MAIN-LN
 time_anchor: volume_02_internal_order_absolute_date_unknown
-source_verification: private_translation_not_crosschecked
-source_refs: ["DMR-060-SRC-001"]
+source_verification: user_supplied_private_translation_not_crosschecked
+source_refs: [DMR-060-SRC-001]
+source_locators: ["PDF pp. 221–230"]
 spoiler_level: major
-tags: [Liliruca Arde, Bell Cranel, Soma Familia, rescate, piso 10]
+tags: [Liliruca Arde, Kanu, Soma Familia, traición, Hormigas Asesinas]
 ---
 
-# Miembros de Soma traicionan a Lili y Bell la rescata
+# Miembros de Soma Familia traicionan a Lili y la dejan como cebo
 
 ## Alcance y tiempo
-
-- **Continuidad:** `CONT-MAIN-LN`.
-- **Orden temporal:** dentro de la secuencia narrativa del volumen 2; fecha absoluta desconocida.
-- **Localizador:** PDF pp. 213–237; historia de Lili especialmente pp. 213–229 y 234–237; reanudación del equipo pp. 237–240.
-- **Estado de lectura:** páginas narrativas localizadas en la traducción española privada aportada por el usuario; fidelidad de traducción pendiente de cotejo.
+- **Continuidad:** CONT-MAIN-LN.
+- **Localizador:** PDF pp. 221–230.
+- **Orden temporal:** después de la separación de Bell y Lili en la secuencia del piso 10; la duración exacta de la fuga no se fija.
+- **Fuente:** traducción privada de la novela ligera oficial, no cotejada con japonés.
 
 ## Resumen
+Lili intenta escapar de Gedo y sus colaboradores. Kanu y otros miembros de Soma Familia la obligan a entregar la llave de una caja fuerte que contiene joyas de Gnomo y la abandonan como cebo frente a las Hormigas Asesinas.
 
-Después de que Lili se separa de Bell, miembros de Soma Familia la traicionan. Bell interviene y la rescata. En la entrada de Babel ambos reanudan su relación de equipo.
+## Participantes
+- Liliruca Arde — es engañada, entrega la llave y queda abandonada.
+- Kanu y otros miembros de Soma Familia — ejecutan la traición.
+- Gedo y sus colaboradores — la persiguen en la secuencia anterior; no se asume que participen del abandono por Kanu.
 
-## Entidades participantes
+## Detalles
+- Lili conserva joyas de Gnomo en una caja fuerte alquilada a una tienda de Gnomos; pretende usarlas para conseguir su libertad.
+- Kanu y otros miembros de Soma Familia la presionan para entregar la llave.
+- Utilizan Hormigas Asesinas y la situación del Dungeon para hacer que Lili quede como cebo mientras ellos escapan.
+- Lili admite internamente que teme morir y reconoce su soledad y el deseo de que alguien dependa de ella.
 
-- [Liliruca Arde](../../characters/liliruca-arde.md) — queda expuesta a la traición y es rescatada.
-- [Bell Cranel](../../characters/bell-cranel.md) — interviene para rescatarla.
-- Miembros de Soma Familia — participantes de la traición; no representa automáticamente a toda la Familia.
-
-## Detalles registrados
-
-- La secuencia incluye la traición de miembros de Soma.
-- Bell rescata a Lili.
-- La relación de equipo se reanuda en la entrada de Babel, PDF pp. 237–240.
+## Secuencia posterior separada
+- **Rescate y reconciliación:** Bell rescata a Lili, PDF pp. 230–237, en su ficha individual separada.
+- **Reencuentro y nueva contratación:** Bell y Lili vuelven a formar equipo, PDF pp. 237–240; exactamente dos días después de la separación tras el rescate.
 
 ## Límites
-
-No afirmar que toda Soma Familia participa ni que la escena demuestra las motivaciones de todos sus integrantes.
-
-## Fuente
-
-- `DMR-060-SRC-001` — [expediente de extracción del volumen 2](../../research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md).
-- Fuente material: `Volumen [02] • DanMachi.pdf`, archivo adjunto proporcionado por el usuario. La obra original es oficial; la traducción consultada es privada/no editorial.
+No afirmar que toda Soma Familia participó ni trasladar a cada miembro las acciones de Kanu y sus colaboradores. No reducir a Lili a esta decisión concreta.
