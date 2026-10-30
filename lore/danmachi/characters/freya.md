@@ -24,6 +24,6 @@ tags: [Freya, Freya Familia, Bell, motivación, spoiler-major]
 
 ## CONT-MAIN-LN · volumen 1 (DMR-061-SRC-001)
 
-Durante el Festival de Monstruos, Freya incapacita con Encanto a guardias/empleados de los establos, obtiene las llaves y libera un Silverback específico para que busque a Bell (PDF pp. 159–164). El texto describe una motivación de fascinación y deseo posesivo de observar el crecimiento de Bell; la maniobra es deliberadamente peligrosa. La fuga general se informa después como nueve monstruos, pero el pasaje no demuestra que Freya liberara personalmente a los nueve.
+Durante el Festival de Monstruos, Freya incapacita con Encanto a guardias/empleados de los establos, obtiene las llaves y libera un Silverback específico para que busque a Bell (PDF pp. 160–164). El texto describe una motivación de fascinación y deseo posesivo de observar el crecimiento de Bell; la maniobra es deliberadamente peligrosa. La fuga general se informa después como nueve monstruos, pero el pasaje no demuestra que Freya liberara personalmente a los nueve.
 
 **Separación de continuidad:** este apartado añade datos de novela principal sin sustituir el perfil CONT-ANIME existente. Fuente: traducción privada no cotejada.
