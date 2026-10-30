@@ -83,7 +83,7 @@ const expectedLabels={
  "EVT-DM-V02-LILI-OBSERVES-BELL-FIREBOLT-001":"Exactamente el día anterior a la expedición al piso 10; el hecho se relata retrospectivamente.",
  "EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001":"Volumen 2 · incursión al piso 10.",
  "EVT-DM-V02-LILI-ABANDONS-BELL-001":"Durante la emboscada en el piso 10.",
- "EVT-DM-V02-LILI-PARENTS-DIE-IN-DUNGEON-001":"Pasado de Lili · antes de su vida actual como Ayudante; fecha desconocida.",
+ "EVT-DM-V02-LILI-PARENTS-DIE-IN-DUNGEON-001":"Pasado de Lili · antes de su vida actual como Ayudante; fecha desconocida",
  "EVT-DM-V02-LILI-REVEALS-HOBBIT-IDENTITY-001":"Después de separarse de Bell · huida desde el piso 10 hacia los pisos superiores.",
  "EVT-DM-V02-HESTIA-EINA-DISCUSS-LILI-001":"En paralelo a la huida de Lili tras separarse de Bell.",
  "EVT-DM-V02-GEDO-CAPTURES-LILI-001":"Después de la huida de Lili desde el piso 10; séptimo piso del Dungeon.",
