@@ -422,6 +422,9 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 ## DANMACHI-RESEARCH-061 — extracción del volumen 1 (CONT-MAIN-LN)
 - [Expediente DMR-061](research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md) — eventos iniciales Bell–Hestia, Eina, Ais y Seal Flover; escenas de Estado, Festival, Freya/Silverback y Dungeon. Traducción privada sin cotejo; el combate de Kobolds de pp. 46–48 sigue abierto.
 - [Dossier volumen 1](volumes/main/volume-01.md) y [índice de eventos](events/00-indice-candidatos.md).
+- **Lectura primaria más reciente:** Volumen 1, PDF pp. 11–146 documentadas secuencialmente; próximo folio p. 147. El bloque pp. 137–146 queda registrado en el dossier y el informe, con hoja visual revisada y sin ilustraciones.
+- **Eventos V1 añadidos en la rama de investigación:** petición/forja de la daga (`EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001`), entrega física a Hestia (`EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001`) y reunión de Freya/Loki/Ais (`EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001`); no fusionar petición con entrega ni extrapolar el gesto de Ais.
+- **Estado:** traducción privada no cotejada con japonés; cinco pasadas generales abiertas, cotejo visual/individual aún pendiente y sin marcas `+` por esta extracción grupal.
 
 ## DANMACHI-RESEARCH-060 — ampliación del volumen 2 (CONT-MAIN-LN)
 - [Expediente DMR-060](research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md) — eventos adicionales de Naaza, hostigamiento a Lili, Firebolt observado, rescate y reconciliación, recontratación dos días después y rumor de Ais una semana después de Udaeus.
