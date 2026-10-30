@@ -791,3 +791,13 @@
 - **Corrección de fuente:** los créditos impresos de ambos PDFs indican versión inglesa Sorotrans y traducción inglés-español/corrección/edición Mugetsu123. Kurosaki-Vizard Translation aparece como marca de agua, no crédito exclusivo.
 - **Alcance abierto:** la primera pasada narrativa de V1/V2 está sustancialmente terminada; inspección visual completa, cotejo de personajes y pruebas de regresión/CI continúan pendientes. No marcar + ni declarar una revisión individual cronometrada por la extracción grupal.
 
+### CONV-DM-2026-10-30-018 — Carpetas separadas para canon primario y contraste web
+
+- **Fecha:** 2026-10-30.
+- **Estado:** ACCEPTED como regla operativa.
+- **Instrucción:** los análisis extraídos directamente de los volúmenes aportados por el usuario se guardan en carpetas propias de la obra y continuidad correspondientes (para novela principal DanMachi: `lore/danmachi/volumes/main/`, con sus eventos primarios enlazados). No mezclarlos con expedientes de investigación web, wikis ni fuentes secundarias.
+- **Objetivo:** conservar un corpus fiel a la fuente textual de trabajo que después pueda contrastarse contra la información encontrada en la web, manteniendo procedencia, localizadores, traducción y discrepancias explícitas.
+- **Regla de evidencia:** no completar silenciosamente un vacío del volumen con una wiki; los resultados web se mantienen en sus expedientes de investigación y se comparan por separado. La traducción privada aportada se identifica como no cotejada con el japonés.
+- **Aplicación inmediata:** continuar solo con Volumen 1 en esta rama; checkpoint de lectura hasta PDF pp. 19–24 guardado en `volume-01.md`, DMR-061 y el expediente existente de Eina. El siguiente folio es PDF p. 25.
+- **Límites:** las cinco pasadas siguen abiertas; no marcar personajes con `+` por una extracción grupal ni declarar CI/integración sin evidencia.
+

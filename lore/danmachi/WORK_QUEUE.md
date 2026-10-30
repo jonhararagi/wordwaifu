@@ -1150,3 +1150,17 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [ ] Auditar las fichas de Bell, Hestia, Liliruca, Ais, Freya y Eina, Estados de Falna, equipo, atributos, relaciones y localizadores exactos. No marcar + por esta extracción grupal.
 - [ ] Ejecutar tests de cronología/recuperación, validadores y workflows CI; solo después integrar por PR en main.
 - **Estado:** IN_PROGRESS; primera pasada sustancial completada, pasadas 2–5 pendientes.
+
+## Continuación independiente DMR-061 · Solo Volumen 1 (2026-10-30)
+
+- [x] Mantener la extracción de la novela principal en `lore/danmachi/volumes/main/`, separada de carpetas de búsqueda web/wikis y de otras continuidades, para utilizarla luego como corpus de contraste.
+- [x] Retomar la lectura desde PDF p. 11 y registrar pp. 11–18 sin duplicar el evento Bell–Ais–Minotauro; el ID existente `EVT-DM-BELL-AIS-MINOTAUR-001` conserva el localizador actualizado.
+- [x] Continuar con pp. 19–24: reputación de Ais comunicada por Eina, consejo profesional/personal de Eina, canje de 1.200 Varisu, pasado e ideal heroico de Bell y llegada a una iglesia deteriorada sin identificación todavía.
+- [x] Actualizar el evento existente `EVT-DM-EINA-ADVISOR-001` con el localizador de novela principal pp. 16–21 y 23, sin mezclar su perfil CONT-ANIME ni inferir reciprocidad romántica.
+- [x] Inspeccionar visualmente PDF p. 22; registrar descripción sin asignar identidad por semejanza contextual.
+- [ ] Continuar lectura secuencial desde PDF p. 25. No volver a leer pp. 1–24 salvo para resolver una discrepancia concreta o revisar visualmente un folio pendiente.
+- [ ] Inspeccionar a página completa las pp. 19–21 y 23–24; separar este trabajo de la lectura textual ya hecha.
+- [ ] Seguir cotejando el texto inicial con eventos, personajes, vínculos, objetos y cronología ya existentes; actualizar los registros de canon primario y no crear IDs duplicados.
+- [ ] Completar después el cotejo individual de fichas y la comparación con el corpus web/secundario; no añadir `+` por esta pasada grupal.
+- **Estado:** IN_PROGRESS; checkpoint de pp. 19–24 verificado en la rama `research/danmachi-volume-01-primary-canon-2026-10-30`. PR #210 está abierta y mergeable. CI preintegración sobre HEAD `9c1fa3af0df755510b9609b66d8275814ac38498`: Validate WordWaifu #41052288264 y DanMachi Lore and Retrieval Integrity #41052288242, ambos `success`. La integración y el CI post-merge siguen pendientes.
+

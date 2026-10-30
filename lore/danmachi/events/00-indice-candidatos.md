@@ -39,7 +39,7 @@ Las tres afirmaciones de la sinopsis editorial conservan el estado `provisional_
 - [Pérdida de poder/caída de Zeus y Hera Familia](candidates/EVT-DM-ZH-FALL-001.md) · EVT-DM-ZH-FALL-001
 - [Llegada de Hestia al mundo inferior](candidates/EVT-DM-HESTIA-DESCENT-001.md) · EVT-DM-HESTIA-DESCENT-001
 - [Encuentro inicial de Bell y Hestia](candidates/EVT-DM-BELL-MEETS-HESTIA-001.md) · EVT-DM-BELL-MEETS-HESTIA-001
-- [Eina asesora a Bell a través de la Guild](candidates/EVT-DM-EINA-ADVISOR-001.md) · EVT-DM-EINA-ADVISOR-001
+- [Eina asesora a Bell a través de la Guild](candidates/EVT-DM-EINA-ADVISOR-001.md) · EVT-DM-EINA-ADVISOR-001 · `CONT-MAIN-LN`; traducción V1 PDF pp. 16–21 y 23, con primer contacto recordado «hace casi dos semanas», advertencia de seguridad y ánimo posterior al rescate de Ais.
 
 La excepción parcial es EVT-DM-GREAT-QUESTS-001: una referencia oficial transversal confirma conjuntamente que Zeus Familia y Hera Familia derrotaron a Behemoth y Leviathan, pero no asigna cada monstruo a una Familia ni establece fecha, roster o desenlace contra el Dragón Negro. Los demás eventos de esta sección siguen pendientes de cotejo primario para sus detalles específicos.
 
@@ -66,6 +66,7 @@ Antes de crear otro evento, compara ID, nombres alternativos, participantes, per
 
 ## Volumen 1 — eventos narrativos extraídos de traducción aportada
 
+- [Ais rescata a Bell del Minotauro](timeline/EVT-DM-BELL-AIS-MINOTAUR-001.md) — PDF pp. 11–18 (rescate pp. 11–14; relato posterior a Eina pp. 16–18); se conserva «Aizu» como grafía de la traducción y la ambigüedad sobre la aparición en el piso 15.
 - [Encuentro de Bell y Hestia](candidates/EVT-DM-BELL-MEETS-HESTIA-001.md) y [concesión de Falna](timeline/EVT-DM-V01-BELL-RECEIVES-FALNA-001.md) — PDF pp. 211–214.
 - [Hephaistos entrega la Daga de Hestia](timeline/EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001.md) — pp. 145–146.
 - [Bell y Hestia en el Festival](timeline/EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001.md) — pp. 150–159.
