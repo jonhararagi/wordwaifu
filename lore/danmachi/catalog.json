@@ -2741,6 +2741,18 @@
       "status": "source_checked_partial",
       "priority": "high",
       "name": "ais recovers jade protector 001"
+    },
+    {
+      "id": "DANMACHI-RESEARCH-060",
+      "path": "research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+      "type": "research_dossier",
+      "tags": [
+        "volume 2",
+        "events",
+        "CONT-MAIN-LN"
+      ],
+      "status": "source_checked_partial_translation_unverified",
+      "priority": "high"
     }
   ],
   "reservedIds": [
@@ -3680,6 +3692,18 @@
       "path": "research/inbox/DANMACHI-RESEARCH-056-hestia-familia-support-capabilities.md",
       "type": "research_report",
       "status": "secondary_checked"
+    },
+    {
+      "document_id": "VOL-MAIN-02",
+      "path": "volumes/main/volume-02.md",
+      "type": "volume_dossier",
+      "status": "source_checked_partial"
+    },
+    {
+      "document_id": "DOC-DMR-060",
+      "path": "research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+      "type": "research_dossier",
+      "status": "source_checked_partial"
     }
   ],
   "lastStructuredSync": "2026-10-28",
