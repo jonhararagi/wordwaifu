@@ -1130,7 +1130,7 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] CI post-merge sobre el SHA exacto `6c62170dee51ec7a57b87dff4e0e0d189dadc2bc`: [Validate WordWaifu #40952682496](https://github.com/jonhararagi/wordwaifu/actions/runs/40952682496) y [DanMachi Lore and Retrieval Integrity #40952682505](https://github.com/jonhararagi/wordwaifu/actions/runs/40952682505), ambos `success`.
 - [ ] Mantener pendiente el cotejo narrativo primario de las mecánicas y los costes no reportados; no repetir las mismas páginas sin evidencia nueva.
 - **DMR-045:** permanece abierto; los cinco cotejos primarios no cambian.
-\n
+
 
 #### Aclaración de evidencia sobre la pasada individual del 2026-10-29
 
