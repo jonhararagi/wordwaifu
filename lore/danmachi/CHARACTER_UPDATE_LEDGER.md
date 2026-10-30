@@ -496,3 +496,17 @@ Fuentes consultadas:
 - **Visual:** V1 pp. 208–209 y V2 pp. 244–245 incorporan fichas y datos no presentes en la narración continua. La inspección visual completa permanece pendiente.
 - **Bitácora de personaje:** no se añade signo + ni se declara pasada individual completa de 5–10 min para Bell, Hestia, Lili, Ais, Freya o Eina; esta tanda es una extracción por volumen, no una revisión individual cronometrada.
 - **Próximo paso:** completar páginas iniciales V1 con localizadores, inspección visual página a página, cotejo de perfiles/objetos/estadísticas y pruebas de cronología interactiva antes de integrar a main.
+
+
+## DMR-060/061 — pasada grupal de los volúmenes 1 y 2 (2026-10-30)
+
+- **Alcance:** extracción narrativa y visual por volumen; no equivale a una pasada individual cronometrada de Bell, Hestia, Liliruca, Ais, Freya o Eina.
+- **Bell:** V1 Estado narrativo D512 vs ficha visual D521 (pp.195/208), ficha de equipo p.209; V2 Firebolt, agotamiento mental, poción de Naaza, Ogros y rescate de Lili.
+- **Hestia:** V1 entrega/explicación de Daga de Hestia, términos de préstamo y contrato; V2 conversación con Eina sobre Lili (pp.218–219).
+- **Liliruca:** V2 raza Hobbit y disfraz Cinder Ella, estado visual Lv1, Héroe Anónimo, Ballesta Pequeña, Guantes de Ayudante, historia de padres y secuencia Gedo/Soma/Rescate/Recontratación.
+- **Ais:** V2 derrota a Udaeus; una semana después el texto presenta un rumor de nivel 6, no una confirmación; encuentra el Protector de Jade en el epílogo.
+- **Freya:** V1 incapacita a personal mediante Encanto y libera un Silverback específico (pp.160–164); no se atribuye a ella la liberación de los nueve monstruos reportados.
+- **Eina:** V1 organiza la respuesta del Gremio y su consejo sobre Piedra Mágica ayuda a Bell; V2 investiga a Soma y advierte a Hestia sobre Lili.
+- **Signo +:** no se añadió a ningún nombre. No se declara cumplida la duración individual de 5–10 minutos; no hay marcas horarias que la acrediten.
+- **Estado de fuentes:** DMR-060-SRC-001 y DMR-061-SRC-001 son la novela ligera original oficial en traducciones privadas no cotejadas. Los informes conservan los límites de esa procedencia.
+- **Reapertura:** continuar las fichas por separado en pasadas dedicadas; no volver a recorrer páginas ya registradas salvo que falte localizador, haya contradicción o se aporte fuente nueva.
