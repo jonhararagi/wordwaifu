@@ -206,3 +206,13 @@ No se ha inspeccionado visualmente cada folio. Estos localizadores constituyen u
 - **Visual:** pp. 49–54 renderizadas e inspeccionadas; seis folios de texto continuo, sin ilustraciones.
 - **Próximo folio:** PDF p. 55. Las cinco pasadas siguen abiertas; pp. 19–21 y 23–24 aún requieren inspección visual.
 
+## DMR-061 — continuación narrativa, PDF pp. 55–60
+
+- **p. 55 — reacción al Estado:** al volver a la iglesia, Bell recibe el papel actualizado de Hestia. Se sorprende por el dominio total superior a 160 y por la ganancia de Resistencia tras el único golpe que cree haber recibido ese día: el ataque sorpresa del Goblin al final de p. 54. La traducción indica un aumento «a 29»; en relación con el snapshot anterior (I 13 → I 42), se interpreta prudentemente como +29, no como total 29. No adjudicar todo el crecimiento del día al golpe.
+- **pp. 55–56 — Hestia:** Hestia está visiblemente molesta y guarda silencio ante las preguntas de Bell. Se marcha a una fiesta que organiza su lugar de trabajo y le dice que salga a comer algo lujoso. Bell no conoce la causa de su enfado.
+- **p. 57 — localización:** Bell llega al establecimiento en que trabaja Seal. El nombre aparece como **La Señora de la Abundancia**; es un edificio de piedra de dos pisos situado en la calle principal. La calle tiene actividad nocturna y mucha concurrencia.
+- **pp. 58–59 — primera entrada:** Bell observa una jefa enana, varias trabajadoras descritas como mujeres gato y una elfa en el personal. Seal lo recibe y le asigna un asiento apartado en la esquina de la barra. No convertir la observación grupal en fichas individuales sin buscar registros previos y completar revisión propia.
+- **pp. 59–60 — Seal y la jefa:** la jefa bromea con que Bell es lindo y un gran comensal. Seal dice que pidió a «Mia mama» una atención hospitalaria para un cliente recién conocido. La jefa reconoce que bromeaba y anima a Bell a disfrutar. Bell explica que su Familia tiene pocos recursos.
+- **p. 60 — valores económicos declarados:** Bell informa 4.400 Varisu cambiados hoy (frente a unos 2.000 habituales), 50 Varisu para una comida sencilla y al menos 500 para una poción de recuperación. Explica que no ha comprado un arma nueva por el coste del equipo y sus reparaciones. Registrar como diálogo/exposición de Bell, no como precio universal.
+- **Evento candidato:** primera visita de Bell al establecimiento de Seal, con llegada, recepción y asiento preparado; al final del folio aún no se muestra que haya terminado de comer. Antes de crear ID, revisar el catálogo y el índice para evitar duplicados. «Mia mama» no se convierte en nombre personal confirmado.
+- **Próximo folio:** PDF p. 61. La traducción privada no está cotejada con japonés; las cinco pasadas continúan abiertas.
