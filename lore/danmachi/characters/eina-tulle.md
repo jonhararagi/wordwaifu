@@ -58,6 +58,6 @@ El perfil oficial de DanMachi III identifica a Eina como recepcionista y asesora
 
 Eina aconseja a Bell sobre las debilidades de los monstruos y la Piedra Mágica como núcleo, información que él recuerda al derrotar al Silverback (V1 PDF pp. 197–198). También organiza al personal del Gremio para pedir ayuda durante la fuga de monstruos del Festival (V1 pp. 171–173).
 
-En V2 investiga la anomalía de Soma Familia, pide ayuda a Ais para proteger a Bell y Lili e interpreta el riesgo a partir de la información que obtuvo (V2 pp. 174–190, 201–204). No se debe convertir la advertencia de Loki en omnisciencia de Eina ni inferir que conoce toda la trama de Kanu.
+En V2 investiga la anomalía de Soma Familia, pide ayuda a Ais para proteger a Bell y Lili e interpreta el riesgo a partir de la información que obtuvo (V2 pp. 174–190, 201–204). Luego habla en privado con Hestia durante una inspección del Gremio y le pide ayuda para convencer a Bell de romper el contacto con Lili (V2 pp. 218–219; evento `EVT-DM-V02-HESTIA-EINA-DISCUSS-LILI-001`). No se debe convertir la advertencia de Loki en omnisciencia de Eina ni inferir que conoce toda la trama de Kanu.
 
 **Procedencia:** traducciones privadas no cotejadas; los perfiles CONT-ANIME existentes permanecen separados.
