@@ -827,3 +827,14 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Inspección visual:** pp. 61–66 renderizadas a 110 dpi e inspeccionadas; seis folios de texto continuo, sin ilustraciones.
 - **Rama:** research/danmachi-v1-primary-pp49-54-2026-10-30, base main 12f2e60d79b8a3dbe9e1a998a375ecd7cafef684. La rama sigue sin PR, sin CI y sin pruebas locales.
 - **Próximo folio:** PDF p. 67. Continúan abiertas cinco pasadas, inspecciones visuales de pp. 19–21, 23–24 y 49–54, cotejos individuales y contraste web secundario.
+
+## DMR-061 — continuación del Volumen 1, PDF pp. 137–146 (2026-10-30)
+
+- **Continuidad/fuente:** `CONT-MAIN-LN`, `DMR-061-SRC-001`; traducción privada española no cotejada con el japonés.
+- **Lectura y auditoría:** pp. 137–146 leídas secuencialmente; revisión por página y hoja de contactos renderizada a 110 dpi. No se observaron ilustraciones en este bloque.
+- **Hallazgos:** pp. 137–138 describen el Festival de Monstruos y el encargo del monedero de Seal; Bell sale con él hacia el Coliseo, pero la devolución aún no aparece. pp. 139–145 contienen la reunión Freya–Loki–Ais, la sospecha de Loki sobre el interés de Freya y la observación de Bell entre la multitud. pp. 145–146 muestran a Hephaistos entregando a Hestia la daga terminada; la deuda sigue vigente.
+- **Eventos:** se conservan por separado `EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001` (petición/aceptación y comienzo de forja, p. 115 y pp. 129–133) y `EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001` (entrega física pp. 145–146). La reunión se registra en `EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001`; el seguimiento visual de Ais se limita a lo que el texto narra, sin convertirlo en reconocimiento verbal. Los tres IDs figuran en los índices de eventos y se enlazan a la fuente DMR-061-SRC-001.
+- **Pendientes:** devolución del monedero a Seal; continuar lectura desde PDF p. 147. Las dos pociones ya quedaron identificadas en p. 127 como pociones de recuperación; no atribuirles fórmula o propiedades adicionales sin pasaje.
+- **Estado Git:** rama `research/danmachi-v1-primary-pp49-54-2026-10-30`, HEAD observado `fa5f5258229ae86e5122fc0f58d1111ee9967eea`; `main` sigue en `12f2e60d79b8a3dbe9e1a998a375ecd7cafef684`; 63 commits ahead / 0 behind en la comparación consultada. PR #209 pertenece a otra rama y no se modificó.
+- **Pruebas/CI:** no se ejecutaron pruebas de código ni CI para esta pasada documental. No se creó PR ni se modificó `main`.
+- **Control horario:** no se registró una medición fiable de inicio/cierre de esta sesión; no se inventa una duración retrospectiva.
