@@ -1867,7 +1867,11 @@
         ],
         "distanceKnown": false,
         "precision": "order_only",
-        "qualifier": "En el tramo temprano de la historia principal, tras la llegada de Bell a Orario; el texto no fija la distancia ni el orden exacto respecto del Festival."
+        "qualifier": "En el tramo temprano de la historia principal, tras la llegada de Bell a Orario; el texto no fija la distancia ni el orden exacto respecto del Festival.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-AIS-UDAEUS-001.md"
+        ]
       },
       "narrativeOrigin": {
         "kind": "published_reference"
@@ -2104,7 +2108,11 @@
         ],
         "distanceKnown": false,
         "precision": "order_only",
-        "qualifier": "Durante el arco inicial de Bell en Orario; la distancia desde T0 y el orden paralelo respecto de la escena de Udaeus no quedan fijados aquí."
+        "qualifier": "Durante el arco inicial de Bell en Orario; la distancia desde T0 y el orden paralelo respecto de la escena de Udaeus no quedan fijados aquí.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001.md"
+        ]
       },
       "narrativeOrigin": {
         "kind": "published_reference"
@@ -2631,7 +2639,11 @@
         ],
         "distanceKnown": false,
         "precision": "order_only",
-        "qualifier": "Después del encuentro de Bell con los aventureros que increpan a Lili; el texto describe «unos días» para atravesar los pisos 8 y 9 y un intervalo de un día entre la demostración de Firebolt y la incursión."
+        "qualifier": "Después del encuentro de Bell con los aventureros que increpan a Lili; el texto describe «unos días» para atravesar los pisos 8 y 9 y un intervalo de un día entre la demostración de Firebolt y la incursión.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001.md"
+        ]
       },
       "narrativeOrigin": {
         "kind": "published_reference"
