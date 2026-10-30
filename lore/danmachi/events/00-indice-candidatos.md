@@ -72,7 +72,9 @@ Antes de crear otro evento, compara ID, nombres alternativos, participantes, per
 - [Bell derrota al grupo de Kobolds](timeline/EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001.md) — PDF pp. 46–51; conserva la ambigüedad del recuento y registra fragmentos de Piedra Mágica y una garra como botín.
 - [Bell derrota a un Goblin y recoge su diente](timeline/EVT-DM-V01-BELL-DEFEATS-GOBLIN-AND-GETS-TOOTH-001.md) — PDF p. 53; no se confunde con el encuentro abierto de p. 54.
 - [Primer encuentro de Bell y Hestia](candidates/EVT-DM-BELL-MEETS-HESTIA-001.md) — recuerdo narrativo en PDF p. 29 (traducción privada); [concesión inicial de Falna](timeline/EVT-DM-V01-BELL-RECEIVES-FALNA-001.md) — evento distinto en PDF pp. 211–214. La actualización posterior al Minotauro se registra en [su propio evento](timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001.md), pp. 30–36, separada de la actualización con daga de pp. 193–196.
-- [Hephaistos entrega la Daga de Hestia](timeline/EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001.md) — pp. 145–146.
+- [Hestia consigue que Hephaistos acepte forjar una daga para Bell](timeline/EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001.md) — petición en p. 115, insistencia y aceptación en pp. 129–133; distinta de la entrega física.
+- [Hephaistos entrega la Daga de Hestia](timeline/EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001.md) — pp. 145–146; entrega después de la petición y forja.
+- [Freya se reúne con Loki y Ais y reconoce a Bell durante el Festival](timeline/EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001.md) — pp. 139–145; reunión posterior al Banquete de los Dioses y anterior al encuentro de Bell/Hestia y a la liberación del Silverback.
 - [Bell y Hestia en el Festival](timeline/EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001.md) — pp. 150–159.
 - [Freya libera un Silverback](timeline/EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001.md) — pp. 159–164.
 - [Respuesta de Ganesha y el Gremio](timeline/EVT-DM-V01-GANESHA-RESPONDS-TO-MONSTER-ESCAPE-001.md) — pp. 170–173.
