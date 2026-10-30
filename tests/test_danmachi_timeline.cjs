@@ -14,12 +14,35 @@ assert.equal(report.valid,true,report.errors.join("\n"));
 assert.equal(report.temporalModelVersion,1);
 assert.equal(report.legacyTemporalModel,false);
 assert.equal(report.eraCount,10);
-assert.equal(report.eventCount,15);
-assert.equal(report.temporalEventCount,15);
+assert.equal(report.eventCount,38);
+assert.equal(report.temporalEventCount,38);
 assert.equal(data.anchor.id,"T0-BELL-ARRIVAL");
 assert.equal(data.anchor.eventId,"EVT-DM-BELL-ARRIVAL-001");
 
 const expectedKinds={
+ "EVT-DM-V01-BELL-RECEIVES-FALNA-001":"relative_order",
+ "EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001":"relative_order",
+ "EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001":"relative_order",
+ "EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001":"relative_order",
+ "EVT-DM-V01-GANESHA-RESPONDS-TO-MONSTER-ESCAPE-001":"relative_order",
+ "EVT-DM-V01-BELL-HESTIA-SILVERBACK-CHASE-001":"relative_order",
+ "EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001":"relative_order",
+ "EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001":"relative_order",
+ "EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001":"relative_order",
+ "EVT-DM-V02-AIS-UDAEUS-001":"relative_order",
+ "EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001":"relative_offset",
+ "EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001":"relative_order",
+ "EVT-DM-V02-BELL-FIREBOLT-TEST-001":"relative_order",
+ "EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001":"relative_offset",
+ "EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001":"relative_order",
+ "EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001":"relative_order",
+ "EVT-DM-V02-LILI-OBSERVES-BELL-FIREBOLT-001":"relative_offset",
+ "EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001":"relative_order",
+ "EVT-DM-V02-LILI-ABANDONS-BELL-001":"relative_order",
+ "EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001":"relative_order",
+ "EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001":"relative_order",
+ "EVT-DM-V02-BELL-AND-LILI-REHIRE-001":"relative_offset",
+ "EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001":"relative_order",
  "EVT-DM-DESCENT-001":"unknown",
  "EVT-DM-GREAT-QUESTS-001":"relative_order",
  "EVT-DM-ZH-OEBD-001":"relative_order",
@@ -37,6 +60,29 @@ const expectedKinds={
  "EVT-DM-JUGGERNAUT-DEFEAT-001":"relative_order"
 };
 const expectedLabels={
+ "EVT-DM-V01-BELL-RECEIVES-FALNA-001":"Después del primer encuentro Bell–Hestia; intervalo exacto no cuantificado.",
+ "EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001":"Después de que Bell ya forma parte de Hestia Familia y antes de la crisis del Festival; intervalo exacto desconocido.",
+ "EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001":"Durante la jornada del Festival de Monstruos; fecha absoluta desconocida.",
+ "EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001":"Durante el Festival de Monstruos; antes de que el Silverback llegue a Bell y Hestia.",
+ "EVT-DM-V01-GANESHA-RESPONDS-TO-MONSTER-ESCAPE-001":"La fuga se confirma menos de cinco minutos antes del informe de Ganesha; el intervalo previo a la confirmación no se precisa.",
+ "EVT-DM-V01-BELL-HESTIA-SILVERBACK-CHASE-001":"Durante la misma emergencia; se solapa con la respuesta pública a la fuga.",
+ "EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001":"Inmediatamente antes del combate final contra el Silverback.",
+ "EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001":"Inmediatamente después de la actualización del Estado y la entrega de la daga.",
+ "EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001":"Después de la derrota del Silverback y durante la recuperación de Hestia.",
+ "EVT-DM-V02-AIS-UDAEUS-001":"Volumen 2 · día absoluto no fijado.",
+ "EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001":"Exactamente una semana después del combate de Ais contra Udaeus.",
+ "EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001":"Volumen 2 · fecha exacta no fijada.",
+ "EVT-DM-V02-BELL-FIREBOLT-TEST-001":"Volumen 2 · varias pruebas; una ocurre la noche anterior a la visita a Naaza.",
+ "EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001":"Exactamente tres días antes de la visita a Naaza.",
+ "EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001":"Durante la jornada de la visita a la tienda Miach; tres días después de agotar las pociones normales.",
+ "EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001":"Después de comprar pociones a Naaza; el intervalo hasta la siguiente expedición no se cuantifica.",
+ "EVT-DM-V02-LILI-OBSERVES-BELL-FIREBOLT-001":"Exactamente el día anterior a la expedición al piso 10; el hecho se relata retrospectivamente.",
+ "EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001":"Volumen 2 · incursión al piso 10.",
+ "EVT-DM-V02-LILI-ABANDONS-BELL-001":"Durante la emboscada en el piso 10.",
+ "EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001":"Después de que Lili abandona a Bell; intervalo adicional no especificado.",
+ "EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001":"Después de la traición de miembros de Soma Familia; mismo episodio.",
+ "EVT-DM-V02-BELL-AND-LILI-REHIRE-001":"Exactamente dos días después de la separación tras el rescate.",
+ "EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001":"Volumen 2 · epílogo; fecha exacta abierta.",
  "EVT-DM-DESCENT-001":"Fecha absoluta no fijada",
  "EVT-DM-GREAT-QUESTS-001":"Antes de T0 · fecha y orden exacto pendientes",
  "EVT-DM-ZH-OEBD-001":"Antes de T0 · fecha pendiente",
@@ -54,7 +100,7 @@ const expectedLabels={
  "EVT-DM-JUGGERNAUT-DEFEAT-001":"Continuación en el volumen 14 · fecha interna abierta"
 };
 const events=new Map(data.events.map(e=>[e.id,e]));
-assert.deepEqual([...events.keys()].sort(),Object.keys(expectedKinds).sort(),"The 15 existing event IDs must be retained exactly.");
+assert.deepEqual([...events.keys()].sort(),Object.keys(expectedKinds).sort(),"All 38 timeline event IDs must be retained exactly.");
 for(const [id,kind] of Object.entries(expectedKinds)){
  const event=events.get(id);
  assert.equal(event.temporal.kind,kind,id+" temporal variant");
@@ -73,6 +119,27 @@ assert.equal(events.get("EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001").temporal.precisi
 assert.equal(events.get("EVT-DM-AR-ERA-001").continuityScopes.includes("CONT-AR"),true);
 assert.equal(events.get("EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001").continuityScopes.includes("CONT-AR"),false,"T−5 remains separate from Astrea Record T−7");
 assert.equal(events.get("EVT-DM-BELL-ARRIVAL-001").temporal.anchorId,"T0-BELL-ARRIVAL");
+
+const weeklyRumor=events.get("EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001");
+assert.equal(weeklyRumor.temporal.anchorId,"EVT-DM-V02-AIS-UDAEUS-001");
+assert.equal(weeklyRumor.temporal.amount,1);
+assert.equal(weeklyRumor.temporal.unit,"week");
+assert.equal(weeklyRumor.temporal.precision,"exact");
+assert.match(weeklyRumor.summary,/rumor/i,"The one-week follow-up must remain a rumor, not a confirmed Level 6.");
+const potionExhaustion=events.get("EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001");
+assert.equal(potionExhaustion.temporal.anchorId,"EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001");
+assert.equal(potionExhaustion.temporal.amount,3);
+assert.equal(potionExhaustion.temporal.direction,"before");
+const liliObservation=events.get("EVT-DM-V02-LILI-OBSERVES-BELL-FIREBOLT-001");
+assert.equal(liliObservation.temporal.anchorId,"EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001");
+assert.equal(liliObservation.temporal.amount,1);
+const liliRehire=events.get("EVT-DM-V02-BELL-AND-LILI-REHIRE-001");
+assert.equal(liliRehire.temporal.anchorId,"EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001");
+assert.equal(liliRehire.temporal.amount,2);
+assert.equal(liliRehire.temporal.precision,"exact");
+assert.equal(timeline.temporalKindLabel(liliRehire.temporal),"Desplazamiento relativo · intervalo explícito");
+assert.ok(timeline.temporalDescription(liliRehire.temporal).includes("exactamente 2 day"));
+
 assert.equal(Object.hasOwn(events.get("EVT-DM-BELL-ARRIVAL-001").temporal,"value"),false,"T0 must not be rendered as a calendar date");
 assert.deepEqual(events.get("EVT-DM-RYUU-REVENGE-001").temporal.referenceIds,["EVT-DM-ASTREA-FAMILIA-JUGGERNAUT-001","T0-BELL-ARRIVAL"]);
 assert.equal(events.get("EVT-DM-RYUU-REVENGE-001").temporal.distanceKnown,false);
@@ -119,6 +186,10 @@ function fixture(temporal,originKind,scopes){
  clone.events.push(record);
  return {clone,record};
 }
+
+const exactEventOffset=fixture({kind:"relative_offset",anchorId:"EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001",anchorLabel:"rescate y reconciliación de Lili",direction:"after",amount:2,unit:"day",precision:"exact"},"user_plan",["CONT-AU"]);
+assert.equal(timeline.validateDataset(exactEventOffset.clone).valid,true,"An exact relative offset may reference an existing event.");
+
 const validFixtures=[
  {name:"calendar date with explicit calendar",origin:"user_plan",scopes:["CONT-AU"],temporal:{kind:"absolute_date",value:"2042-03-04",calendar:"gregorian",precision:"day"}},
  {name:"approximate bounded interval",origin:"user_plan",scopes:["CONT-AU"],temporal:{kind:"approximate_interval",lower:{value:"2040-01-01",calendar:"gregorian",precision:"day"},upper:{value:"2041-01-01",calendar:"gregorian",precision:"day"},precision:"approximate"}},
@@ -187,10 +258,10 @@ assert.equal(legacyReport.valid,true,"legacy v1 data must remain loadable throug
 assert.equal(legacyReport.legacyTemporalModel,true);
 assert.equal(timeline.temporalKindLabel(null),"Tiempo sin normalizar");
 assert.equal(report.locationCount,2);
-assert.equal(report.locationRefCount,9);
+assert.equal(report.locationRefCount,32);
 assert.equal(report.unknownEventCount,6);
 assert.equal(report.provisionalEventCount,5);
-assert.equal(data.events.length,15,"The original 15 event IDs must remain.");
+assert.equal(data.events.length,38,"All 38 indexed event IDs must remain.");
 const locationById=new Map(data.locations.map(place=>[place.id,place]));
 assert.equal(locationById.get("LOC-ORARIO").recordPath,"places/orario.md");
 assert.equal(locationById.get("LOC-DUNGEON").recordPath,"places/dungeon.md");
