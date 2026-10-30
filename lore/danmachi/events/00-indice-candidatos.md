@@ -75,8 +75,8 @@ Antes de crear otro evento, compara ID, nombres alternativos, participantes, per
 - [Hestia consigue que Hephaistos acepte forjar una daga para Bell](timeline/EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001.md) — petición en p. 115, insistencia y aceptación en pp. 129–133; distinta de la entrega física.
 - [Hephaistos entrega la Daga de Hestia](timeline/EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001.md) — pp. 145–146; entrega después de la petición y forja.
 - [Freya se reúne con Loki y Ais y reconoce a Bell durante el Festival](timeline/EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001.md) — pp. 139–145; reunión posterior al Banquete de los Dioses y anterior al encuentro de Bell/Hestia y a la liberación del Silverback.
-- [Bell y Hestia en el Festival](timeline/EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001.md) — pp. 150–159.
-- [Freya libera un Silverback](timeline/EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001.md) — pp. 159–164.
+- [Bell y Hestia en el Festival](timeline/EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001.md) — pp. 150–165.
+- [Freya libera un Silverback](timeline/EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001.md) — pp. 159–167.
 - [Respuesta de Ganesha y el Gremio](timeline/EVT-DM-V01-GANESHA-RESPONDS-TO-MONSTER-ESCAPE-001.md) — pp. 170–173.
 - [Persecución del Silverback](timeline/EVT-DM-V01-BELL-HESTIA-SILVERBACK-CHASE-001.md) — pp. 173–190.
 - [Actualización y entrega de la daga](timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001.md) — pp. 193–196.
