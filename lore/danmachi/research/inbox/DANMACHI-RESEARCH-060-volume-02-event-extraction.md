@@ -126,3 +126,15 @@ tags: [volume-02, events, Bell, Liliruca, Ais, Firebolt, Soma Familia]
 - **Localizador:** PDF pp. 237–240.
 - **Ancla:** exactamente dos días después de la separación posterior al rescate.
 - **Hecho:** Bell encuentra a Lili en la puerta oeste de Babel y le ofrece volver como Ayudante; ambos acuerdan comenzar de nuevo como equipo de dos.
+
+
+## Fichas visuales verificadas directamente en el PDF físico (pasada visual parcial)
+
+La inspección directa/renderizado de los últimos folios confirma:
+- **PDF p. 244 — ficha de Liliruca:** afiliación Soma Familia; raza Hobbit; clase Ayudante; piso alcanzado 11; armas daga, arco y flecha; dinero 300 Varisu. Los Guantes de Ayudante sirven para manipular cadáveres de monstruos, se desechan tras el uso, protegen contra corrosión de ácidos fuertes y resisten efectos anormales. La ficha indica que hay varios colores y el favorito de Lili es marrón.
+- **PDF p. 245 — Estado de Liliruca:** Lv.1; Fuerza I42; Resistencia I42; Destreza H143; Agilidad G285; Magia F317. Cinder Ella se describe como magia de transformación basada en la imaginación expresada al cantar; puede fallar si falta precisión y se recomienda para imitación. La ficha muestra el canto de transformación «Tu grabado me pertenece a mí. Mis grabados todavía me pertenecen a mí» y el de liberación «El eco es la señal de la medianoche». Héroe Anónimo se activa cuando el peso del equipo excede cierto límite y aumenta Estado/peso proporcionalmente.
+- **PDF p. 245 — Ballesta Pequeña:** fabricada por Goibniu Familia y diseñada para Hobbits; alto poder destructivo para su tamaño, carga manual para disparos continuos, alcance algo corto y flechas separadas permiten cambiar potencia y distancia de vuelo.
+- **PDF p. 246 — créditos impresos:** versión inglesa Sorotrans; traducción inglés-español, corrección y edición Mugetsu123. La marca «Kurosaki-Vizard Translation» aparece en la cabecera como marca de agua.
+- **Conteo físico confirmado:** el archivo tiene 246 páginas (comprobado con pdfinfo y render físico de las páginas 244–246). El lector indexado de páginas de la herramienta de extracción indicó un límite en p.243; para estos folios se usó renderizado directo del PDF físico, que prevalece para su paginación.
+
+**Límite:** esta inspección visual cubre los últimos folios y no constituye inspección visual completa de las 246 páginas.
