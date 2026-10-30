@@ -144,11 +144,13 @@ function validateDataset(data){
     if(!temporal)continue;
     if(temporal.kind==="relative_order"&&Array.isArray(temporal.referenceIds)){
      if(temporal.relation==="before"){
-      for(const referenceId of temporal.referenceIds){if(referenceId!==event.id&&eventIds.has(referenceId))graph.get(event.id).push(referenceId);}
+      for(const rawReferenceId of temporal.referenceIds){const referenceId=rawReferenceId===data.anchor.id?data.anchor.eventId:rawReferenceId;if(referenceId!==event.id&&eventIds.has(referenceId))graph.get(event.id).push(referenceId);}
      }else if(temporal.relation==="after"){
-      for(const referenceId of temporal.referenceIds){if(referenceId!==event.id&&eventIds.has(referenceId))graph.get(referenceId).push(event.id);}
+      for(const rawReferenceId of temporal.referenceIds){const referenceId=rawReferenceId===data.anchor.id?data.anchor.eventId:rawReferenceId;if(referenceId!==event.id&&eventIds.has(referenceId))graph.get(referenceId).push(event.id);}
      }else if(temporal.relation==="between"&&temporal.referenceIds.length===2){
-      const [earlier,later]=temporal.referenceIds;
+      const [rawEarlier,rawLater]=temporal.referenceIds;
+      const earlier=rawEarlier===data.anchor.id?data.anchor.eventId:rawEarlier;
+      const later=rawLater===data.anchor.id?data.anchor.eventId:rawLater;
       if(eventIds.has(earlier))graph.get(earlier).push(event.id);
       if(eventIds.has(later))graph.get(event.id).push(later);
      }
