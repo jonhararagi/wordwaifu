@@ -69,9 +69,9 @@ Antes de crear otro evento, compara ID, nombres alternativos, participantes, per
 - [Encuentro de Bell y Hestia](candidates/EVT-DM-BELL-MEETS-HESTIA-001.md) y [concesión de Falna](timeline/EVT-DM-V01-BELL-RECEIVES-FALNA-001.md) — PDF pp. 211–214.
 - [Hephaistos entrega la Daga de Hestia](timeline/EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001.md) — pp. 145–146.
 - [Bell y Hestia en el Festival](timeline/EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001.md) — pp. 150–159.
-- [Freya libera un Silverback](timeline/EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001.md) — pp. 159–164.
+- [Freya libera un Silverback](timeline/EVT-DM-V01-FREYA-CHARMS-AND-RELEASES-SILVERBACK-001.md) — pp. 160–164.
 - [Respuesta de Ganesha y el Gremio](timeline/EVT-DM-V01-GANESHA-RESPONDS-TO-MONSTER-ESCAPE-001.md) — pp. 170–173.
-- [Persecución del Silverback](timeline/EVT-DM-V01-BELL-HESTIA-SILVERBACK-CHASE-001.md) — pp. 173–190.
+- [Persecución del Silverback](timeline/EVT-DM-V01-BELL-HESTIA-SILVERBACK-CHASE-001.md) — pp. 165–190.
 - [Actualización y entrega de la daga](timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001.md) — pp. 193–196.
 - [Bell derrota al Silverback](timeline/EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001.md) — pp. 196–200.
 - [Hestia explica la daga y su préstamo](timeline/EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001.md) — pp. 203–208.
@@ -82,6 +82,12 @@ Antes de crear otro evento, compara ID, nombres alternativos, participantes, per
 - [Pociones agotadas](timeline/EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001.md) y [compra de poción de Mind](timeline/EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001.md) — tres días antes de la visita y visita pp. 167–169.
 - [Bell ve a Lili acosada](timeline/EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001.md) — pp. 169–170.
 - [Lili observa Firebolt](timeline/EVT-DM-V02-LILI-OBSERVES-BELL-FIREBOLT-001.md) — un día antes de la incursión al piso 10.
-- [Traición de Soma a Lili](timeline/EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001.md), [rescate y reconciliación](timeline/EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001.md) y [reencuentro dos días después](timeline/EVT-DM-V02-BELL-AND-LILI-REHIRE-001.md) son acontecimientos separados.
+- [Lili revela su identidad Hobbit](timeline/EVT-DM-V02-LILI-REVEALS-HOBBIT-IDENTITY-001.md) — pp. 214–221.
+- [Los padres de Lili mueren en el Dungeon](timeline/EVT-DM-V02-LILI-PARENTS-DIE-IN-DUNGEON-001.md) — p. 216, recuerdo sin fecha.
+- [Hestia y Eina hablan de Lili](timeline/EVT-DM-V02-HESTIA-EINA-DISCUSS-LILI-001.md) — pp. 218–219, en paralelo a la huida.
+- [Gedo captura a Lili](timeline/EVT-DM-V02-GEDO-CAPTURES-LILI-001.md) — pp. 221–224.
+- [Kanu y Soma abandonan a Lili como cebo](timeline/EVT-DM-V02-SOMA-ABANDONS-LILI-AS-BAIT-001.md) — pp. 224–229.
+- [Bell rescata a Lili y ambos se reconcilian](timeline/EVT-DM-V02-BELL-RESCUES-LILI-AND-RECONCILES-001.md) — pp. 230–237.
+- [Bell y Lili se reencuentran dos días después](timeline/EVT-DM-V02-BELL-AND-LILI-REHIRE-001.md) — pp. 237–240.
 
 **Procedencia:** DMR-061-SRC-001 y DMR-060-SRC-001; novela ligera original oficial, traducciones privadas no cotejadas. Las pasadas visuales/cotejo no están cerradas.
