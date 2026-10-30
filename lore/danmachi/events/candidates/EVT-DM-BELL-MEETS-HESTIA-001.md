@@ -37,7 +37,7 @@ La sinopsis editorial oficial del volumen 1 presenta a Bell como aspirante a ave
 - **Continuidad:** CONT-MAIN-LN, premisa de la novela principal.
 - **Fuente:** DMR-015-SRC-001 · https://ga.sbcr.jp/product/9784797372809/
 - **Claim:** DMR-015-CLM-001.
-- **Estado:** `source_checked_partial`. El acontecimiento general está respaldado por la sinopsis; la escena detallada aún no tiene localizador interno de capítulo o página.
+- **Estado:** `source_checked_translation_unverified`. La sinopsis editorial respalda el núcleo general y el recuerdo detallado del primer encuentro tiene ahora un localizador de trabajo en la traducción privada (PDF p. 29). No se ha cotejado la traducción con el japonés ni confirmado la paginación impresa de la edición original.
 
 ## Secuencia narrativa mínima
 
