@@ -100,3 +100,4 @@ Estos registros facilitan la siguiente tanda, pero las seis entradas de canon si
 - `EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001` — Ais encuentra el Protector de Jade (pp. 242–243).
 
 **Reserva de procedencia:** ambos PDFs son traducciones privadas de la novela ligera original oficial, no cotejadas con japonés. Los números indicados son páginas físicas PDF. Las fichas visuales de V1/V2 requieren auditoría integral adicional.
+- `EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001` — Bell oye a la Familia Loki burlarse de su rescate del Minotauro en La Señora de la Abundancia y se marcha decidido a fortalecerse (PDF pp. 57–72).
