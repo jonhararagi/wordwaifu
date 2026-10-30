@@ -49,3 +49,12 @@ Esta nota no reemplaza el perfil oficial de adaptación anterior. La wiki comuni
 **No informado en el extracto consultado:** costes numéricos, duración/cooldowns generales y localizadores narrativos de cada mecánica. No reabrir esta misma página sin fuente nueva o pasaje primario legible.
 
 Fuente secundaria: [DanMachi Wiki ES — Liliruca Arde](https://danmachi.fandom.com/es/wiki/Liliruca_Arde). Registro DMR-056-SRC-001; el detalle permanece en `CONT-SECONDARY`.
+
+
+## Volumen 2 · acontecimientos temporales (CONT-MAIN-LN)
+
+- [Emboscada de Ogros y separación en el piso 10](../events/timeline/EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001.md) — PDF pp. 195–213.
+- [Lili toma la Daga de Hestia y deja a Bell atrás](../events/timeline/EVT-DM-V02-LILI-ABANDONS-BELL-001.md) — PDF pp. 213–229.
+- [Miembros de Soma traicionan a Lili y Bell la rescata](../events/timeline/EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001.md) — PDF pp. 213–240; ambos reanudan el equipo en Babel, pp. 237–240.
+
+Los hechos se describen desde la traducción española privada aportada; la obra original es oficial, pero la traducción aún no está cotejada.
