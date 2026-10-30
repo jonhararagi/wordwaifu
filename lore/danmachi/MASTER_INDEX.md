@@ -11,7 +11,7 @@
 - [Volumen 1 — dossier de canon primario](volumes/main/volume-01.md) — extracción secuencial actualizada hasta PDF p. 177; incluye primer encuentro con Seal Flover, combate inicial, Festival de Monstruos, liberación del Silverback, respuesta de Ganesha y comienzo de la persecución hacia la Calle Dédalo.
 - [DANMACHI-RESEARCH-061](research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md) — eventos y pasajes del Volumen 1; traducción privada no cotejada y límites de procedencia registrados.
 
-- [Volumen 2 — eventos temporales y localizadores](volumes/main/volume-02.md) — acontecimientos individuales de `CONT-MAIN-LN`, con páginas físicas del PDF y segmentación de combate, adquisición/prueba de magia, pasado de Lili, captura, traición, rescate y reencuentro. La traducción española aportada es privada y no está cotejada.\n- [DANMACHI-RESEARCH-060](research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md) — registro de procedencia, localizadores y límites de los siete eventos; no fija fechas absolutas ni convierte rumores en hechos confirmados.
+- [Volumen 2 — eventos temporales y localizadores](volumes/main/volume-02.md) — acontecimientos individuales de `CONT-MAIN-LN`, con páginas físicas del PDF y segmentación de combate, adquisición/prueba de magia, pasado de Lili, captura, traición, rescate y reencuentro. La traducción española aportada es privada y no está cotejada.\n- [DANMACHI-RESEARCH-060](research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md) — registro de procedencia, localizadores y límites de los acontecimientos de V2, incluida la secuencia de Lili segmentada; no fija fechas absolutas ni convierte rumores en hechos confirmados.
 
 ## Índices de personajes e historias por continuidad
 
@@ -452,3 +452,10 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - La secuencia se conserva en eventos separados: padres de Lili (recuerdo), revelación Hobbit, conversación paralela Eina–Hestia, captura por Gedo, abandono como cebo por Kanu/miembros de Soma y rescate/reconciliación de Bell; la recontratación dos días después sigue en su propio ID.
 - La cronología contiene 42 eventos y el grafo de orden temporal respeta `before`, `after` y `between`, incluidos los offsets anclados a eventos; no convierte intervalos relativos en fechas calendáricas.
 - La auditoría de la rama antigua #209 continúa separando datos únicos de contenido obsoleto; las versiones de V1 y los checkpoints antiguos no reemplazan los registros más recientes de DMR-061.
+
+
+## DMR-060 / DMR-061 — consolidación integrada (2026-10-30)
+- [PR #215](https://github.com/jonhararagi/wordwaifu/pull/215): DMR-061 V1 hasta PDF p.177, merge SHA `8e6fcedaeed4e6c38e6f63a7c099cc8e27ad3441`; siguiente p.178.
+- [PR #216](https://github.com/jonhararagi/wordwaifu/pull/216): segmentación DMR-060 V2 y grafo temporal dirigido, merge SHA `7de2acca6975d3700b7c5b5ca71c004211fb308e`; pre-merge y post-merge CI verdes en ambos workflows.
+- [PR #209](https://github.com/jonhararagi/wordwaifu/pull/209): `(x) SUPERSEDED BY #216`, cerrado; su snapshot divergente no se fusionó directamente. La rama histórica se conserva.
+- Estado vigente: 42 eventos temporales únicos, 215 registros activos, 30 IDs reservados, 263 relaciones. El antiguo ID combinado `EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001` está reservado como superseded y no forma parte de la cronología activa.
