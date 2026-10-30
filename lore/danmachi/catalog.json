@@ -3698,12 +3698,6 @@
       "path": "volumes/main/volume-02.md",
       "type": "volume_dossier",
       "status": "source_checked_partial"
-    },
-    {
-      "document_id": "DOC-DMR-060",
-      "path": "research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
-      "type": "research_dossier",
-      "status": "source_checked_partial"
     }
   ],
   "lastStructuredSync": "2026-10-28",
