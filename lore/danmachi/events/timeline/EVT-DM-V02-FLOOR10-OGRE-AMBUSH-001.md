@@ -2,47 +2,44 @@
 id: EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001
 universe: danmachi
 type: event
-status: source_checked_partial
+status: source_checked_translation_unverified
 continuity_scope: CONT-MAIN-LN
 time_anchor: volume_02_internal_order_absolute_date_unknown
-source_verification: private_translation_not_crosschecked
-source_refs: ["DMR-060-SRC-001"]
+source_verification: user_supplied_private_translation_not_crosschecked
+source_refs: [DMR-060-SRC-001]
+source_locators: ["PDF pp. 195–212"]
 spoiler_level: major
-tags: [Bell Cranel, Liliruca Arde, Ogros, piso 10, emboscada]
 ---
+# Bell y Lili combaten Ogros y descubren la emboscada del piso 10
 
-# Emboscada de Ogros y separación de Bell y Lili
+## Localizador y alcance
+- Volumen 2, PDF físico pp. 195–212.
+- Fuente DMR-060-SRC-001; traducción privada/no cotejada.
 
-## Alcance y tiempo
-
-- **Continuidad:** `CONT-MAIN-LN`.
-- **Orden temporal:** Bell recuerda que Lili había visto Firebolt el día anterior a la incursión; el ascenso por los pisos 8 y 9 se describe como «unos días», sin cifra exacta.
-- **Localizador:** PDF pp. 195–213.
-- **Estado de lectura:** páginas narrativas localizadas en la traducción española privada aportada por el usuario; fidelidad de traducción pendiente de cotejo.
+## Ancla temporal
+Después de que Lili deja que Bell vea Firebolt el día anterior a la expedición, y tras el ascenso por los pisos 8 y 9 durante «unos días».
 
 ## Resumen
+Bell y Lili llegan al piso 10. Bell derrota dos Ogros: el primero con la espada corta que Lili le había entregado y el segundo con dos lanzamientos consecutivos de Firebolt. Tras la victoria descubre carne colocada como cebo y comprende que se aproxima una emboscada con cuatro Ogros.
 
-Bell y Lili atraviesan los pisos 8 y 9 durante «unos días» y llegan al piso 10, cuya niebla reduce la visibilidad. Bell combate Ogros; uno utiliza un árbol muerto como garrote mediante el Arsenal del Dungeon. Después la carne/cebo y una emboscada producen la separación de la pareja.
+## Participantes
+- Bell Cranel.
+- Liliruca Arde.
+- Ogros.
 
-## Entidades participantes
+## Detalles
+- El primer Ogro utiliza un árbol del entorno como arma del Arsenal del Dungeon.
+- Bell usa la espada corta que Lili le había dado; hiere el abdomen, corta la pierna y atraviesa la cabeza del monstruo.
+- Contra un segundo Ogro, un Firebolt no es suficiente; Bell usa dos lanzamientos consecutivos y lo derrota.
+- Al buscar a Lili después del combate, Bell descubre su ausencia y encuentra carne preparada para atraer monstruos.
+- Bell cuenta cuatro Ogros acercándose y se pregunta si debe abandonar la habitación o esperar a Lili.
+- Una flecha metálica golpea la bolsa de Bell y la lanza fuera de su alcance; la separación prepara el acto de Lili en el evento siguiente.
 
-- [Bell Cranel](../../characters/bell-cranel.md) — aventurero que combate y queda separado.
-- [Liliruca Arde](../../characters/liliruca-arde.md) — compañera separada durante la emboscada.
-- Ogros y otros monstruos identificados en la escena.
-
-## Detalles registrados
-
-- El piso 10 introduce niebla y árboles que pueden servir como armas del Arsenal del Dungeon.
-- Bell usa su espada corta para atacar abdomen y pierna del primer Ogro, luego atraviesa su cabeza.
-- Un segundo Ogro aparece; Bell necesita dos lanzamientos consecutivos de Firebolt para derrotarlo.
-- La secuencia usa carne/cebo para provocar la situación de peligro.
-- La separación prepara la decisión posterior de Lili de tomar la daga y dejar a Bell atrás.
+## Relación temporal
+- Después de EVT-DM-V02-LILI-OBSERVES-BELL-FIREBOLT-001, que el texto sitúa el día anterior a la incursión.
+- Antes de EVT-DM-V02-LILI-ABANDONS-BELL-001.
 
 ## Límites
-
-No llamar Ogros a todos los monstruos de la secuencia si el pasaje distingue otras especies.
-
-## Fuente
-
-- `DMR-060-SRC-001` — [expediente de extracción del volumen 2](../../research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md).
-- Fuente material: `Volumen [02] • DanMachi.pdf`, archivo adjunto proporcionado por el usuario. La obra original es oficial; la traducción consultada es privada/no editorial.
+- No atribuir a Lili el plan de atraer Ogros a Bell sin el pasaje que sigue.
+- No llamar Ogros a todos los monstruos posteriores si la novela distingue Hormigas Asesinas y otras especies.
+- «Unos días» para atravesar los pisos 8–9 permanece como intervalo impreciso.
