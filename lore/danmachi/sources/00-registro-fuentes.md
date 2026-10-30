@@ -4725,6 +4725,8 @@ verification_status: stub
 - official_url: https://ga.sbcr.jp/product/9784797373073/
 - user_material: archivo adjunto en la conversación: `Volumen [02] • DanMachi.pdf`
 - accessed_at: 2026-10-29
+- physical_file_pages: 246
+- narrative_text_extent: PDF pp. 1–243; pp. 244–245 contienen fichas/hojas visuales finales; p. 246 contiene créditos impresos
 - locator_type: physical_pdf_page
 - locator: Páginas físicas del PDF, citadas siempre como «PDF p.»; no confundir con la paginación impresa.
 - claims_supported: []
