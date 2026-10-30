@@ -15,7 +15,7 @@ function temporalDescription(temporal){
  if(!temporal)return "Registro heredado sin modelo temporal estructurado.";
  if(temporal.kind==="absolute_date")return "Fecha "+temporal.value+" según calendario "+temporal.calendar+"; precisión "+temporal.precision+".";
  if(temporal.kind==="approximate_interval")return "Intervalo aproximado entre "+temporal.lower.value+" y "+temporal.upper.value+" (calendario "+temporal.lower.calendar+").";
- if(temporal.kind==="relative_offset")return "Desplazamiento "+temporal.direction+" del ancla "+temporal.anchorId+": aproximadamente "+temporal.amount+" "+temporal.unit+".";
+ if(temporal.kind==="relative_offset"){const anchor=temporal.anchorLabel||temporal.anchorId;const amount=temporal.precision==="exact"?"exactamente ":"aproximadamente ";return "Desplazamiento "+temporal.direction+" del ancla "+anchor+": "+amount+temporal.amount+" "+temporal.unit+"."; }
  if(temporal.kind==="relative_order")return temporal.qualifier||("Relación "+temporal.relation+" respecto de "+temporal.referenceIds.join(", ")+"; no se calcula distancia.");
  if(temporal.kind==="unknown")return temporal.reason;
  if(temporal.kind==="anchor")return "Ancla "+temporal.anchorId+"; no es una fecha de calendario.";
@@ -96,7 +96,9 @@ function validateDataset(data){
      if(dateComparable(lower)>=dateComparable(upper))errors.push("Interval lower bound must precede upper bound on "+event.id);
     }
    }else if(temporal.kind==="relative_offset"){
-    if(!knownRefs.has(temporal.anchorId))errors.push("Relative offset has unknown anchor on "+event.id+": "+temporal.anchorId);\n    if(temporal.anchorId===event.id)errors.push("Relative offset cannot reference itself on "+event.id);\n    if(eventIds.has(temporal.anchorId)&&(typeof temporal.anchorLabel!=="string"||!temporal.anchorLabel.trim()))errors.push("Event-relative offset needs an anchorLabel on "+event.id);
+    if(!knownRefs.has(temporal.anchorId))errors.push("Relative offset has unknown anchor on "+event.id+": "+temporal.anchorId);
+    if(temporal.anchorId===event.id)errors.push("Relative offset cannot reference itself on "+event.id);
+    if(eventIds.has(temporal.anchorId)&&(typeof temporal.anchorLabel!=="string"||!temporal.anchorLabel.trim()))errors.push("Event-relative offset needs an anchorLabel on "+event.id);
     if(!["before","after"].includes(temporal.direction))errors.push("Relative offset has invalid direction on "+event.id);
     if(typeof temporal.amount!=="number"||!Number.isFinite(temporal.amount)||temporal.amount<=0)errors.push("Relative offset amount must be a positive number on "+event.id);
     if(!units.has(temporal.unit))errors.push("Invalid relative offset unit on "+event.id+": "+temporal.unit);
