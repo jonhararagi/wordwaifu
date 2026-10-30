@@ -3918,12 +3918,6 @@
       "status": "secondary_checked"
     },
     {
-      "document_id": "RESEARCH-DM-060",
-      "path": "research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
-      "type": "source_extraction_report",
-      "status": "source_checked_partial_translation_unverified"
-    },
-    {
       "document_id": "RESEARCH-DM-061",
       "path": "research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
       "type": "source_extraction_report",
