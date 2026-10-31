@@ -105,11 +105,11 @@
 
 
 <!-- DANMACHI-METRICS:BEGIN -->
-- **Corpus DanMachi:** 228 registros activos; 29 IDs reservados; 109 documentos de apoyo.
+- **Corpus DanMachi:** 231 registros activos; 28 IDs reservados; 109 documentos de apoyo.
 - **Grafo de conocimiento:** 263 relaciones explícitas; 263/263 con ambos extremos activos y distintos; IDs de relación únicos.
 - **Roster de adaptación:** 63 identidades; 63/63 tienen registro, ruta Markdown e expediente UI con el mismo ID.
 - **Expedientes de interfaz:** 93 perfiles; 93/93 enlazados a catálogo y Markdown por ID.
-- **Tipos en el catálogo:** 84 personajes; 5 grupos; 13 deidades con registro de personaje.
+- **Tipos en el catálogo:** 84 personajes; 5 grupos; 14 deidades con registro de personaje.
 - **Marcadas `complete`:** 0/84 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
 <!-- DANMACHI-METRICS:END -->
 
@@ -915,7 +915,7 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 
 ## DMR-061 — segunda pasada V1, PDF pp. 91–100 (2026-10-31)
 
-- **Resultado:** pasada 2 completada para pp.91–100; p.98 fue inspeccionada visualmente desde el PDF.
+- **Resultado:** pasada 2 completada para pp.91–100. Pp.98–102 se renderizaron e inspeccionaron visualmente como páginas de texto; p.98 contiene una nota al pie del traductor sobre «nekomusume», no una ilustración.
 - **Estado de Bell (p.91):** Lv.1; Fuerza H123→G221, Resistencia I42→H101, Destreza H139→G232, Agilidad G225→F313, Magia I0. La columna anterior de Fuerza H123 contradice el snapshot de p.54 (H120); diferencia abierta.
 - **Habilidad:** Hestia vuelve a ver [Deseo Inquebrantable] y decide no revelársela a Bell. Le explica el crecimiento anormal sin darle nombre ni efectos.
 - **Promesa y Banquete:** Bell promete no sobreesforzarse ni dejar sola a Hestia. Ella decide usar la invitación al Banquete de Ganesha para intentar contactar con Hephaistos; asistencia y encuentro aún no confirmados.
@@ -934,3 +934,15 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Pendientes:** pasada 2 pp.121–156; pasada 3 pp.9–156; reconciliación de pasada 1; DMR-062 (pp.1–10, reglas/objetos, candidatos de monstruos y revisión de personajes). V1 permanece IN_PROGRESS.
 - **Procedencia:** DMR-061-SRC-001, traducción privada no cotejada con japonés. PDF de 215 páginas físicas: p.8 blanca, p.214 última página narrativa, p.215 créditos.
 
+
+
+## DMR-061 — segunda pasada V1 · PDF pp.121–130 (2026-10-31)
+
+- **Resultado:** tres revisiones obligatorias por folio completadas en pp.121–130: extracción; render e inspección visual; auditoría de continuidad, entidades, cronología y duplicados. Cuarta revisión correctiva en p.125 y p.130 (ancla temporal de dos días), p.126 (ilustración sin identidad) y pp.128–129 (daga de escaparate no identificada).
+- **Visual:** pp.121–125 y pp.127–130 son páginas de texto; p.126 es ilustración monocroma a página completa, inspeccionada a 130 dpi y sin identidad asignada.
+- **Hallazgos:** Babel como cubierta del Dungeon; preparativos del Festival de Monstruos y cajas de transporte vistos por Bell; Eina trabajando en el Gremio; ocho avenidas en Orario y anclas urbanas entre avenidas Noreste/Oeste; encuentro con Miach y entrega gratuita de dos pociones de recuperación; daga blanca no comprada en escaparate de Hephaistos Familia; Hestia continúa la dogeza iniciada durante el Banquete.
+- **Cronología:** p.125 confirma que el Banquete de Ganesha fue exactamente dos días antes. La incursión de Bell, los preparativos observados y el encuentro con Miach se anclan a ese intervalo. La insistencia de Hestia continúa durante los dos días posteriores al Banquete. No se asignan fechas de calendario.
+- **Eventos nuevos:** EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001 (pp.121–123) y EVT-DM-V01-BELL-RECEIVES-RECOVERY-POTIONS-FROM-MIACH-001 (pp.124–127). La petición de la daga continúa en el evento existente, no duplicado.
+- **Entidades y lugares:** se crea CHAR-MIACH usando el ID reservado; se amplían Miach Familia, Babel, Orario, la red de avenidas, la iglesia de Hestia, Seal, Eina, Bell, Ganesha y Hephaistos. No se crean especies de monstruos por las cajas ni un arma para la daga no comprada.
+- **Siguiente página:** PDF p.131. **Pendientes:** pasada 2 pp.131–156; pasada 3 pp.9–156; reconciliación de pasada 1; tareas independientes DMR-062. V1 permanece IN_PROGRESS.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés. PDF de 215 páginas físicas: p.8 en blanco, p.214 último folio narrativo y p.215 créditos.
