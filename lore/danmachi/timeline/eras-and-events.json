@@ -1425,10 +1425,87 @@
       ]
     },
     {
+      "id": "EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001",
+      "recordId": "EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 625,
+      "title": "Bell observa los preparativos del Festival de Monstruos en Babel",
+      "dateLabel": "Exactamente dos días después del Banquete de Ganesha; Bell regresa del Dungeon y pasa por la sede del Gremio.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "En el vestíbulo subterráneo de Babel, Bell ve a miembros de Ganesha Familia mover cajas de transporte; una se sacude y él oye un rugido, por lo que sospecha que contiene un monstruo. Escucha a varias personas hablar del Festival de Monstruos y de Ganesha Familia como anfitriona. Ve a Eina trabajando, no la interrumpe, se ducha, vende botín y sale del Gremio.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "observa las cajas y escucha la conversación sobre el Festival"
+        }
+      ],
+      "relatedEntities": [
+        {
+          "id": "FAM-GANESHA",
+          "name": "Ganesha Familia",
+          "kind": "familia"
+        }
+      ],
+      "detailPath": "events/timeline/EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001.md",
+      "sources": [
+        {
+          "label": "DMR-061 · Volumen 1 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Traducción privada no cotejada con japonés; localizadores PDF pp.121–123 y p.125 para el ancla temporal."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001.md",
+          "kind": "internal",
+          "note": "Preparativos observados por Bell, conversación sobre el Festival y visita a la sede del Gremio."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_offset",
+        "anchorId": "EVT-DM-V01-GANESHA-GOD-BANQUET-001",
+        "anchorLabel": "Banquete de Ganesha",
+        "direction": "after",
+        "amount": 2,
+        "unit": "day",
+        "precision": "exact",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "La escena tiene lugar en Babel y la sede del Gremio, dentro de Orario; el registro temporal solo localiza la ciudad, no la sala exacta."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "city_level",
+          "context": "Babel y la sede del Gremio en Orario; no se asignan coordenadas ni una planta interior.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001.md"
+          ]
+        }
+      ]
+    },
+    {
       "id": "EVT-DM-V01-BELL-RECEIVES-RECOVERY-POTIONS-FROM-MIACH-001",
       "recordId": "EVT-DM-V01-BELL-RECEIVES-RECOVERY-POTIONS-FROM-MIACH-001",
       "eraId": "ERA-05-MAIN-START",
-      "sortIndex": 625,
+      "sortIndex": 626,
       "title": "Miach entrega a Bell dos pociones de recuperación",
       "dateLabel": "Exactamente dos días después del Banquete de Ganesha; después de que Bell vuelve desde el Dungeon.",
       "continuityScopes": [
