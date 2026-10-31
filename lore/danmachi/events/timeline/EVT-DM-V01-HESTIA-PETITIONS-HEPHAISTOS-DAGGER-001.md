@@ -10,7 +10,7 @@ source_refs:
   - DMR-061-SRC-001
 source_locators:
   - PDF p. 115
-  - PDF pp. 129–133
+  - PDF pp. 129–134
 related_event_ids:
   - EVT-DM-V01-GANESHA-GOD-BANQUET-001
   - EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001
@@ -33,6 +33,8 @@ Hestia pide a Hephaistos un arma para Bell. Tras dos días de insistencia median
 - **PDF pp. 129–130:** Hestia lleva dos días insistiendo en la sucursal de Hephaistos Familia. Hephaistos había rechazado vender con descuento o hacer una excepción por amistad, pues considera injusto devaluar el trabajo de sus herreros y Hestia no dispone del dinero.
 - **PDF p. 131:** Hestia explica que Bell ha encontrado un objetivo y emprende un camino peligroso; quiere darle un arma para que pueda abrirse paso y corresponder a la ayuda que él le ha dado. Hephaistos se conmueve por la sinceridad de la petición.
 - **PDF pp. 132–133:** Hephaistos acepta forjar una daga. La deuda deberá pagarse aunque tarde décadas o siglos; no es un regalo ni una condonación. Elige mithril y un martillo carmesí y decide realizar ella misma la forja como asunto privado. Pide a Hestia que la ayude en el taller. La traducción indica que los dioses no pueden usar Poder Divino en el Mundo Inferior por el acuerdo que los rige.
+
+- **PDF p. 134 — dilema de diseño:** Hephaistos recuerda que Bell es un aventurero novato y teme que un arma demasiado poderosa frene su crecimiento o no corresponda con su identidad. A la vez, no quiere crear una obra ordinaria que deshonre su oficio. El dilema sigue abierto al final del folio; todavía no se revela el diseño terminado.
 
 ## Participantes
 Hestia y Hephaistos.
