@@ -46,3 +46,11 @@ El Volumen 1 muestra a Hephaistos como deidad y figura central de Hephaistos Fam
 
 - Fuente: DMR-061-SRC-001, traducción privada no cotejada con japonés.
 - Los perfiles y roster de adaptación permanecen separados; esta sección no pretende completar la lista histórica de miembros ni sus afiliaciones por época.
+
+
+## Tercera pasada · reconocimiento de Hephaistos Familia · CONT-MAIN-LN · Volumen 1 · PDF pp.114–115
+
+La narración presenta a Hephaistos Familia como una Familia de herreros con una marca famosa. Dice que sus productos atraen interés más allá de Orario, incluso de otras ciudades y del resto del mundo, y que es ampliamente conocida por los aventureros. También afirma que es la única Familia que no basa su operación en los ingresos de los aventureros. Estos puntos se registran como afirmaciones narrativas de la traducción privada, no como un censo exhaustivo de Familias ni como un análisis económico completo.
+
+- **Evento relacionado:** EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.

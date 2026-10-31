@@ -146,3 +146,15 @@ Algunos dioses anónimos hacen comentarios burlones sobre Hestia y repiten un ru
 - **Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés, PDF p.105.
 - **Revisión de tercera pasada:** extracción, inspección visual y continuidad; sin nueva ficha, evento ni claim independiente.
 
+
+
+## Tercera pasada · Banquete de Ganesha · CONT-MAIN-LN · Volumen 1 · PDF pp.109–115
+
+Hestia pregunta a Loki por la situación sentimental de Ais; Loki afirma que Ais es «su amada» y que no permitirá que se case. Hestia piensa que Loki protege a Ais del mismo modo que ella protege a Bell, pero esa comparación es un pensamiento de Hestia, no un dato sobre los sentimientos de Ais. El intercambio entre ambas diosas escala a un forcejeo humorístico, presenciado y apostado por otros dioses. Loki se marcha; Freya comenta que ahora parece más dulce y menos peligrosa que antes de descender al Mundo Inferior, según su propia impresión.
+
+Freya se retira después de afirmar que ya confirmó lo que quería escuchar. Hephaistos pregunta si escuchó conversaciones ajenas, pero el texto no confirma espionaje ni dice qué información obtuvo. Hestia recuerda su propósito y finalmente pide a Hephaistos que fabrique un arma para Bell en p.115.
+
+- **Evento:** EVT-DM-V01-GANESHA-GOD-BANQUET-001.
+- **Evento relacionado:** EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001.
+- **Límites:** mantener las afirmaciones sobre Ais atribuidas a Loki; no crear una relación romántica, no convertir el forcejeo en enemistad real y no suponer que Freya espió.
+- **Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés.

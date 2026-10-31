@@ -1260,3 +1260,46 @@ La actualización de pp.91–96 es distinta de la actualización tras el Minotau
 - **Revisión correctiva puntual:** p.101 para distinguir advertencia/hipérbole de una acción confirmada; p.105 para no convertir rumores sobre Hestia en biografía; p.107 para aislar las dos notas del traductor; p.108 para no identificar a la diosa que aparece al final del folio.
 
 **Checkpoint:** tercera pasada completada pp.9–108 (100 folios). Próxima página física PDF p.109. Restan pp.109–156 (48 folios) de la tercera pasada. La pasada 2 pp.9–156 permanece completada. La reconciliación integral de la pasada 1 sigue pendiente. V1 continúa IN_PROGRESS; DMR-061-SRC-001 sigue siendo una traducción privada no cotejada con japonés.
+
+
+## DMR-061 — tercera pasada V1 · PDF pp.109–118 · 2026-10-31
+
+**Estado del bloque:** tres controles completos por folio (extracción, inspección visual física y auditoría de continuidad/duplicados). Cuarta revisión correctiva puntual en pp.110–113, p.115, p.116 y p.118. Fuente DMR-061-SRC-001, traducción privada española no cotejada con japonés.
+
+### Extracción por folio
+
+- **p.109:** Loki llega al Banquete y provoca a Hestia. Saluda a Hephaistos y Freya, expresa orgullo por los miembros de su Familia y escucha que Hestia quiere preguntar por la Princesa de la Espada. Loki reacciona con sorpresa cómica y el diálogo continúa en p.110.
+- **p.110:** Hestia pregunta si Ais tiene una pareja. Loki la llama «su amada», dice que no dejará que se case y que quienes intentaron acercarse fueron apartados. La narración presenta a Ais bajo la protección de Loki; Hestia compara ese cuidado con el que ella siente por Bell. Hephaistos comenta que es raro ver a Loki con vestido; Loki se burla de que Hestia no puede permitirse uno. Hestia responde con bromas sobre el pecho de Loki.
+- **p.111:** el intercambio de burlas escala a un forcejeo: Loki tira de las mejillas de Hestia y la sacude; los dioses observan y hacen apuestas. Hephaistos se da por vencida ante la escena. No es un enfrentamiento serio ni una disputa formal entre Familias.
+- **p.112:** Loki pone fin al forcejeo, arroja a Hestia al suelo y se marcha tras un último intercambio de insultos. Los dioses comentan que Loki se ha vuelto más suave. Freya dice que antes de descender al Mundo Inferior Loki luchaba con otros dioses para pasar el tiempo y que ahora no parece peligrosa; esa es la impresión de Freya. Hephaistos y Freya hablan sobre el afecto de Loki por su Familia y la presencia de Bell en la Familia de Hestia.
+- **p.113:** Freya dice que ya confirmó lo que quería escuchar y se retira. Hephaistos pregunta si hizo algún movimiento para escuchar conversaciones ajenas, pero no se confirma que espiara ni qué verificó. Freya dice que ya tuvo suficiente de los hombres presentes. Hestia y Hephaistos comentan la conducta de los dioses de la belleza y el vínculo de Freya con su Familia; son juicios de los personajes, no reglas universales.
+- **p.114:** Hestia recuerda su propósito original y decide pedir ayuda a Hephaistos pese al temor de molestarla. Hephaistos le recuerda que había dicho que no la molestaría y exige que explique su petición. La narración presenta a Hephaistos Familia como una Familia reconocida y económicamente singular dentro de Orario.
+- **p.115:** la traducción describe a Hephaistos Familia como una Familia de herreros y una marca famosa cuyos productos atraen demanda de otras ciudades y del mundo. Hestia pide expresamente que Hephaistos fabrique un arma para Bell, a quien identifica como miembro de su Familia. La petición no implica aceptación, diseño, precio ni entrega.
+- **p.116:** ilustración monocroma de página completa asociada al capítulo 5. Figura de cabello oscuro y ropa clara, sin identificación asignada; no se infieren nombre, continuidad o relación por la apariencia.
+- **p.117:** portadilla textual del capítulo 5, «La Broma de la Diosa» en la traducción. Bell esquiva varios ataques de un Goblin en una zona cuadrada conectada con pasajes estrechos. En la esquina de su visión detecta otro monstruo que salta desde una pared y evita el ataque sorpresa.
+- **p.118:** Bell describe un monstruo semejante a un lagarto, con cuatro extremidades, piel morena seca, lengua fina, boca abierta hacia los lados y cola larga; estima que mide aproximadamente lo mismo que él con la cola incluida. Se identifica como Dungeon Lizard, de bajo nivel, presente entre los pisos 2.º y 4.º y capaz de adherirse a paredes y techo. Bell espera a que aterrice y lo hiere por la espalda con su daga invertida. El cuerpo cae sin fuerza, no se vuelve cenizas ni se contrae; Bell no sabe si dañó la Piedra Mágica. El Goblin sigue activo y Bell arroja su mochila contra él. La página termina con el impacto; el resultado se deja para p.119.
+
+### Auditoría de continuidad, relaciones y no duplicación
+
+- **Banquete, pp.109–113:** se amplía EVT-DM-V01-GANESHA-GOD-BANQUET-001. Loki, Hestia, Hephaistos y Freya son personajes existentes; no se crean eventos separados por el forcejeo, las bromas, las apuestas ni la salida de Freya.
+- **Ais:** la afirmación de Loki de que Ais es «su amada» y de que impedirá que se case se conserva como declaración de Loki. No se infiere reciprocidad, pareja oficial ni destino de pretendientes.
+- **Loki:** la frase de Freya acerca de que Loki era más violenta antes de descender al Mundo Inferior es una evaluación de Freya, no un dato objetivo que altere poderes o personalidad universal.
+- **Freya:** la afirmación de que ya confirmó lo que quería escuchar no identifica qué información obtuvo. La sospecha de Hephaistos acerca de escuchar conversaciones ajenas no demuestra espionaje.
+- **Petición de arma:** p.115 amplía EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001. No se fusiona con la aceptación/forja de pp.129–134 ni con la entrega de pp.145–146.
+- **Hephaistos Familia:** se reutiliza su ficha de Familia; no se convierte la fama comercial narrada en un censo ni en un cálculo económico exhaustivo.
+- **p.116:** la figura ilustrada permanece anónima. No se atribuye a la diosa escarlata vista al final de p.108, ni a Hestia, Loki o Freya.
+- **Combate, pp.117–118:** se amplía EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001 y se reutilizan MON-DM-DUNGEON-LIZARD-001 y MON-DM-GOBLIN-001. No se crean monstruos individuales. El evento ya cubre pp.117–120, pero la tercera pasada de este bloque verifica solo pp.117–118.
+- **Dungeon Lizard:** no afirmar que su Piedra Mágica se rompió. El cuerpo no se convierte en cenizas ni se contrae; el motivo permanece abierto.
+- **Goblin:** p.118 termina en el impacto de la mochila. Su estado final solo puede registrarse después de revisar p.119.
+- **Pisos:** la frase de p.118 sobre la aparición del Dungeon Lizard entre pisos 2.º y 4.º describe la especie. No sustituye el localizador contextual de la secuencia completa ni autoriza reconstruir rutas o coordenadas.
+- **Cronología:** no añadir fechas de calendario. El evento de Banquete y el combate en Dungeon siguen en registros separados; las páginas 117–118 no añaden por sí mismas una nueva ancla temporal.
+- **IDs:** no se crean IDs nuevos de personaje, evento, lugar u objeto. No se modifica el catálogo ni el timeline JSON.
+
+### Inspección visual
+
+- Las diez páginas físicas PDF pp.109–118 se renderizaron e inspeccionaron individualmente a 130 dpi.
+- pp.109–115 son páginas de texto; p.116 es una ilustración monocroma de página completa; p.117 muestra el título del capítulo y texto; p.118 es texto continuo.
+- No se observan tablas ni notas al pie en el bloque.
+- **Revisión correctiva:** pp.110–113 para distinguir afirmaciones, bromas y sospechas; p.115 para separar solicitud y aceptación; p.116 para evitar identificar la figura; p.118 para dejar abierto el desenlace del Goblin y el estado de la Piedra Mágica del Dungeon Lizard.
+
+**Checkpoint:** tercera pasada completada pp.9–118 (110 folios). Próxima página física PDF p.119. Restan pp.119–156 (38 folios) de la tercera pasada. La pasada 2 pp.9–156 permanece completada. La reconciliación integral de la pasada 1 sigue pendiente. V1 continúa IN_PROGRESS; DMR-061-SRC-001 sigue siendo una traducción privada no cotejada con japonés.
