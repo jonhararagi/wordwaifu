@@ -477,3 +477,11 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - PDF p.86 quedó inspeccionada como ilustración de capítulo a página completa; la figura no se identifica.
 - **Próximo folio:** PDF p.91. Siguen pendientes la pasada 2 de pp.91–156, la pasada 3 de pp.9–156 y la reconciliación de la pasada 1. V1 permanece `IN_PROGRESS`.
 - **Procedencia:** DMR-061-SRC-001, traducción privada no cotejada con japonés. El trabajo de este bloque se hizo sobre el PDF físico; no se afirma cotejo con la transcripción Markdown íntegra.
+
+### DMR-061 — actualización de pasada 2 V1 · PDF pp. 91–100 (2026-10-31)
+
+- La segunda actualización del Estado de Bell registra Fuerza H123→G221, Resistencia I42→H101, Destreza H139→G232, Agilidad G225→F313 y Magia I0 (p.91). Se conserva la discrepancia con p.54, donde la Fuerza anterior era H120.
+- Hestia mantiene oculta a Bell la Habilidad [Deseo Inquebrantable], aunque le explica el crecimiento anormal. La conversación culmina en una promesa mutua de prudencia y apoyo (pp.91–96).
+- Hestia decide usar el Banquete de Ganesha para intentar reunirse con Hephaistos (p.96); el encuentro todavía no se da por ocurrido.
+- Bell vuelve a La Señora de la Abundancia, se disculpa y paga lo adeudado; Seal lo perdona y le entrega una cesta de comida (pp.98–100). Mia-mama interviene; no se confirma romance ni se identifica a empleadas anónimas.
+- **Siguiente folio:** PDF p.101. Pasada 2 pp.101–156, pasada 3 pp.9–156 y reconciliación de pasada 1 permanecen pendientes. V1 IN_PROGRESS.
