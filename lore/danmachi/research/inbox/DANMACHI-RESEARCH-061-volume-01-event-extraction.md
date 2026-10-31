@@ -402,6 +402,27 @@ No se ha inspeccionado visualmente cada folio. Estos localizadores constituyen u
 - **Próximo folio:** PDF p. 178.
 
 
+
+### DMR-061 — segunda pasada, PDF pp. 73–76 (2026-10-31)
+
+**Resultado:** pasada 2 completada para las páginas físicas PDF 73–76. Se cotejó la extracción secuencial existente con la transcripción Markdown original de V1. La transcripción es material derivado de DMR-061-SRC-001 y no asigna por sí misma páginas físicas: los localizadores PDF se conservan por la secuencia ya documentada. No se modificó el archivo fuente original.
+
+**Hallazgos y precisiones:**
+
+- **pp. 73–76 — trabajo nocturno de Eina:** la escena comienza con lluvia intensa y trabajo extra en la sede del Gremio a las 21:00. Eina está revisando documentos; Misha, compañera humana y amiga de trabajo, se acerca y lee la hoja de Bell que Eina había preparado para el líder del equipo. La hoja reúne datos básicos —raza, lugar de nacimiento, experiencia y Familia—, pero este pasaje no justifica inventar valores o datos concretos que no aparezcan expresamente.
+- **Progreso de Bell:** Misha destaca que Bell llegó solo al quinto piso en medio mes. Eina corrige la lectura triunfal: no había superado cada piso de forma cuidadosa, sino que se lanzó imprudentemente y casi muere. La valoración no convierte ese avance en una autorización ni en una hazaña segura.
+- **Riesgo del quinto piso y Minotauro:** Eina considera prematuro que Bell explore el quinto piso por su corta experiencia, el equipo deficiente y la ausencia de compañero; además, explica que desde ese piso los monstruos y la estructura del Dungeon cambian y se vuelven más difíciles. A la vez, reconoce que el Minotauro encontrado fue anormal y que la fuga se relacionó con un descuido de Loki Familia. Son dos cuestiones distintas: la anomalía del Minotauro no elimina la falta de preparación de Bell.
+- **Alcance de la promesa de Eina:** dice que, mientras ella siga encargándose de Bell, no permitirá que continúe avanzando de esa manera. Se trata de la intención expresada por su asesora, no de una prohibición formal del Gremio ni de una orden institucional con alcance general.
+- **Misha y la reacción de Eina:** Misha bromea con que Eina se preocupa por Bell. Eina recuerda el «te amo» que Bell le dijo dos días antes; el propio texto lo caracteriza como una confesión medio en broma. Eina se sonroja y nota que le arden las orejas, pero después se dice que Bell es un chico lindo como un hermano menor. No se confirma reciprocidad, relación romántica ni una decisión sentimental. Se conserva la contradicción aparente entre su reacción física y la conclusión que se repite a sí misma, sin resolverla mediante interpretación externa.
+- **p. 76 — regreso al Dungeon y Frog Shooter:** Bell retoma la exploración ignorando la fatiga y mata a un Frog Shooter. La traducción lo describe como un monstruo rana de un solo ojo que ataca a los aventureros con una lengua larga; el corte deja salir un líquido rojo oscuro. Se conservan «Frog Shooter» y la anotación de traducción «Rana Tiradora» como variantes del mismo nombre, sin normalizarlo mediante una wiki.
+- **Motivación no identificada:** Bell piensa en perseguir a «esa persona» que está muy lejos. El pasaje no nombra a esa persona; no se asigna identidad por contexto ni se convierte esa frase en una declaración explícita sobre Ais. La frase de transición transcrita como «Un solo pasó» también queda sin normalizar como duración concreta.
+
+**Control de continuidad y duplicados:** pp. 73–76 amplían el expediente existente `EVT-DM-EINA-ADVISOR-001`; no se crea otro evento de asesoramiento. Misha queda nombrada en esta continuidad, pero no se abre una ficha individual por falta de datos suficientes. Frog Shooter ya cuenta con una ficha de monstruo procedente de DMR-062; esta pasada no crea una segunda ficha ni un evento aislado para su muerte.
+
+**Visuales:** la hoja de contactos de pp. 73–96 ya estaba documentada en el checkpoint de primera pasada. Esta auditoría textual no equivale a una nueva inspección ampliada de las imágenes de pp. 73, 79 o 86; sus estados visuales no se elevan aquí.
+
+**Siguiente página de pasada 2:** PDF p. 77. La pasada 3 de pp. 9–156 sigue pendiente. V1 permanece `IN_PROGRESS`; la traducción privada continúa sin cotejo con japonés.
+
 ## Claims de investigación trazables para relaciones de cronología · 2026-10-30
 
 ### DMR-061-CLM-001 · Hestia pide a Hephaistos un arma para Bell y ella acepta forjarla

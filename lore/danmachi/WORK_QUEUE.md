@@ -58,9 +58,25 @@ Inventario verificado sobre `main` SHA `0946ace89a29e7439fbcbe4e0d4315aec8418f62
 - [x] Cotejar el resumen DMR-061 con el texto fuente Markdown y completar la pasada 2 de PDF pp.61–72.
 - [x] Añadir detalles omitidos de pp.67–70: respuesta explícita de Ais de que Bate es una pareja «absolutamente imposible»; separar esa respuesta de la no-respuesta sobre Bell; secuencia física de Ais apartando, golpeando con el codo y abofeteando a Loki; reacción de Loki; reducción y sujeción de Bate.
 - [x] Registrar la variante «Riviera/Riveria» sin normalizarla por fuentes externas.
-- [ ] Continuar pasada 2 desde PDF p.73 hasta p.156.
+- [x] Completar pasada 2 de PDF pp.73–76, sin repetir pp.61–72.
+- [ ] Continuar pasada 2 desde PDF p.77 hasta p.156.
 - [ ] Realizar pasada 3 de PDF pp.9–156 y reconciliar la cobertura de pasada 1 por rangos.
-- **Límite:** no se modifica el archivo fuente original; el Markdown es transcripción derivada y la traducción sigue sin cotejarse con japonés. No se declara V1 terminado. Próxima página de pasada 2: PDF p.73.
+- **Límite:** no se modifica el archivo fuente original; el Markdown es transcripción derivada y la traducción sigue sin cotejarse con japonés. No se declara V1 terminado. Próxima página de pasada 2: PDF p.77.
+
+
+### DMR-061 — checkpoint de segunda pasada V1, PDF pp. 73–76 (2026-10-31)
+
+- [x] Releer la transcripción Markdown original y contrastar la escena nocturna de Eina/Misha y la primera muerte de Frog Shooter con la extracción secuencial existente.
+- [x] Precisar la hoja básica de Bell, su avance imprudente, las razones concretas de Eina para considerar prematuro el quinto piso y la distinción entre ese riesgo y la anomalía del Minotauro.
+- [x] Limitar la promesa de Eina a su función de asesora; conservar la broma de Misha, el recuerdo de la frase de Bell y la autoexplicación de Eina sin confirmar romance.
+- [x] Ampliar el expediente existente `EVT-DM-EINA-ADVISOR-001`; no crear evento nuevo para la escena de asesoramiento ni duplicar la ficha de Frog Shooter.
+- [x] Preservar sin resolver la identidad de «esa persona» y la expresión incierta «Un solo pasó».
+- [ ] Continuar la pasada 2 desde PDF p.77 hasta p.156.
+- [ ] Realizar la pasada 3 de PDF pp.9–156 y reconciliar la cobertura de pasada 1 por rangos.
+- **Visual:** la hoja de contactos pp.73–96 pertenece al checkpoint anterior; esta pasada textual no vuelve a marcar como reinspeccionadas las ilustraciones de pp.73, 79 o 86.
+- **Fuente:** DMR-061-SRC-001; traducción privada no cotejada con japonés. No se modifica el original `Volumen [01] • DanMachi.md`.
+- **Estado global:** V1 continúa `IN_PROGRESS`; no certificar hasta el 100 % de cobertura de las tres pasadas y los controles visuales.
+- **Próximo folio de pasada 2:** PDF p.77.
 
 ## REGLA PERMANENTE · Registro de acuerdos de conversación
 

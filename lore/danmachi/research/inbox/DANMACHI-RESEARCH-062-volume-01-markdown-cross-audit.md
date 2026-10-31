@@ -125,3 +125,12 @@ La auditoría reutiliza esos eventos. No crea un evento nuevo para cada párrafo
 - [ ] Contrastar discrepancias de traducción con otra edición o con el japonés cuando haya una ruta legítima accesible.
 
 **Criterio de cierre:** esta auditoría será parcial hasta terminar la comparación de los tramos no cubiertos y las tareas visuales. Un archivo Markdown estructurado no convierte por sí solo una extracción en canon cotejado.
+
+
+## Addendum — estado de los archivos tras la limpieza de cargas (2026-10-31)
+
+- **Corrección del estado actual:** la frase histórica de la sección 5 sobre conservar `lore/danmachi/volumes/main/volume-01.md` describe la disposición anterior a la limpieza posterior de la carpeta. En el `main` actual ese dossier separado ya no existe en esa ruta.
+- **Evidencia de la eliminación:** el historial de GitHub muestra el commit [`c1a4b9298c8118534f6babf5a5324b873e51c41c`](https://github.com/jonhararagi/wordwaifu/commit/c1a4b9298c8118534f6babf5a5324b873e51c41c), cuyo mensaje es `chore(danmachi): clear main volume imports for clean reupload`. Su diff elimina el dossier `volume-01.md` y otros archivos de esa carpeta, y deja un `.gitkeep` para volver a cargar las fuentes originales limpias.
+- **Versión histórica:** el dossier anterior existía en el padre `fd0144b2a1c599844b9f172ba7f3c14fb6d9f332`, con blob SHA `89c4316a0f7841bd69f6301e30756c240414d950`. Esta referencia acredita que existió; no significa que el archivo esté presente en el `main` actual.
+- **Fuente original vigente:** `lore/danmachi/volumes/main/Volumen [01] • DanMachi.md` permanece en `main`, blob SHA `d2b3306b1661584d9a42d651f57dca8a6814b20b`. El texto de extracción y los localizadores narrativos continúan en DMR-061 y en los registros de eventos vinculados.
+- **Decisión de integridad:** no restaurar silenciosamente `volume-01.md` dentro de `volumes/main/`, porque esa carpeta está reservada a las cargas originales de volúmenes. No se perdió el texto fuente original ni debe confundirse la eliminación intencional del dossier con una rama pendiente de integrar.
