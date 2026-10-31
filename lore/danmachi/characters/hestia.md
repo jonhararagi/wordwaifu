@@ -96,3 +96,16 @@ Durante una inspección del Gremio en el establecimiento donde trabaja Hestia, E
 - **Promesa:** Hestia pide que Bell no se sobreesfuerce ni la deje sola. Bell promete esforzarse por hacerse más fuerte sin actuar imprudentemente y no dejarla sola.
 - **Acción posterior:** Hestia decide usar una invitación al Banquete de Ganesha para intentar reunirse con Hephaistos (p.96). La asistencia y la conversación quedan pendientes.
 - **Límite:** no crear una segunda ficha de [Deseo Inquebrantable], no atribuir a Bell conocimiento de ella y no confundir esta actualización con pp.30–36, pp.193–196 o pp.211–214.
+ 
+## CONT-MAIN-LN · Banquete de Ganesha · Volumen 1 · PDF pp.104–115
+
+Hestia asiste al Banquete de Dios organizado por Ganesha y se reencuentra con Hephaistos (pp.104–107). El relato explica que Hephaistos la había cuidado antes de que Hestia conociera a Bell y que, aunque la expulsó de la residencia de su Familia, le proporcionó una casa oculta en una iglesia y la ayudó a conseguir trabajo. Hestia expresa gratitud y defiende que ahora ha encontrado su propio camino al formar Hestia Familia con Bell.
+
+En p.105 la narración relaciona su conducta durante el buffet con la precariedad económica de su Familia. En p.108 Hestia expresa incomodidad ante Freya. En pp.109–112 bromea y forcejea con Loki; no convertir la escena cómica en una enemistad constante. Cuando pregunta por Ais, Loki afirma que Ais es «su amada» y que no permitirá que se case; estas palabras pertenecen a Loki y no prueban reciprocidad ni una relación formal de Ais.
+
+En pp.113–115 Hestia recuerda su propósito y solicita a Hephaistos un arma para Bell. La petición tiene registro propio en EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001; no crear una segunda solicitud ni fusionarla con la aceptación/forja posterior.
+
+- **Evento relacionado:** EVT-DM-V01-GANESHA-GOD-BANQUET-001.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+- **Límites:** no se asigna fecha calendárica al Banquete, no se registra como celebrada la Philia anunciada para tres días después y no se infiere qué información confirmó Freya al marcharse.
+
