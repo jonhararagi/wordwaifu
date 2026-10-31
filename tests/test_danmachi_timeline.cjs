@@ -14,8 +14,8 @@ assert.equal(report.valid,true,report.errors.join("\n"));
 assert.equal(report.temporalModelVersion,1);
 assert.equal(report.legacyTemporalModel,false);
 assert.equal(report.eraCount,10);
-assert.equal(report.eventCount,48);
-assert.equal(report.temporalEventCount,48);
+assert.equal(report.eventCount,49);
+assert.equal(report.temporalEventCount,49);
 assert.equal(data.anchor.id,"T0-BELL-ARRIVAL");
 assert.equal(data.anchor.eventId,"EVT-DM-BELL-ARRIVAL-001");
 
@@ -67,7 +67,8 @@ const expectedKinds={
  "EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001":"relative_offset",
  "EVT-DM-V01-GANESHA-GOD-BANQUET-001":"relative_order",
  "EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001":"relative_order",
- "EVT-DM-V01-BELL-RECEIVES-RECOVERY-POTIONS-FROM-MIACH-001":"relative_offset"
+ "EVT-DM-V01-BELL-RECEIVES-RECOVERY-POTIONS-FROM-MIACH-001":"relative_offset",
+ "EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001":"relative_offset"
 };
 const expectedLabels={
  "EVT-DM-V01-BELL-RECEIVES-FALNA-001":"Después del primer encuentro Bell–Hestia; intervalo exacto no cuantificado.",
@@ -117,10 +118,11 @@ const expectedLabels={
  "EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001":"Exactamente dos días después del Banquete de Ganesha; Bell vuelve al Dungeon y llega a Babel cuando ya es de noche.",
  "EVT-DM-V01-GANESHA-GOD-BANQUET-001":"Por la noche, después de la salida de Hestia y de la visita de Bell a Seal; fecha absoluta desconocida.",
  "EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001":"Comienza durante el Banquete de Ganesha y continúa durante los dos días posteriores; fecha absoluta desconocida.",
- "EVT-DM-V01-BELL-RECEIVES-RECOVERY-POTIONS-FROM-MIACH-001":"Exactamente dos días después del Banquete de Ganesha; después de que Bell vuelve desde el Dungeon."
+ "EVT-DM-V01-BELL-RECEIVES-RECOVERY-POTIONS-FROM-MIACH-001":"Exactamente dos días después del Banquete de Ganesha; después de que Bell vuelve desde el Dungeon.",
+ "EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001":"Exactamente dos días después del Banquete de Ganesha; Bell regresa del Dungeon y pasa por la sede del Gremio."
 };
 const events=new Map(data.events.map(e=>[e.id,e]));
-assert.deepEqual([...events.keys()].sort(),Object.keys(expectedKinds).sort(),"All 48 timeline event IDs must be retained exactly.");
+assert.deepEqual([...events.keys()].sort(),Object.keys(expectedKinds).sort(),"All 49 timeline event IDs must be retained exactly.");
 for(const [id,kind] of Object.entries(expectedKinds)){
  const event=events.get(id);
  assert.equal(event.temporal.kind,kind,id+" temporal variant");
@@ -309,10 +311,18 @@ assert.equal(legacyReport.valid,true,"legacy v1 data must remain loadable throug
 assert.equal(legacyReport.legacyTemporalModel,true);
 assert.equal(timeline.temporalKindLabel(null),"Tiempo sin normalizar");
 assert.equal(report.locationCount,2);
-assert.equal(report.locationRefCount,41);
+assert.equal(report.locationRefCount,42);
 assert.equal(report.unknownEventCount,7);
 assert.equal(report.provisionalEventCount,9);
-assert.equal(data.events.length,48,"All 48 indexed event IDs must remain.");
+assert.equal(data.events.length,49,"All 49 indexed event IDs must remain.");
+const festivalPrep=events.get("EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001");
+assert.equal(festivalPrep.temporal.kind,"relative_offset");
+assert.equal(festivalPrep.temporal.anchorId,banquet.id);
+assert.equal(festivalPrep.temporal.amount,2);
+assert.equal(festivalPrep.temporal.unit,"day");
+assert.equal(festivalPrep.temporal.precision,"exact");
+assert.equal(festivalPrep.locationAssessment.status,"verified");
+assert.equal(festivalPrep.locationRefs[0].locationId,"LOC-ORARIO");
 const banquet=events.get("EVT-DM-V01-GANESHA-GOD-BANQUET-001");
 const petition=events.get("EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001");
 assert.equal(petition.temporal.kind,"relative_order");
