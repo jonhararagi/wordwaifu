@@ -831,3 +831,28 @@ La actualización de pp.91–96 es distinta de la actualización tras el Minotau
 
 **Siguiente folio de pasada 2:** PDF p.151. Siguen pendientes segunda pasada pp.151–156, tercera pasada pp.9–156, reconciliación integral de primera pasada y tareas independientes DMR-062. V1 permanece IN_PROGRESS; la traducción privada sigue sin cotejo con japonés.
 
+
+
+## DMR-061 — segunda pasada V1, PDF pp. 151–156 (2026-10-31)
+
+**Resultado:** pasada 2 completada para pp.151–156. Cada folio recibió los tres controles obligatorios: (1) extracción narrativa y de datos; (2) render del PDF físico a 130 dpi e inspección visual; (3) auditoría de continuidad, entidades, relaciones, cronología y duplicados. No se necesitó una cuarta revisión correctiva. Fuente DMR-061-SRC-001, traducción privada española no cotejada con japonés.
+
+### Extracción página por página
+
+- **p.151 — invitación de Hestia y búsqueda de Seal:** Hestia propone que Bell tenga una cita con ella. Bell se sonroja y señala que sigue buscando a una persona. Hestia sugiere que pueden buscarla mientras disfrutan del Festival y pide dos crepes de mermelada. Bell recuerda el encargo de devolver el monedero a Seal y teme que las empleadas se preocupen si no lo completa. No abandona expresamente la tarea.
+- **p.152 — primer crepe compartido:** Hestia invita a Bell a probar su crepe y lo alimenta. Bell se avergüenza porque ella es una diosa; el texto recoge su reacción ante las expresiones de Hestia, sin que eso pruebe una relación recíproca formal.
+- **p.153 — Bell alimenta a Hestia:** Hestia pide probar el crepe de Bell y él accede. Bell observa un poco de mermelada/salsa blanca en su mejilla y empieza a levantar la mano para limpiarla.
+- **p.154 — ilustración de capítulo:** ilustración monocroma a página completa de Bell y Hestia compartiendo el crepe. Es coherente con la acción narrada en pp.152–153; no añade un acontecimiento independiente ni autoriza inferencias sobre estados o relaciones no expresados.
+- **p.155 — contacto y continuación del paseo:** Bell se detiene porque no lleva pañuelo; Hestia le toma la mano y le pide que le limpie la mejilla. Bell lo hace y ambos se sonrojan. Hestia propone comer croquetas de patata; siguen caminando tomados de la mano. Bell reconoce que suele compartir poco tiempo de ocio con Hestia y que disfruta verla feliz.
+- **p.156 — comienzo del espectáculo del Coliseo:** el Festival de Monstruos entra en su espectáculo principal en el Coliseo de la Calle Principal del Este; el texto estima unos 50.000 espectadores. Aparece un Battle Jabalí de unos dos metros. Una domadora no identificada de Ganesha Familia esquiva sus embestidas e intenta domesticarlo; la finalidad de la actuación no es matarlo. El comentarista usa un altavoz construido con Piedras Mágicas y el público anima a la domadora.
+
+### Continuidad, relaciones y no duplicación
+
+- **Bell/Hestia:** pp.151–155 continúan el evento existente EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001 (PDF pp.150–165). No se crea otro evento para la cita, los crepes, el gesto de limpiar la mejilla o el paseo.
+- **Encargo de Seal:** Bell mantiene presente la devolución del monedero. La entrega no ocurre en pp.151–156; no se marca como completada ni se crea un evento de devolución anticipado.
+- **Battle Jabalí:** se reutiliza MON-DM-BATTLE-JABALI-001, cuya primera aparición ya está localizada en p.156. No se crea una ficha duplicada ni se identifica a la domadora anónima. La actuación de domesticación no se confunde con el grupo de monstruos que escapa más adelante.
+- **Cronología:** el Festival está en curso, pero estos folios no fijan una fecha de calendario ni un intervalo absoluto respecto de T0.
+
+**Control visual:** pp.151–153 y pp.155–156 son páginas de texto; p.154 es la única ilustración a página completa del bloque y se inspeccionó ampliada. No se observan tablas de Estado ni fichas estadísticas gráficas. No se necesita cuarta revisión correctiva.
+
+**Cierre de pasada 2:** con pp.151–156 queda cubierta la pasada 2 de todo el rango PDF pp.9–156. Las pp.157–214 mantienen las tres pasadas previamente documentadas; no se reabren ni se cuentan como trabajo nuevo. La próxima fase es la pasada 3 integral de pp.9–156, empezando por PDF p.9, y la reconciliación de la pasada 1 mediante matriz de cobertura. V1 permanece IN_PROGRESS; DMR-061-SRC-001 sigue siendo una traducción privada no cotejada con japonés.

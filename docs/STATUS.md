@@ -955,3 +955,21 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Continuidad:** se amplían la petición/forja ya existente y el encuentro Freya–Loki–Ais ya existente. Anya/Ryuu reutilizan fichas estables con evidencia CONT-MAIN-LN; no se transfieren capacidades de otras continuidades. El monedero sigue sin entregar y no se crea evento de cierre prematuro.
 - **Siguiente página:** PDF p.141. Pendiente segunda pasada pp.141–156; tercera pasada pp.9–156; reconciliación integral de pasada 1; DMR-062. V1 permanece IN_PROGRESS.
 
+
+
+## DMR-061 — segunda pasada V1 · PDF pp.141–150 (2026-10-31)
+
+- **Resultado:** tres controles completados por folio: extracción, inspección visual del PDF físico y auditoría de continuidad/duplicados. No se necesitó cuarta revisión correctiva.
+- **Hallazgos:** pp.141–145 amplían el encuentro Freya–Loki–Ais sin confirmar romance ni interacción directa entre Ais y Bell; p.146 registra la entrega física de la Daga de Hestia y mantiene la deuda; pp.147–150 Hestia usa el folleto, un carruaje y la indicación de Freya para localizar a Bell.
+- **Continuidad:** se amplían eventos existentes de Freya/Loki/Ais, entrega de la daga y encuentro Bell/Hestia. El monedero de Seal sigue sin devolverse en p.150; no se crea un evento duplicado.
+- **Visual:** diez páginas de texto continuo, sin ilustraciones ni tablas de Estado.
+- **Siguiente folio:** PDF p.151.
+
+## DMR-061 — segunda pasada V1 · PDF pp.151–156 (2026-10-31)
+
+- **Resultado:** tres controles completados por página: extracción; render a 130 dpi e inspección visual; continuidad, relaciones y duplicados. No se necesitó cuarta pasada correctiva.
+- **Hallazgos:** pp.151–155 desarrollan la salida de Bell y Hestia durante la búsqueda de Seal. p.154 es una ilustración monocroma a página completa de ambos compartiendo un crepe. p.156 inicia el espectáculo del Coliseo con un Battle Jabalí de unos dos metros y una domadora anónima de Ganesha Familia.
+- **Continuidad:** se amplía EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001; se reutiliza MON-DM-BATTLE-JABALI-001. El monedero de Seal aún no se entrega. No se crean personajes, monstruos ni eventos duplicados.
+- **Cobertura:** queda completada la pasada 2 de pp.9–156. Las pp.157–214 conservan las tres pasadas anteriores ya documentadas.
+- **Siguiente fase:** pasada 3 integral de pp.9–156, empezando en p.9, más reconciliación de la pasada 1 con matriz de cobertura. DMR-062 mantiene sus tareas independientes. V1 continúa IN_PROGRESS.
+- **Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés. PDF físico de 215 folios: p.8 blanca, p.214 último folio narrativo, p.215 créditos.

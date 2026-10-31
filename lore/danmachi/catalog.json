@@ -3377,6 +3377,36 @@
       ],
       "status": "source_checked_translation_unverified",
       "priority": "high"
+    },
+    {
+      "id": "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001",
+      "path": "events/timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 1",
+        "event",
+        "HESTIA",
+        "ESTADO"
+      ]
+    },
+    {
+      "id": "EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001",
+      "path": "events/timeline/EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 1",
+        "event",
+        "BELL",
+        "SEAL"
+      ]
     }
   ],
   "reservedIds": [
@@ -4176,7 +4206,7 @@
       "status": "folder_prepared_sources_pending"
     }
   ],
-  "lastStructuredSync": "2026-10-30",
+  "lastStructuredSync": "2026-10-31",
   "relationships": [
     {
       "id": "REL-ASTREA-DEITY-001",

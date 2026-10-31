@@ -17,6 +17,7 @@ Esta cola sigue la cobertura cronológica, desde las eras antiguas hasta el últ
 - [ ] **Pasada 2 — auditoría de detalle:** releer el 100 % buscando nombres/alias, números, costes, condiciones, límites, equipo, heridas, relaciones, motivaciones, conocimiento individual, diálogos relevantes, notas e información visual; distinguir explícito de inferido.
 - [ ] **Pasada 3 — verificación de omisiones:** releer el 100 % y contrastar cada nota con su localizador; comparar fichas/eventos/relaciones con el corpus existente; detectar duplicados, contradicciones, atribuciones incorrectas y datos ausentes.
 
+- **Control por folio dentro de cada pasada:** (1) extracción narrativa y de datos; (2) inspección visual de la página física del PDF; (3) continuidad, relaciones, atribuciones, contradicciones y duplicados. Una cuarta revisión correctiva se añade cuando aparece una ambigüedad o contradicción. Una revisión parcial no se marca como completa.
 Se permiten bloques y checkpoints para evitar pérdida de contexto, pero cada pasada debe cubrir todos los bloques. Nunca convertir una página ilegible, no extraída o una ilustración no inspeccionada en una página revisada. No declarar un volumen terminado hasta documentar las tres pasadas completas y cerrar la revisión de duplicados/localizadores.
 
 ### Inventario comprobado en main
@@ -25,7 +26,7 @@ Conteos aproximados de palabras tras excluir las cargas base64 de imágenes y el
 
 | Volumen | Archivo fuente | Palabras aprox. | Imágenes incrustadas | Estado de análisis |
 |---|---|---:|---:|---|
-| 1 | `Volumen [01] • DanMachi.md` | 63.168 | 16 | DMR-061: pasada 2 re-auditada en pp. 9–60; tres pasadas previas conservadas para pp. 157–214; pp. 61–72 tienen pasada 2 completada; pp. 73–80 tienen pasada 2 completada; pp. 81–156 siguen pendientes de pasada 2 y pp. 61–156 de pasada 3. PDF físico: 215 folios (p.8 blanca; p.215 créditos). V1 sigue IN_PROGRESS. |
+| 1 | `Volumen [01] • DanMachi.md` | 63.168 | 16 | DMR-061: pasada 2 de pp. 9–156 completada; pp. 157–214 conservan las tres pasadas documentadas; pasada 3 de pp. 9–156 y reconciliación de la pasada 1 siguen pendientes. PDF físico: 215 folios (p.8 blanca; p.215 créditos). V1 sigue IN_PROGRESS. |
 | 2 | `Volumen [02] • DanMachi.md` | 74.125 | 19 | DMR-060 contiene extracción parcial; falta certificar las tres pasadas completas. |
 | 3 | `Volumen [03] • DanMachi.md` | 53.883 | 21 | Fuente cargada; análisis integral pendiente. |
 | 4 | `Volumen [04] • DanMachi.md` | 64.892 | 23 | Fuente cargada; análisis integral pendiente. |
@@ -1526,3 +1527,15 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - **Pendientes:** pasada 2 pp.141–156 (16 folios); pasada 3 pp.9–156; reconciliar la pasada 1 con matriz de cobertura y localizadores; completar tareas DMR-062. V1 permanece IN_PROGRESS.
 - **Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés. PDF físico: 215 páginas; p.8 blanca, p.214 último folio narrativo y p.215 créditos.
 
+
+
+### Checkpoint vigente DMR-061 · cierre de pasada 2 V1 · PDF pp.9–156 · 2026-10-31
+
+- [x] Completar pasada 2 de PDF pp.81–156, incluidos los folios pp.151–156, con los tres controles por página: extracción, inspección visual física y auditoría de continuidad/duplicados.
+- [x] Confirmar que pp.151–156 no crean duplicados: Bell/Hestia sigue en EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001 y Battle Jabalí reutiliza MON-DM-BATTLE-JABALI-001.
+- [x] Mantener sin resolver el encargo del monedero de Seal al cierre de p.156.
+- [ ] Ejecutar pasada 3 integral de PDF pp.9–156, sin saltar folios y contrastando cada nota con su localizador físico.
+- [ ] Reconciliar pasada 1 con matriz de cobertura por página; las notas secuenciales antiguas no se elevan automáticamente a cobertura completa.
+- [ ] Completar las tareas independientes DMR-062 (pp.1–10, atomización selectiva de reglas/objetos, candidatos de monstruos y auditoría de personajes).
+- **Rango ya cubierto en el estándar previo:** pp.157–214 conservan las tres pasadas completas documentadas; no se repiten ni se contabilizan de nuevo.
+- **Siguiente fase:** pasada 3, PDF p.9. V1 continúa IN_PROGRESS y la traducción privada DMR-061-SRC-001 no está cotejada con japonés.
