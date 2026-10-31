@@ -3,12 +3,13 @@ id: CHAR-RYUU-LION
 universe: danmachi
 type: character
 status: provisional
-continuity_scope: CONT-AR; CONT-ANIME
+continuity_scope: CROSS-CONTINUITY
 source_refs:
   - DMR-001-SRC-003
   - DMR-001-SRC-006
   - DMR-013-SRC-001
   - DMR-013-SRC-002
+  - DMR-061-SRC-001
 claim_refs:
   - DMR-001-CLM-005
   - DMR-001-CLM-010
@@ -85,3 +86,14 @@ Tratar a Ryu como una identidad estable con estados temporales separados. La afi
 - **Bajo presión, CONT-AR:** la sinopsis del volumen 2 indica que las pérdidas durante el periodo luego llamado “Los siete días de la muerte” sacuden su sentido de justicia. El cambio general figura en la sinopsis; las escenas exactas y sus consecuencias individuales requieren consultar el volumen. [DMR-002-CLM-016]
 - **Límites:** no inferir gustos cotidianos, miedos específicos ni diagnósticos psicológicos a partir del trauma o de las pérdidas.
 - **Continuidad:** mantener este estado separado del perfil posterior de taberna en CONT-ANIME.
+
+
+## Aparición en la novela principal · CONT-MAIN-LN · Volumen 1 · PDF pp.101 y 137–138
+
+La novela principal muestra a una empleada elfa de La Señora de la Abundancia llamada «Ryu» en el relato de Mia-mama (p.101). Más adelante, Bell vuelve a encontrarse con la elfa y Anya la llama «Ryuu» (p.137). Ryuu aclara que Seal salió a visitar el Festival de Monstruos durante su día libre y olvidó su monedero; ayuda a Anya a explicar a Bell el encargo. En pp.137–138 explica que la domesticación requiere que el monstruo vea la fuerza del domador y se vuelva obediente, y que los miembros centrales de Ganesha Familia son capaces de domesticar monstruos del Dungeon.
+
+- **Continuidad:** CONT-MAIN-LN.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+- **Localizadores:** PDF p.101 y pp.137–138.
+- **Nombre en estos folios:** «Ryu» / «Ryuu». El texto no proporciona apellido en esta aparición; el apellido Lion, nivel, magia, afiliación histórica a Astrea Familia y datos de otras continuidades no se derivan de estas páginas.
+- **Rol observado:** empleada elfa de La Señora de la Abundancia; prepara el servicio y explica el encargo de Seal a Bell.
