@@ -1762,17 +1762,16 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - **Estado:** tercera pasada completada pp.9–138 (130 folios); pasada 2 pp.9–156 completada; reconciliación de pasada 1 pendiente; V1 IN_PROGRESS. Traducción privada no cotejada con japonés.
 
 
-### DMR-061 — tercera pasada V1 · PDF pp.139–148 · 2026-10-31
+### DMR-061 — tercera pasada V1 · PDF pp.149–156 · 2026-10-31
 
-- [x] Extraer narración y diálogos de pp.139–148 diferenciando voces, inferencias y acciones presenciadas.
-- [x] Renderizar e inspeccionar individualmente las diez páginas físicas a 130 dpi; todas son texto, sin ilustraciones, tablas ni notas al pie.
-- [x] Ampliar el encuentro existente Freya/Loki/Ais (pp.139–145), la entrega física de la daga (pp.145–146) y el evento Bell/Hestia en el Festival con el preámbulo pp.147–148.
-- [x] Actualizar las fichas de Freya, Loki, Ais, Hestia y Hephaistos bajo CONT-MAIN-LN.
-- [x] Mantener separadas las inferencias de Loki, el reconocimiento de Bell por Freya y la mirada de Ais; no hay interacción Ais–Bell.
-- [x] Registrar la deuda como vigente y la tarifa del carruaje como 90 Varisu exactos.
-- [x] No cerrar el monedero de Seal ni crear IDs nuevos; catálogo y timeline JSON sin cambios.
-- [x] Aplicar cuarta revisión correctiva puntual en pp.142–145 y p.148.
-- [ ] Continuar tercera pasada desde PDF p.149 hasta p.156 (8 folios).
-- [ ] Reconciliar pasada 1 mediante matriz de cobertura por folio.
-- **Siguiente folio:** PDF p.149.
-- **Estado:** tercera pasada completada pp.9–148 (140 folios); pasada 2 pp.9–156 completada; reconciliación de pasada 1 pendiente; V1 IN_PROGRESS. Traducción privada no cotejada con japonés.
+- [x] Extraer narración y diálogos de los ocho folios, separando el preludio Hestia–Freya, el reencuentro y paseo Bell–Hestia, y el inicio paralelo del espectáculo en el Coliseo.
+- [x] Renderizar e inspeccionar individualmente las ocho páginas físicas a 130 dpi; p.154 es ilustración monocroma; las demás son texto.
+- [x] Ampliar EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001 con el preludio de p.149 y los detalles pp.150–155, sin convertir la cita en relación formal.
+- [x] Actualizar las fichas existentes de Hestia, Bell, Freya y Eina bajo CONT-MAIN-LN.
+- [x] Mantener el monedero de Seal como encargo pendiente y la daga como todavía no entregada a Bell.
+- [x] Registrar la demostración del Battle Jabalí y el trabajo del Gremio en la extracción y la ficha de Eina, sin crear evento o entidad no identificada.
+- [x] No crear IDs ni modificar catálogo, relaciones o timeline JSON.
+- [x] Aplicar cuarta revisión correctiva en p.149, pp.151–154 y p.156.
+- [ ] Reconciliar la pasada 1 mediante matriz de cobertura por folio.
+- **Controles:** tres controles completos por página pp.149–156 (extracción, visual y continuidad); cuarta revisión correctiva puntual según los riesgos del bloque.
+- **Checkpoint:** tercera pasada completada pp.9–156 (148 folios); pasada 2 pp.9–156 completada; reconciliación de pasada 1 pendiente; V1 IN_PROGRESS. Traducción privada no cotejada con japonés.
