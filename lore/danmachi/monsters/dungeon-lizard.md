@@ -26,7 +26,7 @@ Monstruo del Dungeon mencionado durante la exploración de Bell. La traducción 
 - Bell recupera fragmentos de Piedra Mágica del Dungeon Lizard y del Goblin presentes en la misma secuencia.
 
 ## Límites
-- No inferir habilidades, resistencia, defensa, tamaño, velocidad o nivel numérico.
+- No inferir habilidades, resistencia, defensa, velocidad o nivel numérico. La comparación aproximada de longitud con la altura de Bell es una estimación subjetiva, no una dimensión absoluta ni una medida física.
 - No afirmar que el Dungeon Lizard carezca de Piedra Mágica: el texto deja abierta la duda sobre el estado de esta.
 - No confundirlo con otros monstruos reptilianos.
 
