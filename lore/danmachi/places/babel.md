@@ -4,8 +4,8 @@ universe: danmachi
 type: location
 status: source_checked_partial
 confidence: El glosario oficial del anime describe a Babel como la instalación más alta de Orario, propiedad de la Guild y vinculada con la supervisión y gestión del Dungeon; las funciones concretas de cada zona no están detalladas.
-continuity_scope: CONT-ANIME
-source_refs: [DMR-026-SRC-001]
+continuity_scope: CROSS-CONTINUITY
+source_refs: [DMR-026-SRC-001, DMR-061-SRC-001]
 claim_refs: [DMR-026-CLM-002]
 tags: [Babel, 摩天楼施設バベル, Guild, Dungeon, Orario]
 ---
