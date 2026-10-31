@@ -68,6 +68,7 @@ Consulta el [índice narrativo de la Era Oscura](dark-era/00-indice-era-oscura.m
 | Helga | `CHAR-HELGA` | Personaje | `secondary_reference_primary_locator_pending` | [Abrir](helga.md) |
 | Hera | `CHAR-HERA` | Deidad | `secondary_reference_primary_locator_pending` | [Abrir](hera.md) |
 | Hermes | `CHAR-HERMES` | Deidad | `source_checked_partial` | [Abrir](hermes.md) |
+| Hephaistos | `CHAR-HEPHAISTOS` | Deidad | `provisional` | [Abrir](hephaistos.md) |
 | Hestia | `DM-CHAR-HESTIA` | Personaje | `draft` | [Abrir](hestia.md) |
 | Hitachi Chigusa | `CHAR-HITACHI-CHIGUSA` | Personaje | `source_checked_partial` | [Abrir](hitachichigusa.md) |
 | Hogni Ragnar | `CHAR-HOGNI-RAGNAR` | Personaje | `source_checked_partial` | [Abrir](hogniragnar.md) |
@@ -145,7 +146,7 @@ El roster reportado de Nueva Astrea y la conexión de Rudra/Jura con la crisis d
 | `CHAR-ARTEMIS` | candidate_not_created |
 | `CHAR-DEMETER` | candidate_not_created |
 | `CHAR-DIAN-CECHT` | candidate_not_created |
-| `CHAR-HEPHAISTOS` | candidate_not_created |
+| `CHAR-HEPHAISTOS` | created — [ficha](hephaistos.md) |
 | `CHAR-MIACH` | candidate_not_created |
 | `CHAR-TAKEMIKAZUCHI` | candidate_not_created |
 | `CHAR-ZARD` | candidate_not_created |
