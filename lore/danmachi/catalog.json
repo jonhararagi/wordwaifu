@@ -3303,6 +3303,36 @@
       ],
       "status": "provisional",
       "priority": "high"
+    },
+    {
+      "id": "EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001",
+      "path": "events/timeline/EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001.md",
+      "type": "event",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volume 1",
+        "Bell",
+        "Dungeon Lizard",
+        "Goblin"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-V01-GANESHA-GOD-BANQUET-001",
+      "path": "events/timeline/EVT-DM-V01-GANESHA-GOD-BANQUET-001.md",
+      "type": "event",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volume 1",
+        "Banquete de Dios",
+        "Ganesha",
+        "Hestia"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "high"
     }
   ],
   "reservedIds": [
