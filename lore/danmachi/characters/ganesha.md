@@ -57,3 +57,12 @@ Un perfil de adaptación no sustituye una biografía por escenas. Se deben cotej
 1. Localizar escenas/capítulos de novela para los hechos importantes.
 2. Separar afiliaciones y relaciones por intervalo y continuidad.
 3. Añadir capacidades y evolución solo con evidencia.
+ 
+## CONT-MAIN-LN · Banquete de Dios · Volumen 1 · PDF p.104
+
+La narración muestra a Ganesha como organizador de un Banquete de Dios en el recinto de Ganesha Familia. El lugar se presenta junto al edificio/recinto llamado «Yo Soy Ganesha», con una estatua de elefante de unos 30 metros iluminada por Piedras Mágicas. Ganesha anuncia que la Philia se celebrará dentro de tres días. Este folio no aporta fecha calendárica ni confirma que la Philia llegue a celebrarse.
+
+- **Evento:** EVT-DM-V01-GANESHA-GOD-BANQUET-001.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+- **Límite:** no se infiere el número total de asistentes, una lista completa de dioses o una periodicidad formal del Banquete.
+
