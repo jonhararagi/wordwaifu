@@ -5,7 +5,7 @@ type: setting
 status: provisional
 confidence: medium-high
 tags: [Dungeon, Guild, registro, referencia conceptual]
-source_refs: [DanMachi light novel series; localizador pendiente]
+source_refs: [DMR-061-SRC-001]
 ---
 # Dungeon, Guild y registro de aventureros — guía conceptual
 
@@ -42,3 +42,10 @@ Hasta resolverlo, clasificar como AMBIGUITY / PENDING_VERIFICATION, no como cont
 ## Verificación pendiente
 
 Buscar los pasajes sobre registro y asesoría de Eina en los primeros volúmenes. No deducir requisitos legales precisos de una descripción general del Dungeon.
+## Antecedentes del Dungeon anteriores al descenso de los dioses · CONT-MAIN-LN · Volumen 1 · PDF p.46
+
+La narración del volumen afirma que el Dungeon ya existía antes de que los dioses descendieran al Mundo Inferior y que, aunque las calles de Orario se construyeron sobre él, su extensión y configuración urbana son distintas de la antigüedad. Añade que personas antiguas cooperaron con un predecesor del Gremio y combatieron monstruos sin recibir la Gracia de los dioses. La formulación se presenta como un relato histórico («se dice»); no se identifica a ese predecesor por nombre, no se detallan sus órganos o reglas y no se fija una fecha.
+
+- **Alcance:** evidencia de la traducción privada aportada, no una cronología exhaustiva de la fundación de Orario, del Gremio o del Dungeon.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF p.46.
+- **Continuidad:** no trasladar la mención del precursor a una ficha institucional distinta ni crear una ubicación separada para calles superpuestas al Dungeon.

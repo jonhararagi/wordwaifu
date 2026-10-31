@@ -980,3 +980,45 @@ La actualización de pp.91–96 es distinta de la actualización tras el Minotau
 
 - **p.29 — economía y escala de Familia:** Bell compara el desarrollo de una Familia con el de una tienda o un imperio: su capacidad de crecer depende de las capacidades de sus integrantes. Es una analogía que Bell utiliza para animar a Hestia, no una definición jurídica o un requisito formal de ingreso.
 - **p.31 — acontecimiento como experiencia:** Hestia explica que un acontecimiento oculto en la historia personal —pone como ejemplo derrotar a un monstruo— puede ser extraído por los dioses y convertirse en alimento para el crecimiento. El valor de los Puntos de Experiencia depende de cantidad y calidad. Se conserva como explicación atribuida a Hestia, con la terminología de la traducción; no se transforma en fórmula de cálculo ni se iguala automáticamente a Excelia.
+
+
+## DMR-061 — tercera pasada V1 · PDF pp.39–48 (2026-10-31)
+
+**Resultado:** tres controles completados para cada página: extracción, inspección de la página física y auditoría de continuidad. Se aplicó una cuarta revisión correctiva a pp.42–43 y p.48 para mantener separadas las atribuciones y no fijar datos ambiguos. Fuente DMR-061-SRC-001, traducción privada española no cotejada con japonés.
+
+### Revisión folio por folio
+
+- **p.39 — mañana en la base de Hestia Familia:** continúa la escena del despertar. Bell se deja abrazar por Hestia, la encuentra especialmente cariñosa y se siente avergonzado por la proximidad. La narración mantiene el tono cómico e íntimo de la convivencia; no se convierte en un cambio formal de relación.
+- **p.40 — ilustración a página completa:** imagen monocroma contextualizada con la escena de Bell y Hestia sobre el sofá. La identificación se apoya en la narración contigua de pp.39 y 41; la imagen no aporta un nombre ni una relación independiente.
+- **p.41 — salida de Bell:** Bell consigue apartar a Hestia, la deja cubierta con una manta y sale en silencio. El pensamiento de que Hestia «intentaba matarlo» y que casi se asfixió forma parte de la exageración cómica de Bell, no de un ataque deliberado acreditado. Sale temprano, camina por la calle principal y recuerda que olvidó desayunar. Va equipado para entrar al Dungeon.
+- **p.42 — sensación de vigilancia y aparición de una civil:** Bell percibe una presencia o mirada peligrosa que compara con la de un aventurero poderoso; inspecciona la calle, no identifica a nadie sospechoso y se pregunta si fue imaginación. Después una voz lo llama. La persona que tiene delante es una joven humana con blusa blanca, falda verde hasta la rodilla, delantal, cabello negro recogido en un pequeño moño con coleta y ojos del mismo color. Bell estima que podría ser uno o dos años mayor; es impresión suya, no edad confirmada.
+- **p.43 — devolución de Piedra Mágica:** la joven resulta ser la empleada de la cafetería con terraza que Bell había visto moviendo una mesa. Le devuelve una Piedra Mágica azul violácea que se le había caído. Bell recuerda haber entregado al Gremio todas las piedras el día anterior y se pregunta por qué aún llevaba esa. La fuente no explica cuándo ni dónde cayó ni de qué monstruo procede. Bell la agradece y ambos intercambian unas palabras. La página incluye una nota del traductor que define «riñonera» y enumera variantes regionales del término; es glosa lingüística, no dato del mundo.
+- **p.44 — desayuno improvisado:** al notar que Bell no ha desayunado, la empleada entra en el establecimiento y vuelve con una cesta pequeña que contiene pan y queso. Aclara que el negocio aún no ha abierto y que no se trata de una comida formal. Bell duda porque parece ser su propio desayuno; ella insiste en que lo acepte.
+- **p.45 — invitación para la noche:** la empleada propone que Bell cene esa noche en el local donde trabaja; dice que la invitación también le conviene porque aumentará su sueldo. Bell comprende el trato, bromea con que es astuta y acepta. La cena aún no ocurre en este bloque. Bell se presenta por su nombre.
+- **p.46 — nombre y pasado del Dungeon:** la joven se presenta como Seal Flover y ambos intercambian sonrisas y nombres. Después la narración afirma que el Dungeon existía antes de que los dioses descendieran al Mundo Inferior, que las calles se construyeron sobre él y que personas de la antigüedad, junto con un predecesor del Gremio, combatían monstruos sin Gracia. La formulación «se dice» se conserva como relato histórico de estas páginas; no se infiere el nombre, estructura institucional o fecha exacta de ese Gremio antiguo. La página enlaza esta transición con la incursión de Bell.
+- **p.47 — grupo de Kobolds:** Bell está en el primer piso. Se encuentra con ocho Kobolds; había abatido a dos antes de que los otros seis lo rodeen y persigan. Según su experiencia de novato, es raro que se agrupen así, pues normalmente los ve solos o en parejas. Esa observación queda atribuida a Bell y no se transforma en regla universal de la especie.
+- **p.48 — emboscada con daga:** Bell se esconde en una esquina, observa cómo se acercan los pasos y se prepara para emboscar al grupo. Declara que es usuario de daga, que su hoja mide 20 centímetros y que es su única arma. Apuñala en el corazón al primer Kobold que aparece; utiliza su cuerpo como escudo y empuja a otros dos al suelo; después apuñala la garganta de un Kobold al que llama «ahogado» y dice «dos abajo». La secuencia gramatical y el recuento no permiten normalizar con seguridad el número exacto de bajas en este punto.
+
+### Auditoría de continuidad y decisiones de no duplicación
+
+- **Convivencia Bell/Hestia:** pp.39–41 continúan la escena doméstica del mismo día, no crean un evento nuevo de relación ni modifican los estados de Falna o habilidad.
+- **Seal Flover:** pp.42–46 amplían el evento existente EVT-DM-V01-BELL-MEETS-SEAL-FLOVER-001 y la ficha DM-CHAR-SEAL-FLOVER. No se crea una segunda reunión ni se identifica el establecimiento por estas páginas. La cena prometida queda como invitación aceptada, no como acontecimiento celebrado.
+- **Vigilancia de p.42:** la sensación de que Bell es observado no se atribuye a Seal, a la persona que le devuelve la Piedra Mágica ni a una facción concreta. El texto no resuelve quién provoca esa sensación.
+- **Piedra Mágica de p.43:** se documenta solo la devolución. Su origen y momento de caída quedan desconocidos, aunque Bell recuerda haber entregado las piedras al Gremio el día anterior. No se añade un monstruo de procedencia ni un nuevo botín.
+- **Nota al pie:** la glosa de «riñonera» no genera una entidad, objeto, regla ni relación.
+- **Kobolds:** pp.46–48 amplían el evento existente EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001 y la ficha MON-DM-KOBOLD-001. No se crean individuos ni un segundo combate.
+- **Cuenta de bajas:** el recuento se deja abierto y se remite a la secuencia completa de pp.46–51; la revisión correctiva de p.48 no resuelve lo que la traducción deja ambiguo.
+- **Dungeon histórico:** p.46 añade una fuente primaria de trabajo al expediente conceptual DM-GUILD-001; la antigüedad anterior al descenso de los dioses y la actividad de un precursor del Gremio se atribuyen a la narración de la traducción. No se inventa una fecha o identidad institucional.
+- **Arma:** la daga de 20 cm es el único equipo ofensivo que Bell declara llevar en p.48. No se equipara con la futura Daga de Hestia, que aún no ha recibido.
+- **Alcance:** p.46 introduce un dato histórico y el combate; no se separan en eventos nuevos los párrafos expositivos del inicio de la pelea.
+
+### Control visual
+
+- **Ilustración:** p.40 es la única página ilustrada a página completa del bloque; muestra a Bell y Hestia en la escena doméstica que la rodea.
+- **Páginas de texto:** pp.39, 41–42 y 44–48.
+- **Nota al pie:** p.43 contiene una glosa del traductor sobre «riñonera»; se inspeccionó ampliada.
+- **Tablas/estadísticas:** no aparecen tablas de Estado, fichas gráficas ni diagramas en pp.39–48.
+- **Revisión correctiva:** pp.42–43 para no asignar la mirada a un personaje ni resolver el origen de la Piedra Mágica; p.48 para preservar la cuenta de bajas sin normalización.
+
+**Siguiente folio de tercera pasada:** PDF p.49. La tercera pasada de pp.49–156 y la reconciliación de la pasada 1 siguen pendientes. V1 permanece IN_PROGRESS y la traducción privada sigue sin cotejarse con japonés.
+

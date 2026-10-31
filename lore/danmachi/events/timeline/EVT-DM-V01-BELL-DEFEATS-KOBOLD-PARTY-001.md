@@ -52,3 +52,13 @@ Bell se enfrenta a un grupo de Kobolds en el primer piso. La narración dice que
 - No convertir las explicaciones de Bell sobre comportamiento, economía o clasificación de botines en reglas exhaustivas más allá del pasaje.
 - La traducción privada no se ha cotejado con japonés.
 
+
+
+## Auditoría de tercera pasada · CONT-MAIN-LN · PDF pp.46–48
+
+- p.46–47: grupo de ocho Kobolds en el primer piso; dos abatidos antes de que los seis restantes persigan a Bell. El juicio de que la agrupación es extraña se atribuye a la experiencia limitada de Bell.
+- p.48: Bell declara que su única arma es una daga de 20 centímetros. La emplea contra el primer Kobold y usa el cuerpo como escudo para hacer caer a otros dos; apuñala en la garganta a otro y la traducción da el recuento «dos abajo». La secuencia no permite normalizar el número exacto de bajas.
+- **Revisión correctiva:** se inspeccionó la página física ampliada y se volvió a cotejar el sujeto gramatical y el recuento. Se conserva la ambigüedad hasta confrontar las páginas 49–51; no se corrige por intuición.
+- **Evento/ficha:** ampliar EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001 y MON-DM-KOBOLD-001; no crear un segundo evento, individuos ni nivel numérico.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+

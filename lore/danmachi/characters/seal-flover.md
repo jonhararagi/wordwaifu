@@ -75,3 +75,12 @@ Bell sitúa el establecimiento donde trabaja Seal —La Señora de la Abundancia
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
 - **Localizador:** PDF p.123.
 - **Límite:** se registra el marco de avenida; no se crea una ficha de local nueva ni se inventa una dirección.
+
+
+## Observación de tercera pasada · PDF pp.42–43
+
+La sensación de que Bell está siendo observado en p.42 aparece antes de que la joven lo llame. Bell mira la calle y no encuentra nada identificable. El texto no vincula esa sensación con Seal ni con otra persona. En p.43 ella devuelve una Piedra Mágica azul violácea que Bell llevaba en su riñonera; el origen y el momento de la caída quedan desconocidos. La nota al pie solo explica el término regional «riñonera» y no modifica la ficha de Seal.
+
+- **Fuente:** DMR-061-SRC-001, traducción privada, PDF pp.42–43.
+- **Límite:** no añadir observador, objeto independiente ni procedencia de la Piedra Mágica.
+

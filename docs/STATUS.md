@@ -1015,7 +1015,7 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Hallazgos:** p.29 amplía el primer encuentro Bell–Hestia y la promesa personal de Bell; pp.30–36 contienen el primer Estado posterior al Minotauro y la revelación de [Deseo Inquebrantable] solo al lector; p.38 describe la lámpara de Piedra Mágica y la rutina doméstica en la base subterránea.
 - **Continuidad:** se amplían eventos existentes; no se crea un nuevo primer encuentro ni una nueva actualización de Estado. La Falna inicial del epílogo, la actualización de pp.30–36, la segunda actualización de pp.91–96 y la entrega de la daga de pp.193–196 siguen separadas.
 - **Precauciones:** el pasaje p.29 solo dice que Hestia descendió «recientemente», sin intervalo medible; el plazo recordado de medio año no queda confirmado. Las afirmaciones de Hestia sobre matrimonios entre Familias y costumbres raciales quedan atribuidas, no universalizadas.
-- **Siguiente folio de tercera pasada:** PDF p.39. Restan pp.39–156 (118 folios) para completar la tercera pasada; la reconciliación de pasada 1 sigue pendiente. V1 permanece IN_PROGRESS.
+- **Siguiente folio de tercera pasada:** PDF p.49. Restan pp.49–156 (108 folios) para completar la tercera pasada; la reconciliación de pasada 1 sigue pendiente. V1 permanece IN_PROGRESS.
 
 ## Evidencia CI · checkpoint anterior
 
@@ -1023,3 +1023,19 @@ Sobre SHA 4423efcfc55920b02fdf949927ae7a4033bf1033:
 - [Validate WordWaifu #3853](https://github.com/jonhararagi/wordwaifu/actions/runs/41185474561): success.
 - [DanMachi Lore and Retrieval Integrity #2231](https://github.com/jonhararagi/wordwaifu/actions/runs/41185474555): success.
 
+
+
+## DMR-061 — tercera pasada V1 · PDF pp.39–48 (2026-10-31)
+
+- **Resultado:** tres controles por página completados: extracción, inspección visual del PDF físico y auditoría de continuidad. Cuarta revisión correctiva en pp.42–43 y p.48.
+- **Visual:** p.40 es ilustración completa de Bell y Hestia; p.43 lleva una nota al pie del traductor sobre el término «riñonera». Las otras ocho páginas son texto; no hay tablas de Estado.
+- **Hallazgos:** Bell sale de la base al amanecer y olvida desayunar; Seal Flover le devuelve una Piedra Mágica, le ofrece pan y queso y obtiene su aceptación para cenar esa noche; p.46 sitúa la existencia del Dungeon antes del descenso de los dioses y menciona personas antiguas que luchaban sin Gracia; pp.47–48 inician el combate contra ocho Kobolds en el primer piso.
+- **Continuidad:** se reutilizan los eventos existentes de encuentro con Seal y combate con Kobolds, además de sus fichas. La mirada de p.42 no se atribuye a Seal; el origen de la Piedra Mágica no se inventa; la cifra de bajas de p.48 permanece abierta.
+- **Equipo:** Bell declara llevar una sola arma, una daga de 20 cm. No es la futura Daga de Hestia.
+- **Checkpoint:** tercera pasada completada pp.9–48; próxima página PDF p.49. Restan pp.49–156 (108 folios) de la tercera pasada. La reconciliación de la pasada 1 sigue pendiente; V1 permanece IN_PROGRESS.
+- **Procedencia:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
+## Evidencia CI — checkpoint anterior 79adcaf6cf244a6867a1b518e7106dd45408fbb6
+
+- [Validate WordWaifu #3854](https://github.com/jonhararagi/wordwaifu/actions/runs/41186194780): success.
+- [DanMachi Lore and Retrieval Integrity #2232](https://github.com/jonhararagi/wordwaifu/actions/runs/41186194814): success.

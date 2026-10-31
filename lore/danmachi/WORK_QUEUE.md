@@ -1580,9 +1580,25 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Aplicar cuarta revisión correctiva a pp.34–36 para separar la copia entregada a Bell del Estado grabado y la perspectiva interna de Hestia. Bell no conoce [Deseo Inquebrantable] en esta escena.
 - [x] Añadir fuentes parciales a Falna/progresión, Magia/Habilidades, relaciones entre Familias y tecnología de lámparas de Piedra Mágica. No elevar explicaciones de personajes a leyes universales.
 - [x] Incorporar p.29 al candidato del descenso de Hestia como evidencia no cuantificada: «recientemente»; el posible intervalo de medio año sigue sin probarse.
-- [ ] Continuar tercera pasada desde PDF p.39 hasta p.156 (118 folios restantes).
+- [x] Completar tercera pasada de PDF pp.39–48, con revisiones correctivas en pp.42–43 y p.48.
+- [ ] Continuar tercera pasada desde PDF p.49 hasta p.156 (108 folios restantes).
 - [ ] Reconciliar la pasada 1 mediante matriz de cobertura por página/localizador; no contar notas históricas como cobertura completa sin verificación.
 - **Balance de controles:** 3 controles por folio en pp.29–38; una cuarta revisión correctiva en pp.34–36.
 - **Siguiente folio:** PDF p.39.
 - **Estado:** V1 continúa IN_PROGRESS; DMR-061-SRC-001 sigue siendo traducción privada no cotejada con japonés.
 
+
+
+### DMR-061 — tercera pasada V1 · PDF pp.39–48 · 2026-10-31
+
+- [x] Completar extracción por folio de pp.39–48 y comparar con la fuente ya registrada.
+- [x] Renderizar e inspeccionar visualmente las diez páginas físicas a 130 dpi; p.40 ilustración completa; p.43 nota al pie del traductor sobre «riñonera».
+- [x] Reutilizar el encuentro existente EVT-DM-V01-BELL-MEETS-SEAL-FLOVER-001 y ampliar sus límites: sensación de vigilancia de p.42 no atribuida; origen de la Piedra Mágica de p.43 desconocido; invitación a cenar no equivale a cena celebrada.
+- [x] Reutilizar EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001 y MON-DM-KOBOLD-001; registrar daga de 20 cm como única arma declarada por Bell en p.48; mantener ambiguo el número de bajas.
+- [x] Añadir p.46 a DM-GUILD-001 como evidencia parcial de que el Dungeon precede al descenso de los dioses y de que existió un precursor del Gremio; no inventar fecha o estructura institucional.
+- [x] Aplicar cuarta revisión correctiva a pp.42–43 y p.48 para mantener separadas atribuciones, procedencia de objeto y cuenta de bajas.
+- [ ] Continuar tercera pasada desde PDF p.49 hasta p.156 (108 folios).
+- [ ] Reconciliar la pasada 1 mediante matriz de cobertura por página/localizador.
+- **Controles:** tres por cada folio pp.39–48; cuatro revisiones totales en pp.42–43 y p.48.
+- **Siguiente folio:** PDF p.49.
+- **Estado:** V1 IN_PROGRESS; traducción privada no cotejada con japonés.

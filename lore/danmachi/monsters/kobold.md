@@ -35,3 +35,14 @@ Especie de monstruo del Dungeon. Los datos de esta ficha se limitan al grupo que
 
 ## Fuente
 DMR-061-SRC-001, traducción privada española no cotejada con japonés. Localizador físico: PDF pp. 46–51.
+
+
+## Tercera pasada · primer combate del grupo · PDF pp.46–48
+
+Se amplía la secuencia del encuentro y persecución de los Kobolds. Bell informa de ocho al inicio del grupo, con dos ya abatidos antes de que los seis restantes lo persigan. En p.48 indica que es usuario de daga y que su arma mide 20 cm y es la única que lleva. La emboscada de la esquina empieza con una puñalada al corazón del primero; después usa el cuerpo como escudo para derribar a otros dos y apuñala en la garganta a otro. La expresión «dos abajo» no permite cerrar por sí sola la cuenta de bajas.
+
+- No se asigna nivel numérico ni se generaliza el comportamiento de agrupación.
+- No se crean fichas individuales.
+- La cifra final se mantiene abierta hasta completar la lectura de pp.49–51.
+- Fuente: DMR-061-SRC-001, traducción privada no cotejada, PDF pp.46–48.
+

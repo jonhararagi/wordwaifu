@@ -54,3 +54,15 @@ Bell se encuentra con una joven empleada de un establecimiento con cafetería y 
 - No identificarla con la figura de la portadilla del capítulo 2 (PDF p. 37) por semejanza visual.
 - Este evento termina con la invitación aceptada y el intercambio de nombres. La cena anunciada no se registra como acontecimiento ocurrido.
 
+
+
+## Auditoría de tercera pasada · CONT-MAIN-LN · PDF pp.42–46
+
+- pp.42–43 añaden la reacción de Bell a una sensación de vigilancia antes de hablar con la joven; el texto no la conecta con Seal. No usar esta mirada como pista para identificarla.
+- La apariencia de Seal y su papel de empleada coinciden con la secuencia ya registrada; se conserva la diferencia entre la edad que Bell estima y una edad no confirmada.
+- p.43 confirma que Seal devuelve una Piedra Mágica azul violácea; Bell recuerda haber entregado todas al Gremio el día anterior. El origen de la que llevaba aún en la riñonera permanece sin explicación. La nota al pie sobre «riñonera» es una glosa del traductor, no lore.
+- pp.44–45 muestran la cesta de pan y queso y la invitación de Seal a cenar esa noche en su lugar de trabajo. Bell acepta, pero la cena no se registra como celebrada aquí.
+- p.46 da el intercambio de nombres: «Seal Flover» y «Bell Cranel». El arte de p.40 corresponde a la escena anterior con Hestia; la portadilla del capítulo 2 de p.37 no se identifica como Seal.
+- **Decisión:** ampliar EVT-DM-V01-BELL-MEETS-SEAL-FLOVER-001; no crear evento duplicado, ficha de negocio ni relación romántica confirmada.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
