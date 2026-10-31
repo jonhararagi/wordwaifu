@@ -3422,6 +3422,23 @@
         "HESTIA",
         "STATUS"
       ]
+    },
+    {
+      "id": "EVT-DM-V01-HESTIA-SEARCHES-BELL-AND-CARES-FOR-HIM-001",
+      "path": "events/timeline/EVT-DM-V01-HESTIA-SEARCHES-BELL-AND-CARES-FOR-HIM-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 1",
+        "event",
+        "HESTIA",
+        "BELL",
+        "búsqueda",
+        "regreso herido"
+      ]
     }
   ],
   "reservedIds": [
