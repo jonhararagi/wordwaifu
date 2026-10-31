@@ -9,7 +9,7 @@ source_verification: user_supplied_private_translation_not_crosschecked
 source_refs: [DMR-061-SRC-001]
 source_locators: [PDF pp. 91–97]
 related_character_ids: [DM-CHAR-BELL, DM-CHAR-HESTIA]
-related_event_ids: [EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001]
+related_event_ids: [EVT-DM-BELL-AIS-MINOTAUR-001]
 spoiler_level: major
 ---
 
