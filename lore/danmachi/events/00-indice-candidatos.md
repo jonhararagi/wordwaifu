@@ -99,3 +99,8 @@ Antes de crear otro evento, compara ID, nombres alternativos, participantes, per
 
 **Procedencia:** DMR-061-SRC-001 y DMR-060-SRC-001; novela ligera original oficial, traducciones privadas no cotejadas. Las pasadas visuales/cotejo no están cerradas.
 - [Bell oye a la Familia Loki burlarse del rescate del Minotauro y se marcha de la taberna](timeline/EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001.md) — PDF pp. 57–72; incluye la llegada de la Familia Loki, los comentarios de Bate, la defensa de Riveria, la reacción de Ais y la decisión de Bell de volver al Dungeon.
+
+### Volumen 1 — eventos narrativos extraídos · continuación pp.91–100
+
+- [Segunda actualización del Estado de Bell y promesa con Hestia](timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001.md) — EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001 · CONT-MAIN-LN · PDF pp.91–97; snapshot, Habilidad oculta y promesa. Distinto de las actualizaciones de pp.30–36 y pp.193–196.
+- [Bell regresa a La Señora de la Abundancia y se disculpa con Seal](timeline/EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001.md) — EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001 · CONT-MAIN-LN · PDF pp.98–100; devolución del dinero y cesta de comida. La escena continúa al cierre de p.100.
