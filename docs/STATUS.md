@@ -1142,3 +1142,18 @@ Sobre SHA 4423efcfc55920b02fdf949927ae7a4033bf1033:
 - **Visual:** p.116 es la única ilustración del bloque; no hay tablas ni notas al pie.
 - **Checkpoint:** tercera pasada completada pp.9–118 (110 folios). Siguiente página PDF p.119; restan 38 folios. La pasada 2 pp.9–156 sigue completa; la reconciliación de la pasada 1 sigue pendiente. V1 permanece IN_PROGRESS; traducción privada no cotejada con japonés.
 
+
+## DMR-061 — tercera pasada V1 · PDF pp.119–128 · 2026-10-31
+
+- **Resultado:** tres controles completos por página; cuarta revisión correctiva puntual en p.119, pp.121–123, p.125, p.126 y p.128.
+- **p.119:** la mochila derriba al Goblin y Bell confirma el fin del combate. La rodilla derecha ya se mueve completamente y Bell la considera curada. Percibe un aumento de capacidad, sin nuevos valores de Estado. Recupera fragmentos de Piedra Mágica de ambos monstruos y piensa en una persona que no nombra.
+- **p.120:** regresa del cuarto al primer piso, vence encuentros menores con Goblins y Kobolds, y llega al vestíbulo subterráneo de Babel. Recuerda que Hestia está fuera desde hace dos días.
+- **pp.121–123:** observa cajas de transporte con ruedas; una se mueve y emite un rugido, por lo que Bell sospecha que contiene un monstruo, sin confirmarlo. Oye que Ganesha Familia prepara el Festival de Monstruos y ve a Eina trabajando en el Gremio; no la interrumpe. Completa su trámite y sale de noche.
+- **p.123–124:** se confirman las ocho avenidas radiales y el papel de la Calle Principal del Noreste. Los datos ya estaban incorporados a LOC-ORARIO; no se añaden coordenadas.
+- **pp.124–127:** Bell se encuentra con Miach. Este confirma que no asistió al Banquete pese a haber sido invitado y entrega a Bell dos pociones de recuperación recién preparadas como cortesía. Bell las guarda en la funda de la pierna izquierda.
+- **p.126:** ilustración monocroma de página completa, con una figura de cabello oscuro frente a Bell; no se le asigna identidad por apariencia.
+- **p.127:** reflexión sobre la variedad de actividades comerciales y productivas de las Familias; se conserva como exposición narrativa, no como definición jurídica.
+- **p.128:** Bell observa una daga blanca hecha con dientes de monstruo en el escaparate de Hephaistos Familia. Es demasiado cara para él; no la compra y no se identifica con la Daga de Hestia.
+- **Eventos y fichas:** se amplían los eventos existentes de combate, preparativos del Festival y entrega de pociones. Se reutilizan Bell, Miach, Eina, Hephaistos, Ganesha Familia, Orario y Babel. No se crean IDs nuevos.
+- **Visual:** p.126 es la única ilustración; no hay tablas ni notas al pie.
+- **Checkpoint:** tercera pasada completada pp.9–128 (120 folios). Siguiente página PDF p.129; restan 28 folios. La pasada 2 pp.9–156 sigue completa; la reconciliación integral de la pasada 1 sigue pendiente. V1 permanece IN_PROGRESS; traducción privada no cotejada con japonés.

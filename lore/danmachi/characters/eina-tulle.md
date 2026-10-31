@@ -91,3 +91,12 @@ La p.22 es una ilustración de página completa contextualizada con Eina y la co
 
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
 
+
+## Verificación de tercera pasada · CONT-MAIN-LN · PDF pp.122–123
+
+Bell distingue a Eina entre los empleados del Gremio que trabajan junto a las cajas de transporte del Festival. Observa su cabello castaño corto y sus orejas puntiagudas de semielfa; ella está ocupada en una conversación seria sobre limpieza de documentos con otro empleado. Bell decide no interrumpirla. Después, cuando vuelve del baño y hace su trámite en la sede del Gremio, sabe que Eina no está disponible y sale sin hablar con ella.
+
+- **Evento:** EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001.
+- **Límite:** no hay diálogo ni interacción directa Bell–Eina en estas páginas; no se crea un nuevo encuentro ni se atribuye a Eina conocimiento de las dudas de Bell.
+- **Visual:** pp.122–123 son texto; sin ilustraciones, tablas o notas al pie. Inspección a 130 dpi.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.

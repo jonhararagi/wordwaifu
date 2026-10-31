@@ -55,3 +55,28 @@ Después de salir del Dungeon, Bell encuentra el vestíbulo de Babel lleno de av
 - La responsabilidad anual de Ganesha Familia y las actuaciones se conservan como datos del diálogo escuchado, no como reglamento formal completo.
 - El trámite de Bell en el Gremio no aporta cantidades exactas de dinero ni precio unitario de los objetos entregados.
 - La traducción privada no se ha cotejado con japonés.
+
+
+## Auditoría de tercera pasada · CONT-MAIN-LN · PDF pp.121–123
+
+- **p.121 — transporte de carga:** Bell ve aventureros y Partidarios agrupados junto a grandes cajas de transporte con ruedas. Recuerda que se usan en expediciones para llevar comida, equipo de repuesto, botín y otros artículos. Una caja se sacude y emite un pequeño rugido; Bell deduce que podría haber un monstruo dentro, pero no abre la caja ni identifica la criatura.
+- **pp.121–122 — función de Babel:** Bell recuerda que Babel es la «Cubierta» del Dungeon, construida para evitar que los monstruos salgan a la superficie como ocurría en la Era Antigua. La gestión y vigilancia del Gremio se mantienen como exposición narrativa/conocimiento de Bell, sin inventar una normativa exhaustiva ni detalles arquitectónicos.
+- **p.122 — Festival de Monstruos:** Bell oye una conversación según la cual Ganesha Familia vuelve a ser anfitriona del Festival de Monstruos por encargo del Gremio y se quejan del trabajo y de las actuaciones. Los cargadores llevan un emblema con un rostro de elefante que Bell asocia con Ganesha Familia. La escena no confirma qué monstruos transportan ni cuántos.
+- **p.122 — Eina:** Bell distingue a Eina por su cabello castaño corto y sus orejas puntiagudas de semielfa. Ella habla seriamente con otro empleado del Gremio sobre la limpieza de documentos. Bell decide no interrumpirla; no hay diálogo ni interacción directa entre ambos.
+- **p.123 — trámite y salida:** después de ducharse, Bell entrega botín y Piedras Mágicas en la sede del Gremio y sale cuando ya es de noche. La secuencia no aporta cantidad exacta de dinero ni precio unitario de lo entregado.
+- **Continuidad:** se reutiliza EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001 y las fichas existentes de Ganesha Familia, Babel y Eina. No se crea evento Bell–Eina nuevo, ni fichas para el personal o los monstruos hipotéticos dentro de las cajas.
+- **Límites:** el contenido de la caja es una deducción de Bell; los comentarios sobre la asignación anual del Festival son diálogo oído, no un reglamento completo. Eina permanece ocupada y no conoce por esta escena las dudas de Bell.
+- **Visual:** pp.121–123 son texto continuo; no se observan ilustraciones, tablas ni notas al pie. Inspección individual a 130 dpi.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
+## Auditoría de tercera pasada · CONT-MAIN-LN · PDF pp.121–123
+
+- **p.121 — transporte de carga:** Bell ve aventureros y Partidarios agrupados junto a grandes cajas de transporte con ruedas. Recuerda que se usan en expediciones para llevar comida, equipo de repuesto, botín y otros artículos. Una caja se sacude y emite un pequeño rugido; Bell deduce que podría haber un monstruo dentro, pero no abre la caja ni identifica la criatura.
+- **pp.121–122 — función de Babel:** Bell recuerda que Babel es la «Cubierta» del Dungeon, construida para evitar que los monstruos salgan a la superficie como ocurría en la Era Antigua. La gestión y vigilancia del Gremio se mantienen como exposición narrativa/conocimiento de Bell, sin inventar una normativa exhaustiva ni detalles arquitectónicos.
+- **p.122 — Festival de Monstruos:** Bell oye una conversación según la cual Ganesha Familia vuelve a ser anfitriona del Festival de Monstruos ese año por encargo del Gremio y se quejan del trabajo y de las actuaciones. Los cargadores llevan un emblema con un rostro de elefante que Bell asocia con Ganesha Familia. La escena no confirma qué monstruos transportan ni cuántos.
+- **p.122 — Eina:** Bell distingue a Eina por su cabello castaño corto y sus orejas puntiagudas de semielfa. Ella habla seriamente con otro empleado del Gremio sobre limpieza de documentos. Bell decide no interrumpirla; no hay diálogo ni interacción directa entre ambos.
+- **p.123 — trámite y salida:** después de ducharse, Bell entrega botín y Piedras Mágicas en la sede del Gremio y sale cuando ya es de noche. La secuencia no aporta cantidad exacta de dinero ni precio unitario de lo entregado.
+- **Continuidad:** se reutiliza EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001 y las fichas existentes de Ganesha Familia, Babel y Eina. No se crea evento Bell–Eina nuevo, ni fichas para el personal o los monstruos hipotéticos dentro de las cajas.
+- **Límites:** el contenido de la caja es una deducción de Bell; los comentarios sobre la asignación anual del Festival son diálogo oído, no un reglamento completo. Eina permanece ocupada y no conoce por esta escena las dudas de Bell.
+- **Visual:** pp.121–123 son texto continuo; no se observan ilustraciones, tablas ni notas al pie. Inspección individual a 130 dpi.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.

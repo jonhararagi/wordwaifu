@@ -85,3 +85,11 @@ Hestia recuerda su propósito en el Banquete y decide formular la petición a He
 - **Evento:** EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001.
 - **Límite:** p.115 confirma la solicitud, no la aceptación, el diseño, el coste ni la entrega.
 - **Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés.
+
+## Verificación de tercera pasada · CONT-MAIN-LN · Volumen 1 · PDF p.128
+
+Bell vuelve a observar el escaparate de una tienda de armas de Hephaistos Familia. La daga blanca, cuya hoja se describe como hecha de dientes de monstruo, está expuesta junto a armas de alta calidad. Bell comprueba que el precio es muy elevado, la considera fuera de su alcance y desea usarla algún día, pero no la compra. El pasaje no le da un nombre al arma ni la identifica como la futura Daga de Hestia.
+
+- **Continuidad:** se conserva la descripción en la sección existente de la tienda de Hephaistos Familia (pp.128–130). No se crea ficha de arma, transacción, evento de compra ni relación con la Daga de Hestia.
+- **Visual:** p.128 es texto continuo; el escaparate se describe en la narración. No hay ilustración ni tabla.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.

@@ -1303,3 +1303,49 @@ La actualización de pp.91–96 es distinta de la actualización tras el Minotau
 - **Revisión correctiva:** pp.110–113 para distinguir afirmaciones, bromas y sospechas; p.115 para separar solicitud y aceptación; p.116 para evitar identificar la figura; p.118 para dejar abierto el desenlace del Goblin y el estado de la Piedra Mágica del Dungeon Lizard.
 
 **Checkpoint:** tercera pasada completada pp.9–118 (110 folios). Próxima página física PDF p.119. Restan pp.119–156 (38 folios) de la tercera pasada. La pasada 2 pp.9–156 permanece completada. La reconciliación integral de la pasada 1 sigue pendiente. V1 continúa IN_PROGRESS; DMR-061-SRC-001 sigue siendo una traducción privada no cotejada con japonés.
+
+## DMR-061 — tercera pasada V1 · PDF pp.119–128 · 2026-10-31
+
+**Estado del bloque:** tres controles completos por página (extracción, inspección visual física y auditoría de continuidad/duplicados). Cuarta revisión correctiva puntual en p.119, pp.121–123, p.125, p.126 y p.128. Fuente DMR-061-SRC-001, traducción privada española no cotejada con japonés.
+
+### Extracción por folio
+
+- **p.119 — desenlace del combate:** la mochila golpea al Goblin, que se aferra a ella, rueda y convulsiona antes de quedar inmóvil. Bell confirma que la batalla terminó. La pierna derecha ya puede moverse por completo y Bell considera curada la rodilla lesionada. Piensa que sus capacidades aumentaron y siente la mejora física, pero no aparece una tabla ni un nuevo snapshot numérico de Estado. Recupera fragmentos de Piedra Mágica del Dungeon Lizard y del Goblin, y da por terminada la exploración del día.
+- **p.119 — motivación:** Bell piensa en el día que se acerca y desea alcanzar a una persona que está lejos de él. El folio usa un pronombre femenino, pero no proporciona el nombre; no asignar identidad por inferencia.
+- **p.120 — ascenso:** Bell vuelve desde el cuarto hasta el primer piso mediante tres tramos de escaleras. Derrota a los Kobolds y Goblins que encuentra en el recorrido sin individualizarlos ni contar cada combate. Observa aventureros de regreso, incluidos enanos y elfos con equipos que considera de gran calidad; su reacción es de intimidación ante la diferencia con su propia armadura.
+- **p.120 — Babel:** cruza el amplio túnel llamado «Inicio del Camino» y asciende por un hueco cilíndrico con escaleras en espiral, de unos diez metros de altura y diámetro aproximado. Entra en un inmenso vestíbulo subterráneo de Babel, con espacio central, decoración azul y blanca, pilares gruesos, muebles, placas de roca negra grabadas con nombres de aventureros y una representación del cielo en el techo. La capacidad para miles se formula como impresión narrativa, no medición.
+- **p.120 — Hestia:** Bell recuerda que Hestia está fuera desde hace dos días y que había dicho que tardaría varios días en regresar. La extraña, sin conocer su ubicación ni recibir noticias nuevas.
+- **p.121 — cajas de expedición:** en el vestíbulo, Bell observa aventureros y Partidarios agrupados junto a grandes cajas de almacenamiento con ruedas. Recuerda que se usan en expediciones para llevar comida, equipo de repuesto, botín y otros artículos. Una caja se mueve y emite un pequeño rugido; Bell deduce que puede contener un monstruo, pero no la abre.
+- **pp.121–122 — Babel y el control del Dungeon:** Bell recuerda que Babel funciona como la «Cubierta» del Dungeon y que fue construida para impedir que los monstruos de la Era Antigua escaparan a la superficie y causaran destrucción. El Gremio mantiene vigilancia y usa la torre como base para la gestión del Dungeon.
+- **p.122 — Festival de Monstruos:** Bell oye a varias personas comentar que Ganesha Familia será anfitriona del Festival de Monstruos ese año por encargo del Gremio y que hay actuaciones para el público. Observa que los cargadores llevan un emblema con un rostro de elefante, que asocia con Ganesha Familia. No identifica las especies dentro de las cajas ni el número total de monstruos.
+- **p.122 — Eina:** Bell ve a Eina, con cabello castaño corto y orejas puntiagudas de semielfa, conversando seriamente con otro empleado sobre limpieza de documentos. No la saluda para no interrumpir su trabajo.
+- **p.123 — ducha, trámite y salida:** Bell se ducha en un piso de Babel, entrega botín y Piedras Mágicas en la sede del Gremio y sale cuando ya es de noche. No se indican cantidades de dinero.
+- **p.123–124 — avenidas de Orario:** Bell describe ocho avenidas principales que parten del centro hacia las murallas. Sitúa la iglesia donde vive con Hestia entre las avenidas Noreste y Oeste y el establecimiento donde trabaja Seal en la avenida Oeste. La avenida Noreste concentra aventureros y negocios vinculados al Gremio. Estos datos ya constaban en LOC-ORARIO y solo se confirman, sin crear relaciones cartográficas adicionales.
+- **p.124 — encuentro con Miach:** Bell camina por la Calle Principal del Noreste, observa tiendas de armas, bares, comercios de especialidad y posadas, y se encuentra con Miach mientras compra ingredientes para la cena. Bell lo describe como un dios alto, de cabello azul y manto gris.
+- **p.125 — conversación y ancla temporal:** Bell pregunta por Hestia; dice que lleva fuera dos días desde que asistió a una fiesta. Miach identifica la fiesta como el Banquete de Ganesha. Aunque fue invitado, Miach explica que no asistió porque debía ayudar a producir los artículos de su Familia, cuyos recursos son limitados.
+- **pp.125–127 — entrega de pociones:** Miach saca dos tubos altos y delgados de una bolsa de papel y se los entrega a Bell. El líquido se describe como azul oscuro. Bell entiende que son pociones de recuperación recién preparadas, y las guarda en la funda de su pierna izquierda. Miach lo presenta como un gesto amable hacia un vecino y pide que siga apoyando a su Familia. No hay pago ni especificación de dosis, efectos o ingredientes.
+- **p.126 — ilustración:** imagen monocroma de página completa. Se observa a una figura de cabello y ropa oscuros frente a Bell, que aparece de espaldas y con cabello claro. La ilustración coincide con el contexto de la escena de entrega, pero la figura no recibe identidad por apariencia.
+- **p.127 — actividades de las Familias:** Bell reflexiona sobre las distintas actividades económicas de las Familias: comercios de objetos y pociones, herrería, pesca y restaurantes, entre otras. La descripción se conserva como exposición narrativa, no como definición institucional o censo exhaustivo.
+- **p.128 — tienda de armas:** Bell observa una tienda de Hephaistos Familia con fachada roja y símbolo escrito en caracteres griegos. El escaparate contiene varias espadas de calidad y una daga blanca hecha con dientes de monstruo. El precio es muy elevado; Bell no la compra y solo desea usarla algún día.
+
+### Auditoría de continuidad, relaciones y no duplicación
+
+- **Dungeon, pp.119–120:** se amplía EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001. El impacto de la mochila iniciado en p.118 queda resuelto en p.119. Se reutilizan Goblin, Kobold y Dungeon Lizard; no se crean monstruos individuales ni eventos para encuentros menores del ascenso.
+- **Rodilla y Estado:** se conserva la recuperación completa percibida por Bell y la sensación de crecimiento. No se crea un snapshot ni se añaden estadísticas numéricas no presentes en el folio.
+- **Perspectiva de Bell:** la persona a quien desea alcanzar no se identifica. Su reacción a los aventureros y su impresión de mejora siguen siendo subjetivas.
+- **Babel y Orario:** se reutilizan LOC-BABEL y LOC-ORARIO. Los detalles de p.120 amplían la descripción del vestíbulo ya existente; pp.123–124 confirman avenidas y relaciones generales, sin dibujar coordenadas ni distancias.
+- **Preparativos del Festival:** se amplía EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001. Las cajas, el ruido y la conversación no confirman el contenido de la carga; el evento no se convierte en el Festival completo.
+- **Eina:** se reutiliza DM-CHAR-EINA. Bell la observa, pero no habla con ella; no se crea una escena de asesoramiento nueva.
+- **Miach y pociones:** se amplía EVT-DM-V01-BELL-RECEIVES-RECOVERY-POTIONS-FROM-MIACH-001 y se reutilizan CHAR-MIACH y FAM-MIACH. El Banquete fue dos días antes; Miach no asistió. Las pociones son una cortesía, no una compra. No se confunden con la poción de Poder Mental del Volumen 2.
+- **Ilustración, p.126:** la figura se conserva sin identificar, aunque la imagen aparezca junto a la entrega de Miach. No crear personaje, objeto o relación por apariencia.
+- **Escaparate, p.128:** se reutiliza la sección de Hephaistos Familia y el objeto permanece sin nombre. No se identifica con la Daga de Hestia, no se compra y no se crea un objeto independiente.
+- **IDs:** no se crean IDs de personaje, evento, lugar u objeto; no se modifican catalog.json ni eras-and-events.json.
+
+### Inspección visual
+
+- Las diez páginas físicas PDF pp.119–128 se renderizaron e inspeccionaron individualmente a 130 dpi.
+- pp.119–125 y pp.127–128 son páginas de texto; p.126 es una ilustración monocroma de página completa.
+- No se observan tablas, diagramas ni notas al pie en el bloque.
+- **Revisión correctiva:** p.119 para separar curación percibida y estadísticas; pp.121–123 para distinguir deducción de Bell, conversación oída y acción de Eina; p.125 para fijar el intervalo de dos días; p.126 para evitar identificar por apariencia; p.128 para no confundir la daga de escaparate con la Daga de Hestia.
+
+**Checkpoint:** tercera pasada completada pp.9–128 (120 folios). Próxima página física PDF p.129. Restan pp.129–156 (28 folios) de la tercera pasada. La pasada 2 pp.9–156 permanece completada. La reconciliación integral de la pasada 1 sigue pendiente. V1 continúa IN_PROGRESS; DMR-061-SRC-001 sigue siendo una traducción privada no cotejada con japonés.
