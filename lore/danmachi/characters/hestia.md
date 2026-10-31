@@ -158,3 +158,14 @@ Freya se retira después de afirmar que ya confirmó lo que quería escuchar. He
 - **Evento relacionado:** EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001.
 - **Límites:** mantener las afirmaciones sobre Ais atribuidas a Loki; no crear una relación romántica, no convertir el forcejeo en enemistad real y no suponer que Freya espió.
 - **Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés.
+
+
+## Tercera pasada · Hestia pide el arma para Bell · CONT-MAIN-LN · Volumen 1 · PDF pp.129–134
+
+Hestia mantiene la dogeza en la sucursal de Hephaistos Familia durante dos días después del Banquete. Hephaistos explica que se negó a regalar el arma o a reducir su precio porque considera que hacerlo devaluaría el trabajo de los herreros de su Familia. Cuando Hestia explica que quiere ser una ayuda para Bell en el camino peligroso que él ha elegido, Hephaistos acepta la petición, pero insiste en que la deuda se pagará íntegramente, incluso si tarda décadas o siglos.
+
+Hestia no obtiene una condonación: deberá ayudar a Hephaistos en el taller. La elección de mithril y del martillo carmesí corresponde a Hephaistos. Su decisión de asumir personalmente la forja es una ayuda concreta, no una renuncia al pago. La preocupación por no impedir el crecimiento de Bell y por no deshonrar el oficio permanece en la perspectiva de Hephaistos en p.134.
+
+- **Evento:** EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001.
+- **Límite:** el pasaje muestra la motivación expresada por Hestia y la reacción de Hephaistos; no establece aquí el precio final, el diseño definitivo, el pago ni la entrega.
+- **Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés.
