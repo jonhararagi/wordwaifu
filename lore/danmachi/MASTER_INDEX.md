@@ -8,13 +8,14 @@
 - [DANMACHI-RESEARCH-057](research/inbox/DANMACHI-RESEARCH-057-aisha-anya-chloe-capabilities.md) — capacidades secundarias de Aisha Belka, Anya Fromel y Chloe Rollo; cinco páginas comunitarias registradas, diferencia EN/ES conservada y campos no informados cerrados contra repetición.
 
 ## Extracción de acontecimientos por volumen
-- [Volumen 1 — dossier de canon primario](volumes/main/volume-01.md) — extracción secuencial actualizada hasta PDF p. 214; incluye el Festival de Monstruos, derrota del Silverback, recuperación posterior y retrospectiva de la concesión inicial de Falna.
+- [Volumen 1 — dossier de canon primario](volumes/main/Volumen%20%5B01%5D%20%E2%80%A2%20DanMachi.md) — extracción secuencial actualizada hasta PDF p. 214; incluye el Festival de Monstruos, derrota del Silverback, recuperación posterior y retrospectiva de la concesión inicial de Falna.
 - [DANMACHI-RESEARCH-061](research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md) — eventos y pasajes del Volumen 1; traducción privada no cotejada y límites de procedencia registrados.
 
 - [DMR-062 — auditoría cruzada del MD de Volumen 1](research/inbox/DANMACHI-RESEARCH-062-volume-01-markdown-cross-audit.md) — transcripción derivada del PDF, sin paginación física propia; registra diez fichas de monstruos con localizadores del PDF y deja abiertas las diferencias de traducción.
 - [Índice de monstruos y amenazas](canon/09-indice-monstruos-y-amenazas.md) — incluye ahora las especies documentadas en V1; verificación limitada a DMR-061-SRC-001.
 
-- [Volumen 2 — eventos temporales y localizadores](volumes/main/volume-02.md) — acontecimientos individuales de `CONT-MAIN-LN`, con páginas físicas del PDF y segmentación de combate, adquisición/prueba de magia, pasado de Lili, captura, traición, rescate y reencuentro. La traducción española aportada es privada y no está cotejada.\n- [DANMACHI-RESEARCH-060](research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md) — registro de procedencia, localizadores y límites de los acontecimientos de V2, incluida la secuencia de Lili segmentada; no fija fechas absolutas ni convierte rumores en hechos confirmados.
+- [Volumen 2 — eventos temporales y localizadores](volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md) — acontecimientos individuales de `CONT-MAIN-LN`, con páginas físicas del PDF y segmentación de combate, adquisición/prueba de magia, pasado de Lili, captura, traición, rescate y reencuentro. La traducción española aportada es privada y no está cotejada.
+- [DANMACHI-RESEARCH-060](research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md) — registro de procedencia, localizadores y límites de los acontecimientos de V2, incluida la secuencia de Lili segmentada; no fija fechas absolutas ni convierte rumores en hechos confirmados.
 
 ## Índices de personajes e historias por continuidad
 
@@ -67,7 +68,7 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [Registro maestro de fuentes](sources/00-registro-fuentes.md)
 - [Matriz de continuidad entre novela, spin-offs y adaptaciones](continuity/00-matriz-de-continuidad.md)
 - [Índice de arcos narrativos](arcs/00-indice-arcos.md)
-- [Índice de plantillas individuales de los volúmenes](volumes/main/README.md)
+- [Índice de plantillas individuales de los volúmenes](volumes/00-indice-volumenes-y-arcos.md)
 - [Validador automático de catálogo](tools/check-catalog.mjs)
 
 ## Etapa posterior — Orario como escenario (pendiente tras DMR-045)
@@ -158,7 +159,7 @@ Este es el punto de entrada para continuar el trabajo sin repetir registros. El 
 - [Índice de arcos narrativos](arcs/00-indice-arcos.md)
 - [Matriz de continuidad](continuity/00-matriz-de-continuidad.md)
 - [Volúmenes principales 01–20: plantillas](volumes/00-indice-volumenes-y-arcos.md)
-- [Instrucciones para ampliar volúmenes](volumes/main/README.md)
+- [Instrucciones para ampliar volúmenes](volumes/00-indice-volumenes-y-arcos.md)
 
 ## 4. Fichas iniciales disponibles
 
@@ -424,7 +425,7 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 
 ## DANMACHI-RESEARCH-061 — extracción del volumen 1 (CONT-MAIN-LN)
 - [Expediente DMR-061](research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md) — eventos iniciales Bell–Hestia, Eina, Ais y Seal Flover; escenas de Estado, Festival, Freya/Silverback y Dungeon. Traducción privada sin cotejo; el combate de Kobolds de pp. 46–48 sigue abierto.
-- [Dossier volumen 1](volumes/main/volume-01.md) y [índice de eventos](events/00-indice-candidatos.md).
+- [Dossier volumen 1](volumes/main/Volumen%20%5B01%5D%20%E2%80%A2%20DanMachi.md) y [índice de eventos](events/00-indice-candidatos.md).
 - **Lectura primaria más reciente:** Volumen 1, PDF pp. 11–214 documentadas secuencialmente; el archivo termina en p. 214. Los bloques pp.178–214 se completaron con tres pasadas; pp.208–210 contienen fichas/ilustraciones visuales inspeccionadas ampliadas. No se declara revisión de pp.1–10 ni de las inspecciones visuales antiguas pendientes.
 - **Eventos V1 añadidos en la rama de investigación:** petición/forja de la daga (`EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001`), entrega física a Hestia (`EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001`) y reunión de Freya/Loki/Ais (`EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001`); no fusionar petición con entrega ni extrapolar el gesto de Ais.
 - **Estado:** traducción privada no cotejada con japonés; tres pasadas obligatorias completadas por página en pp. 157–177 y cuarta correctiva en pp. 165–167. El cotejo japonés y las auditorías individuales de personajes siguen pendientes; no se añaden marcas `+` por esta extracción grupal.
