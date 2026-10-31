@@ -1129,3 +1129,16 @@ Sobre SHA 4423efcfc55920b02fdf949927ae7a4033bf1033:
 - **Visual:** diez páginas de texto; no hay ilustraciones, tablas ni diagramas. Dos notas al pie en p.107.
 - **Checkpoint:** tercera pasada completada pp.9–108 (100 folios). Siguiente página PDF p.109; restan 48 folios. La pasada 2 pp.9–156 sigue completa; la reconciliación de la pasada 1 sigue pendiente. V1 permanece IN_PROGRESS; traducción privada no cotejada con japonés.
 
+
+
+## DMR-061 — tercera pasada V1 · PDF pp.109–118 · 2026-10-31
+
+- **Resultado:** tres controles completos por página; cuarta revisión correctiva puntual en pp.110–113, p.115, p.116 y p.118.
+- **pp.109–113:** Loki se reúne con Hestia, Hephaistos y Freya; Hestia pregunta por Ais y Loki hace afirmaciones enfáticas sobre ella. El intercambio de burlas termina en un forcejeo cómico. Freya comenta que Loki parece más dulce que antes; después dice que ya confirmó lo que quería escuchar y se marcha. No se infiere reciprocidad de Ais ni espionaje de Freya.
+- **pp.114–115:** Hestia recuerda su objetivo y pide a Hephaistos un arma para Bell. Se registra por separado de la aceptación/forja posterior y de la entrega física.
+- **p.116:** ilustración monocroma a página completa, con figura no identificada; no se atribuye a ningún personaje por apariencia.
+- **pp.117–118:** inicia el capítulo 5 y la secuencia de combate de Bell contra Goblin y Dungeon Lizard. La criatura cae tras recibir una puñalada, pero Bell no sabe si dañó la Piedra Mágica. La mochila golpea al Goblin al final de p.118; el desenlace queda para p.119.
+- **Eventos y fichas:** ampliados los eventos existentes del Banquete, la petición de arma y el combate en Dungeon; se reutilizan Loki, Freya, Hephaistos, Hestia, Dungeon Lizard y Goblin. No se crean IDs nuevos.
+- **Visual:** p.116 es la única ilustración del bloque; no hay tablas ni notas al pie.
+- **Checkpoint:** tercera pasada completada pp.9–118 (110 folios). Siguiente página PDF p.119; restan 38 folios. La pasada 2 pp.9–156 sigue completa; la reconciliación de la pasada 1 sigue pendiente. V1 permanece IN_PROGRESS; traducción privada no cotejada con japonés.
+
