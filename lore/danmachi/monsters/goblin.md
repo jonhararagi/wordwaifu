@@ -36,3 +36,12 @@ Especie de monstruo presente fuera y dentro del Dungeon en los recuerdos y encue
 
 ## Fuente
 DMR-061-SRC-001, traducción privada española no cotejada con japonés. Localizadores físicos indicados arriba.
+
+
+## Tercera pasada · CONT-MAIN-LN · Volumen 1 · PDF pp.117–118
+
+En p.117 Bell esquiva repetidamente los ataques del Goblin y elude una emboscada de un Dungeon Lizard que salta desde una pared. En p.118, mientras el Dungeon Lizard cae sin fuerza después del golpe de Bell, el Goblin continúa atacando. Bell le lanza la mochila y la página termina cuando impacta contra él. El desenlace del Goblin no se adelanta desde p.118; se confirma en la continuación de p.119.
+
+- **Evento:** EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001.
+- **Límite:** no fusionar este Goblin con el ejemplar del recuerdo de Bell ni con el que aparece en p.53.
+- **Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés.
