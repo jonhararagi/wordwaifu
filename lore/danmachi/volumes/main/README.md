@@ -1,26 +1,27 @@
-# Índice de plantillas individuales de la novela principal
+# DanMachi — novela ligera principal
 
-Los archivos \`volume-01.md\` a \`volume-20.md\` son espacios iniciales de captura, no una afirmación de que la serie tenga veinte volúmenes ni de que el volumen 20 sea el último publicado.
+**Continuidad:** `CONT-MAIN-LN`
 
-## Regla de expansión
+Esta carpeta contiene únicamente los dossiers de la novela ligera principal. Los archivos incompletos se conservan como puntos de reanudación hasta que se reemplacen o completen con el material fuente correcto.
 
-Cuando el inventario bibliográfico verifique un volumen principal adicional, crear su ficha con la misma plantilla y añadirla al índice maestro y al catálogo. No cerrar ERA-10 hasta verificar la publicación y si existe o no un final canónico publicado.
+## Estado real del contenido
 
-## Estado de los dossiers
+- **Volumen 1:** dossier extenso con extracción narrativa hasta PDF p. 214 (última página del PDF). La auditoría DMR-062 sigue parcial: pendientes PDF pp. 1–10, inspecciones visuales pp. 19–21, 23–24 y 49–54, y verificaciones atómicas de reglas/objetos y candidatos. No reiniciar las páginas ya integradas.
+- **Volumen 2:** dossier con extracción sustancial y acontecimientos DMR-060, pero el cotejo visual y las pasadas adicionales siguen pendientes; traducción privada no cotejada con japonés.
+- **Volúmenes 3–21:** archivos de orientación/resumen provisional, no extracciones completas de las novelas. Deben tratarse como **plantillas/resúmenes incompletos**, no como contenido fuente validado.
+- La existencia de un archivo numerado no demuestra que el volumen esté completo, que la edición esté verificada ni que sus datos estén cotejados con japonés.
 
-- Volúmenes 1–21: primera sinopsis original, hitos narrativos y cambios de estado para orientar la navegación.
-- Títulos y localizadores de capítulo/página: pendientes de cotejo en la edición primaria elegida.
-- Todos los resúmenes llevan estado `provisional_summary`; no sirven como prueba final de detalles minuciosos.
-- El lote de afirmaciones cargado en el buscador es `research/inbox/BATCH-DM-008-main-story-volume-map.md`.
+## Cómo cargar los volúmenes correctamente
 
-## Orden de trabajo
+1. Subir o proporcionar el archivo fuente del volumen correspondiente.
+2. Confirmar número, título, idioma, edición y continuidad.
+3. Mantener el archivo fuente y el dossier derivados claramente diferenciados.
+4. Completar el dossier por páginas/capítulos, incluyendo imágenes y páginas sin texto extraíble.
+5. Guardar checkpoints y marcar con claridad lo terminado y lo pendiente.
+6. Reutilizar los IDs existentes y promover al canon solo hallazgos verificados.
 
-1. Confirmar fuente bibliográfica y edición.
-2. Registrar capítulos/partes de la edición.
-3. Extraer eventos con IDs estables.
-4. Actualizar personajes, Familias, lugares, reglas y misterios.
-5. Comparar posibles duplicados con volúmenes anteriores.
-6. Ejecutar validador y guardar evidencia.
+## Convención de nombres
 
+- `volume-01.md`, `volume-02.md`, etc.: dossier de extracción y análisis del volumen.
+- Los originales aportados no deben sobrescribirse con resúmenes ni reemplazarse sin conservar la procedencia y el estado previo.
 
-Las historias paralelas tienen dossiers bajo `lore/danmachi/volumes/side/`; su paquete de búsqueda es `lore/danmachi/research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md`.
