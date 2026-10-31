@@ -1,3 +1,13 @@
+## Espacio de extracción estructurada — creado 2026-10-30
+
+- [x] Crear `lore/danmachi/extraction/` como zona de trabajo previa a la incorporación de datos al canon.
+- [x] Añadir manifiestos de entrada, área de trabajo, checkpoints y plantilla de extracción por volumen/bloque.
+- [x] Documentar continuidad obligatoria, procedencia, localizadores, estados de evidencia y prevención de IDs duplicados.
+- [ ] Aplicar la plantilla a la siguiente sesión de DMR-062 Volumen 1; continuar desde los pendientes existentes, sin reprocesar pp. 11–214 ya integradas.
+- [ ] Verificar validadores/CI y registrar integración después de revisar el PR.
+
+La carpeta es un espacio de extracción y preparación, no un segundo canon. Los hechos confirmados deben promoverse a las fichas, fuentes, eventos y registros existentes.
+
 # Cola de trabajo para futuras tandas de lore
 
 Esta cola sigue la cobertura cronológica, desde las eras antiguas hasta el último volumen principal publicado que se pueda verificar. Las tareas se dividen para no mezclar épocas, fuentes o continuidades. Ningún número de volumen ni final se inventará para llenar huecos.
