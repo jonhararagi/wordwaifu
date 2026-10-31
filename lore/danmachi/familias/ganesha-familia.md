@@ -44,4 +44,12 @@ El Volumen 1 muestra el recinto de Ganesha Familia como sede del Banquete de Dio
 
 - **Evento:** EVT-DM-V01-GANESHA-GOD-BANQUET-001.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+ 
+## CONT-MAIN-LN · preparativos del Festival de Monstruos · Volumen 1 · PDF pp.121–122
+
+Bell observa a varios trabajadores con un emblema de rostro de elefante, que asocia con Ganesha Familia, trasladando cajas de transporte con ruedas en Babel. Una caja se sacude y se oye un rugido; Bell sospecha que contiene un monstruo. En una conversación cercana se dice que la Familia vuelve a ser anfitriona del Festival de Monstruos por encargo del Gremio y que hay actuaciones para el público.
+
+- **Evento:** EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+- **Límite:** no se identifican las criaturas, el número de cajas, los responsables individuales ni las reglas completas de transporte; el roster de Familia sigue incompleto.
 
