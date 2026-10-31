@@ -12,6 +12,7 @@ source_locators:
   - PDF p. 115
   - PDF pp. 129–133
 related_event_ids:
+  - EVT-DM-V01-GANESHA-GOD-BANQUET-001
   - EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001
 spoiler_level: mild
 ---
