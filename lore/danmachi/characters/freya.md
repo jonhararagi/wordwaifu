@@ -3,8 +3,8 @@ id: CHAR-FREYA
 universe: danmachi
 type: deity_character
 status: provisional
-continuity_scope: CONT-ANIME
-source_refs: [DMR-002-SRC-001]
+continuity_scope: CROSS-CONTINUITY
+source_refs: [DMR-002-SRC-001, DMR-061-SRC-001]
 claim_refs: [DMR-002-CLM-011, DMR-002-CLM-012]
 verification_status: source_checked
 tags: [Freya, Freya Familia, Bell, motivación, spoiler-major]
