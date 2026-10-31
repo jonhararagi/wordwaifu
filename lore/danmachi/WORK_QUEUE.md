@@ -1636,3 +1636,20 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - **Controles:** tres controles completos por cada folio pp.59–68 (extracción, visual y continuidad); revisión correctiva puntual en p.62 y pp.67–68. No se cuenta una inspección parcial como página completa.
 - **Siguiente folio:** PDF p.69.
 - **Estado:** tercera pasada completada pp.9–68; pasada 2 pp.9–156 completada; reconciliación de pasada 1 pendiente; V1 IN_PROGRESS. Traducción privada no cotejada con japonés.
+
+
+### DMR-061 — tercera pasada V1 · PDF pp.69–78 · 2026-10-31
+
+- [x] Completar extracción folio por folio de pp.69–78: salida de Bell de la taberna, reacción de Ais/Loki, inicio del capítulo 3, conversación de Eina/Misha y nueva incursión de Bell.
+- [x] Renderizar e inspeccionar las diez páginas físicas a 130 dpi; p.70 y p.73 son ilustraciones de página completa; p.76 contiene nota al pie del traductor.
+- [x] Reutilizar EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001 para pp.69–72; no crear eventos paralelos de búsqueda o huida.
+- [x] Reutilizar EVT-DM-EINA-ADVISOR-001 para pp.74–76; no crear una segunda interacción de asesoramiento ni ficha individual de Misha.
+- [x] Completar la descripción de MON-DM-FROG-SHOOTER-001 con rasgos descritos en p.76: apariencia de rana, un ojo grande y lengua larga; preservar la nota de traducción.
+- [x] Mantener sin identificar la silueta de p.73 y la persona a la que Bell piensa alcanzar en pp.72 y 77.
+- [x] Mantener abierto el sonido final de p.78; no crear todavía un evento cerrado para el combate cuya secuencia continúa en pp.79–85.
+- [x] Aplicar revisión correctiva puntual a p.72 y p.78 para evitar atribuciones e inferencias no sustentadas.
+- [ ] Continuar tercera pasada desde PDF p.79 hasta p.156 (78 folios).
+- [ ] Reconciliar la pasada 1 mediante matriz de cobertura por página/localizador.
+- **Controles:** tres controles completos por cada folio pp.69–78 (extracción, visual y continuidad); cuarta revisión correctiva puntual en pp.72 y 78.
+- **Siguiente folio:** PDF p.79.
+- **Estado:** tercera pasada completada pp.9–78; pasada 2 pp.9–156 completada; reconciliación de pasada 1 pendiente; V1 IN_PROGRESS. Traducción privada no cotejada con japonés.
