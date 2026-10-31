@@ -21,32 +21,19 @@ Crear una entrada por volumen publicado y registrar:
 
 No se fija aquí un número final de volúmenes: primero hay que comprobar la bibliografía vigente. No inventar un final para una obra que pudiera seguir publicándose.
 
-## Espacios preparados para la serie principal
+## Fuentes originales cargadas en `main/`
 
-Los siguientes 20 archivos son **plantillas numeradas**, no una afirmación de que la serie termine en el volumen 20 ni de que todos esos volúmenes estén ya publicados en cualquier edición. Primero se usa esta tanda de espacios y se amplía el índice si la bibliografía verificada contiene más volúmenes.
+Los archivos de esta carpeta son las fuentes de trabajo de la novela ligera principal (`CONT-MAIN-LN`). Los nombres se conservan tal como fueron cargados; no son dossiers ni resúmenes. La traducción española aportada es privada y todavía no está cotejada con el japonés.
 
-- [Volumen principal 1 · plantilla pendiente de verificar](main/volume-01.md)
-- [Volumen principal 2 · plantilla pendiente de verificar](main/volume-02.md)
-- [Volumen principal 3 · plantilla pendiente de verificar](main/volume-03.md)
-- [Volumen principal 4 · plantilla pendiente de verificar](main/volume-04.md)
-- [Volumen principal 5 · plantilla pendiente de verificar](main/volume-05.md)
-- [Volumen principal 6 · plantilla pendiente de verificar](main/volume-06.md)
-- [Volumen principal 7 · plantilla pendiente de verificar](main/volume-07.md)
-- [Volumen principal 8 · plantilla pendiente de verificar](main/volume-08.md)
-- [Volumen principal 9 · plantilla pendiente de verificar](main/volume-09.md)
-- [Volumen principal 10 · plantilla pendiente de verificar](main/volume-10.md)
-- [Volumen principal 11 · plantilla pendiente de verificar](main/volume-11.md)
-- [Volumen principal 12 · plantilla pendiente de verificar](main/volume-12.md)
-- [Volumen principal 13 · plantilla pendiente de verificar](main/volume-13.md)
-- [Volumen principal 14 · plantilla pendiente de verificar](main/volume-14.md)
-- [Volumen principal 15 · plantilla pendiente de verificar](main/volume-15.md)
-- [Volumen principal 16 · plantilla pendiente de verificar](main/volume-16.md)
-- [Volumen principal 17 · plantilla pendiente de verificar](main/volume-17.md)
-- [Volumen principal 18 · plantilla pendiente de verificar](main/volume-18.md)
-- [Volumen principal 19 · plantilla pendiente de verificar](main/volume-19.md)
-- [Volumen principal 20 · plantilla pendiente de verificar](main/volume-20.md)
+| Volumen | Archivo fuente | Estado de análisis |
+|---|---|---|
+| 1 | [Volumen [01] • DanMachi](main/Volumen%20%5B01%5D%20%E2%80%A2%20DanMachi.md) | DMR-061: extracción narrativa hasta PDF p. 214; tres pasadas documentadas solo para pp. 157–214. Revisión completa pendiente. |
+| 2 | [Volumen [02] • DanMachi](main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md) | DMR-060: extracción parcial y segmentación de eventos; tres pasadas completas pendientes. |
+| 3 | [Volumen [03] • DanMachi](main/Volumen%20%5B03%5D%20%E2%80%A2%20DanMachi.md) | Fuente cargada; análisis pendiente. |
+| 4 | [Volumen [04] • DanMachi](main/Volumen%20%5B04%5D%20%E2%80%A2%20DanMachi.md) | Fuente cargada; análisis pendiente. |
+| 5 | [Volumen [05] • DanMachi](main/Volumen%20%5B05%5D%20%E2%80%A2%20DanMachi.md) | Fuente cargada; análisis pendiente. |
 
-Para cada volumen, registrar título, publicación, edición, eventos, estados de personaje, reglas, misterios, spoilers y localizadores. No cambiar `summary_status: stub` hasta haber cotejado la fuente.
+Los volúmenes 6–21 no tienen todavía un archivo fuente cargado en esta carpeta. Esto describe el contenido actual del repositorio, no el estado bibliográfico de publicación de la serie. No se crearán archivos vacíos ni resúmenes provisionales para simular fuentes disponibles.
 
 ## Spin-offs y continuidad relacionada
 
@@ -94,45 +81,22 @@ Antes de marcar un volumen como cross_checked:
 7. Verificar que no se haya copiado texto extenso protegido.
 8. Dejar una lista de preguntas pendientes y casos que deben probarse.
 
-## Dossiers narrativos provisionales por volumen
+## Dossiers de análisis y extracción
 
-- [Volumen 1](main/volume-01.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
-- [Volumen 2](main/volume-02.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
-- [Volumen 3](main/volume-03.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
-- [Volumen 4](main/volume-04.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
-- [Volumen 5](main/volume-05.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
-- [Volumen 6](main/volume-06.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
-- [Volumen 7](main/volume-07.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
-- [Volumen 8](main/volume-08.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
-- [Volumen 9](main/volume-09.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
-- [Volumen 10](main/volume-10.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
-- [Volumen 11](main/volume-11.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
-- [Volumen 12](main/volume-12.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
-- [Volumen 13](main/volume-13.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
-- [Volumen 14](main/volume-14.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
-- [Volumen 15](main/volume-15.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
-- [Volumen 16](main/volume-16.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
-- [Volumen 17](main/volume-17.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
-- [Volumen 18](main/volume-18.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
-- [Volumen 19](main/volume-19.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
-- [Volumen 20](main/volume-20.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
-- [Volumen 21](main/volume-21.md) — resumen de orientación; el cotejo por capítulo sigue pendiente.
-
-- [DANMACHI-RESEARCH-008 · afirmaciones de volúmenes 1–21](../research/inbox/BATCH-DM-008-main-story-volume-map.md)
-
+- [DMR-061 — extracción del volumen 1](../research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md) — lectura secuencial y eventos localizados; no equivale a tres pasadas completas del volumen.
+- [DMR-060 — extracción del volumen 2](../research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md) — eventos parciales y checkpoints existentes; no equivale a tres pasadas completas del volumen.
+- Los volúmenes 3, 4 y 5 aún no tienen dossier de análisis; su fuente original ya está cargada y debe analizarse desde el texto.
+- No hay dossiers completos para los volúmenes 6–21 en esta carpeta. Mantenerlos fuera del catálogo de documentos hasta que exista material real que registrar.
 
 ## Historias paralelas y crónicas
 
-- [Astrea Record I](side/astrea-record-01.md) — resumen provisional, pendiente de cotejo capítulo a capítulo.
-- [Astrea Record II](side/astrea-record-02.md) — resumen provisional, pendiente de cotejo capítulo a capítulo.
-- [Astrea Record III](side/astrea-record-03.md) — resumen provisional, pendiente de cotejo capítulo a capítulo.
-- [Sword Oratoria 1](side/sword-oratoria-01.md) — resumen provisional, pendiente de cotejo capítulo a capítulo.
-- [Sword Oratoria 12](side/sword-oratoria-12.md) — resumen provisional, pendiente de cotejo capítulo a capítulo.
-- [Sword Oratoria 13](side/sword-oratoria-13.md) — resumen provisional, pendiente de cotejo capítulo a capítulo.
-- [Familia Chronicle: Ryu](side/familia-chronicle-ryu-01.md) — resumen provisional, pendiente de cotejo capítulo a capítulo.
-- [Familia Chronicle: Ryu II](side/familia-chronicle-ryu-02.md) — resumen provisional, pendiente de cotejo capítulo a capítulo.
-- [Familia Chronicle: Freya](side/familia-chronicle-freya.md) — resumen provisional, pendiente de cotejo capítulo a capítulo.
-- [Familia Chronicle: Asfi](side/familia-chronicle-asfi.md) — resumen provisional, pendiente de cotejo capítulo a capítulo.
-- [Familia Chronicle: Haze](side/familia-chronicle-haze.md) — resumen provisional, pendiente de cotejo capítulo a capítulo.
+Cada serie tiene su propia carpeta e índice. No mezclar sus textos con `CONT-MAIN-LN` ni convertir automáticamente datos de juego/adaptación en datos de novela.
+
+- [Astrea Record](astrea-record/README.md) — separar la novelización (`CONT-AR`) del material original del juego (`CONT-GAME`).
+- [Sword Oratoria](sword-oratoria/README.md) — continuidad de la novela derivada (`CONT-SO-LN`), con diferencias de perspectiva preservadas.
+- [Familia Chronicle](familia-chronicle/README.md) — registrar cada entrega y su continuidad efectiva sin asumir que todas son equivalentes a la novela principal.
+- Episode y relatos oficiales complementarios: registrar por separado con etiqueta propia de continuidad.
+
+Un acontecimiento del spin-off debe enlazarse con el registro canónico relacionado si describe el mismo hecho. Si contradice, amplía o presenta una versión distinta, registrar el alcance y la fuente sin fusionar silenciosamente los datos.
 
 - Paquete de búsqueda: `research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md`.
