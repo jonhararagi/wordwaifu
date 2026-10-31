@@ -169,3 +169,12 @@ Hestia no obtiene una condonación: deberá ayudar a Hephaistos en el taller. La
 - **Evento:** EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001.
 - **Límite:** el pasaje muestra la motivación expresada por Hestia y la reacción de Hephaistos; no establece aquí el precio final, el diseño definitivo, el pago ni la entrega.
 - **Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés.
+
+
+## Tercera pasada · Hestia recibe la daga y busca a Bell · CONT-MAIN-LN · PDF pp.145–148
+
+Hestia recibe de Hephaistos la daga y la vaina negras; acepta el nombre «Daga de Hestia» propuesto por su amiga. Hephaistos le recuerda que el dinero sigue siendo un préstamo. Hestia sale con la caja y busca a Bell. Al encontrar el folleto del Festival deduce que puede hallarlo en el Coliseo, toma un carruaje y paga 90 Varisu. El vehículo no puede llegar hasta la avenida por la multitud; Hestia abandona el carruaje y continúa a pie. En un callejón se encuentra por casualidad con Freya; la conversación sigue después de p.148.
+
+- **Eventos:** EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001 y EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001.
+- **Límites:** no se ha producido aún el encuentro con Bell ni la entrega de la daga a él. La deuda continúa.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
