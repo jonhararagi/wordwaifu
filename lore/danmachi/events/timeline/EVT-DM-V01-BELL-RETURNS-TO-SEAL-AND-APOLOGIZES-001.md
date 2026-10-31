@@ -65,3 +65,14 @@ Bell regresa al establecimiento para disculparse por haberse ido sin pagar duran
 - No trasladar el perfil CHAR-MIA-GRAND de CONT-ANIME a la figura «Mia-mama» en CONT-MAIN-LN.
 - La visita a la taberna concluye cuando Bell sale en p.102; no se inventa el destino posterior del personal.
 - «Ryu» se registra solo como mención de Mia-mama a una elfa empleada; su identidad sigue sin cotejo.
+ 
+
+## Auditoría de tercera pasada · CONT-MAIN-LN · PDF p.98
+
+- Bell regresa al establecimiento cerca del mediodía, recuerda el consejo de Hestia de no forzarse y encuentra un cartel de «Cerrado», pero entra.
+- Dos empleadas anónimas, una elfa y una nekomusume, lo reconocen como el joven que comió y salió corriendo. Pregunta por Seal y por la jefa.
+- La nota al pie 1 define nekomusume y compara rasgos más felinos con la representación moderna de «chica gato». Es nota editorial del traductor, no taxonomía canónica.
+- Se reutiliza este evento, cuyo localizador total continúa siendo pp.98–102. Esta tercera pasada cubre solo p.98; no se marca pp.99–102 como completadas.
+- **Visual:** p.98 es texto con nota al pie; sin ilustración ni tabla.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
