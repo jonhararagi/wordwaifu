@@ -40,3 +40,18 @@ Monstruo del sexto piso del Dungeon, descrito en la traducción como una criatur
 
 ## Fuente
 DMR-061-SRC-001. Localizadores físicos: PDF pp. 79–85.
+
+
+## Datos ampliados — segunda pasada pp. 81–85 (2026-10-31)
+
+- **p.81:** las dos apariciones coordinan ataques desde varios ángulos; Bell percibe una diferencia extrema de velocidad y alcance respecto de los monstruos que había afrontado. Sus pensamientos sobre la ausencia de debilidades y la imposibilidad de escapar se mantienen como percepción del combatiente, no como clasificación universal.
+- **pp.82–83:** Bell reflexiona sobre el crecimiento anómalo de su Estado sin identificar una causa. Golpea la cabeza/rostro de una War Shadow; esta pierde fuerza y cae de rodillas, pero el pasaje no confirma que su Piedra Mágica se rompa ni la describe convirtiéndose en cenizas. La segunda sí muere explícitamente cuando Bell le corta el pecho, rompe su Piedra Mágica y el cuerpo se vuelve cenizas.
+- **p.84:** el Dungeon genera cuatro War Shadows nuevas. Bell se autocorrige al mencionar el sexto y luego el quinto piso al pensar en la frecuencia de nacimiento de monstruos; no normalizar esta frase ambigua como regla general. Monstruos del quinto piso entran por la única salida y bloquean el espacio.
+- **pp.84–85:** Bell recoge de las cenizas un «Dedo de War Shadow» y lo equipa de forma improvisada junto a su daga sin empuñadura. La traducción no le atribuye estadísticas ni propiedades especiales. El folio p.85 termina cuando Bell empieza a combatir contra los monstruos que se precipitan hacia él; el desenlace sigue abierto.
+
+## Control de límites
+
+- Mantener separados el daño en la cabeza de la primera criatura y la destrucción confirmada de la Piedra Mágica de la segunda.
+- No inferir nivel, resistencia, inmunidad, regeneración, daño del dedo ni una propiedad especial del equipo improvisado.
+- No crear un evento cerrado mientras el combate y la huida continúen sin desenlace en las páginas revisadas.
+

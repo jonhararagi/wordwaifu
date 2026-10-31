@@ -1460,3 +1460,15 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [ ] Revisar personajes nombrados en el MD sin importar atributos de CONT-ANIME o CONT-AR.
 
 **Límite permanente:** DMR-061-SRC-001 es una traducción privada no cotejada con japonés. No usar número de línea MD como página; no convertir personajes/objetos anónimos en fichas; no dar por cerrada la inspección integral por haber llegado a PDF p.214.
+
+
+### Checkpoint DMR-061 · Volumen 1, PDF pp. 81–90 · 2026-10-31
+
+- **Protocolo:** tres pasadas obligatorias por página: (1) extracción, (2) inspección visual real y (3) continuidad/relaciones/duplicados. No hay límite arbitrario de tiempo o páginas. La traducción privada no está cotejada con japonés.
+- **Pasada 2 completada:** pp.81–85: combate contra dos War Shadows, caída de la primera tras un golpe a la cabeza sin confirmación explícita de destrucción de su Piedra Mágica; muerte de la segunda al romper Bell su Piedra Mágica; cuatro nuevas apariciones y bloqueo de la salida por monstruos del quinto piso; Bell recoge un «Dedo de War Shadow» y comienza el nuevo combate en p.85.
+- **Pasada 2 completada:** pp.87–90: Hestia busca a Bell durante la noche, él regresa a las 5:00 herido y sin equipo defensivo, admite haber entrado al Dungeon y ella lo ayuda. La perspectiva y los sentimientos de Hestia se mantienen diferenciados de hechos objetivos; no se infiere relación romántica recíproca.
+- **Visuales:** pp.81–85 y pp.87–90 son texto; p.86 es ilustración de capítulo a página completa y ahora está inspeccionada. La figura no se identifica. Se resuelve el pendiente anterior de p.86.
+- **Continuidad:** ampliar `MON-DM-WAR-SHADOW-001`; sin ID de evento para el combate o el regreso de Bell porque ambas secuencias continúan abiertas. El «Dedo» se registra solo como equipo improvisado, sin ficha independiente.
+- **Pendientes que permanecen:** pasada 2 pp.91–156; pasada 3 pp.9–156; reconciliación de la pasada 1; tareas DMR-062 (pp.1–10, reglas/objetos atomizados, candidatos de monstruos y revisión de personajes). No marcar esas tareas como completadas por este bloque.
+- **Siguiente folio:** PDF p.91.
+- **Integridad de fuente:** se trabajó desde la copia PDF física. El Markdown original permanece versionado en `volumes/main/`, pero el conector no pudo devolver íntegramente su contenido de 4 MB; no se afirma un cotejo MD↔PDF en este checkpoint.

@@ -900,3 +900,15 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Paginación:** `pdf_inspect` sobre el PDF original confirma 215 páginas físicas. La lectura interna del indexador que mostraba 214 no reemplaza este dato.
 - **Git/CI:** HEAD de entrada `bdddc750e7a7002070c731898b77fd9e15f198ba`. No se ejecutaron pruebas de código; las consultas de CI del commit documental anterior no devolvieron checks ni workflow runs. No se declara validación técnica.
 - **Siguiente acción:** continuar pasada 2 desde PDF p.81; luego completar pasada 3 pp.9–156 y reconciliar pasada 1. V1 sigue `IN_PROGRESS`.
+
+
+## DMR-061 — segunda pasada V1, PDF pp. 81–90 (2026-10-31)
+
+- **Resultado:** pasada 2 completada para pp.81–90 mediante extracción página por página, render a 130 dpi e inspección visual, y revisión de continuidad/duplicados.
+- **Combate War Shadow (pp.81–85):** Bell resiste el ataque coordinado; golpea la cabeza de una criatura, que cae de rodillas sin que el texto confirme destrucción de su Piedra Mágica; la segunda muere explícitamente cuando Bell rompe la piedra de su pecho. El Dungeon genera cuatro War Shadows nuevas y entran monstruos del quinto piso que bloquean la salida. Bell recoge un «Dedo de War Shadow» como equipo improvisado y comienza a luchar en p.85. El enfrentamiento permanece abierto.
+- **Hestia y regreso de Bell (pp.87–90):** Hestia pasa la noche buscándolo y lo encuentra a las 5:00. Bell regresa herido y sin equipo defensivo, admite que entró al Dungeon y Hestia lo ayuda. Se conserva como percepción de Hestia su interpretación sobre Aizu y el crecimiento de Bell; no se confirma reciprocidad romántica. La escena continúa al final de p.90.
+- **Visuales:** pp.81–85 y pp.87–90 son texto; p.86 es una ilustración de capítulo a página completa, inspeccionada ahora. La figura permanece sin identificar. Queda resuelto el pendiente de inspección de p.86 que figuraba en el checkpoint anterior.
+- **Canon y duplicados:** ampliada la ficha existente `MON-DM-WAR-SHADOW-001`; sin nueva ficha de especie, sin ficha de arma para el dedo, sin evento cerrado para el combate ni para el regreso de Bell.
+- **Fuente y límite:** DMR-061-SRC-001, traducción privada no cotejada con japonés. Se trabajó directamente sobre el PDF físico; no se declara cotejo con el Markdown de 4 MB porque la conexión de GitHub no permitió recuperarlo íntegramente.
+- **Git/CI:** HEAD de entrada `61b07f8ac640dcb06f265ceff7eaab2c9d58d422`. No se ejecutaron pruebas de código; el estado combinado de checks y la consulta de workflow runs asociadas a ese SHA no devolvieron resultados. No se declara validación técnica ni CI.
+- **Siguiente acción:** continuar pasada 2 desde PDF p.91; después completar pasada 3 pp.9–156 y reconciliar pasada 1. DMR-062 conserva sus pendientes independientes. V1 sigue `IN_PROGRESS`.

@@ -469,3 +469,11 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - **Estado:** extracción secuencial de trabajo registrada hasta la última página física del PDF (p.214). No existe p.215. La traducción privada no se ha cotejado con japonés.
 - **Pendientes separados:** auditoría visual de pp.19–21, 23–24 y 49–54; revisar pp.1–10 para identificar su función; resolver la descripción de los ojos de Seal y cotejar la visita/reencuentro en pp.98–102 y 203–204.
 - **Último bloque:** pp.201–214 con tres pasadas completas y cuarta correctiva en pp.203–205 y p.208. No se añaden IDs para párrafos ni personajes anónimos.
+
+
+## DMR-061 — actualización de pasada 2 V1 · PDF pp. 81–90 (2026-10-31)
+
+- Pasada 2 completada hasta PDF p.90. La auditoría de pp.81–85 amplía la ficha [War Shadow](monsters/war-shadow.md) y conserva abierto el combate; pp.87–90 registran el regreso herido de Bell y la perspectiva de Hestia sin crear un evento prematuro.
+- PDF p.86 quedó inspeccionada como ilustración de capítulo a página completa; la figura no se identifica.
+- **Próximo folio:** PDF p.91. Siguen pendientes la pasada 2 de pp.91–156, la pasada 3 de pp.9–156 y la reconciliación de la pasada 1. V1 permanece `IN_PROGRESS`.
+- **Procedencia:** DMR-061-SRC-001, traducción privada no cotejada con japonés. El trabajo de este bloque se hizo sobre el PDF físico; no se afirma cotejo con la transcripción Markdown íntegra.
