@@ -75,7 +75,7 @@ Estos registros facilitan la siguiente tanda, pero las seis entradas de canon si
 - `EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001` — combate contra el grupo de Kobolds y recuperación de fragmentos y garra (PDF pp. 46–51).
 - `EVT-DM-V01-BELL-DEFEATS-GOBLIN-AND-GETS-TOOTH-001` — Bell derrota a un Goblin y recoge un Diente de Goblin (PDF p. 53).
 - `EVT-DM-V01-BELL-RECEIVES-FALNA-001` — Falna en biblioteca (PDF pp. 211–214).
-- `EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001` — Hestia pide una daga para Bell y Hephaistos acepta forjarla después de dos días de insistencia (p. 115 y pp. 129–133).
+- `EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001` — Hestia pide una daga para Bell durante el Banquete y Hephaistos acepta forjarla tras dos días de insistencia (p.115; pp.129–133).
 - `EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001` — Hephaistos entrega la daga terminada a Hestia (pp. 145–146), posterior al evento de petición y forja.
 - `EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001` — Freya se reúne con Loki y Ais durante el Festival y reconoce a Bell entre la multitud (pp. 139–145).
 - `EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001` — encuentro en Festival de Monstruos (pp. 150–165).
@@ -110,5 +110,7 @@ Estos registros facilitan la siguiente tanda, pero las seis entradas de canon si
 
 - EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001 — segunda actualización del Estado y promesa mutua (PDF pp.91–97); [Deseo Inquebrantable] sigue oculta a Bell.
 - EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001 — Bell vuelve a La Señora de la Abundancia, paga lo adeudado y acepta una cesta de comida de Seal; la visita concluye cuando sale del local (PDF pp.98–102).
-- EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001 — Bell derrota a un Dungeon Lizard y un Goblin en el cuarto piso, recoge fragmentos de Piedra Mágica y regresa hacia Babel (PDF pp.117–120).
 - EVT-DM-V01-GANESHA-GOD-BANQUET-001 — Ganesha organiza el Banquete de Dios; Hestia se reencuentra con Hephaistos y pide un arma para Bell. La petición conserva evento propio (PDF pp.104–115).
+- EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001 — Bell derrota a un Dungeon Lizard y un Goblin en el cuarto piso, recoge fragmentos de Piedra Mágica y regresa hacia Babel; ocurre dos días después del Banquete (PDF pp.117–120; ancla en p.125).
+- EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001 — Bell observa en Babel el traslado de cajas y oye conversaciones sobre la preparación del Festival de Monstruos (PDF pp.121–123).
+- EVT-DM-V01-BELL-RECEIVES-RECOVERY-POTIONS-FROM-MIACH-001 — Miach entrega a Bell dos pociones de recuperación como cortesía, dos días después del Banquete (PDF pp.124–127).
