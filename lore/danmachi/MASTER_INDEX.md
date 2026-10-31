@@ -462,7 +462,7 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - [PR #215](https://github.com/jonhararagi/wordwaifu/pull/215): DMR-061 V1 hasta PDF p.177, merge SHA `8e6fcedaeed4e6c38e6f63a7c099cc8e27ad3441`; siguiente p.178.
 - [PR #216](https://github.com/jonhararagi/wordwaifu/pull/216): segmentación DMR-060 V2 y grafo temporal dirigido, merge SHA `7de2acca6975d3700b7c5b5ca71c004211fb308e`; pre-merge y post-merge CI verdes en ambos workflows.
 - [PR #209](https://github.com/jonhararagi/wordwaifu/pull/209): `(x) SUPERSEDED BY #216`, cerrado; su snapshot divergente no se fusionó directamente. La rama histórica se conserva.
-- Estado vigente al integrar DMR-061 pp.111–120: 46 eventos temporales únicos, 228 registros activos, 29 IDs reservados y 263 relaciones. El antiguo ID combinado `EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001` está reservado como superseded y no forma parte de la cronología activa.
+- Estado vigente al integrar DMR-061 pp.121–130: 49 eventos temporales, 231 registros activos, 28 IDs reservados y 263 relaciones. El antiguo ID combinado `EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001` está reservado como superseded y no forma parte de la cronología activa.
 
 ### DMR-061 — cierre del archivo PDF Volumen 1 · p. 214
 
@@ -486,11 +486,12 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - Bell vuelve a La Señora de la Abundancia, se disculpa y paga lo adeudado; Seal lo perdona y le entrega una cesta de comida (pp.98–100). Mia-mama interviene; no se confirma romance ni se identifica a empleadas anónimas.
 - **Siguiente folio:** PDF p.101. Pasada 2 pp.101–156, pasada 3 pp.9–156 y reconciliación de pasada 1 permanecen pendientes. V1 IN_PROGRESS.
 
-## DMR-061 — actualización de pasada 2 V1 · PDF pp.101–120 (2026-10-31)
+## DMR-061 — actualización de pasada 2 V1 · PDF pp.101–130 (2026-10-31)
 
 - **pp.101–110:** segunda pasada completa; consejo de Mia-mama, mención sin identidad resuelta de «Ryu», descripción narrativa de Orario/Babel, Banquete de Ganesha, reencuentro Hestia–Hephaistos, llegada de Freya y Loki.
 - **pp.111–120:** segunda pasada completa con tres revisiones por folio; p.116 es ilustración de capítulo 5 sin identidad asignada. Se amplían los perfiles y fichas de lugares existentes.
-- **Eventos añadidos:** EVT-DM-V01-GANESHA-GOD-BANQUET-001 (pp.104–115) y EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001 (pp.117–120). La petición de la daga conserva su evento propio.
+- **Eventos añadidos:** EVT-DM-V01-GANESHA-GOD-BANQUET-001 (pp.104–115), EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001 (pp.117–120), EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001 (pp.121–123) y EVT-DM-V01-BELL-RECEIVES-RECOVERY-POTIONS-FROM-MIACH-001 (pp.124–127). La petición de la daga conserva su evento propio y se extiende durante los dos días posteriores al Banquete.
 - **Continuidad:** Dungeon Lizard, Goblin y Kobold reutilizan fichas existentes; no se crea otra ficha de especie. El nombre «Ryu» de p.101 no se identifica con CHAR-RYUU-LION. Loki habla de Ais en p.110; no se infiere reciprocidad.
-- **Próxima página:** PDF p.121. Siguen pendientes la pasada 2 pp.121–156, la pasada 3 pp.9–156, la reconciliación de la pasada 1 y DMR-062. V1 continúa IN_PROGRESS.
+- **pp.121–130:** pasada 2 completa; p.126 es ilustración de capítulo sin identidad. p.125 confirma un intervalo exacto de dos días desde el Banquete; Bell recibe dos pociones de Miach y ve los preparativos del Festival en Babel. Se crea la ficha provisional CHAR-MIACH.
+- **Próxima página:** PDF p.131. Siguen pendientes la pasada 2 pp.131–156, la pasada 3 pp.9–156, la reconciliación de la pasada 1 y DMR-062. V1 continúa IN_PROGRESS.
 
