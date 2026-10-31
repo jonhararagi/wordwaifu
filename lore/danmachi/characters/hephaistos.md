@@ -93,3 +93,15 @@ Bell vuelve a observar el escaparate de una tienda de armas de Hephaistos Famili
 - **Continuidad:** se conserva la descripción en la sección existente de la tienda de Hephaistos Familia (pp.128–130). No se crea ficha de arma, transacción, evento de compra ni relación con la Daga de Hestia.
 - **Visual:** p.128 es texto continuo; el escaparate se describe en la narración. No hay ilustración ni tabla.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
+
+## Tercera pasada · decisión de fabricar la daga · CONT-MAIN-LN · Volumen 1 · PDF pp.129–134
+
+Hephaistos mantiene a Hestia esperando en la sucursal de su Familia, pero la dogeza continúa durante dos días desde el Banquete (pp.129–130). Explica que no podía conceder una rebaja ni regalar el arma porque eso devaluaría el trabajo de sus herreros. Cuando Hestia le revela que quiere dar a Bell una forma de abrirse paso en el peligroso camino que ha elegido, Hephaistos acepta fabricar el arma (pp.131–132), pero establece que la deuda deberá pagarse íntegramente, aunque tarde décadas o siglos.
+
+Hephaistos escoge mithril y un martillo carmesí y decide asumir ella misma la forja como asunto privado; Hestia tendrá que ayudar en el taller (p.133). La traducción recuerda que los dioses no pueden utilizar Poder Divino en el Mundo Inferior conforme al acuerdo que los rige. En p.134 Hephaistos aún no ha resuelto el diseño: teme tanto frenar el crecimiento de Bell con un arma excesiva como crear una pieza ordinaria que no corresponda a su oficio.
+
+- **Evento:** EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001.
+- **Perspectiva:** la edad de catorce años y el breve tiempo desde que Bell recibió Falna aparecen como recuerdos de Hephaistos, no como actualización universal de la ficha de Bell.
+- **Límites:** no inventar precio, diseño acabado, condonación de deuda ni entrega; la entrega de la Daga de Hestia continúa separada en pp.145–146.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
