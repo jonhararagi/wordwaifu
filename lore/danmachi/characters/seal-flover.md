@@ -66,3 +66,12 @@ Seal vuelve del Festival de Monstruos y ayuda a Bell a trasladar a Hestia, incon
 - La mujer llamada «Mia-mama» aparece y bromea sobre la demora de Bell y la posibilidad de ir a buscar su «juguete perdido». La escena termina con una insinuación sobre Seal y Bell; no confirma romance.
 - **Identificación del local:** p.98 nombra el establecimiento como La Señora de la Abundancia. No se infiere afiliación adicional para Seal.
 - **Límite:** el perfil CHAR-MIA-GRAND consultado pertenece a CONT-ANIME; no se trasladan sus datos a la figura llamada «Mia-mama» en CONT-MAIN-LN.
+
+
+## Ubicación laboral · CONT-MAIN-LN · Volumen 1 · PDF p.123
+
+Bell sitúa el establecimiento donde trabaja Seal —La Señora de la Abundancia, identificado en el pasaje anterior— a lo largo de la Calle Principal del Oeste de Orario. El texto no da número, coordenadas ni una posición exacta dentro de esa avenida.
+
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+- **Localizador:** PDF p.123.
+- **Límite:** se registra el marco de avenida; no se crea una ficha de local nueva ni se inventa una dirección.
