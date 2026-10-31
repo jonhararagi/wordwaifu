@@ -145,3 +145,17 @@ La traducción española aportada es privada y no se ha cotejado con el japonés
 - **Magia y Habilidades:** ambas secciones aparecen vacías en la ficha de p. 54.
 - **Comparación:** los valores anteriores coinciden con el snapshot de p. 33 tras la actualización del Estado posterior al Minotauro. No atribuir toda la variación a los Kobolds o al Goblin de p. 53; la página no identifica causas individuales.
 - **Límite:** no asumir que Bell conoce una Habilidad oculta por el solo hecho de que el lector la vio desde la perspectiva de Hestia en pp. 35–36; en p. 54 su tabla sigue mostrando Habilidades vacías.
+
+## Estado tras la segunda actualización · después de la incursión del sexto piso · CONT-MAIN-LN
+
+- **Fuente:** DMR-061-SRC-001, Volumen 1, traducción privada no cotejada con japonés; PDF p.91.
+- **Nivel:** Lv. 1.
+- **Valores anteriores → valores nuevos mostrados en p.91:**
+  - Fuerza: H 123 → G 221.
+  - Resistencia: I 42 → H 101.
+  - Destreza: H 139 → G 232.
+  - Agilidad: G 225 → F 313.
+  - Magia: I 0.
+- **Discrepancia interna:** el snapshot anterior de p.54 muestra Fuerza H 120, mientras que la columna «anterior» de p.91 indica H 123. Se preservan ambos valores y no se inventa una actualización intermedia.
+- **Habilidad:** el Estado grabado vuelve a mostrar [Deseo Inquebrantable]. Hestia oculta a Bell el nombre y los efectos; él solo recibe una explicación verbal de crecimiento anormal. No registrar que Bell conozca la Habilidad en este punto.
+- **Promesa:** Bell se compromete a no actuar imprudentemente, seguir fortaleciéndose y no dejar sola a Hestia (pp.95–96).
