@@ -100,3 +100,12 @@ Bell distingue a Eina entre los empleados del Gremio que trabajan junto a las ca
 - **Límite:** no hay diálogo ni interacción directa Bell–Eina en estas páginas; no se crea un nuevo encuentro ni se atribuye a Eina conocimiento de las dudas de Bell.
 - **Visual:** pp.122–123 son texto; sin ilustraciones, tablas o notas al pie. Inspección a 130 dpi.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
+## CONT-MAIN-LN · Festival de Monstruos en el Coliseo · Volumen 1 · PDF p.156
+
+Eina está desplegada en el Coliseo con otros empleados del Gremio para tareas de admisión y orientación del público. Oye el inicio de una demostración desde el área donde espera y percibe las vibraciones del espectáculo. El texto explica que el Gremio dirige la planificación del Festival y que sus empleados apoyan principalmente el trabajo comprometido por Ganesha Familia.
+
+En el espectáculo aparece un Battle Jabalí de unos dos metros frente a una domadora no identificada de Ganesha Familia. El objetivo es domarlo, no derrotarlo. La narración cifra en 50.000 los espectadores y menciona un altavoz hecho con Piedras Mágicas para el comentarista.
+
+- **Límites:** no identificar a la domadora, no asignarle ficha o ID y no atribuir a Eina participación en el combate. Eina presencia/oye el evento desde su puesto de trabajo.
+- **Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés.
