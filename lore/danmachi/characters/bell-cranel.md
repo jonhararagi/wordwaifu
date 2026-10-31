@@ -275,3 +275,12 @@ La traducción española aportada es privada y no se ha cotejado con el japonés
 - La descripción del Festival amplía el contexto del evento existente. No se crea un segundo evento del Festival ni fichas de monstruos que aún no aparecen en estas páginas.
 - La intención de Bell de ir al quinto piso no demuestra que haya entrado ni que haya combatido allí en p.135.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
+## CONT-MAIN-LN · Festival de Monstruos: reencuentro con Hestia · PDF pp.150–155
+
+Bell encuentra a Hestia entre la multitud cuando ella lo llama en la Calle Principal del Este. Hestia dice que quería verlo, le toma la mano y llama «cita» a la salida. Bell le recuerda que busca a alguien; Hestia propone disfrutar juntos del Festival mientras realizan la búsqueda (pp.150–151). Bell sigue preocupado por el encargo de entregar a Seal el monedero que le dieron Anya y Ryuu; piensa que ignorarlo podría molestar a las empleadas (p.151). No consta que entregue el monedero en estas páginas.
+
+Comparten crepes. Bell se avergüenza cuando Hestia intenta darle de comer, pero termina alimentándola; después le limpia la mermelada de la mejilla cuando ella se lo pide. Hestia propone continuar con croquetas de patata. Bell reconoce que rara vez comparten actividades fuera de sus obligaciones y descubre que disfruta la salida (pp.152–155).
+
+- **Límite:** no se confirma la búsqueda de Seal ni la devolución del monedero; tampoco se presenta la salida como una relación formal. La ilustración p.154 concuerda con la escena del crepe sin añadir hechos independientes.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
