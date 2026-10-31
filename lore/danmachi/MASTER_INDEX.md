@@ -504,3 +504,16 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - **Personajes:** Anya y Ryuu reutilizan sus IDs estables y reciben una sección CONT-MAIN-LN; no se importan niveles, habilidades o biografía de CONT-ANIME/CONT-AR.
 - **Próxima página:** PDF p.141. Siguen pendientes segunda pasada pp.141–156, tercera pasada pp.9–156, reconciliación de primera pasada y DMR-062. V1 continúa IN_PROGRESS.
 
+
+
+## DMR-061 — checkpoint vigente de lectura secuencial · Volumen 1 · 2026-10-31
+
+**Este bloque reemplaza como punto operativo los checkpoints históricos anteriores del índice que indicaban p.141.** La reconciliación de docs/STATUS.md y lore/danmachi/WORK_QUEUE.md confirma que esa referencia pertenecía al cierre de la segunda pasada y no es el siguiente folio actual.
+
+- **Segunda pasada:** pp.9–156 completadas.
+- **Tercera pasada:** pp.9–58 completadas; el bloque más reciente es pp.49–58.
+- **Siguiente página física:** PDF p.59.
+- **Pendiente tercera pasada:** pp.59–156 (98 folios).
+- **Pendiente transversal:** reconciliar la cobertura de la primera pasada por página/localizador, sin repetir como nuevas las extracciones existentes.
+- **Límite:** DMR-061-SRC-001 es una traducción privada no cotejada con japonés; los folios 1–8 no forman parte del rango de revisión actual y no deben marcarse como completados por inferencia.
+- **Regla de calidad:** tres pasadas completas por folio (extracción, visual física, continuidad); cuarta correctiva solo ante ambigüedad/contradicción. El estado visual se declara únicamente para páginas renderizadas e inspeccionadas.
