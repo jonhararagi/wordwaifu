@@ -922,3 +922,15 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Seal:** Bell regresa a La Señora de la Abundancia, se disculpa y paga lo adeudado; Seal lo perdona y le entrega una cesta. La conversación con Mia-mama continúa al final de p.100. No se confirma romance ni identidad de empleadas anónimas.
 - **Integridad:** dos acontecimientos nuevos separados; no se fusionan con Falna, updates anteriores, primer encuentro con Seal ni la escena de la taberna de pp.57–72. No se importan datos de CONT-ANIME.
 - **Siguiente folio:** PDF p.101. Pasada 3 pp.9–156 y reconciliación de pasada 1 pendientes. V1 sigue IN_PROGRESS.
+
+## DMR-061 — segunda pasada V1 · PDF pp.111–120 (2026-10-31)
+
+- **Resultado:** tres revisiones por página completadas en pp.111–120: extracción; inspección visual del PDF; auditoría de continuidad y duplicados. Cuarta revisión correctiva de p.116 y p.119.
+- **Visual:** p.116 es una ilustración de capítulo a página completa, sin identidad asignada. Las otras nueve páginas son texto; p.116 fue inspeccionada ampliada.
+- **Banquete:** pp.104–115 formalizadas en EVT-DM-V01-GANESHA-GOD-BANQUET-001. La petición de arma de p.115 permanece en su evento existente, no duplicado.
+- **Dungeon:** pp.117–120 formalizadas en EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001. Se reutilizan las fichas de Dungeon Lizard, Goblin y Kobold; no se añaden individuos ni estadísticas no respaldadas.
+- **Fichas:** ampliados perfiles de Bell, Hestia, Freya, Loki y Ganesha; Ganesha Familia; lugares Orario, Dungeon y Babel. Hephaistos mantiene ficha individual provisional CHAR-HEPHAISTOS.
+- **Siguiente página:** PDF p.121.
+- **Pendientes:** pasada 2 pp.121–156; pasada 3 pp.9–156; reconciliación de pasada 1; DMR-062 (pp.1–10, reglas/objetos, candidatos de monstruos y revisión de personajes). V1 permanece IN_PROGRESS.
+- **Procedencia:** DMR-061-SRC-001, traducción privada no cotejada con japonés. PDF de 215 páginas físicas: p.8 blanca, p.214 última página narrativa, p.215 créditos.
+
