@@ -7,16 +7,16 @@
 | ID sugerido | Lugar | Relaciones para investigar | Estado |
 |---|---|---|---|
 | DM-WORLD-001 | [Orario](../canon/01-mundo-orario.md) | Ciudad central, Dungeon, Guild, Familias | Ficha general provisional; falta cotejo interno de novelas |
-| [LOC-ORARIO](orario.md) | Orario — registro geográfico | Dungeon, Guild, Babel, Hostess of Fertility | Ficha parcial respaldada por glosario oficial del anime; no equivale a mapa completo |
+| [LOC-ORARIO](orario.md) | Orario — registro geográfico | Dungeon, Guild, Babel, Hostess of Fertility | Ficha parcial: glosario oficial del anime y descripción directa de novela principal V1 pp.102–103, 123–124; no equivale a mapa completo |
 | [LOC-DUNGEON](dungeon.md) | Dungeon | Orario, Guild, aventureros, pisos y expediciones | Ficha de ubicación parcial; fuente editorial oficial para el marco general |
-| [LOC-BABEL](babel.md) | Babel | Orario, Guild, Dungeon, Central Park | Ficha parcial respaldada por el glosario oficial del anime; detalles de Prototype separados |
+| [LOC-BABEL](babel.md) | Babel | Orario, Guild, Dungeon, Central Park | Ficha parcial: glosario anime y novela principal V1 pp.103, 120–123; interior y planos siguen incompletos |
 | [LOC-CENTRAL-PARK](central-park.md) | Central Park / plaza central | Avenidas principales, Babel, Dungeon | Parcial: aparece en el texto oficial Prototype; no trasladar automáticamente al canon publicado |
-| [LOC-ORARIO-MAIN-STREETS](main-streets.md) | Red de avenidas principales de Orario | Ciudad, Central Park, comercio de calle | Ocho direcciones documentadas sólo para la continuidad Prototype |
+| [LOC-ORARIO-MAIN-STREETS](main-streets.md) | Red de avenidas principales de Orario | Ciudad, iglesia de Hestia, Gremio, establecimiento de Seal | Ocho direcciones confirmadas en CONT-PROTOTYPE y ocho avenidas radiales/orientadas confirmadas también por la novela principal V1 pp.123–124; el trazado exacto de cuatro líneas es solo Prototype |
 | [LOC-PANTHEON](pantheon.md) | Pantheon — lugar mencionado en la novela principal | Orario, avenida comercial, Guild y Babel | Extracto oficial parcial favorece distinguir Pantheon de la sede; relación física con Babel pendiente. Ver [DMR-051](../research/inbox/DANMACHI-RESEARCH-051-pantheon-babel-guild-headquarters-reconciliation.md) |
 | [LOC-AMOR-SQUARE](amor-square.md) | Plaza del Amor (`アモールの広場`) | Orario, avenida principal suroeste (según wiki comunitaria) | Sólo evidencia secundaria (`CONT-UNVERIFIED`); localizador primario pendiente |
 | [LOC-APOLLO-MANOR](apollo-familia-mansion.md) | Mansión de Apollo Familia | Nueva residencia de Hestia Familia después del War Game | Parcial: transición respaldada en la adaptación; ubicación exacta pendiente |
 | [LOC-HOSTESS](hostess-of-fertility.md) | Hostess of Fertility | Orario, Familia Loki, personal de la taberna | Ficha parcial respaldada por el glosario oficial del anime |
-| [LOC-HESTIA-HOME](hestia-familia-church.md) | Antigua iglesia de Hestia Familia | Residencia inicial; destrucción antes del traslado posterior al War Game | Parcial: continuidad anime respaldada; causa y ubicación exacta pendientes |
+| [LOC-HESTIA-HOME](hestia-familia-church.md) | Iglesia/estancia oculta de Hestia Familia | Residencia inicial entre Calle Principal del Noreste y Calle Principal del Oeste (V1 p.123) | Ubicación relativa urbana respaldada por CONT-MAIN-LN; nombre propio, coordenadas y causa de destrucción no confirmados por novela |
 | LOC-LOKI-MANOR | Residencia de Loki Familia | Miembros, reuniones, preparación de expediciones | Alta |
 | LOC-FREYA-MANOR | Residencia de Freya Familia | Freya, Ottar y miembros | Alta |
 | LOC-HEPHAISTOS-SHOP | Herrería de Hephaistos | Welf, equipo y fabricación | Media |
