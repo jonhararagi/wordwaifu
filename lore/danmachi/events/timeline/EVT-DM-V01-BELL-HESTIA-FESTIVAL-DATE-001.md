@@ -57,3 +57,13 @@ Bell Cranel, Hestia y Eina Tulle
 - Comparten crepes; Hestia pide a Bell que la alimente y después que limpie la mermelada de su mejilla. Bell se avergüenza por la cercanía.
 - Hestia propone continuar con croquetas. Bell reconoce que rara vez comparten actividades fuera de sus obligaciones y admite que disfruta la salida.
 - La ilustración de p. 154 es coherente con el gesto narrado, sin añadir hechos independientes. Hestia/Freya pp. 148–149 es contexto previo; el evento conserva su localizador principal pp. 150–159.
+
+
+## Tercera pasada · Hestia se dirige al Festival · CONT-MAIN-LN · PDF pp.147–148
+
+- **p.147:** Hestia ve el folleto del Festival de Monstruos/Philia, con el programa y los horarios del día. Deduce que Bell podría dirigirse al Coliseo y decide buscarlo. Detiene un carruaje llamándolo «taxi»; la narración atribuye la difusión del término a la ocurrencia de un dios no identificado.
+- **p.148:** el carruaje atraviesa calles estrechas, pero se detiene ante la multitud de la Calle Principal del Este. La tarifa es 90 Varisu. Hestia entrega todo el dinero y lo llama propina; el conductor indica que solo alcanza para cubrir el importe. Hestia ya ha salido corriendo antes de escucharlo. Lleva la caja de la daga por un callejón y se encuentra por casualidad con Freya en un cruce.
+- **Continuidad:** se añade como preámbulo a EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001 y se enlaza con la entrega de la daga. Bell todavía no aparece en esta escena; la conversación con Freya continúa después de p.148.
+- **Límites:** no asignar nombre al conductor ni al dios que popularizó «taxi». No inventar propina ni cambio. No crear una ubicación nominal para el callejón o cruce.
+- **Visual:** pp.147–148 son páginas de texto; sin ilustraciones, tablas ni notas al pie. Inspección individual a 130 dpi.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
