@@ -61,3 +61,12 @@ Eina aconseja a Bell sobre las debilidades de los monstruos y la Piedra Mágica 
 En V2 investiga la anomalía de Soma Familia, pide ayuda a Ais para proteger a Bell y Lili e interpreta el riesgo a partir de la información que obtuvo (V2 pp. 174–190, 201–204). Luego habla en privado con Hestia durante una inspección del Gremio y le pide ayuda para convencer a Bell de romper el contacto con Lili (V2 pp. 218–219; evento `EVT-DM-V02-HESTIA-EINA-DISCUSS-LILI-001`). No se debe convertir la advertencia de Loki en omnisciencia de Eina ni inferir que conoce toda la trama de Kanu.
 
 **Procedencia:** traducciones privadas no cotejadas; los perfiles CONT-ANIME existentes permanecen separados.
+
+
+## Observación en la sede del Gremio · CONT-MAIN-LN · Volumen 1 · PDF pp.122–123
+
+Bell ve a Eina dentro de Babel, en la zona de la sede del Gremio. La describe como semielfa de orejas puntiagudas y cabello castaño corto, ocupada en una conversación seria con otro empleado sobre la limpieza de documentos. Bell decide no interrumpirla porque está trabajando. En p.123 entrega su botín y Piedras Mágicas en la sede, sabe que Eina no está disponible y completa el trámite sin hablar con ella.
+
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+- **Localizadores:** PDF pp.122–123.
+- **Límite:** la conversación es observada a distancia; no se conoce el contenido completo ni se crea una interacción directa Bell–Eina nueva.
