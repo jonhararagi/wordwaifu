@@ -97,3 +97,12 @@ La novela principal muestra a una empleada elfa de La Señora de la Abundancia l
 - **Localizadores:** PDF p.101 y pp.137–138.
 - **Nombre en estos folios:** «Ryu» / «Ryuu». El texto no proporciona apellido en esta aparición; el apellido Lion, nivel, magia, afiliación histórica a Astrea Familia y datos de otras continuidades no se derivan de estas páginas.
 - **Rol observado:** empleada elfa de La Señora de la Abundancia; prepara el servicio y explica el encargo de Seal a Bell.
+
+
+## Tercera pasada · La Señora de la Abundancia y Festival de Monstruos · CONT-MAIN-LN · Volumen 1 · PDF pp.137–138
+
+Ryuu ayuda a Anya a explicar que Seal salió durante su día libre para visitar el Festival de Monstruos y olvidó el monedero. Ryuu expone que la domesticación requiere que el domador demuestre fuerza y que el monstruo llegue a obedecer; los monstruos del Dungeon son más difíciles de domesticar que los animales de superficie. Añade que los miembros centrales de Ganesha Familia son lo bastante fuertes para lograrlo.
+
+- **Localizadores:** PDF pp.137–138; la forma «Ryu» también aparece en el relato de Mia-mama de p.101.
+- **Nombre y continuidad:** se conservan las formas «Ryu» / «Ryuu» que usa la traducción. Estas páginas no confirman apellido, nivel, magia, técnicas propias ni los antecedentes de Astrea Familia.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
