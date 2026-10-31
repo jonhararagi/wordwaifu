@@ -53,3 +53,14 @@ En la base subterránea de Hestia Familia, Bell describe una lámpara de techo d
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF p.38.
 - **Límite:** es un ejemplo de uso tecnológico de las Piedras Mágicas, no una regla completa sobre todos los artefactos ni una nueva ficha de objeto.
 
+
+
+## Fragmentos de Piedra Mágica y botín de monstruo · CONT-MAIN-LN · Volumen 1 · PDF pp.50–53
+
+- **p.50 — extracción:** durante la recuperación posterior al combate de Kobolds, Bell extrae pequeños cristales rojo violáceos de los cadáveres y los describe como Fragmentos de Piedra Mágica. Para monstruos de los pisos 1–4 los compara con el tamaño de una uña. Recuerda que se intercambian por dinero en el Gremio y que las Piedras Mágicas pueden alimentar objetos tecnológicos. La enseñanza de que la piedra es el núcleo y fuente de vida del monstruo se atribuye a Eina; el cuerpo se convierte en cenizas después de retirar la piedra.
+- **p.51 — botín:** la garra derecha de un Kobold permanece intacta tras la desintegración del cuerpo y Bell la recoge como botín. El pasaje dice que algunas partes pueden servir como materiales para armas o armaduras y que el valor de intercambio depende del ítem. No se crea una ficha de arma ni se asigna una capacidad específica a la garra.
+- **p.52 — generación:** la narración dice que los monstruos aparecen desde las paredes del Dungeon y que cada piso genera un número limitado. Algunos pueden subir o bajar entre pisos; normalmente permanecen en el piso donde aparecieron. Se atribuyen a la narración o al conocimiento oído por Bell los rasgos de regeneración de estructuras, iluminación y niveles inferiores más peligrosos, sin extenderlos a reglas no descritas.
+- **p.53 — ejemplar Goblin:** Bell derrota a un Goblin y recoge un Diente de Goblin. La hipótesis de Bell de que los Goblins fuera de Orario podrían ser descendientes de monstruos que salieron del Dungeon y que los monstruos se reproducen permanece como razonamiento del personaje, no como regla confirmada.
+
+- **Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés, PDF pp.50–53.
+- **Límites:** no fijar precios, tamaños fuera de lo indicado, excepciones de la piedra, capacidad universal de los materiales, fórmula de generación ni reproducción como regla general.
