@@ -46,3 +46,13 @@ El acontecimiento termina con la aceptación y el comienzo de la fabricación. L
 - La técnica de dogeza atribuida humorísticamente a Takemikazuchi no se registra como regla del mundo.
 - No se infiere el coste exacto de la daga desde esta secuencia.
 - La traducción española privada no confirma la grafía japonesa de nombres técnicos ni términos de oficio.
+
+
+## Auditoría de tercera pasada · CONT-MAIN-LN · PDF p.115
+
+Hestia formula en voz alta su petición a Hephaistos: que prepare un arma para Bell, a quien identifica como el niño de su Familia. El folio confirma la solicitud expresa, no una aceptación ni el comienzo inmediato de la fabricación. La descripción narrativa de la fama de Hephaistos Familia como gremio de herreros aporta contexto a la petición, pero no determina el arma, el coste ni las condiciones que Hephaistos establecerá después.
+
+- **Evento relacionado:** EVT-DM-V01-GANESHA-GOD-BANQUET-001.
+- **Continuidad:** se conserva el evento propio de petición y forja, separado del Banquete general y de la entrega física posterior EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001.
+- **Visual:** p.115 es una página de texto breve con la petición al final; no contiene ilustración ni tabla. Inspeccionada a 130 dpi.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
