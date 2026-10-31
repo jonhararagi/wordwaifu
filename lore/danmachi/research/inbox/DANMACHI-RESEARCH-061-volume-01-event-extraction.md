@@ -1424,3 +1424,30 @@ La actualización de pp.91–96 es distinta de la actualización tras el Minotau
 - **Revisión correctiva:** pp.142–145 para separar sospecha, confesión y observaciones; p.145 para el corte de escena; p.148 para el pago exacto y el encuentro con Freya.
 
 **Checkpoint:** tercera pasada completada pp.9–148 (140 folios). Próxima página física PDF p.149. Restan pp.149–156 (8 folios) de la tercera pasada. La pasada 2 pp.9–156 continúa completa. La reconciliación integral de la pasada 1 sigue pendiente. V1 continúa IN_PROGRESS; DMR-061-SRC-001 sigue siendo una traducción privada no cotejada con japonés.
+
+### Tercera pasada · PDF pp.149–156 · 2026-10-31
+
+- **p.149 — Hestia y Freya:** Freya continúa oculta bajo su capa y explica que evita la Calle Principal porque su belleza provocaría agitación incluso disfrazada. Hestia pregunta si ha visto a Bell y lo describe como humano de cabello blanco y ojos rojos, «como un conejo». La sonrisa de Freya desaparece brevemente y luego vuelve; dice que cree haberlo visto frente a la Calle Principal del Este, camino al Coliseo, y le indica cómo llegar. Hestia sigue la dirección y encuentra a Bell al final del folio. No se establece si la indicación de Freya es deliberada, veraz por casualidad o motivada por otra razón.
+- **p.150 — reencuentro:** Bell oye a Hestia llamarlo entre la multitud. Ella dice que quería verlo, pero pospone la explicación de por qué está tan feliz y le toma la mano para avanzar. No se especifica todavía cuál es el motivo que reserva para el final.
+- **pp.151–153 — salida y crepes:** Hestia llama «cita» a la salida. Bell le recuerda que busca a alguien; Hestia propone disfrutar del Festival mientras realizan la búsqueda. Bell mantiene presente el encargo de llevar a Seal el monedero que recibió de Anya/Ryuu y teme que las empleadas se molesten si lo deja de lado. Hestia compra dos crepes de mermelada; intenta dar de comer a Bell, quien se avergüenza por tratarse de una diosa, y después le pide que la alimente. Bell termina acercándole su crepe; Hestia come y queda mermelada en su mejilla.
+- **p.154 — ilustración:** imagen monocroma de Bell y Hestia compartiendo el crepe. Es coherente con la acción narrada; no identifica un episodio nuevo ni añade un diálogo o hecho independiente.
+- **p.155 — continuación:** Bell intenta limpiar la mejilla de Hestia, pero se detiene al recordar que no tiene pañuelo. Hestia le toma la mano y le pide que la ayude; Bell le limpia la mejilla. Hestia propone continuar con croquetas de patata. Bell reconoce que casi nunca hacen actividades juntos fuera de sus obligaciones y advierte que está disfrutando la salida. La compra o consumo de las croquetas todavía no queda narrada en este folio.
+- **p.156 — escena paralela en el Coliseo:** tras un separador, comienza «este lado» del espectáculo. Un Battle Jabalí de unos dos metros, capturado para ese día, carga contra una domadora no identificada de Ganesha Familia. La demostración consiste en esquivar y domar al monstruo, no derrotarlo. La narración cifra en 50.000 los espectadores; un comentarista usa un altavoz construido con Piedras Mágicas. Eina, situada en el Coliseo, escucha el inicio y siente las vibraciones; los empleados del Gremio han sido desplegados para admisión y orientación, principalmente como apoyo al trabajo de Ganesha Familia. El Gremio dirige la planificación del Festival.
+ 
+### Auditoría de continuidad y no duplicación · pp.149–156
+
+- **Freya/Hestia:** se registra la orientación de Freya como acción observada, sin atribuirle intención, engaño o una motivación no expresada.
+- **Bell/Hestia:** se amplía EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001, cuyo encuentro comienza en p.150; p.149 queda como preludio causal inmediato, todavía sin Bell presente en el diálogo con Freya.
+- **Monedero de Seal:** Bell sigue recordando el encargo y no se ve la entrega a Seal. No cerrar el encargo, no crear evento de devolución y no asumir que Hestia conoce el nombre de Seal o el contenido del paquete.
+- **Daga:** Hestia conserva la caja de la daga recibida en pp.145–146; en este bloque no se la entrega a Bell. La deuda permanece vigente.
+- **Coliseo:** la demostración del Battle Jabalí es una escena paralela al paseo de Bell y Hestia. Se registra en la extracción y en la ficha existente de Eina, pero no se abre todavía un evento independiente: el alcance del espectáculo continúa después de p.156.
+- **Entidades no identificadas:** no asignar nombre, ficha o ID a la domadora, al Battle Jabalí como entidad individual, al comentarista ni a otros empleados.
+- **IDs y datos estructurados:** no crear IDs nuevos ni modificar catálogo, relaciones o timeline JSON en este bloque.
+
+### Inspección visual · pp.149–156
+
+- Las ocho páginas físicas se renderizaron individualmente a 130 dpi y se inspeccionaron.
+- pp.149–153 y 155–156 son páginas de texto; p.154 es una ilustración monocroma. No se aprecian tablas, cuadros de Estado ni notas al pie.
+- **Revisión correctiva:** p.149 para la secuencia Freya→Hestia→Bell; pp.151–153 para mantener el encargo de Seal mientras se desarrolla la cita; p.154 para limitar la lectura de la ilustración a lo visible; p.156 para separar la demostración del Coliseo de la cita y no identificar a la domadora.
+
+**Checkpoint:** tercera pasada completada pp.9–156 (148 folios). La pasada 2 pp.9–156 continúa completa. La reconciliación integral de la pasada 1 sigue pendiente y es la siguiente tarea de DMR-061. V1 permanece IN_PROGRESS; DMR-061-SRC-001 sigue siendo una traducción privada no cotejada con japonés.

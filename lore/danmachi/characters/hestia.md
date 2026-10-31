@@ -178,3 +178,11 @@ Hestia recibe de Hephaistos la daga y la vaina negras; acepta el nombre «Daga d
 - **Eventos:** EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001 y EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001.
 - **Límites:** no se ha producido aún el encuentro con Bell ni la entrega de la daga a él. La deuda continúa.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
+## CONT-MAIN-LN · Festival de Monstruos · PDF pp.149–155
+
+Hestia pregunta a Freya si ha visto a Bell; Freya le indica el camino hacia la Calle Principal del Este y el Coliseo. Hestia sigue la dirección y encuentra a Bell entre la multitud (p.149). Le dice que quería verlo, le toma la mano y propone disfrutar del Festival juntos (pp.150–151). La llama una cita y comparte con él crepes; le pide que la alimente y después que le limpie la mermelada de la mejilla (pp.152–155). Propone continuar con croquetas de patata, pero su consumo no queda mostrado en este bloque.
+
+- **Lectura relacional:** la cercanía, el contacto y el lenguaje de «cita» pertenecen a esta escena; no se convierten en una declaración formal ni en una relación establecida.
+- **Límite de conocimiento:** Bell dice que está buscando a alguien; la escena no establece que Hestia conozca la identidad de Seal ni los detalles del monedero.
+- **Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés.
