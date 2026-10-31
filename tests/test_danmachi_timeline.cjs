@@ -341,7 +341,7 @@ assert.equal(miachPotions.temporal.amount,2);
 assert.equal(miachPotions.temporal.unit,"day");
 assert.equal(miachPotions.locationAssessment.status,"provisional");
 assert.equal(miachPotions.locationRefs[0].locationId,"LOC-ORARIO");
-const dungeonEncounter=events.get("EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001");
+const dungeonEncounterTimeline=events.get("EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001");
 assert.equal(dungeonEncounter.locationAssessment.status,"verified");
 assert.equal(dungeonEncounter.locationRefs.length,1);
 assert.equal(dungeonEncounter.locationRefs[0].locationId,"LOC-DUNGEON");
