@@ -1084,3 +1084,23 @@ Sobre SHA 4423efcfc55920b02fdf949927ae7a4033bf1033:
 - **Visual:** diez páginas inspeccionadas; ilustraciones en pp.70 y 73, nota al pie en p.76; no hay tablas.
 - **Checkpoint:** tercera pasada completada pp.9–78 (70 folios). Próxima página física PDF p.79; restan pp.79–156 (78 folios). La pasada 2 pp.9–156 está completada. La reconciliación de la pasada 1 sigue pendiente. V1 continúa IN_PROGRESS y DMR-061-SRC-001 no se ha cotejado con japonés.
 
+
+
+## Evidencia de integración · PR #225 · DMR-061 pp.69–78
+
+- **PR:** [#225](https://github.com/jonhararagi/wordwaifu/pull/225), integrado mediante squash.
+- **SHA exacto de main:** 23cd07e803cf4e5bc3f917a23e3d6c5e368119cd.
+- **CI de PR, sobre e920f818ebb69d88f3916da279105017e25bfa62:** [Validate WordWaifu #41191511344](https://github.com/jonhararagi/wordwaifu/actions/runs/41191511344) y [DanMachi Lore and Retrieval Integrity #41191511369](https://github.com/jonhararagi/wordwaifu/actions/runs/41191511369), ambos success.
+- **CI post-merge, sobre el SHA exacto de main:** [Validate WordWaifu #41191716820](https://github.com/jonhararagi/wordwaifu/actions/runs/41191716820) y [DanMachi Lore and Retrieval Integrity #41191716801](https://github.com/jonhararagi/wordwaifu/actions/runs/41191716801), ambos success.
+
+## DMR-061 — tercera pasada V1 · PDF pp.79–88 · 2026-10-31
+
+- **Estado:** tres controles por folio completos; cuarta revisión correctiva en pp.83–85 y pp.87–88.
+- **pp.79–85:** aparecen War Shadows desde las paredes del sexto piso. Bell combate contra dos; golpea con el puño el rostro-espejo de la primera, que cae de rodillas sin confirmación expresa de destrucción de Piedra Mágica. La segunda muere cuando Bell le rompe la Piedra Mágica con la daga. Nacen cuatro War Shadows adicionales y monstruos del quinto piso bloquean la única salida. Bell recoge un «Dedo de War Shadow» y decide seguir luchando; el desenlace queda fuera de estas páginas.
+- **p.86:** ilustración monocroma a página completa del capítulo 4, «Así que quería convertirme en su fuerza» en la traducción. Figura de cabello claro con copa, sin identidad asignada.
+- **p.87:** Hestia lleva la noche buscando a Bell y, a las 5:00 a. m., vuelve a casa sin haberlo localizado. Sus celos, culpa y temor a un incidente se registran como pensamientos propios, no como hechos objetivos.
+- **p.88:** Bell vuelve embarrado, exhausto y herido; tiene pantalones rotos y tres marcas de garra en la rodilla derecha con sangre seca. Admite que entró al Dungeon, pero no cuenta qué ocurrió ni cómo salió.
+- **Continuidad:** se amplía MON-DM-WAR-SHADOW-001. No se crea todavía evento cerrado para la lucha: p.85 termina con Bell empezando otra fase de combate. La búsqueda de Hestia y el regreso de Bell siguen hasta pp.89–90; se decidirá el evento una vez terminada la tercera pasada de ese tramo. No se fusiona con la actualización de Estado pp.91–97.
+- **Visual:** p.79 tiene nota al pie 2 («Sombra de Guerra»); p.86 es la única ilustración de página completa; las demás páginas son texto. Sin tablas ni cuadros de Estado.
+- **Checkpoint:** tercera pasada completada pp.9–88 (80 folios). Próxima página física PDF p.89; restan pp.89–156 (68 folios). La pasada 2 pp.9–156 permanece completada. La reconciliación integral de la pasada 1 sigue pendiente. V1 continúa IN_PROGRESS; DMR-061-SRC-001 no se ha cotejado con japonés.
+
