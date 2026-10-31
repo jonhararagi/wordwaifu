@@ -4060,6 +4060,83 @@
           ]
         }
       ]
+    },
+    {
+      "id": "EVT-DM-V01-HESTIA-SEARCHES-BELL-AND-CARES-FOR-HIM-001",
+      "recordId": "EVT-DM-V01-HESTIA-SEARCHES-BELL-AND-CARES-FOR-HIM-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 620.25,
+      "title": "Hestia busca a Bell, lo recibe herido y lo cuida",
+      "dateLabel": "Madrugada posterior a la incursión del sexto piso; el reloj marca las 5:00 a. m.; fecha absoluta desconocida.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Hestia busca a Bell durante la noche y lo recibe embarrado y herido. Deja de interrogarlo, lo ayuda a caminar y le ofrece su cama. Bell acepta literalmente la broma de dormir juntos y expresa que quiere hacerse más fuerte.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "regresa herido, admite que entró al Dungeon y expresa que quiere ser más fuerte"
+        },
+        {
+          "id": "DM-CHAR-HESTIA",
+          "name": "Hestia",
+          "kind": "character",
+          "role": "busca a Bell, lo recibe y lo cuida"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V01-HESTIA-SEARCHES-BELL-AND-CARES-FOR-HIM-001.md",
+      "sources": [
+        {
+          "label": "DMR-061 · Volumen 1 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Traducción privada no cotejada con japonés; PDF pp.87–90."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-HESTIA-SEARCHES-BELL-AND-CARES-FOR-HIM-001.md",
+          "kind": "internal",
+          "note": "Búsqueda nocturna, regreso herido y cuidado; termina antes de la actualización del Estado."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "before",
+        "referenceIds": [
+          "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "La búsqueda y el regreso ocurren antes de la actualización del Estado de pp.91–97; una noche pasa desde el regreso de Bell.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "building",
+        "reason": "La escena doméstica sucede en la residencia oculta de Hestia Familia dentro de la iglesia; se reutiliza el lugar existente LOC-HESTIA-HOME."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-HESTIA-HOME",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "building",
+          "context": "La búsqueda termina en la residencia subterránea de Hestia Familia dentro de la iglesia.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/places/hestia-familia-church.md"
+          ]
+        }
+      ]
     }
   ],
   "temporalModelVersion": 1,
