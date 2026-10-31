@@ -3,11 +3,11 @@ id: CHAR-GANESHA
 universe: danmachi
 type: deity_character
 status: source_checked_partial
-continuity_scope: CONT-ANIME
-source_refs: ["DMR-036-SRC-002"]
+continuity_scope: CROSS-CONTINUITY
+source_refs: ["DMR-036-SRC-002", "DMR-061-SRC-001"]
 claim_refs: ["DMR-036-CLM-006"]
 verification_status: source_checked_partial
-tags: ["Ganesha","Ganesha Familia","Dios; dirigente de Ganesha Familia","CONT-ANIME"]
+tags: ["Ganesha","Ganesha Familia","Dios; dirigente de Ganesha Familia","CONT-ANIME", "CONT-MAIN-LN"]
 ---
 # Ganesha
 
