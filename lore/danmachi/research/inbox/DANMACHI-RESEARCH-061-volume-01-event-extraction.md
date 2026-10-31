@@ -448,40 +448,6 @@ No se ha inspeccionado visualmente cada folio. Estos localizadores constituyen u
 
 **Siguiente página de pasada 2:** PDF p.81. La pasada 3 de pp.9–156 sigue pendiente; V1 permanece `IN_PROGRESS` y la traducción privada continúa sin cotejo con japonés.
 
-### DMR-061 — segunda pasada, PDF pp. 81–90 (2026-10-31)
-
-**Resultado:** pasada 2 completada para PDF pp.81–90. Se realizó extracción página por página, inspección de los diez folios renderizados a 130 dpi y auditoría de continuidad/duplicados contra los registros existentes. La evidencia de este bloque procede de la copia PDF física `DMR-061-SRC-001`; no se afirma un cotejo con el Markdown de 4 MB, cuyo contenido íntegro no pudo recuperarse por la conexión de GitHub. La traducción privada sigue sin cotejo con japonés.
-
-**Hallazgos y precisiones:**
-
-- **p. 81 — ataque de las dos War Shadows:** Bell describe ataques independientes, rapidez y alcance de los largos brazos, arañazos en su ropa y piel y ataques coordinados desde el frente, los lados y detrás. Los cuatro brazos negros lo mantienen bajo presión mientras su visión se nubla por sudor y sangre. Su reflexión sobre no tener debilidades ni posibilidad de escapar se registra como percepción de Bell durante el combate, no como una propiedad universal añadida a la ficha de especie.
-- **p. 82 — Estado y contraataque interrumpido:** Bell recuerda que lleva medio mes explorando y que, con el Estado de un novato, no debería sobrevivir en el sexto piso. Piensa que solo recibió una actualización del Estado y advierte un crecimiento numérico anormal, pero no identifica una causa ni aporta cifras verificables en este pasaje. Mientras piensa, una War Shadow golpea su hombro y hace que suelte la daga. El Texto Sagrado parece reaccionar a sus pensamientos; no se extrae de ello una habilidad nueva.
-- **p. 82 — recuerdos:** Bell recuerda el encuentro fatal y la sonrisa de la deidad que le concedió la Gracia. El folio no identifica de nuevo a esa deidad en esa frase; el dato se conserva como recuerdo del personaje, sin crear una relación o acontecimiento adicional.
-- **p. 83 — caída de la primera War Shadow:** Bell golpea el rostro parecido a un espejo y atraviesa la cabeza. Sale líquido negro; el monstruo sufre espasmos y cae de rodillas sin fuerza. El texto de esta página no confirma expresamente que haya destruido su Piedra Mágica ni describe aquí su conversión en cenizas. No elevar el golpe en la cabeza a una regla sobre su punto débil.
-- **p. 83 — muerte explícita de la segunda War Shadow:** aprovechando que la otra criatura queda inmóvil al caer su compañera, Bell recupera la daga del suelo, alcanza a la segunda y le corta el pecho. La Piedra Mágica se rompe; el monstruo muere sin emitir sonido y su cuerpo se convierte en cenizas. Esta es la criatura cuyo desenlace sí queda descrito explícitamente en el folio.
-- **p. 84 — nuevas apariciones y bloqueo de la salida:** Bell intenta escapar, pero las paredes generan cuatro War Shadows nuevas, el doble de las dos anteriores. Al hablar de la frecuencia de nacimiento de monstruos, la traducción muestra una autocorrección de Bell («a partir del sexto, no, quinto piso»); se conserva como formulación del personaje y no se convierte en una regla general más precisa de lo que permite el texto. Por la única entrada empiezan a llegar monstruos del quinto piso y el espacio queda bloqueado; las War Shadows quedan rodeadas por otros monstruos.
-- **p. 84 — equipo improvisado:** Bell recoge de las cenizas un «Dedo de War Shadow» y lo equipa como recurso improvisado junto con su daga, cuya empuñadura falta. Sus manos se cortan y sangran. No se crea una ficha de objeto/arma única ni se le atribuyen estadísticas, daño, calidad o propiedades adicionales.
-- **p. 85 — resolución abierta:** Bell decide no rendirse y comienza a luchar contra los monstruos que se precipitan hacia él. La página termina al comenzar ese nuevo enfrentamiento; no se registra su resultado, escape ni rescate.
-- **p. 86 — inspección visual pendiente resuelta:** el folio es una ilustración de capítulo a página completa con título japonés. La figura no se identifica por apariencia y no se atribuye a War Shadow, Bell, Hestia ni a otra persona sin rótulo o respaldo textual seguro.
-- **p. 87 — perspectiva de Hestia:** comienza el capítulo 04 («Así que quería convertirme en su fuerza», según la traducción). El reloj marca las 5:00 de la mañana. Hestia lleva la noche buscando a Bell después de volver a casa y no encontrarlo. Su interpretación de que el enamoramiento de Bell por Aizu afecta su crecimiento y la molestia que sintió al ver su Estado son percepciones/emociones de Hestia, no hechos objetivos sobre el mecanismo de crecimiento ni confirmación de una relación romántica.
-- **p. 87 — preocupación y culpa:** Hestia recuerda la expresión de Bell cuando lo vio por última vez, siente culpa por sus propias palabras y considera que pudo verse involucrado en un incidente. Se registra su estado subjetivo; no se crea un evento separado solo por su reflexión.
-- **p. 88 — regreso de Bell:** cuando Hestia está por salir otra vez, Bell vuelve y la puerta la golpea al abrirse. Ella se alivia y llora al verlo, pero enseguida advierte que está agotado, embarrado y herido. La traducción describe pantalones rotos y tres marcas de garras en la rodilla derecha, con sangre ya seca. Bell admite que entró al Dungeon.
-- **p. 89 — estado y cuidado:** Bell no lleva equipo defensivo y Hestia considera que una sola embestida de un monstruo podría haber sido fatal. Él todavía conserva la daga que llevaba como amuleto; no se la identifica como la Daga de Hestia. Bell no explica el motivo de su incursión. Hestia deja de interrogarlo, le pide bañarse y dice que después curará sus heridas; lo ayuda a caminar por la carga que soporta su rodilla derecha.
-- **p. 90 — intimidad en tono de broma:** Hestia le ofrece su cama y bromea con que duerman juntos tras haberlo buscado toda la noche. Bell, agotado física y mentalmente, acepta literalmente sin captar del todo el doble sentido. Hestia se sonroja y se sobresalta, pero el folio no muestra que lleguen a acostarse juntos ni confirma reciprocidad romántica. La escena continúa abierta al final de p.90.
-
-**Control visual:** pp.81–85 y pp.87–90 son páginas de texto; p.86 es la única ilustración de este bloque y fue inspeccionada a página completa. La inspección de p.86 corrige el pendiente anterior que la marcaba como no reexaminada, sin asignar identidad a la figura.
-
-**Continuidad y no duplicación:**
-
-- Se amplía la ficha existente `MON-DM-WAR-SHADOW-001`; no se crea otra ficha de especie ni un individuo separado.
-- Se distingue el resultado de los dos ejemplares: la primera cae de rodillas tras el golpe a la cabeza, sin confirmación explícita de destrucción de Piedra Mágica en este pasaje; la segunda muere cuando Bell rompe su Piedra Mágica.
-- El «Dedo de War Shadow» queda como equipo improvisado descrito en la escena, no como una nueva ficha de arma/objeto.
-- No se crea todavía un evento cerrado para el combate: p.85 solo abre el enfrentamiento contra los monstruos que bloquean la salida. Tampoco se crea aún un evento separado para la búsqueda y regreso de Bell: la secuencia de Hestia continúa en p.90.
-- No se añaden personajes, relaciones románticas, lugares, niveles, habilidades ni estadísticas a partir de inferencias.
-
-**Siguiente página de pasada 2:** PDF p.91. La pasada 3 de pp.9–156 sigue pendiente; también queda por reconciliar la pasada 1 y completar las tareas de DMR-062. V1 permanece `IN_PROGRESS`.
-
-
 ## Claims de investigación trazables para relaciones de cronología · 2026-10-30
 
 ### DMR-061-CLM-001 · Hestia pide a Hephaistos un arma para Bell y ella acepta forjarla
@@ -643,3 +609,40 @@ La pasada 2 de pp.9–60 cubre los folios narrativos revisados desde el prólogo
 - Se mantiene CONT-MAIN-LN; traducción privada no cotejada con japonés. Las ambigüedades y atribuciones de POV no se resuelven mediante wikis, anime, juegos ni spin-offs.
 
 **Checkpoint de lectura siguiente:** PDF p.61, pasada 2. Después de cubrir pp.61–156, iniciar/continuar la pasada 3 de ese mismo rango y reconciliar la pasada 1 con una matriz cerrada. V1 no queda certificado aún.
+
+---
+
+## Estado operativo vigente de DMR-061 — 2026-10-31
+
+### DMR-061 — segunda pasada, PDF pp. 81–90 (2026-10-31)
+
+**Resultado:** pasada 2 completada para PDF pp.81–90. Se realizó extracción página por página, inspección de los diez folios renderizados a 130 dpi y auditoría de continuidad/duplicados contra los registros existentes. La evidencia de este bloque procede de la copia PDF física `DMR-061-SRC-001`; no se afirma un cotejo con el Markdown de 4 MB, cuyo contenido íntegro no pudo recuperarse por la conexión de GitHub. La traducción privada sigue sin cotejo con japonés.
+
+**Hallazgos y precisiones:**
+
+- **p. 81 — ataque de las dos War Shadows:** Bell describe ataques independientes, rapidez y alcance de los largos brazos, arañazos en su ropa y piel y ataques coordinados desde el frente, los lados y detrás. Los cuatro brazos negros lo mantienen bajo presión mientras su visión se nubla por sudor y sangre. Su reflexión sobre no tener debilidades ni posibilidad de escapar se registra como percepción de Bell durante el combate, no como una propiedad universal añadida a la ficha de especie.
+- **p. 82 — Estado y contraataque interrumpido:** Bell recuerda que lleva medio mes explorando y que, con el Estado de un novato, no debería sobrevivir en el sexto piso. Piensa que solo recibió una actualización del Estado y advierte un crecimiento numérico anormal, pero no identifica una causa ni aporta cifras verificables en este pasaje. Mientras piensa, una War Shadow golpea su hombro y hace que suelte la daga. El Texto Sagrado parece reaccionar a sus pensamientos; no se extrae de ello una habilidad nueva.
+- **p. 82 — recuerdos:** Bell recuerda el encuentro fatal y la sonrisa de la deidad que le concedió la Gracia. El folio no identifica de nuevo a esa deidad en esa frase; el dato se conserva como recuerdo del personaje, sin crear una relación o acontecimiento adicional.
+- **p. 83 — caída de la primera War Shadow:** Bell golpea el rostro parecido a un espejo y atraviesa la cabeza. Sale líquido negro; el monstruo sufre espasmos y cae de rodillas sin fuerza. El texto de esta página no confirma expresamente que haya destruido su Piedra Mágica ni describe aquí su conversión en cenizas. No elevar el golpe en la cabeza a una regla sobre su punto débil.
+- **p. 83 — muerte explícita de la segunda War Shadow:** aprovechando que la otra criatura queda inmóvil al caer su compañera, Bell recupera la daga del suelo, alcanza a la segunda y le corta el pecho. La Piedra Mágica se rompe; el monstruo muere sin emitir sonido y su cuerpo se convierte en cenizas. Esta es la criatura cuyo desenlace sí queda descrito explícitamente en el folio.
+- **p. 84 — nuevas apariciones y bloqueo de la salida:** Bell intenta escapar, pero las paredes generan cuatro War Shadows nuevas, el doble de las dos anteriores. Al hablar de la frecuencia de nacimiento de monstruos, la traducción muestra una autocorrección de Bell («a partir del sexto, no, quinto piso»); se conserva como formulación del personaje y no se convierte en una regla general más precisa de lo que permite el texto. Por la única entrada empiezan a llegar monstruos del quinto piso y el espacio queda bloqueado; las War Shadows quedan rodeadas por otros monstruos.
+- **p. 84 — equipo improvisado:** Bell recoge de las cenizas un «Dedo de War Shadow» y lo equipa como recurso improvisado junto con su daga, cuya empuñadura falta. Sus manos se cortan y sangran. No se crea una ficha de objeto/arma única ni se le atribuyen estadísticas, daño, calidad o propiedades adicionales.
+- **p. 85 — resolución abierta:** Bell decide no rendirse y comienza a luchar contra los monstruos que se precipitan hacia él. La página termina al comenzar ese nuevo enfrentamiento; no se registra su resultado, escape ni rescate.
+- **p. 86 — inspección visual pendiente resuelta:** el folio es una ilustración de capítulo a página completa con título japonés. La figura no se identifica por apariencia y no se atribuye a War Shadow, Bell, Hestia ni a otra persona sin rótulo o respaldo textual seguro.
+- **p. 87 — perspectiva de Hestia:** comienza el capítulo 04 («Así que quería convertirme en su fuerza», según la traducción). El reloj marca las 5:00 de la mañana. Hestia lleva la noche buscando a Bell después de volver a casa y no encontrarlo. Su interpretación de que el enamoramiento de Bell por Aizu afecta su crecimiento y la molestia que sintió al ver su Estado son percepciones/emociones de Hestia, no hechos objetivos sobre el mecanismo de crecimiento ni confirmación de una relación romántica.
+- **p. 87 — preocupación y culpa:** Hestia recuerda la expresión de Bell cuando lo vio por última vez, siente culpa por sus propias palabras y considera que pudo verse involucrado en un incidente. Se registra su estado subjetivo; no se crea un evento separado solo por su reflexión.
+- **p. 88 — regreso de Bell:** cuando Hestia está por salir otra vez, Bell vuelve y la puerta la golpea al abrirse. Ella se alivia y llora al verlo, pero enseguida advierte que está agotado, embarrado y herido. La traducción describe pantalones rotos y tres marcas de garras en la rodilla derecha, con sangre ya seca. Bell admite que entró al Dungeon.
+- **p. 89 — estado y cuidado:** Bell no lleva equipo defensivo y Hestia considera que una sola embestida de un monstruo podría haber sido fatal. Él todavía conserva la daga que llevaba como amuleto; no se la identifica como la Daga de Hestia. Bell no explica el motivo de su incursión. Hestia deja de interrogarlo, le pide bañarse y dice que después curará sus heridas; lo ayuda a caminar por la carga que soporta su rodilla derecha.
+- **p. 90 — intimidad en tono de broma:** Hestia le ofrece su cama y bromea con que duerman juntos tras haberlo buscado toda la noche. Bell, agotado física y mentalmente, acepta literalmente sin captar del todo el doble sentido. Hestia se sonroja y se sobresalta, pero el folio no muestra que lleguen a acostarse juntos ni confirma reciprocidad romántica. La escena continúa abierta al final de p.90.
+
+**Control visual:** pp.81–85 y pp.87–90 son páginas de texto; p.86 es la única ilustración de este bloque y fue inspeccionada a página completa. La inspección de p.86 corrige el pendiente anterior que la marcaba como no reexaminada, sin asignar identidad a la figura.
+
+**Continuidad y no duplicación:**
+
+- Se amplía la ficha existente `MON-DM-WAR-SHADOW-001`; no se crea otra ficha de especie ni un individuo separado.
+- Se distingue el resultado de los dos ejemplares: la primera cae de rodillas tras el golpe a la cabeza, sin confirmación explícita de destrucción de Piedra Mágica en este pasaje; la segunda muere cuando Bell rompe su Piedra Mágica.
+- El «Dedo de War Shadow» queda como equipo improvisado descrito en la escena, no como una nueva ficha de arma/objeto.
+- No se crea todavía un evento cerrado para el combate: p.85 solo abre el enfrentamiento contra los monstruos que bloquean la salida. Tampoco se crea aún un evento separado para la búsqueda y regreso de Bell: la secuencia de Hestia continúa en p.90.
+- No se añaden personajes, relaciones románticas, lugares, niveles, habilidades ni estadísticas a partir de inferencias.
+
+**Siguiente página de pasada 2:** PDF p.91. La pasada 3 de pp.9–156 sigue pendiente; también queda por reconciliar la pasada 1 y completar las tareas de DMR-062. V1 permanece `IN_PROGRESS`.

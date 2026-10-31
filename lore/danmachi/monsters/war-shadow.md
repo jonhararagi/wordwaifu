@@ -30,16 +30,7 @@ Monstruo del sexto piso del Dungeon, descrito en la traducción como una criatur
 - El relato sitúa sus capacidades de combate entre las mejores del sexto piso y la presenta como el primer monstruo que un aventurero novato no podría derrotar en los pisos superiores (definidos en la traducción como pisos 1–12). Es una valoración textual localizada en p.80, no una clasificación formal externa.
 - En el encuentro de Bell aparecen dos ejemplares: el segundo nace detrás de él en p.80 y deja la situación en dos contra uno. El combate sigue abierto al cierre de ese folio.
 
-## Límites
-- No inferir nivel, clase oficial de amenaza, resistencia, rango habitual de aparición, regeneración ni habilidades adicionales. La referencia de p.80 a los pisos 1–12 es el alcance de una afirmación narrativa sobre novatos, no un mapa formal de aparición.
-- El bloque deja abierto el desenlace de la lucha y la huida; no se crea un evento cerrado para el combate solo a partir de estas páginas.
-- La traducción privada no está cotejada con el japonés.
 
-## Control visual
-- PDF p.79 fue renderizada a página completa: es una página de texto continuo, sin ilustración independiente. Se corrige cualquier referencia anterior que la clasificara como retrato o ilustración de War Shadow; no se deriva una imagen de la descripción textual.
-
-## Fuente
-DMR-061-SRC-001. Localizadores físicos: PDF pp. 79–85.
 
 
 ## Datos ampliados — segunda pasada pp. 81–85 (2026-10-31)
@@ -55,3 +46,14 @@ DMR-061-SRC-001. Localizadores físicos: PDF pp. 79–85.
 - No inferir nivel, resistencia, inmunidad, regeneración, daño del dedo ni una propiedad especial del equipo improvisado.
 - No crear un evento cerrado mientras el combate y la huida continúen sin desenlace en las páginas revisadas.
 
+
+## Límites
+- No inferir nivel, clase oficial de amenaza, resistencia, rango habitual de aparición, regeneración ni habilidades adicionales. La referencia de p.80 a los pisos 1–12 es el alcance de una afirmación narrativa sobre novatos, no un mapa formal de aparición.
+- El bloque deja abierto el desenlace de la lucha y la huida; no se crea un evento cerrado para el combate solo a partir de estas páginas.
+- La traducción privada no está cotejada con el japonés.
+
+## Control visual
+- PDF p.79 fue renderizada a página completa: es una página de texto continuo, sin ilustración independiente. Se corrige cualquier referencia anterior que la clasificara como retrato o ilustración de War Shadow; no se deriva una imagen de la descripción textual.
+
+## Fuente
+DMR-061-SRC-001. Localizadores físicos: PDF pp. 79–85.
