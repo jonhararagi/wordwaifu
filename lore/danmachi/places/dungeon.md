@@ -51,3 +51,12 @@ Este registro describe la función general confirmada por la fuente editorial; n
 ## Estado de certeza
 
 **Parcial, con fuente editorial oficial para la descripción general.** No se afirma que la geografía interna, los pisos o las reglas del Dungeon estén completos en esta ficha.
+ 
+## CONT-MAIN-LN · Volumen 1 · PDF pp.103, 117–120
+
+En la presentación nocturna de Orario, el Dungeon aparece como el laberinto que sostiene parte central de la actividad de la ciudad y como origen de monstruos y de incógnitas aún no exploradas (p.103). La narración no convierte esa exposición en una cartografía precisa de su interior.
+
+Durante la incursión de Bell en el cuarto piso aparecen un Dungeon Lizard y un Goblin; Bell los derrota y recupera fragmentos de Piedra Mágica. Después asciende desde el cuarto hasta el primer piso y llega al vestíbulo subterráneo de Babel (pp.117–120). El combate concreto se registra en EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001.
+
+**Límites:** no se reconstruyen rutas, dimensiones o conexiones internas a partir de esta secuencia; los encuentros menores del regreso con Goblins y Kobolds no reciben eventos individuales porque el texto no los describe por separado. Fuente DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
