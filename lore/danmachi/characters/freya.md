@@ -38,3 +38,12 @@ Freya se acerca a Hestia y Hephaistos durante el Banquete. Hestia expresa que no
 
 **Límite:** el pasaje no identifica de manera exhaustiva qué información confirmó Freya ni demuestra que haya espiado una conversación concreta. No fusionar esta reunión con su posterior encuentro con Loki y Ais durante el Festival de Monstruos (pp.139–145). Fuente DMR-061-SRC-001, traducción privada no cotejada con japonés.
 
+
+
+## Tercera pasada · Banquete de Ganesha · CONT-MAIN-LN · Volumen 1 · PDF pp.112–113
+
+Freya comenta que Loki, antes de llegar al Mundo Inferior, solía luchar con otros dioses para pasar el tiempo y que ahora le parece más dulce y menos peligrosa. Se trata de la impresión de Freya dentro del diálogo, no de una regla o medición del carácter de Loki. Después dice que ya ha confirmado lo que quería escuchar y se marcha. Hephaistos pregunta si Freya hizo algún movimiento para escuchar conversaciones ajenas; la pregunta no demuestra que ocurriera espionaje ni identifica lo que Freya confirmó.
+
+- **Evento:** EVT-DM-V01-GANESHA-GOD-BANQUET-001.
+- **Límite:** no fundir este episodio con el encuentro posterior de Freya, Loki y Ais durante el Festival de Monstruos (pp.139–145).
+- **Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés.
