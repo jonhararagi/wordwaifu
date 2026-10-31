@@ -119,3 +119,12 @@ El corpus conserva tres fichas urbanas procedentes del material oficial Prototyp
 - [Comercio de calle (Prototype)](commercial-streets-prototype.md) — `LOC-ORARIO-COMMERCIAL-STREETS-PROTOTYPE`.
 
 Las tres fichas conservan `CONT-PROTOTYPE`. No copiar sus relaciones espaciales al periodo principal sin cotejo independiente.
+ 
+## CONT-MAIN-LN · descripción de Orario y Babel · Volumen 1 · PDF pp.102–103
+
+La traducción describe Orario como una ciudad laberíntica rodeada por murallas circulares. Los edificios se presentan relativamente más altos en las zonas exteriores y más bajos conforme se acercan al centro. Por la noche, las calles se iluminan con lámparas de Piedra Mágica. La narración sitúa Babel en el centro y la describe como la torre dominante que cubre el Dungeon (pp.102–103).
+
+El pasaje vincula la prosperidad de Orario con el Dungeon, la actividad de los aventureros, los monstruos y las incógnitas aún no exploradas. La denominación narrativa «La Ciudad más Animada del Mundo» se conserva como frase descriptiva, no como medición.
+
+**Límites:** estas páginas no proporcionan coordenadas, orientación cardinal, distancias entre distritos, dimensiones exactas, población numérica ni una cartografía completa. Los detalles se mantienen separados de las fichas de Prototype, anime y wikis. Fuente DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
