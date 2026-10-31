@@ -3783,130 +3783,34 @@
       "status": "present"
     },
     {
-      "document_id": "DOC-VOLUMES-MAIN-README",
-      "path": "volumes/main/README.md",
-      "type": "volume_index",
-      "status": "present"
-    },
-    {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-01",
-      "path": "volumes/main/volume-01.md",
-      "type": "volume_dossier",
-      "status": "source_checked_partial_translation_unverified"
+      "path": "volumes/main/Volumen [01] • DanMachi.md",
+      "type": "volume_source",
+      "status": "source_uploaded_analysis_partial_three_passes_pp157_214"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-02",
-      "path": "volumes/main/volume-02.md",
-      "type": "volume_dossier",
-      "status": "source_checked_partial_translation_unverified"
+      "path": "volumes/main/Volumen [02] • DanMachi.md",
+      "type": "volume_source",
+      "status": "source_uploaded_analysis_partial_DMR060"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-03",
-      "path": "volumes/main/volume-03.md",
-      "type": "volume_dossier",
-      "status": "present_provisional_summary"
+      "path": "volumes/main/Volumen [03] • DanMachi.md",
+      "type": "volume_source",
+      "status": "source_uploaded_not_yet_reviewed"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-04",
-      "path": "volumes/main/volume-04.md",
-      "type": "volume_dossier",
-      "status": "present_provisional_summary"
+      "path": "volumes/main/Volumen [04] • DanMachi.md",
+      "type": "volume_source",
+      "status": "source_uploaded_not_yet_reviewed"
     },
     {
       "document_id": "DOC-VOLUMES-MAIN-VOLUME-05",
-      "path": "volumes/main/volume-05.md",
-      "type": "volume_dossier",
-      "status": "present_provisional_summary"
-    },
-    {
-      "document_id": "DOC-VOLUMES-MAIN-VOLUME-06",
-      "path": "volumes/main/volume-06.md",
-      "type": "volume_dossier",
-      "status": "present_provisional_summary"
-    },
-    {
-      "document_id": "DOC-VOLUMES-MAIN-VOLUME-07",
-      "path": "volumes/main/volume-07.md",
-      "type": "volume_dossier",
-      "status": "present_provisional_summary"
-    },
-    {
-      "document_id": "DOC-VOLUMES-MAIN-VOLUME-08",
-      "path": "volumes/main/volume-08.md",
-      "type": "volume_dossier",
-      "status": "present_provisional_summary"
-    },
-    {
-      "document_id": "DOC-VOLUMES-MAIN-VOLUME-09",
-      "path": "volumes/main/volume-09.md",
-      "type": "volume_dossier",
-      "status": "present_provisional_summary"
-    },
-    {
-      "document_id": "DOC-VOLUMES-MAIN-VOLUME-10",
-      "path": "volumes/main/volume-10.md",
-      "type": "volume_dossier",
-      "status": "present_provisional_summary"
-    },
-    {
-      "document_id": "DOC-VOLUMES-MAIN-VOLUME-11",
-      "path": "volumes/main/volume-11.md",
-      "type": "volume_dossier",
-      "status": "present_provisional_summary"
-    },
-    {
-      "document_id": "DOC-VOLUMES-MAIN-VOLUME-12",
-      "path": "volumes/main/volume-12.md",
-      "type": "volume_dossier",
-      "status": "present_provisional_summary"
-    },
-    {
-      "document_id": "DOC-VOLUMES-MAIN-VOLUME-13",
-      "path": "volumes/main/volume-13.md",
-      "type": "volume_dossier",
-      "status": "present_provisional_summary"
-    },
-    {
-      "document_id": "DOC-VOLUMES-MAIN-VOLUME-14",
-      "path": "volumes/main/volume-14.md",
-      "type": "volume_dossier",
-      "status": "present_provisional_summary"
-    },
-    {
-      "document_id": "DOC-VOLUMES-MAIN-VOLUME-15",
-      "path": "volumes/main/volume-15.md",
-      "type": "volume_dossier",
-      "status": "present_provisional_summary"
-    },
-    {
-      "document_id": "DOC-VOLUMES-MAIN-VOLUME-16",
-      "path": "volumes/main/volume-16.md",
-      "type": "volume_dossier",
-      "status": "present_provisional_summary"
-    },
-    {
-      "document_id": "DOC-VOLUMES-MAIN-VOLUME-17",
-      "path": "volumes/main/volume-17.md",
-      "type": "volume_dossier",
-      "status": "present_provisional_summary"
-    },
-    {
-      "document_id": "DOC-VOLUMES-MAIN-VOLUME-18",
-      "path": "volumes/main/volume-18.md",
-      "type": "volume_dossier",
-      "status": "present_provisional_summary"
-    },
-    {
-      "document_id": "DOC-VOLUMES-MAIN-VOLUME-19",
-      "path": "volumes/main/volume-19.md",
-      "type": "volume_dossier",
-      "status": "present_provisional_summary"
-    },
-    {
-      "document_id": "DOC-VOLUMES-MAIN-VOLUME-20",
-      "path": "volumes/main/volume-20.md",
-      "type": "volume_dossier",
-      "status": "present_provisional_summary"
+      "path": "volumes/main/Volumen [05] • DanMachi.md",
+      "type": "volume_source",
+      "status": "source_uploaded_not_yet_reviewed"
     },
     {
       "document_id": "DOC-CHARACTER-TEMPORAL-VARIANTS",
@@ -3943,81 +3847,9 @@
       "status": "present"
     },
     {
-      "document_id": "DOC-VOLUMES-MAIN-VOLUME-21",
-      "path": "volumes/main/volume-21.md",
-      "type": "volume_dossier",
-      "status": "present_provisional_summary"
-    },
-    {
       "document_id": "RESEARCH-DM-008",
       "path": "research/inbox/BATCH-DM-008-main-story-volume-map.md",
       "type": "main_story_volume_claim_index",
-      "status": "present_provisional_summary"
-    },
-    {
-      "document_id": "DOC-SIDE-ASTREA-RECORD-01",
-      "path": "volumes/side/astrea-record-01.md",
-      "type": "side_volume_dossier",
-      "status": "present_provisional_summary"
-    },
-    {
-      "document_id": "DOC-SIDE-ASTREA-RECORD-02",
-      "path": "volumes/side/astrea-record-02.md",
-      "type": "side_volume_dossier",
-      "status": "present_provisional_summary"
-    },
-    {
-      "document_id": "DOC-SIDE-ASTREA-RECORD-03",
-      "path": "volumes/side/astrea-record-03.md",
-      "type": "side_volume_dossier",
-      "status": "present_provisional_summary"
-    },
-    {
-      "document_id": "DOC-SIDE-SWORD-ORATORIA-01",
-      "path": "volumes/side/sword-oratoria-01.md",
-      "type": "side_volume_dossier",
-      "status": "present_provisional_summary"
-    },
-    {
-      "document_id": "DOC-SIDE-SWORD-ORATORIA-12",
-      "path": "volumes/side/sword-oratoria-12.md",
-      "type": "side_volume_dossier",
-      "status": "present_provisional_summary"
-    },
-    {
-      "document_id": "DOC-SIDE-SWORD-ORATORIA-13",
-      "path": "volumes/side/sword-oratoria-13.md",
-      "type": "side_volume_dossier",
-      "status": "present_provisional_summary"
-    },
-    {
-      "document_id": "DOC-SIDE-FAMILIA-CHRONICLE-RYU-01",
-      "path": "volumes/side/familia-chronicle-ryu-01.md",
-      "type": "side_volume_dossier",
-      "status": "present_provisional_summary"
-    },
-    {
-      "document_id": "DOC-SIDE-FAMILIA-CHRONICLE-RYU-02",
-      "path": "volumes/side/familia-chronicle-ryu-02.md",
-      "type": "side_volume_dossier",
-      "status": "present_provisional_summary"
-    },
-    {
-      "document_id": "DOC-SIDE-FAMILIA-CHRONICLE-FREYA",
-      "path": "volumes/side/familia-chronicle-freya.md",
-      "type": "side_volume_dossier",
-      "status": "present_provisional_summary"
-    },
-    {
-      "document_id": "DOC-SIDE-FAMILIA-CHRONICLE-ASFI",
-      "path": "volumes/side/familia-chronicle-asfi.md",
-      "type": "side_volume_dossier",
-      "status": "present_provisional_summary"
-    },
-    {
-      "document_id": "DOC-SIDE-FAMILIA-CHRONICLE-HAZE",
-      "path": "volumes/side/familia-chronicle-haze.md",
-      "type": "side_volume_dossier",
       "status": "present_provisional_summary"
     },
     {
@@ -4247,6 +4079,24 @@
       "path": "research/inbox/DANMACHI-RESEARCH-062-volume-01-markdown-cross-audit.md",
       "type": "research_dossier",
       "status": "present"
+    },
+    {
+      "document_id": "DOC-VOLUMES-ASTREA-RECORD-README",
+      "path": "volumes/astrea-record/README.md",
+      "type": "volume_series_index",
+      "status": "folder_prepared_sources_pending"
+    },
+    {
+      "document_id": "DOC-VOLUMES-SWORD-ORATORIA-README",
+      "path": "volumes/sword-oratoria/README.md",
+      "type": "volume_series_index",
+      "status": "folder_prepared_sources_pending"
+    },
+    {
+      "document_id": "DOC-VOLUMES-FAMILIA-CHRONICLE-README",
+      "path": "volumes/familia-chronicle/README.md",
+      "type": "volume_series_index",
+      "status": "folder_prepared_sources_pending"
     }
   ],
   "lastStructuredSync": "2026-10-30",
