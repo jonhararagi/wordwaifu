@@ -3,9 +3,10 @@ id: DM-CHAR-LOKI
 universe: danmachi
 type: character
 status: provisional
+continuity_scope: CROSS-CONTINUITY
 confidence: high for general identity; medium for exact chronology
 tags: [Loki, deidad, Familia Loki, Orario]
-source_refs: [DanMachi light novel series; localizador pendiente]
+source_refs: [DMR-061-SRC-001]
 ---
 # Loki
 
