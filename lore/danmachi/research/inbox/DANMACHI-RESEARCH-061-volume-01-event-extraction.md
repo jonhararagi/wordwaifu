@@ -1349,3 +1349,41 @@ La actualización de pp.91–96 es distinta de la actualización tras el Minotau
 - **Revisión correctiva:** p.119 para separar curación percibida y estadísticas; pp.121–123 para distinguir deducción de Bell, conversación oída y acción de Eina; p.125 para fijar el intervalo de dos días; p.126 para evitar identificar por apariencia; p.128 para no confundir la daga de escaparate con la Daga de Hestia.
 
 **Checkpoint:** tercera pasada completada pp.9–128 (120 folios). Próxima página física PDF p.129. Restan pp.129–156 (28 folios) de la tercera pasada. La pasada 2 pp.9–156 permanece completada. La reconciliación integral de la pasada 1 sigue pendiente. V1 continúa IN_PROGRESS; DMR-061-SRC-001 sigue siendo una traducción privada no cotejada con japonés.
+
+
+## DMR-061 — tercera pasada V1 · PDF pp.129–138 · 2026-10-31
+
+**Estado del bloque:** tres controles completos por folio (extracción, inspección visual del PDF físico y auditoría de continuidad/duplicados). Cuarta revisión correctiva puntual en pp.130–134, p.135 y pp.136–138. Fuente DMR-061-SRC-001, traducción privada española no cotejada con japonés.
+
+### Extracción por folio
+
+- **p.129:** Hestia continúa haciendo dogeza en la sucursal de Hephaistos Familia de la Calle Principal del Noreste. Hephaistos se muestra incómoda ante la persistencia y la petición sigue sin aceptar al inicio del folio.
+- **p.130:** han pasado dos días desde el Banquete de Ganesha. Hephaistos recuerda que rechazó la petición porque Hestia no dispone de dinero y una rebaja/regalo devaluaría el trabajo de los herreros de su Familia. Hestia mantiene la dogeza.
+- **p.131:** Hestia atribuye de forma humorística la técnica de dogeza a «Take» (Takemikazuchi), sin que eso se convierta en regla del mundo. Explica que quiere ser una ayuda para Bell, que ha encontrado un objetivo y se dirige hacia un camino peligroso. Quiere darle un arma que le permita abrirse paso y corresponder a lo que él ha hecho por ella.
+- **p.132:** Hephaistos acepta fabricar el arma. Hestia se levanta con dificultad por el entumecimiento tras permanecer arrodillada. Hephaistos exige que la deuda se pague íntegra, aunque tarde décadas o siglos; no es un regalo ni una condonación.
+- **p.133:** Hephaistos selecciona un martillo carmesí y mithril, decide hacer ella misma la forja como asunto privado entre ambas y deja claro que no involucrará a los herreros de su Familia. La traducción recuerda que los dioses no pueden usar Poder Divino en el Mundo Inferior conforme al acuerdo que los rige. Hestia tendrá que ayudar en el taller.
+- **p.134:** Hephaistos recuerda a Bell como humano de catorce años y con Falna reciente, según su propia memoria. Le preocupa que un arma demasiado poderosa frene su crecimiento o no se ajuste a él; una obra demasiado corriente deshonraría el oficio de Hephaistos. El diseño definitivo sigue abierto.
+- **p.135:** tercer día por la mañana desde la salida de Hestia. Bell se prepara para volver al Dungeon con la pierna recuperada; piensa ir al quinto piso y considera pedir consejo a Eina. Cree que su Estado mejoró, pero no hay nuevas cifras ni evidencia de que la entrada o el combate ya ocurrieron.
+- **p.136:** al pasar por La Señora de la Abundancia, Bell es llamado «Cabello Blanco» por Anya, camarera con orejas y cola de gato. Ella le pide que lleve algo a Seal.
+- **p.137:** Anya entrega un pequeño monedero púrpura con broche metálico y dinero dentro. Ryuu interviene para completar la explicación: Seal salió en su día libre para visitar el Festival de Monstruos y olvidó el monedero. Anya se avergüenza por su explicación inicial.
+- **p.138:** Anya explica que el Festival es anual, organizado por Ganesha Familia y celebrado durante todo el día en el Coliseo. Ryuu explica la domesticación como un proceso que requiere aptitud/fuerza del domador y obediencia del monstruo; los monstruos del Dungeon son más difíciles que los de superficie. Los miembros principales de Ganesha Familia poseen fuerza suficiente para hacerlo. Como Anya y Ryuu no tienen permiso para asistir, Seal fue sola; Bell acepta llevar el monedero y sigue la indicación de dirigirse por la Calle Principal del Este. El monedero no llega a Seal en estos folios.
+
+### Auditoría de continuidad, relaciones y no duplicación
+
+- **Petición y forja:** se amplía EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001, iniciado en p.115. La dogeza, la explicación de Hestia, la aceptación, la deuda, la selección de materiales y el dilema de diseño forman parte de la misma secuencia. La entrega física de pp.145–146 sigue separada.
+- **Deuda:** se conserva como íntegra; no se inventan cifra, interés, plazo exacto, condonación o pago.
+- **Memoria de Hephaistos:** edad de Bell y antigüedad de su Falna se atribuyen a los recuerdos de Hephaistos en p.134; no se convierten en metadatos atemporales.
+- **Bell y el quinto piso:** p.135 expresa intención y preparación, no una incursión o un combate completado.
+- **Anya y Ryuu:** se reutilizan las fichas existentes y los nombres de la traducción. No se trasladan apellidos, niveles, magias ni afiliaciones de anime, juegos o fuentes secundarias.
+- **Monedero de Seal:** es un encargo abierto. No se crea ni cierra un evento de devolución y no se confunde con la visita de disculpa de pp.98–102.
+- **Festival:** la exposición de pp.138–139 amplía el contexto del evento existente; no se crea un segundo Festival ni monstruos/especies individuales por esta conversación.
+- **Conocimiento:** la salida de Seal y el olvido del monedero son relatados por Anya/Ryuu, no presenciados por Bell.
+- **IDs:** no se crean IDs de personaje, evento, lugar u objeto. No se modifican catalog.json ni eras-and-events.json.
+
+### Inspección visual
+
+- Las diez páginas físicas PDF pp.129–138 se renderizaron e inspeccionaron individualmente a 130 dpi.
+- Todas son páginas de texto continuo; no hay ilustraciones, tablas, diagramas ni notas al pie.
+- **Revisión correctiva:** pp.130–134 para diferenciar insistencia, aceptación, deuda y diseño; p.135 para separar intención de incursión realizada; pp.136–138 para no cerrar anticipadamente el encargo del monedero ni incorporar datos de otras continuidades.
+
+**Checkpoint:** tercera pasada completada pp.9–138 (130 folios). Próxima página física PDF p.139. Restan pp.139–156 (18 folios) de la tercera pasada. La pasada 2 pp.9–156 permanece completada. La reconciliación integral de la pasada 1 sigue pendiente. V1 continúa IN_PROGRESS; DMR-061-SRC-001 sigue siendo una traducción privada no cotejada con japonés.
