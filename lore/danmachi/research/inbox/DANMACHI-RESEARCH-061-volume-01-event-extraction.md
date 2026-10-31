@@ -1182,3 +1182,40 @@ La actualización de pp.91–96 es distinta de la actualización tras el Minotau
 - **Revisión correctiva:** pp.83–85 para distinguir los destinos de cada War Shadow y la naturaleza improvisada del dedo; pp.87–88 para no atribuir a Hestia conocimiento de la incursión ni afirmar cómo Bell escapó.
 
 **Checkpoint:** tercera pasada completada pp.9–88 (80 folios). Próxima página física PDF p.89. Restan pp.89–156 (68 folios) de la tercera pasada. La pasada 2 pp.9–156 permanece completada. La reconciliación integral de la pasada 1 sigue pendiente. V1 continúa IN_PROGRESS; DMR-061-SRC-001 sigue siendo una traducción privada no cotejada con japonés.
+ 
+
+## DMR-061 — tercera pasada V1 · PDF pp.89–98 · 2026-10-31
+
+**Estado:** tres controles por folio (extracción, inspección visual y continuidad); cuarta revisión correctiva en pp.91 y 93–96 y p.98. Fuente DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
+### Extracción por folio
+
+- **p.89:** Hestia reprende a Bell por pasar la noche en el Dungeon sin equipo defensivo. Observa que todavía lleva la daga como amuleto y que la lesión de la rodilla derecha le dificulta caminar. Bell no explica el motivo de la incursión. Hestia deja de interrogarlo, le pide bañarse y anuncia que después curará sus heridas. Lo sostiene para ayudarlo a caminar.
+- **p.90:** Hestia cede a Bell su cama para que descanse y bromea con que duerman juntos tras haberlo buscado toda la noche. Bell acepta literalmente, agotado física y mentalmente; Hestia se avergüenza. Bell expresa que quiere hacerse más fuerte. Esta escena termina antes de la actualización del Estado, que ocurre después de una noche.
+- **p.91:** actualización del Estado, Lv.1: Fuerza H123→G221; Resistencia I42→H101; Destreza H139→G232; Agilidad G225→F313; Magia I0. La habilidad visible en el Estado grabado es [Deseo Inquebrantable], con tres efectos: acelera el crecimiento; dura mientras los sentimientos de Bell no cambien; y la intensidad depende de la fuerza de esos sentimientos. Bell no lee ni recibe el nombre/efectos de la habilidad en esta escena. La discrepancia con H120 en p.54 sigue abierta.
+- **p.92:** Hestia considera que el crecimiento es un salto anormal y lo compara con la progresión de otros aventureros. Son estimaciones y pensamientos de Hestia, no una fórmula objetiva ni una predicción de ascenso.
+- **p.93:** Hestia sopesa si revelar la habilidad. Teme que el conocimiento pueda producir arrogancia, accidentes o la pérdida de Bell; finalmente decide confiar en su voluntad de hacerse más fuerte.
+- **p.94:** Hestia razona que [Deseo Inquebrantable] parece una habilidad rara/no confirmada y teme que otros dioses se interesen. Reconoce que sus celos respecto de Wallenstein representan, según su propio pensamiento, el 90% de su motivo. No convertir esa proporción emocional en dato objetivo ni universalizar sus afirmaciones sobre habilidades.
+- **p.95:** Hestia comunica a Bell que su crecimiento es anormal y lo llama un período de crecimiento, pero no revela [Deseo Inquebrantable]. Lo reprende al saber que quizá llegó al sexto piso sin equipo defensivo. También reconoce técnicas, decisiones, agilidad y experiencia de combate propias de Bell; no atribuye todo a la habilidad. Pide que no vuelva a sobreesforzarse.
+- **p.96:** Hestia le ofrece ayuda y su poder, pero le pide que no la deje sola. Bell promete no ser imprudente, seguir esforzándose para hacerse más fuerte y no dejar sola a Hestia.
+- **p.97:** Hestia decide usar la invitación al Banquete de Ganesha para intentar ver a Hephaistos y anuncia que saldrá esa noche, quizá un par de días. Bell pregunta si puede regresar al Dungeon; Hestia acepta, pero le pide que recuerde que todavía está herido y que considere volver.
+- **p.98:** cerca del mediodía, Bell va a La Señora de la Abundancia antes de regresar al Dungeon. Recuerda el consejo de Hestia de no forzarse y encuentra un cartel de «Cerrado», pero entra. Dos empleadas sin nombre, una elfa y una nekomusume, preparan el local y lo reconocen como el joven que comió y salió corriendo. Bell pregunta por Seal y por la jefa. La nota al pie 1 define «nekomusume» como criatura de la mitología japonesa y compara sus rasgos con la representación moderna de «chica gato». Se conserva como nota del traductor, no como ficha ni claim.
+
+### Continuidad y límites
+
+- **pp.87–90:** nuevo evento independiente: EVT-DM-V01-HESTIA-SEARCHES-BELL-AND-CARES-FOR-HIM-001. La búsqueda nocturna, regreso y cuidado de Bell terminan en p.90 antes de la siguiente actualización. No se infiere cómo escapó Bell del sexto piso.
+- **pp.91–97:** ampliar EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001. No fusionar este snapshot con las actualizaciones de pp.30–36, p.54 o pp.193–196.
+- Hestia ve la habilidad; Bell recibe solo la explicación de crecimiento anormal. No transferir el conocimiento de Hestia a Bell.
+- Mantener H120 de p.54 y H123 como valor anterior de p.91; no inventar actualización intermedia.
+- **p.98:** reutilizar EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001, que continúa en pp.99–102. Las dos empleadas no reciben ficha ni identidad inferida.
+- La nota de nekomusume es aparato de traducción, no taxonomía del canon.
+- p.87 marca 5:00 a. m.; p.91 dice que pasó una noche desde el regreso. p.98 ocurre cerca del mediodía. No asignar fecha de calendario.
+
+### Inspección visual
+
+- Diez páginas PDF pp.89–98 inspeccionadas individualmente a 130 dpi.
+- p.91 contiene el bloque/tabla física del Estado; p.98 contiene la nota al pie 1.
+- El resto son páginas de texto continuo; no hay ilustraciones ni diagramas.
+- Cuarta revisión en pp.91 y 93–96 para separar lo que Hestia sabe de lo que revela; p.98 para limitar el alcance de la nota editorial.
+
+**Checkpoint:** tercera pasada completada pp.9–98 (90 folios). Próxima página física p.99; restan pp.99–156 (58 folios). Pasada 2 pp.9–156 completada. Reconciliación integral de pasada 1 pendiente. V1 IN_PROGRESS; traducción privada no cotejada con japonés.
