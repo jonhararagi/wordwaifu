@@ -1157,98 +1157,10 @@
       ]
     },
     {
-      "id": "EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001",
-      "recordId": "EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001",
-      "eraId": "ERA-05-MAIN-START",
-      "sortIndex": 622,
-      "title": "Bell derrota a un Dungeon Lizard y un Goblin y regresa hacia la superficie",
-      "dateLabel": "Después de la visita a Seal; Bell vuelve al Dungeon durante el día y llega al vestíbulo de Babel cuando ya es de noche.",
-      "continuityScopes": [
-        "CONT-MAIN-LN"
-      ],
-      "evidenceStatus": "source_checked_translation_unverified",
-      "summary": "En el cuarto piso, Bell derrota a un Dungeon Lizard con la daga y a un Goblin arrojándole la mochila cargada. Recupera fragmentos de Piedra Mágica, comprueba que su rodilla parece recuperada y asciende hacia la superficie; en el regreso derrota otros Goblins y Kobolds sin detalles individuales y llega al vestíbulo subterráneo de Babel.",
-      "participants": [
-        {
-          "id": "DM-CHAR-BELL",
-          "name": "Bell Cranel",
-          "kind": "character",
-          "role": "combate, recoge fragmentos y regresa hacia la superficie"
-        }
-      ],
-      "relatedEntities": [
-        {
-          "id": "MON-DM-DUNGEON-LIZARD-001",
-          "name": "Dungeon Lizard",
-          "kind": "monster"
-        },
-        {
-          "id": "MON-DM-GOBLIN-001",
-          "name": "Goblin",
-          "kind": "monster"
-        },
-        {
-          "id": "MON-DM-KOBOLD-001",
-          "name": "Kobold",
-          "kind": "monster"
-        }
-      ],
-      "detailPath": "events/timeline/EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001.md",
-      "sources": [
-        {
-          "label": "DMR-061 · Volumen 1 aportado por el usuario",
-          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
-          "kind": "user_supplied_source_report",
-          "note": "Traducción privada no cotejada con japonés; localizador PDF pp.117–120."
-        },
-        {
-          "label": "Registro individual del acontecimiento",
-          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001.md",
-          "kind": "internal",
-          "note": "Combate en el cuarto piso, recuperación de fragmentos y regreso a Babel."
-        }
-      ],
-      "temporal": {
-        "kind": "relative_order",
-        "relation": "after",
-        "referenceIds": [
-          "EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001"
-        ],
-        "distanceKnown": false,
-        "precision": "order_only",
-        "qualifier": "Bell vuelve al Dungeon después de visitar a Seal. La exploración termina con su llegada a Babel cuando ya debe ser de noche; no se asigna fecha absoluta.",
-        "sourceUrls": [
-          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
-          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001.md"
-        ]
-      },
-      "narrativeOrigin": {
-        "kind": "published_reference"
-      },
-      "locationAssessment": {
-        "status": "verified",
-        "spatialPrecision": "floor_context",
-        "reason": "El combate se localiza expresamente en el cuarto piso del Dungeon; la salida posterior se describe como ascenso hacia Babel."
-      },
-      "locationRefs": [
-        {
-          "locationId": "LOC-DUNGEON",
-          "relationship": "event_place",
-          "verificationStatus": "verified",
-          "spatialPrecision": "floor_context",
-          "context": "Combate en el cuarto piso y ascenso desde el cuarto al primer piso antes de alcanzar el vestíbulo subterráneo de Babel.",
-          "sourceUrls": [
-            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
-            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001.md"
-          ]
-        }
-      ]
-    },
-    {
       "id": "EVT-DM-V01-GANESHA-GOD-BANQUET-001",
       "recordId": "EVT-DM-V01-GANESHA-GOD-BANQUET-001",
       "eraId": "ERA-05-MAIN-START",
-      "sortIndex": 623,
+      "sortIndex": 622,
       "title": "Ganesha organiza un Banquete de Dios y Hestia pide un arma para Bell",
       "dateLabel": "Por la noche, después de la salida de Hestia y de la visita de Bell a Seal; fecha absoluta desconocida.",
       "continuityScopes": [
@@ -1336,6 +1248,249 @@
           "sourceUrls": [
             "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
             "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-GANESHA-GOD-BANQUET-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001",
+      "recordId": "EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 623,
+      "title": "Hestia pide a Hephaistos un arma para Bell y persevera hasta obtener su aceptación",
+      "dateLabel": "Comienza durante el Banquete de Ganesha y continúa durante los dos días posteriores; fecha absoluta desconocida.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Hestia pide a Hephaistos que fabrique un arma para Bell durante el Banquete. Hephaistos se niega por razones de calidad, coste y responsabilidad hacia los herreros de su Familia. Hestia insiste mediante dogeza durante dos días y explica cuánto desea ayudar a Bell; Hephaistos finalmente acepta forjar personalmente una daga, manteniendo la deuda íntegra.",
+      "participants": [
+        {
+          "id": "DM-CHAR-HESTIA",
+          "name": "Hestia",
+          "kind": "character",
+          "role": "solicita un arma para Bell e insiste durante dos días"
+        },
+        {
+          "id": "CHAR-HEPHAISTOS",
+          "name": "Hephaistos",
+          "kind": "character",
+          "role": "rechaza inicialmente la petición y finalmente acepta la forja"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001.md",
+      "sources": [
+        {
+          "label": "DMR-061 · Volumen 1 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Traducción privada no cotejada con japonés; localizadores PDF p.115 y pp.129–133."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001.md",
+          "kind": "internal",
+          "note": "La petición inicia en el Banquete y la aceptación llega tras dos días de insistencia."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "overlaps",
+        "referenceIds": [
+          "EVT-DM-V01-GANESHA-GOD-BANQUET-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "La petición se formula durante el Banquete (p.115); la insistencia de Hestia continúa durante los dos días siguientes hasta que Hephaistos acepta la forja (pp.129–133).",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-GANESHA-GOD-BANQUET-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "provisional",
+        "spatialPrecision": "city_level",
+        "reason": "El evento comienza en el Banquete de Ganesha y continúa en una sucursal de Hephaistos Familia en la Calle Principal del Noreste; solo se asigna el marco urbano de Orario, sin ubicación exacta del recinto o taller."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "provisional",
+          "spatialPrecision": "city_level",
+          "context": "El Banquete y la sucursal de Hephaistos Familia se sitúan en Orario; el mapa no fija la ubicación exacta de ambos recintos.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001",
+      "recordId": "EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 624,
+      "title": "Bell derrota a un Dungeon Lizard y un Goblin y regresa hacia la superficie",
+      "dateLabel": "Exactamente dos días después del Banquete de Ganesha; Bell vuelve al Dungeon y llega a Babel cuando ya es de noche.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "En el cuarto piso, Bell derrota a un Dungeon Lizard con la daga y a un Goblin arrojándole la mochila cargada. Recupera fragmentos de Piedra Mágica, comprueba que su rodilla parece recuperada y asciende hacia la superficie; en el regreso derrota otros Goblins y Kobolds sin detalles individuales y llega al vestíbulo subterráneo de Babel.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "combate, recoge fragmentos y regresa hacia la superficie"
+        }
+      ],
+      "relatedEntities": [
+        {
+          "id": "MON-DM-DUNGEON-LIZARD-001",
+          "name": "Dungeon Lizard",
+          "kind": "monster"
+        },
+        {
+          "id": "MON-DM-GOBLIN-001",
+          "name": "Goblin",
+          "kind": "monster"
+        },
+        {
+          "id": "MON-DM-KOBOLD-001",
+          "name": "Kobold",
+          "kind": "monster"
+        }
+      ],
+      "detailPath": "events/timeline/EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001.md",
+      "sources": [
+        {
+          "label": "DMR-061 · Volumen 1 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Traducción privada no cotejada con japonés; localizador PDF pp.117–120."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001.md",
+          "kind": "internal",
+          "note": "Combate en el cuarto piso, recuperación de fragmentos y regreso a Babel."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_offset",
+        "anchorId": "EVT-DM-V01-GANESHA-GOD-BANQUET-001",
+        "anchorLabel": "Banquete de Ganesha",
+        "direction": "after",
+        "amount": 2,
+        "unit": "day",
+        "precision": "exact",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "floor_context",
+        "reason": "El combate se localiza expresamente en el cuarto piso del Dungeon; la salida posterior se describe como ascenso hacia Babel."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "floor_context",
+          "context": "Combate en el cuarto piso y ascenso desde el cuarto al primer piso antes de alcanzar el vestíbulo subterráneo de Babel.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V01-BELL-RECEIVES-RECOVERY-POTIONS-FROM-MIACH-001",
+      "recordId": "EVT-DM-V01-BELL-RECEIVES-RECOVERY-POTIONS-FROM-MIACH-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 625,
+      "title": "Miach entrega a Bell dos pociones de recuperación",
+      "dateLabel": "Exactamente dos días después del Banquete de Ganesha; después de que Bell vuelve desde el Dungeon.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Bell se cruza con Miach en la Calle Principal del Noreste después de salir del Gremio. Hablan de Hestia y del Banquete de Ganesha. Miach, que no asistió porque estaba trabajando con su Familia, le entrega a Bell dos pociones recién hechas como cortesía; Bell las guarda en la funda de su pierna izquierda.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "recibe y guarda dos pociones de recuperación"
+        },
+        {
+          "id": "CHAR-MIACH",
+          "name": "Miach",
+          "kind": "character",
+          "role": "entrega dos pociones como cortesía y pide a Bell que apoye a su Familia"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V01-BELL-RECEIVES-RECOVERY-POTIONS-FROM-MIACH-001.md",
+      "sources": [
+        {
+          "label": "DMR-061 · Volumen 1 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Traducción privada no cotejada con japonés; localizadores PDF pp.124–127."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-RECEIVES-RECOVERY-POTIONS-FROM-MIACH-001.md",
+          "kind": "internal",
+          "note": "Dos pociones de recuperación recién hechas; no hay compra ni precio."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_offset",
+        "anchorId": "EVT-DM-V01-GANESHA-GOD-BANQUET-001",
+        "anchorLabel": "Banquete de Ganesha",
+        "direction": "after",
+        "amount": 2,
+        "unit": "day",
+        "precision": "exact",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-RECEIVES-RECOVERY-POTIONS-FROM-MIACH-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "provisional",
+        "spatialPrecision": "city_level",
+        "reason": "El encuentro tiene lugar en la Calle Principal del Noreste de Orario, pero el registro de lugares no asigna un nodo específico a ese tramo de calle."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "provisional",
+          "spatialPrecision": "city_level",
+          "context": "Encuentro de Bell y Miach en la Calle Principal del Noreste de Orario; no se crea un nodo específico para el tramo de avenida.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-RECEIVES-RECOVERY-POTIONS-FROM-MIACH-001.md"
           ]
         }
       ]
