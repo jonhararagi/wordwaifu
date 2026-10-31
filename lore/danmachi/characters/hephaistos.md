@@ -76,3 +76,12 @@ En p.134 considera los datos que recuerda sobre Bell —aventurero novato, human
 - **Evento:** EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001.
 - **Límite:** las cifras de edad y antigüedad de Falna que Hephaistos recuerda son información narrada desde su perspectiva en esta traducción, no atributos atemporales del perfil de Bell.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
+
+## Tercera pasada · petición de Hestia · CONT-MAIN-LN · Volumen 1 · PDF pp.114–115
+
+Hestia recuerda su propósito en el Banquete y decide formular la petición a Hephaistos pese al riesgo de que su amiga se moleste. Hephaistos adopta una expresión seria y le pregunta si ha pensado bien lo que va a pedir, recordándole que había dicho que no la molestaría. La narración describe a Hephaistos Familia como una Familia de herreros muy conocida, con una marca famosa y un alcance que excede Orario. En p.115 Hestia finalmente pide que fabrique un arma para Bell.
+
+- **Evento:** EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001.
+- **Límite:** p.115 confirma la solicitud, no la aceptación, el diseño, el coste ni la entrega.
+- **Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés.
