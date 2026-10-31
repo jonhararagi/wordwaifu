@@ -10,7 +10,7 @@ source_refs: [DMR-061-SRC-001]
 source_locators: [PDF pp.87–90]
 related_character_ids: [DM-CHAR-BELL, DM-CHAR-HESTIA]
 related_event_ids: [EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001]
-location_ids: [LOC-HESTIA-HOME]
+location_ids: [LOC-ORARIO]
 spoiler_level: mild
 ---
 # Hestia busca a Bell, lo recibe herido y lo cuida
@@ -20,7 +20,7 @@ spoiler_level: mild
 - **Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés.
 - **Páginas físicas:** PDF pp.87–90.
 - **Continuidad:** CONT-MAIN-LN.
-- **Lugar:** residencia subterránea de Hestia Familia dentro de la iglesia; se reutiliza LOC-HESTIA-HOME. La búsqueda ocurre por calles sin localizador más preciso.
+- **Lugar:** residencia subterránea de Hestia Familia dentro de la iglesia; se reutiliza LOC-HESTIA-HOME. La búsqueda ocurre por las calles de Orario; la precisión del mapa se limita al nivel de ciudad. La residencia concreta se describe en la ficha LOC-HESTIA-HOME.
 - **Ancla temporal:** madrugada posterior a la noche en que Bell permaneció en el Dungeon. El reloj de la casa marca las 5:00 a. m. en p.87; no se asigna fecha de calendario.
 
 ## Resumen
