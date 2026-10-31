@@ -1016,6 +1016,331 @@
       ]
     },
     {
+      "id": "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001",
+      "recordId": "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 620,
+      "title": "Hestia actualiza el Estado de Bell y ambos acuerdan no dejarse solos",
+      "dateLabel": "La mañana posterior al regreso de Bell de la incursión del sexto piso; intervalo exacto no cuantificado.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Hestia registra un nuevo aumento de atributos y vuelve a ver [Deseo Inquebrantable], pero oculta la Habilidad a Bell. Le explica el crecimiento anormal y ambos acuerdan que Bell no se sobreesforzará ni dejará sola a Hestia.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "recibe la actualización y promete prudencia"
+        },
+        {
+          "id": "DM-CHAR-HESTIA",
+          "name": "Hestia",
+          "kind": "character",
+          "role": "actualiza el Estado y mantiene oculta la Habilidad"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001.md",
+      "sources": [
+        {
+          "label": "DMR-061 · Volumen 1 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Traducción privada no cotejada con japonés; localizador PDF pp.91–97."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001.md",
+          "kind": "internal",
+          "note": "Incluye snapshot y discrepancia de Fuerza entre pp.54 y 91."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-BELL-AIS-MINOTAUR-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "Ocurre después de la incursión del sexto piso y del regreso de Bell; no se cuantifica el intervalo.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "unknown",
+        "spatialPrecision": "unknown",
+        "reason": "La escena ocurre durante una actualización doméstica, pero el folio no fija un nombre de ubicación catalogable."
+      },
+      "locationRefs": []
+    },
+    {
+      "id": "EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001",
+      "recordId": "EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 621,
+      "title": "Bell regresa a La Señora de la Abundancia y se disculpa con Seal",
+      "dateLabel": "Cerca del mediodía, después de la conversación con Hestia; fecha absoluta desconocida.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Bell vuelve al establecimiento para disculparse por haberse ido sin pagar y devuelve el dinero. Seal lo perdona y le entrega una cesta de comida; la conversación con Mia-mama continúa al final de p.100.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "se disculpa y devuelve el dinero"
+        },
+        {
+          "id": "DM-CHAR-SEAL-FLOVER",
+          "name": "Seal Flover",
+          "kind": "character",
+          "role": "acepta la disculpa y ofrece comida"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001.md",
+      "sources": [
+        {
+          "label": "DMR-061 · Volumen 1 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Traducción privada no cotejada con japonés; localizador PDF pp.98–100."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001.md",
+          "kind": "internal",
+          "note": "La escena continúa al cierre de p.100."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "Bell visita el establecimiento cerca del mediodía después de la conversación con Hestia.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "provisional",
+        "spatialPrecision": "city_level",
+        "reason": "La escena de regreso a la taberna termina con Bell saliendo a la calle; la narración pasa a describir Orario en p.102. Se vincula solo con la ciudad y no se fija la posición del establecimiento."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "provisional",
+          "spatialPrecision": "city_level",
+          "context": "Bell regresa a La Señora de la Abundancia; el registro cartográfico solo identifica el marco urbano de Orario, no la ubicación exacta de la taberna.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001",
+      "recordId": "EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 622,
+      "title": "Bell derrota a un Dungeon Lizard y un Goblin y regresa hacia la superficie",
+      "dateLabel": "Después de la visita a Seal; Bell vuelve al Dungeon durante el día y llega al vestíbulo de Babel cuando ya es de noche.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "En el cuarto piso, Bell derrota a un Dungeon Lizard con la daga y a un Goblin arrojándole la mochila cargada. Recupera fragmentos de Piedra Mágica, comprueba que su rodilla parece recuperada y asciende hacia la superficie; en el regreso derrota otros Goblins y Kobolds sin detalles individuales y llega al vestíbulo subterráneo de Babel.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "combate, recoge fragmentos y regresa hacia la superficie"
+        }
+      ],
+      "relatedEntities": [
+        {
+          "id": "MON-DM-DUNGEON-LIZARD-001",
+          "name": "Dungeon Lizard",
+          "kind": "monster"
+        },
+        {
+          "id": "MON-DM-GOBLIN-001",
+          "name": "Goblin",
+          "kind": "monster"
+        },
+        {
+          "id": "MON-DM-KOBOLD-001",
+          "name": "Kobold",
+          "kind": "monster"
+        }
+      ],
+      "detailPath": "events/timeline/EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001.md",
+      "sources": [
+        {
+          "label": "DMR-061 · Volumen 1 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Traducción privada no cotejada con japonés; localizador PDF pp.117–120."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001.md",
+          "kind": "internal",
+          "note": "Combate en el cuarto piso, recuperación de fragmentos y regreso a Babel."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "Bell vuelve al Dungeon después de visitar a Seal. La exploración termina con su llegada a Babel cuando ya debe ser de noche; no se asigna fecha absoluta.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "floor_context",
+        "reason": "El combate se localiza expresamente en el cuarto piso del Dungeon; la salida posterior se describe como ascenso hacia Babel."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "floor_context",
+          "context": "Combate en el cuarto piso y ascenso desde el cuarto al primer piso antes de alcanzar el vestíbulo subterráneo de Babel.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V01-GANESHA-GOD-BANQUET-001",
+      "recordId": "EVT-DM-V01-GANESHA-GOD-BANQUET-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 623,
+      "title": "Ganesha organiza un Banquete de Dios y Hestia pide un arma para Bell",
+      "dateLabel": "Por la noche, después de la salida de Hestia y de la visita de Bell a Seal; fecha absoluta desconocida.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Ganesha reúne a dioses en el recinto de su Familia y anuncia la Philia para dentro de tres días. Hestia se reencuentra con Hephaistos; Freya y Loki también asisten. Tras una secuencia de bromas y una salida de Freya, Hestia solicita a Hephaistos que fabrique un arma para Bell. La petición mantiene un evento independiente.",
+      "participants": [
+        {
+          "id": "CHAR-GANESHA",
+          "name": "Ganesha",
+          "kind": "character",
+          "role": "organiza el Banquete y anuncia la Philia"
+        },
+        {
+          "id": "DM-CHAR-HESTIA",
+          "name": "Hestia",
+          "kind": "character",
+          "role": "asiste, se reencuentra con Hephaistos y pide un arma para Bell"
+        },
+        {
+          "id": "CHAR-HEPHAISTOS",
+          "name": "Hephaistos",
+          "kind": "character",
+          "role": "se reencuentra con Hestia y recibe la petición de forja"
+        },
+        {
+          "id": "CHAR-FREYA",
+          "name": "Freya",
+          "kind": "character",
+          "role": "participa en la conversación y se marcha tras decir que confirmó lo que quería escuchar"
+        },
+        {
+          "id": "DM-CHAR-LOKI",
+          "name": "Loki",
+          "kind": "character",
+          "role": "llega al Banquete, bromea con Hestia y habla de Ais"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V01-GANESHA-GOD-BANQUET-001.md",
+      "sources": [
+        {
+          "label": "DMR-061 · Volumen 1 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Traducción privada no cotejada con japonés; localizador PDF pp.104–115."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-GANESHA-GOD-BANQUET-001.md",
+          "kind": "internal",
+          "note": "Asistencia, participantes, anuncio de la Philia e interacción que conduce a la petición de arma."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "La escena ocurre por la noche, después de la visita de Bell a Seal y de que Hestia sale para asistir al Banquete. No se fija el orden exacto respecto de la exploración de Bell en el Dungeon.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-GANESHA-GOD-BANQUET-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "provisional",
+        "spatialPrecision": "city_level",
+        "reason": "El Banquete se celebra en el recinto de Ganesha Familia, en el marco urbano de Orario; no se ha fijado una ubicación exacta del recinto en el atlas."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "provisional",
+          "spatialPrecision": "city_level",
+          "context": "El recinto de Ganesha Familia se sitúa en Orario; el volumen describe el lugar pero no da una dirección o posición exacta.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-GANESHA-GOD-BANQUET-001.md"
+          ]
+        }
+      ]
+    },
+    {
       "id": "EVT-DM-EINA-ADVISOR-001",
       "recordId": "EVT-DM-EINA-ADVISOR-001",
       "eraId": "ERA-05-MAIN-START",
@@ -3364,147 +3689,6 @@
           "sourceUrls": [
             "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
             "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-AIS-RECOVERS-JADE-PROTECTOR-001.md"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001",
-      "recordId": "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001",
-      "eraId": "ERA-05-MAIN-START",
-      "sortIndex": 620,
-      "title": "Hestia actualiza el Estado de Bell y ambos acuerdan no dejarse solos",
-      "dateLabel": "La mañana posterior al regreso de Bell de la incursión del sexto piso; intervalo exacto no cuantificado.",
-      "continuityScopes": [
-        "CONT-MAIN-LN"
-      ],
-      "evidenceStatus": "source_checked_translation_unverified",
-      "summary": "Hestia registra un nuevo aumento de atributos y vuelve a ver [Deseo Inquebrantable], pero oculta la Habilidad a Bell. Le explica el crecimiento anormal y ambos acuerdan que Bell no se sobreesforzará ni dejará sola a Hestia.",
-      "participants": [
-        {
-          "id": "DM-CHAR-BELL",
-          "name": "Bell Cranel",
-          "kind": "character",
-          "role": "recibe la actualización y promete prudencia"
-        },
-        {
-          "id": "DM-CHAR-HESTIA",
-          "name": "Hestia",
-          "kind": "character",
-          "role": "actualiza el Estado y mantiene oculta la Habilidad"
-        }
-      ],
-      "relatedEntities": [],
-      "detailPath": "events/timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001.md",
-      "sources": [
-        {
-          "label": "DMR-061 · Volumen 1 aportado por el usuario",
-          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
-          "kind": "user_supplied_source_report",
-          "note": "Traducción privada no cotejada con japonés; localizador PDF pp.91–97."
-        },
-        {
-          "label": "Registro individual del acontecimiento",
-          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001.md",
-          "kind": "internal",
-          "note": "Incluye snapshot y discrepancia de Fuerza entre pp.54 y 91."
-        }
-      ],
-      "temporal": {
-        "kind": "relative_order",
-        "relation": "after",
-        "referenceIds": [
-          "EVT-DM-BELL-AIS-MINOTAUR-001"
-        ],
-        "distanceKnown": false,
-        "precision": "order_only",
-        "qualifier": "Ocurre después de la incursión del sexto piso y del regreso de Bell; no se cuantifica el intervalo.",
-        "sourceUrls": [
-          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md"
-        ]
-      },
-      "narrativeOrigin": {
-        "kind": "published_reference"
-      },
-      "locationAssessment": {
-        "status": "unknown",
-        "spatialPrecision": "unknown",
-        "reason": "La escena ocurre durante una actualización doméstica, pero el folio no fija un nombre de ubicación catalogable."
-      },
-      "locationRefs": []
-    },
-    {
-      "id": "EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001",
-      "recordId": "EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001",
-      "eraId": "ERA-05-MAIN-START",
-      "sortIndex": 621,
-      "title": "Bell regresa a La Señora de la Abundancia y se disculpa con Seal",
-      "dateLabel": "Cerca del mediodía, después de la conversación con Hestia; fecha absoluta desconocida.",
-      "continuityScopes": [
-        "CONT-MAIN-LN"
-      ],
-      "evidenceStatus": "source_checked_translation_unverified",
-      "summary": "Bell vuelve al establecimiento para disculparse por haberse ido sin pagar y devuelve el dinero. Seal lo perdona y le entrega una cesta de comida; la conversación con Mia-mama continúa al final de p.100.",
-      "participants": [
-        {
-          "id": "DM-CHAR-BELL",
-          "name": "Bell Cranel",
-          "kind": "character",
-          "role": "se disculpa y devuelve el dinero"
-        },
-        {
-          "id": "DM-CHAR-SEAL-FLOVER",
-          "name": "Seal Flover",
-          "kind": "character",
-          "role": "acepta la disculpa y ofrece comida"
-        }
-      ],
-      "relatedEntities": [],
-      "detailPath": "events/timeline/EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001.md",
-      "sources": [
-        {
-          "label": "DMR-061 · Volumen 1 aportado por el usuario",
-          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
-          "kind": "user_supplied_source_report",
-          "note": "Traducción privada no cotejada con japonés; localizador PDF pp.98–100."
-        },
-        {
-          "label": "Registro individual del acontecimiento",
-          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001.md",
-          "kind": "internal",
-          "note": "La escena continúa al cierre de p.100."
-        }
-      ],
-      "temporal": {
-        "kind": "relative_order",
-        "relation": "after",
-        "referenceIds": [
-          "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001"
-        ],
-        "distanceKnown": false,
-        "precision": "order_only",
-        "qualifier": "Bell visita el establecimiento cerca del mediodía después de la conversación con Hestia.",
-        "sourceUrls": [
-          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md"
-        ]
-      },
-      "narrativeOrigin": {
-        "kind": "published_reference"
-      },
-      "locationAssessment": {
-        "status": "provisional",
-        "spatialPrecision": "city_level",
-        "reason": "La escena de regreso a la taberna termina con Bell saliendo a la calle; la narración pasa a describir Orario en p.102. Se vincula solo con la ciudad y no se fija la posición del establecimiento."
-      },
-      "locationRefs": [
-        {
-          "locationId": "LOC-ORARIO",
-          "relationship": "event_place",
-          "verificationStatus": "provisional",
-          "spatialPrecision": "city_level",
-          "context": "Bell regresa a La Señora de la Abundancia; el registro cartográfico solo identifica el marco urbano de Orario, no la ubicación exacta de la taberna.",
-          "sourceUrls": [
-            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md"
           ]
         }
       ]
