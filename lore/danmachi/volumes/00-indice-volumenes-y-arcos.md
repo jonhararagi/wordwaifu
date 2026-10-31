@@ -136,3 +136,13 @@ Antes de marcar un volumen como cross_checked:
 - [Familia Chronicle: Haze](side/familia-chronicle-haze.md) — resumen provisional, pendiente de cotejo capítulo a capítulo.
 
 - Paquete de búsqueda: `research/inbox/BATCH-DM-009-parallel-stories-and-chronicles.md`.
+
+
+## Carpetas por serie
+
+- `main/` — novela ligera principal, `CONT-MAIN-LN`.
+- `sword-oratoria/` — Sword Oratoria, `CONT-SO-LN`.
+- `astrea-record/` — Astrea Record, `CONT-AR` para la novelización; distinguir el juego como fuente separada.
+- `familia-chronicle/` — Familia Chronicle; registrar la continuidad de cada entrega sin asumir que es `CONT-MAIN-LN`.
+
+Los dossiers que ya existen en `main/` se conservan. Volumen 1: extracción sustancial con pendientes DMR-062. Volumen 2: extracción parcial y revisión pendiente. Volúmenes 3–21: resúmenes provisionales/plantillas, no extracciones completas. No borrar ni sobrescribirlos al cargar los archivos fuente.
