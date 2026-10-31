@@ -25,10 +25,18 @@ Monstruo del sexto piso del Dungeon, descrito en la traducción como una criatur
 - Ataca con tres dedos largos y afilados, comparados con cuchillos; su velocidad y alcance superan a los monstruos de los pisos anteriores que Bell había encontrado (PDF pp. 80–84).
 - Bell rompe el rostro-espejo de una y destruye la Piedra Mágica de otra. Después aparecen más War Shadows y otros monstruos bloquean la salida; Bell recoge un «Dedo de War Shadow» y lo usa como equipo improvisado (PDF pp. 80–85).
 
+## Datos ampliados — segunda pasada pp. 77–80
+- La traducción afirma que carece de órganos vocales y que se mueve en silencio mientras se prepara para combatir (PDF p.80). Se registra como descripción narrativa, no como una regla universal sobre todas sus conductas.
+- El relato sitúa sus capacidades de combate entre las mejores del sexto piso y la presenta como el primer monstruo que un aventurero novato no podría derrotar en los pisos superiores (definidos en la traducción como pisos 1–12). Es una valoración textual localizada en p.80, no una clasificación formal externa.
+- En el encuentro de Bell aparecen dos ejemplares: el segundo nace detrás de él en p.80 y deja la situación en dos contra uno. El combate sigue abierto al cierre de ese folio.
+
 ## Límites
 - No inferir nivel, clase de amenaza, resistencia, rango de pisos, regeneración ni habilidades adicionales.
 - El bloque deja abierto el desenlace de la lucha y la huida; no se crea un evento cerrado para el combate solo a partir de estas páginas.
 - La traducción privada no está cotejada con el japonés.
+
+## Control visual
+- PDF p.79 fue renderizada a página completa: es una página de texto continuo, sin ilustración independiente. Se corrige cualquier referencia anterior que la clasificara como retrato o ilustración de War Shadow; no se deriva una imagen de la descripción textual.
 
 ## Fuente
 DMR-061-SRC-001. Localizadores físicos: PDF pp. 79–85.

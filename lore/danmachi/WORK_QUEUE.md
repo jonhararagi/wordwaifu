@@ -70,13 +70,27 @@ Inventario verificado sobre `main` SHA `0946ace89a29e7439fbcbe4e0d4315aec8418f62
 - [x] Precisar la hoja básica de Bell, su avance imprudente, las razones concretas de Eina para considerar prematuro el quinto piso y la distinción entre ese riesgo y la anomalía del Minotauro.
 - [x] Limitar la promesa de Eina a su función de asesora; conservar la broma de Misha, el recuerdo de la frase de Bell y la autoexplicación de Eina sin confirmar romance.
 - [x] Ampliar el expediente existente `EVT-DM-EINA-ADVISOR-001`; no crear evento nuevo para la escena de asesoramiento ni duplicar la ficha de Frog Shooter.
-- [x] Preservar sin resolver la identidad de «esa persona» y la expresión incierta «Un solo pasó».
+- [x] Preservar la expresión incierta «Un solo pasó» de p.76 sin convertirla en duración; rectificar que «esa persona» está en p.77, no en pp.73–76.
 - [ ] Continuar la pasada 2 desde PDF p.77 hasta p.156.
 - [ ] Realizar la pasada 3 de PDF pp.9–156 y reconciliar la cobertura de pasada 1 por rangos.
-- **Visual:** la hoja de contactos pp.73–96 pertenece al checkpoint anterior; esta pasada textual no vuelve a marcar como reinspeccionadas las ilustraciones de pp.73, 79 o 86.
+- **Visual (rectificación del 2026-10-31):** PDF pp.73–80 renderizadas a 130 dpi. p.73 es portadilla ilustrada; pp.74–80 son páginas de texto. Se corrige la clasificación anterior de p.79 como ilustración; p.86 no se reexaminó en este bloque.
 - **Fuente:** DMR-061-SRC-001; traducción privada no cotejada con japonés. No se modifica el original `Volumen [01] • DanMachi.md`.
 - **Estado global:** V1 continúa `IN_PROGRESS`; no certificar hasta el 100 % de cobertura de las tres pasadas y los controles visuales.
 - **Próximo folio de pasada 2:** PDF p.77.
+
+
+### DMR-061 — checkpoint de segunda pasada V1, PDF pp. 77–80 (2026-10-31)
+
+- [x] Releer directamente el PDF físico pp.77–80 y contrastar la extracción anterior.
+- [x] Precisar la condición física de Bell, la referencia no identificada a «esa persona», el cambio del Dungeon al sexto piso, la sala sin salida y el momento exacto en que aparecen las War Shadows.
+- [x] Registrar por separado la primera War Shadow (p.79) y la segunda (p.80); conservar el 2 contra 1 y no anticipar el desenlace del combate.
+- [x] Ampliar la ficha existente `MON-DM-WAR-SHADOW-001`; no crear especie duplicada ni evento cerrado antes de revisar pp.81–85.
+- [x] Renderizar e inspeccionar pp.77–80 a 130 dpi. Confirmar que p.79 es texto, no ilustración; corregir la marca visual histórica. La portadilla ilustrada está en p.73.
+- [ ] Continuar pasada 2 desde PDF p.81 hasta p.156.
+- [ ] Completar pasada 3 de PDF pp.9–156 y reconciliar la cobertura histórica de pasada 1.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés. El archivo Markdown original de V1 no se modificó.
+- **Estado global:** V1 continúa `IN_PROGRESS`; no certificar hasta el 100 % de las tres pasadas y los controles visuales.
+- **Próximo folio de pasada 2:** PDF p.81.
 
 ## REGLA PERMANENTE · Registro de acuerdos de conversación
 

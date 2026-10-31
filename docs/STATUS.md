@@ -889,3 +889,14 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Reconciliación de dossier:** `lore/danmachi/volumes/main/volume-01.md` no está en el `main` actual porque fue eliminado en la limpieza intencional [`c1a4b9298c8118534f6babf5a5324b873e51c41c`](https://github.com/jonhararagi/wordwaifu/commit/c1a4b9298c8118534f6babf5a5324b873e51c41c) para dejar la carpeta lista para recargar fuentes originales. El Markdown original de V1 sí permanece. No se restauró el dossier eliminado en la carpeta de fuentes.
 - **Git/CI:** HEAD de entrada `c9253b8f1b190827a06cc751bc0b2bb41470ba2c`. La consulta de checks y workflow runs sobre ese SHA no devolvió resultados. Esta tanda solo cambia documentación; no se ejecutaron pruebas locales ni se declara validación técnica/CI.
 - **Siguiente acción:** continuar pasada 2 desde PDF p.77; después completar pasada 3 pp.9–156 y reconciliar la primera pasada. V1 sigue `IN_PROGRESS`.
+
+
+## DMR-061 — segunda pasada V1, PDF pp. 77–80 (2026-10-31)
+
+- **Resultado:** pasada 2 completada para pp.77–80 tras leer el PDF físico y contrastar con la extracción Markdown. Se precisaron las heridas/equipo de Bell, su objetivo no nombrado («esa persona») en p.77, la llegada al sexto piso y el callejón sin salida en p.78, el nacimiento de la primera War Shadow en p.79 y la aparición de la segunda en p.80.
+- **Rectificación de localizadores:** la anotación previa había situado «esa persona» en p.76; el PDF físico confirma p.77. «Un solo pasó» permanece en p.76, sin convertirlo en duración. La frase se corrigió en DMR-061 y WORK_QUEUE.
+- **Rectificación visual:** render directo 130 dpi de pp.73–80 confirma portadilla ilustrada en p.73 y páginas de texto en pp.74–80. La clasificación previa de p.79 como ilustración se corrigió. La figura abstracta de p.73 no se identifica. p.86 no se reexaminó.
+- **Canon/duplicados:** se amplía la ficha existente `MON-DM-WAR-SHADOW-001`; el encuentro queda abierto al final de p.80 y no se crea evento cerrado ni ficha duplicada antes de cotejar pp.81–85.
+- **Paginación:** `pdf_inspect` sobre el PDF original confirma 215 páginas físicas. La lectura interna del indexador que mostraba 214 no reemplaza este dato.
+- **Git/CI:** HEAD de entrada `bdddc750e7a7002070c731898b77fd9e15f198ba`. No se ejecutaron pruebas de código; las consultas de CI del commit documental anterior no devolvieron checks ni workflow runs. No se declara validación técnica.
+- **Siguiente acción:** continuar pasada 2 desde PDF p.81; luego completar pasada 3 pp.9–156 y reconciliar pasada 1. V1 sigue `IN_PROGRESS`.
