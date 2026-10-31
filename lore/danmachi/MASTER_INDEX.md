@@ -495,3 +495,12 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - **pp.121–130:** pasada 2 completa; p.126 es ilustración de capítulo sin identidad. p.125 confirma un intervalo exacto de dos días desde el Banquete; Bell recibe dos pociones de Miach y ve los preparativos del Festival en Babel. Se crea la ficha provisional CHAR-MIACH.
 - **Próxima página:** PDF p.131. Siguen pendientes la pasada 2 pp.131–156, la pasada 3 pp.9–156, la reconciliación de la pasada 1 y DMR-062. V1 continúa IN_PROGRESS.
 
+## DMR-061 — actualización de pasada 2 V1 · PDF pp.131–140 (2026-10-31)
+
+- **pp.131–134:** Hestia explica que quiere apoyar a Bell; Hephaistos acepta fabricar personalmente la daga, mantiene la deuda y selecciona mithril y martillo carmesí. En p.134 evalúa el riesgo de crear un arma demasiado poderosa para un novato. Se amplía el evento existente de la petición/forja; la entrega no se fusiona.
+- **pp.135–138:** Bell prepara su regreso al Dungeon, pero Anya lo detiene para que lleve el monedero olvidado de Seal al Coliseo. Ryuu aclara el encargo y explica el Festival de Monstruos y la domesticación. La entrega del monedero no ocurre todavía.
+- **pp.139–140:** ambiente del Festival en la Calle Principal del Este; Freya observa desde una cafetería sin nombre. Loki llega con Ais y la presenta ante Freya. Se amplía EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001, ya existente.
+- **Visual:** pp.131–140 son diez páginas de texto; no hay ilustraciones ni tablas.
+- **Personajes:** Anya y Ryuu reutilizan sus IDs estables y reciben una sección CONT-MAIN-LN; no se importan niveles, habilidades o biografía de CONT-ANIME/CONT-AR.
+- **Próxima página:** PDF p.141. Siguen pendientes segunda pasada pp.141–156, tercera pasada pp.9–156, reconciliación de primera pasada y DMR-062. V1 continúa IN_PROGRESS.
+
