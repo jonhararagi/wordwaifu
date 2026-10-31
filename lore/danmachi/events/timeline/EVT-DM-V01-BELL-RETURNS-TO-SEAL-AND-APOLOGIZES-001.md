@@ -52,7 +52,9 @@ Bell regresa al establecimiento para disculparse por haberse ido sin pagar duran
 
 ## Inspección visual
 
-PDF p.98 se inspeccionó como imagen de página completa. La ilustración no se usa para identificar a las dos empleadas anónimas. Los demás folios del bloque son páginas de texto en la extracción consultada.
+- PDF pp.98–100 renderizadas e inspeccionadas: las tres son páginas de texto; no contienen ilustraciones.
+- PDF p.98 incluye una nota al pie del traductor que define «nekomusume». Se conserva como aparato de traducción, no como dato independiente del canon ni como claim.
+- Las empleadas se describen en el texto como una elfa y una nekomusume, pero no reciben nombre. No se crean fichas ni se les atribuyen identidades a partir de la nota al pie.
 
 ## Límites de evidencia
 
