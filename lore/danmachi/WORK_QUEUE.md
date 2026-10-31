@@ -1653,3 +1653,21 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - **Controles:** tres controles completos por cada folio pp.69–78 (extracción, visual y continuidad); cuarta revisión correctiva puntual en pp.72 y 78.
 - **Siguiente folio:** PDF p.79.
 - **Estado:** tercera pasada completada pp.9–78; pasada 2 pp.9–156 completada; reconciliación de pasada 1 pendiente; V1 IN_PROGRESS. Traducción privada no cotejada con japonés.
+
+
+### DMR-061 — tercera pasada V1 · PDF pp.79–88 · 2026-10-31
+
+- [x] Completar extracción folio por folio de pp.79–88: nacimiento y combate contra War Shadows, nuevas apariciones y salida bloqueada, decisión de Bell de seguir luchando, búsqueda nocturna de Hestia y regreso herido de Bell.
+- [x] Renderizar e inspeccionar las diez páginas físicas a 130 dpi; p.79 incluye nota al pie 2 («Sombra de Guerra»); p.86 es ilustración de página completa; las otras ocho páginas son texto.
+- [x] Ampliar MON-DM-WAR-SHADOW-001 con la tercera pasada, preservando la diferencia entre la primera criatura (cae de rodillas; Piedra Mágica no confirmada como rota) y la segunda (Piedra Mágica rota y conversión en cenizas).
+- [x] Registrar cuatro War Shadows adicionales en p.84 y la entrada de monstruos del quinto piso por la única salida; no convertir la frase sobre frecuencia entre sexto/quinto piso en ley universal.
+- [x] Registrar el «Dedo de War Shadow» como equipo improvisado, sin ficha independiente ni propiedades inventadas.
+- [x] Inspeccionar p.86 como ilustración del capítulo 4 y mantener sin identificar a la figura.
+- [x] Registrar pp.87–88 sin atribuir a Hestia conocimiento de la incursión ni de la forma en que Bell escapó.
+- [x] Aplicar revisión correctiva puntual a pp.83–85 y pp.87–88.
+- [ ] Continuar tercera pasada desde PDF p.89 hasta p.156 (68 folios).
+- [ ] Resolver el tramo narrativo pp.87–90 y decidir si la búsqueda/recuperación de Bell requiere un evento propio, sin fusionarlo con la actualización de Estado pp.91–97.
+- [ ] Reconciliar la pasada 1 mediante matriz de cobertura por página/localizador.
+- **Controles:** tres controles completos por cada folio pp.79–88 (extracción, visual y continuidad); cuarta revisión correctiva puntual en pp.83–85 y pp.87–88.
+- **Siguiente folio:** PDF p.89.
+- **Estado:** tercera pasada completada pp.9–88; pasada 2 pp.9–156 completada; reconciliación de pasada 1 pendiente; V1 IN_PROGRESS. Traducción privada no cotejada con japonés.

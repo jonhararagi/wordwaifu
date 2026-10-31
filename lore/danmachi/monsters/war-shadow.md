@@ -57,3 +57,17 @@ Monstruo del sexto piso del Dungeon, descrito en la traducción como una criatur
 
 ## Fuente
 DMR-061-SRC-001. Localizadores físicos: PDF pp. 79–85.
+
+## Auditoría de tercera pasada · CONT-MAIN-LN · PDF pp.79–85
+
+- **p.79:** se confirma el nacimiento de una War Shadow desde una pared verde clara del sexto piso. El texto describe un humanoide negro de unos 160 cm, sin cabello ni piel, con cabeza en forma de cruz y rostro redondo parecido a un espejo. La nota al pie 2 traduce el nombre como «Sombra de Guerra»; se registra como nota editorial, no como alias canónico adicional.
+- **p.80:** nace una segunda criatura. Bell queda en situación de dos contra uno. La traducción dice que no tienen órganos vocales, que atacan con tres dedos largos y afilados por mano y que su velocidad supera la de Kobolds/Goblins. La afirmación de que es el primer monstruo que un novato no puede derrotar en los pisos 1–12 se conserva como valoración del pasaje, no como clasificación formal.
+- **p.81:** ambas atacan desde múltiples ángulos. Bell sufre cortes en ropa y piel, recibe ataques frontales, laterales y traseros y pierde claridad de visión por sudor y sangre.
+- **p.82:** Bell recuerda la advertencia de Eina y el crecimiento numérico anormal de su único Estado actualizado. No recibe cifras nuevas ni identifica la habilidad. Una War Shadow lo golpea en el hombro y hace que suelte la daga; recuerda la sonrisa de la deidad que le concedió la Gracia.
+- **p.83:** Bell atraviesa la cabeza/rostro-espejo de una criatura con el puño; esta cae de rodillas tras perder fuerza, pero la página no confirma rotura de Piedra Mágica ni conversión en cenizas. La segunda muere cuando Bell le corta el pecho, rompe su Piedra Mágica y se convierte en cenizas. El agotamiento de Bell es explícito.
+- **p.84:** nacen cuatro War Shadows adicionales; la corrección del texto entre sexto y quinto piso al hablar de la frecuencia de aparición permanece sin normalizar como regla. Monstruos del quinto piso entran por la única salida y la bloquean. Bell recoge un «Dedo de War Shadow» de las cenizas.
+- **p.85:** Bell equipa el dedo como pieza improvisada junto a una daga sin empuñadura; sus manos se cortan y sangran. Decide seguir luchando contra los monstruos que entran. El desenlace del combate y la salida del piso quedan fuera de estos folios.
+- **Continuidad:** se amplía la ficha MON-DM-WAR-SHADOW-001. No se crean ejemplares individuales, evento cerrado ni ficha de arma para el dedo. Se preserva la diferencia entre el primer ejemplar, cuyo final no está confirmado, y el segundo, cuya Piedra Mágica se rompe expresamente.
+- **Visual:** pp.79–85 son páginas de texto; p.79 lleva nota al pie 2. No hay retratos independientes ni tablas en pp.79–85. La ilustración de apertura p.86 se mantiene fuera de la ficha de especie y sin identidad asignada.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés; páginas físicas PDF pp.79–85.
+
