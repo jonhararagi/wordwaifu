@@ -1512,3 +1512,17 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - **Siguiente folio:** PDF p.131.
 - **Pendientes:** pasada 2 pp.131–156; pasada 3 pp.9–156; reconciliar la pasada 1 con matriz de cobertura; DMR-062 conserva pp.1–10, atomización selectiva de reglas/objetos y auditoría de candidatos/personajes.
 - **Estado global:** V1 permanece IN_PROGRESS. DMR-061-SRC-001 sigue siendo una traducción privada no cotejada con japonés. PDF físico: 215 páginas; p.8 en blanco; p.214 final narrativo; p.215 créditos.
+
+### Checkpoint vigente DMR-061 · Volumen 1 · PDF pp.131–140 · 2026-10-31
+
+- **Pasada 2:** completada para pp.131–140 con tres revisiones por folio: extracción narrativa; render e inspección visual a 130 dpi; auditoría de continuidad, relaciones, eventos e IDs. No hubo necesidad de cuarta pasada correctiva.
+- **Visual:** las diez páginas son texto continuo. No hay ilustraciones, tablas de Estado ni fichas gráficas.
+- **Hephaistos/Hestia:** Hephaistos acepta fabricar personalmente una daga (p.132); la deuda permanece íntegra y puede tardar décadas o siglos. Selecciona martillo carmesí y mithril; no puede usar Poder Divino en el Mundo Inferior; invita a Hestia a ayudar (pp.132–133). En p.134 pondera el riesgo de dar a un novato un arma demasiado poderosa. Se amplía el evento existente EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001; la entrega física permanece separada.
+- **Bell:** p.135 indica que su pierna ya sanó y planea entrar al quinto piso. Su expectativa de que el Estado aumentó no aporta cifras nuevas; en p.136 el encargo de Anya interrumpe su salida. No se registra una nueva incursión completada.
+- **Anya/Ryuu:** pp.136–138 Anya pide a Bell que lleve el monedero olvidado de Seal a la Calle Principal del Este; Ryuu aclara el motivo y explica el Festival de Monstruos y la domesticación. Se amplían fichas existentes CHAR-ANYA-FROMEL y CHAR-RYUU-LION solo con evidencia de esta continuidad; no se transfieren niveles o capacidades del anime.
+- **Festival:** p.139 describe el ambiente festivo de la Calle Principal del Este y presenta a Freya observando desde una cafetería sin nombre. p.140 Loki llega con Ais y las presenta a Freya. Se amplía el evento existente EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001, que continúa hasta p.145; no se crea un duplicado.
+- **Monedero:** Bell acepta el encargo, pero no lo entrega en pp.136–140. El objetivo sigue abierto; no se registra un evento de devolución antes de localizar su desenlace.
+- **Siguiente folio:** PDF p.141.
+- **Pendientes:** pasada 2 pp.141–156 (16 folios); pasada 3 pp.9–156; reconciliar la pasada 1 con matriz de cobertura y localizadores; completar tareas DMR-062. V1 permanece IN_PROGRESS.
+- **Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés. PDF físico: 215 páginas; p.8 blanca, p.214 último folio narrativo y p.215 créditos.
+
