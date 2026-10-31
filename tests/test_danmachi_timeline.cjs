@@ -302,7 +302,7 @@ assert.equal(legacyReport.legacyTemporalModel,true);
 assert.equal(timeline.temporalKindLabel(null),"Tiempo sin normalizar");
 assert.equal(report.locationCount,2);
 assert.equal(report.locationRefCount,37);
-assert.equal(report.unknownEventCount,6);
+assert.equal(report.unknownEventCount,7);
 assert.equal(report.provisionalEventCount,7);
 assert.equal(data.events.length,44,"All 44 indexed event IDs must remain.");
 const sealReturnEvent=events.get("EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001");
