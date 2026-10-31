@@ -178,3 +178,13 @@ La traducción española aportada es privada y no se ha cotejado con el japonés
 
 **Eventos:** EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001 y EVT-DM-V01-BELL-RECEIVES-RECOVERY-POTIONS-FROM-MIACH-001. El intervalo con el Banquete se conserva sin fecha de calendario.
 
+
+
+## Continuidad principal · regreso al Dungeon y encargo de Seal · Volumen 1 · PDF pp.135–140
+
+- **Plan de incursión (p.135):** Bell considera que su herida de la pierna ya sanó y planea entrar al quinto piso. Recuerda que unos días antes descendió más de lo debido, sufrió heridas graves y escapó; ahora quiere ajustar cuentas con aquel peligro. Cree que su Estado ha aumentado, pero no aparecen valores nuevos. Considera pedir consejo a Eina. Esto registra intención y preparación, no un combate concluido ni una entrada efectiva al quinto piso en estos folios.
+- **Monedero de Seal (pp.136–138):** Anya, empleada de La Señora de la Abundancia, entrega a Bell un monedero de Seal que quedó olvidado cuando ella salió a visitar el Festival de Monstruos. Bell acepta llevarlo al Coliseo por la Calle Principal del Este. La entrega todavía no aparece en este bloque.
+- **Festival y Coliseo (pp.137–139):** Bell recibe una explicación sobre la domesticación de monstruos del Dungeon durante el festival anual de Ganesha Familia. Se dirige hacia la Calle Principal del Este, que está llena de puestos, banderas y público. No se identifican especies concretas en las cajas o actuaciones que todavía no ha visto.
+- **Freya, Loki y Ais (pp.139–140):** Bell no participa en la conversación de la cafetería; Freya observa la calle, y Loki llega con Ais. No se afirma que Bell vea a ninguna de ellas.
+
+**Eventos:** el encargo de Seal queda abierto y sin evento independiente de entrega hasta localizar la devolución del monedero. La reunión Freya–Loki–Ais se conserva en EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001.
