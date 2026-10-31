@@ -3492,11 +3492,22 @@
         "kind": "published_reference"
       },
       "locationAssessment": {
-        "status": "verified",
-        "spatialPrecision": "establishment",
-        "reason": "El texto nombra explícitamente La Señora de la Abundancia en p.98."
+        "status": "provisional",
+        "spatialPrecision": "city_level",
+        "reason": "La escena de regreso a la taberna termina con Bell saliendo a la calle; la narración pasa a describir Orario en p.102. Se vincula solo con la ciudad y no se fija la posición del establecimiento."
       },
-      "locationRefs": []
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "provisional",
+          "spatialPrecision": "city_level",
+          "context": "Bell regresa a La Señora de la Abundancia; el registro cartográfico solo identifica el marco urbano de Orario, no la ubicación exacta de la taberna.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md"
+          ]
+        }
+      ]
     }
   ],
   "temporalModelVersion": 1,
