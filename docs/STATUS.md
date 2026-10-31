@@ -1064,3 +1064,23 @@ Sobre SHA 4423efcfc55920b02fdf949927ae7a4033bf1033:
 - **Visual:** diez páginas de texto inspeccionadas individualmente a 130 dpi; sin ilustraciones, tablas, diagramas ni notas al pie.
 - **Checkpoint:** tercera pasada completada pp.9–68 (60 folios). Próxima página PDF p.69; restan pp.69–156 (88 folios). La pasada 2 pp.9–156 está completada. La reconciliación de la pasada 1 sigue pendiente. V1 continúa IN_PROGRESS y DMR-061-SRC-001 no se ha cotejado con japonés.
 
+
+
+## Evidencia de integración · PR #224 · DMR-061 pp.59–68
+
+- **PR:** [#224](https://github.com/jonhararagi/wordwaifu/pull/224), integrado mediante squash.
+- **SHA exacto de main:** 890df8bd16a75b3368957159b80e1e546e8a43b7.
+- **CI de PR, sobre f5466fffd6c8ca2260c94567265cbf1bb4ac196b:** [Validate WordWaifu #41191070911](https://github.com/jonhararagi/wordwaifu/actions/runs/41191070911) y [DanMachi Lore and Retrieval Integrity #41191070961](https://github.com/jonhararagi/wordwaifu/actions/runs/41191070961), ambos success.
+- **CI post-merge, sobre el SHA exacto de main:** [Validate WordWaifu #41191262262](https://github.com/jonhararagi/wordwaifu/actions/runs/41191262262) y [DanMachi Lore and Retrieval Integrity #41191262276](https://github.com/jonhararagi/wordwaifu/actions/runs/41191262276), ambos success.
+
+## DMR-061 — tercera pasada V1 · PDF pp.69–78 · 2026-10-31
+
+- **Estado:** tres controles por folio completados; cuarta revisión puntual en pp.72 y 78.
+- **pp.69–72:** Ais observa la marcha de Bell y Loki la distrae con su contacto físico; Bete acaba atado mientras Riveria le pisa la cabeza. Bell corre hacia Babel/Dungeon y dirige la vergüenza contra su propia debilidad, no contra Bete. «Esa persona» se conserva sin identificar.
+- **p.73:** portadilla ilustrada del capítulo 3, «La Noche Antes del Despertar» en la traducción; silueta sin identidad asignada.
+- **pp.74–76:** Eina y Misha trabajan hasta tarde en la sede del Gremio durante la lluvia y la gestión del Festival. Eina considera peligroso que Bell avance al quinto piso sin preparación suficiente; su frase de no dejarlo avanzar es una intención como asesora, no una regla institucional. Misha no recibe ficha individual; la interacción amplía el evento de asesoramiento ya existente.
+- **p.76:** Bell mata un Frog Shooter. Se actualiza MON-DM-FROG-SHOOTER-001 con el ojo grande único y la lengua larga. La nota al pie sobre «Rana Tiradora» se conserva como comentario del traductor.
+- **pp.77–78:** Bell sigue cazando monstruos con el equipo dañado, alcanza el sexto piso sin proponérselo y llega a un callejón sin salida. El sonido «Bikiri» cierra p.78; su causa se deja abierta hasta revisar pp.79–85.
+- **Visual:** diez páginas inspeccionadas; ilustraciones en pp.70 y 73, nota al pie en p.76; no hay tablas.
+- **Checkpoint:** tercera pasada completada pp.9–78 (70 folios). Próxima página física PDF p.79; restan pp.79–156 (78 folios). La pasada 2 pp.9–156 está completada. La reconciliación de la pasada 1 sigue pendiente. V1 continúa IN_PROGRESS y DMR-061-SRC-001 no se ha cotejado con japonés.
+

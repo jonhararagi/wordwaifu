@@ -84,3 +84,14 @@ spoiler_level: mild
 - **Visual:** pp.59–68 renderizadas e inspeccionadas individualmente a 130 dpi; diez páginas de texto, sin ilustraciones, tablas, diagramas ni notas al pie.
 - **Revisión correctiva puntual:** p.62 para comprobar que «Mia» identifica a la jefa sin aportar apellido; pp.67–68 para limitar las respuestas de Ais y preservar las voces no identificadas.
 
+
+
+## Auditoría de tercera pasada · CONT-MAIN-LN · PDF pp.69–72
+
+- **p.69:** Ais observa la salida de Bell y reconoce el nombre que gritó una mujer desde la calle; piensa que el nombre de Bell resonó más en ella que los llamados de sus compañeros. No identifica a la empleada que se aleja. Loki se acerca y la abraza; Ais la aparta, la golpea con el codo y la abofetea dentro del intercambio cómico.
+- **p.70:** ilustración monocroma de página completa contextualizada con Loki abrazando a Ais por detrás. No añade una identidad ni un vínculo distintos de los que ya establece el texto.
+- **p.71:** Loki interpreta que Ais no quiere compartir el espacio con Bete y ofrece pedir a Mia que lo cuelgue fuera. Bete aparece atado entre varios participantes, con Riveria pisándole la cabeza; los clientes reaccionan. Ais mira a la calle, pero Bell ya no está.
+- **p.72:** Bell corre llorando y se reprocha su propia debilidad. La narración aclara que su frustración no se dirige a Bete ni a los presentes, sino a sí mismo y a haber necesitado protección. Piensa que no merece estar al lado de «esa persona», sin nombrarla, y corre hacia Babel/Dungeon. No se asigna esa referencia a Ais como hecho objetivo.
+- **Continuidad:** se amplía el evento existente de la visita nocturna y el relato de los Minotauros. No se crea un evento separado para la búsqueda de Ais, la broma de Loki o la huida de Bell.
+- **Visual:** p.70 es ilustración a página completa; pp.69 y 71–72 son texto. La lectura de la ilustración se limita a su contexto contiguo y no sustituye la evidencia narrativa.
+

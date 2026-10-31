@@ -17,13 +17,15 @@ spoiler_level: mild
 # Frog Shooter
 
 ## Identidad
-Monstruo nombrado en la traducción como «Frog Shooter» y también traducido en el dossier como «Rana Tiradora». No se asigna una especie taxonómica adicional.
+Monstruo nombrado en la traducción como «Frog Shooter». La nota al pie del traductor plantea «Rana Tiradora» como opción de traducción, pero no resuelve la terminología de forma definitiva. No se asigna una especie taxonómica adicional.
 
 ## Datos observados
-- Bell mata un Frog Shooter con un golpe de daga al reanudar su incursión en el Dungeon (PDF p. 76).
+- El texto lo describe como una criatura parecida a una rana con un solo ojo grande (PDF p. 76).
+- Ataca a los aventureros utilizando una lengua larga (PDF p. 76).
+- Bell lo mata con un golpe de daga durante su regreso al Dungeon; del corte sale líquido rojo oscuro (PDF p. 76).
 
 ## Límites
-- El pasaje consultado no fija piso, tamaño, apariencia, ataques, nivel, debilidad ni botín propio de esta especie.
+- El pasaje no fija piso, tamaño exacto, nivel, debilidad, patrón completo de ataque ni botín propio de esta especie.
 - No completar esos campos a partir de imágenes, wikis o conocimiento externo sin abrir una tarea de contraste separada.
 
 ## Fuente

@@ -53,3 +53,15 @@ No extrapolar automáticamente el mismo puesto, antigüedad o relación al perio
 - **Visual:** p.22 es una ilustración de página completa contextualizada con Eina y su conversación; no se usa para inferir datos nuevos.
 - **Localizadores:** DMR-061-SRC-001, PDF pp.19–23. Traducción privada no cotejada con japonés.
 
+
+
+## Auditoría de tercera pasada · CONT-MAIN-LN · PDF pp.74–76
+
+- **p.74:** Eina y Misha están en la sede del Gremio a las 21:00, trabajando horas extra bajo la lluvia durante la gestión del Festival. Misha es presentada como compañera humana y colega; lee la hoja básica de Bell que Eina preparó para el líder del equipo. No se añaden valores ausentes ni una ficha independiente de Misha.
+- **p.75:** Misha se impresiona de que Bell alcanzara el quinto piso solo en medio mes. Eina matiza que se lanzó imprudentemente y casi murió; explica por qué el quinto piso es prematuro para un novato con equipo deficiente y sin compañero. La fuga del Minotauro por descuido de Loki Familia y la falta de preparación de Bell son cuestiones diferentes.
+- **p.75–76:** Eina dice que no dejará avanzar así a Bell mientras siga encargándose de él. Esto es una intención personal como asesora, no una prohibición formal del Gremio. Misha bromea con que Eina se preocupa por él; Eina recuerda el «te amo» de Bell de dos días antes, se sonroja y termina diciéndose que es un chico lindo como un hermano menor. No se confirma romance ni reciprocidad.
+- **p.76:** tras el separador de escena, Bell vuelve al Dungeon y mata un Frog Shooter. La descripción visible es la de una criatura rana de un ojo grande y lengua larga usada para atacar. Se amplía MON-DM-FROG-SHOOTER-001; no se crea otro evento ni ficha de especie.
+- **Nota de traducción:** p.76 lleva un comentario sobre la elección «Rana Tiradora» frente a «Frog Shooter». Se conserva como nota editorial del traductor, no como canon terminológico.
+- **Visual:** pp.74–75 son páginas de texto y p.76 es texto con nota al pie; no hay ilustración en este tramo.
+- **Continuidad:** se reutiliza EVT-DM-EINA-ADVISOR-001. No se crean un evento de asesoramiento adicional, una ficha para Misha ni una relación romántica.
+
