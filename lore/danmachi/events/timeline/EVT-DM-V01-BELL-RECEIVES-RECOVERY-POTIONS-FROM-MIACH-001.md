@@ -55,3 +55,15 @@ Bell se encuentra con Miach mientras este compra ingredientes para la cena. Habl
 - No se infieren efectos concretos, cantidad de recuperación, duración, ingredientes o método de fabricación.
 - No se declara que Miach haya asistido al Banquete; el diálogo dice que no fue.
 - La traducción privada no se ha cotejado con japonés.
+
+
+## Auditoría de tercera pasada · CONT-MAIN-LN · PDF pp.124–127
+
+- **p.124 — encuentro con Miach:** Bell camina por la Calle Principal del Noreste, entre tiendas de armas, bares, comercios especializados y posadas. Encuentra a Miach, que compra ingredientes para la cena. Bell lo reconoce como dios y describe su cabello azul y manto gris. La calle y el tipo de negocios ya están documentados en LOC-ORARIO; no se añade una ubicación con dirección.
+- **p.125 — Banquete y Miach Familia:** Bell pregunta por Hestia y dice que lleva fuera dos días. Miach identifica la celebración como el Banquete de Ganesha, explica que fue invitado pero no asistió y que ayudó a producir los artículos de su Familia por falta de recursos y tiempo. El pasaje confirma el ancla relativa de dos días desde el Banquete, no una fecha de calendario.
+- **pp.125–127 — dos pociones:** Miach saca dos tubos altos y delgados de una bolsa de papel. El líquido se describe como azul oscuro; Bell comprende que son pociones de recuperación recién preparadas. Miach dice que es un gesto de amabilidad hacia un vecino y le pide que apoye a su Familia. Bell guarda ambos tubos en la funda de la pierna izquierda. No se paga por ellos ni se precisan efectos, dosis, ingredientes o calidad.
+- **p.127 — trabajo de las Familias:** la narración comenta que Miach Familia mantiene una pequeña tienda de objetos orientada a pociones y que las Familias pueden dedicarse a negocios, herrería, pesca, restaurantes u otras actividades, no solo a explorar el Dungeon. La reflexión de Bell sobre la función económica de las Familias se conserva como síntesis narrativa y no como definición jurídica exhaustiva.
+- **Continuidad:** se amplía EVT-DM-V01-BELL-RECEIVES-RECOVERY-POTIONS-FROM-MIACH-001 y se reutilizan CHAR-MIACH y FAM-MIACH. No se crean objetos individuales para las pociones ni se mezclan con la poción de Poder Mental que Bell compra a Naaza en el Volumen 2.
+- **Visual:** pp.124–125 y p.127 son texto. p.126 es una ilustración monocroma de página completa; muestra a una figura de cabello oscuro y ropa oscura frente a Bell, que aparece de espaldas y con cabello claro. La imagen parece acompañar la escena de entrega, pero la identidad de la figura no se asigna desde la ilustración. No hay tablas ni notas al pie.
+- **Límites:** no inferir receta, fórmula, precio, efectos específicos ni un roster completo de Miach Familia. Miach declara que no asistió al Banquete.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
