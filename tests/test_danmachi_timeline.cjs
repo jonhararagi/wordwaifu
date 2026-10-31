@@ -14,8 +14,8 @@ assert.equal(report.valid,true,report.errors.join("\n"));
 assert.equal(report.temporalModelVersion,1);
 assert.equal(report.legacyTemporalModel,false);
 assert.equal(report.eraCount,10);
-assert.equal(report.eventCount,42);
-assert.equal(report.temporalEventCount,42);
+assert.equal(report.eventCount,44);
+assert.equal(report.temporalEventCount,44);
 assert.equal(data.anchor.id,"T0-BELL-ARRIVAL");
 assert.equal(data.anchor.eventId,"EVT-DM-BELL-ARRIVAL-001");
 
@@ -61,7 +61,9 @@ const expectedKinds={
  "EVT-DM-EINA-ADVISOR-001":"relative_order",
  "EVT-DM-RYUU-JURA-PURSUIT-001":"relative_order",
  "EVT-DM-JUGGERNAUT-RETURN-001":"relative_order",
- "EVT-DM-JUGGERNAUT-DEFEAT-001":"relative_order"
+ "EVT-DM-JUGGERNAUT-DEFEAT-001":"relative_order",
+ "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001":"relative_order",
+ "EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001":"relative_order"
 };
 const expectedLabels={
  "EVT-DM-V01-BELL-RECEIVES-FALNA-001":"Después del primer encuentro Bell–Hestia; intervalo exacto no cuantificado.",
@@ -105,10 +107,12 @@ const expectedLabels={
  "EVT-DM-EINA-ADVISOR-001":"Primeros volúmenes · secuencia exacta pendiente",
  "EVT-DM-RYUU-JURA-PURSUIT-001":"Meses después de T0 · arco del volumen 13; día exacto abierto",
  "EVT-DM-JUGGERNAUT-RETURN-001":"Volúmenes 13–14 · meses después de T0",
- "EVT-DM-JUGGERNAUT-DEFEAT-001":"Continuación en el volumen 14 · fecha interna abierta"
+ "EVT-DM-JUGGERNAUT-DEFEAT-001":"Continuación en el volumen 14 · fecha interna abierta",
+ "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001":"La mañana posterior al regreso de Bell de la incursión del sexto piso; intervalo exacto no cuantificado.",
+ "EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001":"Cerca del mediodía, después de la conversación con Hestia; fecha absoluta desconocida."
 };
 const events=new Map(data.events.map(e=>[e.id,e]));
-assert.deepEqual([...events.keys()].sort(),Object.keys(expectedKinds).sort(),"All 42 timeline event IDs must be retained exactly.");
+assert.deepEqual([...events.keys()].sort(),Object.keys(expectedKinds).sort(),"All 44 timeline event IDs must be retained exactly.");
 for(const [id,kind] of Object.entries(expectedKinds)){
  const event=events.get(id);
  assert.equal(event.temporal.kind,kind,id+" temporal variant");
@@ -300,7 +304,7 @@ assert.equal(report.locationCount,2);
 assert.equal(report.locationRefCount,36);
 assert.equal(report.unknownEventCount,6);
 assert.equal(report.provisionalEventCount,5);
-assert.equal(data.events.length,42,"All 42 indexed event IDs must remain.");
+assert.equal(data.events.length,44,"All 44 indexed event IDs must remain.");
 const locationById=new Map(data.locations.map(place=>[place.id,place]));
 assert.equal(locationById.get("LOC-ORARIO").recordPath,"places/orario.md");
 assert.equal(locationById.get("LOC-DUNGEON").recordPath,"places/dungeon.md");
