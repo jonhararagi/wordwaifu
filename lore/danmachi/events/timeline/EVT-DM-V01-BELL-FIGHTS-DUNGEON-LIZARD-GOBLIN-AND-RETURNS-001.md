@@ -10,10 +10,12 @@ source_refs:
   - DMR-061-SRC-001
 source_locators:
   - PDF pp. 117–120
+  - PDF p. 125 (relative-time confirmation)
 related_character_ids:
   - DM-CHAR-BELL
 related_event_ids:
   - EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001
+  - EVT-DM-V01-GANESHA-GOD-BANQUET-001
 spoiler_level: mild
 ---
 
@@ -25,7 +27,7 @@ spoiler_level: mild
 - **Localizador:** PDF pp.117–120.
 - **Continuidad:** CONT-MAIN-LN.
 - **Lugar:** Dungeon, cuarto piso durante el combate, seguido por el ascenso hacia el primer piso y la llegada al vestíbulo subterráneo de Babel.
-- **Tiempo:** la incursión sigue a la visita de Bell a La Señora de la Abundancia y su disculpa a Seal; p.120 indica que ya debe ser de noche. No se asigna fecha absoluta.
+- **Tiempo:** Bell afirma en p.125 que Hestia asistió al Banquete de Ganesha dos días antes, y Miach identifica esa fiesta como el Banquete. La incursión de pp.117–120 pertenece a ese mismo día: ocurre exactamente dos días después del Banquete. Bell llega a Babel cuando ya es de noche. No se asigna fecha de calendario.
 
 ## Resumen
 
