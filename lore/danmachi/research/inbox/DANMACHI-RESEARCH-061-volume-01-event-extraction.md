@@ -492,4 +492,52 @@ No se ha inspeccionado visualmente cada folio. Estos localizadores constituyen u
 - **p. 214:** el epílogo presenta la vida del aventurero como una historia que los dioses observan y Hestia registra.
 - **Eventos existentes:** pp.201–203 amplían EVT-DM-V01-GANESHA-RESPONDS-TO-MONSTER-ESCAPE-001 y EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001; pp.203–208 amplían EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001; pp.211–214 amplían EVT-DM-V01-BELL-RECEIVES-FALNA-001 y el candidato EVT-DM-BELL-MEETS-HESTIA-001. No se crea un evento duplicado para la concesión de Falna.
 - **Pasadas:** tres pasadas completas en todas las pp.201–214. Auditoría visual real de los folios y revisión ampliada de las tarjetas/ilustraciones pp.208–210. Cuarta pasada correctiva en pp.203–205 y p.208.
-- **Última página del PDF:** p.214; no existe p.215.
+- **Último folio narrativo del PDF:** p.214. **Corrección verificada:** el PDF fuente tiene 215 páginas físicas; p.8 está completamente en blanco y p.215 es la hoja de créditos. La vista de Files omite la hoja blanca en su contador, por eso informaba 214. No volver a afirmar que p.215 no existe.
+
+
+## DMR-061 — checkpoint de auditoría, tres pasadas V1 · PDF pp. 1–60 (2026-10-30)
+
+**Fuente y alcance:** DMR-061-SRC-001, traducción privada en español no cotejada con japonés, continuidad CONT-MAIN-LN. Se revisó la copia PDF aportada y el Markdown fuente actual de main. Este checkpoint registra el trabajo realizado, pero no declara completo el volumen.
+
+### Corrección de paginación y material visual
+
+- La inspección estructural directa del PDF confirma **215 páginas físicas**. El folio físico p.8 se renderizó y está completamente en blanco; la vista de Files no lo contabilizó y por eso mostró 214.
+- PDF p.214 es el último folio narrativo; PDF p.215 es una hoja de créditos. La hoja p.215 se renderizó e inspeccionó: indica versión inglesa Sorotrans y atribuye traducción inglés-español, corrección y edición a Mugetsu123. Coincide con la imagen de créditos incrustada al final del Markdown.
+- El inventario visual de los **16 recursos incrustados en el Markdown** se inspeccionó completo. La inspección visual no autoriza identificar por apariencia imágenes que no lleven rótulo o no tengan correspondencia narrativa segura.
+- PDF pp.1–7 fueron revisadas como cubierta, ilustraciones y portadillas. PDF p.8 es blanca. PDF pp.19–24 se renderizaron: p.22 contiene la ilustración monocroma de una elfa de cabello corto, orejas puntiagudas y uniforme; pp.19–21 y 23–24 son páginas de texto. PDF pp.49–54 se renderizaron y son páginas de texto. Por tanto, queda cerrada la antigua lista de pendientes visuales pp.19–21, 23–24 y 49–54.
+- PDF p.12 muestra una mujer armada junto a una figura oscura, sin rótulo nominal; p.15 es una portadilla del capítulo 1; p.37 es portadilla del capítulo 2 con una joven que sostiene una caja; p.40 es una ilustración de dos figuras bajo una manta que corresponde contextualmente al pasaje Bell–Hestia pp.38–41. Ninguna de estas imágenes se usa para crear una identidad no rotulada.
+- PDF p.22, p.37 y p.40 fueron además inspeccionadas a página completa. PDF pp.43–48 y 55–60 se verificaron mediante lectura de texto extraído; las páginas no devolvieron recursos de imagen incrustados.
+
+### Matriz de cobertura vigente
+
+| Rango físico | Pasada 1 | Pasada 2 | Pasada 3 | Estado |
+|---|---|---|---|---|
+| pp.1–8 | Portada/ilustraciones revisadas; p.8 blanca | Revisión visual de portada y front matter | No requiere extracción narrativa; conservar p.8 como folio blanco verificado | Front matter revisado |
+| pp.9–60 | Extracción secuencial preexistente en DMR-061; requiere reconciliar la matriz integral antes de certificar V1 | **Relectura de detalle completada en este checkpoint** | Pendiente | Parcial |
+| pp.61–156 | Extracción secuencial preexistente en DMR-061; requiere reconciliar la matriz integral antes de certificar V1 | Pendiente; próximo bloque desde p.61 | Pendiente | Parcial |
+| pp.157–214 | Tres pasadas documentadas como completas en sus bloques previos | Tres pasadas documentadas como completas | Tres pasadas documentadas como completas | Conservado |
+| p.215 | Hoja de créditos, no narración | Hoja de créditos inspeccionada | Hoja de créditos inspeccionada | Cerrado como material editorial |
+
+La pasada 2 de pp.9–60 cubre los folios narrativos revisados desde el prólogo hasta la escena de Bell en La Señora de la Abundancia, pp.57–60. La pasada 2 de pp.61–156 y la pasada 3 de pp.9–156 siguen pendientes. Las notas secuenciales antiguas de la pasada 1 no se elevan automáticamente a tres pasadas completas. **V1 permanece IN_PROGRESS.**
+
+### Precisiones de segunda pasada · pp.9–60
+
+- **Pp.9–14 — prólogo y rescate:** Bell entra al Dungeon buscando un encuentro heroico, queda acorralado por un Minotauro en el piso 5 y Ais lo salva. La imagen de p.12 no lleva nombre; la identificación de Ais proviene del pasaje textual p.13. El texto atribuye al monstruo nivel 2 y a Ais nivel 5. La alusión de Eina en p.18 a que un Minotauro normalmente aparece en el piso 15 contiene una formulación direccional ambigua en la traducción; no corregirla mediante conocimiento externo.
+- **Pp.16–21 — Eina/Ais/Bell:** Bell pide información de Ais; Eina describe su reputación y le dice que, según lo que sabe, actualmente no sale con nadie. Los «mil cortejos» se conservan como exageración/percepción de Eina, no como estadística fiable. Eina recuerda que Bell pertenece a una Familia distinta de Loki y le aconseja hacerse más fuerte. El canje de Bell produce 1.200 Varisu y se atribuye principalmente a Goblins y dríadas en esa jornada; no convertirlo en tarifa general.
+- **Pp.20–23 — despedida y lenguaje afectivo:** Bell grita «¡Te amo!» a Eina y enseguida aclara que le agradece. No inferir reciprocidad romántica. La ilustración de p.22 no lleva rótulo; mantener la descripción visual sin confirmar el nombre.
+- **Pp.23–29 — biografía y llegada a Hestia:** Bell procede de una aldea rural cercana a Orario; su abuelo lo crió y, tras morir, Bell tomó la riqueza restante y partió a la ciudad. Las historias heroicas y la frase del abuelo sobre querer un harén son recuerdos atribuidos a Bell. En p.25 la iglesia y la estatua no reciben nombre; en p.29 la amiga/Familia anterior de Hestia tampoco es identificada. No crear lugares, personas o relaciones con nombres inventados.
+- **Pp.30–36 — actualización del Estado:** se mantiene la separación entre la hoja que Bell ve, con Habilidades en blanco, y el contenido que el lector conoce desde la perspectiva de Hestia: [Deseo Inquebrantable]. Bell no debe figurar como conocedor de esa habilidad en esta escena. El aumento de Agilidad de 24 puntos es una conjetura de Bell respecto a su huida del Minotauro, no una causalidad probada.
+- **Pp.37–42 — inicio del capítulo 2:** Bell se despierta aproximadamente a las cinco, después de dormir en el sofá; Hestia se había acurrucado sobre su pecho. La escena se narra como proximidad cómica y no formaliza una relación romántica. La chica de la portadilla p.37 no se identifica por la imagen. En p.42 Bell percibe que alguien lo observa, pero no identifica a la persona responsable.
+- **Pp.43–48 — Seal y primer encuentro con el grupo de Kobolds:** la joven devuelve una Piedra Mágica que Bell había dejado caer; Bell no comprende por qué sigue en su riñonera si recordaba haber entregado las piedras al Gremio. Ella ofrece pan y queso y le pide cenar en su trabajo esa noche; eso es una invitación aceptada, no la cena ya realizada. En p.46 dice que se llama «Seal Flover», grafía conservada tal cual en la traducción privada. La emboscada de Kobolds comienza en pp.46–48; no cerrar el recuento de bajas en p.48.
+- **Pp.49–54 — Kobolds, botín y Dungeon:** Bell termina el combate, pero la traducción no permite fijar un recuento final inequívoco. Extrae fragmentos de Piedra Mágica y una garra derecha que queda como botín. Mantener como exposición/creencia del narrador lo que Bell explica sobre el Dungeon, el Gremio y los monstruos; su sospecha de que el Gremio busca beneficios es opinión suya. En p.53 recuerda un Goblin que casi lo mató de niño fuera de Orario; no identificarlo con el Goblin que derrota ese mismo día.
+- **P.54 — snapshot:** Lv.1; Fuerza I82→H120, Resistencia I13→I42, Destreza I96→H139, Agilidad H172→G225, Magia I0. No atribuir toda la variación a un solo enemigo o acción.
+- **Pp.55–56 — reacción al Estado y salida de Hestia:** Bell cree que recibió un único ataque durante la jornada y relaciona con él el aumento de Resistencia en 29 puntos; el snapshot anterior expresa I13→I42, es decir, una diferencia de 29, no un total 29. Hestia está molesta y se marcha a una fiesta de su trabajo; Bell no conoce la causa.
+- **Pp.57–60 — visita a La Señora de la Abundancia:** Bell localiza el establecimiento de dos pisos donde trabaja Seal y entra por primera vez. Reconoce a la jefa enana, mujeres gato en la cocina y una elfa entre el personal, pero no les asigna nombres aún. Seal le prepara un asiento apartado en la esquina de la barra. La jefa bromea con que Bell es un gran comensal; Seal admite que pidió a «Mia mama» que tratara con hospitalidad a su nuevo conocido. «Mia mama» aún no es el nombre personal confirmado en estas páginas; p.62 lo resuelve en la secuencia posterior. Bell declara que cambió 4.400 Varisu ese día, frente a unos 2.000 habituales; menciona 50 Varisu por comida sencilla y al menos 500 por poción como cifras de su propia explicación, no como precios universales.
+
+### Continuidad y no duplicación
+
+- No se crean eventos duplicados para el rescate de Ais, la conversación de Eina, el primer encuentro con Hestia, la primera visita a Seal ni los combates Kobold/Goblin ya enlazados en los expedientes existentes.
+- La invitación de Seal pasa a una visita real al local en pp.57–60; la cena completa se debe seguir comprobando en páginas posteriores. No marcar como celebrada solo por el sí de Bell en p.45.
+- Se mantiene CONT-MAIN-LN; traducción privada no cotejada con japonés. Las ambigüedades y atribuciones de POV no se resuelven mediante wikis, anime, juegos ni spin-offs.
+
+**Checkpoint de lectura siguiente:** PDF p.61, pasada 2. Después de cubrir pp.61–156, iniciar/continuar la pasada 3 de ese mismo rango y reconciliar la pasada 1 con una matriz cerrada. V1 no queda certificado aún.
