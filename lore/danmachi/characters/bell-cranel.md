@@ -244,3 +244,17 @@ La traducción española aportada es privada y no se ha cotejado con el japonés
 - **Visual:** diez páginas físicas pp.119–128 inspeccionadas individualmente a 130 dpi. p.126 es la única ilustración; no hay tablas ni notas al pie.
 - **Revisión correctiva:** p.119 para diferenciar recuperación física de un snapshot numérico; pp.121–123 para mantener separadas observación e hipótesis; p.125 para el intervalo exacto respecto al Banquete; p.126 para no asignar identidad por apariencia; p.128 para no confundir la daga del escaparate con la Daga de Hestia.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
+## Auditoría de tercera pasada · CONT-MAIN-LN · PDF pp.119–128
+
+- **p.119:** se confirma el desenlace del Goblin tras el impacto de la mochila: rueda, convulsiona y queda inmóvil. Bell da por terminado el combate, comprueba que su rodilla derecha ya se mueve por completo y nota un aumento de capacidad, sin nuevos números de Estado. Recupera fragmentos de Piedra Mágica de ambos monstruos y piensa en una persona a quien desea alcanzar, que permanece sin nombre.
+- **p.120:** regreso del cuarto al primer piso por tres tramos de escaleras; Bell derrota otros Goblins y Kobolds sin detalle individual y llega al gran vestíbulo subterráneo de Babel. Se reutiliza la ficha del lugar; no se reconstruye un mapa interior.
+- **pp.121–123:** cajas de transporte para expediciones, una caja se mueve y emite un pequeño rugido, conversación sobre el Festival de Monstruos, emblema de Ganesha Familia y Eina trabajando en el Gremio. Bell no abre las cajas ni habla con Eina.
+- **pp.124–127:** encuentro con Miach y entrega de dos pociones de recuperación recién preparadas, como cortesía. Miach no asistió al Banquete aunque fue invitado; estaba ayudando a producir productos de su Familia. Bell guarda las pociones en la funda de la pierna izquierda.
+- **p.126:** ilustración monocroma de página completa. La figura de cabello oscuro frente a Bell no recibe identidad por apariencia, aunque la ilustración acompaña la escena.
+- **p.127:** reflexión narrativa sobre Familias orientadas a oficios y comercio; no convertirla en descripción institucional exhaustiva.
+- **p.128:** Bell observa un gran escaparate de Hephaistos Familia: espadas ornamentadas y una daga blanca fabricada con dientes de monstruo. La considera cara y desea usarla, pero no la compra. No identificarla con la Daga de Hestia ni con otra ficha de arma.
+- **Continuidad:** se reutilizan los eventos existentes del combate Dungeon Lizard/Goblin, preparativos del Festival y entrega de pociones por Miach. La ruta de Orario y la ubicación de Babel ya estaban documentadas. El escaparate se conserva en la ficha de Hephaistos; no se crea un objeto ni un evento de compra.
+- **Visual:** diez páginas físicas pp.119–128 inspeccionadas individualmente a 130 dpi. p.126 es la única ilustración; no hay tablas ni notas al pie.
+- **Revisión correctiva:** p.119 para diferenciar curación percibida y estadísticas; pp.121–123 para mantener separadas observación e hipótesis; p.125 para el intervalo exacto respecto al Banquete; p.126 para no asignar identidad por apariencia; p.128 para no confundir la daga de escaparate con la Daga de Hestia.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
