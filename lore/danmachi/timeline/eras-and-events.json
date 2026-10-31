@@ -3367,6 +3367,136 @@
           ]
         }
       ]
+    },
+    {
+      "id": "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001",
+      "recordId": "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 620,
+      "title": "Hestia actualiza el Estado de Bell y ambos acuerdan no dejarse solos",
+      "dateLabel": "La mañana posterior al regreso de Bell de la incursión del sexto piso; intervalo exacto no cuantificado.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Hestia registra un nuevo aumento de atributos y vuelve a ver [Deseo Inquebrantable], pero oculta la Habilidad a Bell. Le explica el crecimiento anormal y ambos acuerdan que Bell no se sobreesforzará ni dejará sola a Hestia.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "recibe la actualización y promete prudencia"
+        },
+        {
+          "id": "DM-CHAR-HESTIA",
+          "name": "Hestia",
+          "kind": "character",
+          "role": "actualiza el Estado y mantiene oculta la Habilidad"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001.md",
+      "sources": [
+        {
+          "label": "DMR-061 · Volumen 1 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Traducción privada no cotejada con japonés; localizador PDF pp.91–97."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001.md",
+          "kind": "internal",
+          "note": "Incluye snapshot y discrepancia de Fuerza entre pp.54 y 91."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "Ocurre después de la incursión del sexto piso y del regreso de Bell; no se cuantifica el intervalo.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "unknown",
+        "spatialPrecision": "unknown",
+        "reason": "La escena ocurre durante una actualización doméstica, pero el folio no fija un nombre de ubicación catalogable."
+      },
+      "locationRefs": []
+    },
+    {
+      "id": "EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001",
+      "recordId": "EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 621,
+      "title": "Bell regresa a La Señora de la Abundancia y se disculpa con Seal",
+      "dateLabel": "Cerca del mediodía, después de la conversación con Hestia; fecha absoluta desconocida.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Bell vuelve al establecimiento para disculparse por haberse ido sin pagar y devuelve el dinero. Seal lo perdona y le entrega una cesta de comida; la conversación con Mia-mama continúa al final de p.100.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "se disculpa y devuelve el dinero"
+        },
+        {
+          "id": "DM-CHAR-SEAL-FLOVER",
+          "name": "Seal Flover",
+          "kind": "character",
+          "role": "acepta la disculpa y ofrece comida"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001.md",
+      "sources": [
+        {
+          "label": "DMR-061 · Volumen 1 aportado por el usuario",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Traducción privada no cotejada con japonés; localizador PDF pp.98–100."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001.md",
+          "kind": "internal",
+          "note": "La escena continúa al cierre de p.100."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "Bell visita el establecimiento cerca del mediodía después de la conversación con Hestia.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "establishment",
+        "reason": "El texto nombra explícitamente La Señora de la Abundancia en p.98."
+      },
+      "locationRefs": []
     }
   ],
   "temporalModelVersion": 1,
