@@ -14,8 +14,8 @@ assert.equal(report.valid,true,report.errors.join("\n"));
 assert.equal(report.temporalModelVersion,1);
 assert.equal(report.legacyTemporalModel,false);
 assert.equal(report.eraCount,10);
-assert.equal(report.eventCount,51);
-assert.equal(report.temporalEventCount,51);
+assert.equal(report.eventCount,52);
+assert.equal(report.temporalEventCount,52);
 assert.equal(data.anchor.id,"T0-BELL-ARRIVAL");
 assert.equal(data.anchor.eventId,"EVT-DM-BELL-ARRIVAL-001");
 
@@ -65,6 +65,7 @@ const expectedKinds={
  "EVT-DM-JUGGERNAUT-RETURN-001":"relative_order",
  "EVT-DM-JUGGERNAUT-DEFEAT-001":"relative_order",
  "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001":"relative_order",
+ "EVT-DM-V01-HESTIA-SEARCHES-BELL-AND-CARES-FOR-HIM-001":"relative_order",
  "EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001":"relative_order",
  "EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001":"relative_offset",
  "EVT-DM-V01-GANESHA-GOD-BANQUET-001":"relative_order",
@@ -118,6 +119,7 @@ const expectedLabels={
  "EVT-DM-JUGGERNAUT-RETURN-001":"Volúmenes 13–14 · meses después de T0",
  "EVT-DM-JUGGERNAUT-DEFEAT-001":"Continuación en el volumen 14 · fecha interna abierta",
  "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001":"La mañana posterior al regreso de Bell de la incursión del sexto piso; intervalo exacto no cuantificado.",
+ "EVT-DM-V01-HESTIA-SEARCHES-BELL-AND-CARES-FOR-HIM-001":"Madrugada posterior a la incursión del sexto piso; el reloj marca las 5:00 a. m.; fecha absoluta desconocida.",
  "EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001":"Cerca del mediodía, después de la conversación con Hestia; fecha absoluta desconocida.",
  "EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001":"Exactamente dos días después del Banquete de Ganesha; Bell vuelve al Dungeon y llega a Babel cuando ya es de noche.",
  "EVT-DM-V01-GANESHA-GOD-BANQUET-001":"Por la noche, después de la salida de Hestia y de la visita de Bell a Seal; fecha absoluta desconocida.",
@@ -315,10 +317,10 @@ assert.equal(legacyReport.valid,true,"legacy v1 data must remain loadable throug
 assert.equal(legacyReport.legacyTemporalModel,true);
 assert.equal(timeline.temporalKindLabel(null),"Tiempo sin normalizar");
 assert.equal(report.locationCount,2);
-assert.equal(report.locationRefCount,42);
+assert.equal(report.locationRefCount,43);
 assert.equal(report.unknownEventCount,9,"Six existing unknown-location candidates plus three Hestia status updates without a catalogued home location remain spatially unknown.");
-assert.equal(report.provisionalEventCount,9);
-assert.equal(data.events.length,51,"All 51 indexed event IDs must remain.");
+assert.equal(report.provisionalEventCount,10);
+assert.equal(data.events.length,52,"All 52 indexed event IDs must remain.");
 const banquet=events.get("EVT-DM-V01-GANESHA-GOD-BANQUET-001");
 const festivalPrep=events.get("EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001");
 assert.equal(festivalPrep.temporal.kind,"relative_offset");
@@ -356,6 +358,14 @@ assert.equal(banquet.locationRefs[0].locationId,"LOC-ORARIO");
 assert.equal(banquet.locationRefs[0].spatialPrecision,"city_level");
 assert.equal(petition.locationAssessment.status,"provisional");
 assert.equal(petition.locationRefs[0].locationId,"LOC-ORARIO");
+const hestiaSearch=events.get("EVT-DM-V01-HESTIA-SEARCHES-BELL-AND-CARES-FOR-HIM-001");
+assert.equal(hestiaSearch.temporal.kind,"relative_order");
+assert.equal(hestiaSearch.temporal.relation,"before");
+assert.deepEqual(hestiaSearch.temporal.referenceIds,["EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001"]);
+assert.equal(hestiaSearch.locationAssessment.status,"provisional");
+assert.equal(hestiaSearch.locationRefs.length,1);
+assert.equal(hestiaSearch.locationRefs[0].locationId,"LOC-ORARIO");
+assert.equal(hestiaSearch.locationRefs[0].spatialPrecision,"city_level");
 const sealReturnEvent=events.get("EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001");
 assert.equal(sealReturnEvent.locationAssessment.status,"provisional","The Seal return event is located only at Orario city level.");
 assert.equal(sealReturnEvent.locationRefs.length,1);
