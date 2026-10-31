@@ -291,7 +291,7 @@ No se ha inspeccionado visualmente cada folio. Estos localizadores constituyen u
 - **pp. 91–94:** actualización del Estado de Bell, Lv. 1: Fuerza H 123 → G 221; Resistencia I 42 → H 101; Destreza H 139 → G 232; Agilidad G 225 → F 313; Magia I 0. Hestia conoce [Deseo Inquebrantable] y decide ocultarle su existencia, explicándole solo que atraviesa un período de crecimiento extraordinariamente rápido. Bell no conoce todavía el nombre ni los efectos de la habilidad.
 - **pp. 95–96:** Bell relaciona su progreso con haber llegado al sexto piso. Hestia lo reprende por su imprudencia, reconoce que sus propias decisiones y capacidad de combate también son parte de su fuerza y le pide que no se sobreexija. Bell promete no actuar imprudentemente ni dejarla sola. Hestia decide usar la invitación del Banquete de Ganesha para intentar ver a Hephaistos esa noche.
 - **Pendientes de modelado:** revisar el límite y orden de tres candidatos —incursión/War Shadows, regreso y cuidado de Hestia, actualización/explicación/promesa— antes de crear IDs; revisar si pp. 74–76 amplían el evento existente de Eina asesora a Bell. No duplicar eventos y conservar la separación de la actualización de Estado de pp. 30–36 y la de pp. 193–196.
-- **Visual:** hoja de contactos local de pp. 73–96 inspeccionada. Ilustraciones/portadillas en pp. 73, 79 y 86; la figura de p. 86 queda sin identidad asignada.
+- **Visual (registro corregido el 2026-10-31):** la hoja de contactos anterior había señalado portadillas/ilustraciones en pp.73, 79 y 86. La renderización física confirma la portadilla de p.73; p.79 es una página de texto, por lo que se corrige esa clasificación. La anotación de p.86 se conserva como no revalidada en esta tanda y su figura continúa sin identidad asignada.
 - **Siguiente página:** PDF p. 97. Cinco pasadas y auditoría visual/cotejo individual siguen abiertas. Traducción privada no cotejada con japonés.
 
 ## DMR-061 — continuación narrativa, PDF pp. 97–106
@@ -419,7 +419,7 @@ No se ha inspeccionado visualmente cada folio. Estos localizadores constituyen u
 
 **Control de continuidad y duplicados:** pp. 73–76 amplían el expediente existente `EVT-DM-EINA-ADVISOR-001`; no se crea otro evento de asesoramiento. Misha queda nombrada en esta continuidad, pero no se abre una ficha individual por falta de datos suficientes. Frog Shooter ya cuenta con una ficha de monstruo procedente de DMR-062; esta pasada no crea una segunda ficha ni un evento aislado para su muerte.
 
-**Visuales:** la hoja de contactos de pp. 73–96 ya estaba documentada en el checkpoint de primera pasada. Esta auditoría textual no equivale a una nueva inspección ampliada de las imágenes de pp. 73, 79 o 86; sus estados visuales no se elevan aquí.
+**Visuales:** en esta reanudación se renderizaron pp.73–80 a 130 dpi y se inspeccionaron los folios completos. p.73 es una portadilla ilustrada; pp.74–80 son páginas de texto, incluida p.79, que se corrige como página no ilustrada. p.86 no se reexaminó.
 
 **Siguiente página de pasada 2:** PDF p. 77. La pasada 3 de pp. 9–156 sigue pendiente. V1 permanece `IN_PROGRESS`; la traducción privada continúa sin cotejo con japonés.
 

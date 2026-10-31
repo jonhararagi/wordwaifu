@@ -31,7 +31,7 @@ Monstruo del sexto piso del Dungeon, descrito en la traducción como una criatur
 - En el encuentro de Bell aparecen dos ejemplares: el segundo nace detrás de él en p.80 y deja la situación en dos contra uno. El combate sigue abierto al cierre de ese folio.
 
 ## Límites
-- No inferir nivel, clase de amenaza, resistencia, rango de pisos, regeneración ni habilidades adicionales.
+- No inferir nivel, clase oficial de amenaza, resistencia, rango habitual de aparición, regeneración ni habilidades adicionales. La referencia de p.80 a los pisos 1–12 es el alcance de una afirmación narrativa sobre novatos, no un mapa formal de aparición.
 - El bloque deja abierto el desenlace de la lucha y la huida; no se crea un evento cerrado para el combate solo a partir de estas páginas.
 - La traducción privada no está cotejada con el japonés.
 
