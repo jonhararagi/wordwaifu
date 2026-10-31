@@ -1602,3 +1602,20 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - **Controles:** tres por cada folio pp.39–48; cuatro revisiones totales en pp.42–43 y p.48.
 - **Siguiente folio:** PDF p.49.
 - **Estado:** V1 IN_PROGRESS; traducción privada no cotejada con japonés.
+
+
+### DMR-061 — tercera pasada V1 · PDF pp.49–58 · 2026-10-31
+
+- [x] Completar extracción por folio de pp.49–58 y contrastar nombres, cantidades, objetos, reglas, diálogo, conocimiento y secuencia.
+- [x] Renderizar e inspeccionar visualmente las diez páginas físicas a 130 dpi; registrar la tabla de Estado de p.54.
+- [x] Completar continuidad de Kobolds, Goblin, Piedras Mágicas, Dungeon, Gremio, actualización del Estado y visita nocturna a La Señora de la Abundancia.
+- [x] Reutilizar EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001 y MON-DM-KOBOLD-001; mantener ambigua la cifra final de bajas.
+- [x] Reutilizar EVT-DM-V01-BELL-DEFEATS-GOBLIN-AND-GETS-TOOTH-001 para p.53; mantener como encuentro sin desenlace confirmado el ataque sorpresa de p.54.
+- [x] Reutilizar EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-FIRST-EXCURSION-001 para pp.54–56; mantener desconocida para Bell la causa del crecimiento y separar la fiesta de Hestia del Banquete de Ganesha.
+- [x] Reutilizar EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001 para la visita de pp.57–72; no duplicar encuentro de pp.42–46 ni disculpa de pp.98–100.
+- [x] Aplicar revisión correctiva puntual a pp.49–58 para cuenta de bajas, atribuciones, Estado, fiesta no identificada y personal anónimo.
+- [ ] Continuar tercera pasada desde PDF p.59 hasta p.156 (98 folios).
+- [ ] Reconciliar la pasada 1 mediante matriz de cobertura por página/localizador.
+- **Controles:** tres pasadas por cada folio pp.49–58; cuarta revisión correctiva aplicada a las ambigüedades del bloque.
+- **Siguiente folio:** PDF p.59.
+- **Estado:** tercera pasada completada pp.9–58; pasada 2 pp.9–156 ya completada; reconciliación de pasada 1 pendiente; V1 IN_PROGRESS. Traducción privada no cotejada con japonés.
