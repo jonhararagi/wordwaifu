@@ -1116,3 +1116,16 @@ Sobre SHA 4423efcfc55920b02fdf949927ae7a4033bf1033:
 - **Visual:** bloque del Estado en p.91; nota al pie en p.98; sin ilustraciones.
 - **Checkpoint:** tercera pasada pp.9–98 (90 folios); siguiente p.99; restan 58 folios. Pasada 2 pp.9–156 completada; reconciliación de pasada 1 pendiente. V1 IN_PROGRESS; traducción privada no cotejada con japonés.
 
+ 
+
+## DMR-061 — tercera pasada V1 · PDF pp.99–108 · 2026-10-31
+
+- **Resultado:** tres controles completos por folio; cuarta revisión correctiva puntual en pp.101, 105, 107 y 108.
+- **pp.99–102:** Bell devuelve a Seal el dinero que debía, acepta una cesta de comida y recibe de Mia-mama un consejo centrado en sobrevivir y no intentar parecer genial. Mia-mama menciona a una elfa llamada Ryu, sin confirmar qué acción habría tomado. Bell sale de la tienda en p.102; después del separador comienza una descripción nocturna de Orario.
+- **pp.102–103:** la descripción de la muralla circular, la ciudad iluminada con Lámparas de Piedra Mágica y Babel en el centro coincide con las fichas existentes LOC-ORARIO y Babel. No se añadieron coordenadas ni relaciones espaciales nuevas.
+- **pp.104–105:** comienza el Banquete de Ganesha en el recinto «Yo Soy Ganesha», con una estatua de elefante de unos 30 metros. Ganesha anuncia la Philia dentro de tres días. Hestia asiste y come en el buffet; las bromas y rumores de otros dioses sobre su posible empleo permanecen como comentarios no confirmados.
+- **pp.106–108:** reencuentro Hestia–Hephaistos, recuerdo de la ayuda previa y llegada de Freya. p.107 contiene dos notas al pie del traductor. La diosa de cabello y ojos escarlata que aparece al final de p.108 no se identifica todavía.
+- **Eventos:** se amplía el evento existente de regreso a Seal (pp.98–102) y el Banquete de Ganesha (pp.104–115). No se crean IDs nuevos; el Banquete no se fusiona con el encuentro Freya–Loki–Ais del Festival (pp.139–145).
+- **Visual:** diez páginas de texto; no hay ilustraciones, tablas ni diagramas. Dos notas al pie en p.107.
+- **Checkpoint:** tercera pasada completada pp.9–108 (100 folios). Siguiente página PDF p.109; restan 48 folios. La pasada 2 pp.9–156 sigue completa; la reconciliación de la pasada 1 sigue pendiente. V1 permanece IN_PROGRESS; traducción privada no cotejada con japonés.
+

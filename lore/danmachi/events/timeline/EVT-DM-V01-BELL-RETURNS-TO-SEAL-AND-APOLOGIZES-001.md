@@ -76,3 +76,15 @@ Bell regresa al establecimiento para disculparse por haberse ido sin pagar duran
 - **Visual:** p.98 es texto con nota al pie; sin ilustración ni tabla.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
 
+ 
+
+## Auditoría de tercera pasada · CONT-MAIN-LN · PDF pp.99–102
+
+- **p.99:** Seal reaparece y Bell se disculpa por haberse marchado sin pagar. Le entrega el dinero que tenía preparado; Seal dice que su regreso ya la ha hecho feliz y que ella también debería disculparse. La empleada elfa y la nekomusume del turno matutino siguen sin nombre. El local se describe como tienda de té durante la mañana.
+- **p.100:** Seal ofrece a Bell una cesta grande con comida preparada por los cocineros y en cuya preparación ayudó un poco. Bell acepta porque comprende que quiere animarlo. Mia-mama aparece, reconoce la devolución y bromea con el «juguete perdido». Una nekomusume protesta porque Seal se quedará sin comida por darle la cesta a Bell; Mia-mama bromea sobre una posible relación y Seal lo niega a gritos. No se confirma romance.
+- **p.101:** Mia-mama dice que Seal intentó perseguir a Bell y que una elfa llamada Ryu iba a tomar medidas. Es una información referida por Mia-mama; no prueba que Ryu actuara ni autoriza identificarla sin cotejo. Mia-mama aconseja a Bell luchar por sobrevivir y considera ganadores a quienes regresan vivos. La frase sobre el fondo del lago se conserva como advertencia de la jefa, no como prueba de un plan literal de agresión.
+- **p.102:** Bell agradece, decide fortalecerse sin sobreesforzarse y expresa que intentará sobrevivir. Mia-mama le pide que no muera. Bell sale de la tienda; aquí termina el evento. Tras el separador comienza una descripción nocturna de Orario, que no se integra como parte de la visita a Seal.
+- **Continuidad:** se amplía este evento ya existente y no se crea un segundo evento para la cesta, el consejo o la salida. Mia-mama permanece diferenciada de los perfiles de adaptación; las dos empleadas siguen anónimas y Ryu permanece como mención no resuelta.
+- **Visual:** pp.99–102 son páginas de texto; no contienen ilustraciones, tablas, diagramas ni notas al pie. Inspeccionadas individualmente a 130 dpi.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+

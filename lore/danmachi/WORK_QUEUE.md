@@ -1687,3 +1687,21 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - **Siguiente folio:** PDF p.99.
 - **Estado:** tercera pasada completada pp.9–98; pasada 2 pp.9–156 completada; reconciliación de pasada 1 pendiente; V1 IN_PROGRESS. Traducción privada no cotejada con japonés.
 
+ 
+
+### DMR-061 — tercera pasada V1 · PDF pp.99–108 · 2026-10-31
+
+- [x] Completar extracción folio por folio de pp.99–108: disculpa y cesta de Seal; consejo de Mia-mama; salida de Bell; Orario/Babel de noche; recinto y Banquete de Ganesha; reencuentro de Hestia y Hephaistos; llegada de Freya.
+- [x] Renderizar e inspeccionar las diez páginas físicas individualmente a 130 dpi; las diez son texto; p.107 contiene notas al pie 2 y 3.
+- [x] Ampliar EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001 para completar pp.99–102 sin abrir evento paralelo.
+- [x] Ampliar EVT-DM-V01-GANESHA-GOD-BANQUET-001 para la tercera pasada de pp.104–108; mantener separado el encuentro de Freya/Loki/Ais del Festival (pp.139–145).
+- [x] Reutilizar fichas existentes de Orario, Babel, Ganesha Familia, Hestia, Hephaistos y Freya. No crear IDs nuevos.
+- [x] Mantener los rumores sobre Hestia en p.105 como comentarios de dioses anónimos, no biografía confirmada.
+- [x] Mantener sin identificar la diosa que aparece al final de p.108; continuar su identificación con el texto de p.109 y siguientes.
+- [x] Aplicar cuarta revisión correctiva puntual en pp.101, 105, 107 y 108.
+- [ ] Continuar tercera pasada desde PDF p.109 hasta p.156 (48 folios).
+- [ ] Reconciliar la pasada 1 mediante matriz de cobertura por folio.
+- **Controles:** tres controles completos por cada página pp.99–108 (extracción, visual y continuidad); cuarta revisión puntual en pp.101, 105, 107 y 108.
+- **Siguiente folio:** PDF p.109.
+- **Estado:** tercera pasada completada pp.9–108 (100 folios); pasada 2 pp.9–156 completada; reconciliación de pasada 1 pendiente; V1 IN_PROGRESS. Traducción privada no cotejada con japonés.
+

@@ -134,3 +134,15 @@ En pp.27–28 la explicación de los dioses, las Familias y la Gracia se present
 - **Rutina doméstica (p.38):** después de una cena sencilla, Bell cedió la cama a Hestia y durmió en el sofá. Al amanecer la encontró dormida con la cabeza apoyada sobre su pecho. Se registra como una escena cotidiana de convivencia, no como prueba de una relación romántica.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF pp.26, 29–30, 35 y 38.
 
+ 
+
+## Tercera pasada · Banquete de Ganesha · CONT-MAIN-LN · Volumen 1 · PDF p.105
+
+Durante el Banquete, Hestia pide un taburete para alcanzar la parte interior de la mesa del buffet y come con entusiasmo. La narración relaciona su actitud ahorrativa con la precariedad económica de Hestia Familia y con su deseo de reducir la carga económica de Bell; su vestido se describe como algo mejor que la ropa habitual, no como un atuendo de lujo.
+
+Algunos dioses anónimos hacen comentarios burlones sobre Hestia y repiten un rumor de que trabajó en una tienda al aire libre en el lado norte de la calle comercial, donde los clientes podían acariciarla. **Este folio no confirma que el rumor sea verdadero**. Hestia ignora los comentarios; no se incorporan como hechos biográficos ni como relación laboral.
+
+- **Evento:** EVT-DM-V01-GANESHA-GOD-BANQUET-001.
+- **Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés, PDF p.105.
+- **Revisión de tercera pasada:** extracción, inspección visual y continuidad; sin nueva ficha, evento ni claim independiente.
+
