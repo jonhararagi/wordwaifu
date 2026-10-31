@@ -1671,3 +1671,19 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - **Controles:** tres controles completos por cada folio pp.79–88 (extracción, visual y continuidad); cuarta revisión correctiva puntual en pp.83–85 y pp.87–88.
 - **Siguiente folio:** PDF p.89.
 - **Estado:** tercera pasada completada pp.9–88; pasada 2 pp.9–156 completada; reconciliación de pasada 1 pendiente; V1 IN_PROGRESS. Traducción privada no cotejada con japonés.
+ 
+
+### DMR-061 — tercera pasada V1 · PDF pp.89–98 · 2026-10-31
+
+- [x] Extraer pp.89–98: cuidado de Hestia, actualización del Estado, decisión de ocultar la habilidad, promesa y regreso de Bell a la taberna.
+- [x] Renderizar e inspeccionar las diez páginas a 130 dpi; p.91 bloque del Estado; p.98 nota al pie 1; sin ilustraciones.
+- [x] Crear el evento propio EVT-DM-V01-HESTIA-SEARCHES-BELL-AND-CARES-FOR-HIM-001 para pp.87–90, separado del State update.
+- [x] Ampliar el evento existente de actualización de pp.91–97 y el regreso a Seal con auditoría de p.98.
+- [x] Mantener la habilidad oculta a Bell y preservar H120/H123 sin corregir por conjetura.
+- [x] Tratar «nekomusume» como nota de traducción; no crear ficha de especie ni de empleadas.
+- [ ] Continuar tercera pasada desde PDF p.99 hasta p.156 (58 folios).
+- [ ] Reconciliar la pasada 1 mediante matriz de cobertura por folio.
+- **Controles:** tres por folio pp.89–98; cuarta revisión en pp.91, 93–96 y p.98.
+- **Siguiente folio:** PDF p.99.
+- **Estado:** tercera pasada completada pp.9–98; pasada 2 pp.9–156 completada; reconciliación de pasada 1 pendiente; V1 IN_PROGRESS. Traducción privada no cotejada con japonés.
+

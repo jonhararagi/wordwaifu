@@ -78,3 +78,16 @@ No se fusionan los snapshots ni se transfieren automáticamente sus valores o co
 - No atribuir a Bell conocimiento consciente de [Deseo Inquebrantable].
 - No resolver la discrepancia de Fuerza H120/H123 sin evidencia adicional.
 - No declarar celebrada la reunión del Banquete ni realizada la conversación con Hephaistos a partir de pp.96–97.
+ 
+
+## Auditoría de tercera pasada · CONT-MAIN-LN · PDF pp.91–97
+
+- **p.91:** el bloque físico del Estado confirma Lv.1, Fuerza H123→G221, Resistencia I42→H101, Destreza H139→G232, Agilidad G225→F313 y Magia I0. [Deseo Inquebrantable] aparece en el Estado grabado con tres efectos. La discrepancia frente a H120 de p.54 se mantiene.
+- **p.92:** Hestia califica el crecimiento como un salto extraordinario; sus comparaciones con otros aventureros no son fórmula ni predicción de nivel.
+- **pp.93–94:** Hestia decide ocultar la habilidad. Sus temores sobre arrogancia, accidentes e interés de otros dioses y su reflexión sobre celos de Wallenstein pertenecen a su POV.
+- **p.95:** Hestia explica a Bell que su crecimiento es anormal y lo llama período de crecimiento; no revela la habilidad. Reconoce que su técnica y sus decisiones también contribuyen a sus resultados.
+- **pp.95–96:** Hestia pide prudencia y que no la deje sola; Bell promete no actuar imprudentemente, hacerse más fuerte y no dejarla sola.
+- **p.97:** Hestia prepara su salida para intentar ver a Hephaistos en el Banquete. Autoriza a Bell a volver al Dungeon, pero pide que recuerde su rodilla todavía lesionada.
+- **Visual:** p.91 contiene el bloque del Estado; pp.92–97 son texto. Sin ilustraciones.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+

@@ -105,7 +105,7 @@
 
 
 <!-- DANMACHI-METRICS:BEGIN -->
-- **Corpus DanMachi:** 234 registros activos; 28 IDs reservados; 109 documentos de apoyo.
+- **Corpus DanMachi:** 235 registros activos; 28 IDs reservados; 109 documentos de apoyo.
 - **Grafo de conocimiento:** 263 relaciones explícitas; 263/263 con ambos extremos activos y distintos; IDs de relación únicos.
 - **Roster de adaptación:** 63 identidades; 63/63 tienen registro, ruta Markdown e expediente UI con el mismo ID.
 - **Expedientes de interfaz:** 93 perfiles; 93/93 enlazados a catálogo y Markdown por ID.
@@ -1103,4 +1103,16 @@ Sobre SHA 4423efcfc55920b02fdf949927ae7a4033bf1033:
 - **Continuidad:** se amplía MON-DM-WAR-SHADOW-001. No se crea todavía evento cerrado para la lucha: p.85 termina con Bell empezando otra fase de combate. La búsqueda de Hestia y el regreso de Bell siguen hasta pp.89–90; se decidirá el evento una vez terminada la tercera pasada de ese tramo. No se fusiona con la actualización de Estado pp.91–97.
 - **Visual:** p.79 tiene nota al pie 2 («Sombra de Guerra»); p.86 es la única ilustración de página completa; las demás páginas son texto. Sin tablas ni cuadros de Estado.
 - **Checkpoint:** tercera pasada completada pp.9–88 (80 folios). Próxima página física PDF p.89; restan pp.89–156 (68 folios). La pasada 2 pp.9–156 permanece completada. La reconciliación integral de la pasada 1 sigue pendiente. V1 continúa IN_PROGRESS; DMR-061-SRC-001 no se ha cotejado con japonés.
+
+ 
+
+## DMR-061 — tercera pasada V1 · PDF pp.89–98 · 2026-10-31
+
+- **Estado:** tres controles por folio; cuarta revisión en pp.91, 93–96 y p.98.
+- **pp.89–90:** Hestia deja de interrogar a Bell, lo ayuda a caminar por la rodilla herida y le ofrece su cama. Bell acepta literalmente la broma de dormir juntos y dice que quiere hacerse más fuerte.
+- **pp.91–97:** nueva actualización del Estado. Lv.1; Fuerza H123→G221, Resistencia I42→H101, Destreza H139→G232, Agilidad G225→F313, Magia I0. [Deseo Inquebrantable] permanece oculta para Bell. Se conserva H120 (p.54)/H123 (valor anterior p.91) como discrepancia abierta. Hestia y Bell prometen prudencia y apoyo mutuo.
+- **p.98:** Bell vuelve a La Señora de la Abundancia y pregunta por Seal y la jefa. Dos empleadas sin nombre lo reconocen. La nota sobre «nekomusume» se conserva como nota del traductor.
+- **Eventos:** nuevo evento de búsqueda/cuidado pp.87–90; ampliación del evento de actualización pp.91–97; ampliación del regreso a Seal con p.98 únicamente. No se fusionan.
+- **Visual:** bloque del Estado en p.91; nota al pie en p.98; sin ilustraciones.
+- **Checkpoint:** tercera pasada pp.9–98 (90 folios); siguiente p.99; restan 58 folios. Pasada 2 pp.9–156 completada; reconciliación de pasada 1 pendiente. V1 IN_PROGRESS; traducción privada no cotejada con japonés.
 
