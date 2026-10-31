@@ -1170,12 +1170,12 @@ Sobre SHA 4423efcfc55920b02fdf949927ae7a4033bf1033:
 - **Checkpoint:** tercera pasada completada pp.9–138 (130 folios). Siguiente página PDF p.139; restan 18 folios. La pasada 2 pp.9–156 sigue completa; la reconciliación integral de la pasada 1 sigue pendiente. V1 permanece IN_PROGRESS; traducción privada no cotejada con japonés.
 
 
-## DMR-061 — tercera pasada V1 · PDF pp.139–148 · 2026-10-31
+## DMR-061 — tercera pasada V1 · PDF pp.149–156 · 2026-10-31
 
-- **pp.139–145:** Freya observa desde una cafetería frente a la Calle Principal del Este; Loki llega con Ais. Loki sospecha que Freya está interesada en un joven de otra Familia. Freya reconoce a Bell cuando lo ve caminar al Coliseo y se marcha; Ais sigue con la mirada su cabello blanco sin interacción directa.
-- **pp.145–146:** Hephaistos entrega a Hestia la daga negra y su vaina, y sugiere el nombre «Daga de Hestia». La deuda sigue vigente.
-- **pp.147–148:** Hestia encuentra el folleto del Festival, toma un carruaje, paga 90 Varisu y se encuentra con Freya en un callejón. Bell no está presente aún; el diálogo continúa después de p.148.
-- **Eventos y perfiles:** se amplían los registros existentes de la cafetería, entrega de la daga y salida de Hestia, junto con los perfiles de Freya, Loki, Ais, Hestia y Hephaistos. No se crean IDs.
-- **Monedero de Seal:** sigue pendiente; este bloque no muestra su devolución.
-- **Visual:** diez páginas de texto continuo; sin ilustraciones, tablas ni notas al pie.
-- **Checkpoint:** tercera pasada completada pp.9–148 (140 folios). Próxima página PDF p.149; restan 8 folios. Pasada 2 pp.9–156 completa. Reconciliación de pasada 1 pendiente; V1 IN_PROGRESS. Traducción privada no cotejada con japonés.
+- **pp.149–155:** Freya indica a Hestia dónde cree haber visto a Bell; Hestia lo encuentra y pasan juntos parte del Festival. Bell mantiene presente el encargo de devolver el monedero de Seal; Hestia propone combinar la búsqueda con la salida. Comparten crepes y ella le pide que le limpie la mejilla. No se registra la devolución del monedero ni una relación formal.
+- **p.154:** ilustración monocroma de Bell y Hestia compartiendo el crepe, coherente con el texto.
+- **p.156:** empieza una escena paralela en el Coliseo: una domadora no identificada de Ganesha Familia intenta domar un Battle Jabalí de unos dos metros ante 50.000 espectadores. Eina y el personal del Gremio realizan tareas de admisión y orientación; el Gremio dirige la planificación.
+- **Eventos y perfiles:** se amplía el evento existente Bell–Hestia y se actualizan Hestia, Bell, Freya y Eina. La escena de domar al Battle Jabalí queda registrada en DMR-061 y la ficha de Eina; no se crea un evento paralelo prematuramente ni IDs nuevos.
+- **Límites:** Freya no explica su motivo al orientar a Hestia; no se demuestra engaño. No identificar a la domadora. La daga sigue sin entregarse a Bell. La traducción privada no se ha cotejado con japonés.
+- **Visual:** ocho páginas inspeccionadas individualmente a 130 dpi; p.154 es ilustración; no se aprecian tablas ni notas al pie.
+- **Checkpoint:** tercera pasada completada pp.9–156 (148 folios). Pasada 2 pp.9–156 completa. Reconciliación integral de pasada 1 pendiente. V1 permanece IN_PROGRESS.
