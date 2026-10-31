@@ -37,3 +37,10 @@ El episodio 26 añade que, en Prototype, los locales comerciales llegan hasta el
 - Las afirmaciones se mantienen en CONT-ANIME y no se trasladan automáticamente a la novela ligera.
 
 **Fuente:** portal oficial del anime, glosario de lugares, entrada 摩天楼施設バベル. Véase [registro de fuentes](../sources/00-registro-fuentes.md#dmr-026-src-001).
+ 
+## CONT-MAIN-LN · Volumen 1 · PDF pp.103 y 120
+
+La narración describe Babel como la torre dominante situada en el centro de Orario y construida directamente sobre el Dungeon (p.103). Durante el regreso de Bell desde el cuarto piso, el personaje llega a uno de sus espacios subterráneos: un gran vestíbulo con un espacio central, columnas, mobiliario y nombres de aventureros grabados en placas de roca negra (p.120).
+
+**Límites:** el pasaje no identifica la planta exacta, dimensiones, orientación, acceso administrativo ni relación detallada entre el vestíbulo y otras áreas de Babel. No se infieren coordenadas ni una cartografía interior. Fuente DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
