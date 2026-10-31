@@ -820,3 +820,16 @@
 - **Persistencia:** guardar checkpoints después de bloques coherentes y antes de que la conversación se vuelva inestable. Registrar por página el estado de las pasadas, visuales realmente inspeccionados, cambios, dudas y página exacta siguiente.
 - **Aplicación:** DMR-061, Volumen 1, CONT-MAIN-LN, desde PDF p.157. Las referencias históricas a cinco pasadas generales y cronómetros no sustituyen las tres pasadas obligatorias por página.
 - **Límite:** no marcar como visualmente revisada una página que no se haya renderizado/visualizado; no afirmar pruebas, CI, commits, PR o integración sin evidencia directa.
+
+### CONV-DM-2026-10-30-001 — Crear un espacio explícito para extraer información de DanMachi
+
+- **Fecha:** 2026-10-30.
+- **Estado:** ACCEPTED; estructura creada en rama para revisión.
+- **Instrucción:** disponer en WordWaifu de una carpeta claramente identificada para extraer y preparar información de DanMachi antes de incorporarla al corpus.
+- **Implementación propuesta:** `lore/danmachi/extraction/`, con `inbox/` para manifiestos de fuentes, `work/` para notas provisionales, `checkpoints/` para reanudación y `templates/` para formatos comunes.
+- **Regla de separación:** el espacio de extracción no es canon y no sustituye las fichas ni los expedientes de investigación existentes. Cada hallazgo conserva fuente, continuidad, localizador y tipo de evidencia; los IDs se asignan o reutilizan solo después de comprobar duplicados.
+- **Tarea relacionada:** DMR-062 Volumen 1 continúa parcial. No reiniciar el análisis ya integrado; cubrir únicamente los rangos y verificaciones pendientes documentados en su expediente.
+- **Rama:** `docs/danmachi-extraction-workspace-2026-10-30`.
+- **Documentos afectados:** `lore/danmachi/extraction/**`, `docs/STATUS.md` y `lore/danmachi/WORK_QUEUE.md`.
+- **Estado de integración:** pendiente de PR/revisión y CI; no afirmar que está en `main` hasta verificarlo.
+
