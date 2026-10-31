@@ -14,8 +14,8 @@ assert.equal(report.valid,true,report.errors.join("\n"));
 assert.equal(report.temporalModelVersion,1);
 assert.equal(report.legacyTemporalModel,false);
 assert.equal(report.eraCount,10);
-assert.equal(report.eventCount,44);
-assert.equal(report.temporalEventCount,44);
+assert.equal(report.eventCount,46);
+assert.equal(report.temporalEventCount,46);
 assert.equal(data.anchor.id,"T0-BELL-ARRIVAL");
 assert.equal(data.anchor.eventId,"EVT-DM-BELL-ARRIVAL-001");
 
@@ -63,7 +63,9 @@ const expectedKinds={
  "EVT-DM-JUGGERNAUT-RETURN-001":"relative_order",
  "EVT-DM-JUGGERNAUT-DEFEAT-001":"relative_order",
  "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001":"relative_order",
- "EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001":"relative_order"
+ "EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001":"relative_order",
+ "EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001":"relative_order",
+ "EVT-DM-V01-GANESHA-GOD-BANQUET-001":"relative_order"
 };
 const expectedLabels={
  "EVT-DM-V01-BELL-RECEIVES-FALNA-001":"Después del primer encuentro Bell–Hestia; intervalo exacto no cuantificado.",
@@ -109,10 +111,12 @@ const expectedLabels={
  "EVT-DM-JUGGERNAUT-RETURN-001":"Volúmenes 13–14 · meses después de T0",
  "EVT-DM-JUGGERNAUT-DEFEAT-001":"Continuación en el volumen 14 · fecha interna abierta",
  "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001":"La mañana posterior al regreso de Bell de la incursión del sexto piso; intervalo exacto no cuantificado.",
- "EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001":"Cerca del mediodía, después de la conversación con Hestia; fecha absoluta desconocida."
+ "EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001":"Cerca del mediodía, después de la conversación con Hestia; fecha absoluta desconocida.",
+ "EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001":"Después de la visita a Seal; Bell vuelve al Dungeon durante el día y llega al vestíbulo de Babel cuando ya es de noche.",
+ "EVT-DM-V01-GANESHA-GOD-BANQUET-001":"Por la noche, después de la salida de Hestia y de la visita de Bell a Seal; fecha absoluta desconocida."
 };
 const events=new Map(data.events.map(e=>[e.id,e]));
-assert.deepEqual([...events.keys()].sort(),Object.keys(expectedKinds).sort(),"All 44 timeline event IDs must be retained exactly.");
+assert.deepEqual([...events.keys()].sort(),Object.keys(expectedKinds).sort(),"All 46 timeline event IDs must be retained exactly.");
 for(const [id,kind] of Object.entries(expectedKinds)){
  const event=events.get(id);
  assert.equal(event.temporal.kind,kind,id+" temporal variant");
@@ -301,10 +305,20 @@ assert.equal(legacyReport.valid,true,"legacy v1 data must remain loadable throug
 assert.equal(legacyReport.legacyTemporalModel,true);
 assert.equal(timeline.temporalKindLabel(null),"Tiempo sin normalizar");
 assert.equal(report.locationCount,2);
-assert.equal(report.locationRefCount,37);
+assert.equal(report.locationRefCount,39);
 assert.equal(report.unknownEventCount,7);
-assert.equal(report.provisionalEventCount,6);
-assert.equal(data.events.length,44,"All 44 indexed event IDs must remain.");
+assert.equal(report.provisionalEventCount,7);
+assert.equal(data.events.length,46,"All 46 indexed event IDs must remain.");
+const dungeonEncounter=events.get("EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001");
+assert.equal(dungeonEncounter.locationAssessment.status,"verified");
+assert.equal(dungeonEncounter.locationRefs.length,1);
+assert.equal(dungeonEncounter.locationRefs[0].locationId,"LOC-DUNGEON");
+assert.equal(dungeonEncounter.locationRefs[0].spatialPrecision,"floor_context");
+const banquet=events.get("EVT-DM-V01-GANESHA-GOD-BANQUET-001");
+assert.equal(banquet.locationAssessment.status,"provisional");
+assert.equal(banquet.locationRefs.length,1);
+assert.equal(banquet.locationRefs[0].locationId,"LOC-ORARIO");
+assert.equal(banquet.locationRefs[0].spatialPrecision,"city_level");
 const sealReturnEvent=events.get("EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001");
 assert.equal(sealReturnEvent.locationAssessment.status,"provisional","The Seal return event is located only at Orario city level.");
 assert.equal(sealReturnEvent.locationRefs.length,1);
