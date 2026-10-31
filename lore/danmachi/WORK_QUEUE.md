@@ -1498,3 +1498,17 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - **Pendientes:** pasada 2 pp.121–156; pasada 3 pp.9–156; reconciliación integral de la pasada 1 con matriz de cobertura; tareas DMR-062 (pp.1–10, reglas/objetos, candidatos y auditoría de personajes).
 - **Estado global:** V1 permanece IN_PROGRESS. DMR-061-SRC-001 sigue siendo una traducción privada no cotejada con japonés. El PDF tiene 215 páginas físicas: p.8 está en blanco, p.214 es el último folio narrativo y p.215 contiene créditos.
 
+
+
+### Checkpoint vigente DMR-061 · Volumen 1 · PDF pp.121–130 · 2026-10-31
+
+- **Pasada 2:** completada en pp.121–130 con tres revisiones por folio: extracción narrativa; render e inspección visual de cada página; continuidad/entidades/eventos/duplicados. Cuarta revisión correctiva en p.125 y p.130 (dos días desde el Banquete), p.126 (figuras no identificadas) y pp.128–129 (daga no identificada del escaparate).
+- **Visual:** pp.121–125 y 127–130 son páginas de texto; p.126 es ilustración monocroma a página completa, inspeccionada y sin asignar identidad.
+- **Babel y Festival:** pp.121–122 muestran cajas de transporte, una con movimiento y rugido, y una conversación sobre preparativos del Festival de Monstruos. Se crea EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001; no se identifican los monstruos dentro de las cajas ni se marca el festival como ya celebrado.
+- **Geografía:** p.123 confirma ocho avenidas desde el centro hacia las murallas. La iglesia de Hestia se encuentra entre la Calle Principal del Noreste y la del Oeste; Seal trabaja en la avenida del Oeste y Bell está cerca del Gremio en la del Noreste. La red de avenidas conserva separadas las geometrías de CONT-PROTOTYPE y CONT-MAIN-LN.
+- **Miach:** pp.124–127 Bell se encuentra con Miach y recibe dos pociones de recuperación como cortesía, que guarda en la funda de la pierna izquierda. Se crea CHAR-MIACH y EVT-DM-V01-BELL-RECEIVES-RECOVERY-POTIONS-FROM-MIACH-001; no se crea ficha de poción individual ni se confunde con la compra a Naaza en V2.
+- **Hephaistos:** Bell ve una daga blanca hecha de dientes de monstruo en un escaparate (pp.128–129), no la compra y el texto no la identifica como Daga de Hestia. Hestia mantiene la dogeza iniciada en el Banquete; p.130 confirma dos días de insistencia, sin aceptación todavía en ese folio.
+- **Cronología:** el diálogo de p.125 fija el Banquete exactamente dos días antes. La incursión de Bell, la observación de los preparativos y el encuentro con Miach se anclan a ese intervalo; la petición de la daga se inicia durante el Banquete y continúa durante los dos días posteriores. No convertir los intervalos en fechas calendario.
+- **Siguiente folio:** PDF p.131.
+- **Pendientes:** pasada 2 pp.131–156; pasada 3 pp.9–156; reconciliar la pasada 1 con matriz de cobertura; DMR-062 conserva pp.1–10, atomización selectiva de reglas/objetos y auditoría de candidatos/personajes.
+- **Estado global:** V1 permanece IN_PROGRESS. DMR-061-SRC-001 sigue siendo una traducción privada no cotejada con japonés. PDF físico: 215 páginas; p.8 en blanco; p.214 final narrativo; p.215 créditos.
