@@ -3290,6 +3290,19 @@
       ],
       "status": "source_checked_translation_unverified",
       "priority": "medium"
+    },
+    {
+      "id": "CHAR-HEPHAISTOS",
+      "path": "characters/hephaistos.md",
+      "type": "deity_character",
+      "tags": [
+        "Hephaistos",
+        "Hefesto",
+        "forja",
+        "CONT-MAIN-LN"
+      ],
+      "status": "provisional",
+      "priority": "high"
     }
   ],
   "reservedIds": [
@@ -3301,11 +3314,6 @@
     {
       "id": "CHAR-ZARD",
       "type": "character",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "CHAR-HEPHAISTOS",
-      "type": "deity_character",
       "status": "candidate_not_created"
     },
     {
