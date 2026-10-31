@@ -316,7 +316,7 @@ assert.equal(legacyReport.legacyTemporalModel,true);
 assert.equal(timeline.temporalKindLabel(null),"Tiempo sin normalizar");
 assert.equal(report.locationCount,2);
 assert.equal(report.locationRefCount,42);
-assert.equal(report.unknownEventCount,7);
+assert.equal(report.unknownEventCount,9,"Six existing unknown-location candidates plus three Hestia status updates without a catalogued home location remain spatially unknown.");
 assert.equal(report.provisionalEventCount,9);
 assert.equal(data.events.length,51,"All 51 indexed event IDs must remain.");
 const banquet=events.get("EVT-DM-V01-GANESHA-GOD-BANQUET-001");

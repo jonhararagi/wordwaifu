@@ -43,6 +43,17 @@ Se amplía la secuencia del encuentro y persecución de los Kobolds. Bell inform
 
 - No se asigna nivel numérico ni se generaliza el comportamiento de agrupación.
 - No se crean fichas individuales.
-- La cifra final se mantiene abierta hasta completar la lectura de pp.49–51.
+- La cifra final permanece abierta incluso después de completar la tercera pasada de pp.46–51: la formulación de p.49 no permite fijar un total de bajas.
 - Fuente: DMR-061-SRC-001, traducción privada no cotejada, PDF pp.46–48.
 
+
+
+## Tercera pasada completa · primer combate del grupo · PDF pp.46–51
+
+La tercera pasada cubre el encuentro, la persecución, la emboscada, el desenlace y la recuperación de recursos en todo el intervalo. En p.49 Bell afirma que sale sin heridas y explica que debe reducir riesgos, evitar cazar demasiado profundo, buscar combates uno contra uno y aprovechar el terreno. La formulación final de ataques y recuentos no permite fijar una cifra inequívoca de Kobolds abatidos.
+
+En p.50 retira los Fragmentos de Piedra Mágica, explica su valor y recuerda que Eina le enseñó que la piedra es el núcleo y fuente de vida del monstruo. En p.51 recupera una garra derecha que queda entre las cenizas como botín; no la equipa y la guarda en la mochila. El peso del equipaje continúa existiendo y Bell debe cargarlo por sí mismo al no disponer de un Ayudante.
+
+- **Resultado:** tres pasadas completas por pp.46–51; se reexaminó p.49 de forma correctiva por la cuenta de bajas y pp.50–51 para separar núcleo, fragmentos, botín y equipo.
+- **Decisión:** mantener este único evento y esta ficha de especie. No crear individuos, nivel numérico, objeto único ni cifra final de bajas.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF pp.46–51.

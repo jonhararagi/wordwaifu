@@ -62,3 +62,13 @@ Bell se enfrenta a un grupo de Kobolds en el primer piso. La narración dice que
 - **Evento/ficha:** ampliar EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001 y MON-DM-KOBOLD-001; no crear un segundo evento, individuos ni nivel numérico.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
 
+
+
+## Auditoría de tercera pasada · CONT-MAIN-LN · PDF pp.49–51
+
+- **p.49:** Bell cierra el combate y afirma que no sufrió heridas. La secuencia de ataques y expresiones de recuento no permite fijar el número final de bajas; se conserva la ambigüedad después de leer el tramo completo.
+- **p.50:** Bell extrae Fragmentos de Piedra Mágica de los cadáveres. La explicación dice que la retirada de la piedra conduce a que el cuerpo se convierta en cenizas; la enseñanza sobre la piedra como núcleo y fuente de vida se atribuye a Eina. El pasaje no autoriza crear una regla sin excepciones.
+- **p.51:** una garra derecha permanece después de las cenizas y Bell la recupera como botín. No es una nueva arma equipada: la guarda en la mochila junto a los fragmentos. El peso del equipaje sigue existiendo y Bell no dispone de Ayudante.
+- **Decisión:** ampliar este evento y MON-DM-KOBOLD-001; no crear otro encuentro, una ficha de garra ni una cifra de bajas normalizada.
+- **Visual:** pp.49–51 renderizadas a 130 dpi; las tres son páginas de texto, sin ilustración, tabla o nota al pie.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.

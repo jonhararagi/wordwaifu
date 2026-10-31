@@ -49,3 +49,15 @@ La narración del volumen afirma que el Dungeon ya existía antes de que los dio
 - **Alcance:** evidencia de la traducción privada aportada, no una cronología exhaustiva de la fundación de Orario, del Gremio o del Dungeon.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF p.46.
 - **Continuidad:** no trasladar la mención del precursor a una ficha institucional distinta ni crear una ubicación separada para calles superpuestas al Dungeon.
+
+
+## Funcionamiento del Dungeon expuesto en la narración · CONT-MAIN-LN · Volumen 1 · PDF pp.52–53
+
+La traducción presenta varios rasgos del Dungeon: las estructuras dañadas se reparan solas; su material y construcción no han sido comprendidos por los estudiosos; el lugar mantiene iluminación sin luz solar; los monstruos aparecen desde las paredes; cada piso produce un número limitado y algunos monstruos pueden desplazarse entre pisos, aunque normalmente permanecen en el piso donde surgieron. El relato asocia los pisos inferiores con monstruos más fuertes y describe conexiones mediante escaleras o pendientes, no por movimiento instantáneo.
+
+La narración atribuye parte de este contenido a rumores, dichos o información que Bell ha oído. No convertir las frases de conocimiento indirecto en observaciones personales de Bell ni presentarlas como una cartografía o modelo completo del Dungeon.
+
+En p.53 se dice que la Guild fue creada en tiempos antiguos como autoridad de gestión. Bell especula que los monstruos que aparecen fuera de Orario podrían descender de los que escaparon del Dungeon antes de la creación de la institución y que eso implicaría reproducción. Esa relación causal y la conclusión sobre reproducción son hipótesis/reflexiones de Bell, no hechos confirmados por la escena.
+
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF pp.52–53.
+- **Límites:** no se fija fecha de fundación, material constitutivo, estructura administrativa, cantidad exacta de monstruos por piso, rutas internas ni una regla exhaustiva de migración.
