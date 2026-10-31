@@ -65,4 +65,12 @@ La narración muestra a Ganesha como organizador de un Banquete de Dios en el re
 - **Evento:** EVT-DM-V01-GANESHA-GOD-BANQUET-001.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
 - **Límite:** no se infiere el número total de asistentes, una lista completa de dioses o una periodicidad formal del Banquete.
+ 
+## CONT-MAIN-LN · preparativos del Festival de Monstruos · Volumen 1 · PDF pp.121–122
+
+Bell oye en Babel una conversación según la cual Ganesha Familia vuelve a encargarse de los preparativos del Festival de Monstruos por encargo del Gremio. Ve a personas con el emblema de elefante de la Familia trasladando cajas de transporte; una caja se mueve y se oye un rugido. La escena no identifica qué monstruos se transportan ni muestra a Ganesha dirigiendo personalmente la operación.
+
+- **Evento observado:** EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+- **Límite:** se conserva la información como conversación escuchada por Bell, no como un reglamento completo de las actividades de la Familia.
 
