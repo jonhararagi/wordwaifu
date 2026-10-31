@@ -98,6 +98,29 @@ Una nota conversacional previa atribuyó por error a V1 pp. 153–158 una prueba
 - Freya libera al Silverback antes de la persecución de Bell/Hestia; la respuesta de Ganesha y el Gremio se solapa con esa persecución.
 - La fuga se había confirmado menos de cinco minutos antes del informe de Ganesha; no es la duración completa de la crisis.
 
+> **Aclaración de vigencia (2026-10-30):** la lista histórica de cinco frentes que sigue debajo no equivale a cinco lecturas completas. El estándar vigente son tres pasadas sobre el 100 % del texto, definido más abajo.
+
+
+
+## Estándar vigente desde 2026-10-30 — tres pasadas completas por volumen
+
+La instrucción vigente exige tres recorridos completos del texto de cada volumen. Los cinco apartados históricos de la sección anterior (lectura, inspección visual, cotejo, extracción de eventos y comparación con WordWaifu) son **frentes de trabajo**, no cinco lecturas completas ni sustitutos de las tres pasadas.
+
+1. **Pasada 1 — lectura integral:** leer todo el volumen en orden y registrar cada escena, acontecimiento, participante, lugar, organización, objeto, habilidad/regla, estado, pista y ancla temporal relevante.
+2. **Pasada 2 — detalle y relaciones:** volver a leer todo el texto para buscar matices, cifras, condiciones, costes, límites, heridas/equipo, vínculos, motivaciones, conocimiento individual, diálogos, notas e información visual. Separar hechos explícitos de interpretaciones.
+3. **Pasada 3 — auditoría y verificación:** volver a leer todo el texto contrastando cada registro con un localizador exacto; revisar omisiones, duplicados, contradicciones, atribuciones, cronología, continuidad y diferencias con registros anteriores.
+
+Los bloques de lectura son checkpoints, no recortes de cobertura: cada una de las tres pasadas debe cubrir todos los bloques del volumen. Si una página no se puede extraer o una imagen no se inspeccionó, debe permanecer expresamente pendiente. Solo se conserva como completado lo que tenga evidencia de pasada y rango.
+
+### Reconciliación del estado de V1
+
+- **Fuente en el repositorio:** `lore/danmachi/volumes/main/Volumen [01] • DanMachi.md` (archivo Markdown con texto y 16 imágenes incrustadas), presente en `main` al SHA `0946ace89a29e7439fbcbe4e0d4315aec8418f62`.
+- **Cobertura histórica:** DMR-061 documenta lectura secuencial narrativa hasta PDF p. 214; el PDF tiene 215 páginas físicas y p. 215 contiene créditos. El registro advierte que algunas páginas no devolvieron texto extraíble y que la auditoría visual histórica no es completa.
+- **Tres pasadas verificables:** están expresamente documentadas para PDF pp. 157–177, 178–200 y 201–214. No extender esa marca a pp. 1–156 por inferencia.
+- **Estado global del volumen:** `IN_PROGRESS`. No declarar V1 completo bajo el estándar nuevo hasta reconciliar por rango las pasadas 1, 2 y 3 de pp. 1–156, aclarar los folios no extraíbles y completar la auditoría visual relevante. Mantener todos los registros y localizadores existentes; no repetir ni crear eventos duplicados.
+- **Procedencia:** la traducción española privada continúa sin cotejo con japonés. Los datos se usan como fuente prioritaria de trabajo para `CONT-MAIN-LN`, pero las ambigüedades de traducción permanecen visibles y no se rellenan con datos de anime, wikis, juegos o spin-offs.
+- **Siguiente checkpoint:** auditoría de cobertura de pp. 1–156, comenzando por los huecos documentales/visuales detectados; actualizar una matriz de rangos para cada pasada antes de avanzar a un nuevo volumen.
+
 ## Cinco pasadas: estado de esta tanda
 
 1. **Lectura narrativa secuencial:** completada hasta PDF p. 214; primera pasada sustancial, no certifica texto extraíble de cada página.

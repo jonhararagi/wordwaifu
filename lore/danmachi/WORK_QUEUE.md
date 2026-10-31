@@ -4,6 +4,45 @@ Esta cola sigue la cobertura cronológica, desde las eras antiguas hasta el últ
 
 
 
+
+## PRIORIDAD OPERATIVA · Tres pasadas completas sobre los volúmenes fuente de la novela principal
+
+**Continuidad:** `CONT-MAIN-LN`.
+
+**Jerarquía:** los archivos fuente de `volumes/main/` son la referencia prioritaria para el canon de la novela principal dentro de WordWaifu. Wikis y adaptaciones quedan como apoyo secundario y no pueden sobrescribir un dato del texto fuente. Si la traducción privada resulta ambigua o no está cotejada con japonés, conservar esa limitación en el claim.
+
+### Método obligatorio por volumen
+
+- [ ] **Pasada 1 — lectura integral:** recorrer el 100 % del volumen en orden y extraer escenas, eventos, personajes, lugares, organizaciones, objetos, reglas, habilidades, estados, pistas y cronología.
+- [ ] **Pasada 2 — auditoría de detalle:** releer el 100 % buscando nombres/alias, números, costes, condiciones, límites, equipo, heridas, relaciones, motivaciones, conocimiento individual, diálogos relevantes, notas e información visual; distinguir explícito de inferido.
+- [ ] **Pasada 3 — verificación de omisiones:** releer el 100 % y contrastar cada nota con su localizador; comparar fichas/eventos/relaciones con el corpus existente; detectar duplicados, contradicciones, atribuciones incorrectas y datos ausentes.
+
+Se permiten bloques y checkpoints para evitar pérdida de contexto, pero cada pasada debe cubrir todos los bloques. Nunca convertir una página ilegible, no extraída o una ilustración no inspeccionada en una página revisada. No declarar un volumen terminado hasta documentar las tres pasadas completas y cerrar la revisión de duplicados/localizadores.
+
+### Inventario comprobado en main
+
+Conteos aproximados de palabras tras excluir las cargas base64 de imágenes y elementos Markdown; sirven como inventario, no como medición editorial de páginas:
+
+| Volumen | Archivo fuente | Palabras aprox. | Imágenes incrustadas | Estado de análisis |
+|---|---|---:|---:|---|
+| 1 | `Volumen [01] • DanMachi.md` | 63.168 | 16 | DMR-061 llega a PDF p. 214; tres pasadas documentadas para pp. 157–214, no certificadas para todo el volumen. |
+| 2 | `Volumen [02] • DanMachi.md` | 74.125 | 19 | DMR-060 contiene extracción parcial; falta certificar las tres pasadas completas. |
+| 3 | `Volumen [03] • DanMachi.md` | 53.883 | 21 | Fuente cargada; análisis integral pendiente. |
+| 4 | `Volumen [04] • DanMachi.md` | 64.892 | 23 | Fuente cargada; análisis integral pendiente. |
+| 5 | `Volumen [05] • DanMachi.md` | 83.074 | 23 | Fuente cargada; análisis integral pendiente. |
+
+Inventario verificado sobre `main` SHA `0946ace89a29e7439fbcbe4e0d4315aec8418f62`; el commit de ese SHA añadió los archivos fuente de los volúmenes 3–5. No renombrar ni sobrescribir los originales al crear expedientes de análisis.
+
+### Orden de ejecución
+
+1. **Volumen 1:** reconciliar DMR-061, conservar los tres pases ya documentados en pp. 157–214 y auditar los rangos anteriores sin repetir a ciegas lo ya verificado. Marcar por rango qué pasada está completa y cuál falta.
+2. **Volumen 2:** reutilizar DMR-060 y los IDs/eventos existentes; completar las tres pasadas sobre todo el texto.
+3. **Volúmenes 3, 4 y 5:** comenzar las tres pasadas desde el principio, uno por uno, sin convertir una sinopsis previa en extracción primaria.
+4. Tras cada volumen, actualizar su expediente, las fichas/relaciones/eventos afectados, la bitácora y los localizadores. No crear IDs si el hecho ya existe.
+
+**DMR-045:** permanece abierto y no se elimina; queda después de esta prioridad operativa de extracción de los volúmenes principales, salvo nueva instrucción del usuario.
+
+
 ## REGLA PERMANENTE · Registro de acuerdos de conversación
 
 - [x] Registrar en el repositorio los acuerdos, requisitos, preferencias, correcciones y criterios de investigación relevantes tratados con el usuario, para no pedir que se reenvíen mensajes ya conocidos.

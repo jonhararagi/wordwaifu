@@ -29,7 +29,7 @@ Mapa parcial de una historia principal en curso a la fecha de esta revisión. Co
 ## Personajes, organización y fuentes
 - [Bell Cranel](../characters/bell-cranel.md) y [Ais Wallenstein](../characters/ais-wallenstein.md).
 - [Familia Loki](../familias/loki-familia.md) y [Finn Deimne](../characters/finn-deimne.md).
-- [Mapa del volumen 21](../volumes/main/volume-21.md).
+- [Mapa provisional del volumen 21](../research/inbox/BATCH-DM-008-main-story-volume-map.md).
 - [Sinopsis editorial y muestra pública](../sources/00-registro-fuentes.md#dmr-011-src-002--danmachi-volumen-principal-21).
 
 ## Criterio de cierre

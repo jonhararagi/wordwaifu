@@ -51,7 +51,7 @@ El corpus y su interfaz ya están integrados en `main`. Esta carpeta no es una r
 - [Registro maestro de fuentes](sources/00-registro-fuentes.md)
 - [Matriz de continuidad](continuity/00-matriz-de-continuidad.md)
 - [Índice de arcos](arcs/00-indice-arcos.md)
-- [Plantillas individuales para los volúmenes principales 01–20](volumes/main/README.md)
+- [Fuentes e índice de volúmenes de la novela principal](volumes/00-indice-volumenes-y-arcos.md)
 - [Validador de catálogo e IDs](tools/check-catalog.mjs)
 
 ## Cronología completa por etapas
