@@ -946,3 +946,12 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Entidades y lugares:** se crea CHAR-MIACH usando el ID reservado; se amplían Miach Familia, Babel, Orario, la red de avenidas, la iglesia de Hestia, Seal, Eina, Bell, Ganesha y Hephaistos. No se crean especies de monstruos por las cajas ni un arma para la daga no comprada.
 - **Siguiente página:** PDF p.131. **Pendientes:** pasada 2 pp.131–156; pasada 3 pp.9–156; reconciliación de pasada 1; tareas independientes DMR-062. V1 permanece IN_PROGRESS.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés. PDF de 215 páginas físicas: p.8 en blanco, p.214 último folio narrativo y p.215 créditos.
+
+## DMR-061 — segunda pasada V1 · PDF pp.131–140 (2026-10-31)
+
+- **Resultado:** tres revisiones por página completadas para pp.131–140: extracción de narración y diálogos; inspección visual real del PDF; revisión de continuidad, relaciones, eventos e IDs existentes. No se necesitó cuarta pasada correctiva.
+- **Visual:** diez páginas de texto continuo; sin ilustraciones, tablas de Estado ni fichas gráficas.
+- **Hallazgos:** Hestia explica su deseo de ayudar a Bell; Hephaistos acepta la forja y elige mithril y martillo carmesí; el diseño queda en dilema por la fuerza del usuario (pp.131–134). Bell planea el quinto piso, pero Anya le encarga llevar el monedero olvidado de Seal al Coliseo (pp.135–138). El Festival llena la Calle Principal del Este; Freya espera en una cafetería y Loki llega con Ais (pp.139–140).
+- **Continuidad:** se amplían la petición/forja ya existente y el encuentro Freya–Loki–Ais ya existente. Anya/Ryuu reutilizan fichas estables con evidencia CONT-MAIN-LN; no se transfieren capacidades de otras continuidades. El monedero sigue sin entregar y no se crea evento de cierre prematuro.
+- **Siguiente página:** PDF p.141. Pendiente segunda pasada pp.141–156; tercera pasada pp.9–156; reconciliación integral de pasada 1; DMR-062. V1 permanece IN_PROGRESS.
+
