@@ -508,3 +508,11 @@ Fuentes consultadas:
 - **Eina:** respuesta del Gremio y conversación privada con Hestia.
 - **Estado:** ninguna persona recibe marca + por esta pasada grupal; las fichas individuales y cotejos siguen en cola.
 - **Procedencia:** DMR-060-SRC-001 y DMR-061-SRC-001, traducciones privadas no cotejadas con japonés.
+
+## DMR-061 — actualización individual de Bell, Hestia y Seal · PDF pp.91–100 (2026-10-31)
+
+- **Bell Cranel:** se añade el snapshot Lv.1 de p.91 y se conserva la discrepancia de Fuerza H120 (p.54) frente a H123 (valor anterior de p.91). No se marca la ficha como revisión individual completa.
+- **Hestia:** se añade la segunda actualización del Estado, la decisión de ocultar [Deseo Inquebrantable], la valoración de la capacidad propia de Bell y la promesa mutua (pp.91–96). Sus pensamientos y celos se mantienen como POV.
+- **Seal Flover:** se añade el regreso de Bell, la disculpa, la devolución del dinero y la cesta de comida (pp.98–100). No se infiere romance ni biografía más amplia.
+- **Mia-mama y empleadas:** se mantienen sin transferencia automática desde CONT-ANIME y sin fichas nuevas para figuras anónimas.
+- **Procedencia:** DMR-061-SRC-001, traducción privada no cotejada con japonés. Esta actualización por bloque no equivale a una auditoría individual exhaustiva de cada personaje.
