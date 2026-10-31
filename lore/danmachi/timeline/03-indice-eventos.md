@@ -109,4 +109,6 @@ Estos registros facilitan la siguiente tanda, pero las seis entradas de canon si
 - `EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001` — Bell oye a la Familia Loki burlarse de su rescate del Minotauro en La Señora de la Abundancia y se marcha decidido a fortalecerse (PDF pp. 57–72).
 
 - EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001 — segunda actualización del Estado y promesa mutua (PDF pp.91–97); [Deseo Inquebrantable] sigue oculta a Bell.
-- EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001 — Bell vuelve a La Señora de la Abundancia, paga lo adeudado y acepta una cesta de comida de Seal (PDF pp.98–100); conversación abierta al final de p.100.
+- EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001 — Bell vuelve a La Señora de la Abundancia, paga lo adeudado y acepta una cesta de comida de Seal; la visita concluye cuando sale del local (PDF pp.98–102).
+- EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001 — Bell derrota a un Dungeon Lizard y un Goblin en el cuarto piso, recoge fragmentos de Piedra Mágica y regresa hacia Babel (PDF pp.117–120).
+- EVT-DM-V01-GANESHA-GOD-BANQUET-001 — Ganesha organiza el Banquete de Dios; Hestia se reencuentra con Hephaistos y pide un arma para Bell. La petición conserva evento propio (PDF pp.104–115).
