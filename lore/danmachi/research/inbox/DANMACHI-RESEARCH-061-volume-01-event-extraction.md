@@ -894,3 +894,42 @@ La actualización de pp.91–96 es distinta de la actualización tras el Minotau
 - **Resolución:** las páginas se renderizaron a 130 dpi e inspeccionaron individualmente y en hoja de contactos. No se asignó identidad visual a la figura de p.15.
 
 **Siguiente folio de tercera pasada:** PDF p.19. La tercera pasada integral de pp.19–156 y la reconciliación global de la pasada 1 siguen pendientes; V1 permanece IN_PROGRESS. Las pp.157–214 conservan sus tres pasadas documentadas. La traducción privada sigue sin cotejo con japonés.
+
+
+## DMR-061 — tercera pasada V1, PDF pp. 19–28 (2026-10-31)
+
+**Resultado:** tercera pasada completada para pp.19–28, con extracción, inspección visual física a 130 dpi y cruce contra las fichas, reglas y eventos ya existentes. No se necesitó una cuarta revisión correctiva para este bloque. Fuente DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
+### Verificación de omisiones por folio
+
+- **p.19 — continuación de la consulta de Eina:** Eina cuenta a Bell que Ais derrotó por sí sola a un grupo de monstruos de nivel 5 y que su título de Princesa de la Espada es conocido entre aventureros y dioses. La cifra de «1000 cortejos fallidos» aparece como comentario hiperbólico, no como estadística verificada. Bell admite que se enamoró de Ais. Eina dice que, según lo que ha oído, Ais no está saliendo con nadie; no conoce sus aficiones ni su comida favorita. El texto también presenta a Eina como popular entre aventureros y destaca su trato amable; no se convierten esas impresiones en relaciones concretas.
+- **p.20 — realidad de afiliaciones:** Eina recuerda que Bell ya recibió la Gracia de una deidad distinta de Loki y que Ais es una integrante clave de Loki Familia. Le pide ver la realidad y tener presente que Bell aún no puede proteger a nadie; aclara que no le está ordenando renunciar a sus sentimientos. Después lo acompaña al intercambio de recompensas del Gremio.
+- **p.21 — recompensa y ánimo:** Bell dice que derrotó principalmente Goblins y Dríadas y canjeó sus Piedras Mágicas por 1200 Varisu. Atribuye el ingreso inferior al promedio al menor tiempo que pasó en el Dungeon ese día. También menciona gastos de reparación del arma y de comida para él y Hestia, que dificultan reponer objetos. Eina lo anima: dice que las mujeres suelen encontrar atractivo a un hombre fuerte y confiable y que Ais podría fijarse en él si se hace más fuerte. Es consejo de Eina, no promesa de Ais.
+- **p.22 — ilustración:** página ilustrada completa de una mujer con uniforme del Gremio y una taza. Por la secuencia contigua de la conversación, se registra como ilustración contextual de Eina; no se usa la apariencia aislada para añadir rasgos biográficos nuevos.
+- **p.23 — despedida y transición autobiográfica:** Bell se aleja y grita «Eina-san, ¡Te amo!» seguido de «¡Gracias!». Eina se sorprende y se ruboriza. El contexto lo presenta como una despedida impulsiva y agradecida; no demuestra una relación romántica estable. La narración pasa a la historia personal de Bell: creció en un pueblo rural cerca de Orario y su abuelo fue quien lo crio.
+- **p.24 — origen de Bell y llegada a Orario:** Bell recuerda que su abuelo le contaba historias de héroes y repetía en broma que un hombre no podía evitar desear un harén. La historia de héroes —derrotar monstruos y rescatar a personas— alimentó su aspiración. El libro que se convirtió en uno de sus favoritos fue «El Laberinto Sagrado “Calabozo”»; Bell especula que su abuelo quizá se lo compró para fomentar esa pasión, sin afirmarlo como certeza. Tras la muerte de su abuelo, tomó la riqueza que quedaba y partió hacia Orario. No se da cantidad ni causa de muerte en este pasaje. Al final de la página llega por un callejón a una iglesia deteriorada.
+- **p.25 — iglesia:** Bell observa una estatua de una deidad cuyo cuerpo está desgastado y parte del rostro queda oculto. Entra por una puerta principal que no tiene puerta; el edificio está muy deteriorado, con maleza entre los pisos rotos y gran parte del techo derrumbado, aunque el altar conserva su aspecto. Detrás del altar hay una pequeña habitación con estanterías vacías y una escalera que baja.
+- **p.26 — hogar y encuentro cotidiano con Hestia:** Bell baja al espacio subterráneo y encuentra a Hestia, a quien llama «Kami-sama». Ella comprueba con las manos que no esté herido y dice que se pondría triste si muriese. Bell le promete que no dejará que quede en la calle. Hestia comenta de forma juguetona que, si algún día decide «subirse a un gran barco», debe estar preparado; no se interpreta la metáfora más allá del diálogo. Hestia cuenta que contribuyó con pequeños trabajos a los ingresos de una tienda y obtuvo muchas croquetas de patata para la cena.
+- **p.27 — explicación de los dioses y las Familias:** Bell transmite la explicación de Hestia de que los dioses descendieron al Mundo Inferior porque el cielo les resultaba aburrido, y que algunos decidieron quedarse. Se dice que buscan experimentar desde la misma posición que sus «niños» mortales y disfrutar de acontecimientos impredecibles, cultura, alimentos y artes. Bell explica que una Familia es la facción o grupo de una deidad y que sus miembros son considerados parte de su familia. Hestia se queja de que nadie conoce su nombre y de que no ha logrado atraer integrantes.
+- **p.28 — Gracia y sustento:** el texto explica que los dioses no pueden usar su todopoderoso Poder Divino en el Mundo Inferior. Tras unirse a una Familia, los mortales reciben la Gracia y ayudan a la deidad a cumplir peticiones y obtener ingresos; Hestia lo llama un intercambio equivalente. La explicación también afirma que la Gracia permite a sus receptores repeler monstruos de nivel inferior. Se conserva como explicación narrativa de estas páginas, sin inferir condiciones no mencionadas ni afirmar que todos los dioses tengan la misma motivación o estilo de gestión.
+
+### Auditoría de continuidad, atribución y duplicados
+
+- **Asesoramiento de Eina:** pp.19–23 amplían el expediente existente EVT-DM-EINA-ADVISOR-001. No se crea un evento nuevo para la consulta, la recompensa o la despedida.
+- **Ais:** la afirmación de que no está saliendo con nadie se conserva como información comunicada por Eina en ese momento; no se convierte en una verdad atemporal ni en reciprocidad hacia Bell. La afirmación sobre monstruos de nivel 5 permanece atribuida a lo que Eina cuenta.
+- **Bell:** la fantasía del harén y el deseo de aventura son recuerdos y pensamientos de Bell; el abuelo es la fuente del comentario citado. No se inventan su nombre, una fecha exacta de muerte ni la cantidad de riqueza restante.
+- **Libro:** «El Laberinto Sagrado “Calabozo”» se registra como libro favorito mencionado por Bell; la posible intención de su abuelo al comprarlo queda como conjetura de Bell. No se crea una ficha de objeto sin un sistema de objetos definido.
+- **Hestia y la iglesia:** pp.24–26 describen la llegada de Bell al edificio donde vive Hestia. Se reutiliza LOC-HESTIA-HOME; no se crea otra iglesia ni se asigna nombre propio, calle exacta o coordenadas. La estatua de p.25 permanece sin identidad nominal.
+- **Primer encuentro con Hestia:** esta no es la escena del primer encuentro cronológico. Bell y Hestia ya conviven; no se duplica EVT-DM-BELL-MEETS-HESTIA-001, que conserva el encuentro retrospectivo de pp.211–214.
+- **Reglas:** las afirmaciones sobre descenso de los dioses, Poder Divino, Familias y Gracia se añaden al expediente existente de Falna/Familias con atribución a la explicación de Hestia y al narrador. No se crean IDs nuevos ni se generalizan más allá de la fuente.
+- **Economía:** los 1200 Varisu de p.21 pertenecen a este intercambio concreto; no se mezclan con recompensas de otras incursiones ni con las cifras de Estado de p.54.
+
+### Control visual
+
+- **Páginas de texto:** pp.19–21 y pp.23–28.
+- **Ilustración:** p.22 es una página completa contextualizada con la conversación de Eina; no se incorpora como escena ni como nueva entidad.
+- **Tablas y fichas:** no hay tablas de Estado, fichas estadísticas ni diagramas en pp.19–28.
+- **Revisión:** las diez páginas físicas se renderizaron a 130 dpi y se inspeccionaron en hoja de contactos; no fue necesario un cuarto control correctivo.
+
+**Siguiente folio de tercera pasada:** PDF p.29. La tercera pasada integral de pp.29–156 y la reconciliación global de la pasada 1 siguen pendientes; V1 permanece IN_PROGRESS.
+

@@ -4,7 +4,7 @@ Cada regla se registrará como una afirmación atómica con fuente, alcance, exc
 
 | ID sugerido | Sistema | Preguntas por resolver | Estado |
 |---|---|---|---|
-| RULE-FALNA | Falna y status | Otorgamiento, lectura, actualización, límites, privacidad | Pendiente |
+| RULE-FALNA | Falna y status | Otorgamiento, lectura, actualización, límites, privacidad | Fuente localizada en V1 pp.27–28; revisión amplia pendiente |
 | RULE-LEVEL | Niveles | Requisitos, hazañas, actualización y excepciones | Pendiente |
 | RULE-EXCELIA | Excelia | Uso del término y relación con crecimiento | Pendiente |
 | RULE-MAGIC | Magia | Adquisición, límites, usos, costes y excepciones | Pendiente |
@@ -14,9 +14,9 @@ Cada regla se registrará como una afirmación atómica con fuente, alcance, exc
 | RULE-MONSTERS | Monstruos | Aparición, combate, destrucción y regeneración | Pendiente |
 | RULE-MAGIC-STONES | Piedras mágicas | Extracción, uso, economía y restricciones | Pendiente |
 | RULE-DROP-ITEMS | Objetos de caída | Obtención, rareza, uso y reglas del sistema | Pendiente |
-| RULE-FAMILIA-MEMBERSHIP | Afiliaciones | Ingreso, salida, cambio de deidad y efectos sobre status | Prioridad alta |
+| RULE-FAMILIA-MEMBERSHIP | Afiliaciones | Ingreso, salida, cambio de deidad y efectos sobre status | Fuente localizada en V1 pp.27–28; revisión amplia pendiente |
 | RULE-LEVEL-DIFFERENCE | Diferencia de nivel | Qué puede y qué no puede hacer un aventurero contra rivales superiores | Alta |
-| RULE-GODS-LIMITS | Limitaciones de deidades | Restricciones sobre poder e intervención en el mundo inferior | Alta |
+| RULE-GODS-LIMITS | Limitaciones de deidades | Restricciones sobre poder e intervención en el mundo inferior | Fuente localizada en V1 p.27; revisión amplia pendiente |
 | RULE-DUNGEON-MYSTERIES | Misterios del Dungeon | Lo establecido, lo desconocido y las teorías de personajes | Alta; spoilers |
 
 ## Campos de cada regla

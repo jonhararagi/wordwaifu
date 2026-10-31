@@ -1552,3 +1552,19 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [ ] Reconciliar la pasada 1 por página/rango; no elevar las notas secuenciales históricas a cobertura completa sin cotejo.
 - **Controles:** tres controles completos por folio; revisión correctiva adicional centrada en p.18. No se declara terminado V1.
 - **Siguiente folio:** PDF p.19.
+
+
+### DMR-061 — tercera pasada V1 · PDF pp.19–28 · 2026-10-31
+
+- [x] Contrastar pp.19–23 con el expediente de asesoramiento de Eina, las fichas de Bell/Ais/Eina y los datos de recompensa.
+- [x] Contrastar pp.24–26 con la ficha LOC-HESTIA-HOME y el expediente de Hestia; no crear una iglesia ni un primer encuentro duplicados.
+- [x] Registrar pp.27–28 como evidencia inicial de Falna, Familias y límites de las deidades en el expediente existente; mantener atribución narrativa y alcance parcial.
+- [x] Inspeccionar las diez páginas físicas a 130 dpi: p.22 ilustración contextual de Eina; restantes páginas de texto.
+- [x] Conservar como información comunicada por Eina la afirmación de que Ais no está saliendo con nadie; no convertir «1000 cortejos» en estadística.
+- [x] Registrar 1200 Varisu como recompensa concreta de esta incursión, sin mezclarla con otros intercambios.
+- [x] Identificar el libro «El Laberinto Sagrado “Calabozo”» como influencia mencionada por Bell, sin crear una ficha de objeto fuera del sistema existente.
+- [ ] Continuar tercera pasada desde PDF p.29 hasta p.156.
+- [ ] Reconciliar la pasada 1 por página/rango.
+- **Controles:** tres controles completados por folio; no se necesitó cuarta revisión correctiva en este bloque.
+- **Siguiente folio:** PDF p.29.
+

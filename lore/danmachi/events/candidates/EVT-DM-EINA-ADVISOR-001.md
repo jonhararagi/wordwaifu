@@ -41,3 +41,15 @@ No extrapolar automáticamente el mismo puesto, antigüedad o relación al perio
 - DM-CHAR-BELL.
 - ORG-GUILD.
 - EVT-DM-BELL-AIS-MINOTAUR-001.
+
+
+## Complemento de tercera pasada · PDF pp.19–23
+
+- **Ais según Eina (p.19):** Eina dice que Ais derrotó sola a un grupo de monstruos de nivel 5 y que en ese momento no está saliendo con nadie, según lo que ella ha oído. No se da un número exacto de monstruos ni se presenta el estado sentimental como permanente.
+- **Reputación:** la frase sobre «1000 cortejos fallidos» se mantiene como hipérbole de la traducción, no como conteo verificable.
+- **Bell:** admite a Eina que se enamoró de Ais; su frase de despedida «Eina-san, ¡Te amo!» va seguida de «¡Gracias!» y no demuestra reciprocidad o vínculo romántico estable.
+- **Eina:** el texto la presenta como popular entre los aventureros y destaca su trato amable y cuidador. Son impresiones narrativas, no una lista de relaciones.
+- **Recompensa:** Bell informa que cambió las Piedras Mágicas de Goblins y Dríadas por 1200 Varisu (p.21). Eina le anima a volverse fuerte y confiable; no habla en nombre de Ais.
+- **Visual:** p.22 es una ilustración de página completa contextualizada con Eina y su conversación; no se usa para inferir datos nuevos.
+- **Localizadores:** DMR-061-SRC-001, PDF pp.19–23. Traducción privada no cotejada con japonés.
+

@@ -109,3 +109,16 @@ En pp.113–115 Hestia recuerda su propósito y solicita a Hephaistos un arma pa
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
 - **Límites:** no se asigna fecha calendárica al Banquete, no se registra como celebrada la Philia anunciada para tres días después y no se infiere qué información confirmó Freya al marcharse.
 
+
+
+## CONT-MAIN-LN · conversación doméstica y explicación de las Familias · Volumen 1 · PDF pp.26–28
+
+Bell regresa a la iglesia y encuentra a Hestia en la habitación subterránea (p.26). Hestia comprueba que no esté herido y manifiesta preocupación ante la posibilidad de que muera. Bell le dice que no dejará que quede en la calle. Hestia cuenta que trabajó haciendo pequeñas contribuciones a los ingresos de una tienda y obtuvo muchas croquetas de patata para la cena; no convertir esa comida en una preferencia permanente ni el trabajo en una ocupación contractual.
+
+En pp.27–28 la explicación de los dioses, las Familias y la Gracia se presenta a través de la narración de Bell y de lo que atribuye a Hestia: los dioses descendieron porque el cielo les aburría; algunos decidieron permanecer en el Mundo Inferior; una Familia es la facción o grupo de una deidad; los miembros reciben su Gracia y ayudan a la deidad a sostenerse y cumplir peticiones. El texto también afirma que los dioses no pueden usar el Poder Divino en el Mundo Inferior. Hestia llama a la relación un intercambio equivalente y se queja de que nadie conoce su nombre ni quiere unirse a su Familia.
+
+- **Atribución:** son explicaciones ofrecidas en la narración de estas páginas, no una explicación de motivaciones idénticas para todos los dioses.
+- **Tamaño de la Familia:** Hestia expresa que no ha logrado atraer integrantes; no se inventa un censo más allá de lo que dice esta escena.
+- **Evento:** no se crea un segundo «primer encuentro» con Bell. El primer encuentro cronológico sigue localizado retrospectivamente en PDF pp.211–214.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF pp.26–28.
+

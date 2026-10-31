@@ -32,3 +32,14 @@ En DanMachi, las deidades conviven con los mortales y pueden formar Familias. Un
 ## Verificación pendiente
 
 Esta es una síntesis orientativa. Para un informe canónico concluyente se necesita una fuente concreta que respalde la regla discutida.
+
+## CONT-MAIN-LN · notas de fuente para Familias y Gracia · Volumen 1 · PDF pp.27–28
+
+Estas páginas aportan una primera explicación narrativa de la relación entre deidades y mortales. Bell atribuye a Hestia la explicación de que los dioses descendieron al Mundo Inferior por aburrimiento del cielo; el texto dice que algunos se quedaron. La narración explica que los dioses no pueden usar su Poder Divino en el Mundo Inferior.
+
+Bell define la Familia como una facción/grupo de una deidad y como una relación familiar para sus integrantes. Al unirse, los mortales reciben la Gracia; los miembros ayudan a cumplir las peticiones y a sostener económicamente a su deidad. Hestia califica la relación como intercambio equivalente. El pasaje afirma que la Gracia permite repeler monstruos de nivel inferior, pero no desarrolla aquí condiciones, excepciones, límites o requisitos adicionales.
+
+- **Atribución:** la motivación de los dioses aparece como explicación atribuida a ellos/Hestia, no como diagnóstico individual de cada deidad.
+- **Alcance:** evidencia directa en la traducción aportada, sin cotejo japonés. No usarla para completar todos los detalles de afiliación, Falna o Poder Divino que el volumen no explica.
+- **Localizadores:** DMR-061-SRC-001, PDF pp.27–28.
+

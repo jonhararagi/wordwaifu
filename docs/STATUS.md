@@ -989,3 +989,20 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Hallazgos:** Bell formula su fantasía heroica inicial; el rescate identifica textualmente a Aizu Wallenstein (nivel 5, Loki Familia); p.16 describe a Eina como mezcla de humana y elfa y recuerda a Bell con 14 años en su registro; p.18 recoge su consejo de seguridad.
 - **Continuidad:** se amplían fichas/eventos existentes. La frase sobre el piso habitual del Minotauro permanece abierta; no se inventa una técnica de corte ni reciprocidad de Ais.
 - **Siguiente folio:** PDF p.19. La tercera pasada de pp.19–156 y la reconciliación de la pasada 1 siguen pendientes. V1 continúa IN_PROGRESS.
+
+
+## DMR-061 — tercera pasada V1 · PDF pp.19–28 (2026-10-31)
+
+- **Resultado:** tres controles completados por folio: contraste de extracción, inspección visual del PDF físico a 130 dpi y auditoría de continuidad.
+- **Visual:** p.22 es una ilustración de Eina contextualizada por la conversación de pp.19–21; las restantes páginas del bloque son texto. No hay tablas de Estado.
+- **Hallazgos:** Eina informa a Bell sobre la situación sentimental de Ais y lo anima a progresar; Bell recibe 1200 Varisu por piedras de Goblins y Dríadas; pp.23–24 desarrollan el papel del abuelo y el libro favorito de Bell; pp.24–26 describen la iglesia y la habitación subterránea; pp.27–28 explican las Familias, la Gracia y la limitación del Poder Divino.
+- **Continuidad:** se reutilizan el expediente de asesoramiento de Eina, las fichas de Bell/Hestia y LOC-HESTIA-HOME. No se crea una segunda escena de primer encuentro con Hestia. Las reglas nuevas se anotan como fuente parcial, no como sistema exhaustivo.
+- **Procedencia:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+- **Siguiente folio:** PDF p.29. La tercera pasada integral de pp.29–156 y la reconciliación de la pasada 1 continúan pendientes; V1 permanece IN_PROGRESS.
+
+## Evidencia CI — tercera pasada inicial de DMR-061 (pp.9–18)
+
+- **Commit:** ee3307983ce95fb1d98940ff904205da8169facb.
+- **Validate WordWaifu #3852:** success.
+- **DanMachi Lore and Retrieval Integrity #2230:** success.
+- Ambos workflows pasaron validación de JavaScript, métricas/catálogo, continuidad temporal, integridad del lore y smoke test de navegador sobre el SHA citado.

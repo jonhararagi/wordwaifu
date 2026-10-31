@@ -73,3 +73,13 @@ La narración identifica en p.13 a «Aizu Wallenstein» como la Princesa de la E
 ## Control visual · Volumen 1 · PDF p.15
 
 La p.15 es una portadilla ilustrada del capítulo 1. No contiene una escena narrativa ni un rótulo que permita identificar a la figura representada. No se asigna una identidad a partir de su apariencia.
+
+
+## CONT-MAIN-LN · primera aparición · Volumen 1 · PDF pp.19–22
+
+Eina comunica a Bell que Ais ha derrotado sola a un grupo de monstruos de nivel 5 y que, según lo que ella ha oído, Ais no está saliendo con nadie en ese momento (p.19). La cifra de «1000 cortejos fallidos» aparece en el diálogo como hipérbole y no se trata como estadística verificable. Eina no conoce sus aficiones o comida favorita. El estado sentimental es información referida por Eina para ese momento, no una verdad atemporal.
+
+- **Fuente y atribución:** DMR-061-SRC-001, traducción privada no cotejada con japonés; el dato procede de Eina, no de una declaración directa de Ais.
+- **Reacción:** Bell admite que se enamoró de Ais; esto no acredita reciprocidad.
+- **Ilustración:** p.22 muestra a una mujer en uniforme del Gremio dentro de la secuencia de la conversación de Eina. Se contextualiza como Eina por la narración circundante, sin asignarle hechos nuevos por su aspecto.
+

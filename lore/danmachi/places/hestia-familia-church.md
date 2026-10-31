@@ -49,3 +49,15 @@ Bell dice que Hestia y él viven en una habitación oculta dentro de una iglesia
 - **Localizador:** PDF p.123.
 - **Precisión:** entre dos avenidas principales; posición exacta desconocida.
 - **Límite:** el pasaje no confirma por sí solo la denominación secundaria «Iglesia abandonada» ni quién la destruyó.
+
+
+## Descripción directa de la residencia · CONT-MAIN-LN · Volumen 1 · PDF pp.24–26
+
+Bell llega por un callejón a una iglesia muy deteriorada (p.24). La entrada principal no tiene puerta; el interior muestra pisos rotos con maleza creciendo entre ellos, gran parte del techo derrumbado y un altar que conserva su aspecto. Tras el altar hay una pequeña habitación con estanterías vacías y una escalera que desciende al espacio subterráneo donde Bell encuentra a Hestia (pp.25–26).
+
+- **Identificación:** se reutiliza LOC-HESTIA-HOME, el mismo edificio ya vinculado a la residencia de inicio. No se crea una segunda ubicación.
+- **Estatua:** p.25 describe una estatua de deidad con el cuerpo desgastado y parte del rostro oculto, pero no la identifica nominalmente.
+- **Localización:** p.123 sigue siendo la referencia para la posición aproximada entre la Calle Principal del Noreste y la del Oeste. Las pp.24–26 no dan calle ni coordenadas.
+- **Denominación y causa de destrucción:** no se eleva el término secundario «Iglesia abandonada» a nombre oficial ni se atribuye la ruina a Apollo Familia con este pasaje.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF pp.24–26.
+

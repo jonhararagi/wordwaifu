@@ -81,3 +81,13 @@ En la consulta, Bell llega todavía cubierto de sangre negra y pide datos sobre 
 - **Variación descriptiva:** p.16 describe el cabello hasta los hombros; la observación de pp.122–123 lo llama corto. Se mantienen ambos localizadores sin forzar una contradicción.
 - **Evento existente:** EVT-DM-EINA-ADVISOR-001; no se crea otro evento para esta consulta.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
+
+## CONT-MAIN-LN · Volumen 1 · PDF pp.19 y 22
+
+En p.19 la narración señala que Eina tiene popularidad entre los aventureros y que su trato amable y cercano acompaña su apariencia mestiza de rasgos élficos. Son impresiones del narrador/escena, no evidencia de relaciones concretas ni de una personalidad invariable.
+
+La p.22 es una ilustración de página completa contextualizada con Eina y la consulta anterior; se observa uniforme del Gremio y cabello corto en la imagen. Se conserva como apoyo visual, sin convertir la ilustración en una ficha independiente.
+
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
