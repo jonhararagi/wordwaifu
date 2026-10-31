@@ -3407,6 +3407,21 @@
         "BELL",
         "SEAL"
       ]
+    },
+    {
+      "id": "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-FIRST-EXCURSION-001",
+      "path": "events/timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-FIRST-EXCURSION-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 1",
+        "event",
+        "HESTIA",
+        "STATUS"
+      ]
     }
   ],
   "reservedIds": [

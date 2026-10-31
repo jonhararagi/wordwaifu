@@ -1016,10 +1016,140 @@
       ]
     },
     {
+      "id": "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001",
+      "recordId": "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 620.1,
+      "title": "Hestia actualiza el Estado de Bell tras el encuentro con el Minotauro",
+      "dateLabel": "Después del rescate de Bell del Minotauro, durante la primera actualización de su Estado; fecha absoluta no indicada.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Hestia actualiza el Estado de Bell tras su encuentro con el Minotauro. La copia muestra mejoras iniciales y deja Magia y Habilidades vacías; la narración desde la perspectiva privada de Hestia revela [Deseo Inquebrantable], que Bell no conoce.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "recibe la primera actualización de su Estado"
+        },
+        {
+          "id": "DM-CHAR-HESTIA",
+          "name": "Hestia",
+          "kind": "character",
+          "role": "actualiza el Estado y no muestra la Habilidad oculta en la copia"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "lore/danmachi/events/timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001.md",
+      "sources": [
+        {
+          "label": "DMR-061 · Volumen 1, traducción privada",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Fuente de trabajo, PDF pp.30–36; traducción privada no cotejada con japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001.md",
+          "kind": "internal",
+          "note": "Snapshot de p.33 y separación entre copia entregada y Estado visto desde la perspectiva de Hestia."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-BELL-AIS-MINOTAUR-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "Después del rescate de Bell por Ais; antes de su primera incursión posterior y sin intervalo cuantificado.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "unknown",
+        "spatialPrecision": "unknown",
+        "reason": "La escena ocurre durante una actualización doméstica, pero el conjunto geográfico actual no contiene una referencia específica para la residencia inicial de Hestia Familia."
+      },
+      "locationRefs": []
+    },
+    {
+      "id": "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-FIRST-EXCURSION-001",
+      "recordId": "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-FIRST-EXCURSION-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 620.2,
+      "title": "Hestia entrega a Bell la segunda actualización de su Estado tras la primera incursión",
+      "dateLabel": "Al regresar Bell al anochecer de su primera jornada de exploración, antes de acudir a cenar con Seal; fecha absoluta desconocida.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Tras la primera jornada de Bell en el Dungeon, Hestia le entrega una nueva copia del Estado. Los atributos físicos aumentan; Bell pregunta por el incremento de Resistencia tras recordar un único golpe de Goblin, y Hestia guarda silencio. Su salida posterior a una fiesta en el trabajo se mantiene separada del Banquete de Ganesha.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "recibe y consulta la nueva copia del Estado"
+        },
+        {
+          "id": "DM-CHAR-HESTIA",
+          "name": "Hestia",
+          "kind": "character",
+          "role": "entrega la copia, no explica la causa del aumento y sale a una fiesta del trabajo"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-FIRST-EXCURSION-001.md",
+      "sources": [
+        {
+          "label": "DMR-061 · Volumen 1, traducción privada",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
+          "kind": "user_supplied_source_report",
+          "note": "Fuente de trabajo, PDF pp.54–56; traducción privada no cotejada con japonés."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/events/timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-FIRST-EXCURSION-001.md",
+          "kind": "internal",
+          "note": "Snapshot de p.54 y conversación de pp.55–56."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "Después de la primera actualización del Estado y de la primera jornada de Bell en el Dungeon; antes de su cena con Seal. No se fija fecha de calendario.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "unknown",
+        "spatialPrecision": "unknown",
+        "reason": "La entrega se sitúa al regresar Bell a la residencia de Hestia Familia, pero esa residencia aún no forma parte del catálogo geográfico del modelo temporal."
+      },
+      "locationRefs": []
+    },
+    {
       "id": "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001",
       "recordId": "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001",
       "eraId": "ERA-05-MAIN-START",
-      "sortIndex": 620,
+      "sortIndex": 620.3,
       "title": "Hestia actualiza el Estado de Bell y ambos acuerdan no dejarse solos",
       "dateLabel": "La mañana posterior al regreso de Bell de la incursión del sexto piso; intervalo exacto no cuantificado.",
       "continuityScopes": [
@@ -1061,11 +1191,11 @@
         "kind": "relative_order",
         "relation": "after",
         "referenceIds": [
-          "EVT-DM-BELL-AIS-MINOTAUR-001"
+          "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-FIRST-EXCURSION-001"
         ],
         "distanceKnown": false,
         "precision": "order_only",
-        "qualifier": "Ocurre después de la incursión del sexto piso y del regreso de Bell; no se cuantifica el intervalo.",
+        "qualifier": "Después de la segunda actualización del Estado tras la primera jornada de Bell en el Dungeon; escena posterior a la incursión del sexto piso, sin intervalo cuantificado.",
         "sourceUrls": [
           "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md"
         ]

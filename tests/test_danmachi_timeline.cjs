@@ -14,8 +14,8 @@ assert.equal(report.valid,true,report.errors.join("\n"));
 assert.equal(report.temporalModelVersion,1);
 assert.equal(report.legacyTemporalModel,false);
 assert.equal(report.eraCount,10);
-assert.equal(report.eventCount,49);
-assert.equal(report.temporalEventCount,49);
+assert.equal(report.eventCount,51);
+assert.equal(report.temporalEventCount,51);
 assert.equal(data.anchor.id,"T0-BELL-ARRIVAL");
 assert.equal(data.anchor.eventId,"EVT-DM-BELL-ARRIVAL-001");
 
@@ -58,6 +58,8 @@ const expectedKinds={
  "EVT-DM-BELL-ARRIVAL-001":"anchor",
  "EVT-DM-BELL-MEETS-HESTIA-001":"relative_order",
  "EVT-DM-BELL-AIS-MINOTAUR-001":"relative_order",
+ "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001":"relative_order",
+ "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-FIRST-EXCURSION-001":"relative_order",
  "EVT-DM-EINA-ADVISOR-001":"relative_order",
  "EVT-DM-RYUU-JURA-PURSUIT-001":"relative_order",
  "EVT-DM-JUGGERNAUT-RETURN-001":"relative_order",
@@ -109,6 +111,8 @@ const expectedLabels={
  "EVT-DM-BELL-ARRIVAL-001":"T0 · ancla de la historia principal",
  "EVT-DM-BELL-MEETS-HESTIA-001":"Poco después de T0 · fecha exacta abierta",
  "EVT-DM-BELL-AIS-MINOTAUR-001":"Inicio de la historia · poco después de T0",
+ "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001":"Después del rescate de Bell del Minotauro, durante la primera actualización de su Estado; fecha absoluta no indicada.",
+ "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-FIRST-EXCURSION-001":"Al regresar Bell al anochecer de su primera jornada de exploración, antes de acudir a cenar con Seal; fecha absoluta desconocida.",
  "EVT-DM-EINA-ADVISOR-001":"Primeros volúmenes · secuencia exacta pendiente",
  "EVT-DM-RYUU-JURA-PURSUIT-001":"Meses después de T0 · arco del volumen 13; día exacto abierto",
  "EVT-DM-JUGGERNAUT-RETURN-001":"Volúmenes 13–14 · meses después de T0",
@@ -122,7 +126,7 @@ const expectedLabels={
  "EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001":"Exactamente dos días después del Banquete de Ganesha; Bell regresa del Dungeon y pasa por la sede del Gremio."
 };
 const events=new Map(data.events.map(e=>[e.id,e]));
-assert.deepEqual([...events.keys()].sort(),Object.keys(expectedKinds).sort(),"All 49 timeline event IDs must be retained exactly.");
+assert.deepEqual([...events.keys()].sort(),Object.keys(expectedKinds).sort(),"All 51 timeline event IDs must be retained exactly.");
 for(const [id,kind] of Object.entries(expectedKinds)){
  const event=events.get(id);
  assert.equal(event.temporal.kind,kind,id+" temporal variant");
@@ -314,7 +318,7 @@ assert.equal(report.locationCount,2);
 assert.equal(report.locationRefCount,42);
 assert.equal(report.unknownEventCount,7);
 assert.equal(report.provisionalEventCount,9);
-assert.equal(data.events.length,49,"All 49 indexed event IDs must remain.");
+assert.equal(data.events.length,51,"All 51 indexed event IDs must remain.");
 const banquet=events.get("EVT-DM-V01-GANESHA-GOD-BANQUET-001");
 const festivalPrep=events.get("EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001");
 assert.equal(festivalPrep.temporal.kind,"relative_offset");

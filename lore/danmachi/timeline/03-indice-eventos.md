@@ -71,6 +71,7 @@ Estos registros facilitan la siguiente tanda, pero las seis entradas de canon si
 
 **V1 — CONT-MAIN-LN**
 - `EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001` — actualización inicial de Estado posterior al Minotauro; snapshot p. 33 y Habilidad revelada desde la perspectiva de Hestia (PDF pp. 30–36).
+- `EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-FIRST-EXCURSION-001` — segunda actualización del Estado tras la primera incursión; snapshot p. 54 y conversación sobre Resistencia en p. 55.
 - `EVT-DM-V01-BELL-MEETS-SEAL-FLOVER-001` — Bell conoce a Seal Flover; devolución de Piedra Mágica, desayuno ofrecido e invitación aceptada a cenar (PDF pp. 42–46).
 - `EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001` — combate contra el grupo de Kobolds y recuperación de fragmentos y garra (PDF pp. 46–51).
 - `EVT-DM-V01-BELL-DEFEATS-GOBLIN-AND-GETS-TOOTH-001` — Bell derrota a un Goblin y recoge un Diente de Goblin (PDF p. 53).
@@ -108,7 +109,7 @@ Estos registros facilitan la siguiente tanda, pero las seis entradas de canon si
 **Reserva de procedencia:** ambos PDFs son traducciones privadas de la novela ligera original oficial, no cotejadas con japonés. Los números indicados son páginas físicas PDF. Las fichas visuales de V1/V2 requieren auditoría integral adicional.
 - `EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001` — Bell oye a la Familia Loki burlarse de su rescate del Minotauro en La Señora de la Abundancia y se marcha decidido a fortalecerse (PDF pp. 57–72).
 
-- EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001 — segunda actualización del Estado y promesa mutua (PDF pp.91–97); [Deseo Inquebrantable] sigue oculta a Bell.
+- EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001 — tercera actualización del Estado y promesa mutua tras la incursión del sexto piso (PDF pp.91–97); [Deseo Inquebrantable] sigue oculta a Bell.
 - EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001 — Bell vuelve a La Señora de la Abundancia, paga lo adeudado y acepta una cesta de comida de Seal; la visita concluye cuando sale del local (PDF pp.98–102).
 - EVT-DM-V01-GANESHA-GOD-BANQUET-001 — Ganesha organiza el Banquete de Dios; Hestia se reencuentra con Hephaistos y pide un arma para Bell. La petición conserva evento propio (PDF pp.104–115).
 - EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001 — Bell derrota a un Dungeon Lizard y un Goblin en el cuarto piso, recoge fragmentos de Piedra Mágica y regresa hacia Babel; ocurre dos días después del Banquete (PDF pp.117–120; ancla en p.125).
