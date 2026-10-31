@@ -35,7 +35,9 @@ Bell regresa al establecimiento para disculparse por haberse ido sin pagar duran
 - **p.99 — disculpa y devolución:** Seal aparece. Bell se disculpa por haberse ido sin pagar y entrega el dinero que debía. Seal dice que su regreso ya la ha hecho feliz y considera que ella también debería disculparse; Bell rechaza que asuma una culpa innecesaria. Seal no le pregunta por el motivo de su salida anterior.
 - **pp.99–100 — cesta:** Seal regresa con una cesta grande y ofrece a Bell platos preparados por los cocineros; añade que ella también ayudó un poco. Bell comprende que quiere animarlo y acepta la cesta. No se inventa el contenido concreto de los platos.
 - **p.100 — Mia-mama:** la mujer llamada «Mia-mama» aparece y comenta la devolución del dinero. Bromea con que, si Bell hubiera tardado un día más, habría tenido que ir a buscar su «juguete perdido». No interpretar literalmente la frase como una amenaza real ni trasladar automáticamente a esta figura los datos de la ficha de adaptación anime.
-- **p.100 — reacción de Seal:** Mia-mama ordena a Seal volver al trabajo. Una empleada nekomusume protesta porque Seal le ha dado comida a Bell y este podría comprar su propio almuerzo. Mia-mama insinúa una posible relación entre ambos; el folio no confirma romance ni reciprocidad. La conversación queda abierta al final de la página.
+- **p.100 — reacción de Seal:** Mia-mama ordena a Seal volver al trabajo. Una empleada nekomusume protesta porque Seal le ha dado comida a Bell y este podría comprar su propio almuerzo. Mia-mama insinúa una posible relación entre ambos; el folio no confirma romance ni reciprocidad.
+- **p.101 — mención de Ryu y consejo de Mia-mama:** Mia-mama explica que Seal había intentado perseguir a Bell y que regresó muy afectada por lo ocurrido. Dice que una elfa llamada «Ryu» iba a tomar medidas y que tuvo que contenerla. Esta mención no basta para identificarla con CHAR-RYUU-LION, cuyo perfil se apoya en otros alcances de continuidad. Mia-mama aconseja a Bell que no luche por aparentar ser genial, que priorice sobrevivir y que quienes vuelven con vida son los verdaderos vencedores.
+- **p.102 — despedida:** Bell siente gratitud hacia Seal y Mia-mama, y decide fortalecerse sin forzarse y sobrevivir. Se despide del personal y sale del establecimiento. Después de un separador, la narración cambia a una descripción nocturna de Orario; esa descripción urbana queda fuera de este evento de visita a la taberna.
 
 ## Participantes
 
@@ -52,13 +54,14 @@ Bell regresa al establecimiento para disculparse por haberse ido sin pagar duran
 
 ## Inspección visual
 
-- PDF pp.98–100 renderizadas e inspeccionadas: las tres son páginas de texto; no contienen ilustraciones.
+- PDF pp.98–102 renderizadas a 130 dpi e inspeccionadas individualmente: las cinco son páginas de texto; no contienen ilustraciones.
 - PDF p.98 incluye una nota al pie del traductor que define «nekomusume». Se conserva como aparato de traducción, no como dato independiente del canon ni como claim.
-- Las empleadas se describen en el texto como una elfa y una nekomusume, pero no reciben nombre. No se crean fichas ni se les atribuyen identidades a partir de la nota al pie.
+- Las empleadas presentes se describen como una elfa y una nekomusume; no reciben nombre en la escena. La elfa «Ryu» de p.101 solo es mencionada por Mia-mama y no aparece en estos folios. No se crean fichas ni se atribuyen identidades por inferencia.
 
 ## Límites de evidencia
 
 - La traducción privada no se ha cotejado con japonés.
 - No inferir contenido exacto de la cesta, identidad de las empleadas anónimas, afiliaciones no declaradas ni relaciones románticas.
 - No trasladar el perfil CHAR-MIA-GRAND de CONT-ANIME a la figura «Mia-mama» en CONT-MAIN-LN.
-- La escena continúa al cierre de p.100; no se inventa su desenlace.
+- La visita a la taberna concluye cuando Bell sale en p.102; no se inventa el destino posterior del personal.
+- «Ryu» se registra solo como mención de Mia-mama a una elfa empleada; su identidad sigue sin cotejo.
