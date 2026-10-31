@@ -168,4 +168,13 @@ La traducción española aportada es privada y no se ha cotejado con el japonés
 - **Regreso (p.120):** asciende desde el cuarto hasta el primer piso, combate otros Goblins y Kobolds sin detalles individuales y llega al vestíbulo subterráneo de Babel.
 
 **Eventos:** la disculpa y visita a Seal se registran en EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001; la incursión del cuarto piso se registra en EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001. Los Goblins de pp.117–119 son encuentros distintos del ejemplar de p.53.
+ 
+## Continuidad principal · Volumen 1 · pp.121–129
+
+- **Preparativos del Festival (pp.121–123):** Bell observa cajas de transporte en Babel; una se mueve y escucha un rugido, por lo que sospecha que contiene un monstruo. Oye que Ganesha Familia se encarga de los preparativos del Festival de Monstruos. No abre las cajas ni identifica especies. Ve a Eina trabajando, no la interrumpe y completa la venta de su botín en el Gremio.
+- **Ubicación urbana (p.123):** Bell explica que vive con Hestia en una iglesia situada entre la Calle Principal del Noreste y la del Oeste; el establecimiento donde trabaja Seal se encuentra en la avenida del Oeste. En el momento de la narración Bell está en la avenida del Noreste, cerca del Gremio.
+- **Pociones de Miach (pp.124–127):** Bell recibe dos pociones de recuperación recién preparadas como cortesía; no las compra. Las guarda en la funda de la pierna izquierda. La escena ocurre exactamente dos días después del Banquete de Ganesha, según el diálogo de p.125.
+- **Daga del escaparate (pp.128–129):** Bell admira una daga blanca hecha de dientes de monstruo en una tienda de Hephaistos Familia. La considera demasiado cara y no la compra. El texto no la identifica como la futura Daga de Hestia; no se crea ficha para esa pieza sin nombre.
+
+**Eventos:** EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001 y EVT-DM-V01-BELL-RECEIVES-RECOVERY-POTIONS-FROM-MIACH-001. El intervalo con el Banquete se conserva sin fecha de calendario.
 
