@@ -912,3 +912,13 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Fuente y límite:** DMR-061-SRC-001, traducción privada no cotejada con japonés. Se trabajó directamente sobre el PDF físico; no se declara cotejo con el Markdown de 4 MB porque la conexión de GitHub no permitió recuperarlo íntegramente.
 - **Git/CI:** HEAD de entrada `61b07f8ac640dcb06f265ceff7eaab2c9d58d422`. No se ejecutaron pruebas de código; el estado combinado de checks y la consulta de workflow runs asociadas a ese SHA no devolvieron resultados. No se declara validación técnica ni CI.
 - **Siguiente acción:** continuar pasada 2 desde PDF p.91; después completar pasada 3 pp.9–156 y reconciliar pasada 1. DMR-062 conserva sus pendientes independientes. V1 sigue `IN_PROGRESS`.
+
+## DMR-061 — segunda pasada V1, PDF pp. 91–100 (2026-10-31)
+
+- **Resultado:** pasada 2 completada para pp.91–100; p.98 fue inspeccionada visualmente desde el PDF.
+- **Estado de Bell (p.91):** Lv.1; Fuerza H123→G221, Resistencia I42→H101, Destreza H139→G232, Agilidad G225→F313, Magia I0. La columna anterior de Fuerza H123 contradice el snapshot de p.54 (H120); diferencia abierta.
+- **Habilidad:** Hestia vuelve a ver [Deseo Inquebrantable] y decide no revelársela a Bell. Le explica el crecimiento anormal sin darle nombre ni efectos.
+- **Promesa y Banquete:** Bell promete no sobreesforzarse ni dejar sola a Hestia. Ella decide usar la invitación al Banquete de Ganesha para intentar contactar con Hephaistos; asistencia y encuentro aún no confirmados.
+- **Seal:** Bell regresa a La Señora de la Abundancia, se disculpa y paga lo adeudado; Seal lo perdona y le entrega una cesta. La conversación con Mia-mama continúa al final de p.100. No se confirma romance ni identidad de empleadas anónimas.
+- **Integridad:** dos acontecimientos nuevos separados; no se fusionan con Falna, updates anteriores, primer encuentro con Seal ni la escena de la taberna de pp.57–72. No se importan datos de CONT-ANIME.
+- **Siguiente folio:** PDF p.101. Pasada 3 pp.9–156 y reconciliación de pasada 1 pendientes. V1 sigue IN_PROGRESS.
