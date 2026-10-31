@@ -1292,6 +1292,12 @@
           "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001.md",
           "kind": "internal",
           "note": "La petición inicia en el Banquete y la aceptación llega tras dos días de insistencia."
+        },
+        {
+          "label": "Evento del Banquete de Ganesha",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V01-GANESHA-GOD-BANQUET-001.md",
+          "kind": "internal",
+          "note": "La petición de Hestia se formula durante el Banquete; la insistencia continúa durante los dos días posteriores."
         }
       ],
       "temporal": {
