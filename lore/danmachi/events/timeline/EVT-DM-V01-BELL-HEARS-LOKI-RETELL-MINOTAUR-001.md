@@ -16,6 +16,7 @@ related_character_ids:
   - CHAR-BETE-LOGA
   - CHAR-RIVERIA-LJOS-ALF
   - DM-CHAR-LOKI
+  - DM-CHAR-SEAL-FLOVER
 location_ids:
   - LOC-HOSTESS
 familia_ids:
@@ -37,7 +38,7 @@ spoiler_level: mild
 
 ## Secuencia documentada
 
-- **pp. 57–60:** Bell llega al establecimiento donde trabaja Seal, cuyo nombre se muestra como La Señora de la Abundancia. Entra y acepta sentarse en un lugar apartado de la barra.
+- **pp. 57–60:** al anochecer Bell encuentra el edificio de dos pisos donde trabaja Seal, cuyo nombre aparece en la traducción como La Señora de la Abundancia. En p.58 ve el mostrador, la cocina y a varias empleadas; supone que la mujer enana tras el mostrador podría ser la jefa, sin que esta página la identifique. También ve a una elfa entre el personal. Seal lo reconoce, lo llama «Bell-san» y lo recibe. Bell entra y acepta sentarse en un lugar apartado de la barra.
 - **pp. 61–62:** Bell cena pasta y habla con Seal. Ella explica que la jefa se llama Mia y que las empleadas la llaman «mamá»; los datos de su ficha de adaptación no se trasladan automáticamente a esta continuidad.
 - **pp. 62–64:** entra un grupo de aproximadamente diez miembros de la Familia Loki. Bell reconoce a Aizu Wallenstein. Los clientes identifican a la Familia Loki y el grupo celebra el regreso de una expedición. Seal dice que son clientes habituales porque el local agrada a Loki.
 - **pp. 65–66:** un miembro masculino de aspecto bestial pide a Ais contar la historia de los Minotauros que escaparon durante el regreso de la Familia Loki desde el piso 17. El último llegó al piso 5 y Ais lo derrotó. Bell comprende que el novato cubierto de sangre descrito como «chico tomate» era él. Es la narración posterior del rescate registrado en EVT-DM-BELL-AIS-MINOTAUR-001, no un nuevo combate.
@@ -60,3 +61,12 @@ spoiler_level: mild
 
 - DMR-061-SRC-001, PDF pp. 57–72.
 - Traducción privada española no cotejada con japonés; conservar variantes de nombres como aparecen en el pasaje y no inventar romanización japonesa.
+
+
+## Auditoría de tercera pasada · CONT-MAIN-LN · PDF pp.57–58
+
+- p.57 confirma el nombre traducido «La Señora de la Abundancia», la ubicación del local en una calle principal concurrida y la descripción de un edificio de piedra de dos pisos donde trabaja Seal.
+- p.58 muestra una enana tras el mostrador a quien Bell supone posible jefa; el nombre no se establece en este folio. Se ven mujeres gato en la cocina, una camarera y una elfa entre las empleadas. No se identifican personas anónimas por apariencia, especie o función.
+- Seal reconoce a Bell y lo recibe. Esta escena pertenece a la visita nocturna que continúa en pp.57–72; no duplica el primer encuentro de pp.42–46 ni la visita posterior para disculparse y pagar de pp.98–100.
+- **Visual:** pp.57–58 renderizadas e inspeccionadas a 130 dpi; ambas son páginas de texto sin ilustración ni nota.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
