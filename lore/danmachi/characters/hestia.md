@@ -122,3 +122,15 @@ En pp.27–28 la explicación de los dioses, las Familias y la Gracia se present
 - **Evento:** no se crea un segundo «primer encuentro» con Bell. El primer encuentro cronológico sigue localizado retrospectivamente en PDF pp.211–214.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF pp.26–28.
 
+
+
+## CONT-MAIN-LN · primer encuentro y vida cotidiana · Volumen 1 · PDF pp.26, 29–30, 35 y 38
+
+- **Apariencia en la escena inicial (p.26):** Hestia es descrita como de baja estatura y aspecto juvenil, con cabello negro recogido en dos coletas sujetas por campanillas plateadas y ojos azules redondeados. No deducir una edad física o cronológica exacta de esa descripción.
+- **Antes de conocer a Bell (p.29):** según lo que Hestia le contó a Bell, había descendido recientemente y había pertenecido a la Familia de una amiga; disfrutaba de los libros del Mundo Inferior y recibió como favor la habitación subterránea bajo la iglesia. El pasaje no cuantifica el tiempo ni identifica a la amiga; no resuelve la alerta temporal del descenso.
+- **Relación con Bell (p.29):** Bell recuerda que quiso ayudarla al verla preocupada por ser una carga; la promesa que se hizo a sí mismo al conocerla fue la primera promesa personal que recuerda y quedó grabada en él.
+- **Broma atribuida a otros dioses (p.30):** Bell dice que otros dioses bromeaban llamando a Hestia «Loli de Pechos Grandes»; él no sabe qué significa «Loli». Se conserva como broma referida, no como título formal.
+- **Reacción interna ante el crecimiento de Bell (p.35):** Hestia piensa que los habitantes del Mundo Inferior cambian en cuerpo y mente, a diferencia de los dioses. Le cuesta aceptar que Bell haya empezado a cambiar por influencia de otras personas; son pensamientos internos de Hestia, no algo que Bell oiga.
+- **Rutina doméstica (p.38):** después de una cena sencilla, Bell cedió la cama a Hestia y durmió en el sofá. Al amanecer la encontró dormida con la cabeza apoyada sobre su pecho. Se registra como una escena cotidiana de convivencia, no como prueba de una relación romántica.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF pp.26, 29–30, 35 y 38.
+

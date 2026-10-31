@@ -61,3 +61,13 @@ Bell llega por un callejón a una iglesia muy deteriorada (p.24). La entrada pri
 - **Denominación y causa de destrucción:** no se eleva el término secundario «Iglesia abandonada» a nombre oficial ni se atribuye la ruina a Apollo Familia con este pasaje.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF pp.24–26.
 
+
+
+## Interior subterráneo y tecnología doméstica · CONT-MAIN-LN · Volumen 1 · PDF pp.25–26 y 38
+
+El espacio bajo el altar contiene una habitación pequeña y una escalera; Bell encuentra allí a Hestia (pp.25–26). En la escena de la mañana siguiente, la base de Hestia Familia se identifica como una estancia subterránea dentro de la iglesia. La luz procede de una «Lámpara de Piedra Mágica» en el techo, derivada de la tecnología de Piedras Mágicas y capaz de iluminar el cuarto lo suficiente para ver a simple vista. Hestia elogia la tecnología humana como práctica y flexible; Bell la describe como uno de los mayores inventos del siglo (p.38).
+
+- **Mobiliario observado:** la estancia incluye una cama y un sofá; Bell cede la cama a Hestia y duerme en el sofá (p.38). No se infiere que ese arreglo sea obligatorio o permanente.
+- **Identificación:** se mantiene el mismo lugar LOC-HESTIA-HOME; no se crea una segunda base ni una coordenada.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF pp.25–26 y 38.
+

@@ -44,3 +44,12 @@ Crear fichas específicas de monstruos solo cuando una escena los necesite. Cons
 - **Fuente:** DMR-061-SRC-001, Volumen 1, PDF pp. 197–200; traducción privada no cotejada.
 - Bell recuerda la enseñanza de Eina: los monstruos tienen una Piedra Mágica en el pecho y ese es el punto débil absoluto para derrotarlos. Bell perfora el pecho del Silverback con la Daga de Hestia, destruye su Piedra Mágica y el cuerpo se convierte en cenizas.
 - **Alcance:** se registra como regla explicada en el pasaje; no inventar ubicaciones alternativas, tamaños, resistencias ni excepciones no descritas.
+
+
+## Lámparas de Piedra Mágica · CONT-MAIN-LN · Volumen 1 · PDF p.38
+
+En la base subterránea de Hestia Familia, Bell describe una lámpara de techo derivada de la tecnología de las Piedras Mágicas. La luz permite observar la habitación a simple vista pese a estar bajo tierra. Hestia elogia la tecnología humana por ser práctica y flexible; Bell la describe como un gran invento del siglo. La página no identifica fabricante, modelo, coste, piedra específica ni límites de funcionamiento.
+
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF p.38.
+- **Límite:** es un ejemplo de uso tecnológico de las Piedras Mágicas, no una regla completa sobre todos los artefactos ni una nueva ficha de objeto.
+

@@ -210,3 +210,12 @@ La traducción española aportada es privada y no se ha cotejado con el japonés
 - **Evolución de la motivación:** Bell reconoce que su idea romántica era ingenua y que sobrevivir en el Dungeon es difícil; después incluye a Ais en su motivación. No se convierte el comentario del harén en una meta permanente.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF pp.21 y 23–24.
 
+
+
+## CONT-MAIN-LN · promesa inicial y convivencia con Hestia · Volumen 1 · PDF pp.29–30 y 38
+
+- **Primera promesa (p.29):** Bell recuerda que, al conocer a Hestia, quiso ayudar a la diosa que le había tendido la mano cuando estaba perdido. La promesa se la hizo a sí mismo y la considera la primera que hizo consigo mismo. No se transforma en un juramento ceremonial ni en un acuerdo formal.
+- **Apariencia observada (p.30):** al mirarse en el espejo durante la actualización del Estado, Bell ve su cabello blanco y piel pálida. El dato se conserva con ese localizador de la escena, sin extrapolar otros rasgos no descritos.
+- **Convivencia (p.38):** tras la cena de la noche anterior, Bell dejó la cama a Hestia y durmió en el sofá. Al despertar, la encuentra dormida con la cabeza sobre su pecho. El texto permite registrar cercanía doméstica, pero no una relación romántica o una intención no expresada.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF pp.29–30 y 38.
+

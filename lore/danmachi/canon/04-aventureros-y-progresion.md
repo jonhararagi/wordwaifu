@@ -28,3 +28,10 @@ La serie utiliza el término “excelia” en relación con la experiencia y el 
 ## Verificación pendiente
 
 Cotejar los primeros volúmenes para explicar la Falna y contrastar volúmenes posteriores cuando la escena dependa de requisitos específicos de nivel o habilidad.
+
+### Aclaración de la extracción de experiencia · CONT-MAIN-LN · Volumen 1 · PDF p.31
+
+Hestia pone como ejemplo que un acontecimiento oculto de la historia personal —como derrotar a un monstruo— puede ser extraído por los dioses y convertirse en alimento para el crecimiento. El valor de los Puntos de Experiencia depende de la cantidad y la calidad de los acontecimientos completados. La traducción no permite afirmar una fórmula matemática ni equiparar automáticamente esta expresión con Excelia.
+
+- **Atribución:** explicación de Hestia en la conversación con Bell.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF p.31.

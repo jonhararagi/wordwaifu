@@ -55,3 +55,24 @@ Todos estos datos son de fichas finales de la traducción privada aportada; no s
 
 - **Daga de Hestia** — daga negra de mithril forjada por Hephaistos, con Estado/Texto Sagrado propio inscrito en la hoja. Crece con la experiencia y el desarrollo del usuario y manifiesta fuerza apropiada a su nivel; el texto indica que solo puede utilizarla alguien con la Gracia de Hestia. Hestia la entrega a Bell y la actualiza junto con su Estado en PDF pp. 193–196. Bell la usa para destruir la Piedra Mágica del Silverback en pp. 196–200.
 - **Procedencia:** DMR-061-SRC-001, traducción privada no cotejada. No confundir con la daga anterior de Bell, que se rompe en p. 181; el pasaje no identifica esa arma por nombre.
+
+
+## CONT-MAIN-LN · magia y habilidades · Volumen 1 · PDF pp.31–36
+
+### Habilidad localizada · [Deseo Inquebrantable]
+
+- **Record type:** skill.
+- **Usuario:** Bell Cranel.
+- **Primera fuente de trabajo:** DMR-061-SRC-001, PDF pp.35–36.
+- **Efectos tal como aparecen traducidos:** acelera el crecimiento; los efectos duran mientras los sentimientos de Bell no cambien; la intensidad del efecto depende de la fuerza de esos sentimientos.
+- **Condiciones/conocimiento:** Hestia observa la habilidad en el Estado grabado en la espalda de Bell. La copia entregada a Bell deja vacía la sección de Habilidades. No se muestra que Bell conozca el nombre ni los efectos en esta escena.
+- **Estado:** provisional, traducción privada no cotejada con japonés. No asignar nombre japonés, coste, activación adicional ni límites no expresados.
+
+### Explicación narrativa parcial de Magia y Habilidades · p.34
+
+La traducción dice que antes del descenso de los dioses la magia era privilegio de ciertas razas, aunque algunas personas llegaron a usarla sin recibir el regalo de una deidad. El pasaje sitúa el máximo de magias que una persona puede descubrir entre una y tres; una es normal y más de una es raro. Hestia no sabe cuándo Bell podrá usar magia. El texto explica que las Habilidades son efectos especiales que aparecen bajo ciertas condiciones y que descubrirlas es más raro que descubrir Magia.
+
+- **Alcance:** explicación en la traducción privada; no constituye una ficha exhaustiva de adquisición, costes, número de espacios, excepciones o activación.
+- **Continuidad:** el Estado de Bell de p.33 tiene Magia I0 y copia con la sección de Habilidades vacía; la habilidad [Deseo Inquebrantable] solo se revela al lector desde la perspectiva de Hestia en pp.35–36.
+- **Fuente:** DMR-061-SRC-001, PDF pp.33–36.
+

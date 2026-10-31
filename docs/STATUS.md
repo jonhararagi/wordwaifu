@@ -1006,3 +1006,20 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Validate WordWaifu #3852:** success.
 - **DanMachi Lore and Retrieval Integrity #2230:** success.
 - Ambos workflows pasaron validación de JavaScript, métricas/catálogo, continuidad temporal, integridad del lore y smoke test de navegador sobre el SHA citado.
+
+
+## DMR-061 — tercera pasada V1 · PDF pp.29–38 (2026-10-31)
+
+- **Resultado:** tres controles por página completados (extracción, inspección visual física y continuidad). Cuarta revisión correctiva en pp.34–36 para separar el Estado que Bell recibe de la Habilidad revelada desde la perspectiva de Hestia.
+- **Visual:** p.33 contiene la tabla física del Estado; p.37 es ilustración a página completa de apertura del capítulo 2, con figura no identificada; ocho páginas restantes son texto.
+- **Hallazgos:** p.29 amplía el primer encuentro Bell–Hestia y la promesa personal de Bell; pp.30–36 contienen el primer Estado posterior al Minotauro y la revelación de [Deseo Inquebrantable] solo al lector; p.38 describe la lámpara de Piedra Mágica y la rutina doméstica en la base subterránea.
+- **Continuidad:** se amplían eventos existentes; no se crea un nuevo primer encuentro ni una nueva actualización de Estado. La Falna inicial del epílogo, la actualización de pp.30–36, la segunda actualización de pp.91–96 y la entrega de la daga de pp.193–196 siguen separadas.
+- **Precauciones:** el pasaje p.29 solo dice que Hestia descendió «recientemente», sin intervalo medible; el plazo recordado de medio año no queda confirmado. Las afirmaciones de Hestia sobre matrimonios entre Familias y costumbres raciales quedan atribuidas, no universalizadas.
+- **Siguiente folio de tercera pasada:** PDF p.39. Restan pp.39–156 (118 folios) para completar la tercera pasada; la reconciliación de pasada 1 sigue pendiente. V1 permanece IN_PROGRESS.
+
+## Evidencia CI · checkpoint anterior
+
+Sobre SHA 4423efcfc55920b02fdf949927ae7a4033bf1033:
+- [Validate WordWaifu #3853](https://github.com/jonhararagi/wordwaifu/actions/runs/41185474561): success.
+- [DanMachi Lore and Retrieval Integrity #2231](https://github.com/jonhararagi/wordwaifu/actions/runs/41185474555): success.
+

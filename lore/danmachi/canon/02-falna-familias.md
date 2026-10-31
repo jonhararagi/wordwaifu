@@ -5,7 +5,7 @@ type: world_rule
 status: provisional
 confidence: high
 tags: [Falna, deidades, Familia, status, niveles]
-source_refs: [DanMachi light novel series; localizador pendiente]
+source_refs: [DMR-061-SRC-001]
 ---
 # Deidades, Falna y Familias
 
@@ -43,3 +43,8 @@ Bell define la Familia como una facción/grupo de una deidad y como una relació
 - **Alcance:** evidencia directa en la traducción aportada, sin cotejo japonés. No usarla para completar todos los detalles de afiliación, Falna o Poder Divino que el volumen no explica.
 - **Localizadores:** DMR-061-SRC-001, PDF pp.27–28.
 
+
+
+### Aclaración de p.29 · Familia como unidad de crecimiento
+
+Bell compara el crecimiento de una Familia con una tienda o un imperio cuya capacidad depende de las capacidades individuales de sus miembros. Es una analogía que usa para animar a Hestia, no una definición completa de la estructura legal o económica de todas las Familias. Fuente: DMR-061-SRC-001, traducción privada no cotejada, PDF p.29.

@@ -5,7 +5,8 @@ type: event
 status: pending_verification
 continuity_scope: main
 spoiler_level: mild
-source_refs: []
+source_refs:
+  - DMR-061-SRC-001
 ---
 # EVT-DM-HESTIA-DESCENT-001 · Llegada de Hestia al mundo inferior
 
@@ -41,3 +42,11 @@ Esta ficha no declara la premisa del OC incorrecta. Registra una pregunta tempor
 - EVT-DM-BELL-MEETS-HESTIA-001.
 - DM-CHAR-HESTIA.
 - DM-TIMELINE-ALERTS.
+
+
+## Evidencia de la cronología de descenso · CONT-MAIN-LN · Volumen 1 · PDF p.29
+
+Bell refiere que, según lo que Hestia le había contado, ella había descendido «recientemente» del cielo antes de conocerlo y había pertenecido a la Familia de una amiga. La habitación subterránea bajo la iglesia donde vive Hestia era un favor de esa amiga. El pasaje no cuantifica «recientemente», no da una fecha absoluta ni identifica a la amiga o su Familia.
+
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF p.29.
+- **Consecuencia:** aporta evidencia primaria de trabajo para la llegada previa de Hestia y su afiliación anterior, pero no confirma ni refuta un intervalo de aproximadamente medio año. La cronología del descenso continúa pendiente de cotejo y la ficha no se eleva a verificada.

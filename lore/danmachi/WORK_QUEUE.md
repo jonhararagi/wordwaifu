@@ -1568,3 +1568,21 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - **Controles:** tres controles completados por folio; no se necesitó cuarta revisión correctiva en este bloque.
 - **Siguiente folio:** PDF p.29.
 
+
+
+### DMR-061 — tercera pasada V1 · PDF pp.29–38 · 2026-10-31
+
+- [x] Completar extracción página por página de pp.29–38 y contrastar con eventos, fichas y reglas existentes.
+- [x] Renderizar a 130 dpi e inspeccionar las diez páginas físicas; p.33 se amplió para verificar el cuadro de Estado; p.37 se amplió para registrar la ilustración de apertura del capítulo 2 sin identificar a la figura.
+- [x] Ampliar EVT-DM-BELL-MEETS-HESTIA-001 con la promesa personal de Bell y el recuerdo del reclutamiento; no crear otro evento de primer encuentro.
+- [x] Ampliar EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001; conservar separados el otorgamiento inicial de Falna (pp.211–214), la segunda actualización (pp.91–96) y la actualización/entrega de la daga (pp.193–196).
+- [x] Verificar el Estado de p.33: Fuerza I77→I82; Resistencia I13; Destreza I93→I96; Agilidad H148→H172; Magia I0.
+- [x] Aplicar cuarta revisión correctiva a pp.34–36 para separar la copia entregada a Bell del Estado grabado y la perspectiva interna de Hestia. Bell no conoce [Deseo Inquebrantable] en esta escena.
+- [x] Añadir fuentes parciales a Falna/progresión, Magia/Habilidades, relaciones entre Familias y tecnología de lámparas de Piedra Mágica. No elevar explicaciones de personajes a leyes universales.
+- [x] Incorporar p.29 al candidato del descenso de Hestia como evidencia no cuantificada: «recientemente»; el posible intervalo de medio año sigue sin probarse.
+- [ ] Continuar tercera pasada desde PDF p.39 hasta p.156 (118 folios restantes).
+- [ ] Reconciliar la pasada 1 mediante matriz de cobertura por página/localizador; no contar notas históricas como cobertura completa sin verificación.
+- **Balance de controles:** 3 controles por folio en pp.29–38; una cuarta revisión correctiva en pp.34–36.
+- **Siguiente folio:** PDF p.39.
+- **Estado:** V1 continúa IN_PROGRESS; DMR-061-SRC-001 sigue siendo traducción privada no cotejada con japonés.
+

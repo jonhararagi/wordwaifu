@@ -84,3 +84,17 @@ PDF pp. 31–36 renderizadas e inspeccionadas a página completa. Son páginas d
 - La traducción privada no se ha cotejado con el japonés.
 - No asignar fecha de calendario ni una causa confirmada para el aumento de Agilidad.
 - No atribuir a Bell conocimiento de `[Deseo Inquebrantable]` en esta escena.
+
+
+## Tercera pasada · ampliación y control de la actualización posterior al Minotauro · PDF pp.30–36
+
+- **Inicio físico del procedimiento:** Hestia utiliza una aguja para obtener sangre divina, que deposita en la espalda de Bell como punto de partida de la inscripción (p.30); después graba el Texto Sagrado con sus dedos (p.31).
+- **Experiencia y crecimiento:** la explicación de Hestia relaciona los acontecimientos vividos con Puntos de Experiencia, cuyo valor depende de cantidad y calidad; los dioses pueden verlos y controlarlos y, al alcanzar suficiente cantidad, ocurre un Aumento de Nivel (p.31). La terminología de la traducción se conserva sin equipararla automáticamente con Excelia.
+- **Razas y relaciones:** Bell menciona lo que ha oído sobre los Elfos y el contacto físico; Hestia contrapone otras costumbres y habla de las Amazonas y la reproducción con hombres fuertes. Se conserva como generalización expresada por Hestia, no como regla individual de toda una raza. Hestia también expresa celos al hablar de Ais y le pide a Bell que mire a su alrededor (p.31).
+- **Familias y relaciones:** pp.31–32 explican la advertencia de Hestia sobre Bell y Ais; el discurso sobre matrimonio entre miembros de una misma Familia y posibles hijos de distintas Familias permanece atribuido a Hestia y no se eleva a regla universal sin cotejo.
+- **Estado entregado:** p.33 contiene un cuadro visible, inspeccionado físicamente, con Fuerza I77→I82, Resistencia I13, Destreza I93→I96, Agilidad H148→H172 y Magia I0. La hoja entregada deja Magia y Habilidades vacías.
+- **Magia/Habilidades:** p.34 ofrece una explicación general en la narración y una respuesta incierta de Hestia sobre cuándo Bell podrá usar magia.
+- **Separación de perspectiva:** pp.35–36 cambian al punto de vista interno de Hestia y revelan [Deseo Inquebrantable]. Hestia también reflexiona sobre el cambio de los habitantes del Mundo Inferior en contraste con los dioses (p.35). No se atribuye el nombre ni los efectos a Bell.
+- **Evento:** se mantiene un único expediente EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001. No se fusiona con la Falna inicial, la segunda actualización de pp.91–96 ni la entrega de la daga posterior.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+

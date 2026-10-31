@@ -77,3 +77,15 @@ El epílogo añade detalles al recuerdo de p.29 sin crear un segundo primer encu
 - La ceremonia de Falna ocurre después, en la biblioteca del segundo piso de una librería antigua. Se mantiene como evento separado en EVT-DM-V01-BELL-RECEIVES-FALNA-001.
 - El propietario de la librería es un hombre humano mayor sin nombre. No se asigna identidad ni ficha.
 - **Límite:** pp.211–214 son retrospectiva del epílogo; no dan fecha absoluta ni un intervalo exacto entre primer encuentro e inscripción de Falna.
+
+
+## Complemento de tercera pasada · primer encuentro y promesa · PDF p.29
+
+P.29 amplía el recuerdo ya vinculado a EVT-DM-BELL-MEETS-HESTIA-001: Bell es rechazado por Familias con más miembros o que prefieren aspirantes con experiencia; Hestia lo invita y Bell la sigue sin dudar. Al verla preocupada por haberle convertido en una carga, Bell intenta animarla y expresa que quiere ayudarla. El narrador dice que la promesa que se hizo a sí mismo al conocerla quedó profundamente grabada y que fue la primera promesa que hizo consigo mismo.
+
+El pasaje también recuerda, según lo que Hestia le había contado, que ella descendió recientemente, había pertenecido a la Familia de una amiga y disfrutaba de los libros del Mundo Inferior; la habitación bajo la iglesia era un favor de esa amiga. No se identifica a la amiga y no se cuantifica «recientemente».
+
+- La concesión de Falna sigue separada en EVT-DM-V01-BELL-RECEIVES-FALNA-001, PDF pp.211–214.
+- No se crea evento duplicado ni fecha absoluta.
+- Fuente DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
