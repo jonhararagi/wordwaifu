@@ -25,7 +25,7 @@ Conteos aproximados de palabras tras excluir las cargas base64 de imágenes y el
 
 | Volumen | Archivo fuente | Palabras aprox. | Imágenes incrustadas | Estado de análisis |
 |---|---|---:|---:|---|
-| 1 | `Volumen [01] • DanMachi.md` | 63.168 | 16 | DMR-061: pasada 2 re-auditada en pp. 9–60; tres pasadas previas conservadas para pp. 157–214; pp. 61–156 siguen pendientes de pasadas 2 y 3. PDF físico: 215 folios (p.8 blanca; p.215 créditos). V1 sigue IN_PROGRESS. |
+| 1 | `Volumen [01] • DanMachi.md` | 63.168 | 16 | DMR-061: pasada 2 re-auditada en pp. 9–60; tres pasadas previas conservadas para pp. 157–214; pp. 61–72 tienen pasada 2 completada; pp. 73–156 siguen pendientes de pasada 2 y pp. 61–156 de pasada 3. PDF físico: 215 folios (p.8 blanca; p.215 créditos). V1 sigue IN_PROGRESS. |
 | 2 | `Volumen [02] • DanMachi.md` | 74.125 | 19 | DMR-060 contiene extracción parcial; falta certificar las tres pasadas completas. |
 | 3 | `Volumen [03] • DanMachi.md` | 53.883 | 21 | Fuente cargada; análisis integral pendiente. |
 | 4 | `Volumen [04] • DanMachi.md` | 64.892 | 23 | Fuente cargada; análisis integral pendiente. |
@@ -52,6 +52,15 @@ Inventario verificado sobre `main` SHA `0946ace89a29e7439fbcbe4e0d4315aec8418f62
 - **Visual:** inspeccionadas las 16 imágenes incrustadas del MD; renderizadas p.8 (blanca), p.19–24, p.49–54 y p.215 (créditos). Las páginas 19–21, 23–24 y 49–54 ya no son pendientes visuales.
 - **Paginación:** el PDF tiene 215 folios físicos; p.8 está en blanco y p.215 es créditos. No tratar el contador 214 del lector Files como paginación física.
 - **Límite:** traducción privada no cotejada con japonés; CONT-MAIN-LN; V1 continúa IN_PROGRESS. No afirmar CI verde: el endpoint consultado no expuso runs/checks para el SHA previo a este checkpoint.
+
+### DMR-061 — checkpoint integrado de segunda pasada V1 (2026-10-31)
+
+- [x] Cotejar el resumen DMR-061 con el texto fuente Markdown y completar la pasada 2 de PDF pp.61–72.
+- [x] Añadir detalles omitidos de pp.67–70: respuesta explícita de Ais de que Bate es una pareja «absolutamente imposible»; separar esa respuesta de la no-respuesta sobre Bell; secuencia física de Ais apartando, golpeando con el codo y abofeteando a Loki; reacción de Loki; reducción y sujeción de Bate.
+- [x] Registrar la variante «Riviera/Riveria» sin normalizarla por fuentes externas.
+- [ ] Continuar pasada 2 desde PDF p.73 hasta p.156.
+- [ ] Realizar pasada 3 de PDF pp.9–156 y reconciliar la cobertura de pasada 1 por rangos.
+- **Límite:** no se modifica el archivo fuente original; el Markdown es transcripción derivada y la traducción sigue sin cotejarse con japonés. No se declara V1 terminado. Próxima página de pasada 2: PDF p.73.
 
 ## REGLA PERMANENTE · Registro de acuerdos de conversación
 
