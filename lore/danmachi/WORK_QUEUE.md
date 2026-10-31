@@ -1485,3 +1485,16 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [ ] Reconciliar pasada 1 con matriz de cobertura y localizadores.
 - [ ] Completar tareas DMR-062 (pp.1–10, reglas/objetos, candidatos de monstruos y revisión de personajes).
 - **Siguiente folio:** PDF p.101. V1 continúa IN_PROGRESS; traducción privada no cotejada con japonés.
+
+### Checkpoint vigente DMR-061 · Volumen 1 · PDF pp.111–120 · 2026-10-31
+
+- **Pasada 2:** completada para pp.111–120 con tres revisiones por página: extracción narrativa; render e inspección visual de cada folio; auditoría de continuidad, entidades, eventos y duplicados. Cuarta revisión correctiva en p.116 (ilustración sin identidad) y p.119 (persona no nombrada).
+- **Visual:** pp.111–115 y pp.117–120 son texto; p.116 es ilustración monocroma de capítulo 5, inspeccionada a página completa y sin identificación.
+- **Banquete:** pp.104–115 queda registrado en EVT-DM-V01-GANESHA-GOD-BANQUET-001. El anuncio de Philia dentro de tres días no se registra como acontecimiento ya celebrado. La petición de arma de p.115 sigue enlazada al evento independiente EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001.
+- **Incursión de Bell:** pp.117–120 queda registrada en EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001. Se reutilizan las fichas existentes Dungeon Lizard, Goblin y Kobold; no se duplican especies ni individuos.
+- **Continuidad:** no se identifica a la figura de p.116 ni a la persona que Bell piensa en p.119. La duda sobre la Piedra Mágica del Dungeon Lizard permanece abierta; no se confirma su destrucción. El vestíbulo de Babel se describe sin inventar planta, coordenadas ni mapa interior.
+- **Fichas ampliadas:** Bell, Hestia, Freya, Loki, Ganesha, Ganesha Familia, Orario, Dungeon y Babel. Hephaistos tiene ficha individual provisional CHAR-HEPHAISTOS creada e indexada, con procedencia de la novela principal.
+- **Próximo folio:** PDF p.121.
+- **Pendientes:** pasada 2 pp.121–156; pasada 3 pp.9–156; reconciliación integral de la pasada 1 con matriz de cobertura; tareas DMR-062 (pp.1–10, reglas/objetos, candidatos y auditoría de personajes).
+- **Estado global:** V1 permanece IN_PROGRESS. DMR-061-SRC-001 sigue siendo una traducción privada no cotejada con japonés. El PDF tiene 215 páginas físicas: p.8 está en blanco, p.214 es el último folio narrativo y p.215 contiene créditos.
+
