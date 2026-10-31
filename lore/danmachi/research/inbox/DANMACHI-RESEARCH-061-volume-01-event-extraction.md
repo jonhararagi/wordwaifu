@@ -1387,3 +1387,40 @@ La actualización de pp.91–96 es distinta de la actualización tras el Minotau
 - **Revisión correctiva:** pp.130–134 para diferenciar insistencia, aceptación, deuda y diseño; p.135 para separar intención de incursión realizada; pp.136–138 para no cerrar anticipadamente el encargo del monedero ni incorporar datos de otras continuidades.
 
 **Checkpoint:** tercera pasada completada pp.9–138 (130 folios). Próxima página física PDF p.139. Restan pp.139–156 (18 folios) de la tercera pasada. La pasada 2 pp.9–156 permanece completada. La reconciliación integral de la pasada 1 sigue pendiente. V1 continúa IN_PROGRESS; DMR-061-SRC-001 sigue siendo una traducción privada no cotejada con japonés.
+
+
+## DMR-061 — tercera pasada V1 · PDF pp.139–148 · 2026-10-31
+
+**Estado del bloque:** tres controles por folio (extracción, inspección visual física y continuidad). Cuarta revisión correctiva puntual en pp.142–145 y p.148. Fuente DMR-061-SRC-001, traducción privada española no cotejada con japonés.
+
+### Extracción por folio
+
+- **p.139:** la Calle Principal del Este está adornada con banderas del Festival y el emblema de Ganesha Familia. La multitud incluye distintas razas, niños y aventureros. Freya observa desde el segundo piso de una cafetería sin nombre frente a la avenida, oculta bajo una capa azul.
+- **p.140:** Loki llega con Ais, bromea sobre su borrachera y desmayo después del Banquete y cuenta que sus miembros se preocuparon por ella. Presenta a Ais ante Freya. La reunión ocurre unos días después del Banquete, sin fecha absoluta.
+- **p.141:** se describe la fama de Ais como Princesa de la Espada. Loki le pide descansar después de la Expedición y acaricia su cabeza; Ais acepta el gesto.
+- **p.142:** Loki confronta a Freya por asistir al Banquete y reunir información. La tensión hace que el empleado se retire y el local quede vacío. Loki advierte que intervendrá si Freya perjudica a su lado.
+- **p.143:** Loki deduce que Freya se ha encaprichado de un joven de otra Familia y habla del riesgo de arrebatárselo a otro dios. Es una inferencia de Loki; Freya no identifica al joven.
+- **p.144:** Freya describe al joven como vulnerable, pero puro y encantador. Al mirar hacia la calle reconoce a Bell, de cabello blanco y equipo estándar, caminando hacia el Coliseo. Decide marcharse.
+- **p.145:** Freya deja la cafetería. Ais sigue con la mirada el familiar cabello blanco de Bell desde la ventana; no hay diálogo ni encuentro. Tras un separador de escena, Hephaistos entrega a Hestia una caja con la daga negra y su vaina.
+- **p.146:** Hephaistos sugiere el nombre «Daga de Hestia», que Hestia acepta. La deuda no se cancela. Hestia sale deprisa para mostrar el arma a Bell.
+- **p.147:** Hestia ve el folleto del Festival de Monstruos/Philia, deduce que Bell podría estar yendo al Coliseo y toma un carruaje al que llama «taxi». La narración atribuye el origen popular del término a un dios no identificado.
+- **p.148:** el carruaje se detiene por la multitud; la tarifa es 90 Varisu. Hestia entrega todo el dinero y cree dejar propina, pero el conductor señala que solo cubre la tarifa. Hestia ya se ha marchado. En el callejón se encuentra con Freya; el diálogo continúa después del folio.
+
+### Auditoría de continuidad y no duplicación
+
+- **Freya/Loki/Ais:** se amplía EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001. Las hipótesis de Loki, el reconocimiento de Freya y la mirada de Ais se mantienen atribuidos; no se infiere romance ni interacción Ais–Bell.
+- **Daga:** se amplía EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001. El nombre procede de Hephaistos; el dinero sigue siendo préstamo y no condonación. La daga todavía no se entrega a Bell.
+- **Hestia/Festival:** pp.147–148 se añaden como preámbulo al evento existente EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001. Hestia viaja con la caja y se encuentra con Freya, pero Bell aún no está presente.
+- **Monedero de Seal:** no se registra devolución en este bloque; permanece pendiente.
+- **Cafetería y callejón:** no reciben nombre ni ID de ubicación. No inventar coordenadas ni atribuir el taxi a un dios específico.
+- **Tarifa:** 90 Varisu exactos; no se registra propina adicional ni cambio devuelto.
+- **Separación:** mantener la reunión de cafetería separada de la liberación posterior del Silverback y la entrega a Hestia separada de la presentación del arma a Bell.
+- **IDs:** no se crean IDs nuevos; no se modifican catálogo ni timeline JSON.
+
+### Inspección visual
+
+- Las diez páginas físicas PDF pp.139–148 se renderizaron e inspeccionaron individualmente a 130 dpi.
+- Todas son páginas de texto continuo; no hay ilustraciones, tablas, diagramas ni notas al pie.
+- **Revisión correctiva:** pp.142–145 para separar sospecha, confesión y observaciones; p.145 para el corte de escena; p.148 para el pago exacto y el encuentro con Freya.
+
+**Checkpoint:** tercera pasada completada pp.9–148 (140 folios). Próxima página física PDF p.149. Restan pp.149–156 (8 folios) de la tercera pasada. La pasada 2 pp.9–156 continúa completa. La reconciliación integral de la pasada 1 sigue pendiente. V1 continúa IN_PROGRESS; DMR-061-SRC-001 sigue siendo una traducción privada no cotejada con japonés.
