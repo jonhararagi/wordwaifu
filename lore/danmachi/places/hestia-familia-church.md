@@ -4,8 +4,8 @@ universe: danmachi
 type: location
 status: source_checked_partial
 confidence: La sinopsis oficial de DanMachi II confirma que la base anterior de Hestia Familia era una iglesia destruida antes de la mudanza posterior al War Game; el nombre "Iglesia abandonada" y la atribución de la destrucción a Apollo Familia siguen siendo pistas secundarias.
-continuity_scope: CONT-ANIME
-source_refs: [DMR-033-SRC-001, DMR-031-SRC-001]
+continuity_scope: CROSS-CONTINUITY
+source_refs: [DMR-033-SRC-001, DMR-031-SRC-001, DMR-061-SRC-001]
 claim_refs: [DMR-033-CLM-001, DMR-031-CLM-010]
 tags: [Hestia Familia, iglesia abandonada, antigua residencia, Orario, CONT-ANIME]
 ---
@@ -39,3 +39,13 @@ La wiki inglesa de Orario la etiqueta como **Abandoned Church** y dice que era e
 - Determinar la posición dentro de Orario sólo mediante evidencia textual o cartográfica oficial.
 
 **Veredicto:** identidad y uso anterior parcialmente respaldados para CONT-ANIME; causa exacta de destrucción y posición urbana pendientes.
+
+
+## Residencia inicial en la novela principal · CONT-MAIN-LN · Volumen 1 · PDF p.123
+
+Bell dice que Hestia y él viven en una habitación oculta dentro de una iglesia construida entre la Calle Principal del Noreste y la Calle Principal del Oeste. Este pasaje proporciona una referencia de ubicación urbana para la residencia del inicio de la novela. No da nombre propio de la iglesia, número de calle, coordenadas ni descripción suficiente para reconstruir su planta.
+
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+- **Localizador:** PDF p.123.
+- **Precisión:** entre dos avenidas principales; posición exacta desconocida.
+- **Límite:** el pasaje no confirma por sí solo la denominación secundaria «Iglesia abandonada» ni quién la destruyó.
