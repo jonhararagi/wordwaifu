@@ -4120,20 +4120,19 @@
         "kind": "published_reference"
       },
       "locationAssessment": {
-        "status": "verified",
-        "spatialPrecision": "building",
-        "reason": "La escena doméstica sucede en la residencia oculta de Hestia Familia dentro de la iglesia; se reutiliza el lugar existente LOC-HESTIA-HOME."
+        "status": "provisional",
+        "spatialPrecision": "city_level",
+        "reason": "La escena termina en la residencia subterránea de Hestia Familia, cuya ficha la sitúa en Orario. El modelo temporal solo admite precisión de ciudad para el mapa; no representa el edificio ni la habitación."
       },
       "locationRefs": [
         {
-          "locationId": "LOC-HESTIA-HOME",
-          "relationship": "event_place",
-          "verificationStatus": "verified",
-          "spatialPrecision": "building",
-          "context": "La búsqueda termina en la residencia subterránea de Hestia Familia dentro de la iglesia.",
+          "locationId": "LOC-ORARIO",
+          "relationship": "broad_setting",
+          "verificationStatus": "provisional",
+          "spatialPrecision": "city_level",
+          "context": "El episodio tiene lugar en la residencia de Hestia Familia dentro de Orario. El enlace espacial se limita a la ciudad; la iglesia y la habitación subterránea permanecen descritas en la ficha del lugar, sin coordenada ni precisión de edificio en el mapa.",
           "sourceUrls": [
-            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md",
-            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/places/hestia-familia-church.md"
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md"
           ]
         }
       ]
