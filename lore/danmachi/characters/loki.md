@@ -39,3 +39,12 @@ Estas frases se conservan como declaraciones de Loki en un diálogo de tono enf�
 - **Evento:** EVT-DM-V01-GANESHA-GOD-BANQUET-001.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
 
+
+
+## Tercera pasada · Banquete de Ganesha · CONT-MAIN-LN · Volumen 1 · PDF pp.109–112
+
+La conversación continúa con la llegada de Loki. Hestia pregunta por Ais; Loki la llama «su amada» y dice que los pretendientes que intentaron acercarse fueron apartados. Estas palabras pertenecen a Loki y no acreditan reciprocidad ni una relación formal de Ais. La burla de Loki a la falta de vestido de Hestia provoca un intercambio de insultos sobre el pecho de ambas y un forcejeo cómico; los dioses hacen apuestas. Loki termina marchándose. Freya considera que Loki se ha vuelto más dulce y menos peligrosa desde que descendió al Mundo Inferior, pero esa es su valoración, no una medida objetiva de su conducta.
+
+- **Evento:** EVT-DM-V01-GANESHA-GOD-BANQUET-001.
+- **Límite:** no convertir las bromas, el forcejeo o las afirmaciones de Loki sobre Ais en una relación formal ni en conflictos duraderos.
+- **Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés.
