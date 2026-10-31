@@ -259,6 +259,27 @@ No se ha inspeccionado visualmente cada folio. Estos localizadores constituyen u
 - **Próximo folio:** PDF p. 73. Traducción privada no cotejada con japonés; cinco pasadas abiertas.
 
 
+### DMR-061 — auditoría de segunda pasada, PDF pp. 61–72 (2026-10-31)
+
+**Resultado:** pasada 2 completada para pp. 61–72 tras cotejar el resumen secuencial con el texto fuente Markdown de V1. Los localizadores físicos se conservan según DMR-061-SRC-001; el Markdown es transcripción derivada y no sustituye la paginación del PDF. No se modifica el original ni se declara completada la pasada 1 o la pasada 3.
+
+**Detalles confirmados y correcciones de exhaustividad:**
+
+- **p. 61 — economía y comida:** la daga costó 3.600 Varisu y se adquirió mediante préstamo del Gremio; Bell declara haber terminado de pagar esa deuda junto con la del equipo defensivo. Pide pasta por 300 Varisu, rechaza el vino por su precio y la jefa deja igualmente un tarro. No consta que Bell beba el vino. Seal se sienta junto a Bell después de que la jefa consiente con un gesto; Bell agradece el pan recibido por la mañana y bromea con que Seal trabajó para venderle más.
+- **p. 62 — Mia y el local:** Seal identifica a la jefa como Mia; las empleadas la llaman «mamá». Mia fue aventurera y continúa semiactiva en una Familia con permiso de su dios. El local emplea solo mujeres y recibe a trabajadoras con circunstancias diversas. No importar apellido, nivel, epíteto ni biografía desde CHAR-MIA-GRAND/CONT-ANIME.
+- **pp. 62–64 — Familia Loki:** entra un grupo de aproximadamente diez integrantes; Bell reconoce a Ais y el entorno identifica a Loki Familia. Son clientes habituales. No asignar identidades individuales a quienes Bell no reconoce ni la traducción nombra.
+- **pp. 65–66 — relato del rescate:** el texto sitúa el ataque inicial de los Minotauros en el piso 17 y la persecución hasta el quinto; el relato de la expedición es información que Bell oye de otros, no una escena que presencie. El narrador no identificado recuerda que Bell temblaba y quedó cubierto de sangre, «como un tomate». Añadir estos localizadores al evento existente del rescate, sin duplicar el combate.
+- **pp. 67–68 — discusión sobre Bell:** Bate lo insulta y cuestiona que sea aventurero. Riveria/Riviera le recuerda que la fuga del Minotauro fue responsabilidad de Loki Familia y que no tienen derecho a convertir a Bell en tema de burla. La traducción escribe «Riviera» en el diálogo; el dossier alterna «Riveria/Riviera», por lo que queda marcada como variante de transcripción y no se normaliza por conocimiento externo. Ais dice que la reacción de Bell fue normal dadas las circunstancias. Bate pregunta con quién elegiría Ais estar; ella responde expresamente que con Bate es «absolutamente imposible». Después Bate pregunta si aceptaría a Bell si él se declarase; Ais no responde afirmativamente ni negativamente: solo aparece una exclamación/pausa. Mantener ambas respuestas separadas; no convertir la segunda en reciprocidad.
+- **pp. 69–70 — perspectiva de Ais y Loki:** Ais reconoce a Bell por su cabello blanco, cuerpo delgado, flequillo claro y ojos carmesí oscuro; el nombre «Bell» resuena en ella más que las voces de sus compañeros. Una empleada sale tras Bell. Loki se acerca por detrás y rodea el abdomen de Ais; Ais le retira los brazos, la golpea con el codo y luego la abofetea. Loki reacciona teatralmente, con la mejilla marcada, llanto y posterior exclamación de que la fría Ais es «moe». No inferir romance ni motivación interna no expresada.
+- **p. 70 — altercado de Bate:** Bate queda atado en el suelo por varios clientes/trabajadores y la elfa que discutió con él le pisa la cabeza. El resumen previo comprimía este detalle como «reducido y atado»; queda ampliado sin identificar a la elfa si el pasaje no la nombra.
+- **pp. 71–72 — reacción de Bell:** Bell corre llorando y siente vergüenza por su debilidad y por haber sido protegido. Su ira se dirige contra sí mismo, no contra Bate ni los presentes. Formula que no está en condiciones de ponerse delante de una chica si no se esfuerza por completo y decide avanzar/hacerse más fuerte. No atribuirle una venganza ni un objetivo romántico confirmado.
+  
+**Control de relaciones y duplicados:** el relato de pp. 65–66 amplía EVT-DM-BELL-AIS-MINOTAUR-001; no crear otro rescate. EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001 se mantiene como evento de relato posterior. No crear fichas para el narrador bestia ni para las empleadas anónimas. No añadir habilidades, estadísticas o niveles no presentes en estas páginas.
+
+**Visuales:** las imágenes incrustadas del Markdown fueron inspeccionadas en el checkpoint anterior; esta pasada no afirma una nueva renderización de páginas PDF. La ilustración de Loki/Ais en p.70 permanece ligada a la inspección visual previa, no a una identificación inferida.
+
+**Próximo folio de segunda pasada:** PDF p.73. La pasada 3 de pp.9–156 sigue pendiente; pp.157–214 conservan las tres pasadas previamente documentadas. V1 continúa IN_PROGRESS.
+
 ## DMR-061 — continuación narrativa, PDF pp. 73–96
 
 - **Capítulo 3, pp. 73–76:** Eina está trabajando horas extra en el Gremio bajo la lluvia a las 21:00. Misha lee el resumen de Bell y comenta su progreso hasta el quinto piso. Eina considera esa incursión imprudente y peligrosa por su equipo insuficiente y falta de compañero, y promete impedir que siga avanzando bajo su asesoramiento. La broma de Misha provoca que Eina recuerde la frase medio jocosa «te amo» de Bell dos días antes; se sonroja, pero se dice que es un chico lindo como un hermano menor. No se registra romance confirmado.
@@ -514,7 +535,8 @@ No se ha inspeccionado visualmente cada folio. Estos localizadores constituyen u
 |---|---|---|---|---|
 | pp.1–8 | Portada/ilustraciones revisadas; p.8 blanca | Revisión visual de portada y front matter | No requiere extracción narrativa; conservar p.8 como folio blanco verificado | Front matter revisado |
 | pp.9–60 | Extracción secuencial preexistente en DMR-061; requiere reconciliar la matriz integral antes de certificar V1 | **Relectura de detalle completada en este checkpoint** | Pendiente | Parcial |
-| pp.61–156 | Extracción secuencial preexistente en DMR-061; requiere reconciliar la matriz integral antes de certificar V1 | Pendiente; próximo bloque desde p.61 | Pendiente | Parcial |
+| pp.61–72 | Extracción secuencial preexistente | **Pasada 2 completada (2026-10-31)** | Pendiente | Parcial |
+| pp.73–156 | Extracción secuencial preexistente; reconciliar por rangos | Pendiente; próximo bloque desde p.73 | Pendiente | Parcial |
 | pp.157–214 | Tres pasadas documentadas como completas en sus bloques previos | Tres pasadas documentadas como completas | Tres pasadas documentadas como completas | Conservado |
 | p.215 | Hoja de créditos, no narración | Hoja de créditos inspeccionada | Hoja de créditos inspeccionada | Cerrado como material editorial |
 
