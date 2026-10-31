@@ -3361,6 +3361,22 @@
       ],
       "status": "source_checked_translation_unverified",
       "priority": "high"
+    },
+    {
+      "id": "EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001",
+      "path": "events/timeline/EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001.md",
+      "type": "event",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "Volumen 1",
+        "Bell",
+        "Babel",
+        "Festival de Monstruos",
+        "Ganesha Familia"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "high"
     }
   ],
   "reservedIds": [
