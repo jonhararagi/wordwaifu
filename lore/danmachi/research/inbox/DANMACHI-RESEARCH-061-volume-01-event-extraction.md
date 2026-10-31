@@ -646,3 +646,25 @@ La pasada 2 de pp.9–60 cubre los folios narrativos revisados desde el prólogo
 - No se añaden personajes, relaciones románticas, lugares, niveles, habilidades ni estadísticas a partir de inferencias.
 
 **Siguiente página de pasada 2:** PDF p.91. La pasada 3 de pp.9–156 sigue pendiente; también queda por reconciliar la pasada 1 y completar las tareas de DMR-062. V1 permanece `IN_PROGRESS`.
+
+## DMR-061 — segunda pasada V1, PDF pp. 91–100 (2026-10-31)
+
+**Resultado:** pasada 2 completada para PDF pp.91–100. Se leyó el PDF original de 214 páginas y se inspeccionó la imagen de p.98. Los restantes folios del bloque son páginas de texto en la extracción consultada. Fuente: DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
+- **p.91 — Estado:** Lv.1; Fuerza H123→G221, Resistencia I42→H101, Destreza H139→G232, Agilidad G225→F313, Magia I0. La columna anterior de Fuerza H123 contradice el snapshot de p.54 (H120); conservar ambos valores sin inventar una actualización intermedia.
+- **p.91 — Habilidad:** Hestia vuelve a ver [Deseo Inquebrantable] en el Estado grabado. Le explica a Bell que su crecimiento es anormal, pero oculta el nombre y los efectos. No atribuir conocimiento de la Habilidad a Bell.
+- **pp.91–93 — POV de Hestia:** sopesa confianza y preocupación; teme que Bell adquiera arrogancia o que otros dioses se interesen por la Habilidad. Admite internamente que sus celos respecto de Wallenstein son gran parte de su motivo. Son pensamientos de Hestia, no hechos universales.
+- **pp.93–95 — capacidad de Bell:** Hestia valora sus decisiones, técnicas y experiencia de combate además del efecto de la Habilidad. No reducir su progreso a una sola causa ni convertir el elogio de Hestia en estadística objetiva.
+- **pp.95–96 — promesa:** Hestia pide que Bell no se sobreesfuerce ni la deje sola. Bell promete esforzarse por ser más fuerte sin actuar imprudentemente y no dejarla sola. Hestia acepta ayudarlo.
+- **p.96 — Banquete:** Hestia encuentra una invitación al Banquete de Ganesha y decide usarlo para intentar reunirse con Hephaistos. No se confirma asistencia ni conversación.
+- **p.97 — salida:** Hestia anuncia que estará fuera esa noche y quizá un par de días. Bell se prepara para ir al Dungeon cerca del mediodía, con la rodilla aún dolorida; recuerda la promesa y decide no forzarse.
+- **p.98 — taberna:** Bell entra en La Señora de la Abundancia antes de que abra y pregunta por Seal y la jefa. Dos empleadas anónimas —una elfa y una nekomusume— lo reconocen como quien comió y salió corriendo. La imagen de p.98 fue inspeccionada; no identificar a las empleadas por apariencia.
+- **p.99 — disculpa y pago:** Bell se disculpa con Seal por haberse ido sin pagar y devuelve el dinero. Seal dice que su regreso ya la hace feliz; Bell rechaza que ella asuma culpa innecesaria.
+- **pp.99–100 — cesta:** Seal ofrece una cesta grande con platos preparados por los cocineros, en cuya preparación ayudó un poco. Bell acepta. No inventar el contenido exacto.
+- **p.100 — Mia-mama:** aparece la mujer llamada «Mia-mama», comenta el pago y bromea sobre ir a buscar a su «juguete perdido». No leerlo como amenaza literal ni transferir automáticamente la identidad de la ficha anime. La conversación insinúa algo entre Seal y Bell, pero no confirma romance.
+
+### Continuidad y duplicados
+
+La actualización de pp.91–96 es distinta de la actualización tras el Minotauro (pp.30–36), de la actualización con daga (pp.193–196) y de la concesión inicial de Falna (pp.211–214). Se crea un evento propio. La visita de pp.98–100 es un regreso para pagar y disculparse; no es la cena aceptada en pp.44–45 ni el primer encuentro con Seal. No crear perfiles de empleadas anónimas ni importar datos de CONT-ANIME a CONT-MAIN-LN para Mia-mama. No crear todavía un evento de asistencia al Banquete: solo consta la decisión de Hestia.
+
+**Siguiente folio:** PDF p.101, pasada 2. Pasada 3 pp.9–156 y reconciliación de pasada 1 pendientes. DMR-062 mantiene sus tareas independientes. V1 permanece IN_PROGRESS.
