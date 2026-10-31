@@ -107,3 +107,6 @@ Estos registros facilitan la siguiente tanda, pero las seis entradas de canon si
 
 **Reserva de procedencia:** ambos PDFs son traducciones privadas de la novela ligera original oficial, no cotejadas con japonés. Los números indicados son páginas físicas PDF. Las fichas visuales de V1/V2 requieren auditoría integral adicional.
 - `EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001` — Bell oye a la Familia Loki burlarse de su rescate del Minotauro en La Señora de la Abundancia y se marcha decidido a fortalecerse (PDF pp. 57–72).
+
+- EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001 — segunda actualización del Estado y promesa mutua (PDF pp.91–97); [Deseo Inquebrantable] sigue oculta a Bell.
+- EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001 — Bell vuelve a La Señora de la Abundancia, paga lo adeudado y acepta una cesta de comida de Seal (PDF pp.98–100); conversación abierta al final de p.100.
