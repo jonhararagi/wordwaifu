@@ -56,3 +56,13 @@ Seal vuelve del Festival de Monstruos y ayuda a Bell a trasladar a Hestia, incon
 
 - **Comparación textual:** p.42 describía cabello y ojos negros; p.165 Bell recordaba cabello y ojos grises; p.204 el narrador usa «gris oscuro» para el cabello. Esto corrobora parcialmente el recuerdo de cabello gris de p.165, aunque la diferencia entre «negro» y «gris oscuro» de p.42/204 puede depender del matiz de la traducción. Los ojos siguen sin resolución: p.204 no da un color nuevo.
 - **Estado:** mantener la discrepancia ocular abierta; no modificar la ficha a una única descripción canónica sin una fuente adicional.
+
+## Regreso de Bell y disculpa a Seal · Volumen 1 · CONT-MAIN-LN
+
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés; PDF pp.98–100.
+- Bell vuelve al establecimiento cuando todavía se está preparando para abrir y pregunta por Seal y la jefa (p.98). Dos empleadas sin nombre, una elfa y una nekomusume, lo reconocen como el aventurero que comió y salió corriendo; no se crean fichas por estas apariciones.
+- Bell se disculpa con Seal y devuelve el dinero que debía (p.99). Seal dice que su regreso ya la hace feliz y también intenta disculparse; Bell rechaza que asuma una culpa innecesaria.
+- Seal le ofrece una cesta con platos preparados por los cocineros, en cuya preparación ella también ayudó un poco. Bell entiende que busca animarlo y acepta (pp.99–100).
+- La mujer llamada «Mia-mama» aparece y bromea sobre la demora de Bell y la posibilidad de ir a buscar su «juguete perdido». La escena termina con una insinuación sobre Seal y Bell; no confirma romance.
+- **Identificación del local:** p.98 nombra el establecimiento como La Señora de la Abundancia. No se infiere afiliación adicional para Seal.
+- **Límite:** el perfil CHAR-MIA-GRAND consultado pertenece a CONT-ANIME; no se trasladan sus datos a la figura llamada «Mia-mama» en CONT-MAIN-LN.
