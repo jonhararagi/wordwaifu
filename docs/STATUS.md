@@ -1157,3 +1157,14 @@ Sobre SHA 4423efcfc55920b02fdf949927ae7a4033bf1033:
 - **Eventos y fichas:** se amplían los eventos existentes de combate, preparativos del Festival y entrega de pociones. Se reutilizan Bell, Miach, Eina, Hephaistos, Ganesha Familia, Orario y Babel. No se crean IDs nuevos.
 - **Visual:** p.126 es la única ilustración; no hay tablas ni notas al pie.
 - **Checkpoint:** tercera pasada completada pp.9–128 (120 folios). Siguiente página PDF p.129; restan 28 folios. La pasada 2 pp.9–156 sigue completa; la reconciliación integral de la pasada 1 sigue pendiente. V1 permanece IN_PROGRESS; traducción privada no cotejada con japonés.
+
+
+## DMR-061 — tercera pasada V1 · PDF pp.129–138 · 2026-10-31
+
+- **Resultado:** tres controles completos por folio; cuarta revisión correctiva puntual en pp.130–134, p.135 y pp.136–138.
+- **pp.129–134:** Hestia mantiene la dogeza; Hephaistos recuerda por qué rechazó la petición y termina aceptando fabricar el arma. La deuda debe pagarse íntegra, aunque tarde décadas o siglos. Selecciona mithril y martillo carmesí y decide hacer ella misma la forja con ayuda de Hestia. En p.134 aún está resolviendo cómo equilibrar poder y crecimiento de Bell.
+- **p.135:** Bell planea volver al Dungeon y dirigirse al quinto piso con la pierna recuperada. Cree que su Estado mejoró, pero no hay cifras nuevas ni se confirma que haya entrado o combatido.
+- **pp.136–138:** Anya entrega a Bell el monedero que Seal olvidó al salir en su día libre hacia el Festival de Monstruos. Ryuu completa la explicación y habla de la domesticación en el Festival anual de Ganesha Familia. Bell acepta llevar el monedero por la Calle Principal del Este; la entrega a Seal aún no sucede.
+- **Eventos y fichas:** se amplía el evento existente de petición/forja y se reutilizan fichas de Hestia, Hephaistos, Bell, Anya, Ryuu y Seal. No se crea evento de devolución ni se transfieren datos de otras continuidades.
+- **Visual:** las diez páginas son texto continuo; sin ilustraciones, tablas o notas al pie.
+- **Checkpoint:** tercera pasada completada pp.9–138 (130 folios). Siguiente página PDF p.139; restan 18 folios. La pasada 2 pp.9–156 sigue completa; la reconciliación integral de la pasada 1 sigue pendiente. V1 permanece IN_PROGRESS; traducción privada no cotejada con japonés.

@@ -84,3 +84,12 @@ La sensación de que Bell está siendo observado en p.42 aparece antes de que la
 - **Fuente:** DMR-061-SRC-001, traducción privada, PDF pp.42–43.
 - **Límite:** no añadir observador, objeto independiente ni procedencia de la Piedra Mágica.
 
+
+
+## Información referida sobre Seal · CONT-MAIN-LN · Volumen 1 · PDF pp.136–138
+
+Bell recibe de Anya el monedero que Seal olvidó en La Señora de la Abundancia. Anya y Ryuu explican que Seal se tomó el día libre para visitar el Festival de Monstruos y salió del establecimiento sin él. Bell acepta llevarlo hasta el Coliseo por la Calle Principal del Este, pero el monedero no se devuelve a Seal dentro de pp.136–138.
+
+- **Límite de perspectiva:** la salida de Seal y el olvido del monedero son información que Anya y Ryuu cuentan a Bell; Bell no presencia el momento en que Seal sale del local.
+- **Estado del encargo:** pendiente de entrega; no fusionar con la visita de disculpa de pp.98–102.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.

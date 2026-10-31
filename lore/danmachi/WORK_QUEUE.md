@@ -1741,3 +1741,22 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - **Controles:** tres controles completos por cada página pp.119–128 (extracción, visual y continuidad); cuarta revisión puntual en p.119, pp.121–123, p.125, p.126 y p.128.
 - **Siguiente folio:** PDF p.129.
 - **Estado:** tercera pasada completada pp.9–128 (120 folios); pasada 2 pp.9–156 completada; reconciliación de pasada 1 pendiente; V1 IN_PROGRESS. Traducción privada no cotejada con japonés.
+
+
+### DMR-061 — tercera pasada V1 · PDF pp.129–138 · 2026-10-31
+
+- [x] Completar extracción folio por folio de pp.129–138: continuación de dogeza, aceptación de forja con deuda íntegra, elección de materiales y dilema de diseño; preparación de Bell; encargo del monedero de Seal y explicación de Anya/Ryuu.
+- [x] Renderizar e inspeccionar las diez páginas físicas individualmente a 130 dpi; todas son páginas de texto continuo, sin ilustraciones, tablas o notas al pie.
+- [x] Ampliar EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001 con pp.129–134, sin fusionarlo con la entrega física de pp.145–146.
+- [x] Actualizar las fichas existentes de Hephaistos y Hestia con la aceptación, la deuda íntegra y la motivación expresada por Hestia.
+- [x] Actualizar Bell con la intención de ir al quinto piso y el encargo de llevar el monedero, sin registrar una incursión ni entrega completadas.
+- [x] Confirmar Anya/Ryuu con la evidencia CONT-MAIN-LN sin trasladar datos de otras continuidades.
+- [x] Mantener el monedero como encargo abierto: Bell lo acepta, pero todavía no lo entrega a Seal.
+- [x] Mantener el relato de Anya/Ryuu sobre el día libre de Seal como información referida, no como algo presenciado por Bell.
+- [x] No crear IDs de evento/personaje/objeto ni modificar catálogo o timeline JSON.
+- [x] Aplicar cuarta revisión correctiva puntual en pp.130–134, p.135 y pp.136–138.
+- [ ] Continuar tercera pasada desde PDF p.139 hasta p.156 (18 folios).
+- [ ] Reconciliar la pasada 1 mediante matriz de cobertura por folio.
+- **Controles:** tres controles completos por página pp.129–138 (extracción, visual y continuidad); cuarta revisión puntual en pp.130–134, p.135 y pp.136–138.
+- **Siguiente folio:** PDF p.139.
+- **Estado:** tercera pasada completada pp.9–138 (130 folios); pasada 2 pp.9–156 completada; reconciliación de pasada 1 pendiente; V1 IN_PROGRESS. Traducción privada no cotejada con japonés.

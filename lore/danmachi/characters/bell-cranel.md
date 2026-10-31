@@ -258,3 +258,20 @@ La traducción española aportada es privada y no se ha cotejado con el japonés
 - **Visual:** diez páginas físicas pp.119–128 inspeccionadas individualmente a 130 dpi. p.126 es la única ilustración; no hay tablas ni notas al pie.
 - **Revisión correctiva:** p.119 para diferenciar curación percibida y estadísticas; pp.121–123 para mantener separadas observación e hipótesis; p.125 para el intervalo exacto respecto al Banquete; p.126 para no asignar identidad por apariencia; p.128 para no confundir la daga de escaparate con la Daga de Hestia.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
+
+## Tercera pasada · Volumen 1 · CONT-MAIN-LN · PDF pp.135–138
+
+- **p.135 — preparación para el Dungeon:** en la mañana del tercer día desde la salida de Hestia, Bell se dispone a volver al Dungeon. Su pierna ya está recuperada; piensa dirigirse al quinto piso como parte de su propósito de hacerse más fuerte y vengarse de los monstruos que lo pusieron en peligro. Cree que su Estado debe haber mejorado, pero no hay tabla ni cifra nueva. Considera pedir consejo a Eina. Esta página registra intención y preparación, no una incursión completada ni un combate nuevo.
+- **p.136 — encargo de Anya:** al salir, Bell pasa por La Señora de la Abundancia. Una camarera con orejas y cola de gato lo llama «Cabello Blanco» y le pide que espere. Bell la reconoce como la empleada de la taberna. Anya le explica que Seal olvidó algo y le pide que se lo lleve.
+- **p.137 — monedero y explicación de Ryuu:** Anya entrega a Bell un pequeño monedero púrpura con broche metálico y dinero dentro. Ryuu se acerca y corrige la explicación incompleta de Anya: Seal se tomó el día libre para asistir al Festival de Monstruos y olvidó el monedero en el local. Anya se avergüenza. El texto la llama Anya y a la elfa Ryuu; no se añaden apellidos ni datos de otras continuidades.
+- **pp.137–138 — Festival y domesticación:** Anya explica que el Festival de Monstruos se celebra anualmente, lo organiza Ganesha Familia y ocupa el Coliseo durante todo el día. Ryuu aclara que la domesticación depende de la aptitud/fuerza del domador y de que el monstruo llegue a obedecer; los monstruos procedentes del Dungeon son más difíciles de domesticar que las criaturas de superficie. Dice que los miembros centrales de Ganesha Familia tienen fuerza suficiente para conseguirlo. No se especifican en estas páginas especies concretas, técnicas detalladas ni el número de monstruos.
+- **p.138 — aceptación del encargo:** Anya y Ryuu explican que no asistirán al Festival porque Mia-mama no les dio permiso. Seal había dicho que compraría recuerdos y se marchó sin el monedero. Bell acepta llevarlo hasta Seal y pregunta cómo encontrarla; Ryuu le indica que siga al público por la Calle Principal del Este. Al cierre del folio Bell aún no ha entregado el monedero.
+
+### Continuidad y límites
+
+- Se reutilizan CHAR-ANYA-FROMEL, CHAR-RYUU-LION y CHAR-SEAL-FLOVER. En estas páginas se usan los nombres Anya y Ryuu; no se trasladan apellido, nivel, magia, capacidades ni afiliaciones de anime, juegos o fuentes secundarias.
+- El monedero queda como un encargo abierto. No se crea un evento de devolución, no se marca como entregado y no se reutiliza el evento de disculpa de pp.98–102.
+- La descripción del Festival amplía el contexto del evento existente. No se crea un segundo evento del Festival ni fichas de monstruos que aún no aparecen en estas páginas.
+- La intención de Bell de ir al quinto piso no demuestra que haya entrado ni que haya combatido allí en p.135.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
