@@ -67,3 +67,11 @@ Bell Cranel, Hestia y Eina Tulle
 - **Límites:** no asignar nombre al conductor ni al dios que popularizó «taxi». No inventar propina ni cambio. No crear una ubicación nominal para el callejón o cruce.
 - **Visual:** pp.147–148 son páginas de texto; sin ilustraciones, tablas ni notas al pie. Inspección individual a 130 dpi.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
+## Preludio inmediato · CONT-MAIN-LN · PDF p.149
+
+Hestia pregunta a Freya si ha visto a Bell. Tras oír la descripción del muchacho de cabello blanco y ojos rojos, Freya señala que cree haberlo visto frente a la Calle Principal del Este, en dirección al Coliseo, y le indica cómo llegar. Hestia sigue las instrucciones y encuentra a Bell al final de la página; el encuentro directo con Bell comienza en p.150.
+
+- **Continuidad:** la sonrisa de Freya desaparece brevemente cuando Hestia describe a Bell y después reaparece. El pasaje no explica su intención ni demuestra engaño o una motivación concreta.
+- **Límite:** este folio es el preludio de la reunión Bell–Hestia, no una conversación entre Bell y Freya. No se atribuye a Freya el motivo de reunirlos ni se añade una relación.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
