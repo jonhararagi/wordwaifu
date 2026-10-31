@@ -54,3 +54,4 @@ No se infieren nivel, capacidades de combate, magia, edad, historia completa, pa
 
 - DMR-061-SRC-001 · Volumen 1, PDF pp.124–127.
 - Traducción privada no cotejada con japonés; nombres y términos técnicos quedan sujetos a cotejo con el original.
+undefined
