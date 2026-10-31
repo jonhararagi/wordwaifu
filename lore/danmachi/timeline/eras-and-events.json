@@ -3414,7 +3414,7 @@
         "kind": "relative_order",
         "relation": "after",
         "referenceIds": [
-          "EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001"
+          "EVT-DM-BELL-AIS-MINOTAUR-001"
         ],
         "distanceKnown": false,
         "precision": "order_only",
