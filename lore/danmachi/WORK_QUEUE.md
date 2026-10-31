@@ -1472,3 +1472,16 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - **Pendientes que permanecen:** pasada 2 pp.91–156; pasada 3 pp.9–156; reconciliación de la pasada 1; tareas DMR-062 (pp.1–10, reglas/objetos atomizados, candidatos de monstruos y revisión de personajes). No marcar esas tareas como completadas por este bloque.
 - **Siguiente folio:** PDF p.91.
 - **Integridad de fuente:** se trabajó desde la copia PDF física. El Markdown original permanece versionado en `volumes/main/`, pero el conector no pudo devolver íntegramente su contenido de 4 MB; no se afirma un cotejo MD↔PDF en este checkpoint.
+
+### Checkpoint DMR-061 · Volumen 1, PDF pp. 91–100 · 2026-10-31
+
+- [x] Pasada 2 pp.91–100: extracción, inspección de páginas y revisión de continuidad/duplicados.
+- [x] Registrar la segunda actualización del Estado de Bell y la promesa con Hestia en un evento separado de los updates anteriores.
+- [x] Conservar discrepancia de Fuerza entre PDF p.54 (H120) y p.91 (valor anterior H123); no corregir por inferencia.
+- [x] Registrar la visita de Bell a La Señora de la Abundancia, disculpa, devolución del dinero y cesta ofrecida por Seal; no fusionarla con la cena aceptada en pp.44–45.
+- [x] Mantener sin identidad las empleadas anónimas y sin transferencia automática a CONT-MAIN-LN el perfil anime de Mia Grand.
+- [ ] Pasada 2 pp.101–156.
+- [ ] Pasada 3 pp.9–156.
+- [ ] Reconciliar pasada 1 con matriz de cobertura y localizadores.
+- [ ] Completar tareas DMR-062 (pp.1–10, reglas/objetos, candidatos de monstruos y revisión de personajes).
+- **Siguiente folio:** PDF p.101. V1 continúa IN_PROGRESS; traducción privada no cotejada con japonés.
