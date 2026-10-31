@@ -31,3 +31,10 @@ Durante el Festival de Monstruos, Freya incapacita con Encanto al personal de lo
 ## Observación posterior a la derrota del Silverback · CONT-MAIN-LN · PDF p. 200
 
 Freya observa desde la azotea de una Familia no identificada cómo Bell carga a Hestia después de la victoria. Expresa celos al verlos juntos, felicita a Bell y se retira. No identificar la Familia ni la azotea sin una fuente posterior.
+ 
+## Banquete de Ganesha · CONT-MAIN-LN · Volumen 1 · PDF pp.108–113
+
+Freya se acerca a Hestia y Hephaistos durante el Banquete. Hestia expresa que no se siente cómoda con ella; Freya responde que eso le gusta. Tras conversar con Loki y Hephaistos, Freya dice que ya confirmó lo que quería escuchar y se marcha (pp.108–113).
+
+**Límite:** el pasaje no identifica de manera exhaustiva qué información confirmó Freya ni demuestra que haya espiado una conversación concreta. No fusionar esta reunión con su posterior encuentro con Loki y Ais durante el Festival de Monstruos (pp.139–145). Fuente DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
