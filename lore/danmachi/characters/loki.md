@@ -28,3 +28,13 @@ Que Loki lo llame “Bell” requiere una decisión autoral adicional. Si Bell C
 ## Verificación pendiente
 
 Cotejar información sobre la Familia Loki y las afiliaciones por fecha. La lista es una pista de consulta, no una cronología completa.
+ 
+## CONT-MAIN-LN · Banquete de Ganesha · Volumen 1 · PDF pp.109–112
+
+Loki llega al Banquete, saluda a Hephaistos y Freya y bromea con Hestia. Habla con orgullo de los miembros de su Familia. Durante la conversación Hestia pregunta por la Princesa de la Espada; Loki identifica a Ais y afirma que es «su amada», que no permitirá que se case y que los pretendientes que se acercan han sido aplastados (pp.109–110).
+
+Estas frases se conservan como declaraciones de Loki en un diálogo de tono enfático y cómico. No prueban qué siente Ais, una relación formal, ni el destino de pretendientes concretos. El forcejeo con Hestia y la reacción de los dioses asistentes pertenecen a la misma escena; no se crean eventos separados por cada broma.
+
+- **Evento:** EVT-DM-V01-GANESHA-GOD-BANQUET-001.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
