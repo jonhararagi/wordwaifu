@@ -3,8 +3,8 @@ id: FAM-GANESHA
 universe: danmachi
 type: familia
 status: source_checked_partial
-continuity_scope: CONT-ANIME
-source_refs: ["DMR-036-SRC-002"]
+continuity_scope: CROSS-CONTINUITY
+source_refs: ["DMR-036-SRC-002", "DMR-061-SRC-001"]
 claim_refs: ["DMR-036-CLM-006","DMR-036-CLM-007"]
 verification_status: source_checked_partial
 tags: ["Ganesha Familia","Ganesha","Shakti Varma","seguridad urbana"]
