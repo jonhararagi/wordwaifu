@@ -70,3 +70,17 @@ spoiler_level: mild
 - Seal reconoce a Bell y lo recibe. Esta escena pertenece a la visita nocturna que continúa en pp.57–72; no duplica el primer encuentro de pp.42–46 ni la visita posterior para disculparse y pagar de pp.98–100.
 - **Visual:** pp.57–58 renderizadas e inspeccionadas a 130 dpi; ambas son páginas de texto sin ilustración ni nota.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
+
+## Auditoría de tercera pasada · CONT-MAIN-LN · PDF pp.59–68
+
+- **pp.59–62:** la visita nocturna continúa en el mismo evento. Bell es sentado en un rincón para que no se sienta observado; Seal reconoce que pidió a Mia que lo tratara con hospitalidad. Bell calcula haber obtenido unos 4.400 Varisu ese día. Su daga actual costó 3.600 Varisu, se compró con un préstamo del Gremio y Bell dice que ya pagó la deuda. El plato de pasta cuesta 300 Varisu. No es la Daga de Hestia.
+- **p.62:** Seal llama «Mia» a la jefa y explica que fue aventurera, que construyó el establecimiento por sí misma y que ahora permanece semiactiva en su Familia con permiso de su dios. La taberna emplea solo mujeres y recibe a personas con situaciones diversas. El pasaje no proporciona el apellido «Grand». No se traslada a CONT-MAIN-LN la ficha CHAR-MIA-GRAND, que mantiene su alcance CONT-ANIME.
+- **pp.63–64:** entra un grupo aproximado de diez miembros de la Familia Loki; Bell reconoce textualmente a Ais. La Familia celebra el regreso de una expedición. El integrante que brinda aparece de espaldas y no se identifica. Se conserva esta celebración como parte del contexto de la visita, sin evento independiente.
+- **pp.65–66:** Ais relata el ataque de Minotauros en el piso 17 y la persecución hasta el piso 5, donde ella derrota al último. Bell comprende que el novato apodado «chico tomate» era él. Es un relato posterior del rescate ya registrado en EVT-DM-BELL-AIS-MINOTAUR-001; no se crea un segundo combate.
+- **pp.67–68:** Riveria reprende a Bete por ridiculizar a Bell y recuerda que la fuga de los Minotauros fue responsabilidad de la Familia Loki. Ais considera normal que Bell tuviera miedo bajo aquellas circunstancias. El rechazo explícito de Ais se dirige a Bete; no confirma reciprocidad hacia Bell. Bell abandona el local afectado.
+- **Límites de atribución:** no identificar al miembro que pide el relato, al integrante que brinda, la voz que llama a Bell ni a la empleada que lo sigue. No atribuir esta última acción a Seal sin confirmación textual.
+- **Continuidad:** se amplía este evento existente y se mantiene su enlace al rescate original. No se crean eventos, personajes, lugares u objetos nuevos; no se fusionan la daga actual de Bell y la Daga de Hestia.
+- **Visual:** pp.59–68 renderizadas e inspeccionadas individualmente a 130 dpi; diez páginas de texto, sin ilustraciones, tablas, diagramas ni notas al pie.
+- **Revisión correctiva puntual:** p.62 para comprobar que «Mia» identifica a la jefa sin aportar apellido; pp.67–68 para limitar las respuestas de Ais y preservar las voces no identificadas.
+

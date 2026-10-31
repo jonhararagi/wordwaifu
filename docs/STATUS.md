@@ -1052,3 +1052,15 @@ Sobre SHA 4423efcfc55920b02fdf949927ae7a4033bf1033:
 - **pp.57–58:** Bell llega a La Señora de la Abundancia y Seal lo recibe. Se reutiliza la visita nocturna que continúa en pp.57–72; no se duplica el primer encuentro con Seal ni el regreso y disculpa de pp.98–100. No se asignan nombres a las trabajadoras anónimas.
 - **Registros ampliados:** evento de Kobolds y ficha MON-DM-KOBOLD-001; guía conceptual DM-GUILD-001; reglas de monstruos y Piedras Mágicas; evento de la visita de Bell a la taberna con Seal incluida en sus participantes.
 - **Checkpoint:** tercera pasada completada pp.9–58 (50 folios). Próxima página física PDF p.59. Restan pp.59–156 (98 folios) en tercera pasada. La reconciliación integral de la pasada 1 sigue pendiente. V1 permanece IN_PROGRESS; traducción privada no cotejada con japonés.
+
+
+## DMR-061 — tercera pasada V1 · PDF pp.59–68 · 2026-10-31
+
+- **Estado:** tres controles por folio completados (extracción, visual física y continuidad); revisión correctiva puntual en p.62 y pp.67–68.
+- **pp.59–62:** Bell cena en La Señora de la Abundancia. Seal revela que pidió a Mia tratarlo con hospitalidad. Bell calcula unos 4.400 Varisu de ingresos ese día; su daga actual costó 3.600 Varisu mediante préstamo del Gremio, deuda que dice haber saldado. La jefa aparece nombrada solo como «Mia» en esta continuidad; no se importa el perfil de adaptación ni el apellido Grand. Mia fue aventurera, construyó el local y permanece semiactiva en su Familia con permiso de su dios, según el diálogo.
+- **pp.63–66:** entran miembros de la Familia Loki y Ais relata el incidente de los Minotauros. El episodio del piso 17 y la persecución hasta el quinto piso son contexto retrospectivo del rescate ya registrado; no se crea un evento nuevo.
+- **pp.67–68:** Riveria reprende a Bete. Ais considera normal que Bell tuviera miedo dadas las circunstancias; no se confirma reciprocidad romántica. El rechazo explícito se refiere a Bete. Bell sale del local.
+- **Continuidad:** se amplía EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001 y se reutiliza EVT-DM-BELL-AIS-MINOTAUR-001. No se crean IDs de evento, personaje, lugar u objeto. La daga que Bell ya posee permanece separada de la Daga de Hestia. Las voces y la empleada no identificadas siguen anónimas.
+- **Visual:** diez páginas de texto inspeccionadas individualmente a 130 dpi; sin ilustraciones, tablas, diagramas ni notas al pie.
+- **Checkpoint:** tercera pasada completada pp.9–68 (60 folios). Próxima página PDF p.69; restan pp.69–156 (88 folios). La pasada 2 pp.9–156 está completada. La reconciliación de la pasada 1 sigue pendiente. V1 continúa IN_PROGRESS y DMR-061-SRC-001 no se ha cotejado con japonés.
+

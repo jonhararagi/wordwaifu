@@ -1619,3 +1619,20 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - **Controles:** tres pasadas por cada folio pp.49–58; cuarta revisión correctiva aplicada a las ambigüedades del bloque.
 - **Siguiente folio:** PDF p.59.
 - **Estado:** tercera pasada completada pp.9–58; pasada 2 pp.9–156 ya completada; reconciliación de pasada 1 pendiente; V1 IN_PROGRESS. Traducción privada no cotejada con japonés.
+
+
+### DMR-061 — tercera pasada V1 · PDF pp.59–68 · 2026-10-31
+
+- [x] Completar la extracción folio por folio de pp.59–68: cena de Bell, economía y equipo, datos expresados sobre Mia, entrada de Familia Loki, relato retrospectivo de Ais, discusión con Bete y Riveria y salida de Bell.
+- [x] Renderizar e inspeccionar las diez páginas físicas a 130 dpi; las diez son texto y no contienen ilustraciones, tablas, diagramas ni notas al pie.
+- [x] Ampliar EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001 sin crear un evento paralelo para la cena ni para el relato.
+- [x] Reutilizar EVT-DM-BELL-AIS-MINOTAUR-001 para el relato retrospectivo del rescate; no duplicar el combate.
+- [x] Mantener «Mia» como nombre textual de CONT-MAIN-LN; no trasladar el apellido, nivel o perfil de CHAR-MIA-GRAND (CONT-ANIME).
+- [x] Mantener la daga actual de Bell (3.600 Varisu, préstamo del Gremio ya saldado) separada de la Daga de Hestia.
+- [x] Conservar sin identificar al miembro que pide el relato, al integrante que brinda, la voz que llama a Bell y la empleada que lo sigue.
+- [x] Aplicar revisión correctiva puntual a p.62 y pp.67–68 para evitar atribuciones e inferencias románticas.
+- [ ] Continuar tercera pasada desde PDF p.69 hasta p.156 (88 folios).
+- [ ] Reconciliar la pasada 1 mediante matriz de cobertura por página/localizador.
+- **Controles:** tres controles completos por cada folio pp.59–68 (extracción, visual y continuidad); revisión correctiva puntual en p.62 y pp.67–68. No se cuenta una inspección parcial como página completa.
+- **Siguiente folio:** PDF p.69.
+- **Estado:** tercera pasada completada pp.9–68; pasada 2 pp.9–156 completada; reconciliación de pasada 1 pendiente; V1 IN_PROGRESS. Traducción privada no cotejada con japonés.
