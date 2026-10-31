@@ -57,3 +57,15 @@ Bell explora el cuarto piso y se enfrenta a un Dungeon Lizard y un Goblin. Esper
 - Los encuentros menores del camino de regreso no tienen recuento ni detalles suficientes para eventos individuales.
 - El vestíbulo de Babel se describe, pero no se extraen coordenadas, orientación del edificio ni un mapa completo.
 - La traducción privada no se ha cotejado con japonés.
+
+
+## Auditoría de tercera pasada · CONT-MAIN-LN · PDF pp.117–118
+
+- **p.117 — comienzo del capítulo 5:** la portadilla anterior (p.116) da paso al título traducido «La Broma de la Diosa». Bell esquiva repetidamente los ataques de un Goblin en una zona amplia y cuadrada conectada con varios pasajes estrechos. El Goblin falla varias veces; Bell concentra la atención en su movimiento de pies y rodillas y evita quedarse en una esquina.
+- **p.117 — ataque sorpresa:** un segundo monstruo salta desde la pared y Bell esquiva por poco. Lo describe como una silueta semejante a un lagarto, con piel morena seca, lengua fina y larga, boca abierta hacia los lados y cola larga; estima que su longitud total ronda su propia altura. Es una comparación aproximada desde la perspectiva de Bell, no una medida física.
+- **p.118 — identificación del Dungeon Lizard:** el texto lo identifica como monstruo trepador de pared, de bajo nivel junto a Goblins y Kobolds, cuya aparición se sitúa entre los pisos 2.º y 4.º. Puede adherirse con sus cuatro extremidades a paredes y techo; Bell espera a que aterrice para atacarlo.
+- **p.118 — golpe y estado incierto:** Bell se lanza con la daga en agarre invertido y la clava en la espalda, atravesando las escamas. El cuerpo cae sin fuerza, no se convierte en cenizas y no muestra contracción. Bell no sabe si el golpe dañó la Piedra Mágica; la causa de ese resultado continúa abierta.
+- **p.118 — mochila contra el Goblin:** el Goblin sigue activo. Bell extrae la daga del Dungeon Lizard, se quita la mochila y la lanza como proyectil; la página termina en el impacto contra el Goblin. No se registra todavía su desenlace, que continúa en p.119.
+- **Continuidad:** se amplía el evento existente EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001 y las fichas de especie ya existentes. No se crean nuevos individuos ni eventos. La indicación de p.118 sobre el rango general de pisos del Dungeon Lizard no sustituye el localizador contextual del combate fijado por la secuencia completa.
+- **Visual:** p.116 es una ilustración monocroma de página completa, con una figura de cabello oscuro y ropa clara; la identidad no se asigna. p.117 presenta el título del capítulo y texto narrativo; p.118 es texto continuo. No hay tablas ni notas al pie en pp.117–118. Las diez páginas pp.109–118 se inspeccionaron individualmente a 130 dpi.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
