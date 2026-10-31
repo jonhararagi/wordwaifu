@@ -115,3 +115,5 @@ Estos registros facilitan la siguiente tanda, pero las seis entradas de canon si
 - EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001 — Bell derrota a un Dungeon Lizard y un Goblin en el cuarto piso, recoge fragmentos de Piedra Mágica y regresa hacia Babel; ocurre dos días después del Banquete (PDF pp.117–120; ancla en p.125).
 - EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001 — Bell observa en Babel el traslado de cajas y oye conversaciones sobre la preparación del Festival de Monstruos (PDF pp.121–123).
 - EVT-DM-V01-BELL-RECEIVES-RECOVERY-POTIONS-FROM-MIACH-001 — Miach entrega a Bell dos pociones de recuperación como cortesía, dos días después del Banquete (PDF pp.124–127).
+
+- EVT-DM-V01-HESTIA-SEARCHES-BELL-AND-CARES-FOR-HIM-001 — Hestia busca a Bell durante la noche, lo recibe herido y lo cuida; Bell expresa que quiere hacerse más fuerte (PDF pp.87–90).
