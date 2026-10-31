@@ -25,7 +25,7 @@ Conteos aproximados de palabras tras excluir las cargas base64 de imágenes y el
 
 | Volumen | Archivo fuente | Palabras aprox. | Imágenes incrustadas | Estado de análisis |
 |---|---|---:|---:|---|
-| 1 | `Volumen [01] • DanMachi.md` | 63.168 | 16 | DMR-061 llega a PDF p. 214; tres pasadas documentadas para pp. 157–214, no certificadas para todo el volumen. |
+| 1 | `Volumen [01] • DanMachi.md` | 63.168 | 16 | DMR-061: pasada 2 re-auditada en pp. 9–60; tres pasadas previas conservadas para pp. 157–214; pp. 61–156 siguen pendientes de pasadas 2 y 3. PDF físico: 215 folios (p.8 blanca; p.215 créditos). V1 sigue IN_PROGRESS. |
 | 2 | `Volumen [02] • DanMachi.md` | 74.125 | 19 | DMR-060 contiene extracción parcial; falta certificar las tres pasadas completas. |
 | 3 | `Volumen [03] • DanMachi.md` | 53.883 | 21 | Fuente cargada; análisis integral pendiente. |
 | 4 | `Volumen [04] • DanMachi.md` | 64.892 | 23 | Fuente cargada; análisis integral pendiente. |
@@ -42,6 +42,16 @@ Inventario verificado sobre `main` SHA `0946ace89a29e7439fbcbe4e0d4315aec8418f62
 
 **DMR-045:** permanece abierto y no se elimina; queda después de esta prioridad operativa de extracción de los volúmenes principales, salvo nueva instrucción del usuario.
 
+
+## DMR-061 — checkpoint de tres pasadas V1 (2026-10-30)
+
+- **Integrado directamente en main:** actualización del expediente [DANMACHI-RESEARCH-061](research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md), commit a02a46ddfed7d5f53d72b83fcd65ff19ebe2ec70.
+- **Pasada 2:** relectura de detalle terminada para PDF pp.9–60. El siguiente folio es p.61.
+- **Pasada 1:** la extracción secuencial histórica de pp.9–156 permanece como evidencia de lectura previa, pero debe reconciliarse por rangos antes de certificarla bajo el estándar de tres pasadas.
+- **Pasada 3:** pp.9–156 pendientes. Las tres pasadas anteriores de pp.157–214 se conservan sin repetirlas.
+- **Visual:** inspeccionadas las 16 imágenes incrustadas del MD; renderizadas p.8 (blanca), p.19–24, p.49–54 y p.215 (créditos). Las páginas 19–21, 23–24 y 49–54 ya no son pendientes visuales.
+- **Paginación:** el PDF tiene 215 folios físicos; p.8 está en blanco y p.215 es créditos. No tratar el contador 214 del lector Files como paginación física.
+- **Límite:** traducción privada no cotejada con japonés; CONT-MAIN-LN; V1 continúa IN_PROGRESS. No afirmar CI verde: el endpoint consultado no expuso runs/checks para el SHA previo a este checkpoint.
 
 ## REGLA PERMANENTE · Registro de acuerdos de conversación
 
@@ -1405,7 +1415,7 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Crear diez fichas individuales de monstruos del Volumen 1 con referencias DMR-061-SRC-001 y localizadores PDF; ninguna ficha añade estadísticas, niveles, debilidades o habilidades ausentes.
 - [x] Añadir las fichas al índice de monstruos y al catálogo estructurado, sin modificar los eventos existentes ni duplicar especies/individuos.
 - [ ] Cotejar MD contra PDF en pp.1–10 y determinar si contienen material narrativo que falta en el dossier secuencial.
-- [ ] Completar la inspección visual pendiente de pp.19–21, 23–24 y 49–54; p.54 conserva revisión específica de la tabla de Estado.
+- [x] Inspección visual de pp.19–24 y 49–54 completada: p.22 es la única ilustración de pp.19–24; pp.49–54 son texto. La tabla de Estado p.54 se revisó junto con el snapshot extraído.
 - [ ] Atomizar solo las reglas y objetos que necesiten ficha propia: Dungeon (nacimiento/reparación/desplazamiento de monstruos), Piedras Mágicas, Falna/Estado y Daga de Hestia.
 - [ ] Revisar eventos candidatos de Frog Shooter/War Shadows y Dungeon Lizard contra el catálogo antes de asignar IDs.
 - [ ] Revisar personajes nombrados en el MD sin importar atributos de CONT-ANIME o CONT-AR.
