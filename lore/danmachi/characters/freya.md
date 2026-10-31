@@ -47,3 +47,12 @@ Freya comenta que Loki, antes de llegar al Mundo Inferior, solía luchar con otr
 - **Evento:** EVT-DM-V01-GANESHA-GOD-BANQUET-001.
 - **Límite:** no fundir este episodio con el encuentro posterior de Freya, Loki y Ais durante el Festival de Monstruos (pp.139–145).
 - **Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés.
+
+
+## Tercera pasada · Freya durante el Festival · CONT-MAIN-LN · Volumen 1 · PDF pp.139–145
+
+Freya observa la multitud desde una cafetería del segundo piso frente a la Calle Principal del Este, oculta bajo una capa azul. Durante la conversación con Loki no niega que un joven de otra Familia haya despertado su interés. Lo describe como vulnerable, pero puro y encantador. Al ver a Bell cruzar la multitud hacia el Coliseo, lo reconoce y se marcha sin dar más explicaciones.
+
+- **Evento:** EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001.
+- **Límite:** Freya reconoce a Bell, pero no se acerca ni conversa con él. No convertir su interés en una relación formal ni fusionarlo con la liberación posterior del Silverback.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
