@@ -462,11 +462,11 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - [PR #215](https://github.com/jonhararagi/wordwaifu/pull/215): DMR-061 V1 hasta PDF p.177, merge SHA `8e6fcedaeed4e6c38e6f63a7c099cc8e27ad3441`; siguiente p.178.
 - [PR #216](https://github.com/jonhararagi/wordwaifu/pull/216): segmentación DMR-060 V2 y grafo temporal dirigido, merge SHA `7de2acca6975d3700b7c5b5ca71c004211fb308e`; pre-merge y post-merge CI verdes en ambos workflows.
 - [PR #209](https://github.com/jonhararagi/wordwaifu/pull/209): `(x) SUPERSEDED BY #216`, cerrado; su snapshot divergente no se fusionó directamente. La rama histórica se conserva.
-- Estado vigente: 42 eventos temporales únicos, 215 registros activos, 30 IDs reservados, 263 relaciones. El antiguo ID combinado `EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001` está reservado como superseded y no forma parte de la cronología activa.
+- Estado vigente al integrar DMR-061 pp.111–120: 46 eventos temporales únicos, 228 registros activos, 29 IDs reservados y 263 relaciones. El antiguo ID combinado `EVT-DM-V02-SOMA-BETRAYAL-BELL-RESCUE-001` está reservado como superseded y no forma parte de la cronología activa.
 
 ### DMR-061 — cierre del archivo PDF Volumen 1 · p. 214
 
-- **Estado:** extracción secuencial de trabajo registrada hasta la última página física del PDF (p.214). No existe p.215. La traducción privada no se ha cotejado con japonés.
+- **Estado:** p.214 es el último folio narrativo; p.215 existe como hoja de créditos y p.8 está en blanco. La traducción privada no se ha cotejado con japonés.
 - **Pendientes separados:** auditoría visual de pp.19–21, 23–24 y 49–54; revisar pp.1–10 para identificar su función; resolver la descripción de los ojos de Seal y cotejar la visita/reencuentro en pp.98–102 y 203–204.
 - **Último bloque:** pp.201–214 con tres pasadas completas y cuarta correctiva en pp.203–205 y p.208. No se añaden IDs para párrafos ni personajes anónimos.
 
@@ -485,3 +485,12 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - Hestia decide usar el Banquete de Ganesha para intentar reunirse con Hephaistos (p.96); el encuentro todavía no se da por ocurrido.
 - Bell vuelve a La Señora de la Abundancia, se disculpa y paga lo adeudado; Seal lo perdona y le entrega una cesta de comida (pp.98–100). Mia-mama interviene; no se confirma romance ni se identifica a empleadas anónimas.
 - **Siguiente folio:** PDF p.101. Pasada 2 pp.101–156, pasada 3 pp.9–156 y reconciliación de pasada 1 permanecen pendientes. V1 IN_PROGRESS.
+
+## DMR-061 — actualización de pasada 2 V1 · PDF pp.101–120 (2026-10-31)
+
+- **pp.101–110:** segunda pasada completa; consejo de Mia-mama, mención sin identidad resuelta de «Ryu», descripción narrativa de Orario/Babel, Banquete de Ganesha, reencuentro Hestia–Hephaistos, llegada de Freya y Loki.
+- **pp.111–120:** segunda pasada completa con tres revisiones por folio; p.116 es ilustración de capítulo 5 sin identidad asignada. Se amplían los perfiles y fichas de lugares existentes.
+- **Eventos añadidos:** EVT-DM-V01-GANESHA-GOD-BANQUET-001 (pp.104–115) y EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001 (pp.117–120). La petición de la daga conserva su evento propio.
+- **Continuidad:** Dungeon Lizard, Goblin y Kobold reutilizan fichas existentes; no se crea otra ficha de especie. El nombre «Ryu» de p.101 no se identifica con CHAR-RYUU-LION. Loki habla de Ais en p.110; no se infiere reciprocidad.
+- **Próxima página:** PDF p.121. Siguen pendientes la pasada 2 pp.121–156, la pasada 3 pp.9–156, la reconciliación de la pasada 1 y DMR-062. V1 continúa IN_PROGRESS.
+
