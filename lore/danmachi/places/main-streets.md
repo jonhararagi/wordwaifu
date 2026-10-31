@@ -3,11 +3,11 @@ id: LOC-ORARIO-MAIN-STREETS
 universe: danmachi
 type: location
 status: source_checked_partial
-confidence: En el relato oficial Prototype se mencionan ocho grandes avenidas desde el centro, enumeradas por orientación. El detalle está verificado para esa versión, no para la novela publicada.
-continuity_scope: CONT-PROTOTYPE
-source_refs: [DMR-034-SRC-002]
+confidence: Prototype describe ocho avenidas como cuatro líneas urbanas; la novela principal también confirma ocho avenidas desde el centro hacia las murallas y las nombra por orientación (Vol.1 PDF pp.123–124). El detalle preciso del cruce de líneas sigue limitado a Prototype.
+continuity_scope: CROSS-CONTINUITY
+source_refs: [DMR-034-SRC-002, DMR-061-SRC-001]
 claim_refs: [DMR-034-CLM-002, DMR-034-CLM-004, DMR-034-CLM-005]
-tags: [Orario, main streets, avenidas principales, 北西, oeste, noroeste, CONT-PROTOTYPE]
+tags: [Orario, main streets, avenidas principales, 北西, oeste, noroeste, CONT-PROTOTYPE, CONT-MAIN-LN]
 ---
 
 # Red de avenidas principales de Orario
@@ -34,3 +34,13 @@ Estos datos describen el escenario de Prototype; sirven como preguntas bien loca
 ## Estado
 
 Ficha de infraestructura urbana con evidencia directa de Prototype. La verificación de las mismas ocho avenidas en la novela principal sigue pendiente.
+
+
+## Ocho avenidas en la novela principal · CONT-MAIN-LN · Volumen 1 · PDF pp.123–124
+
+La narración principal confirma que Orario tiene ocho avenidas principales que se extienden desde el centro hasta las murallas en ocho direcciones. Se las denomina por su orientación, con ejemplos como Calle Principal del Noreste y Calle Principal del Oeste; Bell explica que la iglesia donde vive con Hestia queda entre esas dos avenidas (p.123). Bell sitúa la sede del Gremio y su propia posición de ese momento en la Calle Principal del Noreste; Seal trabaja en un establecimiento de la Calle Principal del Oeste (p.123). La Calle Principal del Noreste concentra aventureros y negocios para ellos, mientras que los callejones reúnen otras tiendas especializadas y posadas (p.124).
+
+**Diferencia de alcance:** el Volumen 1 confirma ocho avenidas orientadas y su extensión radial desde el centro hacia las murallas. La geometría de cuatro líneas gruesas que cruzan el centro procede del texto Prototype y no se traslada a CONT-MAIN-LN. Ninguno de los dos pasajes aporta coordenadas, longitud, ancho, escala o un trazado a mapa.
+
+- Fuente: DMR-061-SRC-001, traducción privada no cotejada con japonés.
+- Localizadores: PDF pp.123–124.
