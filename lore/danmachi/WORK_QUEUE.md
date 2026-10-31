@@ -1705,3 +1705,21 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - **Siguiente folio:** PDF p.109.
 - **Estado:** tercera pasada completada pp.9–108 (100 folios); pasada 2 pp.9–156 completada; reconciliación de pasada 1 pendiente; V1 IN_PROGRESS. Traducción privada no cotejada con japonés.
 
+
+
+### DMR-061 — tercera pasada V1 · PDF pp.109–118 · 2026-10-31
+
+- [x] Completar extracción por folio de pp.109–118: llegada y salida de Loki/Freya; petición de Hestia a Hephaistos; ilustración de p.116; comienzo del combate Goblin/Dungeon Lizard.
+- [x] Renderizar e inspeccionar las diez páginas físicas individualmente a 130 dpi; p.116 es la ilustración monocroma de página completa; las demás son texto; no hay tablas ni notas al pie.
+- [x] Ampliar EVT-DM-V01-GANESHA-GOD-BANQUET-001 con pp.109–115; mantener la petición de Hestia como evento relacionado y no confundirla con su aceptación/forja posterior.
+- [x] Ampliar EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001 con p.115; no declarar aceptación anticipada.
+- [x] Ampliar EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001 con p.117–118 y confirmar las fichas existentes de Dungeon Lizard y Goblin.
+- [x] Mantener sin identificar la figura de p.116.
+- [x] Mantener las declaraciones de Loki sobre Ais y las sospechas sobre Freya atribuidas a quien las pronuncia; no elevar bromas o rumores a hechos.
+- [x] Mantener abierta la condición de la Piedra Mágica del Dungeon Lizard y el desenlace del Goblin al final de p.118.
+- [x] Aplicar cuarta revisión correctiva puntual en pp.110–113, p.115, p.116 y p.118.
+- [ ] Continuar tercera pasada desde PDF p.119 hasta p.156 (38 folios).
+- [ ] Reconciliar la pasada 1 mediante matriz de cobertura por folio.
+- **Controles:** tres controles completos por cada página pp.109–118 (extracción, visual y continuidad); cuarta revisión puntual en pp.110–113, p.115, p.116 y p.118.
+- **Siguiente folio:** PDF p.119.
+- **Estado:** tercera pasada completada pp.9–118 (110 folios); pasada 2 pp.9–156 completada; reconciliación de pasada 1 pendiente; V1 IN_PROGRESS. Traducción privada no cotejada con japonés.
