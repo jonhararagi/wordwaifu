@@ -3,11 +3,11 @@ id: CHAR-ANYA-FROMEL
 universe: danmachi
 type: character
 status: source_checked_partial
-continuity_scope: CONT-ANIME
-source_refs: ["DMR-006-SRC-001"]
+continuity_scope: CROSS-CONTINUITY
+source_refs: ["DMR-006-SRC-001", "DMR-061-SRC-001"]
 claim_refs: ["DMR-006-CLM-055","DMR-006-CLM-056","DMR-006-CLM-057"]
 verification_status: source_checked_partial
-tags: ["Anya Fromel","Anya","アーニャ・フローメル","Hostess of Fertility; antigua Freya Familia","Camarera; antigua aventurera","CONT-ANIME"]
+tags: ["Anya Fromel","Anya","アーニャ・フローメル","Hostess of Fertility; antigua Freya Familia","Camarera; antigua aventurera","CONT-ANIME", "CONT-MAIN-LN"]
 ---
 # Anya Fromel
 
@@ -67,3 +67,14 @@ Un perfil de adaptación no sustituye una biografía por escenas. Se deben cotej
 1. Localizar escenas/capítulos de novela para los hechos importantes.
 2. Separar afiliaciones y relaciones por intervalo y continuidad.
 3. Añadir capacidades y evolución solo con evidencia.
+
+
+## Aparición en la novela principal · CONT-MAIN-LN · Volumen 1 · PDF pp.136–138
+
+Bell reconoce a la empleada con orejas y cola de gato que trabaja en La Señora de la Abundancia. En p.136 ella lo llama «Cabello Blanco» y le pide que entregue a Seal un monedero que la joven olvidó en la tienda. En p.137 Ryuu la llama Anya y corrige su explicación incompleta; Anya se avergüenza. Explica que Seal utilizó su día libre para ir al Festival de Monstruos y que el monedero contiene dinero. Anya describe el Festival como una celebración anual organizada por Ganesha Familia en el Coliseo.
+
+- **Rol observado:** camarera de La Señora de la Abundancia; aparece como una mujer bestia con orejas y cola de gato.
+- **Continuidad:** CONT-MAIN-LN, DMR-061-SRC-001.
+- **Localizadores:** PDF pp.136–138.
+- **Límite:** estas páginas no aportan apellido, nivel, magia, capacidades, parentesco ni antecedentes. Los datos de CONT-ANIME y CONT-SECONDARY permanecen separados; el texto aquí solo la llama Anya.
+- **Encargo abierto:** Bell acepta llevar el monedero a Seal por la Calle Principal del Este, pero la entrega no sucede dentro de estas páginas.
