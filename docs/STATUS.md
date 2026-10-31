@@ -973,3 +973,19 @@ En `main` se activaron cuatro expedientes secundarios de Hestia Familia que esta
 - **Cobertura:** queda completada la pasada 2 de pp.9–156. Las pp.157–214 conservan las tres pasadas anteriores ya documentadas.
 - **Siguiente fase:** pasada 3 integral de pp.9–156, empezando en p.9, más reconciliación de la pasada 1 con matriz de cobertura. DMR-062 mantiene sus tareas independientes. V1 continúa IN_PROGRESS.
 - **Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés. PDF físico de 215 folios: p.8 blanca, p.214 último folio narrativo, p.215 créditos.
+
+
+## DMR-061 — cierre de segunda pasada y reparación de catálogo · CI post-commit (2026-10-31)
+
+- **Integración en main:** commit 090f15bb55cd49105f77fea39143b28daec95176 cerró la segunda pasada de pp.151–156, sincronizó la cola y añadió al catálogo dos eventos preexistentes que ya estaban en la cronología y tenían archivos Markdown. No se crearon acontecimientos nuevos.
+- **Métricas:** commit d698c1907f5a1114adc95919b8355fd8505fd11a sincronizó el bloque generado de métricas con el catálogo, que pasó a 233 registros.
+- **CI post-commit sobre SHA exacto d698c1907f5a1114adc95919b8355fd8505fd11a:** Validate WordWaifu #3851 y DanMachi Lore and Retrieval Integrity #2229, ambos success. Pasaron validación temporal y enlaces de eventos, métricas generadas, pruebas de catálogo/retrieval y smoke test de navegador.
+- Los fallos de los intentos anteriores no se ocultan: el primero detectó dos registros ausentes del catálogo; tras repararlos, el segundo detectó métricas desactualizadas. Ambos problemas se corrigieron y los dos workflows pasaron sobre el SHA indicado.
+
+## DMR-061 — tercera pasada V1 · PDF pp.9–18 (2026-10-31)
+
+- **Resultado:** tres controles por folio completados: contraste de extracción, inspección visual del PDF físico y auditoría de continuidad/duplicados. Revisión correctiva específica en p.18 por ambigüedad de la traducción.
+- **Visual:** p.12 ilustración del rescate; p.15 portadilla ilustrada del capítulo 1; restantes páginas del bloque son texto. No hay tablas de Estado.
+- **Hallazgos:** Bell formula su fantasía heroica inicial; el rescate identifica textualmente a Aizu Wallenstein (nivel 5, Loki Familia); p.16 describe a Eina como mezcla de humana y elfa y recuerda a Bell con 14 años en su registro; p.18 recoge su consejo de seguridad.
+- **Continuidad:** se amplían fichas/eventos existentes. La frase sobre el piso habitual del Minotauro permanece abierta; no se inventa una técnica de corte ni reciprocidad de Ais.
+- **Siguiente folio:** PDF p.19. La tercera pasada de pp.19–156 y la reconciliación de la pasada 1 siguen pendientes. V1 continúa IN_PROGRESS.

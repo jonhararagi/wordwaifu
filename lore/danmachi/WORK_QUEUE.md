@@ -1539,3 +1539,16 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [ ] Completar las tareas independientes DMR-062 (pp.1–10, atomización selectiva de reglas/objetos, candidatos de monstruos y auditoría de personajes).
 - **Rango ya cubierto en el estándar previo:** pp.157–214 conservan las tres pasadas completas documentadas; no se repiten ni se contabilizan de nuevo.
 - **Siguiente fase:** pasada 3, PDF p.9. V1 continúa IN_PROGRESS y la traducción privada DMR-061-SRC-001 no está cotejada con japonés.
+
+
+### DMR-061 — tercera pasada V1 · PDF pp.9–18 · 2026-10-31
+
+- [x] Contrastar pp.9–18 con el evento existente del rescate, el expediente de asesoramiento, las fichas de Bell/Ais/Eina y la ficha de Minotauro.
+- [x] Inspeccionar las diez páginas físicas a 130 dpi: pp.9–11, 13–14 y 16–18 texto; p.12 ilustración del rescate; p.15 portadilla ilustrada del capítulo 1.
+- [x] Ampliar fichas existentes con los datos directamente expresados: Bell (fantasía inicial y edad recordada); Ais (nivel 5 y descripción de p.13); Eina (mezcla humana/elfa y descripción de p.16).
+- [x] Mantener sin resolver la formulación de p.18 sobre el piso habitual del Minotauro y conservar «Aizu» como variante de la traducción.
+- [x] No crear IDs ni relaciones duplicadas; reutilizar EVT-DM-BELL-AIS-MINOTAUR-001, EVT-DM-EINA-ADVISOR-001 y MON-DM-MINOTAUR-001.
+- [ ] Continuar la tercera pasada desde PDF p.19 hasta p.156.
+- [ ] Reconciliar la pasada 1 por página/rango; no elevar las notas secuenciales históricas a cobertura completa sin cotejo.
+- **Controles:** tres controles completos por folio; revisión correctiva adicional centrada en p.18. No se declara terminado V1.
+- **Siguiente folio:** PDF p.19.

@@ -188,3 +188,14 @@ La traducción española aportada es privada y no se ha cotejado con el japonés
 - **Freya, Loki y Ais (pp.139–140):** Bell no participa en la conversación de la cafetería; Freya observa la calle, y Loki llega con Ais. No se afirma que Bell vea a ninguna de ellas.
 
 **Eventos:** el encargo de Seal queda abierto y sin evento independiente de entrega hasta localizar la devolución del monedero. La reunión Freya–Loki–Ais se conserva en EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001.
+
+
+## CONT-MAIN-LN · apertura del Volumen 1 · PDF pp.9–18
+
+- **Aspiración inicial (p.9):** Bell fantasea con ser un héroe, rescatar a una chica y conocer mujeres de distintas razas; menciona la posibilidad de celos y un harén. El narrador lo presenta como una fantasía inmadura propia de un joven que admira relatos heroicos. No convertirla en una caracterización total ni en un objetivo estable fuera de este pasaje.
+- **Crisis (pp.10–11):** Bell es nivel 1 cuando desciende del segundo al quinto piso y queda acorralado por un Minotauro. Teme morir y queda cubierto de sangre después de que el monstruo es despedazado. No se atribuye el corte a una skill o técnica nombrada.
+- **Reacción ante Ais (pp.13–14):** tras ver a quien lo salva, Bell queda prendado de Ais y decide que no estaba equivocado al desear un encuentro en el Dungeon. Esta es su reacción unilateral; no acredita reciprocidad.
+- **Edad en la escena del Gremio (p.16):** Eina recuerda que Bell tenía 14 años cuando hizo los trámites de aventurero, casi dos semanas antes de la consulta narrada. No trasladar esa edad a otros volúmenes ni fijar fecha absoluta.
+- **Ruta de historia:** Ais rescata a Bell del Minotauro (EVT-DM-BELL-AIS-MINOTAUR-001). La conversación con Eina forma parte del expediente de asesoramiento existente EVT-DM-EINA-ADVISOR-001.
+
+**Fuente:** DMR-061-SRC-001, traducción privada del Volumen 1 no cotejada con japonés. Localizadores físicos PDF pp.9–18.

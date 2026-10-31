@@ -70,3 +70,14 @@ Bell ve a Eina dentro de Babel, en la zona de la sede del Gremio. La describe co
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
 - **Localizadores:** PDF pp.122–123.
 - **Límite:** la conversación es observada a distancia; no se conoce el contenido completo ni se crea una interacción directa Bell–Eina nueva.
+
+
+## CONT-MAIN-LN · primera consulta de Bell · Volumen 1 · PDF pp.16–18
+
+La novela describe a Eina como asesora del Gremio, con orejas puntiagudas, ojos verde esmeralda, cabello castaño hasta los hombros y uniforme de chaleco negro y pantalones. El texto dice que es una mezcla de humana y elfa (p.16). Recuerda que conoció a Bell cuando hizo sus trámites de aventurero casi dos semanas antes; en ese recuerdo Bell tenía 14 años. Eina se alivia al verlo regresar vivo, pues es el joven al que asesora.
+
+En la consulta, Bell llega todavía cubierto de sangre negra y pide datos sobre Ais (p.16). Eina lo reprende por no ducharse antes de ir al Gremio y escucha su relato de la persecución y el rescate (p.17). Le transmite su máxima sobre priorizar preparación y seguridad; considera anómalo que un Minotauro de nivel 2 aparezca en el quinto piso (p.18).
+
+- **Variación descriptiva:** p.16 describe el cabello hasta los hombros; la observación de pp.122–123 lo llama corto. Se mantienen ambos localizadores sin forzar una contradicción.
+- **Evento existente:** EVT-DM-EINA-ADVISOR-001; no se crea otro evento para esta consulta.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.

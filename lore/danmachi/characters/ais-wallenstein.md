@@ -59,3 +59,17 @@ No se asigna fecha absoluta ni se afirma que Ais conozca toda la secuencia del p
 Ais combate sola contra Udaeus en el piso 37 (PDF pp. 106–111). El texto dice que una semana después se extendió por Orario el rumor de que había alcanzado nivel 6; este dato es un rumor narrado, no una ficha de Estado ni una confirmación independiente. En el epílogo del volumen, busca a Bell en el piso 10 y encuentra su Protector de Jade, desgastado por el Dungeon (pp. 242–243).
 
 **Procedencia:** traducción privada aportada, no cotejada con japonés; no convertir el rumor en hecho confirmado.
+
+
+## CONT-MAIN-LN · primera aparición · Volumen 1 · PDF pp.12–14
+
+La narración identifica en p.13 a «Aizu Wallenstein» como la Princesa de la Espada, aventurera de nivel 5 y miembro destacada de Loki Familia. Describe cabello rubio, ojos dorados y armadura ligera azul. La ilustración de p.12 muestra a una mujer armada, pero carece de rótulo nominal; su identificación se apoya en la continuidad textual de p.13. Bell queda prendado de ella en esa primera impresión (pp.13–14). No se infiere reciprocidad ni se crea una relación romántica confirmada.
+
+- **Evento:** EVT-DM-BELL-AIS-MINOTAUR-001.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+- **Límite temporal:** el nivel 5 corresponde a la escena inicial del volumen 1; no se proyecta automáticamente a otros momentos.
+- **Variante textual:** la fuente escribe «Aizu»; se conserva como variante de esa traducción, no como identidad o entidad separada.
+
+## Control visual · Volumen 1 · PDF p.15
+
+La p.15 es una portadilla ilustrada del capítulo 1. No contiene una escena narrativa ni un rótulo que permita identificar a la figura representada. No se asigna una identidad a partir de su apariencia.

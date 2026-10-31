@@ -856,3 +856,41 @@ La actualización de pp.91–96 es distinta de la actualización tras el Minotau
 **Control visual:** pp.151–153 y pp.155–156 son páginas de texto; p.154 es la única ilustración a página completa del bloque y se inspeccionó ampliada. No se observan tablas de Estado ni fichas estadísticas gráficas. No se necesita cuarta revisión correctiva.
 
 **Cierre de pasada 2:** con pp.151–156 queda cubierta la pasada 2 de todo el rango PDF pp.9–156. Las pp.157–214 mantienen las tres pasadas previamente documentadas; no se reabren ni se cuentan como trabajo nuevo. La próxima fase es la pasada 3 integral de pp.9–156, empezando por PDF p.9, y la reconciliación de la pasada 1 mediante matriz de cobertura. V1 permanece IN_PROGRESS; DMR-061-SRC-001 sigue siendo una traducción privada no cotejada con japonés.
+
+
+## DMR-061 — tercera pasada V1, PDF pp. 9–18 (2026-10-31)
+
+**Resultado:** tercera pasada completada para pp.9–18. Cada folio recibió extracción/contraste de contenido, inspección visual del PDF físico a 130 dpi y auditoría contra el corpus existente. La revisión correctiva adicional se aplicó a p.18 por la ambigüedad en la traducción sobre el piso habitual del Minotauro; el sentido no se fuerza ni se resuelve por conocimiento externo. Fuente: DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
+### Verificación de omisiones por folio
+
+- **p.9 — prólogo y motivación inicial:** Bell imagina una carrera heroica, rescatar a una chica y formar vínculos con mujeres de distintas razas; también fantasea con celos y un harén. El narrador presenta esas ideas como pensamientos inmaduros de un joven que creció admirando aventuras heroicas. Se conserva como fantasía inicial y tono cómico, no como una descripción exhaustiva o inmutable de su personalidad.
+- **p.10 — persecución:** Bell recuerda que es nivel 1, que descendió desde el segundo piso y que el Minotauro lo persigue hasta dejarlo ante un callejón sin salida. Cree que va a morir y lamenta haber perseguido una fantasía superficial. No se añaden técnicas, estadísticas o equipo.
+- **p.11 — rescate:** Bell queda contra la pared, aterrado y sin salida. Una línea atraviesa el cuerpo del Minotauro y lo despedaza; Bell ve un destello plateado y queda cubierto de sangre. El texto no nombra una habilidad, técnica, arma concreta ni el mecanismo de ese corte.
+- **p.12 — ilustración del rescate:** página ilustrada completa con una mujer armada y una figura oscura. La imagen no contiene rótulo nominal; la identificación de la mujer como Ais se apoya en el texto de p.13, no en la apariencia aislada.
+- **p.13 — identificación textual de Ais:** la narración nombra a «Aizu Wallenstein», Princesa de la Espada, aventurera de nivel 5 y miembro destacada de Loki Familia. Describe cabello rubio, ojos dorados y armadura ligera azul. Bell queda profundamente impactado y dice que ella le roba el corazón. Esto acredita la reacción de Bell, no reciprocidad.
+- **p.14 — reafirmación de Bell:** Bell vuelve a preguntarse si estaba equivocado al desear un encuentro en el Dungeon y concluye que no. Es una reacción subjetiva a haber sido rescatado; no convierte la fantasía del prólogo en un plan estable ni demuestra que Ais lo conozca o corresponda.
+- **p.15 — portadilla del capítulo 1:** ilustración de apertura con texto japonés del capítulo. No contiene una escena narrativa ni rótulo que permita asignar identidad a la figura representada.
+- **p.16 — Eina y el Gremio:** Eina Tulle trabaja como asesora del Gremio. La descripción la presenta con orejas puntiagudas, ojos verde esmeralda, cabello castaño hasta los hombros y uniforme del Gremio (chaleco negro y pantalones); el texto dice que es una mezcla de humana y elfa. Recuerda que conoció a Bell durante sus trámites de aventurero «hace casi dos semanas», cuando él tenía 14 años; se alivia al comprobar que sigue vivo. Bell aparece cubierto de sangre negra y pide información sobre Ais.
+- **p.17 — consulta privada:** Bell y Eina conversan en una sala separada dentro del Gremio. Eina le reprocha haber llegado directamente desde el Dungeon con sangre y mal olor sin ducharse. Bell cuenta el descenso al quinto piso, la persecución del Minotauro y que huyó avergonzado antes de agradecer a Ais cuando ella le tendió la mano.
+- **p.18 — regla de seguridad y anomalía:** Eina formula «Los aventureros no deben ir a la aventura» y explica que significa prepararse, actuar con cuidado y priorizar la seguridad. Considera extraordinario que Bell encuentre un Minotauro de nivel 2 en el quinto piso. La traducción dice que ese monstruo debería aparecer en el «decimoquinto piso o por debajo», pero la dirección es ambigua; se mantiene sin normalizar. Bell piensa que habría muerto sin Ais, promete recordar el consejo y reconoce internamente que entró por la fantasía de encontrarse con chicas, aunque ahora quiere volver a encontrar a Ais. Eina empieza a compartir solo información que considera pública.
+
+### Auditoría de continuidad, atribución y duplicados
+
+- **Rescate:** todo el material de pp.9–14 sigue dentro de EVT-DM-BELL-AIS-MINOTAUR-001. No se crea otro evento para la fantasía heroica, la muerte del Minotauro, la ilustración o la reacción de Bell.
+- **Asesoramiento:** pp.16–18 amplían el expediente existente EVT-DM-EINA-ADVISOR-001. El relato de Bell a Eina no se convierte en un segundo rescate ni en una nueva consulta independiente.
+- **Entidades:** se reutilizan DM-CHAR-BELL, DM-CHAR-AIS, DM-CHAR-EINA y MON-DM-MINOTAUR-001. No se crea una Ais separada por la grafía «Aizu», un Minotauro individual adicional ni un nuevo personaje por la ilustración de p.15.
+- **Niveles y afirmaciones:** nivel 1 de Bell en la apertura, nivel 2 del Minotauro según Eina y nivel 5 de Ais según la narración. No se extrapolan niveles a otros momentos.
+- **Atribuciones:** el deseo de conocer a Ais y la reacción amorosa pertenecen a Bell; no se infiere reciprocidad. La evaluación del peligro y el consejo de seguridad pertenecen a Eina.
+- **Discrepancia abierta:** la frase de p.18 sobre el piso habitual del Minotauro sigue siendo ambigua en esta traducción. La mención posterior del relato de Loki Familia en pp.63–66 no se usa para reescribir silenciosamente lo que Bell y Eina entienden en p.18.
+- **Descripción de Eina:** p.16 dice cabello hasta los hombros; la observación posterior de pp.122–123 lo describe como corto. Se conservan ambos localizadores sin crear una contradicción biográfica ni imponer una descripción única.
+- **Traducción:** «Aizu» y las formulaciones dudosas se conservan como lectura de la fuente privada; no se corrigen mediante romanización externa.
+
+### Control visual
+
+- **Páginas de texto:** pp.9–11, 13–14 y 16–18.
+- **Ilustraciones:** p.12, escena visual del rescate; p.15, portadilla ilustrada del capítulo 1.
+- **Tablas/fichas:** no aparecen tablas de Estado ni fichas estadísticas gráficas en pp.9–18.
+- **Resolución:** las páginas se renderizaron a 130 dpi e inspeccionaron individualmente y en hoja de contactos. No se asignó identidad visual a la figura de p.15.
+
+**Siguiente folio de tercera pasada:** PDF p.19. La tercera pasada integral de pp.19–156 y la reconciliación global de la pasada 1 siguen pendientes; V1 permanece IN_PROGRESS. Las pp.157–214 conservan sus tres pasadas documentadas. La traducción privada sigue sin cotejo con japonés.
