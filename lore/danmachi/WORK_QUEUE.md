@@ -1760,3 +1760,19 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - **Controles:** tres controles completos por página pp.129–138 (extracción, visual y continuidad); cuarta revisión puntual en pp.130–134, p.135 y pp.136–138.
 - **Siguiente folio:** PDF p.139.
 - **Estado:** tercera pasada completada pp.9–138 (130 folios); pasada 2 pp.9–156 completada; reconciliación de pasada 1 pendiente; V1 IN_PROGRESS. Traducción privada no cotejada con japonés.
+
+
+### DMR-061 — tercera pasada V1 · PDF pp.139–148 · 2026-10-31
+
+- [x] Extraer narración y diálogos de pp.139–148 diferenciando voces, inferencias y acciones presenciadas.
+- [x] Renderizar e inspeccionar individualmente las diez páginas físicas a 130 dpi; todas son texto, sin ilustraciones, tablas ni notas al pie.
+- [x] Ampliar el encuentro existente Freya/Loki/Ais (pp.139–145), la entrega física de la daga (pp.145–146) y el evento Bell/Hestia en el Festival con el preámbulo pp.147–148.
+- [x] Actualizar las fichas de Freya, Loki, Ais, Hestia y Hephaistos bajo CONT-MAIN-LN.
+- [x] Mantener separadas las inferencias de Loki, el reconocimiento de Bell por Freya y la mirada de Ais; no hay interacción Ais–Bell.
+- [x] Registrar la deuda como vigente y la tarifa del carruaje como 90 Varisu exactos.
+- [x] No cerrar el monedero de Seal ni crear IDs nuevos; catálogo y timeline JSON sin cambios.
+- [x] Aplicar cuarta revisión correctiva puntual en pp.142–145 y p.148.
+- [ ] Continuar tercera pasada desde PDF p.149 hasta p.156 (8 folios).
+- [ ] Reconciliar pasada 1 mediante matriz de cobertura por folio.
+- **Siguiente folio:** PDF p.149.
+- **Estado:** tercera pasada completada pp.9–148 (140 folios); pasada 2 pp.9–156 completada; reconciliación de pasada 1 pendiente; V1 IN_PROGRESS. Traducción privada no cotejada con japonés.

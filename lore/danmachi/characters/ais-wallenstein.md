@@ -83,3 +83,12 @@ Eina comunica a Bell que Ais ha derrotado sola a un grupo de monstruos de nivel 
 - **Reacción:** Bell admite que se enamoró de Ais; esto no acredita reciprocidad.
 - **Ilustración:** p.22 muestra a una mujer en uniforme del Gremio dentro de la secuencia de la conversación de Eina. Se contextualiza como Eina por la narración circundante, sin asignarle hechos nuevos por su aspecto.
 
+
+
+## Tercera pasada · Ais durante el Festival · CONT-MAIN-LN · Volumen 1 · PDF pp.140–145
+
+Ais acompaña a Loki a la cafetería donde se reúne con Freya. Saluda brevemente, se sienta junto a Loki y acepta que esta le acaricie la cabeza después de recomendarle descansar tras la Expedición. Al final de p.145 observa desde la ventana y sigue con la mirada el familiar cabello blanco de Bell cuando Freya lo ve en la calle.
+
+- **Evento:** EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001.
+- **Límite:** Ais no habla con Bell ni se le acerca en estas páginas. No inferir reciprocidad, relación romántica ni reconocimiento verbal.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.

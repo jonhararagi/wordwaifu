@@ -48,3 +48,12 @@ La conversación continúa con la llegada de Loki. Hestia pregunta por Ais; Loki
 - **Evento:** EVT-DM-V01-GANESHA-GOD-BANQUET-001.
 - **Límite:** no convertir las bromas, el forcejeo o las afirmaciones de Loki sobre Ais en una relación formal ni en conflictos duraderos.
 - **Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés.
+
+
+## Tercera pasada · Loki y Ais durante el Festival · CONT-MAIN-LN · Volumen 1 · PDF pp.140–145
+
+Loki llega a la cafetería con Ais y la presenta ante Freya. Dice que Ais acaba de terminar una Expedición y que quiso volver inmediatamente al Dungeon; le pide que descanse y le acaricia la cabeza. Ais acepta el gesto. Después de que Freya ve a Bell y se marcha, Ais sigue por la ventana el familiar cabello blanco.
+
+- **Evento:** EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001.
+- **Límite:** se registra cercanía protectora, sin inferir romance ni dependencia. La mirada a Bell no acredita reconocimiento consciente, diálogo ni encuentro.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.

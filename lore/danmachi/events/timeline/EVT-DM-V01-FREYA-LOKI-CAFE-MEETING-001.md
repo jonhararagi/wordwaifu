@@ -54,3 +54,17 @@ Freya espera en una cafetería y se reúne con Loki, que llega acompañada de Ai
 - La fascinación descrita por Freya no se convierte en una relación romántica establecida.
 - La cercanía de Loki con Ais se describe como protectora en esta escena, sin inferir otro tipo de vínculo.
 - La traducción privada no se cotejó con el japonés.
+
+
+## Tercera pasada · CONT-MAIN-LN · PDF pp.139–145
+
+- **p.139:** la Calle Principal del Este aparece llena de público y banderas del Festival. Freya observa desde el segundo piso de una cafetería sin nombre frente a la avenida, oculta bajo una capa azul; su Belleza sigue atrayendo la atención de los clientes.
+- **p.140:** Loki llega acompañada de Ais. Bromea sobre haberse emborrachado y desmayado después del Banquete; cuenta que sus miembros se preocuparon por ella. Presenta a Ais ante Freya. La escena ocurre unos días después del Banquete, sin fecha absoluta.
+- **p.141:** Loki pide a Ais que descanse después de la Expedición y le acaricia suavemente la cabeza; Ais acepta el gesto. Freya interpreta el comportamiento de Loki como un cambio afectuoso.
+- **p.142–143:** Loki confronta a Freya por asistir al Banquete y reunir información. Deduce que se ha encaprichado de un joven de otra Familia y advierte del conflicto que podría surgir si intenta arrebatárselo a otro dios. Son sospechas y razonamientos de Loki, no conocimiento omnisciente.
+- **p.144:** Freya describe al joven como vulnerable y propenso a llorar, pero puro, encantador y con un brillo inusual. Al mirar a la calle reconoce a Bell, de cabello blanco y equipo estándar, que camina hacia el Coliseo; decide marcharse.
+- **p.145:** Freya deja la cafetería y Loki queda sorprendida. Ais también mira hacia la calle y sigue con los ojos el familiar cabello blanco de Bell. No hay diálogo, contacto ni encuentro directo Ais–Bell.
+- **Continuidad:** se amplía EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001. No se crea otro evento para la llegada, conversación, salida o mirada. Se mantiene separado de la liberación posterior del Silverback y del encuentro Bell–Hestia.
+- **Límites:** la cafetería no tiene nombre. El interés de Freya no acredita una relación formal con Bell; la mirada de Ais no demuestra conversación ni reciprocidad. La información sobre la borrachera y los planes procede de diálogos y sospechas de los personajes.
+- **Visual:** pp.139–145 son texto continuo; sin ilustraciones, tablas ni notas al pie. Inspección individual a 130 dpi.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
