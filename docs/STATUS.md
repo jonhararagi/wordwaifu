@@ -1039,3 +1039,16 @@ Sobre SHA 4423efcfc55920b02fdf949927ae7a4033bf1033:
 
 - [Validate WordWaifu #3854](https://github.com/jonhararagi/wordwaifu/actions/runs/41186194780): success.
 - [DanMachi Lore and Retrieval Integrity #2232](https://github.com/jonhararagi/wordwaifu/actions/runs/41186194814): success.
+
+
+## DMR-061 — tercera pasada V1 · PDF pp.49–58 · 2026-10-31
+
+- **Estado:** tres pasadas completas por cada folio (extracción, visual y continuidad); cuarta revisión correctiva puntual en pp.49–58 por ambigüedad de bajas, alcance de reglas, conocimiento de Bell, actualización de Estado e identidad de personal.
+- **Visual:** pp.49–58 renderizadas e inspeccionadas individualmente a 130 dpi. Las diez son páginas de texto; p.54 contiene la tabla de Estado, cuyos valores coinciden con la extracción. No se observan ilustraciones ni notas al pie en el bloque.
+- **pp.49–51:** termina la lucha de Kobolds; Bell relata que no tiene heridas y adopta una estrategia de menor riesgo. Recupera Fragmentos de Piedra Mágica y una garra como botín. La cifra final de bajas permanece ambigua.
+- **pp.52–53:** se registran explicaciones sobre el Dungeon y la gestión por la Guild, con separación expresa entre narración, información oída e hipótesis de Bell. Bell derrota a un Goblin y recoge un diente; su teoría sobre monstruos fuera de Orario y reproducción no se eleva a regla.
+- **p.54:** tabla: Fuerza I82→H120; Resistencia I13→I42; Destreza I96→H139; Agilidad H172→G225; Magia I0. Se reutiliza el evento de segunda actualización del Estado. La discrepancia H120 (p.54) / H123 (valor anterior en p.91) continúa abierta.
+- **pp.55–56:** Bell no comprende el incremento de Resistencia; Hestia no revela la causa. Su mención de una fiesta en el trabajo no se identifica con el Banquete de Ganesha.
+- **pp.57–58:** Bell llega a La Señora de la Abundancia y Seal lo recibe. Se reutiliza la visita nocturna que continúa en pp.57–72; no se duplica el primer encuentro con Seal ni el regreso y disculpa de pp.98–100. No se asignan nombres a las trabajadoras anónimas.
+- **Registros ampliados:** evento de Kobolds y ficha MON-DM-KOBOLD-001; guía conceptual DM-GUILD-001; reglas de monstruos y Piedras Mágicas; evento de la visita de Bell a la taberna con Seal incluida en sus participantes.
+- **Checkpoint:** tercera pasada completada pp.9–58 (50 folios). Próxima página física PDF p.59. Restan pp.59–156 (98 folios) en tercera pasada. La reconciliación integral de la pasada 1 sigue pendiente. V1 permanece IN_PROGRESS; traducción privada no cotejada con japonés.
