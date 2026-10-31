@@ -43,4 +43,12 @@ El episodio 26 añade que, en Prototype, los locales comerciales llegan hasta el
 La narración describe Babel como la torre dominante situada en el centro de Orario y construida directamente sobre el Dungeon (p.103). Durante el regreso de Bell desde el cuarto piso, el personaje llega a uno de sus espacios subterráneos: un gran vestíbulo con un espacio central, columnas, mobiliario y nombres de aventureros grabados en placas de roca negra (p.120).
 
 **Límites:** el pasaje no identifica la planta exacta, dimensiones, orientación, acceso administrativo ni relación detallada entre el vestíbulo y otras áreas de Babel. No se infieren coordenadas ni una cartografía interior. Fuente DMR-061-SRC-001, traducción privada no cotejada con japonés.
+ 
+## CONT-MAIN-LN · Babel como cubierta del Dungeon y sede del Gremio · Volumen 1 · PDF pp.121–123
+
+Bell recuerda que Babel funciona como la «Cubierta» del Dungeon. La narración explica que en la Era Antigua los monstruos podían alcanzar la superficie y causar destrucción, y que Babel fue construida para impedir que escaparan. El Gremio utiliza la instalación como base para vigilar y gestionar el Dungeon (pp.121–122).
+
+Bell llega al vestíbulo subterráneo y ve aventureros, Partidarios y cajas de transporte. Más tarde se ducha y entrega botín y Piedras Mágicas en la sede del Gremio; Eina está trabajando en otra conversación y Bell no la interrumpe (pp.121–123).
+
+**Límites:** el texto no detalla la planta interior, la altura de los pisos del edificio, la ubicación exacta de oficinas o el mapa de conexiones. La función de «cubierta» y la razón histórica se registran bajo CONT-MAIN-LN sin ampliar los datos de adaptación o Prototype.
 
