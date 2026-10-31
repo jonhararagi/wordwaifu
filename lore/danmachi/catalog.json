@@ -3333,6 +3333,34 @@
       ],
       "status": "source_checked_translation_unverified",
       "priority": "high"
+    },
+    {
+      "id": "CHAR-MIACH",
+      "path": "characters/miach.md",
+      "type": "deity_character",
+      "tags": [
+        "Miach",
+        "Miach Familia",
+        "pociones",
+        "CONT-MAIN-LN"
+      ],
+      "status": "provisional",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-V01-BELL-RECEIVES-RECOVERY-POTIONS-FROM-MIACH-001",
+      "path": "events/timeline/EVT-DM-V01-BELL-RECEIVES-RECOVERY-POTIONS-FROM-MIACH-001.md",
+      "type": "event",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "Volumen 1",
+        "Bell",
+        "Miach",
+        "pociones de recuperación"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "high"
     }
   ],
   "reservedIds": [
@@ -3344,11 +3372,6 @@
     {
       "id": "CHAR-ZARD",
       "type": "character",
-      "status": "candidate_not_created"
-    },
-    {
-      "id": "CHAR-MIACH",
-      "type": "deity_character",
       "status": "candidate_not_created"
     },
     {
