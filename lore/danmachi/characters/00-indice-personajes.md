@@ -91,6 +91,7 @@ Consulta el [índice narrativo de la Era Oscura](dark-era/00-indice-era-oscura.m
 | Maxim | `CHAR-MAXIM` | Personaje | `secondary_reference_primary_locator_pending` | [Abrir](maxim.md) |
 | Meteria | `CHAR-METERIA` | Personaje | `secondary_reference_primary_locator_pending` | [Abrir](dark-era/meteria.md) |
 | Mia Grand | `CHAR-MIA-GRAND` | Personaje | `source_checked_partial` | [Abrir](miagrand.md) |
+| Miach | `CHAR-MIACH` | Deidad | `provisional` | [Abrir](miach.md) |
 | Mikoto Yamato | `CHAR-MIKOTO-YAMATO` | Personaje | `provisional` | [Abrir](mikoto-yamato.md) |
 | Neze Rankett | `CHAR-NEZE-RANKETT` | Personaje | `provisional` | [Abrir](neze-rankett.md) |
 | Nina Tulle | `CHAR-NINA-TULLE` | Personaje | `secondary_reference_partial_primary_check_pending` | [Abrir](nina-tulle.md) |
@@ -147,7 +148,7 @@ El roster reportado de Nueva Astrea y la conexión de Rudra/Jura con la crisis d
 | `CHAR-DEMETER` | candidate_not_created |
 | `CHAR-DIAN-CECHT` | candidate_not_created |
 | `CHAR-HEPHAISTOS` | created — [ficha](hephaistos.md) |
-| `CHAR-MIACH` | candidate_not_created |
+| `CHAR-MIACH` | created — [ficha](miach.md) |
 | `CHAR-TAKEMIKAZUCHI` | candidate_not_created |
 | `CHAR-ZARD` | candidate_not_created |
 | `FAM-ASTREA` | candidate_not_created |
