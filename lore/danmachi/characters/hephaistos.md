@@ -65,3 +65,14 @@ En p.129 la narración cambia al interior de una sucursal de Hephaistos Familia 
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
 - **Eventos:** EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001; la entrega física sigue separada en EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001.
 
+
+
+## Diseño de la daga de Bell · CONT-MAIN-LN · Volumen 1 · PDF pp.131–134
+
+Al aceptar la petición, Hephaistos elige un martillo carmesí y mithril y decide forjar personalmente el arma como un asunto privado entre ella y Hestia (pp.132–133). Explica que los dioses no pueden usar Poder Divino en el Mundo Inferior conforme al acuerdo que los rige, por lo que trabajará en condiciones equivalentes a las de una artesana ordinaria. Pide a Hestia que la ayude en el taller.
+
+En p.134 considera los datos que recuerda sobre Bell —aventurero novato, humano y usuario de daga— y se preocupa de que un arma excesivamente poderosa obstaculice su crecimiento o no encaje con su nivel. Al mismo tiempo, crear una pieza demasiado ordinaria sería indigno de su propio oficio. El dilema queda abierto al final de p.134; el pasaje no revela aún el diseño terminado.
+
+- **Evento:** EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001.
+- **Límite:** las cifras de edad y antigüedad de Falna que Hephaistos recuerda son información narrada desde su perspectiva en esta traducción, no atributos atemporales del perfil de Bell.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
