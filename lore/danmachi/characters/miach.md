@@ -55,3 +55,20 @@ No se infieren nivel, capacidades de combate, magia, edad, historia completa, pa
 - DMR-061-SRC-001 · Volumen 1, PDF pp.124–127.
 - Traducción privada no cotejada con japonés; nombres y términos técnicos quedan sujetos a cotejo con el original.
 undefined
+### DMR-061 — tercera pasada V1 · PDF pp.119–128 · 2026-10-31
+
+- [x] Completar extracción por folio de pp.119–128: cierre del combate y regreso a Babel; cajas de transporte y preparativos del Festival; avistamiento de Eina; encuentro con Miach y entrega de pociones; escaparate de Hephaistos Familia.
+- [x] Renderizar e inspeccionar las diez páginas físicas individualmente a 130 dpi; p.126 es ilustración monocroma de página completa; las otras nueve son texto; no hay tablas ni notas al pie.
+- [x] Ampliar el evento existente de Dungeon Lizard/Goblin para cerrar el desenlace del Goblin en p.119 y el retorno hasta Babel en p.120.
+- [x] Ampliar el evento de preparativos del Festival con p.121–123; mantener las cajas y sus contenidos sin identificar y no crear una interacción nueva con Eina.
+- [x] Ampliar el evento existente de entrega de dos pociones de Miach (pp.124–127); conservar el ancla de dos días después del Banquete y el carácter gratuito de la entrega.
+- [x] Confirmar en la ficha de Bell la recuperación percibida de la rodilla, sin nuevos números de Estado, y la persona no identificada a quien desea alcanzar.
+- [x] Confirmar en la ficha de Hephaistos que la daga blanca del escaparate no tiene nombre, no se compra y no se identifica con la Daga de Hestia.
+- [x] Mantener la ilustración p.126 sin identidad asignada.
+- [x] Reutilizar LOC-ORARIO, LOC-BABEL, CHAR-MIACH, FAM-MIACH y DM-CHAR-EINA. No crear IDs nuevos ni modificar el catálogo o el timeline JSON.
+- [x] Aplicar cuarta revisión correctiva puntual en p.119, pp.121–123, p.125, p.126 y p.128.
+- [ ] Continuar tercera pasada desde PDF p.129 hasta p.156 (28 folios).
+- [ ] Reconciliar la pasada 1 mediante matriz de cobertura por folio.
+- **Controles:** tres controles completos por cada página pp.119–128 (extracción, visual y continuidad); cuarta revisión puntual en p.119, pp.121–123, p.125, p.126 y p.128.
+- **Siguiente folio:** PDF p.129.
+- **Estado:** tercera pasada completada pp.9–128 (120 folios); pasada 2 pp.9–156 completada; reconciliación de pasada 1 pendiente; V1 IN_PROGRESS. Traducción privada no cotejada con japonés.
