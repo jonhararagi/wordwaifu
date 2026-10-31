@@ -127,4 +127,13 @@ La traducción describe Orario como una ciudad laberíntica rodeada por murallas
 El pasaje vincula la prosperidad de Orario con el Dungeon, la actividad de los aventureros, los monstruos y las incógnitas aún no exploradas. La denominación narrativa «La Ciudad más Animada del Mundo» se conserva como frase descriptiva, no como medición.
 
 **Límites:** estas páginas no proporcionan coordenadas, orientación cardinal, distancias entre distritos, dimensiones exactas, población numérica ni una cartografía completa. Los detalles se mantienen separados de las fichas de Prototype, anime y wikis. Fuente DMR-061-SRC-001, traducción privada no cotejada con japonés.
+ 
+## CONT-MAIN-LN · ocho avenidas y referencias urbanas · Volumen 1 · PDF pp.123–124
+
+La novela principal confirma ocho avenidas principales que parten del centro de Orario hacia las murallas, dispuestas por orientación. Bell menciona la Calle Principal del Noreste y la del Oeste. Sitúa la iglesia donde vive con Hestia entre esas dos avenidas; indica que el establecimiento donde trabaja Seal está en la avenida del Oeste y que él se encuentra en la del Noreste, cerca del Gremio (p.123).
+
+La Calle Principal del Noreste concentra aventureros y negocios de armas y bares; los callejones laterales contienen tiendas especializadas y posadas (p.124). Estos detalles describen la escena y no autorizan a dibujar calles con longitudes, anchos o coordenadas exactas.
+
+- Véase [Red de avenidas principales de Orario](main-streets.md), que mantiene separadas las afirmaciones de CONT-MAIN-LN y CONT-PROTOTYPE.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
 
