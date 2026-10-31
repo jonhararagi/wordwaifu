@@ -47,3 +47,13 @@ Hestia y Hephaistos
 - No añadir fecha de calendario si el texto no la proporciona.
 - Las páginas citadas son páginas físicas del PDF, no necesariamente la paginación impresa de la edición original.
 - No convertir un rumor en un hecho confirmado ni una descripción parcial en una escena completamente observada.
+
+
+## Tercera pasada · entrega de la Daga de Hestia · CONT-MAIN-LN · PDF pp.145–146
+
+Tras un separador de escena en p.145, Hephaistos entrega a Hestia una pequeña caja. En su interior hay una daga y una vaina completamente negras. Hestia propone el nombre humorístico «Daga del Amor»; Hephaistos lo rechaza por poco digno y sugiere «Daga de Hestia». Hestia acepta el nombre con alegría y vergüenza. Hephaistos vuelve a aclarar que el dinero fue prestado y que la deuda no se cancela. Hestia sale deprisa para encontrar a Bell y mostrarle el arma.
+
+- **Evento:** EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001.
+- **Límite:** en estas páginas Hestia recibe el arma, no Bell. No se registra pago, condonación ni entrega al usuario previsto.
+- **Visual:** pp.145–146 son texto continuo; sin ilustraciones, tablas ni notas al pie. Inspección individual a 130 dpi.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
