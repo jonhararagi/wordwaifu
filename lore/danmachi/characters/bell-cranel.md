@@ -159,3 +159,13 @@ La traducción española aportada es privada y no se ha cotejado con el japonés
 - **Discrepancia interna:** el snapshot anterior de p.54 muestra Fuerza H 120, mientras que la columna «anterior» de p.91 indica H 123. Se preservan ambos valores y no se inventa una actualización intermedia.
 - **Habilidad:** el Estado grabado vuelve a mostrar [Deseo Inquebrantable]. Hestia oculta a Bell el nombre y los efectos; él solo recibe una explicación verbal de crecimiento anormal. No registrar que Bell conozca la Habilidad en este punto.
 - **Promesa:** Bell se compromete a no actuar imprudentemente, seguir fortaleciéndose y no dejar sola a Hestia (pp.95–96).
+ 
+## Continuidad principal · Volumen 1 · pp.101–102 y 117–120
+
+- **Decisión tras la disculpa a Seal (pp.101–102):** Bell toma como motivación el consejo recibido y el recuerdo de la humillación previa por parte de un miembro bestial de Loki Familia. Decide fortalecerse sin forzarse y priorizar volver con vida. La identidad del miembro al que recuerda no se asigna por este pasaje.
+- **Incursión del cuarto piso (pp.117–120):** Bell derrota a un Dungeon Lizard con una estocada por la espalda cuando el monstruo aterriza; después derriba a un Goblin lanzándole la mochila cargada con botín. Recupera fragmentos de Piedra Mágica de ambos y nota que su rodilla parece recuperada. No aparece un nuevo snapshot numérico de Estado.
+- **Percepción del crecimiento (p.119):** Bell siente que su cuerpo responde mejor y piensa en alguien a quien quiere alcanzar. El folio no da nombre; no se vincula automáticamente a Ais ni a otra persona.
+- **Regreso (p.120):** asciende desde el cuarto hasta el primer piso, combate otros Goblins y Kobolds sin detalles individuales y llega al vestíbulo subterráneo de Babel.
+
+**Eventos:** la disculpa y visita a Seal se registran en EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001; la incursión del cuarto piso se registra en EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001. Los Goblins de pp.117–119 son encuentros distintos del ejemplar de p.53.
+
