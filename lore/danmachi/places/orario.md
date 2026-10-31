@@ -5,7 +5,7 @@ type: location
 status: source_checked_partial
 confidence: El glosario oficial del anime respalda la identidad general de la ciudad, la función central de la Guild, la convivencia de distintas razas y los vínculos generales con Dungeon y algunos lugares. La geografía urbana completa y las afirmaciones específicas de novela principal siguen pendientes de cotejo.
 continuity_scope: CROSS-CONTINUITY
-source_refs: [DMR-026-SRC-001, DMR-035-SRC-001, DMR-047-SRC-001, DMR-048-SRC-001]
+source_refs: [DMR-026-SRC-001, DMR-035-SRC-001, DMR-047-SRC-001, DMR-048-SRC-001, DMR-061-SRC-001]
 claim_refs: [DMR-026-CLM-001, DMR-026-CLM-002, DMR-026-CLM-003, DMR-035-CLM-001, DMR-047-CLM-001, DMR-048-CLM-001]
 tags: [Orario, 迷宮都市オラリオ, ciudad laberíntica, Dungeon, Guild, urbanismo, geografía]
 ---
