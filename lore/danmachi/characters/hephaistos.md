@@ -105,3 +105,12 @@ Hephaistos escoge mithril y un martillo carmesí y decide asumir ella misma la f
 - **Perspectiva:** la edad de catorce años y el breve tiempo desde que Bell recibió Falna aparecen como recuerdos de Hephaistos, no como actualización universal de la ficha de Bell.
 - **Límites:** no inventar precio, diseño acabado, condonación de deuda ni entrega; la entrega de la Daga de Hestia continúa separada en pp.145–146.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
+
+## Tercera pasada · entrega de la Daga de Hestia · CONT-MAIN-LN · PDF pp.145–146
+
+Hephaistos entrega a Hestia una pequeña caja con la daga y su vaina, ambas completamente negras. Hestia propone «Daga del Amor», pero Hephaistos considera que el nombre la haría parecer un producto barato y sugiere «Daga de Hestia». Hestia acepta. Hephaistos insiste en que el dinero fue prestado y no perdonado; Hestia confirma que lo sabe y sale rápidamente para mostrarle el arma a Bell.
+
+- **Evento:** EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001.
+- **Límite:** no hay pago ni entrega física a Bell en estos folios.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
