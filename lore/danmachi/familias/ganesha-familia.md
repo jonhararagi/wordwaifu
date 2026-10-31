@@ -37,3 +37,11 @@ La copertenencia es un vínculo institucional y no demuestra amistad o enemistad
 - [ ] Completar la composición por época con fuentes primarias.
 - [ ] Registrar cambios o disoluciones mediante eventos conectados.
 - [ ] Añadir relaciones personales únicamente con evidencia concreta.
+ 
+## Evidencia de novela principal · CONT-MAIN-LN · Volumen 1 · PDF p.104
+
+El Volumen 1 muestra el recinto de Ganesha Familia como sede del Banquete de Dios. La narración asocia el lugar con la construcción llamada «Yo Soy Ganesha» y una estatua de elefante de unos 30 metros iluminada con Piedras Mágicas. Esta evidencia describe el recinto y la celebración; no constituye un censo de miembros ni confirma que todos los personajes enlazados desde fuentes de adaptación pertenecieran a la Familia en ese momento.
+
+- **Evento:** EVT-DM-V01-GANESHA-GOD-BANQUET-001.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
