@@ -78,3 +78,14 @@ Bell reconoce a la empleada con orejas y cola de gato que trabaja en La Señora 
 - **Localizadores:** PDF pp.136–138.
 - **Límite:** estas páginas no aportan apellido, nivel, magia, capacidades, parentesco ni antecedentes. Los datos de CONT-ANIME y CONT-SECONDARY permanecen separados; el texto aquí solo la llama Anya.
 - **Encargo abierto:** Bell acepta llevar el monedero a Seal por la Calle Principal del Este, pero la entrega no sucede dentro de estas páginas.
+
+
+## Tercera pasada · La Señora de la Abundancia · CONT-MAIN-LN · Volumen 1 · PDF pp.136–138
+
+Anya, camarera de La Señora de la Abundancia, llama a Bell «Cabello Blanco» y le entrega el monedero olvidado de Seal para que se lo lleve (pp.136–137). Anya explica que Seal se tomó el día libre para visitar el Festival de Monstruos y salió sin el monedero; Ryuu completa la explicación y aclara a Anya cuando esta se expresa de forma incompleta. Anya se avergüenza por su confusión.
+
+El encargo sigue abierto al terminar p.138: Bell acepta llevar el monedero por la Calle Principal del Este, pero todavía no se reúne con Seal para devolvérselo. La explicación de Anya sobre el Festival y la domesticación se conserva como diálogo de la escena, no como un expediente exhaustivo de todas las reglas o participantes.
+
+- **Localizadores:** PDF pp.136–138.
+- **Límites:** la traducción solo la llama Anya; no se añaden apellido, nivel, magia, capacidades ni antecedentes de otras continuidades.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
