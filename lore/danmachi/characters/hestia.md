@@ -86,3 +86,13 @@ Durante una inspección del Gremio en el establecimiento donde trabaja Hestia, E
 - Evento: [Eina advierte a Hestia sobre Lili](../events/timeline/EVT-DM-V02-HESTIA-EINA-DISCUSS-LILI-001.md).
 - **Límite:** no inferir que Hestia consigue cambiar la decisión de Bell en esta escena.
 - **Procedencia:** DMR-060-SRC-001; traducción privada no cotejada.
+
+## Segunda actualización del Estado de Bell · después de la incursión del sexto piso · CONT-MAIN-LN
+
+- **Fuente:** DMR-061-SRC-001, Volumen 1, traducción privada no cotejada con japonés; PDF pp.91–96.
+- Hestia vuelve a ver [Deseo Inquebrantable] en el Estado grabado en la espalda de Bell. Le comunica que su crecimiento es anormal, pero decide no revelar el nombre ni los efectos de la Habilidad.
+- Hestia sopesa la confianza y la preocupación por Bell; su razonamiento incluye el temor a que otros dioses se interesen por la Habilidad y sus propios celos respecto de Wallenstein. Son pensamientos de Hestia, no información que Bell conozca.
+- Hestia valora la técnica, las decisiones y la experiencia de combate de Bell además del efecto de la Habilidad; esta valoración no constituye una estadística objetiva.
+- **Promesa:** Hestia pide que Bell no se sobreesfuerce ni la deje sola. Bell promete esforzarse por hacerse más fuerte sin actuar imprudentemente y no dejarla sola.
+- **Acción posterior:** Hestia decide usar una invitación al Banquete de Ganesha para intentar reunirse con Hephaistos (p.96). La asistencia y la conversación quedan pendientes.
+- **Límite:** no crear una segunda ficha de [Deseo Inquebrantable], no atribuir a Bell conocimiento de ella y no confundir esta actualización con pp.30–36, pp.193–196 o pp.211–214.
