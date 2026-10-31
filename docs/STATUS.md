@@ -1,3 +1,11 @@
+## Espacio de extracción DanMachi creado (2026-10-30)
+
+- Se añadió `lore/danmachi/extraction/` como área explícita de preparación de datos, separada del corpus canónico.
+- Incluye `inbox/`, `work/`, `checkpoints/` y `templates/`, con instrucciones y una plantilla reutilizable de extracción por volumen/bloque.
+- El flujo exige procedencia, continuidad, localizadores tipados, separación entre observación/paráfrasis/inferencia, revisión de duplicados y promoción controlada a las fichas canónicas.
+- DMR-062 Volumen 1 queda señalado como trabajo relacionado y parcial; no se declara completado ni se repite la extracción ya integrada.
+- **Rama de implementación:** `docs/danmachi-extraction-workspace-2026-10-30`. Cambios preparados para revisión; todavía no integrados en `main` ni validados por CI.
+
 # Estado de WordWaifu
 
 ## DMR-045 — adaptación manga oficial de Astrea Record registrada (2026-10-29)
