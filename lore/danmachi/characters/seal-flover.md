@@ -93,3 +93,12 @@ Bell recibe de Anya el monedero que Seal olvidó en La Señora de la Abundancia.
 - **Límite de perspectiva:** la salida de Seal y el olvido del monedero son información que Anya y Ryuu cuentan a Bell; Bell no presencia el momento en que Seal sale del local.
 - **Estado del encargo:** pendiente de entrega; no fusionar con la visita de disculpa de pp.98–102.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
+
+## CONT-MAIN-LN · conversación durante la primera cena · Volumen 1 · PDF p.62
+
+Durante la cena, Seal explica a Bell que no trabaja en el establecimiento únicamente por el sueldo: dice que disfruta encontrarse con personas desconocidas, conversar con ellas y observar cómo cambian con el paso del tiempo. Esta es una motivación que ella expresa en esa conversación, no una descripción exhaustiva de toda su personalidad ni prueba de que conozca los antecedentes completos de cada cliente.
+
+- **Contexto:** la conversación ocurre durante la primera cena de Bell en La Señora de la Abundancia (pp.59–62), después de que Seal pide a Mia que lo trate con hospitalidad.
+- **Límite de conocimiento:** Bell escucha esta explicación; no se atribuye a Seal conocimiento de acontecimientos posteriores ni una intención romántica.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF p.62.
