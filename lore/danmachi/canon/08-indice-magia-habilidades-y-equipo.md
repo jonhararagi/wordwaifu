@@ -53,7 +53,7 @@ Todos estos datos son de fichas finales de la traducción privada aportada; no s
 
 ## Equipo localizado en V1 · CONT-MAIN-LN
 
-- **Daga de Hestia** — daga negra de mithril forjada por Hephaistos, con Estado/Texto Sagrado propio inscrito en la hoja. Crece con la experiencia y el desarrollo del usuario y manifiesta fuerza apropiada a su nivel; el texto indica que solo puede utilizarla alguien con la Gracia de Hestia. Hestia la entrega a Bell y la actualiza junto con su Estado en PDF pp. 193–196. Bell la usa para destruir la Piedra Mágica del Silverback en pp. 196–200.
+- **[Daga de Hestia](../equipment/daga-de-hestia.md)** — `OBJ-DM-HESTIA-DAGGER-001`. Daga de mithril forjada por Hephaistos, con cabello/sangre divina de Hestia y Texto Sagrado propio; tiene Estado propio, crece con la experiencia del usuario y está restringida a quienes recibieron la Gracia de Hestia. La ficha individual separa fabricación, préstamo, entrega, crecimiento, límites y diferencias frente a la daga inicial de Bell y la daga del escaparate. Fuente: DMR-061-SRC-001, PDF pp.132–146, 193–200 y tarjeta visual p.208.
 - **Procedencia:** DMR-061-SRC-001, traducción privada no cotejada. No confundir con la daga anterior de Bell, que se rompe en p. 181; el pasaje no identifica esa arma por nombre.
 
 
