@@ -5,7 +5,7 @@ type: character
 status: provisional
 confidence: high for general role; medium for age/timeline
 tags: [Eina Tulle, Guild, asesora, Bell]
-source_refs: [DanMachi light novel Vol. 1; localizador pendiente]
+source_refs: [DMR-061-SRC-001]
 claim_refs:
   - DMR-002-CLM-007
   - DMR-002-CLM-008
@@ -33,7 +33,7 @@ Antes de clasificar la escena, precisar qué significa “registrarse” y cotej
 
 ## Verificación pendiente
 
-DanMachi, novela ligera, volumen 1: revisar las interacciones iniciales Eina-Bell y verificar edad/estado laboral en la fecha que el autor elija.
+Las interacciones iniciales Eina–Bell del Volumen 1 ya están localizadas en CONT-MAIN-LN: primera consulta y asesoramiento (PDF pp.16–23), trabajo fuera de horario (pp.73–76), presencia en la sede del Gremio (pp.122–123) y labor en el Coliseo durante el Festival (p.156), todas con DMR-061-SRC-001. Siguen pendientes la cronología biográfica más amplia, los cambios de puesto/edad por periodo y una personalidad completa que no dependa de inferencias del rol profesional.
 
 ## Perfil psicológico inicial · DANMACHI-RESEARCH-002
 
