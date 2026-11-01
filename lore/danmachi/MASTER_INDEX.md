@@ -530,4 +530,4 @@ La revisión física de pp.49–58 confirmó las diez páginas de texto y el sna
 
 ### Cobertura P1 añadida · Volumen 1 · PDF pp.59–68 · 2026-11-01
 
-P1 PDF↔DMR-061↔DMR-062↔destinos funcionales reconciliada hasta pp.68. Canon/03 incorpora la logística de expediciones descrita en p.65; el evento de la visita y ficha de Ais aclaran el rechazo a Bete frente a la falta de respuesta concluyente sobre Bell (p.68). Los demás datos de cena/economía/personajes ya tenían destino; no se crearon IDs ni eventos nuevos. Siguiente bloque P1: pp.69–78. P2/P3 no se repiten. V1 sigue IN_PROGRESS / PARTIAL.
+P1 PDF↔DMR-061↔DMR-062↔destinos funcionales reconciliada hasta pp.78. En pp.69–78 se completó el detalle del evento de visita, se conservó el seguimiento de Eina, se precisó el estado temporal de Bell y se corrigió Frog Shooter para no clasificar «Rana Tiradora» como alias confirmado. No se crearon IDs ni eventos nuevos. Siguiente bloque P1: pp.79–88. P2/P3 no se repiten. V1 sigue IN_PROGRESS / PARTIAL.
