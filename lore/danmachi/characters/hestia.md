@@ -194,3 +194,12 @@ Durante la actualización del Estado de Bell, este comenta que ha oído que los 
 - **Evento:** EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001.
 - **Límite:** no inferir consentimiento, conducta o relaciones de una persona concreta por pertenecer a una raza; el pasaje no detalla excepciones ni variaciones culturales.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF p.31.
+
+
+## CONT-MAIN-LN · abrazo matutino y salida de Bell · Volumen 1 · PDF pp.39–41
+
+Después de despertarse, Hestia abraza a Bell y se muestra especialmente cariñosa; apoya y frota las mejillas contra su pecho. Bell se aparta con rapidez cuando la cercanía le resulta abrumadora, la coloca debajo y sale del sofá. Antes de que la escena pase a la perspectiva de Bell caminando por la calle, Hestia murmura «Bell-kun, idiota. Hmmm» después de que él la cubre con una manta y sale. El pasaje conserva un tono cómico e íntimo, pero no establece una relación formal ni permite afirmar que Bell haya oído ese comentario final.
+
+- **Separación de perspectivas:** el contacto físico se narra desde la experiencia de Bell; el comentario final de Hestia queda después de su salida. No atribuir a Bell conocimiento de esas palabras.
+- **Evento:** continúa la convivencia doméstica ya registrada; no crear un evento romántico ni un cambio de estado de Falna.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF pp.39–41.
