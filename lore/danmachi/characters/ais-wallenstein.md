@@ -5,7 +5,7 @@ type: character
 status: provisional
 confidence: high for general role; time-specific facts need verification
 tags: [Ais Wallenstein, Familia Loki, aventurera, Bell]
-source_refs: [DanMachi light novel series; localizador pendiente]
+source_refs: [DMR-061-SRC-001]
 claim_refs:
   - DMR-002-CLM-005
   - DMR-002-CLM-006
@@ -27,7 +27,7 @@ Ais Wallenstein es una aventurera destacada asociada a la Familia Loki. Es conoc
 
 ## Verificación pendiente
 
-Cotejar las primeras apariciones de Ais y los volúmenes que explican su biografía, afiliación y desarrollo. Añadir localizadores verificables antes de usar esta ficha para un dictamen factual.
+La primera aparición de Ais y sus apariciones/observaciones en el Festival de Monstruos del Volumen 1 ya están localizadas en CONT-MAIN-LN (PDF pp.12–14, 19–22 y 140–145; DMR-061-SRC-001). Sigue pendiente una biografía completa respaldada por pasajes primarios, así como una cronología amplia de niveles, expediciones, relaciones y cambios posteriores. Los datos generales procedentes de perfiles oficiales de adaptación conservan su continuidad de origen y no sustituyen estos localizadores.
 
 ## Perfil psicológico inicial · DANMACHI-RESEARCH-002
 
