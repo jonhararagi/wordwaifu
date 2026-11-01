@@ -77,7 +77,7 @@ La p.15 es una portadilla ilustrada del capítulo 1. No contiene una escena narr
 
 ## CONT-MAIN-LN · primera aparición · Volumen 1 · PDF pp.19–22
 
-Eina comunica a Bell que Ais ha derrotado sola a un grupo de monstruos de nivel 5 y que, según lo que ella ha oído, Ais no está saliendo con nadie en ese momento (p.19). La cifra de «1000 cortejos fallidos» aparece en el diálogo como hipérbole y no se trata como estadística verificable. Eina no conoce sus aficiones o comida favorita. El estado sentimental es información referida por Eina para ese momento, no una verdad atemporal.
+Eina comunica a Bell que Ais ha derrotado sola a un grupo de monstruos de nivel 5 y valora su manejo de la espada como situado en la cima de los aventureros (p.19). En el mismo pasaje, la traducción atribuye a los dioses el elogio «Aizu no tiene paralelo en el mundo»; se conserva como expresión reportada en esa traducción, sin normalizarla como título oficial ni alias estable hasta cotejar otra edición. Eina dice que, según lo que ha oído, Ais no está saliendo con nadie en ese momento. La cifra de «1000 cortejos fallidos» aparece en el diálogo como hipérbole y no se trata como estadística verificable. Eina no conoce sus aficiones o comida favorita. El estado sentimental es información referida por Eina para ese momento, no una verdad atemporal.
 
 - **Fuente y atribución:** DMR-061-SRC-001, traducción privada no cotejada con japonés; el dato procede de Eina, no de una declaración directa de Ais.
 - **Reacción:** Bell admite que se enamoró de Ais; esto no acredita reciprocidad.
