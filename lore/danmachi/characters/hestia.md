@@ -186,3 +186,11 @@ Hestia pregunta a Freya si ha visto a Bell; Freya le indica el camino hacia la C
 - **Lectura relacional:** la cercanía, el contacto y el lenguaje de «cita» pertenecen a esta escena; no se convierten en una declaración formal ni en una relación establecida.
 - **Límite de conocimiento:** Bell dice que está buscando a alguien; la escena no establece que Hestia conozca la identidad de Seal ni los detalles del monedero.
 - **Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés.
+
+## CONT-MAIN-LN · diálogo sobre costumbres raciales · Volumen 1 · PDF p.31
+
+Durante la actualización del Estado de Bell, este comenta que ha oído que los Elfos no se dan la mano si no existe aceptación mutua. Hestia responde que hay razas con costumbres distintas y menciona a las Amazonas como mujeres que podrían entregar su cuerpo a hombres fuertes para tener hijos fuertes. La formulación se registra como generalización expresada por Hestia en una conversación, no como norma universal ni como descripción individual de todos los Elfos o Amazonas. Bell no aporta una fuente independiente para lo que ha oído sobre los Elfos.
+
+- **Evento:** EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001.
+- **Límite:** no inferir consentimiento, conducta o relaciones de una persona concreta por pertenecer a una raza; el pasaje no detalla excepciones ni variaciones culturales.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF p.31.
