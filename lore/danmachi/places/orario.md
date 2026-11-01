@@ -39,6 +39,14 @@ Una muestra oficial de lectura añade un dato puntual de la novela principal: el
 
 Una segunda muestra oficial, del volumen 3, menciona **Pantheon** en un recorrido por una avenida comercial y, después de pasar frente a ese punto, narra la entrada en la sede de la Guild, descrita como de mármol blanco. El orden de la narración indexada favorece tratar Pantheon y la sede como referencias físicas distintas. Se conserva en [DANMACHI-RESEARCH-048](../research/inbox/DANMACHI-RESEARCH-048-pantheon-main-novel-preview.md), con el contraste en [DANMACHI-RESEARCH-051](../research/inbox/DANMACHI-RESEARCH-051-pantheon-babel-guild-headquarters-reconciliation.md). El índice textual conserva el capítulo I 「剣姫異来」 y marcadores 36–37, pero el PDF no pudo abrirse visualmente (HTTP 503); la lectura sigue siendo provisional y no determina la relación exacta con Babel.
 
+## Vida urbana nocturna observada por Bell · CONT-MAIN-LN · Volumen 1 · PDF p.57
+
+Al anochecer, Bell recorre una calle principal que está entrando en su actividad nocturna. La narración describe a trabajadores que terminan sus turnos y a aventureros que regresan sanos y salvos del Dungeon; alrededor de los bares se mezclan voces, rugidos y risas, mientras las luces anaranjadas de los comercios abiertos iluminan la calle. Bell observa hobbits y gnomos cantando en la vía pública, enanos que ríen y se reúnen en círculo, mujeres bestia con orejas y colas animales que visten atuendos llamativos para atraer clientela y amazonas con ropa aún más reveladora que caminan sonriendo sin prestar atención a las miradas. La multitud escucha música de instrumentos de cuerda y viento.
+
+**Alcance:** es una escena nocturna concreta observada y narrada por Bell en una calle principal; no constituye un censo de Orario ni permite generalizar la vestimenta, ocupación o conducta de todas las personas de esas razas. La traducción no identifica el nombre propio de esa calle en este folio.
+
+**Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés, PDF p.57.
+
 ## Pistas geográficas recuperadas de wikis (aún no canónicas)
 
 Las wikis aportan un mapa de lugares candidatos y posibles detalles urbanísticos que no aparecen desarrollados en la fuente oficial de adaptación consultada. Se conservan como **evidencia secundaria**, separada de la descripción oficial anterior, y no alteran el estado de las afirmaciones verificadas de esta ficha.

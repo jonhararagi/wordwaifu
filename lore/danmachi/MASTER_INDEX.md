@@ -520,3 +520,8 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - **Pendientes:** reconciliar P1 pp.9–156; recuperar el Markdown original para cotejo MD↔PDF; concluir la granularidad de reglas/sistemas y revisar candidatos de eventos sin IDs duplicados; cotejar con japonés si aparece una edición accesible.
 - **Límite:** DMR-061-SRC-001 es una traducción privada no cotejada con japonés. V1 permanece `IN_PROGRESS`.
 - **Regla de calidad:** cada pasada exige extracción, inspección visual física y control de continuidad; la cuarta revisión es correctiva y puntual.
+
+
+### Ajuste de cobertura P1 · Volumen 1 · 2026-11-01
+
+La revisión física de pp.49–58 confirmó las diez páginas de texto y el snapshot p.54. Se completó el destino funcional de la escena urbana nocturna de p.57 en `places/orario.md` (CONT-MAIN-LN), con atribución limitada a la observación de Bell y sin convertirla en un censo. DMR-061, DMR-062, WORK_QUEUE y STATUS quedaron sincronizados. La cobertura P1 sigue en pp.9–58; siguiente bloque pp.59–68. V1 continúa IN_PROGRESS.

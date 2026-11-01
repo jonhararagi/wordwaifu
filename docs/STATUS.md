@@ -1261,3 +1261,10 @@ Los pasos previos visibles en Validate incluían syntax, catalog IDs/relations, 
 - **Pendientes:** ambigüedad del piso habitual del Minotauro p.18; recuento final de bajas Kobold; discrepancias H120/H123 y D512/D521; traducción sin cotejo japonés; cotejo MD↔PDF pendiente porque el blob del Markdown original no se puede leer mediante la API.
 - **Matriz de DMR-062:** 20 hallazgos priorizados: 15 COMPLETE, 2 PARTIAL, 2 CONTRADICTORY y 1 UNRESOLVED. No es un censo global de todo el volumen.
 - **Estado:** V1 continúa IN_PROGRESS / PARTIAL. No comenzar V2.
+
+
+## Corrección de granularidad P1 · Volumen 1 · PDF p.57 · 2026-11-01
+
+La auditoría visual directa de pp.49–58 confirmó diez páginas de texto y el snapshot de Estado en p.54. Se detectó que la fila p.57 de DMR-062 solo enlazaba la taberna y omitía la escena urbana nocturna descrita por Bell. La ficha `lore/danmachi/places/orario.md` ya conserva esa observación con localizador físico y límites: actividad de bares/comercios, regreso de aventureros, música y habitantes observados en una calle principal; no se generaliza a toda la ciudad ni a todas las personas de cada raza. DMR-061 y DMR-062 quedaron sincronizados; sin IDs/eventos nuevos.
+
+**Checkpoint:** P1 reconciliada pp.9–58; próximo bloque PDF pp.59–68. P2/P3 no se repiten. V1 continúa IN_PROGRESS/PARTIAL.

@@ -1800,3 +1800,12 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - [ ] Reconciliar la pasada 1 mediante matriz de cobertura por folio.
 - **Controles:** tres controles completos por página pp.149–156 (extracción, visual y continuidad); cuarta revisión correctiva puntual según los riesgos del bloque.
 - **Checkpoint:** tercera pasada completada pp.9–156 (148 folios); pasada 2 pp.9–156 completada; reconciliación de pasada 1 pendiente; V1 IN_PROGRESS. Traducción privada no cotejada con japonés.
+
+
+### Corrección de granularidad DMR-061/062 · P1 V1 pp.49–58 · 2026-11-01
+
+- Revisión física directa de PDF pp.49–58: diez páginas de texto, sin ilustraciones; snapshot de Estado en p.54 verificado visualmente.
+- Se detectó y corrigió una omisión de destino en p.57: la escena de la calle principal al anochecer (actividad comercial/nocturna, regreso de aventureros, música y habitantes observados por Bell) se incorporó a `places/orario.md` bajo CONT-MAIN-LN.
+- DMR-062 p.57 y el cierre de DMR-061 se sincronizaron. No se crean entidades, eventos o IDs nuevos. Se mantiene la cautela: una escena localizada no es un censo urbano.
+- P1 reconciliada: pp.9–58. Siguiente bloque: PDF pp.59–68. No repetir P2/P3.
+- V1 sigue IN_PROGRESS/PARTIAL; persisten los límites de traducción privada, recuento Kobold y cotejo MD↔PDF global.

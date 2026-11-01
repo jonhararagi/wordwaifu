@@ -1573,3 +1573,13 @@ La siguiente matriz separa lo que los checkpoints permiten certificar de la extr
 - **Estado P1:** pp.49–58 reconciliadas PDF↔DMR-061↔destinos funcionales. Dos huecos principales de modelado (táctica de Bell y carga de equipo) y dos síntesis de sistema/economía (tecnología de Piedra Mágica y cartografía) fueron incorporados; no se crean eventos ni entidades nuevas.
 - **Próximo bloque P1:** PDF pp.59–68. Las pasadas 2 y 3 de ese rango ya están documentadas; no repetirlas.
 - **Límite:** cuenta final de bajas Kobold queda sin normalizar; traducción privada no cotejada con japonés; cotejo MD↔PDF sigue pendiente por inaccesibilidad del blob MD.
+
+
+### Corrección de granularidad P1 · Volumen 1 · PDF p.57 · 2026-11-01
+
+- La inspección directa del PDF físico pp.49–58 confirmó que los diez folios son páginas de texto; p.54 contiene el snapshot del Estado y fue revisado visualmente. No hay ilustraciones en este bloque.
+- En la matriz inicial de DMR-062, p.57 solo había quedado representada por el edificio de La Señora de la Abundancia. La lectura directa de la página también aporta una escena urbana nocturna: trabajadores al terminar su turno, aventureros que regresan del Dungeon, actividad de bares y comercios, música de cuerda/viento y habitantes de distintas razas que Bell observa en la calle.
+- Se incorporó esa observación a `places/orario.md` bajo `CONT-MAIN-LN`, con localizador PDF p.57 y límites de atribución: escena puntual narrada por Bell, no censo ni regla general sobre razas o vestimenta.
+- Se actualizó la fila p.57 y el resultado de la matriz DMR-062. No se creó personaje, evento, lugar ni ID nuevo; la ficha de la taberna conserva el edificio y su interior.
+- **Estado P1:** pp.49–58 siguen reconciliadas; la corrección completa el destino funcional de p.57. Próximo bloque P1: PDF pp.59–68. No repetir P2/P3 de ese rango.
+- **Límites:** traducción privada no cotejada con japonés; recuento final de bajas Kobold sin normalizar; cotejo textual MD↔PDF global aún pendiente por inaccesibilidad del blob MD original.
