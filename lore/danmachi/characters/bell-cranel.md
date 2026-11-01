@@ -305,3 +305,13 @@ En p.61 Bell recuerda que su daga actual costó **3.600 Varisu**, que la compró
 
 - **Procedencia:** palabras de Bell durante la visita nocturna; no se convierten en precios universales ni saldo bancario verificado.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF pp.60–61 y tarjeta visual p.209.
+
+
+## CONT-MAIN-LN · reacción posterior a la humillación y regreso impulsivo al Dungeon · Volumen 1 · PDF pp.72, 76–78
+
+- **p.72 — reacción inmediata:** al salir de la taberna, Bell dirige la vergüenza y la rabia contra su propia debilidad, no contra Bete ni contra los presentes. Piensa que no tiene méritos para estar al lado de «esa persona», sin nombrarla. Corre hacia Babel y la entrada del Dungeon. Es un estado emocional puntual, no una identidad estable ni una prueba de reciprocidad con Ais. La secuencia social está desarrollada en EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001.
+- **p.76 — regreso:** tras el separador, Bell vuelve al Dungeon. La frase de la traducción «Un solo pasó» se conserva literalmente; no se convierte en número de días ni en hora. Mata un Frog Shooter con la daga y continúa avanzando pese a la fatiga (véase MON-DM-FROG-SHOOTER-001).
+- **p.77 — estado físico y equipo:** Bell avanza sin armadura personal; su cuerpo muestra marcas de garras, mordidas y agarres, lleva la ropa destrozada y la daga cubierta de sangre de numerosos monstruos. Continúa cazando pese al cansancio, impulsado por la frustración y por el deseo de alcanzar a «esa persona», que el pasaje no identifica. No se registra un cambio de equipo ni una mejora de Estado.
+- **p.78 — llegada al sexto piso:** Bell calcula primero que está en el quinto piso y se corrige al sexto, un piso al que aún no había llegado. El cambio de azul claro a verde claro, los pasillos más estrechos y el laberinto más complejo acompañan monstruos distintos de los anteriores. Bell está agotado, respira irregularmente, no sabe cuánto tiempo lleva dentro y no puede consultar la hora porque no lleva reloj. Entra en una sala cuadrada sin salida aparente y oye una secuencia de chasquidos escrita «Bikiri»; el folio no identifica su origen. No anticipar la War Shadow: su primera aparición textual está en p.79.
+- **Continuidad:** no se crea un evento de combate nuevo a partir de pp.76–78, porque el encuentro continúa en páginas posteriores. Tampoco se identifica «esa persona» como Ais ni se atribuyen propiedades al sonido final.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF pp.72 y 76–78.
