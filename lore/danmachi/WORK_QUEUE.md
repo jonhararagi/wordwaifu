@@ -1484,9 +1484,9 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 
 - Pasada 2: pp.9–156 completadas; pp.157–214 conservan sus tres pasadas registradas.
 - Pasada 3: pp.9–156 completadas; pp.157–214 conservan sus tres pasadas registradas.
-- Pasada 1: reconciliación PDF↔registros funcionales completada en pp.9–28. En pp.19–28 se integraron dos detalles omitidos (reputación/elogio traducido de Ais p.19 y motivo del menor canje de Bell p.21) en fichas/eventos existentes; sin IDs nuevos. La ambigüedad de p.18 sigue UNRESOLVED.
+- Pasada 1: reconciliación PDF↔registros funcionales completada en pp.9–38. En pp.29–38 se corrigieron dos huecos de modelado: escala/rangos de atributos de p.33 en canon/04 y comentario racial atribuido de p.31 en ficha Hestia. No se crearon IDs ni eventos. La ambigüedad de p.18 permanece UNRESOLVED.
 - Front matter: pp.1–7 inspeccionadas visualmente; p.8 blanca; p.215 créditos. El cotejo textual MD↔PDF sigue pendiente por inaccesibilidad del blob.
-- Próxima tarea P1: PDF pp.29–38; no repetir P2/P3 ni crear eventos duplicados.
+- Próxima tarea P1: PDF pp.39–48; no repetir P2/P3 ni crear eventos duplicados.
 
 ### Checkpoint DMR-061 · Volumen 1, PDF pp. 81–90 · 2026-10-31
 
