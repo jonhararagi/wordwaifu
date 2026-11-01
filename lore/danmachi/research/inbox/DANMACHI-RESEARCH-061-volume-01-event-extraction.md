@@ -1542,3 +1542,18 @@ La siguiente matriz separa lo que los checkpoints permiten certificar de la extr
 - **Estado P1 del bloque:** pp.39–48 reconciliadas PDF↔DMR-061↔destinos funcionales. La única corrección funcional necesaria fue ampliar la escena doméstica pp.39–41 en Bell y Hestia. No se crearon IDs ni eventos.
 - **Próximo bloque P1:** PDF pp.49–58. P2/P3 ya documentadas; no repetir.
 - **Límite:** cotejo textual de la transcripción MD con PDF sigue pendiente por inaccesibilidad del blob MD.
+
+
+## DMR-061 — reconciliación de pasada 1 con registros funcionales · PDF pp.39–48 · 2026-11-01
+
+- **Resultado:** diez folios contrastados directamente contra el PDF físico y fichas/eventos existentes. Se amplió la descripción funcional de la escena doméstica Bell/Hestia de pp.39–41; no se requirió entidad/evento nuevo.
+- **Pp.39–41:** Bell abraza suavemente a Hestia, luego se siente abrumado por la proximidad, la aparta, la cubre y sale. La frase de «casi asfixia» se conserva como exageración cómica, no como agresión intencional. Hestia murmura «Bell-kun, idiota. Hmmm» después de su salida; no se atribuye a Bell que lo oyera. Bell y Hestia conservan la escena desde las perspectivas correspondientes.
+- **p.40:** ilustración contextualizada con la escena Bell/Hestia; sin hechos o relación independiente.
+- **p.41:** Bell sale temprano por la calle principal y recuerda que olvidó desayunar; ya consta en Bell.
+- **p.42:** Bell percibe una mirada peligrosa, inspecciona la calle y no identifica a nadie. Seal aparece con blusa blanca, falda verde, delantal, pelo recogido en pequeña coleta y ojos oscuros; Bell estima que puede ser uno o dos años mayor, no edad confirmada. La ficha de Seal ya conserva esos datos.
+- **p.43:** Seal devuelve una Piedra Mágica azul violácea; Bell recuerda haber entregado las demás al Gremio el día anterior. El origen y caída de esta piedra quedan desconocidos. La nota sobre «riñonera» es glosa del traductor, no lore.
+- **pp.44–46:** Seal ofrece pan y queso, invita a Bell a cenar en su local esa noche a cambio de mejorar su sueldo y ambos intercambian nombres. La cena todavía no ha ocurrido. El pasaje añade que el Dungeon preexistía al descenso de los dioses y que personas antiguas luchaban sin Gracia junto a un predecesor del Gremio; canon/03 ya recoge ese antecedente como relato reportado, sin nombre o fecha inventados.
+- **pp.47–48:** grupo inicial de ocho Kobolds; dos habían caído, seis persiguen a Bell. Su observación de que normalmente van solos o por parejas queda limitada a la experiencia de novato. Bell declara llevar solo una daga de 20 cm; usa emboscada y el cuerpo de un Kobold como escudo, sin normalizar el recuento final.
+- **Estado P1 del bloque:** pp.39–48 reconciliadas PDF↔DMR-061↔fichas/eventos/canon. La única corrección funcional necesaria fue ampliar la escena doméstica pp.39–41 en Bell y Hestia. No se crearon IDs ni eventos.
+- **Próximo bloque P1:** PDF pp.49–58. P2/P3 ya documentadas; no repetir.
+- **Límite:** cotejo textual MD↔PDF sigue pendiente por inaccesibilidad del blob del MD.
