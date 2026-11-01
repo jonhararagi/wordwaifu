@@ -19,7 +19,8 @@ tags: [volume-01, events, Bell, Hestia, Freya, Silverback, Daga de Hestia]
 - **Continuidad:** `CONT-MAIN-LN`.
 - **Límite:** la fidelidad de la traducción no se ha cotejado con japonés ni con otra edición.
 - **Tamaño:** 215 páginas físicas; texto narrativo y epílogo hasta PDF p. 214; PDF p. 215 contiene créditos.
-- **Lectura:** la pasada secuencial narrativa llega a p. 214. Algunas páginas no devolvieron texto extraíble; no afirmar que todas fueron verificadas por extracción. La inspección visual de ilustraciones/fichas no está completa.
+- **Cobertura verificada en checkpoints posteriores (2026-11-01):** pasada 2 y pasada 3 documentadas como completas para PDF pp.9–156; los registros de pp.157–214 conservan tres pasadas. El histórico de extracción secuencial llega a p.214, pero la pasada 1 de pp.9–156 no se certifica automáticamente: requiere reconciliación por folio y cruce con registros funcionales. Front matter pp.1–7 inspeccionado visualmente; p.8 está en blanco; pp.9–10 cotejadas directamente con PDF y registros funcionales. p.215 contiene créditos. Las páginas no extraíbles por texto se consideran verificadas solo cuando existe evidencia visual o revisión directa registrada para ese folio.
+- **Inspección visual documentada:** DMR-061 registra 16 recursos incrustados del MD inspeccionados, además de renderizaciones por bloques físicos; entre otras, pp.19–24, 49–54, 73–80, 81–90, 91–156 y pp.157–214 en sus checkpoints específicos. No afirmar una comparación integral MD↔PDF: el blob de la transcripción original no ha sido recuperable por la API de GitHub.
 
 ## Acontecimientos extraídos
 
@@ -1451,3 +1452,29 @@ La actualización de pp.91–96 es distinta de la actualización tras el Minotau
 - **Revisión correctiva:** p.149 para la secuencia Freya→Hestia→Bell; pp.151–153 para mantener el encargo de Seal mientras se desarrolla la cita; p.154 para limitar la lectura de la ilustración a lo visible; p.156 para separar la demostración del Coliseo de la cita y no identificar a la domadora.
 
 **Checkpoint:** tercera pasada completada pp.9–156 (148 folios). La pasada 2 pp.9–156 continúa completa. La reconciliación integral de la pasada 1 sigue pendiente y es la siguiente tarea de DMR-061. V1 permanece IN_PROGRESS; DMR-061-SRC-001 sigue siendo una traducción privada no cotejada con japonés.
+
+## Matriz de cobertura reconciliada — Volumen 1 · 2026-11-01
+
+La siguiente matriz separa lo que los checkpoints permiten certificar de la extracción secuencial histórica. Una pasada no se considera completa solo por existir notas de lectura; se requiere la cobertura y los controles del método.
+
+| Rango físico | Pasada 1 — extracción | Pasada 2 — detalle | Pasada 3 — omisiones | Visual | Estado operativo |
+|---|---|---|---|---|---|
+| pp.1–7 | No es tramo narrativo; material editorial revisado | No aplica extracción narrativa | No aplica extracción narrativa | Inspeccionadas como cubierta, ilustraciones y portadillas | COMPLETE para front matter; no se cuenta como narración |
+| p.8 | Página en blanco; sin narración | Verificado como folio blanco | Verificado como folio blanco | Renderizada e inspeccionada | COMPLETE como folio vacío |
+| pp.9–10 | Integradas en extracción/escena inicial; falta cotejo MD↔PDF | No se declara una pasada 2 independiente completa en el registro | Revisadas en tercera pasada pp.9–18; contenido integrado a Bell y evento Minotauro | pp.9–10 leídas en PDF; son páginas de texto | PARTIAL: reconciliación focal PDF↔registros hecha; cotejo MD pendiente |
+| pp.11–18 | Extracción secuencial en DMR-061 | La lectura de detalle está incluida en el registro histórico de pp.9–60; la matriz inicial por folio requiere reconciliación explícita | Tercera pasada pp.9–18 documentada | p.12 y p.15 ilustradas; render/inspección documentada en tercera pasada | PARTIAL para certificación de pasada 1; pasadas 2/3 según el registro histórico |
+| pp.19–156 | Extracción secuencial histórica y notas por bloques; falta reconciliar exhaustivamente cada folio como P1 | P2 completa según bloques pp.9–156 | P3 completa según bloques pp.9–156 | Inspecciones físicas registradas en los checkpoints detallados; visuales pendientes antiguos pp.19–24 y 49–54 cerrados | PARTIAL global: P1 requiere matriz folio por folio |
+| pp.157–177 | Extracción primaria documentada | Tres pasadas conservadas en los registros previos | Tres pasadas conservadas | Renderizaciones/inspecciones por bloques documentadas | COMPLETE según checkpoints de las tres pasadas |
+| pp.178–200 | Extracción primaria página por página | Tres pasadas documentadas en checkpoints previos | Tres pasadas documentadas en checkpoints previos | Renderizadas; p.199 ilustración ampliada | COMPLETE según DMR-061 |
+| pp.201–214 | Extracción primaria página por página | Tres pasadas completas declaradas en el checkpoint pp.201–214 | Tres pasadas completas declaradas en el checkpoint pp.201–214 | Tarjetas/ilustraciones pp.208–210 inspeccionadas | COMPLETE según DMR-061 |
+| p.215 | Créditos; no narración | Revisión editorial | Revisión editorial | Renderizada e inspeccionada | COMPLETE como folio de créditos |
+
+### Dictamen de cobertura
+
+- **Pasada 1:** no certificada globalmente. El trabajo secuencial histórico está presente, y los bloques pp.157–214 conservan tres pasadas, pero pp.9–156 necesitan reconciliación explícita folio por folio frente a sus fichas/eventos y a la fuente. pp.9–10 ya tienen reconciliación focal del PDF con registros funcionales; el cotejo con el MD sigue pendiente.
+- **Pasada 2:** documentada como completa en pp.9–156 y conservada para pp.157–214.
+- **Pasada 3:** documentada como completa en pp.9–156 y conservada para pp.157–214.
+- **Visual:** las listas antiguas de pendientes de pp.19–24 y 49–54 quedan resueltas por checkpoints posteriores; p.8 y p.215 se clasifican como folios editoriales/blanco. La comparación integral de las imágenes incrustadas del MD con la fuente PDF no se afirma completada.
+- **Fuente y traducción:** DMR-061-SRC-001 es una traducción privada no cotejada con japonés. Esta limitación no invalida la localización dentro del archivo aportado, pero impide asegurar la fidelidad terminológica al original japonés.
+
+**Estado del volumen:** IN_PROGRESS. No declarar COMPLETE hasta cerrar la reconciliación de la pasada 1 y el cotejo del MD, verificar todas las relaciones/eventos funcionales y ejecutar/registrar las validaciones disponibles.
