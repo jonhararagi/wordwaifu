@@ -1241,3 +1241,13 @@ Los pasos previos visibles en Validate incluían syntax, catalog IDs/relations, 
 - **Siguiente bloque P1:** PDF pp.39–48.
 - **Límites:** ambigüedad de p.18 sigue UNRESOLVED; traducción privada no cotejada con japonés; cotejo textual MD↔PDF pendiente por inaccesibilidad del blob MD.
 - **Estado:** V1 sigue IN_PROGRESS / PARTIAL. No abrir V2.
+
+
+## DMR-061 — avance de reconciliación P1 · 2026-11-01 (actualización pp.39–48)
+
+- **PDF pp.39–48:** reconciliadas contra la fuente física y registros funcionales. Bell/Hestia pp.39–41 se amplió en ambos perfiles, distinguiendo el contacto y las acciones de Bell de la frase final de Hestia después de que él sale. p.40 ilustración inspeccionada, sin identidad/relación extra. p.42 sensación de vigilancia no atribuida; Seal tiene ropa/rasgos localizados y edad como impresión de Bell. p.43 Piedra Mágica sin procedencia resuelta y nota de traductor; pp.44–46 cesta/invitación no consumada/intercambio de nombres; p.46 historia del Dungeon ya incorporada en canon/03; pp.47–48 ocho Kobolds, seis perseguidores, daga de 20 cm y cuenta de bajas sin normalizar.
+- **Corrección funcional:** la escena doméstica de pp.39–41 se amplió en Bell y Hestia. No se crearon eventos, fichas ni IDs nuevos.
+- **P1 completada (PDF↔registros funcionales):** pp.9–48. P1 restante: pp.49–156. P2/P3 pp.9–156 permanecen documentadas; pp.157–214 conservan tres pasadas.
+- **Siguiente bloque P1:** PDF pp.49–58.
+- **Límites:** ambigüedad de p.18 sigue UNRESOLVED; cuenta de bajas Kobold no normalizada; traducción privada no cotejada con japonés; cotejo textual MD↔PDF pendiente por inaccesibilidad del blob MD.
+- **Estado:** V1 sigue IN_PROGRESS / PARTIAL. No abrir V2.
