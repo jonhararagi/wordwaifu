@@ -1484,9 +1484,9 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 
 - Pasada 2: pp.9–156 completadas; pp.157–214 conservan sus tres pasadas registradas.
 - Pasada 3: pp.9–156 completadas; pp.157–214 conservan sus tres pasadas registradas.
-- Pasada 1: reconciliación global por folio pendiente en pp.9–156. No certificarla por la existencia de notas de extracción secuencial.
-- Front matter: pp.1–7 inspeccionadas visualmente; p.8 blanca; p.215 créditos. pp.9–10 revisadas directamente en el PDF y cruzadas con sus registros funcionales; el cotejo del Markdown sigue pendiente.
-- Próxima tarea: construir la matriz P1 de pp.9–156, empezando por reconciliar registros existentes por rango/folio y marcar solo los huecos reales. No repetir P2/P3 ni crear eventos duplicados.
+- Pasada 1: reconciliación global por folio pendiente en pp.9–156. Primer bloque P1 reconciliado PDF↔registros funcionales: pp.9–18; sin huecos sustantivos ni IDs nuevos. La ambigüedad de p.18 sigue UNRESOLVED.
+- Front matter: pp.1–7 inspeccionadas visualmente; p.8 blanca; p.215 créditos. El cotejo textual MD↔PDF sigue pendiente por inaccesibilidad del blob.
+- Próxima tarea P1: PDF pp.19–28; no repetir P2/P3 ni crear eventos duplicados.
 
 ### Checkpoint DMR-061 · Volumen 1, PDF pp. 81–90 · 2026-10-31
 
