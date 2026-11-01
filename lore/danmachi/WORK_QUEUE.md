@@ -1484,9 +1484,9 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 
 - Pasada 2: pp.9–156 completadas; pp.157–214 conservan sus tres pasadas registradas.
 - Pasada 3: pp.9–156 completadas; pp.157–214 conservan sus tres pasadas registradas.
-- Pasada 1: reconciliación PDF↔registros funcionales completada en pp.9–58. En pp.49–51 se incorporaron la estrategia de supervivencia de Bell, las limitaciones de mochila/Ayudante y la economía de botín; en p.52 se añadieron cartografía, tamaño creciente de zonas inferiores y precisión de que «Dungeon vivo» alude a autorreparación. La hipótesis de Bell sobre reproducción de monstruos sigue sin confirmarse; la cuenta final de Kobolds no se normaliza.
+- Pasada 1: reconciliación PDF↔registros funcionales completada en pp.9–78. Pp.49–58 incorporan estrategia de Bell, límites de transporte, economía de Piedras Mágicas y cartografía; pp.69–78 incorporan reacción de Loki, estado emocional/físico de Bell, seguimiento de Eina y corrección del alias de Frog Shooter. El sonido de p.78 no se atribuye a un monstruo.
 - Front matter: pp.1–7 inspeccionadas visualmente; p.8 blanca; p.215 créditos. El cotejo textual MD↔PDF sigue pendiente por inaccesibilidad del blob.
-- Próxima tarea P1: PDF pp.59–68; no repetir P2/P3 ni crear eventos duplicados.
+- Próxima tarea P1: PDF pp.79–88; no repetir P2/P3 ni crear eventos duplicados.
 
 ### Checkpoint DMR-061 · Volumen 1, PDF pp. 81–90 · 2026-10-31
 
@@ -1822,3 +1822,15 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - **P1 reconciliada:** pp.9–68. **Siguiente bloque P1:** PDF pp.69–78; no repetir P2/P3 ya documentadas.
 - **Pendientes globales:** P1 pp.69–156; traducción privada no cotejada con japonés; MD↔PDF integral pendiente; mantener sin resolver la ambigüedad p.18, el recuento Kobold y las discrepancias numéricas previamente registradas.
 - **Estado V1:** IN_PROGRESS / PARTIAL; no iniciar V2.
+
+
+### DMR-061 · checkpoint vigente de Pasada 1 · Volumen 1 · 2026-11-01 · pp.69–78
+
+- [x] Reconciliar los diez folios físicos con DMR-061, DMR-062 y destinos funcionales; no repetir P2/P3.
+- [x] Inspeccionar ilustraciones pp.70 y 73, portadilla y nota al pie p.76.
+- [x] Ampliar el evento existente de la visita con la reacción cómica de Loki en p.71; no crear evento nuevo.
+- [x] Añadir al perfil de Bell pp.72 y 77–78; conservar «esa persona» anónima y el sonido de p.78 sin origen.
+- [x] Quitar «Rana Tiradora» del campo aliases de Frog Shooter: es propuesta de traducción, no alias confirmado.
+- **P1 reconciliada:** pp.9–78. **Siguiente bloque P1:** PDF pp.79–88. No repetir P2/P3 ya documentadas.
+- **Límites abiertos:** traducción privada no cotejada con japonés; MD↔PDF integral pendiente; sonido p.78 sin origen; ambigüedad p.18, recuento Kobold y contradicciones estadísticas se conservan.
+- **Estado V1:** PARTIAL / IN_PROGRESS; no iniciar V2.
