@@ -513,7 +513,8 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - **Segunda pasada:** pp.9–156 completadas.
 - **Tercera pasada:** pp.9–156 completadas (148 folios narrativos).
 - **Tres pasadas conservadas:** pp.157–214.
-- **Pendiente transversal principal:** reconciliar la pasada 1 por página física/localizador en el rango narrativo completo, incluyendo pp.9–10; no repetir como nuevos los registros ya existentes.
+- **Reconciliación focal pp.9–10:** cotejadas con el PDF; p.9 (fantasía heroica inicial) y p.10 (crisis de Bell Lv.1 perseguido por el Minotauro) ya están incorporadas en DMR-061, `EVT-DM-BELL-AIS-MINOTAUR-001` y `characters/bell-cranel.md`. No se crea evento duplicado.
+- **Pendiente transversal principal:** reconciliar la pasada 1 por página física/localizador en el resto del rango narrativo; no repetir como nuevos los registros ya existentes.
 - **Front matter:** pp.1–7 revisadas; p.8 blanca; p.215 créditos. No convertir la revisión del front matter en extracción narrativa.
 - **Pendientes independientes:** cierre de DMR-062 (reglas/objetos, candidatos de eventos, revisión de personajes y diferencias de traducción); cotejo con japonés no realizado.
 - **Límite:** DMR-061-SRC-001 es una traducción privada no cotejada con japonés. V1 permanece `IN_PROGRESS`.
