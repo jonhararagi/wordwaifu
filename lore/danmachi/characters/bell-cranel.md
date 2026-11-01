@@ -203,7 +203,7 @@ La traducción española aportada es privada y no se ha cotejado con el japonés
 
 ## CONT-MAIN-LN · biografía inicial y recursos · Volumen 1 · PDF pp.21, 23–24
 
-- **Recompensa temprana (p.21):** Bell dice que derrotó principalmente Goblins y Dríadas y que recibió 1200 Varisu al cambiar sus Piedras Mágicas. Es un intercambio concreto de esa incursión, no una tarifa general. Menciona que las reparaciones del arma y la comida para él y Hestia dificultan reponer objetos.
+- **Recompensa temprana (p.21):** Bell dice que derrotó principalmente Goblins y Dríadas y recibió 1200 Varisu al cambiar sus Piedras Mágicas. Considera que la cantidad es inferior a la media porque pasó menos tiempo en el Dungeon al huir de Ais; atribuye la menor duración de esa incursión a ese episodio concreto, no a una tarifa general. Menciona además que las reparaciones del arma y la comida para él y Hestia dificultan reponer objetos.
 - **Origen (pp.23–24):** Bell creció en un pueblo rural cerca de Orario y su abuelo lo crio. Tras la muerte de su único familiar/tutor, tomó la riqueza restante y se marchó a Orario. El pasaje no fija cantidad de dinero ni causa de muerte; la causa se registra en otro localizador posterior, p.184.
 - **Influencia del abuelo:** le contaba historias de héroes y repetía en broma que un hombre no podía evitar desear un harén. Bell presenta esas historias y ese comentario como influencia en su deseo de convertirse en aventurero y buscar un encuentro predestinado.
 - **Libro favorito:** «El Laberinto Sagrado “Calabozo”» se menciona como uno de sus libros favoritos y como una recopilación de hazañas heroicas. Bell plantea como posibilidad, no como certeza, que su abuelo se lo comprara para alimentar su pasión.
