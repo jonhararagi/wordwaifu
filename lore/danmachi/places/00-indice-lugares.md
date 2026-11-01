@@ -15,7 +15,7 @@
 | [LOC-PANTHEON](pantheon.md) | Pantheon — lugar mencionado en la novela principal | Orario, avenida comercial, Guild y Babel | Extracto oficial parcial favorece distinguir Pantheon de la sede; relación física con Babel pendiente. Ver [DMR-051](../research/inbox/DANMACHI-RESEARCH-051-pantheon-babel-guild-headquarters-reconciliation.md) |
 | [LOC-AMOR-SQUARE](amor-square.md) | Plaza del Amor (`アモールの広場`) | Orario, avenida principal suroeste (según wiki comunitaria) | Sólo evidencia secundaria (`CONT-UNVERIFIED`); localizador primario pendiente |
 | [LOC-APOLLO-MANOR](apollo-familia-mansion.md) | Mansión de Apollo Familia | Nueva residencia de Hestia Familia después del War Game | Parcial: transición respaldada en la adaptación; ubicación exacta pendiente |
-| [LOC-HOSTESS](hostess-of-fertility.md) | Hostess of Fertility | Orario, Familia Loki, personal de la taberna | Ficha parcial respaldada por el glosario oficial del anime |
+| [LOC-HOSTESS](hostess-of-fertility.md) | Hostess of Fertility / La Señora de la Abundancia | Orario, Seal, Mia, camareras y escenas del V1 | Ficha parcial: glosario CONT-ANIME y pasajes CONT-MAIN-LN V1 pp.57–63, 98–100, 136–138, 203–204; sin plano ni dirección exacta |
 | [LOC-HESTIA-HOME](hestia-familia-church.md) | Iglesia/estancia oculta de Hestia Familia | Residencia inicial entre Calle Principal del Noreste y Calle Principal del Oeste (V1 p.123) | Ubicación relativa urbana respaldada por CONT-MAIN-LN; nombre propio, coordenadas y causa de destrucción no confirmados por novela |
 | LOC-LOKI-MANOR | Residencia de Loki Familia | Miembros, reuniones, preparación de expediciones | Alta |
 | LOC-FREYA-MANOR | Residencia de Freya Familia | Freya, Ottar y miembros | Alta |
