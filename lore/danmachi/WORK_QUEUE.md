@@ -1484,9 +1484,9 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 
 - Pasada 2: pp.9–156 completadas; pp.157–214 conservan sus tres pasadas registradas.
 - Pasada 3: pp.9–156 completadas; pp.157–214 conservan sus tres pasadas registradas.
-- Pasada 1: reconciliación PDF↔registros funcionales completada en pp.9–78. Pp.49–58 incorporan estrategia de Bell, límites de transporte, economía de Piedras Mágicas y cartografía; pp.69–78 incorporan reacción de Loki, estado emocional/físico de Bell, seguimiento de Eina y corrección del alias de Frog Shooter. El sonido de p.78 no se atribuye a un monstruo.
+- Pasada 1: reconciliación PDF↔registros funcionales completada en pp.9–88. Pp.49–58 incorporan estrategia de Bell, límites de transporte, economía de Piedras Mágicas y cartografía; pp.69–78 incorporan reacción de Loki, estado temporal de Bell, seguimiento de Eina y corrección del alias Frog Shooter; pp.79–88 incorporan el combate/cerco War Shadow en el perfil de Bell y verifican el evento existente de regreso con Hestia.
 - Front matter: pp.1–7 inspeccionadas visualmente; p.8 blanca; p.215 créditos. El cotejo textual MD↔PDF sigue pendiente por inaccesibilidad del blob.
-- Próxima tarea P1: PDF pp.79–88; no repetir P2/P3 ni crear eventos duplicados.
+- Próxima tarea P1: PDF pp.89–98; no repetir P2/P3 ni crear eventos duplicados.
 
 ### Checkpoint DMR-061 · Volumen 1, PDF pp. 81–90 · 2026-10-31
 
@@ -1834,3 +1834,17 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - **P1 reconciliada:** pp.9–78. **Siguiente bloque P1:** PDF pp.79–88. No repetir P2/P3 ya documentadas.
 - **Límites abiertos:** traducción privada no cotejada con japonés; MD↔PDF integral pendiente; sonido p.78 sin origen; ambigüedad p.18, recuento Kobold y contradicciones estadísticas se conservan.
 - **Estado V1:** PARTIAL / IN_PROGRESS; no iniciar V2.
+
+
+### DMR-061 · checkpoint vigente de Pasada 1 · Volumen 1 · 2026-11-01 · pp.79–88
+
+- [x] Inspeccionar los diez folios físicos del PDF original; p.79 incluye nota al pie y p.86 es una ilustración de página completa.
+- [x] Contrastar cada página con DMR-061, DMR-062 y los destinos funcionales actuales.
+- [x] Reutilizar `MON-DM-WAR-SHADOW-001`: conserva los rasgos, ataques, resultados distintos, cuatro apariciones adicionales y dedo improvisado.
+- [x] Ampliar `characters/bell-cranel.md` con el combate, las heridas, la pérdida de la daga, el cerco y el equipo improvisado de pp.79–85.
+- [x] Verificar que `EVT-DM-V01-HESTIA-SEARCHES-BELL-AND-CARES-FOR-HIM-001` ya cubre pp.87–88; no duplicar ni fusionar con la actualización de Estado pp.91–97.
+- [x] Mantener sin identificar la figura de p.86; no crear entidades ni relaciones.
+- **P1 reconciliada:** pp.9–88. **Siguiente bloque P1:** PDF pp.89–98. No repetir P2/P3.
+- **Pendientes globales:** P1 pp.89–156; cotejo integral MD↔PDF; cotejo de la traducción privada con japonés; ambigüedad p.18, cuenta de bajas Kobold y discrepancias estadísticas anteriores.
+- **Pasadas:** P2 y P3 pp.9–156 siguen documentadas; pp.157–214 conservan las tres pasadas registradas. No se repiten en este checkpoint.
+- **Estado V1:** `PARTIAL / IN_PROGRESS`; no iniciar Volumen 2.

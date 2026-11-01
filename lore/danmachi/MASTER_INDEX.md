@@ -528,6 +528,11 @@ La revisión física de pp.49–58 confirmó las diez páginas de texto y el sna
 
 
 
-### Cobertura P1 añadida · Volumen 1 · PDF pp.59–68 · 2026-11-01
+### Cobertura P1 añadida · Volumen 1 · PDF pp.69–78 · 2026-11-01
 
 P1 PDF↔DMR-061↔DMR-062↔destinos funcionales reconciliada hasta pp.78. En pp.69–78 se completó el detalle del evento de visita, se conservó el seguimiento de Eina, se precisó el estado temporal de Bell y se corrigió Frog Shooter para no clasificar «Rana Tiradora» como alias confirmado. No se crearon IDs ni eventos nuevos. Siguiente bloque P1: pp.79–88. P2/P3 no se repiten. V1 sigue IN_PROGRESS / PARTIAL.
+
+
+### Cobertura P1 añadida · Volumen 1 · PDF pp.79–88 · 2026-11-01
+
+P1 PDF↔DMR-061↔DMR-062↔destinos funcionales reconciliada hasta p.88. Se completó el perfil de Bell para el combate y cerco de pp.79–85; la ficha War Shadow ya contenía los datos de especie y el evento existente de Hestia cubría pp.87–88. La ilustración p.86 queda sin identidad. No se crearon IDs ni eventos. Próximo bloque P1: pp.89–98. P2/P3 no se repiten. V1 sigue `PARTIAL / IN_PROGRESS`.
