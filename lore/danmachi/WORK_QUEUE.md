@@ -1484,9 +1484,9 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 
 - Pasada 2: pp.9–156 completadas; pp.157–214 conservan sus tres pasadas registradas.
 - Pasada 3: pp.9–156 completadas; pp.157–214 conservan sus tres pasadas registradas.
-- Pasada 1: reconciliación PDF↔registros funcionales completada en pp.9–48. En pp.39–41 se amplió la secuencia Bell/Hestia en ambas fichas, sin crear un evento nuevo. Seal (pp.42–46), Dungeon histórico (p.46) y grupo Kobold (pp.47–48) ya tenían destinos funcionales con límites y localizadores.
+- Pasada 1: reconciliación PDF↔registros funcionales completada en pp.9–58. En pp.49–51 se incorporaron la estrategia de supervivencia de Bell, las limitaciones de mochila/Ayudante y la economía de botín; en p.52 se añadieron cartografía, tamaño creciente de zonas inferiores y precisión de que «Dungeon vivo» alude a autorreparación. La hipótesis de Bell sobre reproducción de monstruos sigue sin confirmarse; la cuenta final de Kobolds no se normaliza.
 - Front matter: pp.1–7 inspeccionadas visualmente; p.8 blanca; p.215 créditos. El cotejo textual MD↔PDF sigue pendiente por inaccesibilidad del blob.
-- Próxima tarea P1: PDF pp.49–58; no repetir P2/P3 ni crear eventos duplicados.
+- Próxima tarea P1: PDF pp.59–68; no repetir P2/P3 ni crear eventos duplicados.
 
 ### Checkpoint DMR-061 · Volumen 1, PDF pp. 81–90 · 2026-10-31
 
