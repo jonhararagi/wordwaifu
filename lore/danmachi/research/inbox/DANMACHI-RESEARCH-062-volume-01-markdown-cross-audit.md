@@ -176,3 +176,30 @@ En esta **matriz priorizada de 14 hallazgos** hay 9 `COMPLETE`, 2 `PARTIAL`, 2 `
 - Se creó la ficha individual `equipment/daga-de-hestia.md` con ID `OBJ-DM-HESTIA-DAGGER-001`; conserva propiedades, materiales, limitaciones, préstamo y localizadores de la tarjeta visual.
 - Se enlazó la ficha individual desde `canon/08-indice-magia-habilidades-y-equipo.md`.
 - Sincronizaciones funcionales verificadas en main: ficha y índice de La Señora de la Abundancia, estado de ocho avenidas, source_refs y localizadores vigentes de Ais/Eina. Los hallazgos V1 AUD-011, AUD-012 y AUD-014 pasan a COMPLETE en esta matriz. Continúan pendientes la ficha completa de otros campos biográficos, el cotejo MD↔PDF y la reconciliación global de la pasada 1.
+
+
+## Reconciliación de pasada 1 — PDF pp.9–18 · 2026-11-01
+
+**Resultado del bloque:** contraste directo página a página entre el PDF físico y los destinos funcionales existentes. No se encontró una omisión sustantiva que requiera nueva ficha o evento. Se reutilizan los IDs existentes. La ambigüedad de p.18 permanece abierta como hallazgo específico; no impide documentar los demás hechos de la página.
+
+| Página física | Elemento / hecho de la fuente | Archivo funcional destino | Estado P1 | Acción / evidencia |
+|---:|---|---|---|---|
+| 9 | Prólogo: fantasía de Bell de ser héroe, rescatar a una chica, relacionarse con mujeres de otras razas, celos y harén; narrador lo califica de pensamiento inmaduro. | characters/bell-cranel.md · DMR-061 | COMPLETE | La ficha lo conserva como aspiración/contexto inicial y no como rasgo permanente. PDF p.9; DMR-061 tercera pasada pp.9–18. |
+| 10 | Bell Lv.1, baja del piso 2 al 5, es perseguido por un Minotauro, queda acorralado y teme morir. | characters/bell-cranel.md · EVT-DM-BELL-AIS-MINOTAUR-001 · monsters/minotaur.md | COMPLETE | Hecho y localizador existentes; no inventar equipo ni técnica. PDF p.10; DMR-061 tercera pasada pp.9–18. |
+| 11 | Bell queda sin salida; una línea atraviesa al Minotauro y lo despedaza; Bell ve un destello plateado y queda cubierto de sangre. La fuente no identifica arma, skill ni técnica. | EVT-DM-BELL-AIS-MINOTAUR-001 · monsters/minotaur.md | COMPLETE | Se registra el resultado sin nombrar técnica ni atribuir arma concreta. PDF p.11; evento existente. |
+| 12 | Ilustración del rescate: mujer armada y figura oscura, sin rótulo nominal. | EVT-DM-BELL-AIS-MINOTAUR-001 · characters/ais-wallenstein.md | COMPLETE | Identidad contextualizada por texto de p.13, nunca deducida solo de la imagen. PDF p.12, inspección visual documentada. |
+| 13 | Identificación textual: «Aizu Wallenstein», Princesa de la Espada, nivel 5, Loki Familia; cabello rubio, ojos dorados y armadura ligera azul. | characters/ais-wallenstein.md · EVT-DM-BELL-AIS-MINOTAUR-001 | COMPLETE | Variante «Aizu» preservada como grafía de la traducción; nivel 5 se limita a esta escena. PDF p.13. |
+| 14 | Bell queda prendado de Ais y reafirma que no se equivocó al desear un encuentro en el Dungeon. No hay reciprocidad. | characters/bell-cranel.md · EVT-DM-BELL-AIS-MINOTAUR-001 | COMPLETE | Reacción unilateral ya registrada; no crear relación romántica confirmada. PDF p.14. |
+| 15 | Portadilla ilustrada del capítulo 1 con texto japonés; no es una escena narrativa ni identifica nominalmente a la figura. | characters/ais-wallenstein.md · DMR-061 | COMPLETE | Se conserva como material editorial sin asignar identidad por apariencia. PDF p.15, inspección visual documentada. |
+| 16 | Eina trabaja como asesora del Gremio; apariencia/vestimenta y condición mezcla de humana y elfa. Recuerda haber conocido a Bell casi dos semanas antes durante sus trámites; tenía 14 años entonces. Bell entra cubierto de sangre negra y pide información de Ais. | characters/eina-tulle.md · characters/bell-cranel.md · EVT-DM-EINA-ADVISOR-001 | COMPLETE | Detalles principales, edad contextual de Bell y primer contacto profesional ya constan con localizador. No fijar fecha absoluta ni edad de Eina. PDF p.16. |
+| 17 | Bell y Eina conversan en una sala separada del Gremio; Eina le reprocha llegar directamente del Dungeon con sangre/mal olor y escucha el relato del rescate, incluida la huida avergonzada antes de agradecer a Ais. | EVT-DM-EINA-ADVISOR-001 · EVT-DM-BELL-AIS-MINOTAUR-001 | COMPLETE | Separación correcta entre rescate y relato posterior; no crear un segundo rescate ni una nueva identidad. PDF p.17. |
+| 18 | Eina da su máxima de priorizar preparación y seguridad; considera anómalo un Minotauro Lv.2 en el piso 5; Bell promete recordar el consejo y quiere volver a encontrar a Ais. | EVT-DM-EINA-ADVISOR-001 · monsters/minotaur.md · EVT-DM-BELL-AIS-MINOTAUR-001 | COMPLETE para los hechos; UNRESOLVED para la dirección del piso habitual | La regla se atribuye a Eina como consejo, no a una norma formal de Guild. La frase traducida «decimoquinto piso o por debajo» queda sin normalizar. PDF p.18. |
+
+### Resultado del bloque P1 pp.9–18
+
+- 10 folios contrastados directamente con la fuente y los destinos funcionales; no se detectó información sustantiva ausente que justifique crear otra ficha o evento.
+- La ambigüedad de p.18 permanece UNRESOLVED y no se corrige por inferencia.
+- Ningún ID nuevo era necesario: se reutilizan Bell, Ais/Aizu, Eina, Minotauro y los eventos de rescate/asesoramiento ya existentes.
+- La revisión de p.12 y p.15 conserva ambas imágenes sin identificar figuras por apariencia.
+- **Siguiente bloque de reconciliación P1:** PDF pp.19–28. No repetir las pasadas 2 y 3 ya documentadas para ese tramo.
+- **Límite:** el cotejo textual directo de la transcripción MD con el PDF no está incluido porque el blob MD sigue inaccesible mediante la API. Esta reconciliación es PDF↔DMR-061↔registros funcionales.
