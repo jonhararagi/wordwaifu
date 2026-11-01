@@ -295,3 +295,13 @@ Al recoger el botín, Bell aclara que su mochila no es una bolsa mágica: su cap
 - **Alcance temporal:** reflexión y decisión táctica de Bell después de su primer combate numeroso; no convertirla en una estrategia inmutable para toda su carrera.
 - **Límite:** no se infiere que pedir consejo a otra Familia esté formalmente prohibido ni que Bell rechace toda ayuda futura.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF pp.49 y 51.
+
+
+## CONT-MAIN-LN · ingresos, gastos y daga inicial durante la cena · Volumen 1 · PDF pp.60–61
+
+Durante la cena en La Señora de la Abundancia, Bell calcula que obtuvo unos **4.400 Varisu ese día**, una cantidad superior a los aproximadamente **2.000 Varisu** que considera habituales en sus jornadas normales. Como referencias de esa conversación menciona una comida sencilla de **50 Varisu** y una poción por **al menos 500 Varisu** (p.60). Son cifras que Bell ofrece en esa escena y no una lista oficial de tarifas ni un registro de su saldo total.
+
+En p.61 Bell recuerda que su daga actual costó **3.600 Varisu**, que la compró con un préstamo del Gremio y que ya ha terminado de pagar esa deuda, junto con las obligaciones del equipo defensivo. Pide pasta por **300 Varisu**. Esta daga inicial no es la Daga de Hestia, cuya fabricación, entrega y préstamo son acontecimientos posteriores. La ficha visual de p.209 presenta además una cifra de **8.600 Varisu** asociada a la daga inicial y al equipo defensivo en conjunto; no se fuerza una equivalencia contable entre esa cifra agregada y el precio de la daga sola de p.61.
+
+- **Procedencia:** palabras de Bell durante la visita nocturna; no se convierten en precios universales ni saldo bancario verificado.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF pp.60–61 y tarjeta visual p.209.
