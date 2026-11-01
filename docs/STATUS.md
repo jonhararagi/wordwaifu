@@ -1212,3 +1212,13 @@ Sobre SHA 4423efcfc55920b02fdf949927ae7a4033bf1033:
 - MASTER_INDEX: 7fd6f7b5e8a3dba96617a6f76c11757ea66a542a.
 - Lugar La Señora de la Abundancia: 1051b5f9c1724dd6afb85adee398fd7cc11b50e2; índice de lugares: 3180ec2e9afdfdd90253dbd60b005cc90251f26c.
 - Ais: 49da0090229829d76eca98cab9a0c493299bc416; Eina: 2f42dfe2b5ba7a28b42b1998b404588d4336dc77.
+
+## CI observado durante la auditoría V1 — 2026-11-01
+
+Sobre el SHA de main `926adcec167d4b3645d4769dfaab2023f29a3994` se iniciaron automáticamente:
+- [Validate WordWaifu #41327734686](https://github.com/jonhararagi/wordwaifu/actions/runs/41327734686) — `in_progress` en la última consulta.
+- [DanMachi Lore and Retrieval Integrity #41327734707](https://github.com/jonhararagi/wordwaifu/actions/runs/41327734707) — `in_progress` en la última consulta.
+
+Los pasos previos visibles en Validate incluían syntax, catalog IDs/relations, generadores, import validation, character dossiers, roster coverage, lore IDs/links y sus pruebas asociadas; estaban en success. En Lore estaban en success los pasos de retrieval/abstention, timeline/continuity, event links, archive model, Hostess/Guild graph y Prototype location separation; el browser smoke y la validación final de catálogo/enlaces seguían en ejecución. No se declara el workflow completo como success mientras GitHub no publique la conclusión final.
+
+**Tests locales:** no ejecutados; la conexión de esta sesión permite leer/escribir GitHub, pero no proporciona un checkout ejecutable del repositorio local. **CI:** los workflows anteriores son evidencia de ejecución en GitHub, no un resultado final aún.
