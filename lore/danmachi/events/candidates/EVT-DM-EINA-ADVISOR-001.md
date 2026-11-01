@@ -45,7 +45,7 @@ No extrapolar automáticamente el mismo puesto, antigüedad o relación al perio
 
 ## Complemento de tercera pasada · PDF pp.19–23
 
-- **Ais según Eina (p.19):** Eina dice que Ais derrotó sola a un grupo de monstruos de nivel 5 y que en ese momento no está saliendo con nadie, según lo que ella ha oído. No se da un número exacto de monstruos ni se presenta el estado sentimental como permanente.
+- **Ais según Eina (p.19):** Eina dice que Ais derrotó sola a un grupo de monstruos de nivel 5 y valora su manejo de la espada como situado en la cima de los aventureros. La traducción también refiere el elogio «Aizu no tiene paralelo en el mundo» entre los dioses; se conserva como expresión de reputación reportada, no como alias oficial estable sin cotejo. Eina añade que Ais no está saliendo con nadie, según lo que ha oído; no se presenta como estado sentimental permanente. No se da un número exacto de monstruos.
 - **Reputación:** la frase sobre «1000 cortejos fallidos» se mantiene como hipérbole de la traducción, no como conteo verificable.
 - **Bell:** admite a Eina que se enamoró de Ais; su frase de despedida «Eina-san, ¡Te amo!» va seguida de «¡Gracias!» y no demuestra reciprocidad o vínculo romántico estable.
 - **Eina:** el texto la presenta como popular entre los aventureros y destaca su trato amable y cuidador. Son impresiones narrativas, no una lista de relaciones.
