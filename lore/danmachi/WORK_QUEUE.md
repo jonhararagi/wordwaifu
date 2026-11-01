@@ -1454,7 +1454,8 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Crear un expediente de auditoría con alcance, cobertura, límites de fuente, diferencias y pendientes: [DANMACHI-RESEARCH-062](research/inbox/DANMACHI-RESEARCH-062-volume-01-markdown-cross-audit.md).
 - [x] Crear diez fichas individuales de monstruos del Volumen 1 con referencias DMR-061-SRC-001 y localizadores PDF; ninguna ficha añade estadísticas, niveles, debilidades o habilidades ausentes.
 - [x] Añadir las fichas al índice de monstruos y al catálogo estructurado, sin modificar los eventos existentes ni duplicar especies/individuos.
-- [ ] Cotejar MD contra PDF en pp.1–10 y determinar si contienen material narrativo que falta en el dossier secuencial.
+- [x] Revisar directamente el PDF físico pp.1–10: pp.1–7 (cubierta/ilustraciones/portadillas) inspeccionadas visualmente; p.8 blanca; pp.9–10 leídas y contrastadas con DMR-061, el evento Bell–Minotauro y la ficha de Bell. No se crea evento duplicado.
+- [ ] Cotejar el contenido de la transcripción MD contra el PDF en pp.1–10. El archivo MD existe en `main`, pero la API de GitHub devuelve contenido vacío; no marcar el cotejo MD↔PDF como completado hasta recuperar su texto.
 - [x] Inspección visual de pp.19–24 y 49–54 completada: p.22 es la única ilustración de pp.19–24; pp.49–54 son texto. La tabla de Estado p.54 se revisó junto con el snapshot extraído.
 - [ ] Atomizar solo las reglas y objetos que necesiten ficha propia: Dungeon (nacimiento/reparación/desplazamiento de monstruos), Piedras Mágicas, Falna/Estado y Daga de Hestia.
 - [ ] Revisar eventos candidatos de Frog Shooter/War Shadows y Dungeon Lizard contra el catálogo antes de asignar IDs.
