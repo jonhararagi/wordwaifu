@@ -1515,3 +1515,13 @@ La siguiente matriz separa lo que los checkpoints permiten certificar de la extr
 - **Estado P1 del bloque:** PDF↔DMR-061↔registros funcionales reconciliado para pp.29–38; dos faltas de modelado corregidas. No se crean fichas de personajes ni eventos/IDs nuevos.
 - **Próximo bloque P1:** PDF pp.39–48. P2/P3 de pp.39–48 ya están documentadas; no repetirlas.
 - **Límite:** el cotejo de transcripción MD↔PDF sigue pendiente porque el blob original MD no se recupera mediante la API de GitHub.
+
+
+## DMR-061 — reconciliación P1 PDF pp.29–38 · 2026-11-01
+
+- Diez folios comparados con el PDF físico y los registros funcionales ya existentes.
+- Omisión de modelado corregida: la ficha funcional de progresión (canon/04) ahora registra, con alcance limitado a la traducción de p.33, los cinco atributos, los diez grados S–I, los intervalos I=0–99 y H=100–199, el máximo 999 y la relación entre acciones pertinentes y aumento de dominio. No se inventan intervalos A–G ni fórmula matemática.
+- Omisión de perfil corregida: Hestia ahora conserva el diálogo de p.31 sobre el contacto físico que Bell atribuye a los Elfos y la generalización que ella expresa sobre las Amazonas. Se identifica como diálogo/creencia del personaje, no como regla universal sobre cada individuo.
+- El resto (primer encuentro/promesa, procedimiento de actualización, afiliación y matrimonio, snapshot, magia/habilidades, [Deseo Inquebrantable], reflexión interna de Hestia, portadilla p.37 y lámpara doméstica p.38) ya estaba registrado en las fichas/eventos/canon/lugar correspondientes.
+- No se crearon IDs, fichas de personajes o eventos nuevos. La figura de p.37 permanece sin identificar.
+- **Próximo bloque P1:** PDF pp.39–48. P2/P3 ya documentadas; no repetir.
