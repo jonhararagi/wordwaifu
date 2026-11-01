@@ -366,3 +366,30 @@ En esta **matriz priorizada de 20 hallazgos** hay 15 `COMPLETE`, 2 `PARTIAL`, 2 
 - No se crean IDs ni eventos nuevos.
 - **Próximo bloque P1:** PDF pp.69–78; no repetir P2/P3.
 - **Límite:** la traducción sigue sin cotejo japonés; el cotejo directo MD↔PDF completo permanece pendiente.
+
+
+## Matriz de reconciliación de pasada 1 — PDF pp.69–78 · 2026-11-01
+
+**Resultado:** diez páginas físicas contrastadas con DMR-061 y destinos funcionales. P2/P3 ya estaban documentadas y no se repitieron. Se corrigieron omisiones en la reacción cómica de Loki (p.71), el estado temporal de Bell (pp.72, 77–78) y un alias indebido de Frog Shooter.
+
+| Página física | Elemento fuente | Destino funcional | Estado P1 | Evidencia / acción |
+|---:|---|---|---|---|
+| 69 | Ais sigue con la mirada a Bell, oye a una empleada gritar su nombre y piensa que «Bell» resuena más que los llamados de sus compañeros. | EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001 | COMPLETE | El evento ya conserva la reacción limitada; no inferir romance ni la razón de la resonancia. PDF p.69. |
+| 70 | Ilustración monocroma de Ais delante y Loki abrazándola por detrás. | DMR-061; evento de visita | COMPLETE | Contextualiza la escena; no crea identidad o relación nueva. PDF p.70. |
+| 71 | Loki queda con marca roja tras la bofetada, llora/tiembla brevemente y recupera el ánimo con la exclamación «fría Aizu-tan»/«moe»; Bete queda atado y Riveria le pisa la cabeza. | EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001 | COMPLETE | Se amplía el evento existente con la reacción cómica que faltaba; no se crea evento nuevo. PDF p.71. |
+| 72 | Bell dirige su vergüenza contra su propia debilidad, no contra Bete ni el grupo. Piensa que no merece estar junto a «esa persona» y corre hacia Babel/Dungeon. | EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001; characters/bell-cranel.md | COMPLETE | Evento existente y ficha de Bell; no identificar «esa persona» como Ais. PDF p.72. |
+| 73 | Portadilla ilustrada del capítulo 3, título traducido «La Noche Antes del Despertar» y silueta abstracta. | DMR-061 | COMPLETE | Material editorial; silueta sin identificar. PDF p.73. |
+| 74 | Eina y Misha trabajan a las 21:00 bajo lluvia, con horas extra por la gestión del Festival; Misha revisa la hoja de Bell preparada para el líder del equipo. | EVT-DM-EINA-ADVISOR-001 | COMPLETE | El evento existente lo documenta; Misha se mantiene como colega humana sin ficha. PDF p.74. |
+| 75 | Misha comenta que Bell alcanzó el quinto piso en medio mes; Eina explica su avance imprudente, falta de preparación y riesgo, separándolo de la fuga del Minotauro por Loki Familia. Eina dice que no lo dejará avanzar mientras lo asesora. | EVT-DM-EINA-ADVISOR-001 | COMPLETE | Intención personal de Eina, no prohibición de la Guild. PDF p.75. |
+| 76 | Eina recuerda «te amo» de Bell dos días antes, se ruboriza y lo considera como un hermano menor; luego Bell vuelve al Dungeon y mata un Frog Shooter. Nota propone «Rana Tiradora». | EVT-DM-EINA-ADVISOR-001; MON-DM-FROG-SHOOTER-001 | COMPLETE | El evento y la ficha existentes contienen la escena. «Rana Tiradora» se elimina de aliases porque solo es propuesta editorial. PDF p.76. |
+| 77 | Bell avanza sin armadura personal, herido y con ropa/daga dañadas; sigue cazando fatigado, impulsado por deseo de alcanzar a «esa persona» no nombrada. | characters/bell-cranel.md | COMPLETE | Se añade como estado temporal; no se crea relación o equipo nuevo. PDF p.77. |
+| 78 | Bell llega inadvertidamente al sexto piso, agotado, en una sala cuadrada sin salida aparente; sin reloj no sabe cuánto tiempo lleva. Oye «Bikiri» y luego «Bikiri, Bikiri». | characters/bell-cranel.md; DMR-061 | COMPLETE | Se registra estado físico/espacial y sonido sin origen; no anticipar War Shadow (primera aparición p.79). PDF p.78. |
+
+### Resultado P1 pp.69–78
+
+- Diez folios físicos cotejados; ilustraciones en pp.70 y 73; nota al pie en p.76; no hay tablas de Estado.
+- Se corrigió la omisión de la reacción cómica de Loki en p.71.
+- Se eliminó «Rana Tiradora» del campo aliases de MON-DM-FROG-SHOOTER-001; solo queda como propuesta de la nota, no nombre confirmado.
+- No se crean IDs, eventos, fichas de Misha ni entidades para silueta/sonido.
+- **Próximo bloque P1:** PDF pp.79–88; no repetir P2/P3.
+- **Límites:** traducción privada no cotejada con japonés; sonido de p.78 sin origen; combate continúa pp.79–85; cotejo MD↔PDF integral pendiente.
