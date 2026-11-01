@@ -35,3 +35,13 @@ Hestia pone como ejemplo que un acontecimiento oculto de la historia personal �
 
 - **Atribución:** explicación de Hestia en la conversación con Bell.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF p.31.
+
+### Rangos de atributos y dominio · CONT-MAIN-LN · Volumen 1 · PDF p.33
+
+La ficha que Hestia entrega a Bell presenta cinco atributos: Fuerza, Resistencia, Destreza, Agilidad y Magia. La explicación de la misma página enumera diez grados, de mayor a menor: S, A, B, C, D, E, F, G, H e I. La traducción especifica que I abarca 0–99, H abarca 100–199 y que el dominio tiene un límite superior de 999; además dice que 999 corresponde al rango S. No se reconstruyen los intervalos de A–G porque la página no los enumera en el pasaje transcrito.
+
+El texto relaciona el aumento del dominio con acciones vinculadas al atributo: como ejemplo, para aumentar Resistencia Bell tendría que soportar ataques; bloquear con arma o equipo defensivo también cuenta, aunque Bell prefiera esquivar porque recibir golpes duele. Bell se pregunta si sus 24 puntos adicionales de Agilidad se deben a correr para escapar del Minotauro, pero es una conjetura del personaje, no una causa confirmada.
+
+- **Atribución:** explicación narrativa de la p.33 y reflexión de Bell; no se presenta aquí una fórmula matemática completa.
+- **Alcance:** snapshot de Bell Lv.1 en esta escena; la escala se registra como explicación de la traducción privada, no cotejada con japonés.
+- **Fuente:** DMR-061-SRC-001, Volumen 1, PDF p.33.
