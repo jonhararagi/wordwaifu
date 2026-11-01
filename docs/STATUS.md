@@ -1280,3 +1280,14 @@ La auditoría visual directa de pp.49–58 confirmó diez páginas de texto y el
 - **Visual:** las diez páginas se renderizaron e inspeccionaron individualmente a 130 dpi; no hay ilustraciones, tablas, diagramas ni notas al pie.
 - **P1 completada (PDF↔registros funcionales):** pp.9–68. Siguiente bloque P1: pp.69–78. P2/P3 no se repiten.
 - **Límites:** traducción privada no cotejada con japonés; MD↔PDF integral pendiente; V1 sigue IN_PROGRESS / PARTIAL.
+
+
+## DMR-061 — avance de reconciliación P1 · PDF pp.69–78 · 2026-11-01
+
+- **pp.69–72:** Ais reconoce el nombre de Bell y este le resuena más que los llamados de sus compañeros; no se infiere romance. El evento de la taberna incorpora la reacción cómica de Loki tras la bofetada (p.71). Bell dirige la vergüenza a su propia debilidad y deja sin identificar a «esa persona» (p.72).
+- **p.73:** portadilla del capítulo 3 con silueta abstracta no identificada; se mantiene como material editorial.
+- **pp.74–76:** Eina y Misha trabajan horas extra a las 21:00 durante la lluvia y la gestión del Festival. Se reutiliza EVT-DM-EINA-ADVISOR-001; no se crea ficha para Misha. El pensamiento de Eina sobre Bell queda limitado a su POV.
+- **pp.76–78:** Bell mata un Frog Shooter (ficha existente); «Rana Tiradora» se elimina de aliases, pues solo es propuesta editorial. Bell continúa sin armadura, con ropa y arma dañadas, alcanza inadvertidamente el sexto piso y oye «Bikiri» repetido. El sonido queda sin origen; no se anticipa War Shadow antes de p.79.
+- **Visual:** ilustraciones en pp.70 y 73; nota al pie en p.76; no hay tablas de Estado.
+- **P1 completada (PDF↔registros funcionales):** pp.9–78. Siguiente bloque P1: pp.79–88. P2/P3 no se repiten.
+- **Límites:** traducción privada no cotejada con japonés; MD↔PDF integral pendiente; ambigüedad p.18, recuento Kobold y discrepancias estadísticas siguen abiertas. V1 continúa IN_PROGRESS / PARTIAL.
