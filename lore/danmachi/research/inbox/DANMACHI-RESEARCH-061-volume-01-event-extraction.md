@@ -1461,7 +1461,7 @@ La siguiente matriz separa lo que los checkpoints permiten certificar de la extr
 |---|---|---|---|---|---|
 | pp.1–7 | No es tramo narrativo; material editorial revisado | No aplica extracción narrativa | No aplica extracción narrativa | Inspeccionadas como cubierta, ilustraciones y portadillas | COMPLETE para front matter; no se cuenta como narración |
 | p.8 | Página en blanco; sin narración | Verificado como folio blanco | Verificado como folio blanco | Renderizada e inspeccionada | COMPLETE como folio vacío |
-| pp.9–10 | Integradas en extracción/escena inicial; falta cotejo MD↔PDF | No se declara una pasada 2 independiente completa en el registro | Revisadas en tercera pasada pp.9–18; contenido integrado a Bell y evento Minotauro | pp.9–10 leídas en PDF; son páginas de texto | PARTIAL: reconciliación focal PDF↔registros hecha; cotejo MD pendiente |
+| pp.9–10 | Contenido de PDF reconciliado con DMR-061, fichas y evento | P2 incluida en el bloque pp.9–60 | P3 pp.9–18 documentada | pp.9–10 leídas en PDF; páginas de texto | COMPLETE para PDF↔registros funcionales; cotejo MD↔PDF independiente pendiente |
 | pp.11–18 | Extracción secuencial en DMR-061 | La lectura de detalle está incluida en el registro histórico de pp.9–60; la matriz inicial por folio requiere reconciliación explícita | Tercera pasada pp.9–18 documentada | p.12 y p.15 ilustradas; render/inspección documentada en tercera pasada | PARTIAL para certificación de pasada 1; pasadas 2/3 según el registro histórico |
 | pp.19–156 | Extracción secuencial histórica y notas por bloques; falta reconciliar exhaustivamente cada folio como P1 | P2 completa según bloques pp.9–156 | P3 completa según bloques pp.9–156 | Inspecciones físicas registradas en los checkpoints detallados; visuales pendientes antiguos pp.19–24 y 49–54 cerrados | PARTIAL global: P1 requiere matriz folio por folio |
 | pp.157–177 | Extracción primaria documentada | Tres pasadas conservadas en los registros previos | Tres pasadas conservadas | Renderizaciones/inspecciones por bloques documentadas | COMPLETE según checkpoints de las tres pasadas |
@@ -1478,3 +1478,14 @@ La siguiente matriz separa lo que los checkpoints permiten certificar de la extr
 - **Fuente y traducción:** DMR-061-SRC-001 es una traducción privada no cotejada con japonés. Esta limitación no invalida la localización dentro del archivo aportado, pero impide asegurar la fidelidad terminológica al original japonés.
 
 **Estado del volumen:** IN_PROGRESS. No declarar COMPLETE hasta cerrar la reconciliación de la pasada 1 y el cotejo del MD, verificar todas las relaciones/eventos funcionales y ejecutar/registrar las validaciones disponibles.
+
+
+## DMR-061 — reconciliación de pasada 1 con registros funcionales · PDF pp.9–18 · 2026-11-01
+
+- **Resultado:** diez folios (pp.9–18) revisados directamente contra el PDF físico y cruzados con DMR-061, perfiles y eventos existentes.
+- **Cobertura:** no se detectaron hechos sustantivos ausentes de los destinos funcionales. Bell, Ais/Aizu, Eina y Minotauro reutilizan sus fichas; EVT-DM-BELL-AIS-MINOTAUR-001 y EVT-DM-EINA-ADVISOR-001 conservan las escenas sin duplicación.
+- **Detalle y límites:** se verificó la fantasía inicial de Bell (p.9), la persecución en nivel 1 (p.10), el corte y rescate (p.11), la ilustración no rotulada (p.12), la identificación textual y nivel 5 de Ais (p.13), la reacción unilateral de Bell (p.14), la portadilla sin identidad (p.15), el perfil/primer contacto profesional de Eina y la edad contextual de Bell de 14 años (p.16), el relato del rescate y el reproche de Eina (p.17), y el consejo de seguridad y anomalía del Minotauro (p.18).
+- **Punto no resuelto:** la frase traducida de p.18 sobre el piso habitual del Minotauro («decimoquinto piso o por debajo») sigue ambigua. No se corrige mediante el relato posterior de pp.63–66 ni con información externa.
+- **Control visual:** p.12 (rescate) y p.15 (portadilla) se mantienen sin identidades inferidas de la apariencia; ambas inspecciones visuales ya estaban documentadas en DMR-061.
+- **Estado P1 de este bloque:** reconciliación PDF↔registros funcionales completada para pp.9–18; no se añadieron IDs ni fichas. La comparación textual directa MD↔PDF sigue pendiente por inaccesibilidad del blob MD.
+- **Próximo bloque P1:** PDF pp.19–28. No repetir P2/P3 ya documentadas para el rango.
