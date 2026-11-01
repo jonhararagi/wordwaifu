@@ -33,7 +33,7 @@ Estos datos describen el escenario de Prototype; sirven como preguntas bien loca
 
 ## Estado
 
-Ficha de infraestructura urbana con evidencia directa de Prototype. La verificación de las mismas ocho avenidas en la novela principal sigue pendiente.
+Ficha parcial de infraestructura urbana con evidencia directa tanto de CONT-PROTOTYPE como de CONT-MAIN-LN. La novela principal confirma ocho avenidas orientadas desde el centro hacia las murallas (V1 PDF pp.123–124). El trazado como cuatro líneas gruesas que cruzan el centro está documentado únicamente en Prototype. Ninguna fuente aquí proporciona coordenadas, escala, anchura o un plano completo.
 
 
 ## Ocho avenidas en la novela principal · CONT-MAIN-LN · Volumen 1 · PDF pp.123–124
