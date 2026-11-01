@@ -1222,3 +1222,12 @@ Sobre el SHA de main `926adcec167d4b3645d4769dfaab2023f29a3994` se iniciaron aut
 Los pasos previos visibles en Validate incluían syntax, catalog IDs/relations, generadores, import validation, character dossiers, roster coverage, lore IDs/links y sus pruebas asociadas; estaban en success. En Lore estaban en success los pasos de retrieval/abstention, timeline/continuity, event links, archive model, Hostess/Guild graph y Prototype location separation; el browser smoke y la validación final de catálogo/enlaces seguían en ejecución. No se declara el workflow completo como success mientras GitHub no publique la conclusión final.
 
 **Tests locales:** no ejecutados; la conexión de esta sesión permite leer/escribir GitHub, pero no proporciona un checkout ejecutable del repositorio local. **CI:** los workflows anteriores son evidencia de ejecución en GitHub, no un resultado final aún.
+
+## DMR-061 — avance de reconciliación P1 · 2026-11-01
+
+- **PDF pp.9–18:** reconciliadas con fichas/eventos funcionales; no se detectó ausencia sustantiva. La frase traducida de p.18 sobre el piso habitual del Minotauro permanece UNRESOLVED.
+- **PDF pp.19–28:** reconciliadas con fichas/eventos/reglas/lugar existentes. Se detectaron y corrigieron dos omisiones factuales: valoración de la esgrima de Ais y elogio «Aizu no tiene paralelo en el mundo» reportado en p.19; motivo concreto del menor ingreso de Bell (menos tiempo en Dungeon al huir de Ais) en p.21. Se añadió también el diálogo del «gran barco» de p.26 como metáfora no interpretada literalmente.
+- **IDs:** no se crearon eventos, personajes ni relaciones nuevas para pp.9–28; se reutilizaron Bell, Ais, Eina, Hestia, Minotauro y los expedientes existentes.
+- **Siguiente bloque P1:** PDF pp.29–38. No repetir P2/P3 de ese rango.
+- **Pendientes globales:** P1 pp.29–156; cotejo textual MD↔PDF por el blob MD inaccesible; granularidad de reglas/objetos; cotejo japonés; validación final de workflows sobre el último SHA.
+- **Estado:** V1 sigue IN_PROGRESS / PARTIAL.
