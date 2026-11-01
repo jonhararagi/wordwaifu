@@ -37,7 +37,7 @@ Bell se enfrenta a un grupo de Kobolds en el primer piso. La narración dice que
 - **PDF p. 48 — emboscada:** Bell se oculta en una esquina del primer piso y espera que aparezca un Kobold. Lo apuñala en el corazón, usa el cuerpo como escudo para empujar a otros dos al suelo y apuñala en la garganta a uno de ellos. La traducción hace que Bell cuente «dos abajo», pero el detalle exacto de cómo se contabilizan los monstruos abatidos en esta maniobra no se normaliza.
 - **PDF p. 49 — desenlace declarado por Bell:** Bell evita a otro Kobold y patea la cabeza de uno que estaba en el suelo. Después corta el estómago de otro, dice «sólo quedan dos» y poco después describe que aplasta al último que lo mira con terror. Se sienta frente a los Kobolds inmóviles y afirma que, pese a ser su primera pelea contra tantos enemigos, logró escapar del peligro sin heridas. **Límite:** los números y la formulación singular/plural del tramo final no permiten reconstruir sin ambigüedad una cuenta exacta de bajas; conservar las frases del texto y no fijar una cifra de muertos.
 - **PDF p. 50 — extracción de Piedras Mágicas:** Bell abre los cadáveres y retira los pequeños cristales de color rojo violáceo que describe como Fragmentos de Piedra Mágica. Recuerda que se cambian por dinero en el Gremio y que la Piedra Mágica es el núcleo y fuente de vida del monstruo; cuando se retira, el cuerpo se convierte en cenizas. Parte de la explicación se atribuye a lo que Eina había enseñado a Bell.
-- **PDF p. 51 — botín:** tras recuperar los fragmentos, Bell encuentra una garra derecha que permanece intacta después de que el cadáver se convierte en cenizas. La identifica como botín, la guarda en su mochila y explica que partes de monstruos pueden venderse y que algunas sirven como materiales de armas y armaduras. La página también describe que los aventureros suelen contar con un Ayudante no combatiente para recuperar objetos, pero Bell carece de compañeros de Familia y carga con su propio equipaje.
+- **PDF p. 51 — botín:** tras recuperar los fragmentos, Bell encuentra una garra derecha que permanece intacta después de que el cadáver se convierte en cenizas. La identifica como botín, la guarda en su mochila y explica que partes de monstruos pueden venderse y que algunas sirven como materiales de armas y armaduras. La página también describe que los aventureros suelen contar con un Ayudante no combatiente para recuperar objetos, pero Bell carece de compañeros de Familia y carga con su propio equipaje. Bell aclara en tono humorístico que la mochila no es una bolsa mágica: tiene límites físicos, puede desbordarse o romperse y el peso de lo que guarda permanece. Llevar él mismo el equipo y el botín durante el combate puede obstaculizar sus movimientos.
 
 ## Participantes
 
@@ -72,3 +72,12 @@ Bell se enfrenta a un grupo de Kobolds en el primer piso. La narración dice que
 - **Decisión:** ampliar este evento y MON-DM-KOBOLD-001; no crear otro encuentro, una ficha de garra ni una cifra de bajas normalizada.
 - **Visual:** pp.49–51 renderizadas a 130 dpi; las tres son páginas de texto, sin ilustración, tabla o nota al pie.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
+
+## Decisión de supervivencia posterior al combate · PDF p.49
+
+Tras sobrevivir al grupo, Bell piensa que carece de maestro, senpai y compañeros de Familia que puedan enseñarle; considera pedir consejos a Familias experimentadas, pero teme que ello complique la relación con Hestia y otras Familias. Decide reducir los riesgos: luchar contra un enemigo cada vez, no cazar demasiado profundo y aprovechar el terreno favorable. Recuerda las instrucciones de Eina como su principal guía práctica.
+
+- **Atribución:** reflexión/plan de Bell después de este combate; no es una norma del Dungeon ni un rechazo permanente a recibir ayuda.
+- **Consecuencia documental:** el perfil de Bell conserva esta estrategia como decisión contextual de su etapa inicial.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF p.49.
