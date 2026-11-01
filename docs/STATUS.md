@@ -1291,3 +1291,16 @@ La auditoría visual directa de pp.49–58 confirmó diez páginas de texto y el
 - **Visual:** ilustraciones en pp.70 y 73; nota al pie en p.76; no hay tablas de Estado.
 - **P1 completada (PDF↔registros funcionales):** pp.9–78. Siguiente bloque P1: pp.79–88. P2/P3 no se repiten.
 - **Límites:** traducción privada no cotejada con japonés; MD↔PDF integral pendiente; ambigüedad p.18, recuento Kobold y discrepancias estadísticas siguen abiertas. V1 continúa IN_PROGRESS / PARTIAL.
+
+
+## DMR-061 — reconciliación de pasada 1 V1 · PDF pp.79–88 (2026-11-01)
+
+- **Resultado:** diez folios físicos cotejados contra el PDF original, DMR-061, la matriz individual de DMR-062 y los destinos funcionales existentes en `main`.
+- **Corrección funcional:** `characters/bell-cranel.md` incorpora el combate, la pérdida de la daga, las heridas, el cerco y el equipo improvisado de pp.79–85. La ficha existente `monsters/war-shadow.md` ya contenía los datos de especie y conserva separados los desenlaces de los dos ejemplares. El evento `EVT-DM-V01-HESTIA-SEARCHES-BELL-AND-CARES-FOR-HIM-001` ya cubría pp.87–88; no se duplicó.
+- **Sincronización documental:** DMR-061, DMR-062, MASTER_INDEX y WORK_QUEUE actualizados. El encabezado histórico de MASTER_INDEX que decía pp.59–68 se corrigió a pp.69–78, conservando el historial.
+- **Cobertura P1:** reconciliada pp.9–88; próximo bloque pp.89–98. P2/P3 pp.9–156 permanecen documentadas y no se repitieron; pp.157–214 conservan sus tres pasadas.
+- **Integración en main:** [commit `a0085d54ebc362d7725315654a5545ccaf7f9369`](https://github.com/jonhararagi/wordwaifu/commit/a0085d54ebc362d7725315654a5545ccaf7f9369) y corrección documental/perfil [commit `042539839cbbf82fc7dc43485651c4010747e95e`](https://github.com/jonhararagi/wordwaifu/commit/042539839cbbf82fc7dc43485651c4010747e95e). Ambos commits se publicaron directamente en `main`, sin ramas ni PR.
+- **CI sobre el SHA exacto `042539839cbbf82fc7dc43485651c4010747e95e`:** Validate WordWaifu [run #41344580942](https://github.com/jonhararagi/wordwaifu/actions/runs/41344580942), `success`; DanMachi Lore and Retrieval Integrity [run #41344580943](https://github.com/jonhararagi/wordwaifu/actions/runs/41344580943), `success`. Incluyen validación de catálogo/IDs/enlaces y browser smoke.
+- **Tests locales:** no se ejecutaron; la validación registrada corresponde exclusivamente a GitHub Actions.
+- **Límites:** la traducción privada sigue sin cotejo con japonés. El cotejo integral independiente MD↔PDF continúa pendiente porque GitHub no devuelve los bytes del blob de la transcripción original. Permanecen abiertas la ambigüedad de p.18, la cuenta final de bajas Kobold y las discrepancias estadísticas ya registradas.
+- **Estado:** Volumen 1 continúa `PARTIAL / IN_PROGRESS`; no iniciar Volumen 2.
