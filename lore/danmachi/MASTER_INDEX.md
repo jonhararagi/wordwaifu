@@ -506,14 +506,15 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 
 
 
-## DMR-061 — checkpoint vigente de lectura secuencial · Volumen 1 · 2026-10-31
+## DMR-061 — checkpoint vigente de lectura secuencial · Volumen 1 · 2026-11-01
 
-**Este bloque reemplaza como punto operativo los checkpoints históricos anteriores del índice que indicaban p.141.** La reconciliación de docs/STATUS.md y lore/danmachi/WORK_QUEUE.md confirma que esa referencia pertenecía al cierre de la segunda pasada y no es el siguiente folio actual.
+**Corrección del checkpoint anterior:** los datos de pp.9–58 / siguiente p.59 quedaron superados por los registros posteriores de DMR-061, WORK_QUEUE y STATUS.
 
 - **Segunda pasada:** pp.9–156 completadas.
-- **Tercera pasada:** pp.9–58 completadas; el bloque más reciente es pp.49–58.
-- **Siguiente página física:** PDF p.59.
-- **Pendiente tercera pasada:** pp.59–156 (98 folios).
-- **Pendiente transversal:** reconciliar la cobertura de la primera pasada por página/localizador, sin repetir como nuevas las extracciones existentes.
-- **Límite:** DMR-061-SRC-001 es una traducción privada no cotejada con japonés; los folios 1–8 no forman parte del rango de revisión actual y no deben marcarse como completados por inferencia.
-- **Regla de calidad:** tres pasadas completas por folio (extracción, visual física, continuidad); cuarta correctiva solo ante ambigüedad/contradicción. El estado visual se declara únicamente para páginas renderizadas e inspeccionadas.
+- **Tercera pasada:** pp.9–156 completadas (148 folios narrativos).
+- **Tres pasadas conservadas:** pp.157–214.
+- **Pendiente transversal principal:** reconciliar la pasada 1 por página física/localizador en el rango narrativo completo, incluyendo pp.9–10; no repetir como nuevos los registros ya existentes.
+- **Front matter:** pp.1–7 revisadas; p.8 blanca; p.215 créditos. No convertir la revisión del front matter en extracción narrativa.
+- **Pendientes independientes:** cierre de DMR-062 (reglas/objetos, candidatos de eventos, revisión de personajes y diferencias de traducción); cotejo con japonés no realizado.
+- **Límite:** DMR-061-SRC-001 es una traducción privada no cotejada con japonés. V1 permanece `IN_PROGRESS`.
+- **Regla de calidad:** cada pasada exige extracción, inspección visual física y control de continuidad; la cuarta revisión es correctiva y puntual.
