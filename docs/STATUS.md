@@ -1231,3 +1231,13 @@ Los pasos previos visibles en Validate incluían syntax, catalog IDs/relations, 
 - **Siguiente bloque P1:** PDF pp.29–38. No repetir P2/P3 de ese rango.
 - **Pendientes globales:** P1 pp.29–156; cotejo textual MD↔PDF por el blob MD inaccesible; granularidad de reglas/objetos; cotejo japonés; validación final de workflows sobre el último SHA.
 - **Estado:** V1 sigue IN_PROGRESS / PARTIAL.
+
+
+## DMR-061 — avance de reconciliación P1 · 2026-11-01 (actualización pp.29–38)
+
+- **PDF pp.29–38:** reconciliadas contra la fuente física y fichas/eventos funcionales. Puntos p.29, encuentro/promesa y analogía familiar ya estaban en los destinos; p.30, procedimiento y broma referida; p.31, experiencia y conocimiento por POV; p.32, advertencia de afiliación; p.33, snapshot y escala ahora reflejada también en canon/04; p.34, magia/habilidades parciales ya en canon/08; pp.35–36, perspectiva y habilidad oculta; p.37, arte editorial no identificado; p.38, lámpara y rutina doméstica en LOC-HESTIA-HOME.
+- **Correcciones:** se añadió la escala de atributos y el límite de dominio descritos en p.33 a canon/04, sin inventar intervalos no enumerados; se añadió a Hestia la generalización dialogada sobre costumbres de Elfos/Amazonas con atribución y límite de no universalizar.
+- **P1 completada (PDF↔registros funcionales):** pp.9–38. P1 restante: pp.39–156. P2/P3 pp.9–156 permanecen documentadas; pp.157–214 conservan tres pasadas.
+- **Siguiente bloque P1:** PDF pp.39–48.
+- **Límites:** ambigüedad de p.18 sigue UNRESOLVED; traducción privada no cotejada con japonés; cotejo textual MD↔PDF pendiente por inaccesibilidad del blob MD.
+- **Estado:** V1 sigue IN_PROGRESS / PARTIAL. No abrir V2.
