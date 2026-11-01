@@ -1457,9 +1457,23 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 - [x] Revisar directamente el PDF físico pp.1–10: pp.1–7 (cubierta/ilustraciones/portadillas) inspeccionadas visualmente; p.8 blanca; pp.9–10 leídas y contrastadas con DMR-061, el evento Bell–Minotauro y la ficha de Bell. No se crea evento duplicado.
 - [ ] Cotejar el contenido de la transcripción MD contra el PDF en pp.1–10. El archivo MD existe en `main`, pero la API de GitHub devuelve contenido vacío; no marcar el cotejo MD↔PDF como completado hasta recuperar su texto.
 - [x] Inspección visual de pp.19–24 y 49–54 completada: p.22 es la única ilustración de pp.19–24; pp.49–54 son texto. La tabla de Estado p.54 se revisó junto con el snapshot extraído.
-- [ ] Atomizar solo las reglas y objetos que necesiten ficha propia: Dungeon (nacimiento/reparación/desplazamiento de monstruos), Piedras Mágicas, Falna/Estado y Daga de Hestia.
+- [x] Crear ficha propia para la Daga de Hestia como OBJ-DM-HESTIA-DAGGER-001 y enlazarla desde el índice de habilidades/equipo; distinguirla de la daga inicial y de la daga blanca del escaparate.
+- [ ] Completar la atomización/revisión de reglas del Dungeon (nacimiento/reparación/desplazamiento), Piedras Mágicas, Falna/Estado, magia, habilidades y límites; las síntesis actuales contienen evidencia V1, pero no constituyen fichas atómicas exhaustivas.
 - [ ] Revisar eventos candidatos de Frog Shooter/War Shadows y Dungeon Lizard contra el catálogo antes de asignar IDs.
-- [ ] Revisar personajes nombrados en el MD sin importar atributos de CONT-ANIME o CONT-AR.
+- [x] Sincronizar las referencias V1 de Ais y Eina con DMR-061 y eliminar avisos obsoletos de primera aparición pendiente; incorporar a CONT-MAIN-LN los pasajes de Seal, Anya, Ryuu, Hephaistos, Mia y otros personajes cuando ya tienen localizador.
+- [ ] Completar un barrido exhaustivo de todos los nombres del MD y decidir relevancia de cameos breves (por ejemplo, Misha y empleados sin nombre); no crear fichas por menciones insignificantes y no importar rasgos de CONT-ANIME/CONT-AR.
+
+
+
+### Checkpoint de sincronización DMR-062 · 2026-11-01
+
+- **PDF pp.1–10:** revisión física completada; pp.1–7 visuales, p.8 blanca y pp.9–10 contrastadas con DMR-061, el evento de Bell/Minotauro y la ficha de Bell. El cotejo textual directo de la transcripción MD contra el PDF en pp.1–10 sigue pendiente porque el blob del MD no se pudo recuperar.
+- **Inspección visual histórica:** DMR-061 registra render/inspección de pp.19–24 y pp.49–54; las casillas antiguas de DMR-062 sobre esos rangos se consideran satisfechas por esos checkpoints posteriores.
+- **Tres pasadas:** P2 y P3 pp.9–156 documentadas como completas; pp.157–214 conservan tres pasadas. La reconciliación de P1 pp.9–156 sigue pendiente por folio.
+- **Equipo:** OBJ-DM-HESTIA-DAGGER-001 creado y enlazado desde el índice; quedan pendientes las fichas atómicas de reglas del sistema y el cotejo japonés.
+- **Personajes y lugar:** Ais/Eina ya tienen source_refs/localizadores V1 actualizados; la ficha del local La Señora de la Abundancia ahora incorpora CONT-MAIN-LN y el índice refleja el alcance V1. Mia se conserva sin apellido trasladado del anime.
+- **Trazabilidad:** matriz priorizada de 14 hallazgos añadida a DMR-062; recuento de esa matriz: 9 COMPLETE, 2 PARTIAL, 2 CONTRADICTORY, 1 UNRESOLVED, 0 MISSING y 0 SECONDARY_ONLY. No representa un censo global del volumen.
+- **Estado:** DMR-062 permanece PARTIAL / IN_PROGRESS. No cerrar V1 ni empezar V2.
 
 **Límite permanente:** DMR-061-SRC-001 es una traducción privada no cotejada con japonés. No usar número de línea MD como página; no convertir personajes/objetos anónimos en fichas; no dar por cerrada la inspección integral por haber llegado a PDF p.214.
 
