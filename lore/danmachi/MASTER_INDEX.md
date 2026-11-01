@@ -514,8 +514,8 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - **Segunda pasada:** pp.9–156 completadas.
 - **Tercera pasada:** pp.9–156 completadas (148 folios narrativos).
 - **Tres pasadas conservadas:** pp.157–214.
-- **P1:** no está certificada globalmente para pp.9–156. El histórico secuencial existe, pero debe reconciliarse folio por folio con eventos y fichas. pp.9–10 sí tienen reconciliación focal del PDF con registros funcionales.
-- **Front matter:** pp.1–7 revisadas visualmente; p.8 blanca; p.215 créditos. No convertir estos folios en narración.
+- **P1:** no está certificada globalmente para pp.9–156. Primer bloque reconciliado PDF↔registros funcionales: pp.9–18, sin datos sustantivos ausentes; la ambigüedad de p.18 queda UNRESOLVED. Próximo bloque: pp.19–28.
+- **Front matter:** pp.1–7 revisadas visualmente; p.8 blanca; p.215 créditos. El cotejo textual MD↔PDF sigue pendiente; no convertir estos folios en narración.
 - **DMR-062:** matriz priorizada de 14 hallazgos añadida; 9 COMPLETE, 2 PARTIAL, 2 CONTRADICTORY, 1 UNRESOLVED. Estos conteos no son globales. La ficha de la Daga de Hestia ya existe; ubicación La Señora de la Abundancia, avenidas y source_refs de Ais/Eina fueron sincronizados.
 - **Pendientes:** reconciliar P1 pp.9–156; recuperar el Markdown original para cotejo MD↔PDF; concluir la granularidad de reglas/sistemas y revisar candidatos de eventos sin IDs duplicados; cotejar con japonés si aparece una edición accesible.
 - **Límite:** DMR-061-SRC-001 es una traducción privada no cotejada con japonés. V1 permanece `IN_PROGRESS`.
