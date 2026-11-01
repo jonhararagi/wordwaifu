@@ -174,9 +174,12 @@ Esta matriz registra hallazgos contrastados directamente contra el PDF físico, 
 
 | V1-AUD-018 | 39–41 | Convivencia Bell/Hestia | Bell abraza suavemente a Hestia, se siente abrumado por la proximidad, la aparta, la cubre y sale; Hestia murmura «Bell-kun, idiota» después de su salida. | characters/bell-cranel.md; characters/hestia.md | COMPLETE | La descripción funcional se amplió en ambos perfiles con separación de perspectivas y límite de conocimiento; no se crea evento o relación formal. PDF pp.39–41, DMR-061 y commits 7c9ae0758b880fcdf9587fa585783a67393ce0bc / f31bb9ca96c96c943808cede2dab19013b0499f8. |
 
+| V1-AUD-019 | 49, 51 | Táctica de supervivencia y carga de equipo | Bell no tiene maestro ni compañeros; considera socialmente arriesgado pedir métodos a otras Familias y elige luchar 1 contra 1, no cazar profundo y aprovechar el terreno. La mochila no es mágica, el peso permanece y no tiene Ayudante. | characters/bell-cranel.md; EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001 | COMPLETE | Se incorporó la decisión y las limitaciones de transporte en ficha y evento; no generalizar la estrategia ni una prohibición de pedir ayuda. PDF pp.49, 51. |
+| V1-AUD-020 | 50–52 | Economía de Piedra Mágica y cartografía del Dungeon | p.50 enumera usos de encendido/congelación y exportación de productos; p.51 señala que las partes de monstruo suelen valer más que las Piedras Mágicas; p.52 menciona mapas vendibles al Gremio, mayor tamaño de zonas inferiores y pisos sin mapas completos. | canon/05-monstruos-y-piedras-magicas.md; canon/03-dungeon-y-guild.md | COMPLETE | Se añadieron usos/valor de botín y mapas/topografía. Exportación y ganancias siguen como información oída/conjetura de Bell, no contabilidad confirmada. PDF pp.50–52. |
+
 ### Alcance de la matriz y conteo
 
-En esta **matriz priorizada de 18 hallazgos** hay 13 `COMPLETE`, 2 `PARTIAL`, 2 `CONTRADICTORY`, 1 `UNRESOLVED`, 0 `MISSING` y 0 `SECONDARY_ONLY`. Esos conteos describen únicamente las filas anteriores; **no son el conteo global del volumen**, porque la pasada 1 aún no ha sido reconciliada de manera exhaustiva folio por folio.
+En esta **matriz priorizada de 20 hallazgos** hay 15 `COMPLETE`, 2 `PARTIAL`, 2 `CONTRADICTORY`, 1 `UNRESOLVED`, 0 `MISSING` y 0 `SECONDARY_ONLY`. Esos conteos describen únicamente las filas anteriores; **no son el conteo global del volumen**, porque la pasada 1 aún no ha sido reconciliada de manera exhaustiva folio por folio.
 
 ### Correcciones de esta sesión
 
