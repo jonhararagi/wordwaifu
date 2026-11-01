@@ -1189,3 +1189,26 @@ Sobre SHA 4423efcfc55920b02fdf949927ae7a4033bf1033:
 - **Incorporación existente comprobada:** estos datos ya aparecen en la tercera pasada de DMR-061, en `EVT-DM-BELL-AIS-MINOTAUR-001` y en la sección de apertura `CONT-MAIN-LN` de `characters/bell-cranel.md`. No se creó evento ni ficha duplicada.
 - **Límite:** no se pudo recuperar el texto del Markdown fuente desde la API de GitHub (blob `d2b3306b1661584d9a42d651f57dca8a6814b20b`); por ello, la comparación directa MD↔PDF de pp.1–10 sigue pendiente. La revisión PDF↔registros funcionales de pp.9–10 sí queda documentada.
 - **Estado global:** pp.1–10 reconciliadas contra el PDF y los registros existentes, excepto el cotejo textual directo con el MD; la matriz global de pasada 1 para el resto del volumen sigue pendiente. V1 continúa `IN_PROGRESS`.
+
+## DanMachi V1 — auditoría y trazabilidad documental (2026-11-01)
+
+- **Rama y HEAD de inicio del ciclo:** main, d0e56517ff10c5bd8c73ac65284095609f451a16. Los cambios de documentación se integraron después directamente en main, sin crear ramas.
+- **Pasadas:** P2 y P3 de PDF pp.9–156 documentadas como completas; pp.157–214 conservan tres pasadas. P1 pp.9–156 no está certificada globalmente: requiere reconciliación folio por folio. pp.9–10 tienen revisión focal del PDF y registros funcionales; el cotejo directo del MD queda pendiente.
+- **PDF:** fuente física localizada y verificada, 215 páginas. pp.1–7 front matter visual inspeccionado; p.8 blanca; pp.9–10 texto; p.215 créditos. DMR-061 contiene registros posteriores de visualización de pp.19–24 y 49–54, que cierran esos pendientes antiguos de DMR-062.
+- **Matriz DMR-062:** 14 hallazgos priorizados: 9 COMPLETE, 2 PARTIAL, 2 CONTRADICTORY, 1 UNRESOLVED, 0 MISSING y 0 SECONDARY_ONLY. No es un censo de todos los hallazgos del volumen.
+- **Cambios implementados en main:** ficha individual OBJ-DM-HESTIA-DAGGER-001 y enlace al índice de equipo; actualización de la cobertura de La Señora de la Abundancia (LOC-HOSTESS); corrección del estado de las ocho avenidas en CONT-MAIN-LN; sincronización de source_refs/localizadores de Ais y Eina; matriz de trazabilidad DMR-062 y sincronización de WORK_QUEUE/MASTER_INDEX.
+- **Discrepancias abiertas:** Bell Fuerza H120 (p.54) frente a H123 (columna anterior de p.91); Agilidad D512 narrativa (p.195) frente a D521 visual (p.208); ambigüedad del piso habitual del Minotauro en p.18; diferencias descriptivas de Seal entre pp.42,165,204. No normalizar por inferencia.
+- **Fuente MD:** blob d2b3306b1661584d9a42d651f57dca8a6814b20b existe en main, pero la API de GitHub no entrega su contenido por tamaño/lectura. El cotejo integral MD↔PDF sigue pendiente; no se declara completado.
+- **Pruebas y CI:** no se ejecutaron tests locales. Consultas de estado/checks del SHA de esta tanda no han devuelto evidencia de CI; no afirmar CI verde. Pendiente validar los commits documentales en workflows de main si la plataforma produce runs/checks.
+- **Estado de cierre:** V1 permanece IN_PROGRESS / PARTIAL. No comenzar V2.
+
+### Commits de esta tanda
+
+- Daga de Hestia: 68af980c646b2c7c34a9d83865130411dd32ed0d.
+- Índice de equipo: 6269f4b7dea11cd105144048eb90e1b596a7e02a.
+- Matriz DMR-062: 7da37be0b5bd23f53aaafdd61521d9eab81379c3 y actualización e6413e9b43ff8a3c5e1dac8ed62bf0db8e78e068.
+- DMR-061 matriz de cobertura: 4969401508c476a04dac936bbe581f89fbb3996a.
+- WORK_QUEUE: 45bd70d1696fc1cb4bfb86bb0748a16af1adab58.
+- MASTER_INDEX: 7fd6f7b5e8a3dba96617a6f76c11757ea66a542a.
+- Lugar La Señora de la Abundancia: 1051b5f9c1724dd6afb85adee398fd7cc11b50e2; índice de lugares: 3180ec2e9afdfdd90253dbd60b005cc90251f26c.
+- Ais: 49da0090229829d76eca98cab9a0c493299bc416; Eina: 2f42dfe2b5ba7a28b42b1998b404588d4336dc77.
