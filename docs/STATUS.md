@@ -1179,3 +1179,13 @@ Sobre SHA 4423efcfc55920b02fdf949927ae7a4033bf1033:
 - **Límites:** Freya no explica su motivo al orientar a Hestia; no se demuestra engaño. No identificar a la domadora. La daga sigue sin entregarse a Bell. La traducción privada no se ha cotejado con japonés.
 - **Visual:** ocho páginas inspeccionadas individualmente a 130 dpi; p.154 es ilustración; no se aprecian tablas ni notas al pie.
 - **Checkpoint:** tercera pasada completada pp.9–156 (148 folios). Pasada 2 pp.9–156 completa. Reconciliación integral de pasada 1 pendiente. V1 permanece IN_PROGRESS.
+
+
+## Auditoría V1 — reconciliación focal de PDF pp.1–10 (2026-11-01)
+
+- **PDF original localizado y comprobado:** `Volumen [01] • DanMachi.pdf`, 7.495.544 bytes; inspección del archivo físico confirma 215 páginas. El folio p.8 está completamente en blanco; el indexador de Files omite ese folio y por eso presenta 214 páginas.
+- **Inspección visual:** pp.1–7 renderizadas y revisadas; p.1 cubierta, pp.2–5 ilustraciones (p.3 rotula Hestia/Loki/Freya; p.4 rotula Hephaistos; p.5 no rotula a las dos figuras), p.6 portadilla gráfica y p.7 portadilla de prólogo. p.8 blanca. pp.9–10 son páginas de texto, sin ilustraciones.
+- **Contenido narrativo:** p.9 registra la fantasía heroica inicial de Bell (rescate, vínculos con mujeres de distintas razas y harén) como pensamiento inmaduro contextual, no rasgo absoluto. p.10 lo sitúa como aventurero Lv.1 perseguido por el Minotauro tras descender del segundo al quinto piso y quedar acorralado.
+- **Incorporación existente comprobada:** estos datos ya aparecen en la tercera pasada de DMR-061, en `EVT-DM-BELL-AIS-MINOTAUR-001` y en la sección de apertura `CONT-MAIN-LN` de `characters/bell-cranel.md`. No se creó evento ni ficha duplicada.
+- **Límite:** no se pudo recuperar el texto del Markdown fuente desde la API de GitHub (blob `d2b3306b1661584d9a42d651f57dca8a6814b20b`); por ello, la comparación directa MD↔PDF de pp.1–10 sigue pendiente. La revisión PDF↔registros funcionales de pp.9–10 sí queda documentada.
+- **Estado global:** pp.1–10 reconciliadas contra el PDF y los registros existentes, excepto el cotejo textual directo con el MD; la matriz global de pasada 1 para el resto del volumen sigue pendiente. V1 continúa `IN_PROGRESS`.
