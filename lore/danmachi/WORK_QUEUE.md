@@ -1478,6 +1478,16 @@ Criterio de cierre: el detalle comunitario aporta utilidad de búsqueda, pero no
 **Límite permanente:** DMR-061-SRC-001 es una traducción privada no cotejada con japonés. No usar número de línea MD como página; no convertir personajes/objetos anónimos en fichas; no dar por cerrada la inspección integral por haber llegado a PDF p.214.
 
 
+## Estado operativo vigente DMR-061 — Volumen 1 · 2026-11-01
+
+Los checkpoints por rango que siguen son una bitácora histórica y deben leerse en orden de fecha; los estados «próximo folio» de un bloque antiguo no representan la tarea actual.
+
+- Pasada 2: pp.9–156 completadas; pp.157–214 conservan sus tres pasadas registradas.
+- Pasada 3: pp.9–156 completadas; pp.157–214 conservan sus tres pasadas registradas.
+- Pasada 1: reconciliación global por folio pendiente en pp.9–156. No certificarla por la existencia de notas de extracción secuencial.
+- Front matter: pp.1–7 inspeccionadas visualmente; p.8 blanca; p.215 créditos. pp.9–10 revisadas directamente en el PDF y cruzadas con sus registros funcionales; el cotejo del Markdown sigue pendiente.
+- Próxima tarea: construir la matriz P1 de pp.9–156, empezando por reconciliar registros existentes por rango/folio y marcar solo los huecos reales. No repetir P2/P3 ni crear eventos duplicados.
+
 ### Checkpoint DMR-061 · Volumen 1, PDF pp. 81–90 · 2026-10-31
 
 - **Protocolo:** tres pasadas obligatorias por página: (1) extracción, (2) inspección visual real y (3) continuidad/relaciones/duplicados. No hay límite arbitrario de tiempo o páginas. La traducción privada no está cotejada con japonés.
