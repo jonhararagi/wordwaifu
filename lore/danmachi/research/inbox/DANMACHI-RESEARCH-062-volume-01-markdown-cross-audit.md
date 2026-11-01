@@ -172,9 +172,11 @@ Esta matriz registra hallazgos contrastados directamente contra el PDF físico, 
 | V1-AUD-016 | 33 | Escala de atributos y dominio | El cuadro de Bell Lv.1 presenta cinco atributos; la explicación de p.33 enumera grados S–I, define I=0–99, H=100–199 y un máximo de 999; relaciona el aumento con acciones conectadas al atributo. | canon/04-aventureros-y-progresion.md; EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001.md | COMPLETE | La escala parcial y ejemplos se añadieron a la ficha funcional de progresión, sin inventar rangos intermedios ni fórmula. PDF p.33, DMR-061 y commit d20baac273a1ca95ef0b81d169e8985fffe17729. |
 | V1-AUD-017 | 31 | Comentario sobre costumbres raciales | Bell dice haber oído que los Elfos no se dan la mano sin aceptación mutua; Hestia contrapone otras costumbres y habla de Amazonas que podrían unirse a hombres fuertes para tener hijos fuertes. | characters/hestia.md; EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001.md | COMPLETE | Se añadió a la ficha de Hestia con atribución a la conversación, separando el rumor de Bell y la generalización de Hestia de reglas universales o juicios sobre individuos. PDF p.31, commit 0d091bea26b5c6d0bd6eab827e1e400a7ac0e5e1. |
 
+| V1-AUD-018 | 39–41 | Convivencia Bell/Hestia | Bell abraza suavemente a Hestia, se siente abrumado por la proximidad, la aparta, la cubre y sale; Hestia murmura «Bell-kun, idiota» después de su salida. | characters/bell-cranel.md; characters/hestia.md | COMPLETE | La descripción funcional se amplió en ambos perfiles con separación de perspectivas y límite de conocimiento; no se crea evento o relación formal. PDF pp.39–41, DMR-061 y commits 7c9ae0758b880fcdf9587fa585783a67393ce0bc / f31bb9ca96c96c943808cede2dab19013b0499f8. |
+
 ### Alcance de la matriz y conteo
 
-En esta **matriz priorizada de 17 hallazgos** hay 12 `COMPLETE`, 2 `PARTIAL`, 2 `CONTRADICTORY`, 1 `UNRESOLVED`, 0 `MISSING` y 0 `SECONDARY_ONLY`. Esos conteos describen únicamente las filas anteriores; **no son el conteo global del volumen**, porque la pasada 1 aún no ha sido reconciliada de manera exhaustiva folio por folio.
+En esta **matriz priorizada de 18 hallazgos** hay 13 `COMPLETE`, 2 `PARTIAL`, 2 `CONTRADICTORY`, 1 `UNRESOLVED`, 0 `MISSING` y 0 `SECONDARY_ONLY`. Esos conteos describen únicamente las filas anteriores; **no son el conteo global del volumen**, porque la pasada 1 aún no ha sido reconciliada de manera exhaustiva folio por folio.
 
 ### Correcciones de esta sesión
 
@@ -284,3 +286,26 @@ En esta **matriz priorizada de 17 hallazgos** hay 12 `COMPLETE`, 2 `PARTIAL`, 2 
 - No se crearon IDs, entidades o eventos nuevos. p.37 queda como material editorial no identificado.
 - Próximo bloque P1: PDF pp.39–48; no repetir P2/P3 ya documentadas.
 - La comparación directa MD↔PDF sigue pendiente por inaccesibilidad del blob de la transcripción.
+
+## Matriz de reconciliación de pasada 1 — PDF pp.39–48 · 2026-11-01
+
+**Resultado:** diez folios contrastados con el PDF físico, DMR-061 y los registros funcionales. Se amplió el registro de convivencia Bell/Hestia de pp.39–41; las demás informaciones comprobadas ya estaban en destinos funcionales existentes.
+
+| Página física | Elemento fuente | Archivo funcional destino | Estado P1 | Evidencia / acción |
+|---:|---|---|---|---|
+| 39 | Bell permite el abrazo de Hestia y le corresponde con un abrazo suave; se avergüenza por la proximidad. | characters/bell-cranel.md; characters/hestia.md | COMPLETE | Se amplía la secuencia doméstica en ambos perfiles, sin atribuir relación formal. PDF p.39. |
+| 40 | Ilustración monocroma de Bell y Hestia sobre el sofá. | DMR-061 | COMPLETE | Imagen contextualizada con las pp.39 y 41; no aporta identidad o relación independiente. PDF p.40. |
+| 41 | Bell aparta a Hestia al sentirse abrumado, la cubre con una manta y sale; el comentario de «casi asfixia» es exageración cómica; Hestia murmura una queja cuando él ya salió; Bell recuerda que olvidó desayunar. | Bell; Hestia | COMPLETE | Se añadieron la salida y los límites de POV; no afirmar que Bell oye el comentario de Hestia. PDF p.41. |
+| 42 | Bell percibe una mirada/presencia peligrosa, inspecciona la calle sin identificar a nadie; Seal aparece y su ropa/rasgos se describen. La edad 1–2 años mayor es solo estimación de Bell. | Bell; Seal; evento Bell–Seal | COMPLETE | La vigilancia permanece sin autor; Seal ficha conserva ropa y rasgos, edad como percepción. PDF p.42. |
+| 43 | Seal devuelve una Piedra Mágica azul violácea; Bell recuerda haber entregado las demás al Gremio, pero no conoce el origen/caída de esta. Nota al pie explica «riñonera». | Seal; Bell; evento Bell–Seal | COMPLETE | Origen y momento quedan desconocidos; nota del traductor no se modela como lore. PDF p.43. |
+| 44–45 | Seal trae pan y queso porque Bell no desayunó; propone que cene esa noche en el local para aumentar su sueldo; Bell acepta. | evento EVT-DM-V01-BELL-MEETS-SEAL-FLOVER-001; Seal | COMPLETE | Se conserva como desayuno e invitación aceptada; la cena no se marca como celebrada. PDF pp.44–45. |
+| 46 | Intercambio de nombres Bell Cranel/Seal Flover; explicación de que Dungeon existía antes del descenso de los dioses y un precursor del Gremio combatía monstruos sin Gracia. | evento Bell–Seal; canon/03-dungeon-y-guild.md | COMPLETE | El expediente del Dungeon ya contiene el dato como narración reportada; no se inventan nombre o fecha del predecesor. PDF p.46. |
+| 47–48 | Bell encuentra ocho Kobolds en el primer piso, dos ya abatidos y seis persiguen; su experiencia de novato considera inusual que se agrupen; lleva solo una daga de 20 cm y embosca a los perseguidores. | Bell; MON-DM-KOBOLD-001; EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001 | COMPLETE | Grupo, perspectiva limitada y longitud/uso del arma ya registrados. Recuento final no se normaliza. PDF pp.47–48. |
+
+### Resultado del bloque P1 pp.39–48
+
+- 10 folios reconciliados PDF↔DMR-061↔registros funcionales.
+- El único hueco de modelado sustantivo encontrado fue la secuencia Bell/Hestia de pp.39–41; se completó en ambas fichas sin crear evento o relación formal.
+- El resto —Seal, mirada sin identificar, Piedra Mágica de origen desconocido, invitación no consumada, historia del Dungeon y combate Kobold— ya tenía destinos con procedencia y límites.
+- Próximo bloque P1: PDF pp.49–58; no repetir P2/P3.
+- El cotejo integral MD↔PDF sigue pendiente por inaccesibilidad del blob MD.
