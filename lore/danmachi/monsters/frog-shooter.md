@@ -10,8 +10,6 @@ source_refs:
   - DMR-061-SRC-001
 source_locators:
   - PDF p. 76
-aliases:
-  - Rana Tiradora
 spoiler_level: mild
 ---
 # Frog Shooter
