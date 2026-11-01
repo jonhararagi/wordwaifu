@@ -284,3 +284,14 @@ Comparten crepes. Bell se avergüenza cuando Hestia intenta darle de comer, pero
 
 - **Límite:** no se confirma la búsqueda de Seal ni la devolución del monedero; tampoco se presenta la salida como una relación formal. La ilustración p.154 concuerda con la escena del crepe sin añadir hechos independientes.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
+
+## CONT-MAIN-LN · respuesta táctica al primer combate numeroso y límites de transporte · Volumen 1 · PDF pp.49–51
+
+Después de sobrevivir al grupo de Kobolds, Bell reflexiona que, como aventurero sin maestro y único miembro de Hestia Familia, no tiene senpai ni compañeros de Familia que le enseñen a luchar. Considera pedir consejos a Familias experimentadas, pero teme que la relación entre Familias sea complicada y que esa decisión afecte también a Hestia. Por ello decide reducir el riesgo: enfrentarse a los monstruos de uno en uno, no cazar a demasiada profundidad y aprovechar el terreno favorable. Dice que recuerda la información del Dungeon que Eina le inculcó como si fuera su único capital de conocimiento (p.49).
+
+Al recoger el botín, Bell aclara que su mochila no es una bolsa mágica: su capacidad física tiene límites, puede desbordarse o romperse y el peso de los objetos no desaparece. Como Hestia Familia solo tiene a Bell, no dispone de un Ayudante no combatiente para recoger Piedras Mágicas y botín; Bell debe cargar su equipo y recompensas durante el combate, lo que puede obstaculizar sus movimientos (p.51).
+
+- **Alcance temporal:** reflexión y decisión táctica de Bell después de su primer combate numeroso; no convertirla en una estrategia inmutable para toda su carrera.
+- **Límite:** no se infiere que pedir consejo a otra Familia esté formalmente prohibido ni que Bell rechace toda ayuda futura.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF pp.49 y 51.
