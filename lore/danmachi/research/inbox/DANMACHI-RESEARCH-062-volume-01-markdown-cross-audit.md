@@ -258,3 +258,29 @@ En esta **matriz priorizada de 17 hallazgos** hay 12 `COMPLETE`, 2 `PARTIAL`, 2 
 - p.37 permanece como material editorial sin identidad; p.33 la tabla se contrasta con la copia visual y se conserva el snapshot exacto; p.36 no atribuye conocimiento de la habilidad a Bell.
 - **Próximo bloque de reconciliación P1:** PDF pp.39–48. No repetir P2/P3 ya documentadas.
 - El cotejo textual directo del Markdown original con el PDF sigue pendiente porque la API de GitHub no devuelve el blob MD.
+
+
+## Matriz de reconciliación de pasada 1 — PDF pp.29–38 · 2026-11-01
+
+**Resultado:** diez folios contrastados con el PDF, DMR-061 y registros funcionales. La mayor parte ya estaba integrada; se corrigieron dos huecos de modelado: la escala de dominio/rangos de p.33 en canon/04 y el comentario sobre costumbres raciales de p.31 en la ficha individual de Hestia. No se crean eventos ni entidades.
+
+| Página física | Elemento fuente | Archivo funcional destino | Estado P1 | Evidencia / acción |
+|---:|---|---|---|---|
+| 29 | Recuerdo del primer encuentro, calle de reclutamiento no identificada, datos de Hestia comunicados por ella, analogía Familia/tienda y promesa personal de Bell. | EVT-DM-BELL-MEETS-HESTIA-001; Bell; Hestia; canon/02-falna-familias.md | COMPLETE | Ya incorporado con atribución y límites; no fecha absoluta, amiga ni lugar inventados. PDF p.29. |
+| 30 | Inicio de actualización con sangre divina; broma «Loli de Pechos Grandes» referida de otros dioses; Bell ve pelo blanco/piel pálida en espejo. | EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001; Hestia; Bell | COMPLETE | Procedimiento, broma como cita referida y rasgos observados ya constan; no título formal. PDF p.30. |
+| 31 | Puntos de Experiencia según Hestia; comentario de Bell sobre Elfos y respuesta de Hestia sobre otras costumbres/Amazonas. | EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001; canon/04; Hestia | COMPLETE | XP ya estaba; diálogo racial incorporado a la ficha de Hestia, como generalización del personaje, no ley universal. PDF p.31. |
+| 32 | Hestia habla de restricciones sociales y conflicto potencial entre Familias al considerar matrimonio/hijo de dos afiliaciones. | EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-MINOTAUR-001; canon/02 | COMPLETE | Ya está atribuido a Hestia y contextualizado; no convertirlo en una ley universal sin cotejo/excepciones. PDF p.32. |
+| 33 | Estado Bell Lv.1: I77→I82 Fuerza; I13 Resistencia; I93→I96 Destreza; H148→H172 Agilidad; I0 Magia. Escala S–I, I 0–99, H 100–199, tope 999; dominio sube con acciones pertinentes. | Bell; evento de actualización; canon/04 | COMPLETE | Snapshot ya estaba; faltaba resumen funcional de rango/acciones. Añadido a canon/04 sin completar los intervalos de grados no enumerados ni inventar fórmula. PDF p.33. |
+| 34 | Magia antes del descenso, privilegio de ciertas razas pero posible descubrimiento sin Gracia; una a tres magias, varias son raras; Habilidades son efectos bajo condiciones y más raras de descubrir. | canon/08; evento de actualización | COMPLETE | El índice ya conserva la explicación parcial y la incertidumbre de Hestia sobre cuándo Bell podrá usar magia. PDF p.34. |
+| 35 | Reflexión interna de Hestia sobre mortales que cambian frente a dioses que no cambian. | Hestia; evento de actualización | COMPLETE | Ya consta como pensamiento de Hestia, no audible para Bell. PDF p.35. |
+| 36 | [Deseo Inquebrantable] aparece en el Estado grabado; acelera crecimiento, depende de sentimientos; la copia de Bell no lo muestra. | Bell; Hestia; canon/08; evento de actualización | COMPLETE | Ficha y evento ya separan perspectiva y conocimiento; no duplicar habilidad ni atribuírsela a Bell. PDF p.36. |
+| 37 | Portadilla ilustrada del capítulo 2 con figura y caja sin rótulo nominal. | DMR-061 | COMPLETE | Ilustración inspeccionada y descrita como material editorial; no se crea personaje/evento. PDF p.37. |
+| 38 | Despertar alrededor de 5:00; lámpara de Piedra Mágica; Bell durmió en sofá y Hestia sobre su pecho; escena doméstica. | LOC-HESTIA-HOME; Bell; Hestia | COMPLETE | Lámpara y rutina ya constan; no relación romántica ni evento nuevo. PDF p.38. |
+
+### Resultado del bloque P1 pp.29–38
+
+- 10 folios reconciliados PDF↔DMR-061↔registros funcionales.
+- 2 huecos de modelado corregidos: escala p.33 incorporada a canon/04 y comentario racial p.31 incorporado a Hestia con atribución.
+- No se crearon IDs, entidades o eventos nuevos. p.37 queda como material editorial no identificado.
+- Próximo bloque P1: PDF pp.39–48; no repetir P2/P3 ya documentadas.
+- La comparación directa MD↔PDF sigue pendiente por inaccesibilidad del blob de la transcripción.
