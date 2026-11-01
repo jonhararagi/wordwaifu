@@ -63,3 +63,13 @@ En p.53 se dice que la Guild fue creada en tiempos antiguos como autoridad de ge
 
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF pp.52–53.
 - **Límites:** no se fija fecha de fundación, material constitutivo, estructura administrativa, cantidad exacta de monstruos por piso, rutas internas ni una regla exhaustiva de migración.
+
+
+
+## Desplazamiento y planificación de regreso en expediciones · CONT-MAIN-LN · Volumen 1 · PDF p.65
+
+Durante el relato de Ais sobre el regreso de Loki Familia desde el piso 17, la narración explica que los aventureros deben recorrer físicamente el Dungeon para entrar y salir: no se describe un traslado directo y cómodo al piso deseado. Añadir pisos a una ruta implica atravesar repetidamente los tramos intermedios, tanto al avanzar como al regresar. Por eso, las expediciones a pisos profundos requieren prever el esfuerzo de ida y vuelta, preparar provisiones y decidir con antelación cuándo iniciar el regreso; el texto destaca la importancia de un líder capaz de calcular ese momento.
+
+- **Alcance:** explicación general insertada en el relato de la expedición de Loki Familia; no se fija una ruta concreta, presupuesto, calendario, regla institucional ni sistema exhaustivo de transporte.
+- **Atribución:** exposición narrativa escuchada por Bell durante la cena; no es una orden de la Guild ni una política formal de todas las Familias.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF p.65.

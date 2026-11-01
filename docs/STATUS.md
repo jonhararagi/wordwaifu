@@ -1268,3 +1268,15 @@ Los pasos previos visibles en Validate incluían syntax, catalog IDs/relations, 
 La auditoría visual directa de pp.49–58 confirmó diez páginas de texto y el snapshot de Estado en p.54. Se detectó que la fila p.57 de DMR-062 solo enlazaba la taberna y omitía la escena urbana nocturna descrita por Bell. La ficha `lore/danmachi/places/orario.md` ya conserva esa observación con localizador físico y límites: actividad de bares/comercios, regreso de aventureros, música y habitantes observados en una calle principal; no se generaliza a toda la ciudad ni a todas las personas de cada raza. DMR-061 y DMR-062 quedaron sincronizados; sin IDs/eventos nuevos.
 
 **Checkpoint:** P1 reconciliada pp.9–58; próximo bloque PDF pp.59–68. P2/P3 no se repiten. V1 continúa IN_PROGRESS/PARTIAL.
+
+
+
+## DMR-061 — avance de reconciliación P1 · PDF pp.59–68 · 2026-11-01
+
+- **PDF pp.59–62:** cena de Bell, asiento apartado, hospitalidad solicitada por Seal, broma de Mia, pobreza/desayuno omitido de Bell y conversación sobre el local. Los importes de 4.400/2.000/50/500/3.600/300 Varisu ya están en Bell, atribuidos como declaraciones/contexto de esa jornada, no como tarifas universales ni saldo total. La daga actual sigue distinta de la Daga de Hestia.
+- **PDF pp.63–64:** entrada de unas diez personas de Loki Familia, reconocimiento de Ais y celebración de su expedición; la persona que brinda permanece anónima.
+- **PDF p.65:** se añadió a canon/03 la explicación sobre recorrido físico por pisos, regreso por tramos, provisiones y previsión del momento de retirada en expediciones profundas. No se inventa una norma formal de Guild.
+- **PDF pp.66–68:** el relato retrospectivo se mantiene enlazado al rescate original. Ais dice que con Bete es «absolutamente imposible»; el rechazo se dirige a Bete. La pregunta posterior sobre aceptar a Bell si se declarara no obtiene una respuesta verbal concluyente. Se actualizaron el evento de visita y la ficha de Ais.
+- **Visual:** las diez páginas se renderizaron e inspeccionaron individualmente a 130 dpi; no hay ilustraciones, tablas, diagramas ni notas al pie.
+- **P1 completada (PDF↔registros funcionales):** pp.9–68. Siguiente bloque P1: pp.69–78. P2/P3 no se repiten.
+- **Límites:** traducción privada no cotejada con japonés; MD↔PDF integral pendiente; V1 sigue IN_PROGRESS / PARTIAL.

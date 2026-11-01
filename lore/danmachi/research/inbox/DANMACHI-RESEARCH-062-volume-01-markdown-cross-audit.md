@@ -338,3 +338,31 @@ En esta **matriz priorizada de 20 hallazgos** hay 15 `COMPLETE`, 2 `PARTIAL`, 2 
 - La cuenta final de Kobolds continúa sin normalizar. La teoría de Bell sobre Goblins/reproducción en p.53 permanece hipótesis, no regla confirmada.
 - **Próximo bloque P1:** PDF pp.59–68; no repetir P2/P3 ya documentadas.
 - El cotejo integral MD↔PDF sigue pendiente por inaccesibilidad del blob original del MD.
+
+
+
+## Matriz de reconciliación de pasada 1 — PDF pp.59–68 · 2026-11-01
+
+**Resultado:** diez páginas físicas contrastadas con PDF, DMR-061 y destinos funcionales. Se corrigieron dos puntos de modelado: la explicación de logística de expediciones de p.65 y el alcance exacto de la respuesta de Ais en p.68. Los detalles financieros de Bell, Mia y Seal ya estaban en sus destinos.
+
+| Página física | Elemento fuente | Destino funcional | Estado P1 | Evidencia / acción |
+|---:|---|---|---|---|
+| 59 | Seal recibe a Bell, lo sienta en un rincón aislado de la barra y Mia bromea con que Bell comerá mucho y pagará por más platos. | EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001; LOC-HOSTESS | COMPLETE | Detalle integrado al evento de la visita; no crear evento de cena independiente. PDF p.59. |
+| 60 | Seal admite que pidió a Mia tratar a Bell con hospitalidad; Bell dice que su Familia es pobre y olvidó desayunar. Ingreso del día: 4.400 Varisu; habitual aproximado 2.000; comida sencilla 50; poción al menos 500. | Bell Cranel; EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001 | COMPLETE | Cifras ya están en el perfil de Bell y se contextualizan en el evento. No convertirlas en tarifa universal ni saldo total. PDF p.60. |
+| 61 | Daga inicial 3.600 Varisu mediante préstamo del Gremio, deuda ya pagada con obligaciones del equipo defensivo; pasta 300 Varisu; rechaza inicialmente vino por el precio. | Bell Cranel; evento de la visita; OBJ-DM-HESTIA-DAGGER-001 (solo como contraste) | COMPLETE | El perfil distingue la daga inicial de la Daga de Hestia; sin ficha nueva ni equivalencia contable con la tarjeta p.209. PDF p.61. |
+| 62 | Mia construyó el local, fue aventurera y está semiactiva en su Familia con permiso de su dios; el local emplea solo mujeres y acoge a personas con distintas circunstancias. Seal disfruta conocer a desconocidos y observar cómo cambian. | LOC-HOSTESS; CHAR-SEAL-FLOVER; evento de visita | COMPLETE | Los detalles ya tienen destino. «Mia» no recibe apellido ni atributos importados de CONT-ANIME. La motivación de Seal queda contextual a su diálogo. PDF p.62. |
+| 63 | Entra un grupo de unas diez personas; Bell reconoce a Ais por cabello rubio y ojos dorados; clientes identifican a Loki Familia por su emblema y comentan su fuerza. | Evento de visita; Ais; Loki Familia | COMPLETE | Se conserva aproximación numérica y reconocimiento textual; no asignar identidad individual a cada integrante. PDF p.63. |
+| 64 | Loki Familia celebra el regreso de una expedición; quien brinda aparece de espaldas; Ais come modestamente y conversa con compañeras. | Evento de visita | COMPLETE | Se conserva como contexto de la misma cena; el integrante que brinda permanece anónimo. No inferir rasgos estables a partir de la escena. PDF p.64. |
+| 65 | Relato de Minotauros en el piso 17 y explicación sobre desplazamiento físico piso a piso, repetición de tramos en el regreso, provisiones y cálculo del momento de retirada en expediciones profundas. | EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001; canon/03-dungeon-y-guild.md | COMPLETE | Se amplió canon/03 con localizador p.65 y límites: explicación narrativa, no norma formal ni ruta cuantificada. No se crea evento independiente para logística. PDF p.65. |
+| 66 | Ais relata que el último Minotauro llegó al piso 5 y que ella lo derrotó; Bell entiende que él era el «chico tomate». | EVT-DM-BELL-AIS-MINOTAUR-001; evento de visita | COMPLETE | Se reutiliza el rescate original; relato retrospectivo no es combate nuevo. PDF p.66. |
+| 67 | Bete se burla de Bell; Riveria recuerda que el escape fue responsabilidad de Loki Familia y reprende la burla; voz que llama a Bell sin atribución segura. | Evento de visita; CHAR-BETE-LOGA; CHAR-RIVERIA-LJOS-ALF | COMPLETE | Reutilizar entidades existentes; conservar voz anónima y no crear relaciones/identidades por inferencia. PDF p.67. |
+| 68 | Ais considera normal el miedo de Bell; dice que con Bete es «absolutamente imposible»; la pregunta posterior sobre aceptar a Bell si se declarara queda sin respuesta verbal concluyente. Bell abandona el local y una empleada lo sigue sin identificar. | Evento de visita; CHAR-AIS-WALLENSTEIN | COMPLETE | Se corrigió el matiz: rechazo explícito a Bete, no elección romántica de Bell; sin reciprocidad confirmada. Empleada anónima. PDF p.68. |
+
+### Resultado P1 pp.59–68
+
+- Diez folios físicos cotejados; inspección visual individual a 130 dpi: todas son páginas de texto, sin ilustraciones, tablas, diagramas ni notas al pie.
+- Correcciones funcionales: canon/03 registra la logística de expediciones explicada en p.65; el evento de visita y la ficha de Ais distinguen el rechazo a Bete de la falta de respuesta sobre Bell en p.68.
+- Los importes de p.60–61 ya estaban en Bell; la escena de Mia ya estaba en LOC-HOSTESS y la motivación de Seal en su ficha.
+- No se crean IDs ni eventos nuevos.
+- **Próximo bloque P1:** PDF pp.69–78; no repetir P2/P3.
+- **Límite:** la traducción sigue sin cotejo japonés; el cotejo directo MD↔PDF completo permanece pendiente.

@@ -525,3 +525,9 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 ### Ajuste de cobertura P1 · Volumen 1 · 2026-11-01
 
 La revisión física de pp.49–58 confirmó las diez páginas de texto y el snapshot p.54. Se completó el destino funcional de la escena urbana nocturna de p.57 en `places/orario.md` (CONT-MAIN-LN), con atribución limitada a la observación de Bell y sin convertirla en un censo. DMR-061, DMR-062, WORK_QUEUE y STATUS quedaron sincronizados. La cobertura P1 sigue en pp.9–58; siguiente bloque pp.59–68. V1 continúa IN_PROGRESS.
+
+
+
+### Cobertura P1 añadida · Volumen 1 · PDF pp.59–68 · 2026-11-01
+
+P1 PDF↔DMR-061↔DMR-062↔destinos funcionales reconciliada hasta pp.68. Canon/03 incorpora la logística de expediciones descrita en p.65; el evento de la visita y ficha de Ais aclaran el rechazo a Bete frente a la falta de respuesta concluyente sobre Bell (p.68). Los demás datos de cena/economía/personajes ya tenían destino; no se crearon IDs ni eventos nuevos. Siguiente bloque P1: pp.69–78. P2/P3 no se repiten. V1 sigue IN_PROGRESS / PARTIAL.

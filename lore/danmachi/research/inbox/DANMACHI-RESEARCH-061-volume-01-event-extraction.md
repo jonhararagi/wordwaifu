@@ -1583,3 +1583,31 @@ La siguiente matriz separa lo que los checkpoints permiten certificar de la extr
 - Se actualizó la fila p.57 y el resultado de la matriz DMR-062. No se creó personaje, evento, lugar ni ID nuevo; la ficha de la taberna conserva el edificio y su interior.
 - **Estado P1:** pp.49–58 siguen reconciliadas; la corrección completa el destino funcional de p.57. Próximo bloque P1: PDF pp.59–68. No repetir P2/P3 de ese rango.
 - **Límites:** traducción privada no cotejada con japonés; recuento final de bajas Kobold sin normalizar; cotejo textual MD↔PDF global aún pendiente por inaccesibilidad del blob MD original.
+
+
+
+## DMR-061 — reconciliación de pasada 1 con registros funcionales · PDF pp.59–68 · 2026-11-01
+
+**Alcance:** contraste de los diez folios físicos con la extracción ya existente de DMR-061, DMR-062 y las fichas/eventos/canon. P2 y P3 de estas páginas no se repitieron: se reutiliza su evidencia registrada, incluida la inspección visual previa. En esta comprobación se volvieron a renderizar las diez páginas a 130 dpi: todas son páginas de texto, sin ilustraciones, tablas, diagramas ni notas al pie.
+
+### Resultado por folio
+
+- **p.59:** Seal coloca a Bell en un rincón de la barra para reducir las miradas de otros clientes; Mia bromea con que es un gran comensal y que seguirá sirviéndole para cobrar. Se conserva dentro de EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001, sin evento de cena duplicado.
+- **p.60:** Seal admite que pidió a Mia tratar a Bell con hospitalidad y que la broma fue intencional. Bell explica que su Familia es pobre y que olvidó desayunar. Sus cifras de ingresos y referencias de precios (4.400 Varisu ese día; alrededor de 2.000 habituales; comida sencilla 50; poción al menos 500) ya tienen destino en Bell; se mantienen como cifras expresadas por él, no tarifas universales ni saldo.
+- **p.61:** daga actual a 3.600 Varisu comprada con préstamo del Gremio, deuda saldada junto con equipo defensivo; pasta por 300 Varisu; Bell rechaza inicialmente el vino por el coste. La daga inicial sigue separada de la Daga de Hestia. Los detalles económicos están en Bell y se enlazan al evento de la visita.
+- **p.62:** Mia construyó el local, fue aventurera y permanece semiactiva en su Familia con permiso de su dios, según lo que Seal cuenta; el local solo emplea mujeres y acoge a personas de diversas circunstancias. Seal explica que disfruta conocer y observar a personas desconocidas. Destinos existentes: LOC-HOSTESS y CHAR-SEAL-FLOVER; no trasladar apellido o biografía de CONT-ANIME a «Mia».
+- **p.63:** entra un grupo de unas diez personas de gran poder; Bell reconoce a Ais; los clientes identifican el emblema de Loki Familia y reaccionan a su presencia. Se reutilizan Ais, Loki Familia y el evento de la visita.
+- **p.64:** el grupo brinda por su expedición; quien dirige el brindis aparece de espaldas y queda sin identificar. Bell observa a Ais comer modestamente y hablar con sus compañeras, sin extrapolar a una caracterización global.
+- **p.65:** Ais empieza el relato de los Minotauros encontrados en el piso 17. La explicación narrativa sobre ir y volver físicamente por los pisos, prever provisiones y calcular el momento de regresar se añadió a canon/03 como contexto logístico de expediciones, no como norma formal de la Guild.
+- **p.66:** el último Minotauro alcanza el piso 5 y Ais lo derrota; Bell comprende que el «chico tomate» del relato era él. Se reutiliza EVT-DM-BELL-AIS-MINOTAUR-001: no se crea un nuevo combate.
+- **p.67:** Bete se burla de Bell; Riveria responsabiliza a Loki Familia por la fuga y reprende que se burlen de él. Se conserva sin atribuir conjeturas una voz que llama a Bell.
+- **p.68:** Ais considera normal el miedo de Bell. Dice que con Bete es «absolutamente imposible», rechazo explícito dirigido a Bete; la pregunta posterior sobre aceptar a Bell queda sin respuesta verbal concluyente. Bell sale y una empleada lo sigue sin identificación. Se precisó esta diferencia en el evento existente y la ficha de Ais; no hay reciprocidad confirmada.
+
+### Dictamen P1 pp.59–68
+
+- Diez folios cotejados contra el PDF físico, DMR-061, DMR-062 y destinos funcionales.
+- Omisiones funcionales corregidas: logística de expediciones/pisos y matiz de las dos respuestas de Ais en p.68. Los detalles de ingresos, gastos y deuda de Bell, así como la motivación de Seal y los datos de Mia, ya tenían destino y procedencia.
+- No se crearon IDs, personajes, lugares, objetos o eventos nuevos; se ampliaron canon/03, el evento de la visita y la ficha de Ais.
+- **P1 reconciliada:** pp.9–68. P2/P3 no se repitieron.
+- **Próximo bloque P1:** PDF pp.69–78; no repetir P2/P3 ya documentadas.
+- **Límites:** traducción privada no cotejada con japonés; el expediente de la visita enlaza el rescate original, no duplica el hecho; el cotejo MD↔PDF integral sigue pendiente por inaccesibilidad del blob de transcripción.

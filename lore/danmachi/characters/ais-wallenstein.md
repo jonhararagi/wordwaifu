@@ -92,3 +92,12 @@ Ais acompaña a Loki a la cafetería donde se reúne con Freya. Saluda brevement
 - **Evento:** EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001.
 - **Límite:** Ais no habla con Bell ni se le acerca en estas páginas. No inferir reciprocidad, relación romántica ni reconocimiento verbal.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
+
+
+## CONT-MAIN-LN · conversación en La Señora de la Abundancia · Volumen 1 · PDF pp.67–68
+
+Cuando Bete ridiculiza a Bell, Ais considera que el miedo del novato fue normal dadas las circunstancias. Ante la provocación de Bete sobre cuál de los dos sería su pareja, Ais afirma que con Bete es «absolutamente imposible»: el rechazo explícito se dirige a él. Cuando Bete cambia la pregunta y plantea si Ais aceptaría a Bell si este le dijera «te amo», la traducción no ofrece una respuesta verbal concluyente de Ais. No convertir el rechazo a Bete en una elección romántica de Bell ni inferir reciprocidad.
+
+- **Evento:** EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF pp.67–68.

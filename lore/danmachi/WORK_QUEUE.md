@@ -1809,3 +1809,16 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - DMR-062 p.57 y el cierre de DMR-061 se sincronizaron. No se crean entidades, eventos o IDs nuevos. Se mantiene la cautela: una escena localizada no es un censo urbano.
 - P1 reconciliada: pp.9–58. Siguiente bloque: PDF pp.59–68. No repetir P2/P3.
 - V1 sigue IN_PROGRESS/PARTIAL; persisten los límites de traducción privada, recuento Kobold y cotejo MD↔PDF global.
+
+
+
+### DMR-061 · checkpoint vigente de Pasada 1 · Volumen 1 · 2026-11-01 · pp.59–68
+
+- [x] Reconciliar PDF pp.59–68 con DMR-061, DMR-062 y destinos funcionales; no repetir P2/P3.
+- [x] Confirmar visualmente los diez folios físicos a 130 dpi: texto continuo; sin ilustraciones, tablas, diagramas ni notas al pie.
+- [x] Añadir a canon/03 la logística de expediciones de p.65: recorrido físico piso a piso, tramos de regreso, provisiones y planificación de retirada; atribución narrativa y límites conservados.
+- [x] Precisar en el evento de visita y la ficha de Ais p.68: rechazo explícito a Bete y ausencia de respuesta concluyente sobre Bell. Reutilizar el evento del rescate y no duplicar entidades.
+- [x] Confirmar que cifras económicas de Bell (pp.60–61), Mia (p.62), Seal (p.62), entrada/celebración de Loki Familia (pp.63–64) y recapitulación del rescate (p.66) ya tenían destinos funcionales.
+- **P1 reconciliada:** pp.9–68. **Siguiente bloque P1:** PDF pp.69–78; no repetir P2/P3 ya documentadas.
+- **Pendientes globales:** P1 pp.69–156; traducción privada no cotejada con japonés; MD↔PDF integral pendiente; mantener sin resolver la ambigüedad p.18, el recuento Kobold y las discrepancias numéricas previamente registradas.
+- **Estado V1:** IN_PROGRESS / PARTIAL; no iniciar V2.
