@@ -1251,3 +1251,13 @@ Los pasos previos visibles en Validate incluían syntax, catalog IDs/relations, 
 - **Siguiente bloque P1:** PDF pp.49–58.
 - **Límites:** ambigüedad de p.18 sigue UNRESOLVED; cuenta de bajas Kobold no normalizada; traducción privada no cotejada con japonés; cotejo textual MD↔PDF pendiente por inaccesibilidad del blob MD.
 - **Estado:** V1 sigue IN_PROGRESS / PARTIAL. No abrir V2.
+
+
+## DMR-061 — avance de reconciliación P1 · 2026-11-01 (actualización pp.49–58)
+
+- **PDF pp.49–58:** reconciliadas contra la fuente física y registros funcionales. P49: decisión táctica de Bell tras el combate (sin maestro/senpai, no pedir entrenamiento a otras Familias por la complejidad social, priorizar 1 contra 1, no cazar profundo y usar terreno) añadida a Bell y evento Kobold. P50–51: se ampliaron Piedra Mágica, ejemplos tecnológicos, exportación como información oída/conjetura, valor de botín y límites de mochila/Ayudante en canon/05, Bell y evento Kobold. P52: cartografía, mayor tamaño de áreas inferiores y aclaración de «Dungeon vivo» añadidas a canon/03. P53–58: Goblin/teoría, snapshot/diálogo de Hestia, fiesta y visita nocturna de La Señora de la Abundancia ya tenían registros funcionales.
+- **P1 completada (PDF↔registros funcionales):** pp.9–58. P1 restante: pp.59–156. P2/P3 pp.9–156 permanecen documentadas; pp.157–214 conservan tres pasadas.
+- **Siguiente bloque P1:** PDF pp.59–68.
+- **Pendientes:** ambigüedad del piso habitual del Minotauro p.18; recuento final de bajas Kobold; discrepancias H120/H123 y D512/D521; traducción sin cotejo japonés; cotejo MD↔PDF pendiente porque el blob del Markdown original no se puede leer mediante la API.
+- **Matriz de DMR-062:** 20 hallazgos priorizados: 15 COMPLETE, 2 PARTIAL, 2 CONTRADICTORY y 1 UNRESOLVED. No es un censo global de todo el volumen.
+- **Estado:** V1 continúa IN_PROGRESS / PARTIAL. No comenzar V2.
