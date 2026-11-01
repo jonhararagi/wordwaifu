@@ -10,6 +10,7 @@
 ## Extracción de acontecimientos por volumen
 - [Volumen 1 — dossier de canon primario](volumes/main/Volumen%20%5B01%5D%20%E2%80%A2%20DanMachi.md) — extracción secuencial actualizada hasta PDF p. 214; incluye el Festival de Monstruos, derrota del Silverback, recuperación posterior y retrospectiva de la concesión inicial de Falna.
 - [DANMACHI-RESEARCH-061](research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md) — eventos y pasajes del Volumen 1; traducción privada no cotejada y límites de procedencia registrados.
+- [Daga de Hestia — ficha de equipo](equipment/daga-de-hestia.md) — OBJ-DM-HESTIA-DAGGER-001; materiales, Estado propio, crecimiento, restricción de Gracia, préstamo y procedencia visual de V1.
 
 - [DMR-062 — auditoría cruzada del MD de Volumen 1](research/inbox/DANMACHI-RESEARCH-062-volume-01-markdown-cross-audit.md) — transcripción derivada del PDF, sin paginación física propia; registra diez fichas de monstruos con localizadores del PDF y deja abiertas las diferencias de traducción.
 - [Índice de monstruos y amenazas](canon/09-indice-monstruos-y-amenazas.md) — incluye ahora las especies documentadas en V1; verificación limitada a DMR-061-SRC-001.
@@ -513,9 +514,9 @@ Las aristas `REL-AU-ALFIA-BELL-CAREGIVER`, `REL-AU-ZALD-BELL-CAREGIVER` y `REL-A
 - **Segunda pasada:** pp.9–156 completadas.
 - **Tercera pasada:** pp.9–156 completadas (148 folios narrativos).
 - **Tres pasadas conservadas:** pp.157–214.
-- **Reconciliación focal pp.9–10:** cotejadas con el PDF; p.9 (fantasía heroica inicial) y p.10 (crisis de Bell Lv.1 perseguido por el Minotauro) ya están incorporadas en DMR-061, `EVT-DM-BELL-AIS-MINOTAUR-001` y `characters/bell-cranel.md`. No se crea evento duplicado.
-- **Pendiente transversal principal:** reconciliar la pasada 1 por página física/localizador en el resto del rango narrativo; no repetir como nuevos los registros ya existentes.
-- **Front matter:** pp.1–7 revisadas; p.8 blanca; p.215 créditos. No convertir la revisión del front matter en extracción narrativa.
-- **Pendientes independientes:** cierre de DMR-062 (reglas/objetos, candidatos de eventos, revisión de personajes y diferencias de traducción); cotejo con japonés no realizado.
+- **P1:** no está certificada globalmente para pp.9–156. El histórico secuencial existe, pero debe reconciliarse folio por folio con eventos y fichas. pp.9–10 sí tienen reconciliación focal del PDF con registros funcionales.
+- **Front matter:** pp.1–7 revisadas visualmente; p.8 blanca; p.215 créditos. No convertir estos folios en narración.
+- **DMR-062:** matriz priorizada de 14 hallazgos añadida; 9 COMPLETE, 2 PARTIAL, 2 CONTRADICTORY, 1 UNRESOLVED. Estos conteos no son globales. La ficha de la Daga de Hestia ya existe; ubicación La Señora de la Abundancia, avenidas y source_refs de Ais/Eina fueron sincronizados.
+- **Pendientes:** reconciliar P1 pp.9–156; recuperar el Markdown original para cotejo MD↔PDF; concluir la granularidad de reglas/sistemas y revisar candidatos de eventos sin IDs duplicados; cotejar con japonés si aparece una edición accesible.
 - **Límite:** DMR-061-SRC-001 es una traducción privada no cotejada con japonés. V1 permanece `IN_PROGRESS`.
 - **Regla de calidad:** cada pasada exige extracción, inspección visual física y control de continuidad; la cuarta revisión es correctiva y puntual.
