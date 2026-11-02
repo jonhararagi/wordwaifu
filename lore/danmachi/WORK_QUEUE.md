@@ -26,7 +26,7 @@ Conteos aproximados de palabras tras excluir las cargas base64 de imágenes y el
 
 | Volumen | Archivo fuente | Palabras aprox. | Imágenes incrustadas | Estado de análisis |
 |---|---|---:|---:|---|
-| 1 | `Volumen [01] • DanMachi.md` | 63.168 | 16 | DMR-061: pasadas 2 y 3 de pp. 9–156 completadas; pp. 157–214 conservan las tres pasadas documentadas; reconciliación de la pasada 1 por folio pendiente. PDF físico: 215 folios (p.8 blanca; p.215 créditos). V1 sigue IN_PROGRESS. |
+| 1 | `Volumen [01] • DanMachi.md` | 63.168 | 16 | DMR-061: P1 PDF↔registros funcionales reconciliada hasta pp.9–128; siguiente pp.129–138. P2/P3 pp.9–156 documentadas y pp.157–214 conservan sus tres pasadas. La comparación integral MD↔PDF sigue pendiente. PDF físico: 215 folios (p.8 blanca; p.215 créditos). V1 sigue PARTIAL / IN_PROGRESS. |
 | 2 | `Volumen [02] • DanMachi.md` | 74.125 | 19 | DMR-060 contiene extracción parcial; falta certificar las tres pasadas completas. |
 | 3 | `Volumen [03] • DanMachi.md` | 53.883 | 21 | Fuente cargada; análisis integral pendiente. |
 | 4 | `Volumen [04] • DanMachi.md` | 64.892 | 23 | Fuente cargada; análisis integral pendiente. |
@@ -1885,3 +1885,20 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - **Pendientes globales:** P1 pp.119–156; cotejo integral Markdown↔PDF; traducción privada no cotejada con japonés; ambigüedad p.18; cuenta de bajas Kobold; V1-AUD-007 H120/H123; discrepancias estadísticas posteriores.
 - **Pasadas:** P2 y P3 pp.9–156 siguen documentadas; pp.157–214 conservan las tres pasadas. No repetirlas.
 - **Estado V1:** PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
+
+### DMR-061 · checkpoint vigente de Pasada 1 · Volumen 1 · 2026-11-02 · pp.119–128
+
+- [x] Reconciliar los diez folios con DMR-061, DMR-062 y los destinos funcionales de `main`; reutilizar P2 pp.121–130 y P3 pp.119–128 sin repetir extracción, render ni inspección.
+- [x] Completar el desenlace del Goblin en p.119, sin añadir snapshot numérico ni identificar a la persona que Bell quiere alcanzar.
+- [x] Completar la descripción visible del vestíbulo de Babel en p.120 y mantener los encuentros de Goblins/Kobolds sin recuento ni eventos individuales.
+- [x] Confirmar preparativos del Festival, conversación oída, emblema, observación de Eina y trámite del Gremio (pp.121–123) en sus destinos existentes.
+- [x] Confirmar las ocho avenidas y el comercio NE (pp.123–124), sin mezclar geometría de CONT-PROTOTYPE.
+- [x] Corregir la atribución en el evento de pociones: Bell pregunta por Hestia; Miach identifica el Banquete y explica que no asistió (p.125). Mantener los dos días como intervalo relativo.
+- [x] Reutilizar la ilustración P3 de p.126 sin asignar identidad.
+- [x] Confirmar los dos tubos como pociones de recuperación almacenadas en la funda izquierda y la cortesía de Miach (pp.125–127), sin compra ni efectos añadidos.
+- [x] Registrar la sucursal roja en la ficha existente de Hephaistos Familia y completar el pensamiento de Bell sobre Wallenstein/daga de escaparate en p.128; no crear ficha de arma ni confundirla con la Daga de Hestia.
+- **P1 reconciliada:** pp.9–128. **Siguiente bloque P1:** PDF pp.129–138. No repetir P2/P3.
+- **Pendientes globales:** P1 pp.129–156; cotejo integral Markdown↔PDF; traducción privada no cotejada con japonés; ambigüedad p.18; recuento de bajas Kobold; V1-AUD-007 H120/H123 y discrepancias estadísticas posteriores.
+- **Pasadas:** P2/P3 pp.9–156 siguen documentadas; pp.157–214 conservan las tres pasadas. No repetirlas.
+- **Estado V1:** PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
+

@@ -40,7 +40,7 @@ El episodio 26 añade que, en Prototype, los locales comerciales llegan hasta el
  
 ## CONT-MAIN-LN · Volumen 1 · PDF pp.103 y 120
 
-La narración describe Babel como la torre dominante situada en el centro de Orario y construida directamente sobre el Dungeon (p.103). Durante el regreso de Bell desde el cuarto piso, el personaje llega a uno de sus espacios subterráneos: un gran vestíbulo con un espacio central, columnas, mobiliario y nombres de aventureros grabados en placas de roca negra (p.120).
+La narración describe Babel como la torre dominante situada en el centro de Orario y construida directamente sobre el Dungeon (p.103). En p.120, Bell accede por el amplio túnel llamado «Inicio del Camino» y asciende por una escalera espiral dentro de un hueco cilíndrico de dimensiones aproximadas. Entra a un vestíbulo subterráneo inmenso: espacio central, pilares gruesos, mobiliario, placas de roca negra con nombres de aventureros, decoración azul y blanca y una representación del cielo en el techo. La comparación con un lugar capaz de albergar miles de aventureros es una impresión narrativa, no una medida de capacidad.
 
 **Límites:** el pasaje no identifica la planta exacta, dimensiones, orientación, acceso administrativo ni relación detallada entre el vestíbulo y otras áreas de Babel. No se infieren coordenadas ni una cartografía interior. Fuente DMR-061-SRC-001, traducción privada no cotejada con japonés.
  

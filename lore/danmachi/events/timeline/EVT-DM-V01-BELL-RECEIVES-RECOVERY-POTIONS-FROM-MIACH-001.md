@@ -36,7 +36,7 @@ Bell se encuentra con Miach mientras este compra ingredientes para la cena. Habl
 ## Secuencia observada
 
 - **p.124 — encuentro:** Bell camina por la Calle Principal del Noreste, después de salir del Gremio, y se encuentra con Miach, que está comprando ingredientes para preparar la cena. Bell lo identifica como un dios y lo saluda con respeto.
-- **p.125 — conversación sobre Hestia y el Banquete:** Miach pregunta si Bell sabe algo de Hestia. Bell responde que ella fue a una fiesta de un amigo hace dos días y todavía no ha vuelto. Miach identifica esa fiesta como el Banquete de Ganesha y explica que no asistió, pese a haber sido invitado, porque debía ayudar a producir los productos de su Familia.
+- **p.125 — conversación sobre Hestia y el Banquete:** Bell pregunta a Miach si sabe algo de Hestia y explica que ella lleva fuera dos días desde que asistió a la fiesta de un amigo. Miach identifica esa celebración como el Banquete de Ganesha. Aunque había sido invitado, explica que no asistió porque ayudaba a producir los artículos de su Familia.
 - **p.125 — entrega:** Miach saca dos tubos de una bolsa de papel y se los entrega a Bell. Los recipientes son altos y delgados; el líquido se describe como azul oscuro, parecido al agua profunda.
 - **p.127 — tipo de objeto y almacenamiento:** después de que Miach se marcha, Bell reconoce que recibió dos pociones de recuperación recién hechas y las guarda en la funda equipada en su pierna izquierda. El pasaje no detalla sus efectos más allá de esa categoría.
 - **p.127 — actividad de Miach Familia:** Bell explica que la Familia mantiene una tienda pequeña orientada a pociones para aventureros y describe de forma general que las Familias pueden dedicarse a distintos negocios y oficios.

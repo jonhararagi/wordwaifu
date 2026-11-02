@@ -54,3 +54,13 @@ La narración presenta a Hephaistos Familia como una Familia de herreros con una
 
 - **Evento relacionado:** EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
+## Sucursal de Hephaistos Familia · CONT-MAIN-LN · Volumen 1 · PDF p.128
+
+Bell observa una sucursal de la Familia en la Calle Principal del Noreste. La tienda destaca por su fachada roja, de tamaño aproximadamente doble al de los comercios contiguos, y por la marca/nombre de Hephaistos Familia. El escaparate muestra armas de calidad, entre ellas una daga blanca hecha con dientes de monstruo.
+
+**Alcance:** se documenta una sucursal y su escaparate observados por Bell; no se crea una ubicación independiente ni se generaliza su tamaño o diseño a todas las instalaciones de la Familia. La daga no recibe nombre, Bell no la compra y no se identifica con la Daga de Hestia. La ficha de Hephaistos conserva la descripción individual de la pieza y el perfil de Bell conserva su reacción.
+
+- **Continuidad:** CONT-MAIN-LN.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF p.128.
+

@@ -1341,3 +1341,16 @@ La auditoría visual directa de pp.49–58 confirmó diez páginas de texto y el
 - **Tests locales:** no ejecutados. La inspección física y revisión documental se distinguen de CI automatizada; los workflows se comprobarán sobre el SHA final.
 - **Límites globales:** traducción privada no cotejada con japonés; cotejo integral MD↔PDF pendiente; ambigüedad p.18, recuento de bajas Kobold y discrepancias estadísticas continúan abiertas.
 - **Estado:** Volumen 1 continúa PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
+
+## DMR-061 — reconciliación P1 · Volumen 1 · PDF pp.119–128 · 2026-11-02
+
+- **Resultado:** 10/10 folios reconciliados entre fuente/P1 registrada, DMR-061, DMR-062 y destinos funcionales existentes.
+- **Pasadas reutilizadas:** P2 de PDF pp.121–130 y P3 de pp.119–128; la documentación ya indica inspección visual individual a 130 dpi, con p.126 como ilustración monocroma de página completa y las otras nueve páginas de texto. No se repitieron extracción ni render.
+- **Correcciones funcionales:** se precisó el desenlace del Goblin y el vestíbulo de Babel en el evento de combate; se amplió Babel con la descripción visible de p.120; se corrigió en el evento de Miach que Bell inicia la pregunta sobre Hestia; se añadió la sucursal roja a la ficha existente de Hephaistos Familia; y el perfil de Bell ahora conserva el pensamiento de p.128 sobre llegar a usar una daga semejante en el contexto de alcanzar a Wallenstein.
+- **Destinos ya cubiertos sin cambios:** evento de preparativos del Festival; perfil de Eina; Familia de Ganesha; avenidas principales y Orario; perfiles y Familia de Miach; categoría/almacenamiento de las dos pociones; ficha de Hephaistos con la daga blanca sin nombre. La ilustración p.126 continúa sin identidad.
+- **Integridad:** no se crean IDs, eventos, personajes, monstruos individuales, objetos, relaciones, aliases ni lugares independientes. No se modifica catálogo ni timeline JSON. Los dos días se mantienen como ancla relativa; no se añaden precios, conteos, estadísticas ni datos de pociones.
+- **Checkpoint:** P1 reconciliada PDF↔registros funcionales pp.9–128. Siguiente bloque P1: pp.129–138. P2/P3 pp.9–156 siguen documentadas y no se repiten. Los bloques pp.157–214 conservan sus tres pasadas.
+- **Pendientes:** cotejo integral Markdown↔PDF; traducción privada española sin cotejo japonés; ambigüedad de p.18; recuento de bajas Kobold; V1-AUD-007 H120/H123 y discrepancias estadísticas posteriores; P1 pp.129–156.
+- **Estado:** Volumen 1 permanece PARTIAL / IN_PROGRESS. No iniciar Volumen 2.
+- **Validación local:** no se ejecutó, porque el entorno no pudo resolver github.com para clonar el repositorio. La validación final se hará mediante los workflows de GitHub sobre el SHA integrado; no se presenta este bloqueo como prueba superada.
+

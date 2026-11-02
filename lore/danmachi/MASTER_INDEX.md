@@ -548,3 +548,8 @@ P1 PDF↔DMR-061↔DMR-062↔destinos funcionales reconciliada hasta p.108. Se c
 ### Cobertura P1 añadida · Volumen 1 · PDF pp.109–118 · 2026-11-02
 
 P1 PDF↔DMR-061↔DMR-062↔destinos funcionales reconciliada hasta p.118. Se completó el evento existente del Banquete con la interacción de Freya con el camarero anónimo, la respuesta sobre su relación con Loki y la mirada/reacción de p.113. La solicitud de arma continúa en su evento propio y el combate Goblin–Dungeon Lizard en su evento y fichas de especie existentes. La ilustración p.116 sigue sin identidad. No se crean IDs ni registros duplicados. Próximo bloque P1: pp.119–128. P2/P3 no se repiten. V1 sigue PARTIAL / IN_PROGRESS.
+
+### DMR-061 · checkpoint vigente de Pasada 1 · Volumen 1 · 2026-11-02 · pp.119–128
+
+P1 PDF↔DMR-061↔DMR-062↔destinos funcionales reconciliada hasta p.128. Se reutilizaron P2 pp.121–130 y P3 pp.119–128 sin repetirlas. El evento de combate conserva el desenlace del Goblin y la llegada a Babel; el evento de pociones corrige que Bell inicia la pregunta a Miach; Babel amplía la descripción del vestíbulo; Hephaistos Familia registra su sucursal roja y Bell conserva el pensamiento de p.128 sobre alcanzar a Wallenstein. No se crearon IDs ni entidades. Próximo bloque P1: PDF pp.129–138. P2/P3 permanecen documentadas pp.9–156 y no se repiten. Traducción privada sin cotejo japonés, cotejo integral MD↔PDF, ambigüedad p.18, cuenta Kobold y discrepancias estadísticas siguen pendientes. V1 PARTIAL / IN_PROGRESS; no iniciar V2.
+
