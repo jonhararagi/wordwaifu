@@ -1328,3 +1328,16 @@ La auditoría visual directa de pp.49–58 confirmó diez páginas de texto y el
 - **Tests locales:** no ejecutados. La revisión visual del PDF y el contraste funcional se distinguen de la validación automática; la CI se comprobará sobre el SHA final de main.
 - **Límites globales:** traducción privada no cotejada con japonés; cotejo integral independiente MD↔PDF pendiente; ambigüedad p.18, recuento de bajas Kobold y discrepancias estadísticas permanecen abiertas.
 - **Estado:** Volumen 1 continúa PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
+
+## DMR-061 — reconciliación de pasada 1 V1 · PDF pp.109–118 (2026-11-02)
+
+- **Resultado:** diez páginas físicas contrastadas con DMR-061, los registros P2 pp.101–110 y pp.111–120, P3 pp.109–118 y los destinos funcionales reales de main. No se repitieron P2/P3.
+- **Corrección funcional:** se amplía EVT-DM-V01-GANESHA-GOD-BANQUET-001 con tres detalles omitidos del resumen funcional: interacción de Freya con el camarero anónimo (p.109), respuesta de Freya sobre su relación con Loki (p.112) y mirada/sonrisa de Freya con reacción de Hestia (p.113). Sin inferir intención ni espionaje.
+- **Destinos existentes confirmados:** evento del Banquete; evento separado de petición/forja de la daga; evento de combate de Bell; perfiles de Hestia, Hephaistos, Loki y Freya; Familia de Hephaistos; fichas MON-DM-DUNGEON-LIZARD-001 y MON-DM-GOBLIN-001.
+- **Límites preservados:** declaraciones de Loki sobre Ais no se convierten en reciprocidad; pensamiento de Hestia permanece POV; respuesta de Freya sobre Loki no se transforma en relación formal; Freya no queda confirmada como espía; figura/objeto aparente de p.116 siguen sin identificar; no se adelanta el desenlace de Goblin de p.119 ni se resuelve la Piedra Mágica del Lizard.
+- **IDs:** no se crean personajes, eventos, lugares, objetos, relaciones, aliases ni identificadores nuevos.
+- **Visual:** la ilustración de p.116 ya había sido inspeccionada a página completa en P3; se reutiliza esa evidencia y no se repite la inspección. Las nueve páginas restantes son de texto; p.117 incluye el título del capítulo.
+- **Cobertura P1:** reconciliada pp.9–118; siguiente bloque pp.119–128. P2/P3 pp.9–156 siguen documentadas y no se repiten; pp.157–214 conservan sus tres pasadas.
+- **Tests locales:** no ejecutados. La inspección física y revisión documental se distinguen de CI automatizada; los workflows se comprobarán sobre el SHA final.
+- **Límites globales:** traducción privada no cotejada con japonés; cotejo integral MD↔PDF pendiente; ambigüedad p.18, recuento de bajas Kobold y discrepancias estadísticas continúan abiertas.
+- **Estado:** Volumen 1 continúa PARTIAL / IN_PROGRESS; no iniciar Volumen 2.

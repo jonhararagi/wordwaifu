@@ -544,3 +544,7 @@ P1 PDF↔DMR-061↔DMR-062↔destinos funcionales reconciliada hasta p.98. Se co
 ### Cobertura P1 añadida · Volumen 1 · PDF pp.99–108 · 2026-11-02
 
 P1 PDF↔DMR-061↔DMR-062↔destinos funcionales reconciliada hasta p.108. Se corrigió el alcance del localizador del evento existente de regreso a Seal (PDF pp.98–102); las fichas de Orario/Babel, Ganesha Familia, Hestia, Hephaistos y Freya ya contenían los datos de sus páginas. Las notas 2–3 de p.107 permanecen editoriales; no se crean IDs ni registros para identidades no confirmadas. Próximo bloque P1: pp.109–118. P2/P3 no se repiten. V1 sigue PARTIAL / IN_PROGRESS.
+
+### Cobertura P1 añadida · Volumen 1 · PDF pp.109–118 · 2026-11-02
+
+P1 PDF↔DMR-061↔DMR-062↔destinos funcionales reconciliada hasta p.118. Se completó el evento existente del Banquete con la interacción de Freya con el camarero anónimo, la respuesta sobre su relación con Loki y la mirada/reacción de p.113. La solicitud de arma continúa en su evento propio y el combate Goblin–Dungeon Lizard en su evento y fichas de especie existentes. La ilustración p.116 sigue sin identidad. No se crean IDs ni registros duplicados. Próximo bloque P1: pp.119–128. P2/P3 no se repiten. V1 sigue PARTIAL / IN_PROGRESS.

@@ -1873,3 +1873,15 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - **Pendientes globales:** P1 pp.109–156; cotejo integral MD↔PDF; traducción privada no cotejada con japonés; ambigüedad p.18; cuenta de bajas Kobold; V1-AUD-007 H120/H123; discrepancias estadísticas posteriores.
 - **Pasadas:** P2 y P3 pp.9–156 siguen documentadas; pp.157–214 conservan las tres pasadas. No repetirlas.
 - **Estado V1:** PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
+
+### DMR-061 · checkpoint vigente de Pasada 1 · Volumen 1 · 2026-11-02 · pp.109–118
+
+- [x] Reconciliar los diez folios físicos con DMR-061, DMR-062 y los destinos funcionales de main; reutilizar P2 pp.101–110 y pp.111–120 y P3 pp.109–118, sin repetir esas pasadas ni sus inspecciones visuales.
+- [x] Completar el evento existente del Banquete con los gestos de Freya con el camarero anónimo (p.109), su respuesta sobre la relación con Loki (p.112) y su mirada/reacción de Hestia (p.113), manteniendo atribución y POV.
+- [x] Confirmar el evento separado de petición/forja de la daga (p.115) y la ficha de Hephaistos Familia; p.115 sigue siendo petición explícita, no aceptación.
+- [x] Reutilizar el evento existente del combate Bell–Dungeon Lizard–Goblin y las fichas MON-DM-DUNGEON-LIZARD-001 y MON-DM-GOBLIN-001; no cerrar el desenlace del Goblin antes de p.119.
+- [x] Reutilizar la inspección visual P3 de p.116; figura y objeto aparente quedan sin identificar, sin crear personaje u objeto.
+- **P1 reconciliada:** pp.9–118. **Siguiente bloque P1:** PDF pp.119–128. No repetir P2/P3.
+- **Pendientes globales:** P1 pp.119–156; cotejo integral Markdown↔PDF; traducción privada no cotejada con japonés; ambigüedad p.18; cuenta de bajas Kobold; V1-AUD-007 H120/H123; discrepancias estadísticas posteriores.
+- **Pasadas:** P2 y P3 pp.9–156 siguen documentadas; pp.157–214 conservan las tres pasadas. No repetirlas.
+- **Estado V1:** PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
