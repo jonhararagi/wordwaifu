@@ -540,3 +540,7 @@ P1 PDF↔DMR-061↔DMR-062↔destinos funcionales reconciliada hasta p.88. Se co
 ### Cobertura P1 añadida · Volumen 1 · PDF pp.89–98 · 2026-11-01
 
 P1 PDF↔DMR-061↔DMR-062↔destinos funcionales reconciliada hasta p.98. Se completaron los registros existentes de cuidado de Hestia (p.89), actualización del Estado (p.91) y visita a La Señora de la Abundancia (p.98), y el perfil de Bell conserva el objetivo que el folio nombra como «Wallenstein-san». No se crearon IDs ni eventos. Próximo bloque P1: pp.99–108. P2/P3 no se repiten. V1 sigue `PARTIAL / IN_PROGRESS`.
+
+### Cobertura P1 añadida · Volumen 1 · PDF pp.99–108 · 2026-11-02
+
+P1 PDF↔DMR-061↔DMR-062↔destinos funcionales reconciliada hasta p.108. Se corrigió el alcance del localizador del evento existente de regreso a Seal (PDF pp.98–102); las fichas de Orario/Babel, Ganesha Familia, Hestia, Hephaistos y Freya ya contenían los datos de sus páginas. Las notas 2–3 de p.107 permanecen editoriales; no se crean IDs ni registros para identidades no confirmadas. Próximo bloque P1: pp.109–118. P2/P3 no se repiten. V1 sigue PARTIAL / IN_PROGRESS.

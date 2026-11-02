@@ -1315,3 +1315,16 @@ La auditoría visual directa de pp.49–58 confirmó diez páginas de texto y el
 - **Límites:** traducción privada no cotejada con japonés; cotejo integral independiente MD↔PDF pendiente porque el blob de la transcripción original no devuelve bytes; ambigüedad p.18, cuenta de bajas Kobold y discrepancias estadísticas siguen abiertas.
 - **Tests locales:** no ejecutados. La validación se realizará mediante GitHub Actions sobre el SHA final.
 - **Estado:** Volumen 1 continúa `PARTIAL / IN_PROGRESS`; no iniciar Volumen 2.
+
+## DMR-061 — reconciliación de pasada 1 V1 · PDF pp.99–108 (2026-11-02)
+
+- **Resultado:** diez folios físicos cotejados con el PDF original, la extracción y tercera pasada existentes de DMR-061, los bloques P2 ya completados, la matriz individual de DMR-062 y los destinos funcionales de main.
+- **Única corrección funcional necesaria:** el evento existente EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001 tenía source_locators [PDF pp. 98–100] pese a describir el retorno hasta la salida de Bell en p.102. Se corrige a PDF pp.98–102.
+- **Destinos reutilizados y confirmados:** evento de regreso a Seal; evento del Banquete de Ganesha; perfiles de Ganesha, Hestia, Hephaistos y Freya; fichas de Ganesha Familia, Orario y Babel. Hephaistos ya contenía apariencia y antecedente de ayuda a Hestia (pp.106–107); no se duplicó.
+- **Límites preservados:** Ryu no se identifica con CHAR-RYUU-LION; Mia-mama no se fusiona con la ficha de anime; rumores sobre Hestia no se convierten en biografía; las notas de p.107 son editoriales; la figura de cabello y ojos escarlata de p.108 sigue sin identidad. El comentario de dioses anónimos sobre Takemikazuchi no crea relación ni perfil.
+- **IDs:** no se crean personajes, eventos, lugares, objetos, relaciones, alias ni identificadores nuevos.
+- **Cobertura P1:** reconciliada pp.9–108; siguiente bloque pp.109–118. P2/P3 pp.9–156 siguen documentadas y no se repiten; pp.157–214 conservan sus tres pasadas.
+- **Visual:** las diez páginas físicas son texto; p.107 contiene dos notas al pie; no hay ilustraciones, tablas o diagramas.
+- **Tests locales:** no ejecutados. La revisión visual del PDF y el contraste funcional se distinguen de la validación automática; la CI se comprobará sobre el SHA final de main.
+- **Límites globales:** traducción privada no cotejada con japonés; cotejo integral independiente MD↔PDF pendiente; ambigüedad p.18, recuento de bajas Kobold y discrepancias estadísticas permanecen abiertas.
+- **Estado:** Volumen 1 continúa PARTIAL / IN_PROGRESS; no iniciar Volumen 2.

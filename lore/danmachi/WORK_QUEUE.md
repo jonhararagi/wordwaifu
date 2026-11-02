@@ -1861,3 +1861,15 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - **Pendientes globales:** P1 pp.99–156; cotejo integral MD↔PDF; traducción privada no cotejada con japonés; ambigüedad p.18; cuenta de bajas Kobold; V1-AUD-007 H120/H123; discrepancias estadísticas posteriores.
 - **Pasadas:** P2 y P3 pp.9–156 siguen documentadas; pp.157–214 conservan las tres pasadas. No repetir.
 - **Estado V1:** `PARTIAL / IN_PROGRESS`; no iniciar Volumen 2.
+
+### DMR-061 · checkpoint vigente de Pasada 1 · Volumen 1 · 2026-11-02 · pp.99–108
+
+- [x] Reconciliar los diez folios físicos con DMR-061, DMR-062 y los destinos funcionales actuales; reutilizar P2 pp.91–100 y pp.101–110 y P3 pp.99–108, sin repetir esas pasadas.
+- [x] Verificar que el evento EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001 cubra el regreso completo de Bell y corregir source_locators a PDF pp.98–102.
+- [x] Confirmar que Orario/Babel, Banquete de Ganesha y los perfiles de Ganesha, Hestia, Hephaistos y Freya ya contienen los detalles pertinentes de pp.103–108; no duplicar destinos.
+- [x] Mantener anónimas a las empleadas y a la diosa de p.108; no identificar a Ryu por inferencia ni trasladar rumores sobre Hestia a su biografía.
+- [x] Registrar las dos notas al pie de p.107 como aparato del traductor; no convertirlas en canon.
+- **P1 reconciliada:** pp.9–108. **Siguiente bloque P1:** PDF pp.109–118. No repetir P2/P3.
+- **Pendientes globales:** P1 pp.109–156; cotejo integral MD↔PDF; traducción privada no cotejada con japonés; ambigüedad p.18; cuenta de bajas Kobold; V1-AUD-007 H120/H123; discrepancias estadísticas posteriores.
+- **Pasadas:** P2 y P3 pp.9–156 siguen documentadas; pp.157–214 conservan las tres pasadas. No repetirlas.
+- **Estado V1:** PARTIAL / IN_PROGRESS; no iniciar Volumen 2.

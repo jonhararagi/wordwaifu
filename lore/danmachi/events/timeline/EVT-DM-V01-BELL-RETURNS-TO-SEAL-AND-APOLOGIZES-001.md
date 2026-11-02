@@ -7,7 +7,7 @@ continuity_scope: CONT-MAIN-LN
 time_anchor: relative_sequence
 source_verification: user_supplied_private_translation_not_crosschecked
 source_refs: [DMR-061-SRC-001]
-source_locators: [PDF pp. 98–100]
+source_locators: [PDF pp. 98–102]
 related_character_ids: [DM-CHAR-BELL, DM-CHAR-SEAL-FLOVER]
 related_event_ids:
   - EVT-DM-V01-BELL-MEETS-SEAL-FLOVER-001
