@@ -21,7 +21,7 @@ spoiler_level: mild
 
 ## Localizador y alcance
 - **Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés.
-- **Localizadores:** PDF p. 115 y pp. 129–133.
+- **Localizadores:** PDF p. 115 y pp. 129–134.
 - **Continuidad:** CONT-MAIN-LN.
 - **Ancla temporal:** la petición se formula durante el Banquete de los Dioses; Hestia continúa insistiendo durante los dos días siguientes y Hephaistos finalmente acepta. No se asigna fecha de calendario.
 

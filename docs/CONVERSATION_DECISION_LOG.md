@@ -837,3 +837,16 @@
 - **Documentos afectados:** `lore/danmachi/WORK_QUEUE.md`, `lore/danmachi/research/inbox/DANMACHI-RESEARCH-061-volume-01-event-extraction.md`, índice de volúmenes y los expedientes de cada volumen conforme se revisen.
 - **Contexto:** instrucción expresa del usuario en la conversación del 2026-10-30; inventario de `main/` verificado en el SHA `0946ace89a29e7439fbcbe4e0d4315aec8418f62`.
 
+
+
+### CONV-DM-2026-11-02-001 — Continuar reconciliación P1 V1 pp.129–138 directamente en main
+- **Fecha:** 2026-11-02.
+- **Estado:** ACCEPTED; ejecución integrada en main tras validación.
+- **Tipo:** instrucción operativa, alcance de auditoría y continuidad.
+- **Decisión:** continuar DMR-061/DMR-062 en WordWaifu, exclusivamente sobre la rama main, para reconciliar PDF físico pp.129–138 del Volumen 1. No crear ramas ni PR, no hacer force-push, no iniciar Volumen 2 y no cerrar el Volumen 1.
+- **Reutilización obligatoria:** P2/P3 de pp.129–138 y la inspección visual individual a 130 dpi ya están documentadas; no repetir extracción, render ni pasadas. P1 debe cotejar cada folio con DMR-061, DMR-062 y destinos funcionales.
+- **Criterios de evidencia:** mantener CONT-MAIN-LN y la atribución/POV; separar solicitud, insistencia, aceptación/forja y entrega; no inferir precio, diseño terminado, snapshot de Estado, incursión al quinto piso, reglas universales de domesticación, identidades ni datos de otras continuidades. El encargo del monedero de Seal permanece abierto hasta que la entrega aparezca en la fuente.
+- **Cambios funcionales autorizados por el cotejo:** completar detalles omitidos solo en destinos existentes, sin crear IDs ni duplicados; registrar la mochila de Bell dejada en La Señora de la Abundancia y el diálogo atribuido de Anya/Ryuu sobre el Festival/domesticación en la ficha existente de Ganesha Familia.
+- **Documentos afectados:** DMR-061, DMR-062, evento existente de petición/forja, perfil de Bell, fichas de Ganesha Familia y La Señora de la Abundancia, MASTER_INDEX, WORK_QUEUE y STATUS.
+- **Checkpoint resultante:** P1 pp.9–138; siguiente rango pp.139–148; P2/P3 pp.9–156 y tres pasadas pp.157–214 preservadas; Volumen 1 PARTIAL / IN_PROGRESS.
+- **Fuente:** instrucción del usuario del 2026-11-02 y evidencia ya registrada en DMR-061/062. La traducción privada española no queda cotejada con japonés.

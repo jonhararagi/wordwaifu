@@ -54,6 +54,7 @@ La traducción del Volumen 1 nombra el establecimiento como «La Señora de la A
 - PDF pp.57–62: primera visita de Bell, cena con Seal, conversación con Mia y descripción del local.
 - PDF pp.63–72: miembros de Loki Familia entran en el establecimiento y Bell escucha el relato del rescate del Minotauro; el acontecimiento conserva su propio expediente.
 - PDF pp.98–100: Bell vuelve, paga lo adeudado, se disculpa con Seal y recibe una cesta; es distinto de la primera cena.
+- PDF pp.136–138: Bell vuelve a pasar por el establecimiento, recibe de Anya el monedero olvidado de Seal, deja allí su mochila y acepta llevar el monedero al Coliseo. El encargo sigue abierto al salir; no se confunde con la visita de disculpa de pp.98–102.
 - PDF pp.203–204: Seal ayuda a trasladar a Hestia inconsciente tras el Festival y conversa con Bell; la secuencia no crea una segunda visita/cena.
 
 ### Límites de continuidad y procedencia

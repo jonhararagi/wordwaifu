@@ -1781,3 +1781,30 @@ La siguiente matriz separa lo que los checkpoints permiten certificar de la extr
 - **P1 reconciliada:** pp.9–128. **Siguiente bloque P1:** PDF pp.129–138. P2/P3 no se repiten.
 - **Pendientes globales:** P1 pp.129–156; cotejo integral Markdown↔PDF; cotejo de la traducción privada con japonés; ambigüedad p.18; recuento de bajas Kobold; V1-AUD-007 H120/H123 y discrepancias estadísticas posteriores. V1 sigue PARTIAL / IN_PROGRESS.
 
+
+
+## Reconciliación de pasada 1 · CONT-MAIN-LN · PDF pp.129–138 · 2026-11-02
+
+**Resultado:** 10/10 folios físicos reconciliados con la extracción P2, la verificación P3, DMR-062 y los destinos funcionales existentes. Se reutiliza la inspección visual P3 individual a 130 dpi ya registrada: diez páginas de texto continuo, sin ilustraciones, tablas, diagramas ni notas al pie. No se repiten extracción, render ni P2/P3.
+
+| PDF | Hecho cotejado | Destino funcional y dictamen P1 |
+|---:|---|---|
+| 129 | Hestia continúa en dogeza en la sucursal; Hephaistos sigue sin aceptar la petición en este folio. | Evento de petición/forja; ya cubierto. No anticipar aceptación. |
+| 130 | Dos días desde el Banquete; negativa inicial por falta de dinero y por no devaluar el trabajo de los herreros. | Evento de petición/forja; ya cubierto. Mantener el intervalo relativo, sin precio ni plazo inventados. |
+| 131 | Hestia explica su motivación para apoyar a Bell; broma sobre «Take»/Takemikazuchi. | Evento de petición/forja; ya cubierto. No crear técnica ni regla de dogeza. |
+| 132 | Hephaistos acepta fabricar la daga con deuda íntegra; Hestia se levanta con dificultad por el entumecimiento. | Evento de petición/forja; el detalle físico ya está recogido. No es regalo, rebaja ni condonación. |
+| 133 | Mithril, martillo carmesí, forja personal como asunto privado, ayuda de Hestia en el taller y explicación traducida sobre Poder Divino. | Evento de petición/forja; ya cubierto. No declarar diseño terminado ni entrega. |
+| 134 | Hephaistos sopesa un arma demasiado poderosa frente a una obra ordinaria; edad y tiempo desde Falna son recuerdos suyos. | Evento de petición/forja y perfil de Hephaistos; ya cubiertos. El dilema sigue abierto y no se convierte el recuerdo en metadato atemporal de Bell. |
+| 135 | Bell se prepara por la mañana para volver al Dungeon, contempla llegar al quinto piso, cree que su Estado mejoró y considera consultar a Eina. | Perfil de Bell; ya cubierto. Es intención, no incursión, llegada ni combate. Sin snapshot numérico. |
+| 136 | Anya llama a Bell «Cabello Blanco» y le pide llevar a Seal el monedero olvidado. | Perfiles de Anya y Bell, y ficha del establecimiento; ya cubiertos. No añadir apellido ni contenido no mostrado. |
+| 137 | Ryuu corrige/completa a Anya; explican que Seal salió en su día libre para visitar el Festival y olvidó el monedero. | Perfiles de Ryuu, Anya y Seal; ya cubiertos. Información referida por las empleadas, no presenciada por Bell. |
+| 138 | Ryuu explica la domesticación y la mayor dificultad de monstruos del Dungeon; Bell acepta llevar el monedero por la Calle Principal del Este y deja su mochila en el local. | Perfil de Bell, ficha de Ganesha Familia y lugar Hostess; se completa la mención de la mochila y se incorpora la explicación atribuida sobre domesticación. La devolución sigue pendiente. |
+
+### Dictamen P1 pp.129–138
+
+- **10/10** páginas reconciliadas. Los destinos existentes ya cubrían la petición/forja, motivaciones, deuda, preparación de Bell, identidades nombradas en el diálogo y encargo abierto del monedero.
+- Correcciones funcionales puntuales: se armoniza el localizador del evento de petición/forja hasta p.134; se registra en Bell que deja la mochila en La Señora de la Abundancia; se añade a la ficha de Ganesha Familia la explicación del Festival/domesticación como información atribuida a Anya y Ryuu; la ficha del local conserva la acción de Bell de dejar allí la mochila.
+- Se mantienen separados solicitud, insistencia, aceptación/forja y entrega física de pp.145–146. No se afirma que Bell reciba la daga.
+- No se crea evento de devolución del monedero ni se cierra el encargo. No se crean entidades, habilidades, objetos individuales, eventos, aliases o IDs.
+- **P1 reconciliada:** pp.9–138. **Siguiente bloque P1:** PDF pp.139–148. P2/P3 pp.9–156 no se repiten; pp.157–214 conservan sus tres pasadas.
+- La traducción privada sigue sin cotejo con japonés; el cotejo integral independiente Markdown↔PDF y los pendientes estadísticos globales permanecen abiertos. V1 continúa PARTIAL / IN_PROGRESS.

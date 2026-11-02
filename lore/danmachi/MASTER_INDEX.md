@@ -553,3 +553,8 @@ P1 PDF↔DMR-061↔DMR-062↔destinos funcionales reconciliada hasta p.118. Se c
 
 P1 PDF↔DMR-061↔DMR-062↔destinos funcionales reconciliada hasta p.128. Se reutilizaron P2 pp.121–130 y P3 pp.119–128 sin repetirlas. El evento de combate conserva el desenlace del Goblin y la llegada a Babel; el evento de pociones corrige que Bell inicia la pregunta a Miach; Babel amplía la descripción del vestíbulo; Hephaistos Familia registra su sucursal roja y Bell conserva el pensamiento de p.128 sobre alcanzar a Wallenstein. No se crearon IDs ni entidades. Próximo bloque P1: PDF pp.129–138. P2/P3 permanecen documentadas pp.9–156 y no se repiten. Traducción privada sin cotejo japonés, cotejo integral MD↔PDF, ambigüedad p.18, cuenta Kobold y discrepancias estadísticas siguen pendientes. V1 PARTIAL / IN_PROGRESS; no iniciar V2.
 
+
+
+### Cobertura P1 añadida · Volumen 1 · PDF pp.129–138 · 2026-11-02
+
+P1 PDF↔DMR-061↔DMR-062↔destinos funcionales reconciliada hasta p.138 (10/10 folios). La secuencia de petición/forja ya estaba cubierta; se armonizó su localizador hasta p.134. Bell conserva que deja su mochila en La Señora de la Abundancia al aceptar el encargo del monedero; la ficha del lugar refleja esa acción. La ficha de Ganesha Familia incorpora, con atribución explícita a Anya/Ryuu, la explicación dialogada del Festival anual y la domesticación, sin convertirla en regla universal. El monedero no se ha devuelto y la entrega de la daga a Bell no ocurre en este tramo. Próximo bloque P1: pp.139–148. P2/P3 no se repiten. V1 sigue PARTIAL / IN_PROGRESS.

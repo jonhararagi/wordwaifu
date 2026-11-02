@@ -1354,3 +1354,16 @@ La auditoría visual directa de pp.49–58 confirmó diez páginas de texto y el
 - **Estado:** Volumen 1 permanece PARTIAL / IN_PROGRESS. No iniciar Volumen 2.
 - **Validación local:** no se ejecutó, porque el entorno no pudo resolver github.com para clonar el repositorio. La validación final se hará mediante los workflows de GitHub sobre el SHA integrado; no se presenta este bloqueo como prueba superada.
 
+
+
+## DMR-061 — reconciliación P1 · Volumen 1 · PDF pp.129–138 · 2026-11-02
+
+- **Resultado:** 10/10 folios reconciliados con DMR-061, DMR-062 y destinos funcionales actuales.
+- **Pasadas reutilizadas:** P2 y P3 ya documentadas para este rango; P3 registró inspección visual individual a 130 dpi de las diez páginas, todas de texto continuo. No se repitieron extracción, render ni inspección.
+- **Destinos confirmados:** evento de petición/forja y perfiles de Hestia/Hephaistos; perfil de Bell para su preparación al Dungeon; perfiles de Anya, Ryuu y Seal para el encargo del monedero; ficha del establecimiento y Familia de Ganesha.
+- **Correcciones funcionales:** localizador secundario del evento de petición/forja armonizado para incluir p.134; Bell registra que deja su mochila en La Señora de la Abundancia y la ficha del local registra la acción; Ganesha Familia conserva la explicación del Festival y domesticación como diálogo atribuido a Anya/Ryuu.
+- **Límites:** pp.129–134 no implican diseño terminado ni entrega de la daga; Bell no recibe la daga en este rango. La intención de ir al quinto piso en p.135 no es una incursión. La salida de Seal es información referida; el monedero sigue pendiente. No se crea regla universal de domesticación ni un segundo evento del Festival.
+- **Integridad:** no se crean IDs, personajes, monstruos, objetos, habilidades, eventos, aliases ni relaciones; no se modifican catálogos ni timeline JSON.
+- **Checkpoint:** P1 reconciliada pp.9–138. Siguiente bloque P1: pp.139–148. P2/P3 pp.9–156 siguen documentadas y no se repiten; pp.157–214 conservan sus tres pasadas.
+- **Pendientes:** cotejo integral Markdown↔PDF; traducción privada española sin cotejo japonés; ambigüedad p.18; recuento Kobold; V1-AUD-007 H120/H123 y discrepancias estadísticas posteriores; P1 pp.139–156. V1 sigue PARTIAL / IN_PROGRESS; no iniciar V2.
+- **Tests locales:** no ejecutados; el entorno de trabajo no dispone de clon local operativo. La CI se comprobará sobre el SHA final de main y no se considera superada hasta que ambos workflows terminen.

@@ -1902,3 +1902,19 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - **Pasadas:** P2/P3 pp.9–156 siguen documentadas; pp.157–214 conservan las tres pasadas. No repetirlas.
 - **Estado V1:** PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
 
+
+
+### DMR-061 · checkpoint vigente de Pasada 1 · Volumen 1 · 2026-11-02 · pp.129–138
+
+- [x] Reconciliar individualmente los diez folios físicos con DMR-061, DMR-062 y los destinos funcionales existentes; reutilizar P2/P3 y la inspección visual P3 ya registrada, sin repetir extracción, render ni inspección.
+- [x] Confirmar pp.129–134 en el evento existente de petición/forja: insistencia, intervalo de dos días, motivos de Hestia, aceptación con deuda íntegra, materiales, forja personal, ayuda en taller y dilema de diseño. Mantener separado el evento de entrega física de pp.145–146.
+- [x] Confirmar p.135 como preparación/intención de Bell, no incursión ni combate; no añadir snapshot numérico.
+- [x] Confirmar pp.136–138 en los perfiles existentes de Anya, Ryuu, Seal y Bell; mantener la salida de Seal como información referida y el monedero como encargo abierto.
+- [x] Completar en Bell y en la ficha de La Señora de la Abundancia que deja allí su mochila antes de dirigirse al Coliseo.
+- [x] Añadir a Ganesha Familia la explicación del Festival/domesticación de pp.137–138 como diálogo atribuido a Anya y Ryuu, sin regla universal, roster exhaustivo ni segundo evento.
+- [x] Comprobar que no se creen IDs, eventos, entidades, monstruos, objetos, habilidades, aliases ni relaciones duplicadas; no modificar catálogo ni timeline JSON.
+- **P1 reconciliada:** pp.9–138. **Siguiente bloque P1:** PDF pp.139–148.
+- **Pendientes globales:** cotejo integral Markdown↔PDF; traducción privada no cotejada con japonés; ambigüedad p.18; recuento de bajas Kobold; V1-AUD-007 H120/H123 y discrepancias estadísticas posteriores; P1 pp.139–156.
+- **Pasadas:** P2/P3 pp.9–156 siguen documentadas; pp.157–214 conservan sus tres pasadas. No repetirlas.
+- **Encargo de Seal:** sigue pendiente de devolución. No cerrar ni crear evento de entrega hasta que la fuente muestre el encuentro.
+- **Estado V1:** PARTIAL / IN_PROGRESS; no iniciar Volumen 2.

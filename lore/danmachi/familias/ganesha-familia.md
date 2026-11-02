@@ -53,3 +53,13 @@ Bell observa a varios trabajadores con un emblema de rostro de elefante, que aso
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
 - **Límite:** no se identifican las criaturas, el número de cajas, los responsables individuales ni las reglas completas de transporte; el roster de Familia sigue incompleto.
 
+
+
+## Festival de Monstruos y domesticación · CONT-MAIN-LN · Volumen 1 · PDF pp.137–138
+
+Anya explica a Bell que el Festival de Monstruos es una celebración anual organizada por Ganesha Familia en el Coliseo. Ryuu añade que la domesticación exige que el domador demuestre fuerza y consiga que el monstruo obedezca; según su explicación, los monstruos procedentes del Dungeon son más difíciles de domesticar que los de superficie y los miembros centrales de Ganesha Familia tienen fuerza suficiente para hacerlo.
+
+- **Atribución:** son explicaciones dialogadas de Anya y Ryuu durante el encargo del monedero de Seal, no una exposición omnisciente ni un reglamento universal.
+- **Alcance:** no se identifican especies, número de monstruos, técnicas, habilidades o estadísticas; tampoco se completa aquí el roster de Ganesha Familia ni se documenta el Festival entero.
+- **Relación con otros registros:** complementa el contexto del evento de preparativos EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001 sin crear otro evento del Festival ni fusionarse con la salida Bell–Hestia de pp.150–156.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF pp.137–138.

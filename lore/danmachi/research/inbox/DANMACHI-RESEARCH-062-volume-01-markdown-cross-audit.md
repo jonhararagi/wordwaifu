@@ -524,3 +524,29 @@ En esta **matriz priorizada de 20 hallazgos** hay 15 `COMPLETE`, 2 `PARTIAL`, 2 
 - La daga blanca permanece sin nombre, sin compra y separada de la Daga de Hestia. La ilustración p.126 permanece sin identidad.
 - **Siguiente bloque P1:** PDF pp.129–138. Cotejo integral MD↔PDF y traducción española frente al japonés siguen pendientes; V1 PARTIAL / IN_PROGRESS.
 
+
+
+## Matriz de reconciliación P1 · PDF pp.129–138 · 2026-11-02
+
+**Alcance:** contraste por folio físico entre DMR-061, los resultados P2/P3 ya documentados y los destinos funcionales de main. No se repiten las pasadas ni el render visual: P3 ya registró las diez páginas inspeccionadas individualmente a 130 dpi, todas de texto continuo.
+
+| Página | Contenido cotejado | Destino funcional | Estado P1 | Acción / razón sin cambio | Localizador |
+|---:|---|---|---|---|---|
+| 129 | Hestia mantiene la dogeza en la sucursal; la petición sigue sin respuesta. | Evento de petición/forja; Hestia; Hephaistos. | COMPLETE | El evento existente conserva la insistencia y no anticipa aceptación. | PDF p.129; DMR-061 P2/P3; evento y perfiles. |
+| 130 | Dos días desde el Banquete; negativa por falta de dinero y por respeto al trabajo de los herreros. | Evento de petición/forja; Hephaistos Familia. | COMPLETE | Ya cubierto. Se conserva el intervalo relativo; no se inventan precio, rebaja ni condonación. | PDF p.130; DMR-061 P2/P3; evento. |
+| 131 | Motivación expresada por Hestia para apoyar a Bell; broma sobre «Take»/Takemikazuchi. | Evento de petición/forja; Hestia. | COMPLETE | Ya cubierto y atribuido a Hestia. No crear técnica, habilidad ni regla universal. | PDF p.131; DMR-061 P2/P3; evento/perfil. |
+| 132 | Aceptación de Hephaistos, deuda íntegra incluso a décadas/siglos y dificultad de Hestia al levantarse por el entumecimiento. | Evento de petición/forja. | COMPLETE | El detalle de entumecimiento ya estaba en el cuerpo del evento. Se armoniza su localizador secundario para incluir p.134. | PDF p.132; DMR-061 P2/P3; evento. |
+| 133 | Mithril, martillo carmesí, forja personal privada, ayuda de Hestia y explicación traducida sobre Poder Divino. | Evento de petición/forja; Hephaistos Familia. | COMPLETE | Ya cubierto; no afirmar que el arma esté terminada ni entregada. | PDF p.133; DMR-061 P2/P3; evento. |
+| 134 | Dilema de diseño desde la perspectiva de Hephaistos; edad/tiempo desde Falna como recuerdos suyos. | Evento de petición/forja; Hephaistos; Bell. | COMPLETE | Ya cubierto; no convertir el recuerdo en metadatos permanentes ni resolver el diseño. | PDF p.134; DMR-061 P2/P3; evento/perfiles. |
+| 135 | Preparación de Bell para regresar al Dungeon, intención de llegar al quinto piso, expectativa de mejora del Estado y posible consulta a Eina. | Bell; Eina. | COMPLETE | Perfil de Bell ya lo conserva. No registrar incursión ni cifras de Estado. | PDF p.135; DMR-061 P2/P3; perfiles. |
+| 136 | Anya llama a Bell «Cabello Blanco» y le entrega el encargo del monedero de Seal. | Anya; Bell; La Señora de la Abundancia. | COMPLETE | Ya cubierto en los perfiles y la ficha del local; no añadir apellido ni contenido no visible. | PDF p.136; DMR-061 P2/P3; perfiles/lugar. |
+| 137 | Ryuu corrige la explicación; Seal salió en su día libre para visitar el Festival y olvidó el monedero. | Ryuu; Anya; Seal. | COMPLETE | Ya cubierto y atribuido a las empleadas. Bell no presenció la salida de Seal. | PDF p.137; DMR-061 P2/P3; perfiles. |
+| 138 | Explicación dialogada de domesticación; Bell acepta llevar el monedero por la Calle Principal del Este y deja su mochila en el establecimiento. | Bell; Ganesha Familia; La Señora de la Abundancia. | COMPLETE | Se añade la mochila dejada en el local al perfil de Bell y a la ficha del lugar; la explicación sobre domesticación se incorpora a Ganesha Familia con atribución a Anya/Ryuu y alcance limitado. El monedero no se marca como entregado. | PDF p.138; DMR-061 P2/P3; perfiles y fichas. |
+
+### Resultado de reconciliación P1 pp.129–138
+
+- **10/10 COMPLETE.** No se repitieron P2/P3 ni la inspección visual.
+- Correcciones funcionales: localizador del evento de petición/forja armonizado hasta p.134; mochila de Bell registrada en el perfil y el lugar; explicación del Festival y domesticación añadida a Ganesha Familia como información dialogada atribuida.
+- No se crea evento para la devolución, no se duplica el Festival ni se crean entidades, habilidades, monstruos, objetos, aliases o IDs.
+- La petición/forja permanece separada de la entrega a Hestia en pp.145–146. El encargo del monedero permanece abierto.
+- Próximo bloque P1: PDF pp.139–148. P2/P3 pp.9–156 siguen documentadas; pp.157–214 conservan sus tres pasadas. V1 PARTIAL / IN_PROGRESS.
