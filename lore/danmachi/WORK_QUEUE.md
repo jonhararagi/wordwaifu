@@ -1484,9 +1484,9 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 
 - Pasada 2: pp.9–156 completadas; pp.157–214 conservan sus tres pasadas registradas.
 - Pasada 3: pp.9–156 completadas; pp.157–214 conservan sus tres pasadas registradas.
-- Pasada 1: reconciliación PDF↔registros funcionales completada en pp.9–88. Pp.49–58 incorporan estrategia de Bell, límites de transporte, economía de Piedras Mágicas y cartografía; pp.69–78 incorporan reacción de Loki, estado temporal de Bell, seguimiento de Eina y corrección del alias Frog Shooter; pp.79–88 incorporan el combate/cerco War Shadow en el perfil de Bell y verifican el evento existente de regreso con Hestia.
+- Pasada 1: reconciliación PDF↔registros funcionales completada en pp.9–98. Pp.49–58 incorporan estrategia de Bell, límites de transporte, economía de Piedras Mágicas y cartografía; pp.69–78 incorporan reacción de Loki, estado temporal de Bell, seguimiento de Eina y corrección del alias Frog Shooter; pp.79–88 incorporan combate/cerco War Shadow; pp.89–98 completan cuidado de Hestia, actualización de Estado y visita a Seal con sus destinos funcionales.
 - Front matter: pp.1–7 inspeccionadas visualmente; p.8 blanca; p.215 créditos. El cotejo textual MD↔PDF sigue pendiente por inaccesibilidad del blob.
-- Próxima tarea P1: PDF pp.89–98; no repetir P2/P3 ni crear eventos duplicados.
+- Próxima tarea P1: PDF pp.99–108; no repetir P2/P3 ni crear eventos duplicados.
 
 ### Checkpoint DMR-061 · Volumen 1, PDF pp. 81–90 · 2026-10-31
 
@@ -1847,4 +1847,17 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - **P1 reconciliada:** pp.9–88. **Siguiente bloque P1:** PDF pp.89–98. No repetir P2/P3.
 - **Pendientes globales:** P1 pp.89–156; cotejo integral MD↔PDF; cotejo de la traducción privada con japonés; ambigüedad p.18, cuenta de bajas Kobold y discrepancias estadísticas anteriores.
 - **Pasadas:** P2 y P3 pp.9–156 siguen documentadas; pp.157–214 conservan las tres pasadas registradas. No se repiten en este checkpoint.
+- **Estado V1:** `PARTIAL / IN_PROGRESS`; no iniciar Volumen 2.
+
+### DMR-061 · checkpoint vigente de Pasada 1 · Volumen 1 · 2026-11-01 · pp.89–98
+
+- [x] Reconciliar diez folios físicos con DMR-061, DMR-062 y destinos funcionales existentes; reutilizar P2/P3 sin repetirlas.
+- [x] Ampliar `EVT-DM-V01-HESTIA-SEARCHES-BELL-AND-CARES-FOR-HIM-001` en p.89; p.90 ya estaba cubierta y termina antes del snapshot.
+- [x] Completar `EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001` en p.91 con descanso/grito y método de actualización; corregir Magia para no inventar valor anterior y conservar V1-AUD-007.
+- [x] Reutilizar la habilidad `[Deseo Inquebrantable]`; añadir su reaparición p.91 al índice, sin crear segunda habilidad ni atribuir su conocimiento a Bell.
+- [x] Completar perfil Bell y evento existente de regreso a Seal con el objetivo explícito «Wallenstein-san» de p.98; no retro-identificar referencias anónimas de pp.77/85 ni identificar a las empleadas.
+- [x] Verificar que Hostess y su índice ya contienen pp.98–100; no duplicar lugar, personaje ni evento.
+- **P1 reconciliada:** pp.9–98. **Siguiente bloque P1:** PDF pp.99–108. No repetir P2/P3.
+- **Pendientes globales:** P1 pp.99–156; cotejo integral MD↔PDF; traducción privada no cotejada con japonés; ambigüedad p.18; cuenta de bajas Kobold; V1-AUD-007 H120/H123; discrepancias estadísticas posteriores.
+- **Pasadas:** P2 y P3 pp.9–156 siguen documentadas; pp.157–214 conservan las tres pasadas. No repetir.
 - **Estado V1:** `PARTIAL / IN_PROGRESS`; no iniciar Volumen 2.

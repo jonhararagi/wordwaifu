@@ -1304,3 +1304,14 @@ La auditoría visual directa de pp.49–58 confirmó diez páginas de texto y el
 - **Tests locales:** no se ejecutaron; la validación registrada corresponde exclusivamente a GitHub Actions.
 - **Límites:** la traducción privada sigue sin cotejo con japonés. El cotejo integral independiente MD↔PDF continúa pendiente porque GitHub no devuelve los bytes del blob de la transcripción original. Permanecen abiertas la ambigüedad de p.18, la cuenta final de bajas Kobold y las discrepancias estadísticas ya registradas.
 - **Estado:** Volumen 1 continúa `PARTIAL / IN_PROGRESS`; no iniciar Volumen 2.
+
+## DMR-061 — reconciliación de pasada 1 V1 · PDF pp.89–98 (2026-11-01)
+
+- **Resultado:** diez folios físicos contrastados con DMR-061, matriz individual de DMR-062 y destinos funcionales actuales en `main`.
+- **Correcciones funcionales:** evento Hestia pp.87–90 ampliado en p.89; evento Estado pp.91–97 completado con descanso/grito/método de actualización y corrección del valor anterior de Magia; perfil Bell y evento de visita p.98 completados con el objetivo nombrado «Wallenstein-san».
+- **Registros reutilizados:** `EVT-DM-V01-HESTIA-SEARCHES-BELL-AND-CARES-FOR-HIM-001`, `EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001`, `EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001`; habilidad existente `[Deseo Inquebrantable]`; `LOC-HOSTESS` y su índice. Sin IDs, eventos, objetos o entidades nuevos.
+- **Discrepancia:** V1-AUD-007 H120 p.54 / H123 p.91 permanece `CONTRADICTORY`; no se inventa actualización intermedia. Bell no conoce la habilidad; no se reidentifican retroactivamente referencias anónimas de pp.77/85.
+- **Cobertura P1:** reconciliada pp.9–98; siguiente bloque pp.99–108. P2/P3 pp.9–156 siguen documentadas y no se repiten; pp.157–214 conservan sus tres pasadas.
+- **Límites:** traducción privada no cotejada con japonés; cotejo integral independiente MD↔PDF pendiente porque el blob de la transcripción original no devuelve bytes; ambigüedad p.18, cuenta de bajas Kobold y discrepancias estadísticas siguen abiertas.
+- **Tests locales:** no ejecutados. La validación se realizará mediante GitHub Actions sobre el SHA final.
+- **Estado:** Volumen 1 continúa `PARTIAL / IN_PROGRESS`; no iniciar Volumen 2.

@@ -160,6 +160,12 @@ La traducción española aportada es privada y no se ha cotejado con el japonés
 - **Habilidad:** el Estado grabado vuelve a mostrar [Deseo Inquebrantable]. Hestia oculta a Bell el nombre y los efectos; él solo recibe una explicación verbal de crecimiento anormal. No registrar que Bell conozca la Habilidad en este punto.
 - **Promesa:** Bell se compromete a no actuar imprudentemente, seguir fortaleciéndose y no dejar sola a Hestia (pp.95–96).
  
+## CONT-MAIN-LN · decisión de Bell antes de volver al Dungeon · PDF p.98
+
+- **Rodilla y prudencia:** Bell reconoce que la lesión sigue doliéndole y decide no forzarse, recordando el consejo de Hestia de no sobreesforzarse. Piensa que ya había avanzado a su máxima velocidad y que insistir solo haría que él sufriera.
+- **Objetivo nombrado:** en este folio Bell piensa explícitamente en alcanzar a «Wallenstein-san»; el nombre identifica textualmente a Ais Wallenstein como la persona a la que quiere alcanzar en este momento. Esta mención de p.98 no se usa para resolver automáticamente las referencias anónimas «esa persona»/«esa altura» de pp.77 y 85, que conservan sus localizadores y alcance original.
+- **Reacción al personal del local:** al oír la voz de una empleada elfa anónima en La Señora de la Abundancia, Bell recuerda que recientemente ha notado que le atraen los elfos y se pone tenso. Es una reacción interna puntual ante una persona sin nombre; no se convierte en una preferencia estable ni en relación.
+- **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF p.98. Evento relacionado: `EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001`.
 ## Continuidad principal · Volumen 1 · pp.101–102 y 117–120
 
 - **Decisión tras la disculpa a Seal (pp.101–102):** Bell toma como motivación el consejo recibido y el recuerdo de la humillación previa por parte de un miembro bestial de Loki Familia. Decide fortalecerse sin forzarse y priorizar volver con vida. La identidad del miembro al que recuerda no se asigna por este pasaje.

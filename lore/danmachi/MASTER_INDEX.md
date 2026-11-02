@@ -536,3 +536,7 @@ P1 PDF↔DMR-061↔DMR-062↔destinos funcionales reconciliada hasta pp.78. En p
 ### Cobertura P1 añadida · Volumen 1 · PDF pp.79–88 · 2026-11-01
 
 P1 PDF↔DMR-061↔DMR-062↔destinos funcionales reconciliada hasta p.88. Se completó el perfil de Bell para el combate y cerco de pp.79–85; la ficha War Shadow ya contenía los datos de especie y el evento existente de Hestia cubría pp.87–88. La ilustración p.86 queda sin identidad. No se crearon IDs ni eventos. Próximo bloque P1: pp.89–98. P2/P3 no se repiten. V1 sigue `PARTIAL / IN_PROGRESS`.
+
+### Cobertura P1 añadida · Volumen 1 · PDF pp.89–98 · 2026-11-01
+
+P1 PDF↔DMR-061↔DMR-062↔destinos funcionales reconciliada hasta p.98. Se completaron los registros existentes de cuidado de Hestia (p.89), actualización del Estado (p.91) y visita a La Señora de la Abundancia (p.98), y el perfil de Bell conserva el objetivo que el folio nombra como «Wallenstein-san». No se crearon IDs ni eventos. Próximo bloque P1: pp.99–108. P2/P3 no se repiten. V1 sigue `PARTIAL / IN_PROGRESS`.

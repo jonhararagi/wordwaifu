@@ -66,6 +66,7 @@ Todos estos datos son de fichas finales de la traducción privada aportada; no s
 - **Primera fuente de trabajo:** DMR-061-SRC-001, PDF pp.35–36.
 - **Efectos tal como aparecen traducidos:** acelera el crecimiento; los efectos duran mientras los sentimientos de Bell no cambien; la intensidad del efecto depende de la fuerza de esos sentimientos.
 - **Condiciones/conocimiento:** Hestia observa la habilidad en el Estado grabado en la espalda de Bell. La copia entregada a Bell deja vacía la sección de Habilidades. No se muestra que Bell conozca el nombre ni los efectos en esta escena.
+- **Reaparición en el Estado:** el nombre y los mismos tres efectos vuelven a verse desde la perspectiva de Hestia en el snapshot de PDF p.91. Hestia los observa; Bell sigue sin conocer el nombre ni los efectos en ese momento. No se crea una segunda habilidad ni una ficha duplicada.
 - **Estado:** provisional, traducción privada no cotejada con japonés. No asignar nombre japonés, coste, activación adicional ni límites no expresados.
 
 ### Explicación narrativa parcial de Magia y Habilidades · p.34

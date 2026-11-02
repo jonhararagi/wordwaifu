@@ -9,7 +9,7 @@ source_verification: user_supplied_private_translation_not_crosschecked
 source_refs: [DMR-061-SRC-001]
 source_locators: [PDF pp. 91–97]
 related_character_ids: [DM-CHAR-BELL, DM-CHAR-HESTIA]
-related_event_ids: [EVT-DM-BELL-AIS-MINOTAUR-001]
+related_event_ids: [EVT-DM-BELL-AIS-MINOTAUR-001, EVT-DM-V01-HESTIA-SEARCHES-BELL-AND-CARES-FOR-HIM-001, EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001]
 spoiler_level: major
 ---
 
@@ -26,7 +26,13 @@ spoiler_level: major
 
 Después del regreso herido de Bell, Hestia vuelve a actualizar su Estado. Los atributos aumentan y la inscripción muestra de nuevo [Deseo Inquebrantable]. Hestia decide ocultar a Bell la existencia de la Habilidad y le explica solamente que su crecimiento es anormal. La conversación lleva a una promesa mutua: Bell se esforzará por hacerse más fuerte sin actuar imprudentemente y no dejará sola a Hestia; ella respetará su decisión y lo ayudará.
 
+## Transición inmediata · PDF p.91
+
+Ha pasado una noche desde el regreso de Bell. La narración indica que, debido a la fatiga extrema, durmió durante todo el día anterior; al darse cuenta de que había dormido con Hestia, deja escapar un grito. Ambos se disponen entonces a actualizar el Estado. No se asigna una duración adicional ni una fecha de calendario.
+
 ## Snapshot de Estado · PDF p.91
+
+Hestia se sienta sobre la espalda de Bell y usa su sangre divina para inscribir el Texto Sagrado. Mientras actualiza, observa que los números empiezan a crecer a una velocidad extraordinaria, muy superior a lo que conocía de otros aventureros.
 
 | Atributo | Valor anterior mostrado | Valor nuevo |
 |---|---:|---:|
@@ -34,7 +40,7 @@ Después del regreso herido de Bell, Hestia vuelve a actualizar su Estado. Los a
 | Resistencia | I 42 | H 101 |
 | Destreza | H 139 | G 232 |
 | Agilidad | G 225 | F 313 |
-| Magia | I 0 | I 0 |
+| Magia | — (no se muestra valor anterior) | I 0 |
 
 - **Nivel:** Lv. 1.
 - **Habilidad visible en el Estado grabado:** [Deseo Inquebrantable].
@@ -45,9 +51,10 @@ Después del regreso herido de Bell, Hestia vuelve a actualizar su Estado. Los a
 
 - Hestia ve la Habilidad en el Estado grabado en la espalda de Bell. La información pertenece a su perspectiva y al lector; no se muestra que Bell lea el nombre o los efectos.
 - Hestia le comunica que su tasa de crecimiento es anormal y la describe como un período de crecimiento, pero no revela [Deseo Inquebrantable].
-- Considera que conocer la Habilidad podría generar arrogancia, accidentes o atraer el interés de otros dioses. Su preocupación y su razonamiento se registran como pensamientos de Hestia, no como reglas universales demostradas.
-- Hestia admite internamente que sus celos respecto de Wallenstein representan gran parte de su motivo para ocultar la Habilidad. No convertir esa reflexión puntual en una caracterización psicológica atemporal.
-- Hestia también valora la capacidad propia de Bell: sus decisiones, técnicas y experiencia de combate. No atribuye todo su desempeño a la Habilidad ni convierte su elogio en una medición objetiva.
+- **p.92 — comparación del crecimiento:** Hestia lo considera un «salto» anormal. Piensa que, si otros aventureros crecieran a ese ritmo, muchos ya serían aventureros de tercera clase (Lv. 2); estima que Bell avanza una o incluso dos veces más rápido que otros. Recuerda haber oído que el dominio suele crecer alrededor de diez puntos al principio y luego encuentra un muro. Son comparaciones y recuerdos de Hestia, no una fórmula ni una predicción universal.
+- **pp.93–94 — decisión de ocultar la Habilidad:** Hestia teme que Bell se vuelva arrogante, sufra un accidente o atraiga el interés de otros dioses. También piensa que, si no se lo explica, Bell podría sentir que le mintió; sopesa confianza y preocupación y decide confiar en su voluntad. Su razonamiento sobre afrontar enemigos más fuertes y obtener mayor crecimiento/experiencia se conserva como hipótesis y comprensión de Hestia, no como regla del sistema.
+- **p.94 — habilidad rara y celos:** Hestia considera que [Deseo Inquebrantable] podría ser una Habilidad Rara/no confirmada y teme que otros dioses se interesen por algo «raro» u «original». En su propio pensamiento estima que sus celos por Wallenstein representan «70%, no, 90%» de su motivo. La clasificación y el porcentaje son pensamientos de Hestia; no se convierten en regla universal ni rasgo permanente.
+- Hestia también valora la capacidad propia de Bell: recuerda que creció en una granja, sin maestro de combate, y que sus decisiones, técnicas, agilidad y experiencia real contribuyen a sus resultados. No atribuye todo su desempeño a la Habilidad ni convierte su elogio en una medición objetiva.
 
 ## Promesa · PDF pp.95–96
 
@@ -82,10 +89,10 @@ No se fusionan los snapshots ni se transfieren automáticamente sus valores o co
 
 ## Auditoría de tercera pasada · CONT-MAIN-LN · PDF pp.91–97
 
-- **p.91:** el bloque físico del Estado confirma Lv.1, Fuerza H123→G221, Resistencia I42→H101, Destreza H139→G232, Agilidad G225→F313 y Magia I0. [Deseo Inquebrantable] aparece en el Estado grabado con tres efectos. La discrepancia frente a H120 de p.54 se mantiene.
-- **p.92:** Hestia califica el crecimiento como un salto extraordinario; sus comparaciones con otros aventureros no son fórmula ni predicción de nivel.
-- **pp.93–94:** Hestia decide ocultar la habilidad. Sus temores sobre arrogancia, accidentes e interés de otros dioses y su reflexión sobre celos de Wallenstein pertenecen a su POV.
-- **p.95:** Hestia explica a Bell que su crecimiento es anormal y lo llama período de crecimiento; no revela la habilidad. Reconoce que su técnica y sus decisiones también contribuyen a sus resultados.
+- **p.91:** Bell había dormido durante todo el día anterior por fatiga extrema y grita al advertir que durmió con Hestia. Hestia actualiza el Estado sentada sobre su espalda y usando sangre divina para inscribir el Texto Sagrado. El bloque físico confirma Lv.1, Fuerza H123→G221, Resistencia I42→H101, Destreza H139→G232, Agilidad G225→F313 y Magia I0 (la fuente no muestra valor anterior para Magia). [Deseo Inquebrantable] aparece con tres efectos. La discrepancia de Fuerza frente a H120 de p.54 se mantiene.
+- **p.92:** Hestia califica el crecimiento como un salto extraordinario y compara su ritmo con el de otros aventureros; las cifras y el muro de dominio son recuerdos/estimaciones suyas, no fórmula ni predicción de nivel.
+- **pp.93–94:** Hestia pondera confianza, la posibilidad de que Bell sienta que le mintió, la arrogancia y los riesgos; teme que otros dioses se interesen por una Habilidad Rara/original. Su autovaloración de celos por Wallenstein («70%, no, 90%») pertenece a su POV.
+- **p.95:** Hestia explica a Bell que su crecimiento es anormal y lo llama período de crecimiento; no revela la habilidad. Valora también su aprendizaje autodidacta, decisiones, técnicas, agilidad y experiencia de combate.
 - **pp.95–96:** Hestia pide prudencia y que no la deje sola; Bell promete no actuar imprudentemente, hacerse más fuerte y no dejarla sola.
 - **p.97:** Hestia prepara su salida para intentar ver a Hephaistos en el Banquete. Autoriza a Bell a volver al Dungeon, pero pide que recuerde su rodilla todavía lesionada.
 - **Visual:** p.91 contiene el bloque del Estado; pp.92–97 son texto. Sin ilustraciones.
