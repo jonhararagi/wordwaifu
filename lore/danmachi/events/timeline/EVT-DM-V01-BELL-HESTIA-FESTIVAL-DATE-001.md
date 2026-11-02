@@ -9,6 +9,7 @@ source_verification: user_supplied_private_translation_not_crosschecked
 source_refs:
   - DMR-061-SRC-001
 source_locators:
+  - PDF pp. 147–148 (preludio del trayecto de Hestia y encuentro incidental con Freya; Bell todavía no está presente)
   - PDF pp. 150–165
 spoiler_level: major
 ---

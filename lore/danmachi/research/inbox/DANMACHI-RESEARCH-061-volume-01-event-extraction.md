@@ -1808,3 +1808,31 @@ La siguiente matriz separa lo que los checkpoints permiten certificar de la extr
 - No se crea evento de devolución del monedero ni se cierra el encargo. No se crean entidades, habilidades, objetos individuales, eventos, aliases o IDs.
 - **P1 reconciliada:** pp.9–138. **Siguiente bloque P1:** PDF pp.139–148. P2/P3 pp.9–156 no se repiten; pp.157–214 conservan sus tres pasadas.
 - La traducción privada sigue sin cotejo con japonés; el cotejo integral independiente Markdown↔PDF y los pendientes estadísticos globales permanecen abiertos. V1 continúa PARTIAL / IN_PROGRESS.
+
+## Reconciliación de pasada 1 · CONT-MAIN-LN · PDF pp.139–148 · 2026-11-02
+
+**Resultado:** 10/10 folios físicos reconciliados con la extracción P2, la verificación P3, DMR-062 y los destinos funcionales de `main`. Se reutilizan P2 pp.131–140 y P3 pp.139–148. La inspección visual P3 ya documenta las diez páginas a 130 dpi como texto continuo, sin ilustraciones, tablas, diagramas ni notas al pie; no se repitieron extracción, render ni inspección.
+
+| PDF | Hecho cotejado | Destino funcional y dictamen P1 |
+|---:|---|---|
+| 139 | Avenida Principal del Este concurrida durante el Festival, público de distintas razas, niños y aventureros, banderas y emblemas de Ganesha Familia; Freya observa desde el segundo piso de una cafetería sin nombre, bajo capa azul. | `EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001`; se completa el detalle de la calle y sus emblemas. No crear cafetería, censo urbano ni ubicación nominal. |
+| 140 | Loki llega con Ais, bromea sobre la borrachera/desmayo de Freya tras el Banquete y refiere la preocupación de miembros de Freya Familia; presenta a Ais. | Evento de reunión Freya/Loki/Ais; diálogo, atribución e intervalo de unos días ya cubiertos. No fecha absoluta ni diagnóstico de Freya. |
+| 141 | Se menciona la fama de Ais como Princesa de la Espada; Loki le recomienda descansar tras la Expedición, le acaricia la cabeza y Ais acepta. | Evento de reunión; se añade la referencia de fama que faltaba. No inferir romance ni reciprocidad. |
+| 142 | Loki confronta a Freya por el Banquete/recopilación de información; el empleado se retira y la cafetería queda vacía; Loki advierte que intervendrá si Freya perjudica a su lado. | Evento de reunión; se completan la retirada del empleado y la advertencia de Loki, manteniendo su atribución. Sin ficha para el empleado. |
+| 143 | Loki deduce el interés de Freya por un joven de otra Familia y el riesgo de arrebatárselo a otro dios; Freya aún no lo identifica expresamente. | Evento de reunión; se precisa que es deducción de Loki y que Freya no nombra al joven en ese punto. |
+| 144 | Freya describe al joven como vulnerable, pero puro y encantador; reconoce a Bell, de cabello blanco y equipo estándar, caminando hacia el Coliseo. | Evento de reunión; se completa el detalle del equipo y se mantiene la observación a distancia. Bell no percibe ni interactúa con el grupo. |
+| 145 | Freya sale de la cafetería; Loki queda sorprendida y Ais sigue con la mirada el cabello blanco de Bell. Un separador abre la escena independiente de entrega de la daga a Hestia. | Evento Freya/Loki/Ais y evento separado `EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001`; no fusionar ambas escenas. |
+| 146 | Hephaistos entrega a Hestia la caja con la daga y vaina negras; propone «Daga de Hestia», Hestia acepta y la deuda permanece como préstamo. | Evento de entrega y ficha `daga-de-hestia.md`; ya cubiertos con localizador correcto. Bell todavía no recibe el arma. |
+| 147 | Hestia ve el folleto/programa del Festival, deduce que Bell puede dirigirse al Coliseo y toma un carruaje llamado «taxi»; la narración atribuye la popularización del término a un dios no identificado. | Preámbulo ya existente en `EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001`; se añade PDF pp.147–148 a sus localizadores de contexto. Sin identificar al dios ni crear evento del taxi. |
+| 148 | El carruaje se detiene por la multitud; tarifa exacta 90 Varisu. Hestia cree dejar propina, pero el conductor dice que el dinero solo cubre la tarifa y ella ya se ha marchado; sigue a pie con la caja y se cruza casualmente con Freya. | Preámbulo del evento Bell/Hestia y perfil de Freya; se amplía el localizador del encuentro casual a pp.148–149. No crear conductor, callejón ni evento independiente; la conversación continúa fuera del rango. |
+
+### Dictamen P1 pp.139–148
+
+- **10/10 folios reconciliados** entre PDF físico documentado, DMR-061, DMR-062 y destinos funcionales.
+- **Correcciones funcionales:** evento de reunión ampliado con los emblemas de Ganesha, la fama de Ais, la retirada del empleado, la advertencia de Loki, el límite de conocimiento de p.143 y el equipo estándar de Bell; perfil de Freya ampliado para localizar el inicio del encuentro fortuito en p.148; el evento Bell–Hestia incorpora pp.147–148 como localizadores del preámbulo que ya conservaba.
+- **Destinos ya completos:** la reunión de p.140, la entrega física a Hestia y la deuda en pp.145–146, el folleto/taxi/importe exacto y el límite de que Bell todavía no está presente. No se creó un segundo evento para taxi, desplazamiento ni Festival.
+- Se mantienen separados la reunión Freya/Loki/Ais y la entrega de la daga tras el separador de p.145. No se afirma que Bell reciba la daga ni que Hestia haya pagado/cancelado la deuda.
+- No se crean IDs, personajes, lugares, objetos, habilidades, aliases o relaciones. No se modifican catálogo ni timeline JSON.
+- La traducción privada sigue sin cotejo con japonés; la conversación con Freya continúa después de p.148 y no se incorporan hechos de p.149 a esta reconciliación.
+- **Checkpoint:** P1 reconciliada PDF↔registros funcionales pp.9–148. Próximo bloque P1: PDF pp.149–156. P2/P3 pp.9–156 siguen documentadas; pp.157–214 conservan sus tres pasadas. V1 permanece PARTIAL / IN_PROGRESS.
+- **Límites globales:** cotejo integral Markdown↔PDF; ambigüedad de p.18; recuento de bajas Kobold; V1-AUD-007 H120/H123 y discrepancias estadísticas posteriores permanecen abiertos.

@@ -1367,3 +1367,14 @@ La auditoría visual directa de pp.49–58 confirmó diez páginas de texto y el
 - **Checkpoint:** P1 reconciliada pp.9–138. Siguiente bloque P1: pp.139–148. P2/P3 pp.9–156 siguen documentadas y no se repiten; pp.157–214 conservan sus tres pasadas.
 - **Pendientes:** cotejo integral Markdown↔PDF; traducción privada española sin cotejo japonés; ambigüedad p.18; recuento Kobold; V1-AUD-007 H120/H123 y discrepancias estadísticas posteriores; P1 pp.139–156. V1 sigue PARTIAL / IN_PROGRESS; no iniciar V2.
 - **Tests locales:** no ejecutados; el entorno de trabajo no dispone de clon local operativo. La CI se comprobará sobre el SHA final de main y no se considera superada hasta que ambos workflows terminen.
+
+## DMR-061 — reconciliación P1 · Volumen 1 · PDF pp.139–148 · 2026-11-02
+
+- **Resultado:** 10/10 folios reconciliados con DMR-061, DMR-062 y destinos funcionales.
+- **Pasadas reutilizadas:** P2 pp.131–140 y P3 pp.139–148. La inspección individual P3 a 130 dpi ya está documentada para las diez páginas, todas de texto continuo y sin ilustraciones, tablas, diagramas ni notas al pie. No se repitieron extracción, render ni inspección.
+- **Correcciones funcionales:** se completó el evento existente Freya/Loki/Ais con el emblema de Ganesha, la mención de Ais como Princesa de la Espada, la retirada del empleado y advertencia de Loki, el límite de conocimiento en p.143 y el equipo estándar de Bell en p.144. El perfil de Freya ahora ubica el inicio del encuentro casual con Hestia en p.148. Se añadió pp.147–148 como localizadores del preámbulo ya registrado en el evento Bell–Hestia.
+- **Destinos ya cubiertos sin cambios:** llegada de Loki y Ais y broma sobre el Banquete; entrega física de la daga a Hestia, nombre y deuda; folleto del Festival, carruaje, tarifa exacta de 90 Varisu y confusión sobre la propina. La daga no se entrega a Bell en pp.145–148.
+- **Integridad:** no se crean IDs, eventos, personajes, relaciones, objetos, ubicaciones, aliases ni habilidades. No se modifican catálogo ni timeline JSON. La cafetería, empleado, conductor, dios que popularizó «taxi» y callejón permanecen sin identidad nominal.
+- **Checkpoint:** P1 reconciliada PDF↔registros funcionales pp.9–148. Próximo bloque P1: pp.149–156. P2/P3 pp.9–156 siguen documentadas; pp.157–214 conservan sus tres pasadas.
+- **Pendientes globales:** cotejo integral Markdown↔PDF; traducción privada española no cotejada con japonés; ambigüedad de p.18; recuento de bajas Kobold; V1-AUD-007 H120/H123 y discrepancias estadísticas posteriores. V1 continúa PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
+- **Validación local:** no se ejecutó, porque no hay un clon local operativo en este entorno. La integración no se considerará validada hasta que los dos workflows terminen sobre el SHA final.

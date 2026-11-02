@@ -57,9 +57,9 @@ Freya observa la multitud desde una cafetería del segundo piso frente a la Call
 - **Límite:** Freya reconoce a Bell, pero no se acerca ni conversa con él. No convertir su interés en una relación formal ni fusionarlo con la liberación posterior del Silverback.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
 
-## Tercera pasada · conversación con Hestia · CONT-MAIN-LN · Volumen 1 · PDF p.149
+## Tercera pasada · encuentro fortuito y conversación con Hestia · CONT-MAIN-LN · Volumen 1 · PDF pp.148–149
 
-Mientras camina oculta bajo una capa para evitar la atención que causaría su belleza en la Calle Principal, Freya conversa con Hestia en un callejón. Hestia pregunta si ha visto a Bell y lo describe como un humano de cabello blanco y ojos rojos, «como un conejo». La sonrisa de Freya desaparece brevemente y luego reaparece; le dice que cree haberlo visto frente a la Calle Principal del Este, camino al Coliseo, y le da indicaciones a Hestia.
+El encuentro casual comienza en p.148: Hestia, después de bajar del carruaje, continúa a pie con la caja de la Daga de Hestia y se cruza con Freya en un callejón/cruce. La conversación se desarrolla en p.149, cuando Freya camina oculta bajo una capa para evitar la atención que causaría su belleza en la Calle Principal. Hestia pregunta si ha visto a Bell y lo describe como un humano de cabello blanco y ojos rojos, «como un conejo». La sonrisa de Freya desaparece brevemente y luego reaparece; le dice que cree haberlo visto frente a la Calle Principal del Este, camino al Coliseo, y le da indicaciones a Hestia.
 
 - **Límite de inferencia:** el pasaje no explica por qué cambia la expresión de Freya ni su motivo para dar las indicaciones. No afirmar que miente, que manipula a Hestia o que organiza deliberadamente el encuentro.
 - **Separación:** Hestia encuentra a Bell después de seguir la ruta; Freya no participa en el reencuentro ni conversa con Bell en estas páginas.

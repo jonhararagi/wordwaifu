@@ -850,3 +850,16 @@
 - **Documentos afectados:** DMR-061, DMR-062, evento existente de petición/forja, perfil de Bell, fichas de Ganesha Familia y La Señora de la Abundancia, MASTER_INDEX, WORK_QUEUE y STATUS.
 - **Checkpoint resultante:** P1 pp.9–138; siguiente rango pp.139–148; P2/P3 pp.9–156 y tres pasadas pp.157–214 preservadas; Volumen 1 PARTIAL / IN_PROGRESS.
 - **Fuente:** instrucción del usuario del 2026-11-02 y evidencia ya registrada en DMR-061/062. La traducción privada española no queda cotejada con japonés.
+
+### CONV-DM-2026-11-02-002 — Reconciliar P1 V1 pp.139–148 directamente en main
+
+- **Fecha:** 2026-11-02.
+- **Estado:** ACCEPTED; ejecución integrada en main tras validación.
+- **Tipo:** instrucción operativa, alcance de auditoría y continuidad.
+- **Decisión:** reconciliar exclusivamente PDF pp.139–148 del Volumen 1 de DanMachi en WordWaifu, directamente sobre `main`. No crear ramas ni PR, no hacer force-push, no iniciar Volumen 2 y no declarar completo el Volumen 1.
+- **Reutilización obligatoria:** P2 pp.131–140, P3 pp.139–148 y la inspección física P3 individual a 130 dpi ya están documentadas. No repetir extracción, render ni inspección. P1 coteja cada folio con DMR-061, DMR-062 y los destinos funcionales actuales.
+- **Criterios de evidencia:** mantener CONT-MAIN-LN, la traducción privada española no cotejada con japonés, atribución y POV; mantener como deducción de Loki lo dicho en p.143; separar el evento Freya/Loki/Ais de la entrega de la daga a Hestia tras el separador de p.145; la deuda continúa; el trayecto de Hestia es preámbulo del evento Bell–Hestia; 90 Varisu es la tarifa exacta; la conversación Hestia–Freya continúa fuera del rango.
+- **Cambios funcionales:** completar solo destinos existentes: evento Freya/Loki/Ais, localizadores del preámbulo Bell–Hestia y perfil de Freya para el inicio del encuentro casual en p.148. No crear eventos, IDs, lugares, objetos, relaciones o aliases.
+- **Documentos afectados:** DMR-061, DMR-062, evento Freya/Loki/Ais, evento Bell–Hestia, perfil Freya, MASTER_INDEX, WORK_QUEUE, STATUS y este registro.
+- **Checkpoint resultante:** P1 pp.9–148; siguiente rango pp.149–156; P2/P3 pp.9–156 y tres pasadas pp.157–214 preservadas; Volumen 1 PARTIAL / IN_PROGRESS.
+- **Fuente:** instrucción del usuario del 2026-11-02 y evidencia fuente/P2/P3 ya registrada en DMR-061/062. DMR-061-SRC-001 sigue siendo traducción privada no cotejada con japonés.

@@ -558,3 +558,7 @@ P1 PDF↔DMR-061↔DMR-062↔destinos funcionales reconciliada hasta p.128. Se r
 ### Cobertura P1 añadida · Volumen 1 · PDF pp.129–138 · 2026-11-02
 
 P1 PDF↔DMR-061↔DMR-062↔destinos funcionales reconciliada hasta p.138 (10/10 folios). La secuencia de petición/forja ya estaba cubierta; se armonizó su localizador hasta p.134. Bell conserva que deja su mochila en La Señora de la Abundancia al aceptar el encargo del monedero; la ficha del lugar refleja esa acción. La ficha de Ganesha Familia incorpora, con atribución explícita a Anya/Ryuu, la explicación dialogada del Festival anual y la domesticación, sin convertirla en regla universal. El monedero no se ha devuelto y la entrega de la daga a Bell no ocurre en este tramo. Próximo bloque P1: pp.139–148. P2/P3 no se repiten. V1 sigue PARTIAL / IN_PROGRESS.
+
+### Cobertura P1 añadida · Volumen 1 · PDF pp.139–148 · 2026-11-02
+
+P1 PDF↔DMR-061↔DMR-062↔destinos funcionales reconciliada hasta p.148 (10/10 folios). El evento existente Freya/Loki/Ais se completó con los emblemas de Ganesha y detalles de p.141–144; se conservó el corte de escena p.145 que separa la entrega de la daga a Hestia. La entrega física, el nombre del arma y la deuda ya estaban cubiertos. El preámbulo de Hestia al Festival ya estaba en el evento Bell–Hestia; se completó su localizador pp.147–148 y el perfil de Freya refleja que el encuentro fortuito comienza en p.148. No se crearon IDs ni eventos. Próximo bloque P1: PDF pp.149–156. P2/P3 no se repiten. La traducción privada sigue sin cotejo japonés; Volumen 1 permanece PARTIAL / IN_PROGRESS.

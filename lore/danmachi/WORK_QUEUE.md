@@ -1918,3 +1918,15 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - **Pasadas:** P2/P3 pp.9–156 siguen documentadas; pp.157–214 conservan sus tres pasadas. No repetirlas.
 - **Encargo de Seal:** sigue pendiente de devolución. No cerrar ni crear evento de entrega hasta que la fuente muestre el encuentro.
 - **Estado V1:** PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
+
+### DMR-061 · checkpoint vigente de Pasada 1 · Volumen 1 · 2026-11-02 · pp.139–148
+
+- [x] Reconciliar individualmente los diez folios con DMR-061, DMR-062 y destinos funcionales; reutilizar P2 pp.131–140, P3 pp.139–148 y la inspección física P3 ya documentada a 130 dpi.
+- [x] Completar el evento existente Freya/Loki/Ais con el entorno festivo y emblemas de Ganesha (p.139), la fama de Ais (p.141), la retirada del empleado y advertencia de Loki (p.142), el límite de la deducción (p.143) y el equipo estándar de Bell (p.144).
+- [x] Mantener separados el cierre de Freya/Loki/Ais y la entrega de la daga tras el separador de p.145; conservar pp.145–146 en el evento de entrega a Hestia, sin afirmar que Bell recibe el arma ni que la deuda se cancela.
+- [x] Confirmar que el preámbulo de Hestia hacia el Festival ya está en el evento Bell–Hestia; añadir PDF pp.147–148 a sus localizadores y cubrir el inicio del encuentro fortuito en p.148 en el perfil existente de Freya.
+- [x] Conservar 90 Varisu como tarifa exacta y la confusión de Hestia sobre la propina; no crear taxi, conductor, cafetería, callejón ni IDs nuevos.
+- [x] Verificar no duplicación de eventos, entidades, objetos, ubicaciones, relaciones o aliases; no modificar catálogo ni timeline JSON.
+- **P1 reconciliada:** pp.9–148. **Siguiente bloque P1:** PDF pp.149–156. P2/P3 pp.9–156 siguen documentadas y no se repiten; pp.157–214 conservan sus tres pasadas.
+- **Pendientes globales:** cotejo integral Markdown↔PDF; traducción privada no cotejada con japonés; ambigüedad de p.18; recuento de bajas Kobold; V1-AUD-007 H120/H123 y discrepancias estadísticas posteriores; P1 pp.149–156.
+- **Estado V1:** PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
