@@ -1954,3 +1954,12 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - **Siguiente rango narrativo:** PDF pp.25–40. Antes de avanzar, completar el cotejo visual individual de las siete imágenes MD del front matter y mantener registrados los hallazgos de pp.12, 15 y 22.
 - **No repetir:** P1 pp.9–156, P2/P3 pp.9–156 ni las tres pasadas pp.157–214. No modificar el Markdown fuente, el PDF ni los registros funcionales por esta tanda.
 - **V1:** PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
+
+
+### DMR-062 — cierre del mapeo visual inicial · 2026-11-03
+
+- [x] Materializar el PDF original desde la Biblioteca en modo de lectura y comprobar tamaño 7.495.544 bytes, SHA-1 Git `fd43a5395983850ab1a953bb39da732b27331dcc` y 215 páginas.
+- [x] Renderizar y cotejar visualmente las siete imágenes Markdown iniciales contra PDF pp.1–7; correspondencia individual confirmada.
+- [x] Mantener p.8 como folio en blanco y las omisiones `IMAGE_MISSING` de pp.12, 15 y 22; no inferir identidades.
+- [x] Mantener `FORMATTING_LOSS` pp.9, 13 y 14 y `TRANSLATION_AMBIGUITY` p.18 sin corregir la traducción.
+- **Checkpoint MD↔PDF:** pp.1–24 examinadas; front matter pp.1–7 ya no requiere mapeo adicional. Próximo rango narrativo: PDF pp.25–40. P1/P2/P3 no se repiten; V1 continúa PARTIAL / IN_PROGRESS.

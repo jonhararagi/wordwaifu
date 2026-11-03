@@ -566,3 +566,10 @@ P1 PDF↔DMR-061↔DMR-062↔destinos funcionales reconciliada hasta p.148 (10/1
 ### Cobertura P1 reconciliada · Volumen 1 · PDF pp.9–156 · 2026-11-02
 
 La reconciliación P1 PDF↔DMR-061↔DMR-062↔destinos funcionales queda completada para pp.9–156. El último bloque pp.149–156 completó los detalles del evento y perfiles existentes Bell–Hestia, incorporó p.149 como localizador de contexto y añadió en Ganesha Familia la coordinación Gremio/Familia del espectáculo. Eina y MON-DM-BATTLE-JABALI-001 ya estaban completos; p.154 permanece como ilustración sin hechos independientes y p.156 como escena paralela continua, sin evento nuevo. El monedero sigue pendiente y Bell no conoce aún la noticia de la daga. No se asigna un siguiente rango P1 dentro de pp.9–156. P2/P3 pp.9–156 completadas; tres pasadas pp.157–214 conservadas. El cotejo independiente Markdown↔PDF, el cotejo japonés de la traducción y las contradicciones abiertas siguen pendientes. V1 permanece PARTIAL / IN_PROGRESS.
+
+
+## DMR-062 — cierre de mapeo visual del front matter · 2026-11-03
+
+- Se confirmó la correspondencia visual individual de las siete imágenes Markdown iniciales con PDF pp.1–7. El PDF de lectura coincide byte a byte con el blob Git por SHA-1 y conserva 215 páginas.
+- La primera tanda pp.1–24 mantiene tres `IMAGE_MISSING` (pp.12, 15, 22), tres `FORMATTING_LOSS` (pp.9, 13, 14) y `TRANSLATION_AMBIGUITY` p.18.
+- Próxima tanda: cotejo MD↔PDF pp.25–40. El Volumen 1 permanece PARTIAL / IN_PROGRESS; no se repiten P1/P2/P3 ni se inicia Volumen 2.

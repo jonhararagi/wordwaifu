@@ -702,3 +702,17 @@ En las posiciones correspondientes no hay bloques de imagen Markdown. Los siete 
 2. Mantener registradas las tres omisiones IMAGE_MISSING y las tres pérdidas FORMATTING_LOSS; no editar el archivo original.
 3. **Siguiente rango narrativo propuesto:** PDF pp.25–40, con la misma matriz de página física↔líneas MD y sin repetir P1/P2/P3.
 4. DMR-062 permanece PARTIAL / IN_PROGRESS; Volumen 1 permanece PARTIAL / IN_PROGRESS. No iniciar Volumen 2.
+
+
+## Addendum — cierre del mapeo visual del front matter · 2026-11-03
+
+- **PDF físico:** materializado en modo de solo lectura desde el archivo original de la Biblioteca. Tamaño: 7.495.544 bytes. SHA-1 Git calculado sobre los bytes: `fd43a5395983850ab1a953bb39da732b27331dcc`, idéntico al blob registrado en el repositorio privado. PyMuPDF abre el archivo y confirma 215 páginas. No se guardó ni transformó el PDF.
+- **Markdown:** recuperado por blob Git exacto `d2b3306b1661584d9a42d651f57dca8a6814b20b`; 7.251 líneas, 4.025.426 caracteres y 16 bloques JPEG Base64.
+- **Correspondencia visual resuelta:** las siete imágenes Markdown de las líneas 1, 3, 5, 7, 9, 11 y 13 se renderizaron individualmente y se compararon visualmente con PDF pp.1–7. Cada una corresponde a su folio físico respectivo. Se cierran `PAGE_MAPPING_UNRESOLVED` para pp.1–7; resultado `COMPLETE` en la correspondencia imagen↔folio.
+- **p.8:** sin texto ni imagen; folio en blanco, `COMPLETE`.
+- **Omisiones de imagen confirmadas:** PDF pp.12, 15 y 22 contienen cada una una imagen física, pero no existe un bloque Markdown en la posición correspondiente. Se mantienen como `IMAGE_MISSING`, estado `PARTIAL`; no se infieren identidades a partir de las ilustraciones.
+- **Anclas textuales revalidadas:** PDF p.9 / MD línea 47 (`Conclusión` / `Conclusió n`); PDF p.13 / MD línea 145 (`mirándome` / `mirándo me`); PDF p.14 / MD líneas 173–176 (pasaje convertido en tabla y `Re-conclusió n`). Se mantienen las tres `FORMATTING_LOSS` registradas. PDF p.18 y MD líneas 254–262 contienen la misma formulación traducida; `TRANSLATION_AMBIGUITY` permanece `UNRESOLVED`, sin corrección inferida.
+- **Cobertura:** pp.1–24 examinadas (24 folios): siete folios ilustrados del front matter con correspondencia confirmada; p.8 en blanco; trece folios con texto cotejados según la matriz previa; pp.12, 15 y 22 con omisión de imagen; pp.9, 13 y 14 con pérdida de formato; p.18 conserva ambigüedad de traducción. No se detecta ni registra `ORDER_ERROR`, `DUPLICATION` o `TRANSCRIPTION_ERROR` demostrado en la matriz existente.
+- **Método y límites:** la copia del PDF se obtuvo de la Biblioteca, no de un clon autenticado; la identidad byte a byte quedó comprobada mediante el SHA Git del blob. El cotejo MD↔PDF no demuestra fidelidad de la traducción frente al japonés.
+- **Siguiente rango narrativo:** PDF pp.25–40. No repetir el mapeo pp.1–7 ni las pasadas P1/P2/P3.
+- **Estado:** DMR-062 y Volumen 1 siguen `PARTIAL / IN_PROGRESS`. No se modificaron el MD fuente, el PDF ni registros funcionales.

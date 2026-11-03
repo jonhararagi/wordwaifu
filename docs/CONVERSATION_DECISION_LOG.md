@@ -876,3 +876,13 @@
 - **Cierre de cobertura:** P1 pp.9–156 reconciliada contra DMR-061, DMR-062 y destinos funcionales. P2/P3 pp.9–156 permanecen completas; tres pasadas pp.157–214 se conservan. No se asigna siguiente rango P1 dentro de pp.9–156.
 - **Pendientes:** cotejo integral Markdown↔PDF; cotejo de traducción española con japonés; ambigüedad p.18; recuento de bajas Kobold; V1-AUD-007 H120/H123 y discrepancias estadísticas posteriores; demás contradicciones DMR-062.
 - **Fuente:** instrucción del usuario y DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
+
+### CONV-DM-2026-11-03-001 — Cierre del mapeo visual inicial DMR-062
+
+- **Fecha:** 2026-11-03.
+- **Estado:** ACCEPTED; checkpoint documental integrado directamente en `main`.
+- **Decisión:** la auditoría independiente MD↔PDF de V1 confirma la correspondencia visual de las siete imágenes iniciales Markdown con PDF pp.1–7. El folio p.8 está en blanco.
+- **Hallazgos conservados:** `IMAGE_MISSING` pp.12, 15 y 22; `FORMATTING_LOSS` pp.9, 13 y 14; `TRANSLATION_AMBIGUITY` p.18. No se corrige la traducción ni se reabren P1/P2/P3.
+- **Integridad:** el PDF de lectura materializado desde la Biblioteca mide 7.495.544 bytes, coincide con el SHA-1 Git `fd43a5395983850ab1a953bb39da732b27331dcc` y abre con 215 páginas. El MD se recuperó desde el blob `d2b3306b1661584d9a42d651f57dca8a6814b20b`.
+- **Próximo trabajo:** cotejo narrativo MD↔PDF pp.25–40. V1 y DMR-062 continúan PARTIAL / IN_PROGRESS; no iniciar Volumen 2.

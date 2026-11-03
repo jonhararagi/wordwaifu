@@ -1400,3 +1400,8 @@ La auditoría visual directa de pp.49–58 confirmó diez páginas de texto y el
 - **Continuidad:** P1 pp.9–156 sigue reconciliada; P2/P3 pp.9–156 siguen completas; tres pasadas pp.157–214 se conservan. Ninguna se reabrió. No se modificaron perfiles ni eventos funcionales.
 - **Siguiente trabajo MD↔PDF:** terminar el mapeo visual de pp.1–7 y continuar con PDF pp.25–40. La ambigüedad de p.18, recuento Kobold, V1-AUD-007/008, deuda/condiciones de la daga y monedero de Seal siguen abiertos.
 - **Estado global:** Volumen 1 y DMR-062 permanecen PARTIAL / IN_PROGRESS. No iniciar Volumen 2.
+
+
+## DMR-062 — checkpoint de auditoría independiente MD↔PDF · 2026-11-03
+
+El cotejo inicial cubre PDF pp.1–24. Se confirmó visualmente la correspondencia individual de las siete imágenes Markdown de líneas 1–13 con PDF pp.1–7; p.8 es blanca. Se mantienen tres omisiones de imagen (pp.12, 15, 22), tres pérdidas de formato (pp.9, 13, 14) y la ambigüedad de traducción de p.18. El PDF materializado conserva el SHA del blob Git y sus 215 páginas. Próxima tanda: PDF pp.25–40. DMR-062 y V1 siguen PARTIAL / IN_PROGRESS; P1/P2/P3 no se reabren.
