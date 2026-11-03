@@ -181,10 +181,12 @@ Hestia recibe de Hephaistos la daga y la vaina negras; acepta el nombre «Daga d
 
 ## CONT-MAIN-LN · Festival de Monstruos · PDF pp.149–155
 
-Hestia pregunta a Freya si ha visto a Bell; Freya le indica el camino hacia la Calle Principal del Este y el Coliseo. Hestia sigue la dirección y encuentra a Bell entre la multitud (p.149). Le dice que quería verlo, le toma la mano y propone disfrutar del Festival juntos (pp.150–151). La llama una cita y comparte con él crepes; le pide que la alimente y después que le limpie la mermelada de la mejilla (pp.152–155). Propone continuar con croquetas de patata, pero su consumo no queda mostrado en este bloque.
+En p.149 Hestia pregunta a Freya si ha visto a Bell y lo describe como un humano de cabello blanco y ojos rojos, «como un conejo». Freya dice que cree haberlo visto frente a la Calle Principal del Este, camino al Coliseo, e indica una ruta. Hestia la sigue y ve a Bell al final del folio. La sonrisa de Freya desaparece brevemente al oír la descripción y luego reaparece; no se establece su intención ni se infiere engaño o manipulación.
+
+Hestia llama a Bell entre la multitud en p.150, le dice que quería verlo y reserva para más adelante la noticia de la daga que lleva en su caja. Le toma la mano y lo conduce entre la gente. En p.151 propone que tengan una cita y que disfruten del Festival mientras Bell continúa buscando a alguien; pide dos crepes de mermelada. Durante la comida alimenta a Bell, quien se avergüenza por la cercanía y porque ella es una diosa (p.152). Después le pide probar su crepe y Bell le acerca el suyo; él inicia el gesto de limpiar la mermelada/salsa blanca de su mejilla (p.153). La ilustración monocroma p.154 acompaña la acción sin aportar hechos independientes. En p.155 Hestia toma la mano de Bell, le pide que le limpie la mejilla y ambos se sonrojan. Siguen caminando tomados de la mano; ella propone croquetas de patata, pero su compra o consumo no queda mostrado.
 
 - **Lectura relacional:** la cercanía, el contacto y el lenguaje de «cita» pertenecen a esta escena; no se convierten en una declaración formal ni en una relación establecida.
-- **Límite de conocimiento:** Bell dice que está buscando a alguien; la escena no establece que Hestia conozca la identidad de Seal ni los detalles del monedero.
+- **Límite de conocimiento:** Bell dice que está buscando a alguien; la escena no establece que Hestia conozca la identidad de Seal ni los detalles del monedero. Hestia tampoco revela a Bell la noticia de la daga en este tramo.
 - **Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés.
 
 ## CONT-MAIN-LN · diálogo sobre costumbres raciales · Volumen 1 · PDF p.31

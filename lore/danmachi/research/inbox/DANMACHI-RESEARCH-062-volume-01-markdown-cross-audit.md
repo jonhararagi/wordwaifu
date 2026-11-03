@@ -576,3 +576,28 @@ En esta **matriz priorizada de 20 hallazgos** hay 15 `COMPLETE`, 2 `PARTIAL`, 2 
 - No se crean IDs, entidades, relaciones, alias o registros nuevos; no se modifican `catalog.json` ni `eras-and-events.json`.
 - **Próximo bloque P1:** PDF pp.149–156. P2/P3 pp.9–156 permanecen documentadas; pp.157–214 mantienen sus tres pasadas. V1 sigue PARTIAL / IN_PROGRESS.
 - La traducción privada española no está cotejada con japonés y el cotejo integral independiente Markdown↔PDF sigue pendiente.
+
+## Matriz de reconciliación P1 · PDF pp.149–156 · 2026-11-02
+
+**Alcance:** contraste folio por folio entre DMR-061-SRC-001, P2 pp.141–150 y pp.151–156, P3 pp.149–156 y los destinos funcionales actuales. Se reutiliza la inspección física individual P3 a 130 dpi; p.154 es la única ilustración, ya inspeccionada ampliada. No se repiten extracción, render ni inspección.
+
+| Página física | Información cotejada | Destino funcional | Estado P1 | Acción realizada / razón sin cambio | Localizador y evidencia |
+|---:|---|---|---|---|---|
+| 149 | Hestia pregunta a Freya por Bell y lo describe por cabello blanco y ojos rojos; Freya ofrece una indicación de ruta y su sonrisa cambia brevemente. Hestia sigue la ruta y ve a Bell al final del folio. | `characters/hestia.md`; `EVT-DM-V01-BELL-HESTIA-FESTIVAL-DATE-001` | COMPLETE | La ficha de Hestia ya conservaba la orientación; se añade p.149 al localizador del evento Bell–Hestia como preludio inmediato. No inferir motivo, engaño o plan de Freya. | PDF p.149; DMR-061 P2/P3; perfil Hestia y evento actualizado. |
+| 150 | Hestia llama a Bell; él se sorprende porque creía que había desaparecido varios días, pregunta qué ocurrió y ella aplaza revelar la daga; le toma la mano. | Evento Bell–Hestia; Bell; Hestia | COMPLETE | Se completa el evento con sorpresa/pregunta y la intención de Hestia de reservar la noticia; Bell no conoce todavía esa información. No crear segundo evento. | PDF p.150; DMR-061 P2/P3; evento y perfiles. |
+| 151 | Hestia propone una cita y pide dos crepes de mermelada; Bell recuerda la búsqueda y el monedero de Seal, y teme que las empleadas se preocupen. | Evento Bell–Hestia; Bell | COMPLETE | El evento ya conservaba cita/búsqueda y Bell conservaba el encargo; se precisa la orden de dos crepes y la preocupación. No marcar la tarea como abandonada ni atribuir a Hestia el conocimiento de Seal. | PDF p.151; DMR-061 P2/P3; evento y perfil Bell. |
+| 152 | Hestia ofrece su crepe y alimenta a Bell; él se avergüenza por la cercanía y porque ella es una diosa. | Evento Bell–Hestia; Bell | COMPLETE | Se precisa la perspectiva/reacción de Bell; no convierte el gesto en relación formal o reciprocidad. | PDF p.152; DMR-061 P2/P3; evento y perfil Bell. |
+| 153 | Hestia pide probar el crepe de Bell; él accede, observa mermelada/salsa blanca en su mejilla y empieza a levantar la mano. | Evento Bell–Hestia; Bell | COMPLETE | Se completa la secuencia como acción iniciada, sin adelantar el desenlace de p.155. | PDF p.153; DMR-061 P2/P3; evento y perfil Bell. |
+| 154 | Ilustración monocroma de Bell y Hestia compartiendo el crepe, coherente con pp.152–153. | Evento Bell–Hestia; Bell | COMPLETE | La inspección ampliada y el límite de no extraer hechos independientes ya estaban documentados; no se repite la inspección ni se añade ficha/evento. | PDF p.154; DMR-061 P2/P3, inspección ampliada 130 dpi; evento y perfil Bell. |
+| 155 | Bell no tiene pañuelo; Hestia le toma la mano y pide que limpie la mejilla; ambos se sonrojan, siguen tomados de la mano y ella propone croquetas. Bell disfruta el tiempo de ocio compartido. | Evento Bell–Hestia; Bell; Hestia | COMPLETE | Se completan el pañuelo ausente y el sonrojo; se conserva que comer croquetas es solo una propuesta. Ya estaba el reconocimiento de Bell sobre el poco ocio compartido. | PDF p.155; DMR-061 P2/P3; evento y perfiles. |
+| 156 | Espectáculo paralelo: aproximadamente 50.000 asistentes; Battle Jabalí de unos dos metros; domadora anónima de Ganesha Familia intenta domesticarlo; altavoz de Piedras Mágicas; Eina y empleados del Gremio atienden admisión/orientación; el Gremio planifica el Festival y apoya tareas de Ganesha. | `characters/eina-tulle.md`; `monsters/battle-jabali.md`; `familias/ganesha-familia.md` | COMPLETE | Eina y MON-DM-BATTLE-JABALI-001 ya estaban completos; se añade a Ganesha la división organizativa Gremio/empleados y Familia. No crear evento, domadora, comentarista ni ejemplar individual. | PDF p.156; DMR-061 P2/P3; perfiles Eina, Battle Jabalí y Ganesha Familia. |
+
+### Resultado P1 pp.149–156
+
+- **8/8 COMPLETE.** P2/P3 y la inspección visual ya documentadas se reutilizaron sin repetición.
+- Omisiones funcionales corregidas: detalle de p.150 y p.151–155 en el evento Bell–Hestia; matices de perspectiva en Bell y reserva de la noticia de la daga en Hestia; localizador p.149 en el evento; coordinación institucional del Gremio/Ganesha en el perfil de Ganesha.
+- Eina y MON-DM-BATTLE-JABALI-001 no necesitaron cambios. p.154 no genera hechos independientes. No se creó un evento del espectáculo, que continúa después de p.156.
+- No se cierran el encargo de Seal, la deuda de Hestia ni se confirma consumo de croquetas; Bell no recibe la daga en estas páginas.
+- No se crean IDs, entidades, relaciones, aliases o registros duplicados. No se modifican `catalog.json` ni `eras-and-events.json`.
+- **P1 pp.9–156 queda reconciliada** contra DMR-061, DMR-062 y destinos funcionales. No se asigna un siguiente rango P1 dentro de este tramo. P2/P3 pp.9–156 siguen completadas; pp.157–214 conservan sus tres pasadas. V1 permanece PARTIAL / IN_PROGRESS.
+- La traducción privada española sigue sin cotejo japonés y el cotejo integral independiente Markdown↔PDF continúa pendiente.

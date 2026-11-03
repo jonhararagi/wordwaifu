@@ -1378,3 +1378,15 @@ La auditoría visual directa de pp.49–58 confirmó diez páginas de texto y el
 - **Checkpoint:** P1 reconciliada PDF↔registros funcionales pp.9–148. Próximo bloque P1: pp.149–156. P2/P3 pp.9–156 siguen documentadas; pp.157–214 conservan sus tres pasadas.
 - **Pendientes globales:** cotejo integral Markdown↔PDF; traducción privada española no cotejada con japonés; ambigüedad de p.18; recuento de bajas Kobold; V1-AUD-007 H120/H123 y discrepancias estadísticas posteriores. V1 continúa PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
 - **Validación local:** no se ejecutó, porque no hay un clon local operativo en este entorno. La integración no se considerará validada hasta que los dos workflows terminen sobre el SHA final.
+
+## DMR-061 — cierre de reconciliación P1 · Volumen 1 · PDF pp.9–156 · 2026-11-02
+
+- **Resultado P1:** reconciliación completa de PDF pp.9–156 contra DMR-061, DMR-062 y destinos funcionales; el bloque final pp.149–156 queda 8/8.
+- **Pasadas reutilizadas:** P2 pp.141–150 y pp.151–156, P3 pp.149–156. La inspección visual P3 ya estaba documentada a 130 dpi: p.154 es la única ilustración del rango y fue inspeccionada ampliada. No se repitieron extracción, render ni inspección.
+- **Correcciones funcionales:** p.149 añadida a los localizadores del evento Bell–Hestia; se detallan el reencuentro y la reserva de la noticia de la daga en p.150, la cita/búsqueda/crepes y las reacciones de Bell en pp.151–153, la secuencia del pañuelo/sonrojo/manos en p.155; se completa la división de responsabilidades del Festival en la ficha de Ganesha Familia.
+- **Destinos sin cambio:** Eina ya contiene el despliegue, admisión/orientación, espectadores, altavoz, espectáculo y separación de su puesto frente a la actuación. MON-DM-BATTLE-JABALI-001 ya contiene tamaño aproximado, domadora anónima y finalidad de domesticación. La ilustración p.154 ya tenía los límites correctos.
+- **Continuidad:** el encargo del monedero de Seal sigue abierto; Hestia no comunica la noticia de la daga a Bell en p.150; no se registra entrega del arma a Bell; las croquetas son una propuesta. El espectáculo p.156 es paralelo al paseo y continúa después de ese folio, por lo que no se crea evento.
+- **Integridad:** no se crean IDs, personajes, eventos, monstruos individuales, objetos, ubicaciones, relaciones o aliases. No se modifican `catalog.json` ni `eras-and-events.json`.
+- **Checkpoint:** P1 pp.9–156 reconciliada. No queda otro rango P1 pendiente dentro de pp.9–156 ni se asigna un siguiente rango. P2/P3 pp.9–156 permanecen completas; pp.157–214 conservan sus tres pasadas.
+- **Pendientes globales:** cotejo integral e independiente Markdown↔PDF; DMR-061-SRC-001, traducción privada española no cotejada con japonés; ambigüedad p.18; recuento de bajas Kobold; V1-AUD-007 Fuerza H120/H123; discrepancias estadísticas posteriores y las contradicciones abiertas en DMR-062. V1 sigue PARTIAL / IN_PROGRESS.
+- **Validación local:** no se ejecutaron pruebas locales, porque este entorno no dispone de un clon local operativo. La validación automática se comprobará en GitHub Actions sobre el SHA final de main.

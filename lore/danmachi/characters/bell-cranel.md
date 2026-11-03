@@ -284,11 +284,13 @@ La traducción española aportada es privada y no se ha cotejado con el japonés
 
 ## CONT-MAIN-LN · Festival de Monstruos: reencuentro con Hestia · PDF pp.150–155
 
-Bell encuentra a Hestia entre la multitud cuando ella lo llama en la Calle Principal del Este. Hestia dice que quería verlo, le toma la mano y llama «cita» a la salida. Bell le recuerda que busca a alguien; Hestia propone disfrutar juntos del Festival mientras realizan la búsqueda (pp.150–151). Bell sigue preocupado por el encargo de entregar a Seal el monedero que le dieron Anya y Ryuu; piensa que ignorarlo podría molestar a las empleadas (p.151). No consta que entregue el monedero en estas páginas.
+Bell oye a Hestia llamarlo entre la multitud de la Calle Principal del Este. Se sorprende al verla porque creía que había desaparecido durante varios días; Hestia dice que quería verlo y Bell pregunta qué ocurrió (p.150). Ella le toma la mano y lo conduce entre la gente. Bell todavía no recibe información sobre la Daga de Hestia, cuya noticia Hestia reserva para más adelante.
 
-Comparten crepes. Bell se avergüenza cuando Hestia intenta darle de comer, pero termina alimentándola; después le limpia la mermelada de la mejilla cuando ella se lo pide. Hestia propone continuar con croquetas de patata. Bell reconoce que rara vez comparten actividades fuera de sus obligaciones y descubre que disfruta la salida (pp.152–155).
+Hestia propone una cita. Bell se sonroja, pero recuerda que sigue buscando a alguien; acepta la propuesta de combinar la salida con la búsqueda. Cuando ella pide dos crepes de mermelada, Bell recuerda el encargo de entregar a Seal el monedero que recibió de Anya y Ryuu y teme que las empleadas se preocupen si lo deja de lado (p.151). No cancela expresamente la tarea ni la entrega en estas páginas.
 
-- **Límite:** no se confirma la búsqueda de Seal ni la devolución del monedero; tampoco se presenta la salida como una relación formal. La ilustración p.154 concuerda con la escena del crepe sin añadir hechos independientes.
+Durante los crepes, Bell se avergüenza cuando Hestia lo alimenta, en parte porque ella es una diosa (p.152). A petición de Hestia, él le acerca su propio crepe, nota mermelada/salsa blanca en su mejilla y empieza a levantar la mano para limpiarla (p.153). La ilustración monocroma de p.154 acompaña la escena, pero no añade hechos independientes. En p.155 Bell se detiene al recordar que no lleva pañuelo; Hestia le toma la mano y le pide que le limpie la mejilla. Él lo hace, ambos se sonrojan y continúan caminando tomados de la mano. Hestia propone comer croquetas; Bell reconoce que casi nunca comparten actividades de ocio fuera de sus obligaciones y que disfruta verla feliz. No se confirma la compra ni el consumo de croquetas.
+
+- **Límite:** la búsqueda de Seal y la devolución del monedero siguen pendientes; tampoco se presenta la salida como una relación formal ni como prueba de reciprocidad. Bell no conoce la noticia de la daga en p.150.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
 
 

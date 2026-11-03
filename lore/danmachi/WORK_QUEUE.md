@@ -1930,3 +1930,16 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - **P1 reconciliada:** pp.9–148. **Siguiente bloque P1:** PDF pp.149–156. P2/P3 pp.9–156 siguen documentadas y no se repiten; pp.157–214 conservan sus tres pasadas.
 - **Pendientes globales:** cotejo integral Markdown↔PDF; traducción privada no cotejada con japonés; ambigüedad de p.18; recuento de bajas Kobold; V1-AUD-007 H120/H123 y discrepancias estadísticas posteriores; P1 pp.149–156.
 - **Estado V1:** PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
+
+### DMR-061 · cierre de reconciliación P1 · Volumen 1 · PDF pp.9–156 · 2026-11-02
+
+- [x] Reconciliar los ocho folios PDF pp.149–156 contra DMR-061, DMR-062 y los destinos funcionales actuales; reutilizar P2 pp.141–150 y pp.151–156, P3 pp.149–156 y la inspección visual a 130 dpi ya documentada.
+- [x] Completar el preámbulo p.149 en los localizadores del evento Bell–Hestia; mantener la indicación de Freya como respuesta observada, sin atribuir intención.
+- [x] Completar el evento Bell–Hestia y los perfiles existentes de Bell/Hestia con el reencuentro, noticia de la daga reservada, dos crepes, perspectiva de Bell, ausencia de pañuelo y límites del contacto/croquetas.
+- [x] Confirmar p.156 en Eina y MON-DM-BATTLE-JABALI-001; ambos destinos ya estaban completos. Añadir a Ganesha Familia la división organizativa entre planificación del Gremio y apoyo de sus empleados.
+- [x] Mantener el espectáculo del Coliseo como escena paralela que continúa después de p.156, sin nuevo evento ni ejemplar individual; domadora y comentarista siguen sin identificar.
+- [x] No cerrar el monedero de Seal, no transferir a Bell conocimiento de la daga en p.150 y no registrar compra/consumo de croquetas.
+- **P1 reconciliada:** PDF pp.9–156 completas contra DMR-061, DMR-062 y destinos funcionales. No queda bloque P1 pendiente dentro de pp.9–156 y no se asigna un siguiente rango P1.
+- **Pasadas:** P2/P3 pp.9–156 permanecen completadas; las tres pasadas de pp.157–214 se conservan sin reabrirlas.
+- **Pendientes independientes:** cotejo integral Markdown↔PDF; traducción privada sin cotejo japonés; ambigüedad p.18; recuento de bajas Kobold; V1-AUD-007 H120/H123 y discrepancias estadísticas posteriores; demás contradicciones aún abiertas en DMR-062.
+- **Estado V1:** PARTIAL / IN_PROGRESS; no iniciar Volumen 2.

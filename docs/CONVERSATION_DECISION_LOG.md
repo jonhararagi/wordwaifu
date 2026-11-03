@@ -863,3 +863,16 @@
 - **Documentos afectados:** DMR-061, DMR-062, evento Freya/Loki/Ais, evento Bell–Hestia, perfil Freya, MASTER_INDEX, WORK_QUEUE, STATUS y este registro.
 - **Checkpoint resultante:** P1 pp.9–148; siguiente rango pp.149–156; P2/P3 pp.9–156 y tres pasadas pp.157–214 preservadas; Volumen 1 PARTIAL / IN_PROGRESS.
 - **Fuente:** instrucción del usuario del 2026-11-02 y evidencia fuente/P2/P3 ya registrada en DMR-061/062. DMR-061-SRC-001 sigue siendo traducción privada no cotejada con japonés.
+
+### CONV-DM-2026-11-02-003 — Cierre de reconciliación P1 V1 pp.149–156 directamente en main
+
+- **Fecha:** 2026-11-02.
+- **Estado:** ACCEPTED; ejecución integrada en main tras validación.
+- **Tipo:** instrucción operativa, alcance de auditoría y continuidad.
+- **Decisión:** reconciliar exclusivamente PDF pp.149–156 del Volumen 1 en WordWaifu, directamente sobre `main`. No crear ramas ni PR, no hacer force-push, no iniciar Volumen 2 ni declarar terminado V1.
+- **Reutilización obligatoria:** P2 pp.141–150 y pp.151–156, P3 pp.149–156 y la inspección visual P3 a 130 dpi ya están documentadas; p.154 ya se inspeccionó ampliada. No repetir extracción, render ni inspección.
+- **Criterios de evidencia:** mantener CONT-MAIN-LN y la traducción privada española sin cotejo japonés; la orientación de Freya no implica intención oculta; Bell no conoce la noticia de la daga en p.150; el monedero de Seal sigue pendiente; el lenguaje de cita/contacto no establece relación formal; la propuesta de croquetas no implica consumo; p.154 no añade hechos; p.156 es escena paralela y no genera evento nuevo.
+- **Cambios funcionales:** completar el evento Bell–Hestia y perfiles existentes con detalles omitidos y localizador p.149; añadir a Ganesha Familia la distinción documentada entre planificación del Gremio y apoyo operativo de sus empleados. Eina y MON-DM-BATTLE-JABALI-001 se verificaron completos y no se modificaron.
+- **Cierre de cobertura:** P1 pp.9–156 reconciliada contra DMR-061, DMR-062 y destinos funcionales. P2/P3 pp.9–156 permanecen completas; tres pasadas pp.157–214 se conservan. No se asigna siguiente rango P1 dentro de pp.9–156.
+- **Pendientes:** cotejo integral Markdown↔PDF; cotejo de traducción española con japonés; ambigüedad p.18; recuento de bajas Kobold; V1-AUD-007 H120/H123 y discrepancias estadísticas posteriores; demás contradicciones DMR-062.
+- **Fuente:** instrucción del usuario y DMR-061-SRC-001, traducción privada no cotejada con japonés.

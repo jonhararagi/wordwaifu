@@ -63,3 +63,12 @@ Anya explica a Bell que el Festival de Monstruos es una celebración anual organ
 - **Alcance:** no se identifican especies, número de monstruos, técnicas, habilidades o estadísticas; tampoco se completa aquí el roster de Ganesha Familia ni se documenta el Festival entero.
 - **Relación con otros registros:** complementa el contexto del evento de preparativos EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001 sin crear otro evento del Festival ni fusionarse con la salida Bell–Hestia de pp.150–156.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF pp.137–138.
+
+## Organización del Festival y del espectáculo · CONT-MAIN-LN · Volumen 1 · PDF p.156
+
+La escena del espectáculo en el Coliseo distingue las responsabilidades institucionales: el Gremio dirige la planificación del Festival y despliega a sus empleados para admisión y orientación del público; esos empleados apoyan principalmente las actividades que corresponden al trabajo comprometido por Ganesha Familia. La demostración de domesticación del Battle Jabalí constituye una de esas actividades públicas de la Familia, mientras que Eina observa/oye el espectáculo desde su puesto de apoyo, no participa en la actuación.
+
+- **Alcance:** información narrada sobre la organización de este Festival, no una regla exhaustiva de jurisdicción para todos los festivales ni un roster de la Familia.
+- **Relación funcional:** complementa la evidencia de anfitrionía y preparativos en PDF pp.121–122 y la explicación de Anya/Ryuu en pp.137–138. No crea evento independiente del espectáculo, que continúa después de p.156.
+- **Entidades:** reutiliza a Ganesha Familia, a Eina y a `MON-DM-BATTLE-JABALI-001`. La domadora y el comentarista permanecen sin identificar.
+- **Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés, PDF p.156.
