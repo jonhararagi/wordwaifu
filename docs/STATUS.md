@@ -1390,3 +1390,13 @@ La auditoría visual directa de pp.49–58 confirmó diez páginas de texto y el
 - **Checkpoint:** P1 pp.9–156 reconciliada. No queda otro rango P1 pendiente dentro de pp.9–156 ni se asigna un siguiente rango. P2/P3 pp.9–156 permanecen completas; pp.157–214 conservan sus tres pasadas.
 - **Pendientes globales:** cotejo integral e independiente Markdown↔PDF; DMR-061-SRC-001, traducción privada española no cotejada con japonés; ambigüedad p.18; recuento de bajas Kobold; V1-AUD-007 Fuerza H120/H123; discrepancias estadísticas posteriores y las contradicciones abiertas en DMR-062. V1 sigue PARTIAL / IN_PROGRESS.
 - **Validación local:** no se ejecutaron pruebas locales, porque este entorno no dispone de un clon local operativo. La validación automática se comprobará en GitHub Actions sobre el SHA final de main.
+
+
+## DMR-062 — auditoría independiente MD↔PDF V1 · 2026-11-03
+
+- **Checkpoint:** primera tanda PDF pp.1–24 examinada; 13 folios con texto cotejados por secuencia alfanumérica normalizada. Se detectan tres pérdidas de formato (pp.9, 13, 14) y tres imágenes ausentes en la transcripción (pp.12, 15, 22).
+- **Front matter:** siete bloques Base64 en MD líneas 1–13; correspondencia visual individual con PDF pp.1–7 aún parcial. PDF p.8 está en blanco.
+- **Integridad:** los blobs fuente MD/PDF coinciden con los SHA registrados en DMR-062; PDF físico de 215 páginas.
+- **Continuidad:** P1 pp.9–156 sigue reconciliada; P2/P3 pp.9–156 siguen completas; tres pasadas pp.157–214 se conservan. Ninguna se reabrió. No se modificaron perfiles ni eventos funcionales.
+- **Siguiente trabajo MD↔PDF:** terminar el mapeo visual de pp.1–7 y continuar con PDF pp.25–40. La ambigüedad de p.18, recuento Kobold, V1-AUD-007/008, deuda/condiciones de la daga y monedero de Seal siguen abiertos.
+- **Estado global:** Volumen 1 y DMR-062 permanecen PARTIAL / IN_PROGRESS. No iniciar Volumen 2.
