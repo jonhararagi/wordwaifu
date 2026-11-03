@@ -1943,3 +1943,14 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - **Pasadas:** P2/P3 pp.9–156 permanecen completadas; las tres pasadas de pp.157–214 se conservan sin reabrirlas.
 - **Pendientes independientes:** cotejo integral Markdown↔PDF; traducción privada sin cotejo japonés; ambigüedad p.18; recuento de bajas Kobold; V1-AUD-007 H120/H123 y discrepancias estadísticas posteriores; demás contradicciones aún abiertas en DMR-062.
 - **Estado V1:** PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
+
+
+### DMR-062 — primera auditoría independiente Markdown↔PDF · Volumen 1 · 2026-11-03
+
+- **Resultado:** cotejo textual MD↔PDF realizado para 13 folios con texto extraíble de PDF pp.9–24; las secuencias alfanuméricas coinciden tras normalización. Se documentan tres pérdidas de formato (pp.9, 13 y 14) y tres imágenes ausentes en MD (pp.12, 15 y 22).
+- **Front matter:** siete imágenes MD en líneas 1–13; falta certificar su correspondencia individual con PDF pp.1–7. PDF p.8 es blanca.
+- **Estado por rango:** pp.1–24 examinadas; no se declara cierre total de la tanda por el mapeo de imágenes del front matter aún parcial. DMR-062 mantiene PARTIAL / IN_PROGRESS.
+- **Fuente:** blobs MD d2b3306b1661584d9a42d651f57dca8a6814b20b y PDF fd43a5395983850ab1a953bb39da732b27331dcc, ambos verificados en el repositorio privado main 15be6908ea02e2e083a6b14b538ba1a71245ac6e.
+- **Siguiente rango narrativo:** PDF pp.25–40. Antes de avanzar, completar el cotejo visual individual de las siete imágenes MD del front matter y mantener registrados los hallazgos de pp.12, 15 y 22.
+- **No repetir:** P1 pp.9–156, P2/P3 pp.9–156 ni las tres pasadas pp.157–214. No modificar el Markdown fuente, el PDF ni los registros funcionales por esta tanda.
+- **V1:** PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
