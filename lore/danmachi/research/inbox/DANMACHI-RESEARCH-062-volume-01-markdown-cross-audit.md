@@ -601,3 +601,104 @@ En esta **matriz priorizada de 20 hallazgos** hay 15 `COMPLETE`, 2 `PARTIAL`, 2 
 - No se crean IDs, entidades, relaciones, aliases o registros duplicados. No se modifican `catalog.json` ni `eras-and-events.json`.
 - **P1 pp.9–156 queda reconciliada** contra DMR-061, DMR-062 y destinos funcionales. No se asigna un siguiente rango P1 dentro de este tramo. P2/P3 pp.9–156 siguen completadas; pp.157–214 conservan sus tres pasadas. V1 permanece PARTIAL / IN_PROGRESS.
 - La traducción privada española sigue sin cotejo japonés y el cotejo integral independiente Markdown↔PDF continúa pendiente.
+
+
+## Auditoría independiente MD↔PDF · primera tanda · PDF pp.1–24 · 2026-11-03
+
+**Estado de la tanda:** PARTIAL. El cotejo textual de las páginas narrativas con texto extraíble quedó realizado para 13 folios; se detectaron tres omisiones de imágenes y tres pérdidas de formato. No se reabren P1, P2 ni P3.
+
+### Procedencia e integridad de los archivos
+
+- **Repositorio de fuentes:** jonhararagi/botimagen-referencias-privadas, rama main, HEAD comprobado 15be6908ea02e2e083a6b14b538ba1a71245ac6e.
+- **Markdown:** Volumen [01] • DanMachi.md, blob d2b3306b1661584d9a42d651f57dca8a6814b20b. Recuperado íntegramente por fetch_blob: 7.251 líneas y 4.025.426 caracteres devueltos. Contiene 16 bloques JPEG Base64; los 16 cumplen la estructura de alfabeto y padding Base64. No se editó el archivo fuente.
+- **PDF:** Volumen [01] • DanMachi.pdf, blob fd43a5395983850ab1a953bb39da732b27331dcc, 7.495.544 bytes. La copia de lectura materializada desde la Biblioteca coincide exactamente con el SHA Git calculado mediante git hash-object. pdfinfo confirma 215 páginas; la extracción de texto funciona. No se convirtió, recomprimió ni guardó sobre el original.
+- **Alcance de integridad:** los SHA y el tamaño verifican identidad de los objetos fuente. La prueba de Base64 realizada en esta tanda valida la forma de los 16 payloads, no una comparación binaria de cada imagen contra el raster de su página PDF.
+
+### Método reproducible de emparejamiento
+
+1. Extraer el texto PDF por página física, conservando los marcadores de página; no usar el número de línea Markdown como paginación.
+2. Quitar las cargas Base64 del flujo de comparación, manteniendo sus líneas como anclas de imagen.
+3. Localizar cada página mediante secuencias iniciales de palabras y continuidad del texto.
+4. Comparar por folio la secuencia alfanumérica normalizada, retirando únicamente espacios, puntuación y sintaxis Markdown. La igualdad normalizada detecta omisiones/añadidos de palabras, pero no certifica puntuación, separación de párrafos ni fidelidad de traducción.
+5. Registrar por separado la presentación de imágenes y el formato de títulos, diálogos y notas.
+
+### Matriz por folio físico
+
+| PDF | Localizador MD | Ancla / contenido que permite emparejar | Resultado | Categoría | Estado |
+|---:|---|---|---|---|---|
+| 1 | líneas 1–13, bloque de imagen 1 | Material editorial/imagen inicial; correspondencia exacta con el folio pendiente de comparación visual individual | Hay bloque Base64; no se certifica aún la correspondencia exacta | PAGE_MAPPING_UNRESOLVED | PARTIAL |
+| 2 | líneas 1–13, bloque de imagen 2 | Material editorial/imagen inicial; correspondencia exacta pendiente | Hay bloque Base64; no se certifica aún la correspondencia exacta | PAGE_MAPPING_UNRESOLVED | PARTIAL |
+| 3 | líneas 1–13, bloque de imagen 3 | Material editorial/imagen inicial; correspondencia exacta pendiente | Hay bloque Base64; no se certifica aún la correspondencia exacta | PAGE_MAPPING_UNRESOLVED | PARTIAL |
+| 4 | líneas 1–13, bloque de imagen 4 | Material editorial/imagen inicial; correspondencia exacta pendiente | Hay bloque Base64; no se certifica aún la correspondencia exacta | PAGE_MAPPING_UNRESOLVED | PARTIAL |
+| 5 | líneas 1–13, bloque de imagen 5 | Material editorial/imagen inicial; correspondencia exacta pendiente | Hay bloque Base64; no se certifica aún la correspondencia exacta | PAGE_MAPPING_UNRESOLVED | PARTIAL |
+| 6 | líneas 1–13, bloque de imagen 6 | Material editorial/imagen inicial; correspondencia exacta pendiente | Hay bloque Base64; no se certifica aún la correspondencia exacta | PAGE_MAPPING_UNRESOLVED | PARTIAL |
+| 7 | líneas 1–13, bloque de imagen 7 | Material editorial/imagen inicial; correspondencia exacta pendiente | Hay bloque Base64; no se certifica aún la correspondencia exacta | PAGE_MAPPING_UNRESOLVED | PARTIAL |
+| 8 | sin bloque narrativo; separador antes de MD línea 15 | PDF p.8 está en blanco, según la verificación previa | No hay texto que transcribir; no se cuenta como omisión narrativa | — | COMPLETE |
+| 9 | líneas 15–51 | «Prólogo — ¿Está mal esperar un encuentro en el Calabozo?» | Secuencia alfanumérica exacta; la palabra «Conclusión» queda partida como «Conclusió n» en MD línea 47 | FORMATTING_LOSS | PARTIAL |
+| 10 | líneas 53–91 | Bell perseguido por el Minotauro; «¡¡Huaaaaaaaaaah!!» | Secuencia alfanumérica exacta | — | COMPLETE |
+| 11 | líneas 93–131 | Callejón sin salida, corte al Minotauro y «¿Estás bien?» | Secuencia alfanumérica exacta | — | COMPLETE |
+| 12 | sin bloque de imagen entre MD líneas 131 y 133 | Ilustración física de una mujer armada junto a una figura en sombra, sin rótulo nominal; descripción visual ya registrada en DMR-061 | El PDF contiene una ilustración y el MD no inserta imagen en la posición correspondiente | IMAGE_MISSING | PARTIAL |
+| 13 | líneas 133–171 | Descripción textual de Aizu Wallenstein y reacción de Bell | Secuencia alfanumérica exacta; MD línea 145 separa «mirándome» como «mirándo me» | FORMATTING_LOSS | PARTIAL |
+| 14 | líneas 173–176 | «¿Estaba equivocado pidiendo un encuentro fortuito…?» y «Re-conclusión» | Las palabras coinciden al normalizar, pero MD convierte el pasaje en una tabla de cuatro columnas y parte «Re-conclusión» como «Re-conclusió n» | FORMATTING_LOSS | PARTIAL |
+| 15 | sin bloque de imagen entre MD líneas 176 y 178 | Portadilla ilustrada del capítulo 1 con texto japonés; no es una escena narrativa, según DMR-061 | El PDF contiene la portadilla y el MD no inserta imagen en la posición correspondiente | IMAGE_MISSING | PARTIAL |
+| 16 | líneas 178–210 | «Capítulo 01 — El Mundo, Realidad y Aspiraciones»; Bell llama a Eina | Secuencia alfanumérica exacta | — | COMPLETE |
+| 17 | líneas 214–252 | Conversación privada Bell–Eina y explicación del rescate | Secuencia alfanumérica exacta | — | COMPLETE |
+| 18 | líneas 254–286 | «Los Aventureros no deben ir a la aventura»; explicación del piso habitual del Minotauro | Secuencia alfanumérica exacta en ambos archivos. La expresión «decimoquinto piso o por debajo» continúa siendo ambigua en esta traducción | TRANSLATION_AMBIGUITY | UNRESOLVED |
+| 19 | líneas 288–322 | Eina describe la reputación de Ais y Bell pregunta por sus aficiones | Secuencia alfanumérica exacta | — | COMPLETE |
+| 20 | líneas 324–358 | Salida del despacho, conversación sobre la Gracia y canje de piedras mágicas | Secuencia alfanumérica exacta | — | COMPLETE |
+| 21 | líneas 360–380 | Recompensa de 1.200 Varisu y consejo de Eina | Secuencia alfanumérica exacta | — | COMPLETE |
+| 22 | sin bloque de imagen entre MD líneas 380 y 382 | Ilustración monocroma de una mujer con uniforme del Gremio y una taza; la contextualización previa no autoriza a inferir identidad solo por apariencia | El PDF contiene una ilustración y el MD no inserta imagen en la posición correspondiente | IMAGE_MISSING | PARTIAL |
+| 23 | líneas 382–416 | Despedida de Bell a Eina y transición a su biografía | Secuencia alfanumérica exacta | — | COMPLETE |
+| 24 | líneas 418–448 | Recuerdos del abuelo, historias heroicas y llegada a la iglesia deteriorada | Secuencia alfanumérica exacta | — | COMPLETE |
+
+### Discrepancias demostradas
+
+**A. FORMATTING_LOSS — tres casos**
+
+1. **PDF p.9 / MD línea 47:** el PDF contiene «Conclusión:»; el MD muestra «Conclusió n:». La secuencia de letras coincide al retirar espacios, pero el marcado divide la palabra.
+   - Impacto: menor; afecta la presentación de un rótulo.
+   - Acción propuesta: conservar el hallazgo y no editar la fuente original en esta auditoría.
+
+2. **PDF p.13 / MD línea 145:** el PDF contiene «mirándome»; el MD muestra «mirándo me».
+   - Impacto: menor; separación espuria dentro de una palabra.
+   - Acción propuesta: registrar como pérdida de formato, no como cambio de traducción.
+
+3. **PDF p.14 / MD líneas 173–176:** el texto continuo del PDF aparece como tabla Markdown de cuatro columnas. Además, «Re-conclusión» queda como «Re-conclusió n».
+   - Impacto: moderado; altera la lectura de la pregunta y del rótulo de conclusión.
+   - Acción propuesta: registrar la necesidad de restaurar párrafos/rótulos en una futura copia derivada, sin modificar el original MD.
+
+**B. IMAGE_MISSING — tres casos**
+
+- **PDF p.12:** ilustración de rescate sin rótulo nominal.
+- **PDF p.15:** portadilla ilustrada del capítulo 1.
+- **PDF p.22:** ilustración monocroma contextualizada previamente junto a la conversación de Eina.
+
+En las posiciones correspondientes no hay bloques de imagen Markdown. Los siete bloques iniciales de MD (líneas 1, 3, 5, 7, 9, 11 y 13) están antes del prólogo; no sustituyen ni se pueden reasignar por inferencia a las imágenes físicas de pp.12, 15 y 22. No se identifica a ninguna figura sin rótulo.
+
+### Resultado cuantitativo de la primera tanda
+
+- **Rango físico examinado:** PDF pp.1–24 (24 folios).
+- **Texto cotejado:** 13 páginas con texto extraíble (pp.9–11, 13–14, 16–21 y 23–24). Las 13 secuencias alfanuméricas coinciden exactamente tras normalizar espacios, puntuación y marcado Markdown.
+- **Páginas ilustradas con omisión MD demostrada:** 3 (pp.12, 15 y 22).
+- **Front matter pp.1–7:** existen siete bloques de imagen en MD, pero la correspondencia exacta imagen↔folio no queda certificada en esta tanda.
+- **p.8:** folio en blanco, COMPLETE.
+- **Omisiones/añadidos de palabras:** no se detectaron en las 13 páginas de texto tras normalización.
+- **ORDER_ERROR / DUPLICATION:** no detectados en este rango.
+- **TRANSCRIPTION_ERROR:** ninguno demostrado como cambio de palabra; los tres problemas localizados son de separación/formato.
+- **TRANSLATION_AMBIGUITY:** p.18 permanece UNRESOLVED y la formulación es idéntica en PDF y MD.
+- **IMAGE_MISMATCH:** no se declara ninguno; los tres casos anteriores son ausencia de imagen, no imágenes incorrectas.
+- **Estado global de esta tanda:** PARTIAL; no equivale al cierre de DMR-062 ni del Volumen 1.
+
+### Límites y continuidad
+
+- Este cotejo demuestra correspondencia de la secuencia textual española entre PDF y MD, no fidelidad de la traducción frente al japonés.
+- No se modifica la ambigüedad de p.18, el recuento de bajas Kobold, V1-AUD-007 H120/H123, V1-AUD-008 D512/D521, las condiciones económicas de la Daga de Hestia ni el monedero de Seal.
+- No se repiten P1 pp.9–156, P2/P3 pp.9–156 ni las tres pasadas pp.157–214.
+- No se modifican perfiles, eventos, IDs, el Markdown fuente ni el PDF.
+
+### Próximo checkpoint
+
+1. Resolver la correspondencia visual exacta de los siete bloques Markdown de líneas 1–13 con los folios físicos pp.1–7, sin volver a dar por hecha la relación solo por su orden.
+2. Mantener registradas las tres omisiones IMAGE_MISSING y las tres pérdidas FORMATTING_LOSS; no editar el archivo original.
+3. **Siguiente rango narrativo propuesto:** PDF pp.25–40, con la misma matriz de página física↔líneas MD y sin repetir P1/P2/P3.
+4. DMR-062 permanece PARTIAL / IN_PROGRESS; Volumen 1 permanece PARTIAL / IN_PROGRESS. No iniciar Volumen 2.
