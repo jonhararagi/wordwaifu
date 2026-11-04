@@ -1414,3 +1414,13 @@ El cotejo inicial cubre PDF pp.1–24. Se confirmó visualmente la correspondenc
 - **Hallazgos:** V1-MDPDF-035-001 FORMATTING_LOSS (separador p.35 como encabezado Markdown); V1-MDPDF-037-001 y V1-MDPDF-040-001 IMAGE_MISSING. 13 folios COMPLETE, 3 PARTIAL. No hay error de transcripción, orden, duplicación ni imagen incorrecta demostrado.
 - **Continuidad:** se conservan los hallazgos pp.1–24; no se repiten P1/P2/P3, que permanecen intactas. No se modifican DMR-061, fuentes originales ni registros funcionales.
 - **Próxima tanda independiente:** PDF pp.41–56. La traducción española sigue sin cotejo japonés. V1 y DMR-062 permanecen PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
+
+
+## DMR-062 — auditoría independiente MD↔PDF · checkpoint 2026-11-04 · PDF pp.41–56
+
+- **Fuentes:** WordWaifu main inicial `60e14ec29b8979d37da0d51d5e8261155bf53e04`; repositorio privado main `15be6908ea02e2e083a6b14b538ba1a71245ac6e`. El checkpoint anterior está integrado: comparación `60e14ec... ↔ main` = identical, 0 ahead / 0 behind.
+- **Integridad:** Markdown blob `d2b3306b1661584d9a42d651f57dca8a6814b20b`, 4.035.130 bytes, 7.251 líneas y 16 imágenes Base64; hash Git calculado y coincidente. PDF blob `fd43a5395983850ab1a953bb39da732b27331dcc`, 7.495.544 bytes, 215 páginas; hash Git calculado y coincidente.
+- **Cobertura nueva:** 16/16 folios físicos examinados y 16/16 con texto cotejado; 14 COMPLETE y 2 PARTIAL (pp.46 y 54).
+- **Hallazgos:** `V1-MDPDF-046-001` y `V1-MDPDF-054-001`, ambos `FORMATTING_LOSS` por el separador `× × ×` representado como encabezado `##`. No se detectan TRANSCRIPTION_ERROR, IMAGE_MISSING, IMAGE_MISMATCH, ORDER_ERROR, DUPLICATION ni PAGE_MAPPING_UNRESOLVED.
+- **Controles:** nota al pie de p.43 preservada mediante referencia `[^1]` (línea 962) y definición (línea 7240); tarjeta de Estado de p.54 conserva los valores del PDF.
+- **Continuidad:** se preservan todos los hallazgos de pp.1–40; no se repiten P1/P2/P3. No se modifican los archivos fuente ni DMR-061. Próximo rango MD↔PDF: pp.57–72. DMR-062 y V1 siguen PARTIAL / IN_PROGRESS.
