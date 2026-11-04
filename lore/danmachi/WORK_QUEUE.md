@@ -26,7 +26,7 @@ Conteos aproximados de palabras tras excluir las cargas base64 de imágenes y el
 
 | Volumen | Archivo fuente | Palabras aprox. | Imágenes incrustadas | Estado de análisis |
 |---|---|---:|---:|---|
-| 1 | `Volumen [01] • DanMachi.md` | 63.168 | 16 | DMR-061: P1 PDF↔DMR-061/DMR-062/destinos funcionales pp.9–156 completa; P2/P3 pp.9–156 completas; tres pasadas pp.157–214 conservadas. DMR-062 MD↔PDF: pp.1–40 examinadas; texto de pp.9–11, 13–14, 16–21, 23–36 y 38–39 cotejado; IMAGE_MISSING pp.12, 15, 22, 37 y 40; FORMATTING_LOSS pp.9, 13, 14 y 35; TRANSLATION_AMBIGUITY p.18. Próxima tanda MD↔PDF pp.41–56. PDF físico: 215 folios (p.8 blanca; p.215 créditos). V1 sigue PARTIAL / IN_PROGRESS. |
+| 1 | `Volumen [01] • DanMachi.md` | 63.168 | 16 | DMR-061: P1 PDF↔DMR-061/DMR-062/destinos funcionales pp.9–156 completa; P2/P3 pp.9–156 completas; tres pasadas pp.157–214 conservadas. DMR-062 MD↔PDF: pp.1–56 examinadas; texto de pp.9–11, 13–14, 16–21, 23–56 cotejado; IMAGE_MISSING pp.12, 15, 22, 37 y 40; FORMATTING_LOSS pp.9, 13, 14, 35, 46 y 54; TRANSLATION_AMBIGUITY p.18. Próxima tanda MD↔PDF pp.57–72. PDF físico: 215 folios (p.8 blanca; p.215 créditos). V1 sigue PARTIAL / IN_PROGRESS. |
 | 2 | `Volumen [02] • DanMachi.md` | 74.125 | 19 | DMR-060 contiene extracción parcial; falta certificar las tres pasadas completas. |
 | 3 | `Volumen [03] • DanMachi.md` | 53.883 | 21 | Fuente cargada; análisis integral pendiente. |
 | 4 | `Volumen [04] • DanMachi.md` | 64.892 | 23 | Fuente cargada; análisis integral pendiente. |
@@ -1974,4 +1974,17 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - [x] Preservar P1 pp.9–156, P2/P3 pp.9–156 y las tres pasadas pp.157–214; no modificar originales, DMR-061 ni registros funcionales.
 - **Siguiente tanda MD↔PDF:** PDF pp.41–56.
 - **Pendientes globales:** cotejo español↔japonés, ambigüedad p.18, cuenta Kobold, V1-AUD-007/008, condiciones de la Daga de Hestia, monedero de Seal y discrepancias restantes.
+- **Estado:** DMR-062 y V1 siguen PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
+
+
+## DMR-062 — auditoría independiente MD↔PDF · Volumen 1 · checkpoint 2026-11-04 · pp.41–56
+
+- [x] Recuperar el Markdown exacto desde el blob Git `d2b3306b1661584d9a42d651f57dca8a6814b20b` (4.035.130 bytes, 7.251 líneas, 16 imágenes Base64) y verificar su hash Git.
+- [x] Recuperar y verificar el PDF original `fd43a5395983850ab1a953bb39da732b27331dcc` (7.495.544 bytes, 215 páginas).
+- [x] Cotejar individualmente los 16 folios físicos PDF pp.41–56; los 16 contienen texto.
+- [x] Registrar `V1-MDPDF-046-001` y `V1-MDPDF-054-001` (`FORMATTING_LOSS`, separador centrado `× × ×` convertido en encabezado Markdown).
+- [x] Confirmar 14 folios COMPLETE y 2 PARTIAL (pp.46 y 54); sin error textual, de orden, duplicación o imagen demostrado.
+- [x] Confirmar nota al pie p.43 (referencia línea 962; definición línea 7240) y valores del Estado de p.54.
+- [x] Preservar hallazgos pp.1–40, P1/P2/P3 y fuentes originales; no modificar DMR-061 ni destinos funcionales.
+- **Siguiente tanda MD↔PDF:** PDF pp.57–72.
 - **Estado:** DMR-062 y V1 siguen PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
