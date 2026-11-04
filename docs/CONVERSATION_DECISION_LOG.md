@@ -886,3 +886,14 @@
 - **Hallazgos conservados:** `IMAGE_MISSING` pp.12, 15 y 22; `FORMATTING_LOSS` pp.9, 13 y 14; `TRANSLATION_AMBIGUITY` p.18. No se corrige la traducción ni se reabren P1/P2/P3.
 - **Integridad:** el PDF de lectura materializado desde la Biblioteca mide 7.495.544 bytes, coincide con el SHA-1 Git `fd43a5395983850ab1a953bb39da732b27331dcc` y abre con 215 páginas. El MD se recuperó desde el blob `d2b3306b1661584d9a42d651f57dca8a6814b20b`.
 - **Próximo trabajo:** cotejo narrativo MD↔PDF pp.25–40. V1 y DMR-062 continúan PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
+
+
+### CONV-DM-2026-11-04-001 — Auditoría independiente MD↔PDF V1 pp.25–40
+
+- **Fecha:** 2026-11-04.
+- **Estado:** ACCEPTED; cotejo documental integrado directamente en main.
+- **Alcance:** comparar el blob MD d2b3306b1661584d9a42d651f57dca8a6814b20b con el PDF físico fd43a5395983850ab1a953bb39da732b27331dcc; no repetir DMR-061.
+- **Resultado:** 16/16 folios físicos revisados; 14 folios con texto cotejados; dos folios solo ilustrados sin bloque MD en su posición. Se registran FORMATTING_LOSS p.35 y IMAGE_MISSING pp.37/40 con IDs V1-MDPDF-035-001, V1-MDPDF-037-001 y V1-MDPDF-040-001. No se demuestra error de transcripción, orden ni duplicación.
+- **Decisión:** no modificar PDF, Markdown fuente, DMR-061, fichas, eventos ni otros registros funcionales. Mantener los hallazgos como discrepancias de la derivación Markdown.
+- **Integridad:** PDF de 7.495.544 bytes; git hash-object coincide con su blob Git y pdfinfo confirma 215 páginas. Markdown recuperado íntegramente desde el blob esperado; 7.251 líneas y 16 bloques JPEG Base64.
+- **Continuidad:** P1 pp.9–156, P2/P3 pp.9–156 y tres pasadas pp.157–214 permanecen conservadas. Próxima tanda: PDF pp.41–56. V1 y DMR-062 continúan PARTIAL / IN_PROGRESS; no iniciar Volumen 2.

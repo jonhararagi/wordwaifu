@@ -26,7 +26,7 @@ Conteos aproximados de palabras tras excluir las cargas base64 de imágenes y el
 
 | Volumen | Archivo fuente | Palabras aprox. | Imágenes incrustadas | Estado de análisis |
 |---|---|---:|---:|---|
-| 1 | `Volumen [01] • DanMachi.md` | 63.168 | 16 | DMR-061: P1 PDF↔registros funcionales reconciliada hasta pp.9–128; siguiente pp.129–138. P2/P3 pp.9–156 documentadas y pp.157–214 conservan sus tres pasadas. La comparación integral MD↔PDF sigue pendiente. PDF físico: 215 folios (p.8 blanca; p.215 créditos). V1 sigue PARTIAL / IN_PROGRESS. |
+| 1 | `Volumen [01] • DanMachi.md` | 63.168 | 16 | DMR-061: P1 PDF↔DMR-061/DMR-062/destinos funcionales pp.9–156 completa; P2/P3 pp.9–156 completas; tres pasadas pp.157–214 conservadas. DMR-062 MD↔PDF: pp.1–40 examinadas; texto de pp.9–11, 13–14, 16–21, 23–36 y 38–39 cotejado; IMAGE_MISSING pp.12, 15, 22, 37 y 40; FORMATTING_LOSS pp.9, 13, 14 y 35; TRANSLATION_AMBIGUITY p.18. Próxima tanda MD↔PDF pp.41–56. PDF físico: 215 folios (p.8 blanca; p.215 créditos). V1 sigue PARTIAL / IN_PROGRESS. |
 | 2 | `Volumen [02] • DanMachi.md` | 74.125 | 19 | DMR-060 contiene extracción parcial; falta certificar las tres pasadas completas. |
 | 3 | `Volumen [03] • DanMachi.md` | 53.883 | 21 | Fuente cargada; análisis integral pendiente. |
 | 4 | `Volumen [04] • DanMachi.md` | 64.892 | 23 | Fuente cargada; análisis integral pendiente. |
@@ -1963,3 +1963,15 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - [x] Mantener p.8 como folio en blanco y las omisiones `IMAGE_MISSING` de pp.12, 15 y 22; no inferir identidades.
 - [x] Mantener `FORMATTING_LOSS` pp.9, 13 y 14 y `TRANSLATION_AMBIGUITY` p.18 sin corregir la traducción.
 - **Checkpoint MD↔PDF:** pp.1–24 examinadas; front matter pp.1–7 ya no requiere mapeo adicional. Próximo rango narrativo: PDF pp.25–40. P1/P2/P3 no se repiten; V1 continúa PARTIAL / IN_PROGRESS.
+
+
+## DMR-062 — auditoría independiente MD↔PDF · Volumen 1 · checkpoint 2026-11-04 · pp.25–40
+
+- [x] Recuperar el Markdown exacto desde el blob Git d2b3306b1661584d9a42d651f57dca8a6814b20b (7.251 líneas, 16 imágenes Base64) y verificar el PDF original mediante git hash-object, tamaño 7.495.544 bytes y 215 páginas.
+- [x] Cotejar 16/16 folios físicos PDF pp.25–40; texto cotejado en pp.25–36 y pp.38–39.
+- [x] Registrar V1-MDPDF-035-001 (FORMATTING_LOSS, separador p.35 como encabezado Markdown), V1-MDPDF-037-001 y V1-MDPDF-040-001 (IMAGE_MISSING).
+- [x] Confirmar 13 folios COMPLETE y tres PARTIAL (pp.35, 37 y 40). No se detectan TRANSCRIPTION_ERROR, ORDER_ERROR, DUPLICATION, IMAGE_MISMATCH ni PAGE_MAPPING_UNRESOLVED.
+- [x] Preservar P1 pp.9–156, P2/P3 pp.9–156 y las tres pasadas pp.157–214; no modificar originales, DMR-061 ni registros funcionales.
+- **Siguiente tanda MD↔PDF:** PDF pp.41–56.
+- **Pendientes globales:** cotejo español↔japonés, ambigüedad p.18, cuenta Kobold, V1-AUD-007/008, condiciones de la Daga de Hestia, monedero de Seal y discrepancias restantes.
+- **Estado:** DMR-062 y V1 siguen PARTIAL / IN_PROGRESS; no iniciar Volumen 2.

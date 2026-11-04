@@ -716,3 +716,70 @@ En las posiciones correspondientes no hay bloques de imagen Markdown. Los siete 
 - **Método y límites:** la copia del PDF se obtuvo de la Biblioteca, no de un clon autenticado; la identidad byte a byte quedó comprobada mediante el SHA Git del blob. El cotejo MD↔PDF no demuestra fidelidad de la traducción frente al japonés.
 - **Siguiente rango narrativo:** PDF pp.25–40. No repetir el mapeo pp.1–7 ni las pasadas P1/P2/P3.
 - **Estado:** DMR-062 y Volumen 1 siguen `PARTIAL / IN_PROGRESS`. No se modificaron el MD fuente, el PDF ni registros funcionales.
+
+
+## DMR-062 — segunda tanda de cotejo independiente MD↔PDF · Volumen 1 · PDF pp.25–40 · 2026-11-04
+
+### 1. Procedencia e integridad verificada en esta ejecución
+
+- **WordWaifu:** main inicial 12cf848fda1a3c5373f496125abc6c5c21f53bad.
+- **Repositorio privado de fuentes:** main 15be6908ea02e2e083a6b14b538ba1a71245ac6e; no se modificó.
+- **Markdown exacto:** Volumen [01] • DanMachi.md, blob Git d2b3306b1661584d9a42d651f57dca8a6814b20b, tamaño Git 4.035.130 bytes. El contenido recuperado desde ese blob contiene 7.251 líneas, 4.025.426 caracteres y 16 bloques JPEG Base64. No se sustituyó por otra copia ni edición.
+- **PDF exacto:** Volumen [01] • DanMachi.pdf, blob Git fd43a5395983850ab1a953bb39da732b27331dcc, tamaño 7.495.544 bytes. La copia de lectura materializada de la Biblioteca conserva exactamente ese identificador mediante git hash-object; pdfinfo confirma 215 páginas y el archivo abre y renderiza. El SHA-1 plano del payload es 13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3; no debe confundirse con el SHA del objeto Git, que incorpora la cabecera del objeto.
+- **Integridad:** el SHA de cada archivo coincide con su blob esperado. No se guardó, recomprimió, convirtió ni modificó el PDF. El Markdown fuente tampoco se editó.
+
+### 2. Método aplicado
+
+- Se renderizaron individualmente los 16 folios físicos PDF pp.25–40 a 150 dpi y se inspeccionaron visualmente en cuatro hojas de contacto.
+- Se extrajo texto por página física como apoyo y se cotejó contra el contenido recuperado del blob exacto Markdown, usando anclas iniciales/finales, secuencia de párrafos, diálogos, cifras, separadores y continuidad.
+- La paginación de referencia es siempre la física del PDF. Los números de línea MD son localizadores de navegación y no equivalen a folios.
+- La revisión P1/P2/P3 previa se reutiliza solo como contexto de continuidad. No se repitió extracción funcional ni se reabrieron pasadas anteriores.
+- Las 16 posiciones se revisaron de manera independiente. Las páginas solo ilustradas se registran aunque no contengan texto extraíble.
+
+### 3. Matriz de cobertura por folio físico
+
+| PDF físico | Localizador MD | Ancla / contenido de control | Resultado MD↔PDF | Estado |
+|---:|---|---|---|---|
+| 25 | líneas 450–480 | Entrada a la iglesia; estatua sin identificar; sala subterránea; primer diálogo de regreso y preocupación. | Secuencia textual y orden coincidentes; sin omisión, añadido o duplicación demostrados. | COMPLETE |
+| 26 | líneas 482–514 | Respuesta sobre no dejar a Hestia en la calle; comentario del gran barco; descripción de la habitación y de la deidad; croquetas. | Texto y orden coincidentes. La frase del barco se conserva sin interpretación añadida. | COMPLETE |
+| 27 | líneas 516–544 | Descenso de los Dioses, Mundo Inferior, aburrimiento, Gracia, Familias y límite del Poder Divino. | Texto, atribuciones y continuidad coincidentes. Los escapes Markdown de los signos angulares no cambian el texto visible. | COMPLETE |
+| 28 | líneas 546–578 | Apoyo económico de las Familias, beneficios de la Gracia, intercambio equivalente y reflexión de Bell sobre Hestia. | Texto y orden coincidentes; sin cifras o párrafos omitidos. | COMPLETE |
+| 29 | líneas 580–606 | Recuerdo del encuentro inicial, reclutamiento, condición de Hestia y promesa de Bell. | Texto y orden coincidentes; no se añade fecha ni identidad de la amiga de Hestia. | COMPLETE |
+| 30 | líneas 608–644 | Preparación de la actualización de Estado, sangre divina y procedimiento sobre la espalda. | Diálogo, acciones y secuencia coincidentes. | COMPLETE |
+| 31 | líneas 646–674 | Comentario sobre Elfos/Amazonas, explicación de Puntos de Experiencia y conversación sobre Ais. | Texto y orden coincidentes; no se cambian atribuciones de diálogo. | COMPLETE |
+| 32 | líneas 676–708 | Restricciones entre Familias, advertencia de Hestia, reflexión de Bell y entrega del papel de Estado. | Texto y orden coincidentes; el papel se entrega al final del folio, como en el PDF. | COMPLETE |
+| 33 | líneas 710–744 | Tarjeta de Bell Lv.1, Fuerza I77→I82, Resistencia I13, Destreza I93→I96, Agilidad H148→H172, Magia I0; explicación de grados y dominio. | Valores, palabras y secuencia coincidentes. El bloque estadístico MD conserva los mismos datos; no se interpreta el formato inline como cambio de cifras. | COMPLETE |
+| 34 | líneas 746–780 | Explicación de magia, habilidades, secciones vacías y preparación de la cena. | Texto y orden coincidentes; no se detecta omisión de diálogo, párrafo o condición. | COMPLETE |
+| 35 | líneas 782–820 | Salida de Bell hacia la cocina; cambio de POV a Hestia; repetición del Estado y primera línea de Deseo Inquebrantable. | Texto y datos coincidentes. El separador físico centrado × × × se convierte en encabezado Markdown de nivel 2 en la línea 786. | PARTIAL |
+| 36 | líneas 821–824 | Continuación de los efectos de Deseo Inquebrantable y reflexión final de Hestia. | Las dos viñetas restantes y el párrafo final aparecen en el mismo orden. | COMPLETE |
+| 37 | sin bloque de imagen entre líneas 824–826 | Folio ilustrado de capítulo; imagen a página completa con título japonés incrustado. | El PDF contiene una ilustración; no existe bloque de imagen Markdown en esa posición. No se infiere identidad por apariencia ni se traduce el texto incrustado. | PARTIAL |
+| 38 | líneas 826–859 | Encabezado Capitulo 02 – Y Entonces Corrí y despertar de Bell en la habitación de Hestia; lámpara de Piedra Mágica y almohada. | Título, texto y secuencia coincidentes. | COMPLETE |
+| 39 | líneas 860–870 | Continuación de la escena de la almohada y cierre del folio antes de la ilustración siguiente. | Texto y orden coincidentes; la repetición intencional de la escena en el PDF no se clasifica como duplicación del MD. | COMPLETE |
+| 40 | sin bloque de imagen después de línea 870 y antes del texto posterior | Ilustración monocroma de página completa. | El PDF contiene una ilustración; no existe bloque de imagen Markdown en esa posición. No se atribuyen identidades a las figuras por su apariencia. | PARTIAL |
+
+### 4. Registro de discrepancias demostradas
+
+| ID | PDF | Localizador MD | Categoría | Evidencia PDF | Evidencia transcripción | Gravedad / impacto | Estado | Acción propuesta |
+|---|---:|---|---|---|---|---|---|---|
+| V1-MDPDF-035-001 | 35 | línea 786 | FORMATTING_LOSS | El separador × × × está centrado como divisor visual entre el POV de Bell y el de Hestia; no es un título de capítulo. | ## × × × lo convierte en encabezado de nivel 2 y crea jerarquía de sección. | Baja; no altera palabras ni acontecimientos, pero sí la semántica estructural del separador. | ACEPTADO | Mantener el hallazgo. En una futura copia derivada, representarlo como divisor neutral/centrado. No editar la fuente original. |
+| V1-MDPDF-037-001 | 37 | ausencia de bloque entre líneas 824–826 | IMAGE_MISSING | El folio físico contiene una ilustración de página completa y el título japonés forma parte de la imagen. | No hay bloque Base64 ni imagen Markdown en la posición correspondiente; el encabezado del capítulo aparece en la página siguiente. | Media; se pierde material visual del volumen, aunque no texto narrativo adicional verificable. | ACEPTADO | Registrar la omisión; incorporar la imagen exacta solo en una derivación autorizada. No inferir identidad ni traducir texto gráfico sin cotejo. |
+| V1-MDPDF-040-001 | 40 | ausencia de bloque de imagen después de línea 870 | IMAGE_MISSING | El folio físico contiene una ilustración monocroma de página completa. | No hay bloque Base64 ni imagen Markdown entre el texto de p.39 y la continuación textual posterior. | Media; se pierde material visual, sin añadir hechos narrativos por inferencia. | ACEPTADO | Registrar la omisión; incorporar la imagen exacta solo en una derivación autorizada. No identificar figuras solo por apariencia. |
+
+### 5. Resultado cuantitativo
+
+- **Folios físicos examinados:** 16/16 (pp.25–40).
+- **Folios con texto cotejados:** 14/14 (pp.25–36 y pp.38–39). El texto se conserva en secuencia y sin omisiones, añadidos, cambios de palabra/cifra o atribuciones nuevas demostradas.
+- **Folios solo ilustrados:** 2 (pp.37 y 40); ambos tienen IMAGE_MISSING en la posición correspondiente del MD.
+- **Hallazgos nuevos:** 3 (1 FORMATTING_LOSS, 2 IMAGE_MISSING).
+- **Estado por folio:** 13 COMPLETE y 3 PARTIAL (p.35, p.37 y p.40). El bloque está examinado en su totalidad, pero las tres discrepancias permanecen registradas.
+- **No detectados en este rango:** TRANSCRIPTION_ERROR, ORDER_ERROR, DUPLICATION, IMAGE_MISMATCH, ADDED_MD o PAGE_MAPPING_UNRESOLVED.
+- **Traducción:** no se detecta una ambigüedad nueva que pueda resolverse por cotejo MD↔PDF. Esta auditoría no verifica fidelidad frente al japonés.
+
+### 6. Límites y continuidad
+
+- Las omisiones de imagen p.37 y p.40 son nuevas en la matriz MD↔PDF; no se duplican las omisiones anteriores de pp.12, 15 y 22.
+- El separador de p.35 no se clasifica como error textual. La repetición de la tarjeta de Estado entre pp.33 y 35 también aparece en el PDF y es intencional; no es DUPLICATION.
+- No se modificaron perfiles, eventos, fichas, DMR-061, catálogo ni timeline. P1 pp.9–156 continúa completa; P2/P3 pp.9–156 continúan documentadas; las tres pasadas pp.157–214 se conservan.
+- Se mantienen pendientes el cotejo español↔japonés, la ambigüedad de p.18, el recuento Kobold, V1-AUD-007 H120/H123, V1-AUD-008 D512/D521, las condiciones económicas de la Daga de Hestia y el monedero de Seal.
+- **Siguiente tanda obligatoria:** PDF pp.41–56.
+- **Estado global:** DMR-062 y Volumen 1 permanecen PARTIAL / IN_PROGRESS. No iniciar Volumen 2.

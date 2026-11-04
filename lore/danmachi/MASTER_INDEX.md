@@ -573,3 +573,8 @@ La reconciliación P1 PDF↔DMR-061↔DMR-062↔destinos funcionales queda compl
 - Se confirmó la correspondencia visual individual de las siete imágenes Markdown iniciales con PDF pp.1–7. El PDF de lectura coincide byte a byte con el blob Git por SHA-1 y conserva 215 páginas.
 - La primera tanda pp.1–24 mantiene tres `IMAGE_MISSING` (pp.12, 15, 22), tres `FORMATTING_LOSS` (pp.9, 13, 14) y `TRANSLATION_AMBIGUITY` p.18.
 - Próxima tanda: cotejo MD↔PDF pp.25–40. El Volumen 1 permanece PARTIAL / IN_PROGRESS; no se repiten P1/P2/P3 ni se inicia Volumen 2.
+
+
+## DMR-062 — cobertura MD↔PDF añadida · Volumen 1 · PDF pp.25–40 · 2026-11-04
+
+Se cotejaron 16/16 folios físicos contra el blob Markdown original. Las 14 páginas con texto (pp.25–36 y pp.38–39) conservan la secuencia textual; pp.37 y 40 son ilustraciones ausentes en su posición Markdown. Hallazgos: FORMATTING_LOSS p.35 (separador × × × convertido en encabezado); IMAGE_MISSING pp.37 y 40. IDs: V1-MDPDF-035-001, V1-MDPDF-037-001, V1-MDPDF-040-001. No se abren ni reabren registros funcionales. P1 pp.9–156, P2/P3 pp.9–156 y tres pasadas pp.157–214 se conservan. Próxima tanda MD↔PDF: pp.41–56. V1 sigue PARTIAL / IN_PROGRESS.

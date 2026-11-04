@@ -1405,3 +1405,12 @@ La auditoría visual directa de pp.49–58 confirmó diez páginas de texto y el
 ## DMR-062 — checkpoint de auditoría independiente MD↔PDF · 2026-11-03
 
 El cotejo inicial cubre PDF pp.1–24. Se confirmó visualmente la correspondencia individual de las siete imágenes Markdown de líneas 1–13 con PDF pp.1–7; p.8 es blanca. Se mantienen tres omisiones de imagen (pp.12, 15, 22), tres pérdidas de formato (pp.9, 13, 14) y la ambigüedad de traducción de p.18. El PDF materializado conserva el SHA del blob Git y sus 215 páginas. Próxima tanda: PDF pp.25–40. DMR-062 y V1 siguen PARTIAL / IN_PROGRESS; P1/P2/P3 no se reabren.
+
+
+## DMR-062 — auditoría independiente MD↔PDF · checkpoint 2026-11-04 · PDF pp.25–40
+
+- **Fuentes:** repositorio privado main 15be6908ea02e2e083a6b14b538ba1a71245ac6e; MD blob d2b3306b1661584d9a42d651f57dca8a6814b20b; PDF blob fd43a5395983850ab1a953bb39da732b27331dcc, 7.495.544 bytes y 215 páginas. El git hash-object de la copia materializada coincide con el blob PDF.
+- **Cobertura nueva:** 16/16 folios físicos examinados; 14 folios con texto cotejados y dos folios solo ilustrados.
+- **Hallazgos:** V1-MDPDF-035-001 FORMATTING_LOSS (separador p.35 como encabezado Markdown); V1-MDPDF-037-001 y V1-MDPDF-040-001 IMAGE_MISSING. 13 folios COMPLETE, 3 PARTIAL. No hay error de transcripción, orden, duplicación ni imagen incorrecta demostrado.
+- **Continuidad:** se conservan los hallazgos pp.1–24; no se repiten P1/P2/P3, que permanecen intactas. No se modifican DMR-061, fuentes originales ni registros funcionales.
+- **Próxima tanda independiente:** PDF pp.41–56. La traducción española sigue sin cotejo japonés. V1 y DMR-062 permanecen PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
