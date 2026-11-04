@@ -578,3 +578,8 @@ La reconciliación P1 PDF↔DMR-061↔DMR-062↔destinos funcionales queda compl
 ## DMR-062 — cobertura MD↔PDF añadida · Volumen 1 · PDF pp.25–40 · 2026-11-04
 
 Se cotejaron 16/16 folios físicos contra el blob Markdown original. Las 14 páginas con texto (pp.25–36 y pp.38–39) conservan la secuencia textual; pp.37 y 40 son ilustraciones ausentes en su posición Markdown. Hallazgos: FORMATTING_LOSS p.35 (separador × × × convertido en encabezado); IMAGE_MISSING pp.37 y 40. IDs: V1-MDPDF-035-001, V1-MDPDF-037-001, V1-MDPDF-040-001. No se abren ni reabren registros funcionales. P1 pp.9–156, P2/P3 pp.9–156 y tres pasadas pp.157–214 se conservan. Próxima tanda MD↔PDF: pp.41–56. V1 sigue PARTIAL / IN_PROGRESS.
+
+
+## DMR-062 — cobertura MD↔PDF añadida · Volumen 1 · PDF pp.41–56 · 2026-11-04
+
+Se cotejaron 16/16 folios físicos con el Markdown original; los 16 contienen texto. Se registran dos `FORMATTING_LOSS`: pp.46 y 54, donde el separador centrado `× × ×` aparece como encabezado Markdown. IDs: `V1-MDPDF-046-001`, `V1-MDPDF-054-001`. No se demuestran errores de transcripción, orden, duplicación ni discrepancias de imágenes. La nota al pie de p.43 y los valores del Estado de p.54 se conservan. Próxima tanda MD↔PDF: pp.57–72. V1 permanece PARTIAL / IN_PROGRESS.
