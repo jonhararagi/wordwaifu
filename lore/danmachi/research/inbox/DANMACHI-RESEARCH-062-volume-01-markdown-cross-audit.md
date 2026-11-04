@@ -783,3 +783,65 @@ En las posiciones correspondientes no hay bloques de imagen Markdown. Los siete 
 - Se mantienen pendientes el cotejo español↔japonés, la ambigüedad de p.18, el recuento Kobold, V1-AUD-007 H120/H123, V1-AUD-008 D512/D521, las condiciones económicas de la Daga de Hestia y el monedero de Seal.
 - **Siguiente tanda obligatoria:** PDF pp.41–56.
 - **Estado global:** DMR-062 y Volumen 1 permanecen PARTIAL / IN_PROGRESS. No iniciar Volumen 2.
+
+### DMR-062 — tercera tanda de cotejo independiente MD↔PDF · Volumen 1 · PDF pp.41–56 · 2026-11-04
+
+#### 1. Procedencia e integridad
+
+- **WordWaifu:** main inicial `60e14ec29b8979d37da0d51d5e8261155bf53e04`. Se comparó el checkpoint con `main`: `identical`, `ahead_by=0`, `behind_by=0`; no había commits posteriores sin revisar.
+- **Repositorio privado de fuentes:** main `15be6908ea02e2e083a6b14b538ba1a71245ac6e`; no se modificó.
+- **Markdown exacto:** blob `d2b3306b1661584d9a42d651f57dca8a6814b20b`; 4.035.130 bytes UTF-8, 7.251 líneas, 4.025.426 caracteres y 16 bloques JPEG Base64. Se recuperó por SHA de blob y se recalculó el Git blob SHA sobre `blob 4035130\\0 + contenido`, con coincidencia exacta.
+- **PDF exacto:** blob `fd43a5395983850ab1a953bb39da732b27331dcc`; 7.495.544 bytes, 215 páginas. La copia materializada de Biblioteca conserva el hash Git esperado; SHA-1 plano del payload `13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3`. El PDF abre y se renderizó sin conversión ni modificación.
+- **Ejecuciones previas:** Validate WordWaifu run `41853635617` = `completed / success`; DanMachi Lore and Retrieval Integrity run `41853635652` = `completed / success`. Son resultados del checkpoint anterior, no CI de este cambio.
+
+#### 2. Método
+
+- Se renderizaron individualmente PDF pp.41–56 a 115 dpi y se inspeccionaron las 16 páginas; se revisaron ampliadas las páginas con nota al pie y separadores/estadísticas.
+- Se extrajo texto por página física y se cotejó contra el blob Markdown exacto mediante anclas iniciales/finales, párrafos, diálogos, cifras, notas y continuidad.
+- Los folios se numeran por página física PDF. Las líneas Markdown son localizadores de navegación, no equivalencias de paginación.
+- No se repitieron P1/P2/P3 ni el cotejo de pp.1–40.
+
+#### 3. Matriz de cobertura
+
+| PDF físico | Localizador Markdown | Ancla / contenido de control | Resultado MD↔PDF | Estado |
+|---:|---|---|---|---|
+| 41 | líneas 872–906 | Salida de Bell del sofá; caminata matutina; hambre y decisión de comprar desayuno. | Texto, diálogo y secuencia cotejados; sin discrepancia demostrada. | COMPLETE |
+| 42 | líneas 908–944 | Sensación de ser observado; reacción de Bell; aparición de la empleada de la cafetería y disculpas. | Texto, descripción y atribuciones cotejados. | COMPLETE |
+| 43 | líneas 946–988; nota al pie definida en línea 7240 | Piedra Mágica devuelta; riñonera; conversación; referencia de nota `[^1]` y definición. | Texto y nota preservados; la referencia y definición enlazan correctamente. | COMPLETE |
+| 44 | líneas 990–1028 | Reacción al hambre de Bell; cesta con pan y queso; invitación indirecta a comer. | Texto y secuencia cotejados; regla de nota al pie presente en el PDF. | COMPLETE |
+| 45 | líneas 1030–1072 | Intercambio con la empleada; invitación a cenar; Bell pregunta su nombre. | Texto y diálogo cotejados. | COMPLETE |
+| 46 | líneas 1074–1116 | Seal responde su nombre; transición a explicación del Calabozo y guerreros antiguos. | El separador físico centrado `× × ×` aparece como `## × × ×` en línea 1078, creando una jerarquía de encabezado no presente en el PDF. | PARTIAL |
+| 47 | líneas 1118–1152 | Bell huye de seis Kobolds por el primer piso y prepara una emboscada. | Secuencia de acciones y texto cotejados. | COMPLETE |
+| 48 | líneas 1154–1194 | Daga de 20 cm; enfrentamiento; primeros Kobolds abatidos. | Texto, cifras y secuencia cotejados. | COMPLETE |
+| 49 | líneas 1196–1234 | Continuación del combate; victoria; decisión de luchar con prudencia y usar el terreno. | Texto y orden cotejados. | COMPLETE |
+| 50 | líneas 1236–1262 | Extracción de Piedras Mágicas; explicación de su valor y desaparición del monstruo. | Texto y secuencia cotejados; sin cifras o párrafos omitidos demostrados. | COMPLETE |
+| 51 | líneas 1264–1292 | Garra como Botín; reglas de recuperación; mochila y peso del equipo. | Texto y orden cotejados. | COMPLETE |
+| 52 | líneas 1294–1332 | Misterios del Calabozo, su estructura, generación de monstruos y pisos. | Texto y continuidad cotejados. | COMPLETE |
+| 53 | líneas 1334–1358 | Encuentro con Goblin y obtención de Botín. | Texto y orden cotejados. | COMPLETE |
+| 54 | líneas 1360–1398 | Bell decide reparar la mochila; combate; separador y tarjeta de Estado. | El separador físico centrado `× × ×` aparece como `## × × ×` en línea 1384. Los valores de la tarjeta coinciden: Fuerza I82→H120, Resistencia I13→I42, Destreza I96→H139, Agilidad H172→G225, Magia I0. | PARTIAL |
+| 55 | líneas 1400–1438 | Bell cuestiona el incremento del Estado y Hestia se enfada. | Texto, cifras referidas y atribuciones cotejados. | COMPLETE |
+| 56 | líneas 1440–1484 | Reacción de Hestia, salida de la casa y preparación para ir a la tienda de Seal. | Texto y secuencia cotejados; sin discrepancia demostrada. | COMPLETE |
+
+#### 4. Hallazgos nuevos
+
+| ID | PDF | Localizador MD | Categoría | Evidencia PDF | Evidencia Markdown | Gravedad / impacto | Estado | Acción propuesta |
+|---|---:|---|---|---|---|---|---|---|
+| V1-MDPDF-046-001 | 46 | línea 1078 | FORMATTING_LOSS | El signo `× × ×` aparece centrado como separador entre el diálogo de presentación de Seal y el bloque narrativo sobre el Calabozo. | `## × × ×` lo transforma en encabezado Markdown de nivel 2. | Baja; no cambia palabras ni hechos, pero añade jerarquía estructural inexistente. | ACEPTADO | Mantener el hallazgo; en una derivación autorizada, representar el signo como divisor neutral. No editar la fuente. |
+| V1-MDPDF-054-001 | 54 | línea 1384 | FORMATTING_LOSS | El signo `× × ×` aparece centrado como separador entre la escena del Goblin y la tarjeta de Estado de Bell. | `## × × ×` lo transforma en encabezado Markdown de nivel 2. | Baja; no cambia palabras ni cifras, pero añade jerarquía estructural inexistente. | ACEPTADO | Mantener el hallazgo; en una derivación autorizada, representar el signo como divisor neutral. No editar la fuente. |
+
+#### 5. Controles específicos y categorías no detectadas
+
+- **Nota al pie p.43:** el PDF muestra la nota 1 al pie. El Markdown contiene la referencia `riñonera[^1]` en línea 962 y la definición completa en línea 7240; no se registra omisión.
+- **Tarjeta de Estado p.54:** los valores y el orden coinciden con el PDF; no hay discrepancia numérica demostrada.
+- **Imágenes:** no hay ilustraciones de página completa en pp.41–56; no se detecta `IMAGE_MISSING` ni `IMAGE_MISMATCH`.
+- **No detectados:** `TRANSCRIPTION_ERROR`, `ORDER_ERROR`, `DUPLICATION`, `PAGE_MAPPING_UNRESOLVED` ni nueva `TRANSLATION_AMBIGUITY`.
+- **Cobertura:** 16/16 folios examinados y con texto cotejado; 14 COMPLETE, 2 PARTIAL (pp.46 y 54); 2 hallazgos nuevos, ambos FORMATTING_LOSS.
+- **Límites:** cotejo MD↔PDF; no demuestra fidelidad de la traducción española frente al original japonés.
+
+#### 6. Continuidad
+
+- Se conservan los hallazgos de pp.1–40, sin duplicarlos.
+- No se modifican el PDF ni el Markdown fuente, DMR-061, fichas, eventos ni destinos funcionales.
+- P1 pp.9–156, P2/P3 pp.9–156 y tres pasadas pp.157–214 permanecen fuera de alcance y conservadas.
+- **Próximo rango obligatorio:** PDF pp.57–72.
+- **Estado:** DMR-062 y Volumen 1 permanecen `PARTIAL / IN_PROGRESS`; no iniciar Volumen 2.
