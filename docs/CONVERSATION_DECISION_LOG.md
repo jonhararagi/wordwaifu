@@ -897,3 +897,15 @@
 - **Decisión:** no modificar PDF, Markdown fuente, DMR-061, fichas, eventos ni otros registros funcionales. Mantener los hallazgos como discrepancias de la derivación Markdown.
 - **Integridad:** PDF de 7.495.544 bytes; git hash-object coincide con su blob Git y pdfinfo confirma 215 páginas. Markdown recuperado íntegramente desde el blob esperado; 7.251 líneas y 16 bloques JPEG Base64.
 - **Continuidad:** P1 pp.9–156, P2/P3 pp.9–156 y tres pasadas pp.157–214 permanecen conservadas. Próxima tanda: PDF pp.41–56. V1 y DMR-062 continúan PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
+
+
+### CONV-DM-2026-11-04-002 — Auditoría independiente MD↔PDF V1 pp.41–56
+
+- **Fecha:** 2026-11-04.
+- **Estado:** ACCEPTED; cotejo documental integrado directamente en main.
+- **Alcance:** Volumen 1, folios físicos PDF pp.41–56; Markdown original blob `d2b3306b1661584d9a42d651f57dca8a6814b20b` frente al PDF original blob `fd43a5395983850ab1a953bb39da732b27331dcc`. No repetir DMR-061 ni pp.1–40.
+- **Resultado:** 16/16 folios examinados; los 16 contienen texto. Se registran dos pérdidas de formato: `V1-MDPDF-046-001` y `V1-MDPDF-054-001`, ambas `FORMATTING_LOSS` por convertir el separador centrado `× × ×` en encabezado Markdown `##`.
+- **No demostrados:** errores de transcripción, orden, duplicación, mapeo de página, omisión o discordancia de imágenes. La nota al pie de p.43 está referenciada en línea 962 y definida en línea 7240; no es una omisión. Los valores del Estado en p.54 coinciden con el PDF.
+- **Decisión:** conservar el Markdown y PDF fuente sin modificación; registrar las dos pérdidas estructurales en DMR-062. No reabrir P1/P2/P3 ni modificar DMR-061 o destinos funcionales.
+- **Integridad:** Markdown 4.035.130 bytes, 7.251 líneas, 16 imágenes Base64 y Git blob SHA verificado. PDF 7.495.544 bytes, 215 páginas, Git blob SHA verificado.
+- **Continuidad:** DMR-062 y Volumen 1 permanecen `PARTIAL / IN_PROGRESS`. Próxima tanda: PDF pp.57–72. No iniciar Volumen 2.
