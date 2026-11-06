@@ -1998,3 +1998,14 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - [x] Confirmar 12 COMPLETE, 2 PARTIAL y 2 IMAGE_MISSING; no se demuestra error de transcripción, orden ni duplicación.
 - **Siguiente tanda DMR-062:** cotejo independiente Markdown↔PDF, pp.89–104.
 - **Estado:** DMR-062 y Volumen 1 continúan `PARTIAL / IN_PROGRESS`; no iniciar Volumen 2.
+
+
+### DMR-062 — auditoría independiente MD↔PDF · Volumen 1 · checkpoint 2026-11-06 · pp.89–104
+
+- [x] Recuperar el PDF original de la Biblioteca y verificar 7.495.544 bytes, 215 páginas y SHA-1 `13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3`; confirmar blob Git PDF `fd43a5395983850ab1a953bb39da732b27331dcc` y blob MD `d2b3306b1661584d9a42d651f57dca8a6814b20b`.
+- [x] Inspeccionar visualmente y cotejar los 16 folios físicos PDF pp.89–104 contra el Markdown.
+- [x] Registrar `V1-MDPDF-091-001`, `V1-MDPDF-097-001` y `V1-MDPDF-102-001` (`FORMATTING_LOSS`, separadores físicos `× × ×` convertidos en encabezados Markdown).
+- [x] Confirmar 13 COMPLETE y 3 PARTIAL; no se demuestra error textual, de orden, duplicación ni IMAGE_MISSING. Estado de p.91 y nota al pie de nekomusume cotejados.
+- [x] Preservar los originales y los hallazgos anteriores; no modificar DMR-061 ni destinos funcionales.
+- **Siguiente tanda DMR-062:** cotejo independiente Markdown↔PDF, pp.105–120.
+- **Estado:** DMR-062 y Volumen 1 continúan `PARTIAL / IN_PROGRESS`; no iniciar Volumen 2.
