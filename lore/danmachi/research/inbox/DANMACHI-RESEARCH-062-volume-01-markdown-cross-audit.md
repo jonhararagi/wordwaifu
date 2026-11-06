@@ -845,3 +845,58 @@ En las posiciones correspondientes no hay bloques de imagen Markdown. Los siete 
 - P1 pp.9–156, P2/P3 pp.9–156 y tres pasadas pp.157–214 permanecen fuera de alcance y conservadas.
 - **Próximo rango obligatorio:** PDF pp.57–72.
 - **Estado:** DMR-062 y Volumen 1 permanecen `PARTIAL / IN_PROGRESS`; no iniciar Volumen 2.
+
+
+### DMR-062 — cuarta tanda de cotejo independiente MD↔PDF · Volumen 1 · PDF pp.57–72 · 2026-11-06
+
+#### 1. Procedencia e integridad
+
+- **WordWaifu:** main inicial 5c1ef56ae14b4112e5fb8f23dc4f4f19ab942f00; comparación main...5c1ef56 = identical, ahead_by=0, behind_by=0.
+- **Markdown:** blob exacto d2b3306b1661584d9a42d651f57dca8a6814b20b, recuperado por SHA desde el repositorio. 4.035.130 bytes UTF-8, 7.251 líneas, 16 bloques JPEG incrustados. La fuente original no se modificó.
+- **PDF:** Volumen [01] • DanMachi.pdf, recuperado de Biblioteca; 7.495.544 bytes, 215 páginas. SHA-1 plano del payload: 13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3, coincidente con el checkpoint de procedencia del blob Git fd43a5395983850ab1a953bb39da732b27331dcc.
+- **Inspección:** se extrajo el texto de cada folio físico y se renderizaron/inspeccionaron visualmente pp.57–72 a 115 dpi. La p.70 es una ilustración de página completa sin texto extraíble. Se contrastaron los pasajes con el blob Markdown exacto, no con una copia reconstruida.
+- Los localizadores Markdown indican líneas de navegación y no equivalencias de paginación.
+
+#### 2. Matriz de cobertura
+
+| PDF físico | Localizador Markdown | Ancla / contenido de control | Resultado MD↔PDF | Estado |
+|---:|---|---|---|---|
+| 57 | líneas 1482–1513 | Bell sale de la casa de Hestia y llega al establecimiento de Seal; presentación exterior de la taberna. | Texto y secuencia cotejados; sin omisión textual demostrada. | COMPLETE |
+| 58 | líneas 1514–1549 | Bell observa el interior y duda antes de entrar; Seal lo recibe. | Texto, diálogos y secuencia cotejados. | COMPLETE |
+| 59 | líneas 1550–1589 | Recepción en la taberna, bienvenida de Mia y reacción ante el apetito de Bell. | Texto y atribuciones cotejados. | COMPLETE |
+| 60 | líneas 1590–1629 | Bell protesta por la comida; conversación sobre el coste del equipo y reparación de armas. | Texto y cifras visibles cotejados. | COMPLETE |
+| 61 | líneas 1630–1671 | Precio de la daga, préstamo del Gremio, pago de deudas y conversación sobre la cena. | Texto, cifras y secuencia cotejados. | COMPLETE |
+| 62 | líneas 1672–1707 | Historia de la Señora de la Abundancia, Mia y Seal; entrada del grupo de diez aventureros. | Texto, descripciones y transición cotejados. | COMPLETE |
+| 63 | líneas 1708–1749 | Bell reconoce a Aizu Wallenstein; reacción de clientes y reconocimiento de la Familia Loki. | Texto, diálogos y atribuciones cotejados. | COMPLETE |
+| 64 | líneas 1750–1785 | Reacción de Bell, observación de Aizu y explicación de la relación de la Familia Loki con la taberna. | Texto y secuencia cotejados. | COMPLETE |
+| 65 | líneas 1786–1819 | Bell observa a Aizu; conversación sobre la expedición y los Minotauros que escaparon. | Texto, orden y explicación del recorrido cotejados. | COMPLETE |
+| 66 | líneas 1820–1863 | Relato del encuentro previo con el Minotauro y burlas de los miembros de Loki Familia. | Texto, diálogos y continuidad cotejados. | COMPLETE |
+| 67 | líneas 1864–1905 | Continúan las burlas; Riviera reprende a Bete; Aizu responde sobre la reacción de Bell. | Texto y atribuciones cotejados. | COMPLETE |
+| 68 | líneas 1906–1948 | Bete insiste en humillar a Bell; Bell abandona la taberna; separador de escena y reacción inicial de los presentes. | El separador físico centrado × × × aparece como encabezado Markdown de nivel 2 en línea 1940, añadiendo jerarquía no presente en el PDF. | PARTIAL |
+| 69 | líneas 1950–1990 | Aizu observa la salida de Bell; interacción de Aizu con Loki y reacción de los presentes. | Texto, acciones y secuencia cotejados. | COMPLETE |
+| 70 | sin localizador Markdown en el tramo 1482–2054 | Ilustración monocromática de página completa; no hay texto extraíble en el folio. | La ilustración está presente en el PDF, pero no existe bloque de imagen correspondiente en la posición del pasaje del Markdown. | IMAGE_MISSING |
+| 71 | líneas 1992–2032 | Continuación de la escena de Aizu y Loki; separador; transición a Bell corriendo por la ciudad. | El separador físico centrado × × × aparece como encabezado Markdown de nivel 2 en línea 2014, añadiendo jerarquía no presente en el PDF. | PARTIAL |
+| 72 | líneas 2034–2054 | Monólogo de Bell sobre su frustración y decisión de dirigirse al Calabozo. | Texto, orden y cierre de escena cotejados. | COMPLETE |
+
+#### 3. Hallazgos nuevos
+
+| ID | PDF | Localizador MD | Categoría | Evidencia PDF | Evidencia Markdown | Gravedad / impacto | Estado | Acción propuesta |
+|---|---:|---|---|---|---|---|---|---|
+| V1-MDPDF-068-001 | 68 | línea 1940 | FORMATTING_LOSS | El signo × × × está centrado como divisor entre la salida de Bell y la reacción dentro de la taberna. | Se convierte en encabezado de nivel 2. | Baja; no altera la narración, pero añade una jerarquía inexistente. | ACEPTADO | Conservar el hallazgo; no editar la fuente. En una derivación autorizada, representar el signo como divisor neutral. |
+| V1-MDPDF-070-001 | 70 | sin bloque correspondiente; tramo narrativo entre líneas 1990–1992 | IMAGE_MISSING | El PDF contiene una ilustración monocromática de página completa. | No hay bloque de imagen en el tramo Markdown que corresponde a este folio; los bloques de imagen existentes están en otras posiciones del archivo. | Media; se pierde contenido visual de la fuente aunque el texto de la escena continúa en la página siguiente. | ACEPTADO | Registrar la ausencia; no reconstruir ni insertar una imagen sin autorización y procedencia verificable. |
+| V1-MDPDF-071-001 | 71 | línea 2014 | FORMATTING_LOSS | El signo × × × aparece centrado como divisor antes del regreso al monólogo de Bell. | Se convierte en encabezado de nivel 2. | Baja; no altera la narración, pero añade una jerarquía inexistente. | ACEPTADO | Conservar el hallazgo; no editar la fuente. En una derivación autorizada, representar el signo como divisor neutral. |
+
+#### 4. Controles específicos y categorías no detectadas
+
+- **Cobertura:** 16/16 folios físicos inspeccionados; 15 folios con texto cotejado (13 COMPLETE y 2 PARTIAL); 1 folio ilustrado sin bloque de imagen correspondiente (p.70).
+- **Separadores:** se detectan dos pérdidas de formato nuevas, pp.68 y 71. Se conserva el hallazgo previo de p.46; no se duplica.
+- **Imágenes:** p.70 presenta IMAGE_MISSING; no se declara que la ilustración esté ausente del PDF. No se detectan otras ilustraciones de página completa dentro del rango.
+- **No detectados en este bloque:** TRANSCRIPTION_ERROR, ORDER_ERROR, DUPLICATION, PAGE_MAPPING_UNRESOLVED ni nueva TRANSLATION_AMBIGUITY.
+- **Límite:** cotejo de la transcripción española privada contra su PDF; no demuestra fidelidad frente al original japonés ni resuelve las ambigüedades de traducción ya abiertas.
+
+#### 5. Continuidad y siguiente tarea
+
+- Se preservan los hallazgos y el trabajo previo de pp.1–56; no se repiten P1/P2/P3 ni se modifican los originales.
+- El Volumen 1 y DMR-062 permanecen PARTIAL / IN_PROGRESS.
+- **Próxima tanda obligatoria:** cotejo independiente MD↔PDF, PDF pp.73–88.
+- No iniciar Volumen 2.
