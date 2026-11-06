@@ -996,3 +996,18 @@ En las posiciones correspondientes no hay bloques de imagen Markdown. Los siete 
 - **Continuidad:** se preservan hallazgos y rangos anteriores; no se reabren P1/P2/P3, no se modifican DMR-061, perfiles, eventos ni otros destinos funcionales. DMR-062 y Volumen 1 permanecen `PARTIAL / IN_PROGRESS`.
 - **Siguiente tanda:** cotejo independiente MD↔PDF, PDF pp.105–120. No iniciar Volumen 2.
 - **Validación:** cotejo y render manual realizados; pruebas locales automatizadas no ejecutadas. La CI que se informe debe corresponder al SHA final de los commits documentales.
+
+
+
+### DMR-062 — séptima tanda de cotejo independiente MD↔PDF · Volumen 1 · PDF pp.105–120 · 2026-11-06
+
+- **Procedencia e integridad:** PDF original `Volumen [01] • DanMachi.pdf`, 7.495.544 bytes, 215 páginas; SHA-1 `13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3`; Git blob PDF `fd43a5395983850ab1a953bb39da732b27331dcc`. Markdown fuente Git blob `d2b3306b1661584d9a42d651f57dca8a6814b20b`, 4.035.130 bytes y 7.251 líneas. Fuentes originales preservadas sin modificación.
+- **Método:** extracción de texto del PDF físico pp.105–115 y pp.117–120; cotejo secuencial normalizado contra el blob Markdown; render visual de pp.105–120; comparación visual específica de la ilustración p.116 con el bloque Base64 Markdown de línea 3672. Se revisaron notas al pie, encabezado de capítulo, separadores y orden narrativo.
+- **Cobertura:** 16/16 folios físicos revisados; 15 contienen texto y 1 es ilustración de apertura. La ilustración p.116 coincide visualmente con el bloque Markdown de línea 3672. Los marcadores y definiciones de las notas al pie 2 y 3 de p.107 están conservados.
+- **Resultado por rango:** pp.105–115 y pp.118–120 coinciden en secuencia textual; p.116 conserva su ilustración; p.117 contiene una discrepancia textual puntual en línea 3686. Resultado: 15 COMPLETE y 1 PARTIAL.
+- **Hallazgo nuevo:** `V1-MDPDF-117-001` (`TRANSCRIPTION_ERROR`, estado ACEPTADO): PDF p.117 dice «dos o tres oscilaciones consecutivas»; Markdown línea 3686 contiene «dos 1. tres oscilaciones consecutivas». La conjunción «o» no está conservada y aparece un marcador numérico de lista ajeno al PDF. No corregir el Markdown original; mantener el hallazgo para una derivación autorizada.
+- **No detectados:** `IMAGE_MISSING`, `IMAGE_MISMATCH`, `ORDER_ERROR`, `DUPLICATION` o `PAGE_MAPPING_UNRESOLVED`. No se detectan pérdidas de separadores físicos en este rango.
+- **Límite:** el cotejo comprueba la transcripción española privada contra su PDF; no certifica fidelidad frente al original japonés ni resuelve ambigüedades globales de traducción.
+- **Continuidad:** no se reabren P1/P2/P3; no se modifican DMR-061, perfiles, eventos, índices funcionales, PDF ni Markdown fuente. DMR-062 y Volumen 1 permanecen `PARTIAL / IN_PROGRESS`.
+- **Siguiente tanda:** cotejo independiente Markdown↔PDF, PDF pp.121–136. No iniciar Volumen 2.
+- **Validación:** cotejo textual y render visual efectuados; pruebas automatizadas locales no ejecutadas. La CI debe verificarse sobre el SHA final de los commits documentales.
