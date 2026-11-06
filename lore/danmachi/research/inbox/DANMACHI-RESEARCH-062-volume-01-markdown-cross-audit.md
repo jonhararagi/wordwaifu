@@ -900,3 +900,50 @@ En las posiciones correspondientes no hay bloques de imagen Markdown. Los siete 
 - El Volumen 1 y DMR-062 permanecen PARTIAL / IN_PROGRESS.
 - **Próxima tanda obligatoria:** cotejo independiente MD↔PDF, PDF pp.73–88.
 - No iniciar Volumen 2.
+
+
+### DMR-062 — quinta tanda de cotejo independiente MD↔PDF · Volumen 1 · PDF pp.73–88 · 2026-11-06
+
+- **Procedencia:** PDF privado original `Volumen [01] • DanMachi.pdf`, 7.495.544 bytes, 215 páginas; SHA-1 de archivo `13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3`; Git blob `fd43a5395983850ab1a953bb39da732b27331dcc`. Markdown fuente blob `d2b3306b1661584d9a42d651f57dca8a6814b20b`. Ambos se conservaron sin modificación.
+- **Método:** extracción textual de folios físicos 73–88 y renderizado visual del bloque a 110 dpi para identificar ilustraciones de página completa; comparación de secuencia narrativa, diálogos, notas al pie, separadores y presencia de imágenes en el MD.
+
+### Matriz de cobertura por folio físico
+
+| PDF | Localizador Markdown | Contenido cotejado | Resultado |
+|---:|---|---|---|
+| 73 | Sin bloque de imagen junto al inicio del capítulo 3 (línea 2056) | Ilustración de apertura del capítulo 3; el PDF contiene arte de página completa y la transcripción pasa directamente al encabezado. | IMAGE_MISSING |
+| 74 | líneas 2056–2093 | Apertura del capítulo 3: lluvia, oficina del Gremio, Eina y Misha; cierre de la conversación y presentación del informe de Bell. | COMPLETE |
+| 75 | líneas 2094–2131 | Informe de Bell, quinto piso, Minotauro, advertencias de Eina y preocupación por Bell. | COMPLETE |
+| 76 | líneas 2132–2169 | Cierre de la escena Eina–Misha; divisor × × ×; Bell inicia la incursión nocturna y derrota al Frog Shooter; nota [^1]. | PARTIAL |
+| 77 | líneas 2170–2215 | Desplazamiento solitario de Bell, equipo deteriorado, agotamiento y pérdida de orientación. | COMPLETE |
+| 78 | líneas 2216–2249 | Descenso al sexto piso, cambio de entorno, habitación amplia y búsqueda de monstruos. | COMPLETE |
+| 79 | líneas 2250–2289 | Nacimiento de monstruos desde la pared y descripción de War Shadow; nota [^2]. | COMPLETE |
+| 80 | líneas 2290–2314 | Segunda War Shadow, combate dos contra uno y divisor × × × antes de la descripción táctica. | PARTIAL |
+| 81 | líneas 2316–2367 | Dedos y alcance de War Shadow, ataques coordinados y comienzo de la reflexión de Bell sobre seguir vivo. | COMPLETE |
+| 82 | líneas 2368–2411 | Reflexión sobre el Estado, golpe recibido, pérdida de la daga y recuerdos de Bell. | COMPLETE |
+| 83 | líneas 2412–2453 | Contraataque de Bell, derrota de la primera War Shadow y remate de la segunda. | COMPLETE |
+| 84 | líneas 2454–2495 | Consecuencias del combate, aparición de más monstruos, bloqueo de la salida y obtención del dedo de War Shadow. | COMPLETE |
+| 85 | líneas 2496–2511 | Bell decide continuar luchando pese a quedar rodeado. | COMPLETE |
+| 86 | Sin bloque de imagen junto al inicio del capítulo 4 (línea 2512) | Ilustración de apertura del capítulo 4 a página completa; la transcripción pasa directamente al encabezado y al texto. | IMAGE_MISSING |
+| 87 | líneas 2512–2551 | Inicio del capítulo 4: Hestia espera a Bell, recuerda la discusión y sale a buscarlo. | COMPLETE |
+| 88 | líneas 2552–2585 | Hestia recibe el golpe de la puerta; Bell regresa herido y explica que entró al Calabozo. | COMPLETE |
+
+### Hallazgos nuevos
+
+| ID | PDF | Localizador Markdown | Categoría | Evidencia PDF / Markdown | Estado | Acción |
+|---|---:|---|---|---|---|---|
+| V1-MDPDF-073-001 | 73 | Sin bloque correspondiente, antes de línea 2056 | IMAGE_MISSING | Ilustración monocromática de apertura del capítulo 3 en el PDF; no existe bloque de imagen correspondiente en esa posición del MD. | ACEPTADO | Registrar la pérdida visual; no modificar la fuente ni reconstruir la imagen. |
+| V1-MDPDF-076-001 | 76 | línea 2150 | FORMATTING_LOSS | El divisor físico × × × entre la escena Eina–Misha y la incursión de Bell se representa como encabezado Markdown de nivel 2. | ACEPTADO | Conservar el hallazgo; no editar la fuente original. |
+| V1-MDPDF-080-001 | 80 | línea 2314 | FORMATTING_LOSS | El divisor físico × × × antes de la explicación de las capacidades de War Shadow se representa como encabezado Markdown de nivel 2. | ACEPTADO | Conservar el hallazgo; no editar la fuente original. |
+| V1-MDPDF-086-001 | 86 | Sin bloque correspondiente, antes de línea 2512 | IMAGE_MISSING | Ilustración monocromática de apertura del capítulo 4 a página completa en el PDF; no existe bloque de imagen correspondiente en esa posición del MD. | ACEPTADO | Registrar la pérdida visual; no modificar la fuente ni reconstruir la imagen. |
+
+### Resultado cuantitativo y límites
+
+- **Cobertura:** 16/16 folios físicos inspeccionados; 14 folios con texto extraído y cotejado; 12 COMPLETE, 2 PARTIAL por pérdida de formato y 2 IMAGE_MISSING por ilustraciones no representadas en su posición Markdown.
+- **Separadores:** nuevos hallazgos FORMATTING_LOSS en pp.76 y 80. Los IDs son nuevos y no duplican los registros previos de pp.46, 54, 68 y 71.
+- **Imágenes:** IMAGE_MISSING en pp.73 y 86. Ambas ilustraciones están presentes en el PDF; la ausencia corresponde a la transcripción Markdown. No se insertan imágenes.
+- **Texto y orden:** no se demuestra TRANSCRIPTION_ERROR, ORDER_ERROR, DUPLICATION ni PAGE_MAPPING_UNRESOLVED en este bloque. Los dos marcadores de nota al pie sobre Frog Shooter y War Shadow están presentes en el MD.
+- **Integridad:** PDF de 7.495.544 bytes y 215 páginas; SHA-1 del archivo 13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3 y Git blob SHA fd43a5395983850ab1a953bb39da732b27331dcc. Markdown examinado desde el blob d2b3306b1661584d9a42d651f57dca8a6814b20b.
+- **Límite:** auditoría de la transcripción española privada contra su PDF; no certifica fidelidad frente al original japonés ni resuelve las ambigüedades de traducción pendientes.
+- **Siguiente tanda:** cotejo independiente MD↔PDF, PDF pp.89–104. DMR-062 y Volumen 1 permanecen PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
+- **Validación:** no se ejecutaron pruebas locales. La consulta de workflows asociada al checkpoint previo no devolvió ejecuciones; no se afirma CI aprobada para este trabajo.
