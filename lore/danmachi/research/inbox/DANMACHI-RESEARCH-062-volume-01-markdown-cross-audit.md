@@ -947,3 +947,52 @@ En las posiciones correspondientes no hay bloques de imagen Markdown. Los siete 
 - **Límite:** auditoría de la transcripción española privada contra su PDF; no certifica fidelidad frente al original japonés ni resuelve las ambigüedades de traducción pendientes.
 - **Siguiente tanda:** cotejo independiente MD↔PDF, PDF pp.89–104. DMR-062 y Volumen 1 permanecen PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
 - **Validación:** no se ejecutaron pruebas locales. La consulta de workflows asociada al checkpoint previo no devolvió ejecuciones; no se afirma CI aprobada para este trabajo.
+
+
+
+### DMR-062 — sexta tanda de cotejo independiente MD↔PDF · Volumen 1 · PDF pp.89–104 · 2026-11-06
+
+- **Procedencia e integridad:** PDF original `Volumen [01] • DanMachi.pdf`, 7.495.544 bytes, 215 páginas; SHA-1 de archivo `13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3`; Git blob `fd43a5395983850ab1a953bb39da732b27331dcc`. Markdown fuente Git blob `d2b3306b1661584d9a42d651f57dca8a6814b20b`, 4.035.130 bytes y 7.251 líneas. Fuentes originales preservadas sin modificación.
+- **Método:** extracción textual de los 16 folios físicos PDF pp.89–104, cotejo secuencial contra los localizadores Markdown y revisión visual del bloque renderizado. Se comprobó contenido, atribución de diálogos, límites de página, separadores, estructura del Estado y notas al pie.
+
+#### Matriz de cobertura por folio físico
+
+| PDF | Localizador Markdown | Contenido cotejado | Resultado |
+|---:|---|---|---|
+| 89 | líneas 2596–2637 | Hestia reprende a Bell por entrar al Dungeon sin equipo defensivo y permanecer toda la noche; heridas, silencio de Bell, baño y apoyo por la lesión de rodilla. | COMPLETE |
+| 90 | líneas 2638–2681 | Hestia acompaña a Bell al baño, le cede la cama y bromea sobre dormir juntos; Bell responde sin comprender la insinuación por su agotamiento. | COMPLETE |
+| 91 | líneas 2682–2725 | Bell expresa que quiere ser más fuerte; separador; snapshot de Estado Lv.1 con Fuerza H123→221 G, Resistencia I42→H101, Destreza H139→G232, Agilidad G225→F313 y Magia I0; habilidad Deseo Inquebrantable y contexto de la actualización. | PARTIAL |
+| 92 | líneas 2726–2765 | Hestia observa el crecimiento anormal de Bell, compara su progresión con aventureros Lv.2, reconoce el papel de Deseo Inquebrantable y oculta sus celos. | COMPLETE |
+| 93 | líneas 2766–2805 | Dilema de Hestia sobre revelar la habilidad, riesgo de arrogancia, confianza en Bell y decisión de explicar verbalmente su crecimiento sin nombrar la habilidad. | COMPLETE |
+| 94 | líneas 2806–2843 | Explicación de habilidades comunes y raras, decisión de ocultar Deseo Inquebrantable y pregunta de Hestia sobre el rápido crecimiento; Bell recuerda su incursión al sexto piso. | COMPLETE |
+| 95 | líneas 2844–2883 | Hestia reprende a Bell por subir de piso sin equipo; explica el período de crecimiento, reconoce su talento y experiencia propia y le pide prometer que no volverá a sobreesforzarse. | COMPLETE |
+| 96 | líneas 2884–2927 | Bell promete no dejar sola a Hestia; ella acepta su decisión de hacerse más fuerte, le devuelve la ropa y decide contactar a Hephaistos mediante la invitación al Banquete de Ganesha. | COMPLETE |
+| 97 | líneas 2928–2967 | Hestia informa que saldrá por una reunión; Bell acepta; ella permite que vuelva al Dungeon con cautela. Separador y transición al punto de vista de Bell antes del mediodía. | PARTIAL |
+| 98 | líneas 2968–3005 | Bell decide no forzarse, reconoce que perseguir a Wallenstein requiere paciencia y visita La Señora de la Abundancia; describe el cartel de cerrado, la preparación del local y la reacción inicial de Anya/Ryuu. | COMPLETE |
+| 99 | líneas 3006–3045 | Reencuentro con Seal; Bell se disculpa por marcharse sin pagar, entrega el dinero y ella lo perdona; Seal prepara una canasta de comida para Bell. | COMPLETE |
+| 100 | líneas 3046–3091 | Seal anima a Bell con la comida; aparece Mia; conversación sobre el dinero, la comida que Seal sacrifica y la broma de Anya sobre sus sentimientos. | COMPLETE |
+| 101 | líneas 3092–3133 | Grito de Seal; Mia explica que Seal intentó perseguir a Bell y que Ryuu estuvo cerca de actuar; Mia aconseja luchar por sobrevivir y promete una fiesta a quienes regresen. | COMPLETE |
+| 102 | líneas 3134–3171 | Bell agradece y sale de la taberna; cierre de la escena diurna, separador y transición nocturna hacia las murallas y la ciudad de Orario. | PARTIAL |
+| 103 | líneas 3172–3207 | Descripción del centro de Orario, Babel, Dungeon, aventureros, Piedras Mágicas, Botín, fama y llegada de los dioses al entorno del banquete. | COMPLETE |
+| 104 | líneas 3208–3244 | Conversación entre dioses; descripción exterior de la fortaleza de Ganesha, estatua elefante, instalación Yo Soy Ganesha y explicación del Banquete de Dios; Ganesha anuncia la Philia dentro de tres días. | COMPLETE |
+
+#### Hallazgos nuevos
+
+| ID | PDF | Localizador Markdown | Categoría | Evidencia PDF / Markdown | Estado | Acción |
+|---|---:|---|---|---|---|---|
+| V1-MDPDF-091-001 | 91 | línea 2696 | FORMATTING_LOSS | El divisor centrado físico × × × entre la escena de Hestia y la presentación del Estado aparece como encabezado Markdown de nivel 2. Los valores y atributos del Estado se conservan. | ACEPTADO | Registrar la pérdida estructural; no modificar el original. En una derivación autorizada, usar un divisor neutral. |
+| V1-MDPDF-097-001 | 97 | línea 2958 | FORMATTING_LOSS | El divisor físico × × × que separa la escena de Hestia del punto de vista de Bell aparece como encabezado Markdown de nivel 2. | ACEPTADO | Registrar la pérdida estructural; no modificar el original. En una derivación autorizada, usar un divisor neutral. |
+| V1-MDPDF-102-001 | 102 | línea 3150 | FORMATTING_LOSS | El divisor físico × × × que separa la salida de Bell de la transición nocturna a Orario aparece como encabezado Markdown de nivel 2. | ACEPTADO | Registrar la pérdida estructural; no modificar el original. En una derivación autorizada, usar un divisor neutral. |
+
+#### Resultado cuantitativo y límites
+
+- **Cobertura:** 16/16 folios físicos inspeccionados; los 16 contienen texto cotejado; 13 COMPLETE y 3 PARTIAL por FORMATTING_LOSS.
+- **Separadores:** tres hallazgos nuevos: pp.91, 97 y 102. Los IDs no duplican los registros previos de pp.35, 46, 54, 68, 71, 76 y 80.
+- **Imágenes:** no se detectan ilustraciones de página completa ni bloques de imagen ausentes en este rango.
+- **Estado:** el snapshot de p.91 conserva todos los valores visibles en el PDF; Fuerza es H123→221 G. No usar este dato para cerrar por sí solo discrepancias estadísticas globales fuera del rango.
+- **Notas:** la referencia de nota al pie de nekomusume en p.98 está presente en el MD como `[^1]` y su definición se conserva en el bloque de notas al final del archivo.
+- **No detectados:** TRANSCRIPTION_ERROR, ORDER_ERROR, DUPLICATION, IMAGE_MISSING, IMAGE_MISMATCH o PAGE_MAPPING_UNRESOLVED. No se demuestra pérdida textual ni alteración del orden en este bloque.
+- **Límite:** cotejo de la traducción privada española contra su PDF; no certifica fidelidad frente al original japonés ni resuelve ambigüedades de traducción globales.
+- **Continuidad:** se preservan hallazgos y rangos anteriores; no se reabren P1/P2/P3, no se modifican DMR-061, perfiles, eventos ni otros destinos funcionales. DMR-062 y Volumen 1 permanecen `PARTIAL / IN_PROGRESS`.
+- **Siguiente tanda:** cotejo independiente MD↔PDF, PDF pp.105–120. No iniciar Volumen 2.
+- **Validación:** cotejo y render manual realizados; pruebas locales automatizadas no ejecutadas. La CI que se informe debe corresponder al SHA final de los commits documentales.
