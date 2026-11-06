@@ -1988,3 +1988,13 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - [x] Preservar hallazgos pp.1–40, P1/P2/P3 y fuentes originales; no modificar DMR-061 ni destinos funcionales.
 - **Siguiente tanda MD↔PDF:** PDF pp.57–72.
 - **Estado:** DMR-062 y V1 siguen PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
+
+
+### DMR-062 — auditoría independiente MD↔PDF · Volumen 1 · checkpoint 2026-11-06 · pp.73–88
+
+- [x] Verificar PDF original (7.495.544 bytes, 215 páginas) y blobs fuente PDF/MD; no modificar originales.
+- [x] Inspeccionar visualmente pp.73–88 y cotejar los 14 folios con texto contra el Markdown; p.73 y p.86 son ilustraciones de página completa.
+- [x] Registrar `V1-MDPDF-073-001` y `V1-MDPDF-086-001` (`IMAGE_MISSING`) y `V1-MDPDF-076-001` y `V1-MDPDF-080-001` (`FORMATTING_LOSS`).
+- [x] Confirmar 12 COMPLETE, 2 PARTIAL y 2 IMAGE_MISSING; no se demuestra error de transcripción, orden ni duplicación.
+- **Siguiente tanda DMR-062:** cotejo independiente Markdown↔PDF, pp.89–104.
+- **Estado:** DMR-062 y Volumen 1 continúan `PARTIAL / IN_PROGRESS`; no iniciar Volumen 2.
