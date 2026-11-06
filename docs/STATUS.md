@@ -1452,3 +1452,14 @@ El cotejo inicial cubre PDF pp.1–24. Se confirmó visualmente la correspondenc
 - **Fuentes:** PDF 7.495.544 bytes, 215 páginas, SHA-1 `13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3`, blob `fd43a5395983850ab1a953bb39da732b27331dcc`; MD blob `d2b3306b1661584d9a42d651f57dca8a6814b20b`.
 - **Siguiente tanda:** PDF pp.105–120. Fuentes originales intactas; traducción española sin cotejo japonés; DMR-062 y V1 permanecen `PARTIAL / IN_PROGRESS`. No iniciar Volumen 2.
 - **Validación:** cotejo manual y render realizados; pruebas automatizadas locales no ejecutadas.
+
+
+
+## DMR-062 — auditoría independiente MD↔PDF · checkpoint 2026-11-06 · PDF pp.105–120
+
+- **Cobertura:** 16/16 folios físicos revisados; 15 páginas con texto cotejadas y una ilustración (p.116) visualmente cotejada con la imagen Markdown de línea 3672. Resultado: 15 COMPLETE, 1 PARTIAL.
+- **Hallazgo aceptado:** `V1-MDPDF-117-001` (`TRANSCRIPTION_ERROR`): PDF p.117 dice «dos o tres oscilaciones consecutivas»; Markdown línea 3686 dice «dos 1. tres oscilaciones consecutivas». No modificar el original.
+- **Controles:** notas al pie 2 y 3 de p.107 conservadas; ilustración p.116 presente y coincidente. No se detectan IMAGE_MISSING, IMAGE_MISMATCH, ORDER_ERROR, DUPLICATION ni PAGE_MAPPING_UNRESOLVED.
+- **Fuentes:** PDF 7.495.544 bytes, 215 páginas, SHA-1 `13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3`, blob `fd43a5395983850ab1a953bb39da732b27331dcc`; Markdown blob `d2b3306b1661584d9a42d651f57dca8a6814b20b`.
+- **Siguiente tanda:** PDF pp.121–136. No repetir P1/P2/P3, no modificar originales y no iniciar Volumen 2.
+- **Estado:** DMR-062 y Volumen 1 permanecen `PARTIAL / IN_PROGRESS`. Pruebas automatizadas locales no ejecutadas; CI pendiente de comprobación sobre el SHA final.
