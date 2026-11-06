@@ -1,3 +1,13 @@
+## DMR-062 — auditoría independiente Markdown↔PDF, Volumen 1, pp.57–72 (2026-11-06)
+
+- **Integración directa en main**, sin rama ni PR. SHA inicial comprobado: 5c1ef56ae14b4112e5fb8f23dc4f4f19ab942f00; main comparado con ese SHA = identical antes de los cambios.
+- Se cotejaron los folios físicos 57–72 contra el Markdown exacto (blob d2b3306b1661584d9a42d651f57dca8a6814b20b) y el PDF de 215 páginas (7.495.544 bytes; SHA-1 del payload 13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3). PDF recuperado y renderizado sin modificar; fuente original intacta.
+- **Resultado:** 16/16 folios inspeccionados; 15 folios con texto cotejado (13 COMPLETE, 2 PARTIAL); p.70 es una ilustración de página completa sin bloque de imagen correspondiente en el tramo Markdown.
+- **Hallazgos aceptados:** V1-MDPDF-068-001 y V1-MDPDF-071-001 (FORMATTING_LOSS, separadores × × × convertidos en encabezados); V1-MDPDF-070-001 (IMAGE_MISSING).
+- No se detectó una nueva discrepancia textual demostrada, duplicación ni cambio de orden. El cotejo español↔japonés continúa pendiente; no se alteraron fuentes, fichas ni eventos.
+- **Siguiente rango:** PDF pp.73–88. DMR-062 y V1 siguen PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
+- **CI:** no se dispone de una ejecución de Actions consultable para este commit en el conector; no se afirma CI aprobado.
+
 # Estado de WordWaifu
 
 ## DMR-045 — adaptación manga oficial de Astrea Record registrada (2026-10-29)
