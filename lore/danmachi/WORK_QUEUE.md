@@ -2009,3 +2009,17 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - [x] Preservar los originales y los hallazgos anteriores; no modificar DMR-061 ni destinos funcionales.
 - **Siguiente tanda DMR-062:** cotejo independiente Markdown↔PDF, pp.105–120.
 - **Estado:** DMR-062 y Volumen 1 continúan `PARTIAL / IN_PROGRESS`; no iniciar Volumen 2.
+
+
+
+### DMR-062 — auditoría independiente MD↔PDF · checkpoint 2026-11-06 · pp.105–120
+
+- [x] Recuperar y verificar el PDF original (7.495.544 bytes, 215 páginas, SHA-1 `13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3`, blob `fd43a5395983850ab1a953bb39da732b27331dcc`) y el Markdown fuente (blob `d2b3306b1661584d9a42d651f57dca8a6814b20b`); preservar ambos originales.
+- [x] Cotejar pp.105–115 y pp.117–120 contra el Markdown; revisar visualmente el bloque físico pp.105–120.
+- [x] Comparar la ilustración de apertura p.116 con la imagen Markdown de línea 3672; correspondencia visual confirmada. Notas al pie 2 y 3 de p.107 preservadas.
+- [x] Registrar `V1-MDPDF-117-001` (`TRANSCRIPTION_ERROR`, ACEPTADO): PDF p.117 «dos o tres oscilaciones consecutivas» frente a Markdown línea 3686 «dos 1. tres oscilaciones consecutivas».
+- [x] Confirmar 15 COMPLETE y 1 PARTIAL; no se detectan IMAGE_MISSING, IMAGE_MISMATCH, ORDER_ERROR, DUPLICATION ni PAGE_MAPPING_UNRESOLVED en este rango.
+- [x] No modificar Markdown fuente, PDF, DMR-061 ni destinos funcionales; no reabrir P1/P2/P3.
+- **Siguiente tanda DMR-062:** cotejo independiente Markdown↔PDF, pp.121–136.
+- **Estado:** DMR-062 y V1 continúan `PARTIAL / IN_PROGRESS`; no iniciar Volumen 2.
+- **Validación:** cotejo textual y visual manual efectuados; pruebas automatizadas locales no ejecutadas. CI pendiente de comprobación sobre el SHA final.
