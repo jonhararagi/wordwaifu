@@ -1442,3 +1442,13 @@ El cotejo inicial cubre PDF pp.1–24. Se confirmó visualmente la correspondenc
 - Fuentes originales intactas. Traducción española no cotejada con japonés. DMR-062 y V1 siguen `PARTIAL / IN_PROGRESS`. Próxima tanda: PDF pp.89–104. No iniciar Volumen 2.
 - No se ejecutaron pruebas locales; no hay evidencia de CI para este cambio y no se declara aprobada.
 
+
+
+## DMR-062 — auditoría independiente MD↔PDF · checkpoint 2026-11-06 · pp.89–104
+
+- **Cobertura:** 16/16 folios físicos inspeccionados y cotejados; todos contienen texto. 13 COMPLETE y 3 PARTIAL por pérdidas de formato (pp.91, 97 y 102).
+- **Hallazgos aceptados:** `V1-MDPDF-091-001`, `V1-MDPDF-097-001`, `V1-MDPDF-102-001` (`FORMATTING_LOSS`: divisor físico `× × ×` representado como encabezado Markdown).
+- **Controles:** valores del Estado de p.91 coinciden con el PDF (Fuerza H123→221 G); nota al pie de nekomusume preservada. No se demuestra error de transcripción, orden, duplicación ni imagen ausente.
+- **Fuentes:** PDF 7.495.544 bytes, 215 páginas, SHA-1 `13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3`, blob `fd43a5395983850ab1a953bb39da732b27331dcc`; MD blob `d2b3306b1661584d9a42d651f57dca8a6814b20b`.
+- **Siguiente tanda:** PDF pp.105–120. Fuentes originales intactas; traducción española sin cotejo japonés; DMR-062 y V1 permanecen `PARTIAL / IN_PROGRESS`. No iniciar Volumen 2.
+- **Validación:** cotejo manual y render realizados; pruebas automatizadas locales no ejecutadas.
