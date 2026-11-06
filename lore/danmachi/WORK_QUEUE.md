@@ -26,7 +26,7 @@ Conteos aproximados de palabras tras excluir las cargas base64 de imágenes y el
 
 | Volumen | Archivo fuente | Palabras aprox. | Imágenes incrustadas | Estado de análisis |
 |---|---|---:|---:|---|
-| 1 | `Volumen [01] • DanMachi.md` | 63.168 | 16 | DMR-061: P1 PDF↔DMR-061/DMR-062/destinos funcionales pp.9–156 completa; P2/P3 pp.9–156 completas; tres pasadas pp.157–214 conservadas. DMR-062 MD↔PDF: pp.1–56 examinadas; texto de pp.9–11, 13–14, 16–21, 23–56 cotejado; IMAGE_MISSING pp.12, 15, 22, 37 y 40; FORMATTING_LOSS pp.9, 13, 14, 35, 46 y 54; TRANSLATION_AMBIGUITY p.18. Próxima tanda MD↔PDF pp.57–72. PDF físico: 215 folios (p.8 blanca; p.215 créditos). V1 sigue PARTIAL / IN_PROGRESS. |
+| 1 | `Volumen [01] • DanMachi.md` | 63.168 | 16 | DMR-061: P1 PDF↔DMR-061/DMR-062/destinos funcionales pp.9–156 completa; P2/P3 pp.9–156 completas; tres pasadas pp.157–214 conservadas. DMR-062 MD↔PDF: pp.1–72 examinadas; texto de pp.9–11, 13–14, 16–21, 23–69, 71–72 cotejado; IMAGE_MISSING pp.12, 15, 22, 37, 40 y 70; FORMATTING_LOSS pp.9, 13, 14, 35, 46, 54, 68 y 71; TRANSLATION_AMBIGUITY p.18. Próxima tanda MD↔PDF pp.73–88. PDF físico: 215 folios (p.8 blanca; p.215 créditos). V1 sigue PARTIAL / IN_PROGRESS. |
 | 2 | `Volumen [02] • DanMachi.md` | 74.125 | 19 | DMR-060 contiene extracción parcial; falta certificar las tres pasadas completas. |
 | 3 | `Volumen [03] • DanMachi.md` | 53.883 | 21 | Fuente cargada; análisis integral pendiente. |
 | 4 | `Volumen [04] • DanMachi.md` | 64.892 | 23 | Fuente cargada; análisis integral pendiente. |
