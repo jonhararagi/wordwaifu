@@ -1434,3 +1434,11 @@ El cotejo inicial cubre PDF pp.1–24. Se confirmó visualmente la correspondenc
 - **Hallazgos:** `V1-MDPDF-046-001` y `V1-MDPDF-054-001`, ambos `FORMATTING_LOSS` por el separador `× × ×` representado como encabezado `##`. No se detectan TRANSCRIPTION_ERROR, IMAGE_MISSING, IMAGE_MISMATCH, ORDER_ERROR, DUPLICATION ni PAGE_MAPPING_UNRESOLVED.
 - **Controles:** nota al pie de p.43 preservada mediante referencia `[^1]` (línea 962) y definición (línea 7240); tarjeta de Estado de p.54 conserva los valores del PDF.
 - **Continuidad:** se preservan todos los hallazgos de pp.1–40; no se repiten P1/P2/P3. No se modifican los archivos fuente ni DMR-061. Próximo rango MD↔PDF: pp.57–72. DMR-062 y V1 siguen PARTIAL / IN_PROGRESS.
+## DMR-062 — auditoría independiente MD↔PDF V1 · checkpoint 2026-11-06 · pp.73–88
+
+- 16/16 folios físicos inspeccionados; 14 con texto cotejado. Resultado: 12 COMPLETE, 2 PARTIAL por FORMATTING_LOSS (pp.76, 80) y 2 IMAGE_MISSING (ilustraciones pp.73, 86).
+- Hallazgos aceptados: `V1-MDPDF-073-001`, `V1-MDPDF-076-001`, `V1-MDPDF-080-001`, `V1-MDPDF-086-001`. No se demuestra error de transcripción, orden o duplicación; notas al pie de Frog Shooter y War Shadow conservadas.
+- PDF verificado: 7.495.544 bytes, 215 páginas, SHA-1 `13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3`, Git blob `fd43a5395983850ab1a953bb39da732b27331dcc`. MD blob `d2b3306b1661584d9a42d651f57dca8a6814b20b`.
+- Fuentes originales intactas. Traducción española no cotejada con japonés. DMR-062 y V1 siguen `PARTIAL / IN_PROGRESS`. Próxima tanda: PDF pp.89–104. No iniciar Volumen 2.
+- No se ejecutaron pruebas locales; no hay evidencia de CI para este cambio y no se declara aprobada.
+
