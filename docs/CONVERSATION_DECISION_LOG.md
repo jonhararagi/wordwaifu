@@ -909,3 +909,13 @@
 - **Decisión:** conservar el Markdown y PDF fuente sin modificación; registrar las dos pérdidas estructurales en DMR-062. No reabrir P1/P2/P3 ni modificar DMR-061 o destinos funcionales.
 - **Integridad:** Markdown 4.035.130 bytes, 7.251 líneas, 16 imágenes Base64 y Git blob SHA verificado. PDF 7.495.544 bytes, 215 páginas, Git blob SHA verificado.
 - **Continuidad:** DMR-062 y Volumen 1 permanecen `PARTIAL / IN_PROGRESS`. Próxima tanda: PDF pp.57–72. No iniciar Volumen 2.
+
+
+### CONV-DM-2026-11-06-001 — Auditoría independiente MD↔PDF V1 pp.73–88
+
+- **Fecha:** 2026-11-06.
+- **Estado:** ACCEPTED para el registro de hallazgos; V1 y DMR-062 permanecen PARTIAL / IN_PROGRESS.
+- **Alcance:** cotejo independiente de los folios físicos PDF pp.73–88 contra el blob Markdown `d2b3306b1661584d9a42d651f57dca8a6814b20b` y el PDF original `fd43a5395983850ab1a953bb39da732b27331dcc`.
+- **Resultado:** 16/16 folios inspeccionados; 14 con texto cotejado, 12 COMPLETE, 2 PARTIAL por pérdida de formato (pp.76 y 80), y 2 IMAGE_MISSING (pp.73 y 86). Hallazgos: `V1-MDPDF-073-001`, `V1-MDPDF-076-001`, `V1-MDPDF-080-001`, `V1-MDPDF-086-001`.
+- **Límites:** no se demuestra error textual, de orden ni duplicación. Las notas al pie de Frog Shooter y War Shadow se conservan. No se modifica el Markdown ni el PDF original; no se modifican registros funcionales. La traducción española continúa sin cotejo japonés.
+- **Continuidad:** próxima tanda DMR-062 pp.89–104; no iniciar Volumen 2. No se ejecutaron pruebas locales ni se declara CI aprobada.
