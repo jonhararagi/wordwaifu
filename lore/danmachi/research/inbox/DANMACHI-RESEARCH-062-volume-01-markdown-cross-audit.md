@@ -1136,4 +1136,43 @@ En las posiciones correspondientes no hay bloques de imagen Markdown. Los siete 
 - **Controles:** los quince folios con texto conservan todos sus tokens en el mismo orden; tras retirar el marcado Markdown y normalizar espacios y escapes, el texto por página coincide con la extracción del PDF. No se demuestra TRANSCRIPTION_ERROR, ORDER_ERROR, DUPLICATION, IMAGE_MISSING, IMAGE_MISMATCH ni PAGE_MAPPING_UNRESOLVED en este bloque.
 - **Límites:** el cotejo valida la traducción privada española contra su PDF, no contra el original japonés. Los cinco hallazgos son pérdidas de jerarquía/estilo de separadores; no son pérdidas de texto narrativo. No se modifican el PDF, el Markdown fuente, DMR-061 ni destinos funcionales.
 - **Validación:** extracción, comparación textual y render/inspección visual efectuados. Pruebas automatizadas locales no ejecutadas. El estado CI debe comprobarse sobre el SHA final de los cambios documentales.
-- **Siguiente tanda:** cotejo independiente Markdown↔PDF, PDF pp.169–184. DMR-062 y Volumen 1 permanecen PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
+- **Continuidad:** el rango pp.169–184 queda documentado en el checkpoint siguiente; la próxima tanda será pp.185–200.
+
+
+### DMR-062 — auditoría independiente MD↔PDF V1 · PDF pp.169–184 · 2026-11-07
+
+- **Fuentes:** PDF original de 7.495.544 bytes y 215 páginas, SHA-1 `13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3`; Markdown fuente blob `d2b3306b1661584d9a42d651f57dca8a6814b20b`. Los originales permanecen intactos.
+- **Método:** extracción PyMuPDF por folio, comparación textual página por página tras retirar marcado Markdown, escapes y énfasis, normalizar espacios y conservar el orden de tokens; render del bloque físico pp.169–184 a 150 dpi e inspección visual de todos los folios.
+- **Cobertura:** 16/16 folios físicos inspeccionados. p.169 es una ilustración de apertura de capítulo, presente en Markdown línea 5576 y visualmente coincidente. Los folios pp.170–184 contienen texto; 14 son COMPLETE y p.173 queda PARTIAL exclusivamente por formato. Resultado total: **15 COMPLETE y 1 PARTIAL**.
+
+#### Matriz por folio físico
+
+| PDF | Markdown | Contenido cotejado | Resultado |
+|---:|---:|---|---|
+| 169 | imagen, línea 5576 | Ilustración de apertura del capítulo 6; imagen presente y visualmente coincidente. | COMPLETE |
+| 170 | 5578–5614 | Ganesha recibe el aviso de fuga; confirma que nueve monstruos escaparon y ordena solicitar ayuda. | COMPLETE |
+| 171 | 5616–5650 | Ganesha prioriza la seguridad civil, mantiene el Festival y ordena contener la situación sin provocar pánico. | COMPLETE |
+| 172 | 5652–5688 | Eina organiza la solicitud de ayuda; Aiz y Loki aceptan intervenir. | COMPLETE |
+| 173 | 5690–5734 | Eina identifica la dirección y las especies fugadas; comienza la perspectiva de Bell y el Silverback. El separador físico de línea 5712 se representó como encabezado Markdown. | PARTIAL |
+| 174 | 5736–5780 | El Silverback inicia la persecución de Bell y Hestia; Bell intenta evitar el ataque. | COMPLETE |
+| 175 | 5782–5826 | La persecución continúa; Bell comprueba la diferencia de fuerza y busca una salida. | COMPLETE |
+| 176 | 5828–5866 | Bell utiliza la cadena para retrasar al Silverback y continúa la huida. | COMPLETE |
+| 177 | 5868–5906 | Bell comprueba la proximidad del monstruo y mantiene a Hestia en movimiento. | COMPLETE |
+| 178 | 5908–5944 | Bell y Hestia cambian de ruta; el Silverback vuelve a aparecer en el trayecto. | COMPLETE |
+| 179 | 5946–5984 | Bell queda frente al recuerdo del Minotauro y experimenta miedo intenso. | COMPLETE |
+| 180 | 5986–6032 | Bell decide afrontar al Silverback para no abandonar a Hestia. | COMPLETE |
+| 181 | 6034–6074 | La daga de Bell no atraviesa el pelaje del monstruo; Bell queda inmovilizado contra una pared y localiza una lámpara de Piedra Mágica. | COMPLETE |
+| 182 | 6076–6118 | Bell utiliza la luz de la lámpara para cegar al Silverback y logra escapar con Hestia. | COMPLETE |
+| 183 | 6120–6166 | Bell decide separar a Hestia de la persecución y la introduce en una alcantarilla, cerrando la verja. | COMPLETE |
+| 184 | 6168–6206 | Hestia se opone; Bell explica que teme perder a su familia otra vez y recuerda la muerte de su abuelo. | COMPLETE |
+
+#### Hallazgo aceptado
+
+| ID | PDF | Línea Markdown | Categoría | Evidencia | Estado |
+|---|---:|---:|---|---|---|
+| V1-MDPDF-173-001 | 173 | 5712 | FORMATTING_LOSS | El separador físico centrado `× × ×` se representó como encabezado Markdown de nivel 1 (`# × × ×`). No se demuestra pérdida de texto narrativo. | ACEPTADO |
+
+- **Controles:** los quince folios con texto conservan su contenido y orden tras normalizar el marcado Markdown, los escapes, las cursivas y los espacios. No se demuestra TRANSCRIPTION_ERROR, ORDER_ERROR, DUPLICATION, IMAGE_MISSING, IMAGE_MISMATCH ni PAGE_MAPPING_UNRESOLVED en este bloque.
+- **Límites:** el cotejo valida la traducción privada española contra su PDF, no contra el original japonés. No se modifican PDF, Markdown fuente, DMR-061 ni destinos funcionales. No se repiten P1/P2/P3.
+- **Validación:** inspección/render manual y comparación textual página por página efectuados. Pruebas automatizadas locales no ejecutadas. CI debe comprobarse sobre el SHA final de los cambios documentales.
+- **Siguiente tanda:** cotejo independiente Markdown↔PDF, PDF pp.185–200. DMR-062 y Volumen 1 permanecen PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
