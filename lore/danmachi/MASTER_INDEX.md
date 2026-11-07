@@ -608,3 +608,7 @@ Se inspeccionaron 16/16 folios físicos; quince contienen texto cotejado y p.154
 ## DMR-062 — cobertura MD↔PDF añadida · Volumen 1 · PDF pp.169–184 · 2026-11-07
 
 Se inspeccionaron 16/16 folios físicos. p.169 es una ilustración de apertura cuya imagen Markdown de línea 5576 coincide visualmente; pp.170–184 contienen quince folios con texto cotejado. Se registra `V1-MDPDF-173-001` (`FORMATTING_LOSS`) por el separador centrado `× × ×` convertido en encabezado Markdown de nivel 1 (línea 5712). Resultado: 15 COMPLETE y 1 PARTIAL. No se demuestra error textual, de orden, duplicación ni imagen ausente. Próxima tanda MD↔PDF: pp.185–200. V1 permanece PARTIAL / IN_PROGRESS.
+
+## DMR-062 — cobertura MD↔PDF añadida · Volumen 1 · PDF pp.185–200 · 2026-11-07
+
+Se inspeccionaron 16/16 folios físicos; quince contienen texto cotejado y p.199 es una ilustración de página completa cuya imagen Markdown de línea 6774 coincide visualmente. Se registran V1-MDPDF-194-001, V1-MDPDF-196-001 y V1-MDPDF-200-001 (FORMATTING_LOSS) por separadores físicos × × × convertidos en encabezados Markdown. Resultado: 13 COMPLETE y 3 PARTIAL. No se demuestra error textual, de orden, duplicación ni imagen ausente. Fuentes originales intactas; traducción privada española sin cotejo japonés. Próxima tanda MD↔PDF: pp.201–214; p.215 contiene créditos. V1 y DMR-062 permanecen PARTIAL / IN_PROGRESS.
