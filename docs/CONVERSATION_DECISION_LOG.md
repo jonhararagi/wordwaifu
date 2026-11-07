@@ -972,3 +972,15 @@
 - **No demostrados:** TRANSCRIPTION_ERROR, ORDER_ERROR, DUPLICATION, IMAGE_MISSING, IMAGE_MISMATCH y PAGE_MAPPING_UNRESOLVED en este rango.
 - **Límites:** la traducción privada española continúa sin cotejo con japonés. No se modifican PDF, Markdown fuente, DMR-061 ni destinos funcionales. No se repiten P1/P2/P3.
 - **Continuidad:** siguiente rango DMR-062 pp.185–200; no iniciar Volumen 2. V1 permanece PARTIAL / IN_PROGRESS.
+
+### CONV-DM-2026-11-07-003 — Auditoría independiente MD↔PDF V1 pp.185–200
+
+- **Fecha:** 2026-11-07.
+- **Estado:** ACCEPTED para el registro de hallazgos; DMR-062 y Volumen 1 permanecen PARTIAL / IN_PROGRESS.
+- **Alcance:** cotejo del PDF físico pp.185–200 contra el Markdown original blob d2b3306b1661584d9a42d651f57dca8a6814b20b; PDF original de 215 páginas, 7.495.544 bytes, SHA-1 13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3. Fuentes originales preservadas.
+- **Resultado:** 16/16 folios inspeccionados; quince folios con texto cotejados por página y p.199 ilustrada. La imagen Markdown de línea 6774 coincide visualmente con el PDF. Resultado: 13 COMPLETE y 3 PARTIAL por pérdida de formato en pp.194, 196 y 200.
+- **Hallazgos aceptados:** V1-MDPDF-194-001, V1-MDPDF-196-001 y V1-MDPDF-200-001, todos FORMATTING_LOSS por convertir separadores físicos × × × en encabezados Markdown de nivel 1 (líneas 6602, 6684 y 6796).
+- **Controles:** no se demuestra error textual, orden, duplicación, imagen ausente, imagen discordante ni mapeo de página sin resolver. Las diferencias de espacios en el diálogo de p.189 y alrededor de flechas de Estado en p.195 no alteran el contenido.
+- **Límites:** la traducción privada española continúa sin cotejo con japonés. No se modifican PDF, Markdown fuente, DMR-061 ni destinos funcionales. No se repiten P1/P2/P3.
+- **Validación:** cotejo textual secuencial y render/inspección visual manual realizados; pruebas automatizadas locales no ejecutadas. La CI debe comprobarse sobre el SHA documental final.
+- **Continuidad:** siguiente rango DMR-062 pp.201–214; p.215 contiene créditos. No iniciar Volumen 2.
