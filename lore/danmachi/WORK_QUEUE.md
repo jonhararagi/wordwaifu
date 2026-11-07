@@ -2046,3 +2046,16 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - [x] Preservar originales, DMR-061 y destinos funcionales; no repetir P1/P2/P3.
 - **Siguiente tanda DMR-062:** PDF pp.153–168.
 - **Estado:** DMR-062 y V1 siguen `PARTIAL / IN_PROGRESS`; no iniciar Volumen 2.
+
+
+### DMR-062 — auditoría independiente MD↔PDF · Volumen 1 · checkpoint 2026-11-07 · pp.153–168
+
+- [x] Recuperar la copia del PDF original de 215 páginas y verificar su SHA-1 13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3; preservar la fuente.
+- [x] Cotejar los quince folios con texto (pp.153 y 155–168) contra el blob Markdown d2b3306b1661584d9a42d651f57dca8a6814b20b; coincidencia exacta tras retirar marcado/espacios, sin cambios de orden.
+- [x] Inspeccionar p.154 y confirmar que la ilustración de línea 5032 está presente y coincide visualmente.
+- [x] Registrar V1-MDPDF-156-001, V1-MDPDF-160-001, V1-MDPDF-165-001, V1-MDPDF-166-001 y V1-MDPDF-167-001 (FORMATTING_LOSS por separadores físicos convertidos en encabezados Markdown).
+- [x] Confirmar 11 COMPLETE y 5 PARTIAL; no se demuestra error textual, de orden, duplicación ni imagen ausente.
+- [x] Preservar fuentes originales, DMR-061 y destinos funcionales; no repetir P1/P2/P3.
+- **Siguiente tanda DMR-062:** PDF pp.169–184.
+- **Estado:** DMR-062 y Volumen 1 siguen PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
+- **Validación:** cotejo textual/visual manual efectuado; pruebas automatizadas locales no ejecutadas; CI pendiente de comprobación sobre el SHA final.
