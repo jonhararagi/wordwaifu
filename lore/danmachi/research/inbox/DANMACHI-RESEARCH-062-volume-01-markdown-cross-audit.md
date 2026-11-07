@@ -1094,3 +1094,46 @@ En las posiciones correspondientes no hay bloques de imagen Markdown. Los siete 
 - **Límite:** la traducción privada española no ha sido cotejada con japonés. No se modifican PDF, Markdown fuente, DMR-061 ni destinos funcionales.
 - **Estado:** DMR-062 y V1 permanecen `PARTIAL / IN_PROGRESS`; pruebas automatizadas locales no ejecutadas.
 - **Siguiente tanda:** cotejo independiente MD↔PDF, pp.153–168. No iniciar Volumen 2.
+
+
+### DMR-062 — décima tanda de cotejo independiente MD↔PDF · Volumen 1 · PDF pp.153–168 · 2026-11-07
+
+- **Procedencia e integridad:** PDF original de 215 páginas, 7.495.544 bytes; SHA-1 verificado 13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3. La copia de trabajo se obtuvo de la Biblioteca y se mantuvo sin cambios. Markdown original: blob d2b3306b1661584d9a42d651f57dca8a6814b20b; no se modificó.
+- **Método:** extracción de texto por página física mediante PyMuPDF; comparación secuencial y carácter-a-carácter después de retirar exclusivamente el marcado Markdown, escapes y espacios; render PDFium de pp.153–168 a 150 dpi e inspección visual del bloque; comparación directa de la ilustración p.154 con el JPEG Markdown de línea 5032.
+- **Cobertura:** 16/16 folios físicos revisados. Quince contienen texto cotejado exactamente en contenido, puntuación normalizada y orden; p.154 es una ilustración de página completa cuya imagen Markdown coincide visualmente con el PDF. Resultado: **11 COMPLETE y 5 PARTIAL**.
+
+#### Matriz por folio físico
+
+| PDF | Markdown | Contenido cotejado | Resultado |
+|---:|---:|---|---|
+| 153 | 4998–5030 | Bell y Hestia comparten el crepe; Hestia lo alimenta y Bell reacciona con vergüenza. | COMPLETE |
+| 154 | imagen, línea 5032 | Ilustración monocroma de Bell y Hestia compartiendo el crepe; imagen presente y visualmente coincidente. | COMPLETE |
+| 155 | 5034–5076 | Bell limpia la mejilla de Hestia, ambos se sonrojan y continúan el paseo; Hestia propone croquetas. | COMPLETE |
+| 156 | 5080–5106 | Inicio del espectáculo del Festival de Monstruos, Battle Jabalí, domadora de Ganesha, 50.000 espectadores y comentarista con altavoz de Piedra Mágica. | PARTIAL |
+| 157 | 5108–5140 | Inquietud de Eina sobre el transporte de monstruos y el riesgo asumido por el Festival. | COMPLETE |
+| 158 | 5142–5178 | Eina conoce a Hestia, Bell busca a Seal y consulta por una persona sin dinero para entrar al coliseo. | COMPLETE |
+| 159 | 5180–5226 | Hestia cuestiona a Eina sobre Bell; Eina separa asuntos privados y oficiales; se informa del colapso del personal de la Entrada Oeste. | COMPLETE |
+| 160 | 5228–5258 | Eina percibe la anomalía y escucha los rugidos; transición al almacén subterráneo del coliseo. | PARTIAL |
+| 161 | 5260–5300 | La mujer de Ganesha descubre a sus compañeros incapacitados; se expone el efecto del Encanto de Freya. | COMPLETE |
+| 162 | 5302–5342 | Freya pregunta por las llaves de los establos y se apodera de ellas mediante Encanto. | COMPLETE |
+| 163 | 5344–5384 | Freya entra en la zona de establos, apacigua a los monstruos y selecciona al Silverback. | COMPLETE |
+| 164 | 5386–5430 | Freya libera al Silverback y reflexiona sobre Bell, su crecimiento y la posibilidad de que muera. | COMPLETE |
+| 165 | 5434–5472 | Transición al paseo de Bell y Hestia; conversación sobre lo que Hestia habló con Eina y la búsqueda de Seal. | PARTIAL |
+| 166 | 5474–5516 | Bell escucha gritos y ve al Silverback avanzar por la calle; comienza el pasaje desde la perspectiva del monstruo. | PARTIAL |
+| 167 | 5518–5558 | El Silverback persigue el aroma de Freya, choca con un carro y fija su atención en una chica de cabello negro. | PARTIAL |
+| 168 | 5560–5574 | El Silverback se lanza hacia la chica; Bell reconoce la amenaza y se prepara para actuar. | COMPLETE |
+
+#### Hallazgos aceptados
+
+| ID | PDF | Línea Markdown | Categoría | Evidencia | Estado |
+|---|---:|---:|---|---|---|
+| V1-MDPDF-156-001 | 156 | 5078 | FORMATTING_LOSS | El separador físico centrado × × × se representó como encabezado Markdown de nivel 1. | ACEPTADO |
+| V1-MDPDF-160-001 | 160 | 5234 | FORMATTING_LOSS | El separador físico × × × que introduce el almacén subterráneo se representó como encabezado Markdown de nivel 1. | ACEPTADO |
+| V1-MDPDF-165-001 | 165 | 5432 | FORMATTING_LOSS | El separador físico × × × entre la escena de Freya y la de Bell/Hestia se representó como encabezado Markdown de nivel 1. | ACEPTADO |
+| V1-MDPDF-166-001 | 166 | 5492 | FORMATTING_LOSS | El separador físico × × × que inicia la perspectiva del Silverback se representó como encabezado Markdown de nivel 1. | ACEPTADO |
+| V1-MDPDF-167-001 | 167 | 5546 | FORMATTING_LOSS | El separador físico × × × que introduce el momento del ataque se representó como encabezado Markdown de nivel 1. | ACEPTADO |
+
+- **Controles:** los quince folios con texto conservan todos sus tokens en el mismo orden; tras retirar el marcado Markdown y normalizar espacios y escapes, el texto por página coincide con la extracción del PDF. No se demuestra TRANSCRIPTION_ERROR, ORDER_ERROR, DUPLICATION, IMAGE_MISSING, IMAGE_MISMATCH ni PAGE_MAPPING_UNRESOLVED en este bloque.
+- **Límites:** el cotejo valida la traducción privada española contra su PDF, no contra el original japonés. Los cinco hallazgos son pérdidas de jerarquía/estilo de separadores; no son pérdidas de texto narrativo. No se modifican el PDF, el Markdown fuente, DMR-061 ni destinos funcionales.
+- **Validación:** extracción, comparación textual y render/inspección visual efectuados. Pruebas automatizadas locales no ejecutadas. El estado CI debe comprobarse sobre el SHA final de los cambios documentales.
+- **Siguiente tanda:** cotejo independiente Markdown↔PDF, PDF pp.169–184. DMR-062 y Volumen 1 permanecen PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
