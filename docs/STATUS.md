@@ -1463,3 +1463,12 @@ El cotejo inicial cubre PDF pp.1–24. Se confirmó visualmente la correspondenc
 - **Fuentes:** PDF 7.495.544 bytes, 215 páginas, SHA-1 `13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3`, blob `fd43a5395983850ab1a953bb39da732b27331dcc`; Markdown blob `d2b3306b1661584d9a42d651f57dca8a6814b20b`.
 - **Siguiente tanda:** PDF pp.121–136. No repetir P1/P2/P3, no modificar originales y no iniciar Volumen 2.
 - **Estado:** DMR-062 y Volumen 1 permanecen `PARTIAL / IN_PROGRESS`. Pruebas automatizadas locales no ejecutadas; CI pendiente de comprobación sobre el SHA final.
+
+
+## DMR-062 — auditoría independiente MD↔PDF V1 · checkpoint 2026-11-06 · pp.121–136
+
+- **Cobertura:** 16/16 folios físicos inspeccionados; 15 con texto cotejado y p.126 ilustrada. Resultado: 13 COMPLETE y 3 PARTIAL por pérdida de formato en pp.123, 129 y 134.
+- **Hallazgos aceptados:** `V1-MDPDF-123-001`, `V1-MDPDF-129-001`, `V1-MDPDF-134-001` (`FORMATTING_LOSS`: divisor físico `× × ×` convertido en encabezado Markdown).
+- **Controles:** secuencia textual preservada en los quince folios con texto; imagen Markdown de línea 4000 coincide visualmente con PDF p.126. No se demuestra error de transcripción, orden, duplicación ni imagen ausente.
+- **Fuentes:** PDF 7.495.544 bytes, 215 páginas, SHA-1 `13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3`, blob `fd43a5395983850ab1a953bb39da732b27331dcc`; MD blob `d2b3306b1661584d9a42d651f57dca8a6814b20b`.
+- **Siguiente tanda:** PDF pp.137–152. Fuentes originales intactas; traducción española sin cotejo japonés; DMR-062 y V1 siguen `PARTIAL / IN_PROGRESS`. CI del nuevo SHA pendiente de comprobación.

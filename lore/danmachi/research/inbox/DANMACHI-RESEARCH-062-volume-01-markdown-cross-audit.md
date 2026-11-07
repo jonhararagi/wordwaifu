@@ -1011,3 +1011,48 @@ En las posiciones correspondientes no hay bloques de imagen Markdown. Los siete 
 - **Continuidad:** no se reabren P1/P2/P3; no se modifican DMR-061, perfiles, eventos, índices funcionales, PDF ni Markdown fuente. DMR-062 y Volumen 1 permanecen `PARTIAL / IN_PROGRESS`.
 - **Siguiente tanda:** cotejo independiente Markdown↔PDF, PDF pp.121–136. No iniciar Volumen 2.
 - **Validación:** cotejo textual y render visual efectuados; pruebas automatizadas locales no ejecutadas. La CI debe verificarse sobre el SHA final de los commits documentales.
+
+
+### DMR-062 — octava tanda de cotejo independiente MD↔PDF · Volumen 1 · PDF pp.121–136 · 2026-11-06
+
+- **Procedencia e integridad:** PDF original `Volumen [01] • DanMachi.pdf`, 7.495.544 bytes, 215 páginas; SHA-1 del archivo `13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3`, Git blob `fd43a5395983850ab1a953bb39da732b27331dcc`. Markdown fuente: blob `d2b3306b1661584d9a42d651f57dca8a6814b20b`, 4.035.130 bytes, 7.251 líneas. Ambos originales se conservaron intactos.
+- **Método:** extracción por folio físico PDF pp.121–136, cotejo normalizado y secuencial contra el blob Markdown, comprobación de separadores, revisión de imagen y control de límites de página. Se reutilizaron los localizadores del Markdown y no se modificó DMR-061 ni ningún destino funcional.
+
+#### Matriz de cobertura por folio físico
+
+| PDF | Localizador Markdown | Contenido cotejado | Resultado |
+|---:|---|---|---|
+| 121 | líneas 3830–3861 | Bell observa cajas de transporte con ruedas destinadas a expediciones; una se mueve y ruge. Su sospecha de que contiene un monstruo permanece como deducción, no confirmación. | COMPLETE |
+| 122 | líneas 3862–3901 | Explicación de la vigilancia del Gremio y la imposibilidad de que los monstruos salgan a zonas seguras; Bell ve el transporte y oye la conversación sobre el Festival de Monstruos. | COMPLETE |
+| 123 | líneas 3902–3939 | Bell observa a Eina y empleados del Gremio, decide no interrumpirlos, se ducha y realiza el trámite de intercambio en la sede. El divisor físico `× × ×` de la transición aparece como encabezado Markdown en línea 3916. | PARTIAL |
+| 124 | líneas 3940–3971 | Recorrido por el comercio de la Calle Principal del Noreste y encuentro con Miach, que compra ingredientes. | COMPLETE |
+| 125 | líneas 3972–3999 | Bell pregunta por Hestia; Miach aclara que fue invitado al Banquete de Ganesha, pero no asistió porque trabajaba en los productos de su Familia. | COMPLETE |
+| 126 | imagen Markdown línea 4000 | Ilustración monocroma de página completa. El bloque JPEG del Markdown coincide visualmente con el folio PDF; no se asignan identidades por la imagen. | COMPLETE |
+| 127 | líneas 4002–4029 | Miach se despide, solicita el apoyo de Bell para su Familia y quedan descritos sus productos y la actividad económica de distintas Familias. | COMPLETE |
+| 128 | líneas 4030–4063 | Bell observa la sucursal de Hephaistos Familia, su fachada roja y emblema; contempla las armas del escaparate y la daga blanca hecha de dientes de monstruo, sin comprarla ni nombrarla. | COMPLETE |
+| 129 | líneas 4064–4107 | Bell imagina llegar a usar un arma semejante y piensa en alcanzar a Wallenstein; tras el divisor comienza la escena de Hephaistos y Hestia. El divisor físico de línea 4074 aparece como encabezado Markdown. | PARTIAL |
+| 130 | líneas 4108–4141 | Se explica que Hestia lleva todo el día en dogeza, la negativa inicial de Hephaistos y la insistencia posterior a lo largo de dos días desde el Banquete. | COMPLETE |
+| 131 | líneas 4142–4179 | Hestia explica la supuesta técnica de dogeza que oyó de Take/Takemikazuchi y expresa que quiere ser la fuerza que ayude a Bell. | COMPLETE |
+| 132 | líneas 4180–4219 | Hephaistos acepta fabricar el arma, mantiene íntegra la deuda, toma su martillo carmesí y selecciona Mithril. | COMPLETE |
+| 133 | líneas 4220–4261 | Hephaistos confirma que forjará personalmente el arma como asunto privado, explica la prohibición de usar Poder Divino en el Mundo Inferior y pide ayuda a Hestia en el taller. | COMPLETE |
+| 134 | líneas 4262–4297 | Hephaistos recuerda los datos de Bell y sopesa el riesgo de un arma demasiado poderosa frente a una obra que no deshonre su nombre. El divisor físico de línea 4288 aparece como encabezado Markdown. | PARTIAL |
+| 135 | líneas 4298–4333 | Bell prepara su equipo, considera volver al quinto piso tras recuperarse de la lesión y sale de la iglesia hacia el Dungeon. | COMPLETE |
+| 136 | líneas 4334–4367 | Anya entrega a Bell el monedero olvidado de Seal; Ryuu explica el día libre y el motivo de su ausencia. La devolución del monedero aún no ocurre en este rango. | COMPLETE |
+
+#### Hallazgos nuevos
+
+| ID | PDF | Localizador Markdown | Categoría | Evidencia | Estado | Acción |
+|---|---:|---|---|---|---|---|
+| `V1-MDPDF-123-001` | 123 | línea 3916 | FORMATTING_LOSS | El divisor físico centrado `× × ×` se transforma en encabezado Markdown de nivel 1, añadiendo jerarquía inexistente en el PDF. | ACEPTADO | Registrar la pérdida; no modificar la fuente original. |
+| `V1-MDPDF-129-001` | 129 | línea 4074 | FORMATTING_LOSS | El divisor físico `× × ×` entre el monólogo de Bell y la escena de Hephaistos/Hestia se transforma en encabezado Markdown. | ACEPTADO | Registrar la pérdida; no modificar la fuente original. |
+| `V1-MDPDF-134-001` | 134 | línea 4288 | FORMATTING_LOSS | El divisor físico `× × ×` que separa la reflexión de Hephaistos de la mañana de Bell se transforma en encabezado Markdown. | ACEPTADO | Registrar la pérdida; no modificar la fuente original. |
+
+#### Resultado cuantitativo y límites
+
+- **Cobertura:** 16/16 folios físicos inspeccionados; 15 contienen texto cotejado y p.126 es ilustración. Resultado: 13 COMPLETE (incluida la ilustración coincidente) y 3 PARTIAL por FORMATTING_LOSS (pp.123, 129 y 134).
+- **Texto y orden:** la comparación normalizada conserva la secuencia de tokens del texto extraído en los quince folios con texto; no se demuestra TRANSCRIPTION_ERROR, ORDER_ERROR ni pérdida textual en este rango. Las diferencias de longitud se explican por marcado de continuidad/etiquetas y formato, no por una discrepancia textual demostrada.
+- **Imágenes:** el bloque JPEG de Markdown en línea 4000 coincide visualmente con la ilustración física p.126. No se detectan IMAGE_MISSING ni IMAGE_MISMATCH.
+- **No detectados:** DUPLICATION ni PAGE_MAPPING_UNRESOLVED.
+- **Alcance:** cotejo de la transcripción privada española contra su PDF; no certifica fidelidad frente al original japonés. No se crean IDs funcionales, eventos, personajes, lugares, objetos ni relaciones; no se modifican fuentes ni destinos funcionales.
+- **Estado:** DMR-062 y Volumen 1 continúan `PARTIAL / IN_PROGRESS`. La auditoría de este rango queda registrada; pruebas automatizadas locales no ejecutadas. CI del nuevo SHA queda pendiente de comprobación.
+- **Siguiente tanda:** cotejo independiente Markdown↔PDF, PDF pp.137–152. No iniciar Volumen 2.

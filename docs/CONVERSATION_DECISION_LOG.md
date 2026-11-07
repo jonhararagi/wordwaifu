@@ -930,3 +930,14 @@
 - **Controles:** los valores del Estado de p.91 coinciden con el PDF (incluido Fuerza H123→221 G); nota al pie de nekomusume conservada. No se demuestra error textual, de orden, duplicación ni imagen ausente.
 - **Límites:** traducción privada española no cotejada con japonés. No se modifican fuentes originales, DMR-061 ni destinos funcionales.
 - **Continuidad:** próxima tanda DMR-062 pp.105–120; no iniciar Volumen 2.
+
+
+### CONV-DM-2026-11-06-003 — Auditoría independiente MD↔PDF V1 pp.121–136
+
+- **Fecha:** 2026-11-06.
+- **Estado:** ACCEPTED para el registro de hallazgos; DMR-062 y V1 permanecen PARTIAL / IN_PROGRESS.
+- **Alcance:** cotejo de PDF físico pp.121–136 contra Markdown blob `d2b3306b1661584d9a42d651f57dca8a6814b20b` y PDF blob `fd43a5395983850ab1a953bb39da732b27331dcc`; fuentes originales preservadas.
+- **Resultado:** 16/16 folios inspeccionados; 15 con texto cotejado y una ilustración en p.126 visualmente coincidente con el bloque Markdown de línea 4000. Se registran 3 `FORMATTING_LOSS` en pp.123, 129 y 134.
+- **Hallazgos aceptados:** `V1-MDPDF-123-001`, `V1-MDPDF-129-001`, `V1-MDPDF-134-001`. No se demuestra error textual, orden, duplicación ni imagen ausente.
+- **Límites:** la traducción privada española continúa sin cotejo con japonés. No se modifican DMR-061, PDF, Markdown fuente ni destinos funcionales.
+- **Continuidad:** siguiente tanda DMR-062 pp.137–152; no iniciar Volumen 2. V1 permanece PARTIAL / IN_PROGRESS.

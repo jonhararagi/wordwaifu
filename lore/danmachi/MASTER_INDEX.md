@@ -588,3 +588,8 @@ Se cotejaron 16/16 folios físicos con el Markdown original; los 16 contienen te
 ## DMR-062 — cobertura MD↔PDF añadida · Volumen 1 · PDF pp.73–88 · 2026-11-06
 
 Se inspeccionaron los 16 folios físicos; 14 contienen texto cotejado y dos son ilustraciones de apertura de capítulo sin bloque correspondiente en la transcripción (pp.73 y 86). Se registran `V1-MDPDF-073-001` y `V1-MDPDF-086-001` (`IMAGE_MISSING`), además de `V1-MDPDF-076-001` y `V1-MDPDF-080-001` (`FORMATTING_LOSS`). Doce folios quedan COMPLETE y dos PARTIAL por formato. No se demuestra error textual, de orden o duplicación. Próxima tanda MD↔PDF: pp.89–104. V1 y DMR-062 siguen PARTIAL / IN_PROGRESS.
+
+
+## DMR-062 — cobertura MD↔PDF añadida · Volumen 1 · PDF pp.121–136 · 2026-11-06
+
+Se inspeccionaron 16/16 folios físicos; 15 contienen texto cotejado y p.126 es una ilustración cuya imagen Markdown coincide visualmente. Se registran `V1-MDPDF-123-001`, `V1-MDPDF-129-001` y `V1-MDPDF-134-001` (`FORMATTING_LOSS`), por separadores `× × ×` convertidos en encabezados. Quedan 13 COMPLETE y 3 PARTIAL. No se demuestra error textual, de orden, duplicación ni imagen ausente. Próxima tanda MD↔PDF: pp.137–152. V1 y DMR-062 siguen PARTIAL / IN_PROGRESS.
