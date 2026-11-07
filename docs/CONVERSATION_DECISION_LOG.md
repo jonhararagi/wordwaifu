@@ -949,3 +949,14 @@
 - **Resultado:** 16/16 folios con texto cotejados; tres `FORMATTING_LOSS` en pp.138, 145 y 149. IDs: `V1-MDPDF-138-001`, `V1-MDPDF-145-001`, `V1-MDPDF-149-001`.
 - **Límites:** no se demuestra error textual, orden, duplicación ni imagen ausente. Traducción privada española sin cotejo japonés. No se modifican fuentes ni destinos funcionales.
 - **Continuidad:** siguiente rango pp.153–168; DMR-062 y V1 permanecen PARTIAL / IN_PROGRESS.
+
+
+### CONV-DM-2026-11-07-001 — Auditoría independiente MD↔PDF V1 pp.153–168
+
+- **Fecha:** 2026-11-07.
+- **Estado:** ACCEPTED para el registro de hallazgos; DMR-062 y V1 permanecen PARTIAL / IN_PROGRESS.
+- **Alcance:** cotejo de PDF físico pp.153–168 contra el Markdown blob d2b3306b1661584d9a42d651f57dca8a6814b20b; PDF original 215 páginas y SHA-1 13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3. Fuentes originales preservadas.
+- **Resultado:** quince folios con texto coinciden tras retirar el marcado Markdown; p.154 es una ilustración cuya imagen de línea 5032 coincide visualmente. Se registran cinco FORMATTING_LOSS en pp.156, 160, 165, 166 y 167.
+- **Hallazgos aceptados:** V1-MDPDF-156-001, V1-MDPDF-160-001, V1-MDPDF-165-001, V1-MDPDF-166-001, V1-MDPDF-167-001. No se demuestra error textual, de orden, duplicación ni imagen ausente.
+- **Límites:** la traducción privada española continúa sin cotejo con japonés. No se modifican PDF, Markdown fuente, DMR-061 ni destinos funcionales.
+- **Continuidad:** siguiente rango DMR-062 pp.169–184; no iniciar Volumen 2. V1 permanece PARTIAL / IN_PROGRESS.
