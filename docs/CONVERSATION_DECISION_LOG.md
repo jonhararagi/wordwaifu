@@ -960,3 +960,15 @@
 - **Hallazgos aceptados:** V1-MDPDF-156-001, V1-MDPDF-160-001, V1-MDPDF-165-001, V1-MDPDF-166-001, V1-MDPDF-167-001. No se demuestra error textual, de orden, duplicación ni imagen ausente.
 - **Límites:** la traducción privada española continúa sin cotejo con japonés. No se modifican PDF, Markdown fuente, DMR-061 ni destinos funcionales.
 - **Continuidad:** siguiente rango DMR-062 pp.169–184; no iniciar Volumen 2. V1 permanece PARTIAL / IN_PROGRESS.
+
+
+### CONV-DM-2026-11-07-002 — Auditoría independiente MD↔PDF V1 pp.169–184
+
+- **Fecha:** 2026-11-07.
+- **Estado:** ACCEPTED para el registro del hallazgo; DMR-062 y V1 permanecen PARTIAL / IN_PROGRESS.
+- **Alcance:** cotejo del PDF físico pp.169–184 contra el Markdown fuente blob `d2b3306b1661584d9a42d651f57dca8a6814b20b`; PDF original de 215 páginas y SHA-1 `13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3`. Fuentes originales preservadas.
+- **Resultado:** 16/16 folios inspeccionados; p.169 contiene una ilustración cuya imagen de línea 5576 coincide visualmente. Los quince folios con texto se cotejaron por página; 15 folios quedan COMPLETE y p.173 PARTIAL por pérdida de formato.
+- **Hallazgo aceptado:** `V1-MDPDF-173-001` (`FORMATTING_LOSS`): el separador físico centrado `× × ×` está representado como encabezado Markdown de nivel 1 en la línea 5712. No se demuestra pérdida de texto narrativo ni error de orden.
+- **No demostrados:** TRANSCRIPTION_ERROR, ORDER_ERROR, DUPLICATION, IMAGE_MISSING, IMAGE_MISMATCH y PAGE_MAPPING_UNRESOLVED en este rango.
+- **Límites:** la traducción privada española continúa sin cotejo con japonés. No se modifican PDF, Markdown fuente, DMR-061 ni destinos funcionales. No se repiten P1/P2/P3.
+- **Continuidad:** siguiente rango DMR-062 pp.185–200; no iniciar Volumen 2. V1 permanece PARTIAL / IN_PROGRESS.
