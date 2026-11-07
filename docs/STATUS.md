@@ -1500,3 +1500,12 @@ El cotejo inicial cubre PDF pp.1–24. Se confirmó visualmente la correspondenc
 - **Límites:** cotejo de la traducción privada española contra su PDF, no contra el original japonés. No se modifican DMR-061 ni destinos funcionales. P1/P2/P3 no se repiten.
 - **Siguiente tanda:** DMR-062 PDF pp.185–200. DMR-062 y V1 siguen `PARTIAL / IN_PROGRESS`; no iniciar Volumen 2.
 - **Validación:** comparación textual por página y render/inspección visual manual efectuados; pruebas automatizadas locales no ejecutadas. CI debe comprobarse sobre el SHA final.
+
+## DMR-062 — auditoría independiente MD↔PDF V1 · checkpoint 2026-11-07 · pp.185–200
+
+- **Cobertura:** 16/16 folios físicos inspeccionados; quince folios con texto cotejados y p.199 es una ilustración cuya imagen Markdown de línea 6774 coincide visualmente.
+- **Resultado:** 13 COMPLETE y 3 PARTIAL. Los tres parciales corresponden a pérdidas de formato por separadores físicos × × × convertidos en encabezados Markdown.
+- **Hallazgos aceptados:** V1-MDPDF-194-001 (línea 6602), V1-MDPDF-196-001 (línea 6684) y V1-MDPDF-200-001 (línea 6796), todos FORMATTING_LOSS. No se demuestra error textual, de orden, duplicación ni imagen ausente.
+- **Fuentes:** PDF original 7.495.544 bytes, 215 páginas, SHA-1 13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3; Markdown original blob d2b3306b1661584d9a42d651f57dca8a6814b20b. Fuentes originales intactas.
+- **Límites:** cotejo de traducción privada española contra PDF, no contra japonés. No se modificaron DMR-061 ni destinos funcionales. Pruebas automatizadas locales no ejecutadas.
+- **Siguiente tanda:** DMR-062 PDF pp.201–214; p.215 contiene créditos. V1 y DMR-062 permanecen PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
