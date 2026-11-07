@@ -1056,3 +1056,41 @@ En las posiciones correspondientes no hay bloques de imagen Markdown. Los siete 
 - **Alcance:** cotejo de la transcripción privada española contra su PDF; no certifica fidelidad frente al original japonés. No se crean IDs funcionales, eventos, personajes, lugares, objetos ni relaciones; no se modifican fuentes ni destinos funcionales.
 - **Estado:** DMR-062 y Volumen 1 continúan `PARTIAL / IN_PROGRESS`. La auditoría de este rango queda registrada; pruebas automatizadas locales no ejecutadas. CI del nuevo SHA queda pendiente de comprobación.
 - **Siguiente tanda:** cotejo independiente Markdown↔PDF, PDF pp.137–152. No iniciar Volumen 2.
+
+
+### DMR-062 — novena tanda de cotejo independiente MD↔PDF · Volumen 1 · PDF pp.137–152 · 2026-11-06
+
+- **Fuentes:** PDF original 7.495.544 bytes/215 páginas, SHA-1 `13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3`, blob `fd43a5395983850ab1a953bb39da732b27331dcc`; Markdown blob `d2b3306b1661584d9a42d651f57dca8a6814b20b`. Fuentes originales preservadas.
+- **Cobertura:** 16/16 folios físicos con texto cotejado, sin ilustraciones de página completa. Alineación secuencial normalizada: todos los tokens PDF se conservan en orden en el Markdown; no se demuestra pérdida textual ni alteración de secuencia.
+
+| PDF | Markdown | Contenido principal | Resultado |
+|---:|---:|---|---|
+| 137 | 4368–4405 | Día libre de Seal, Festival de Monstruos y explicación sobre domesticación. | COMPLETE |
+| 138 | 4406–4441 | Ganesha Familia, domesticación y transición de escena; divisor `× × ×` en línea 4434 como encabezado. | PARTIAL |
+| 139 | 4442–4475 | Banderas, decoración y multitud del Festival; encuentro de Freya. | COMPLETE |
+| 140 | 4476–4517 | Llegada de Loki con Ais y saludo a Freya. | COMPLETE |
+| 141 | 4518–4555 | Presentación y reconocimiento de Ais Wallenstein. | COMPLETE |
+| 142 | 4556–4593 | Loki confronta a Freya sobre sus intenciones. | COMPLETE |
+| 143 | 4594–4633 | Deducciones de Loki sobre el interés de Freya por alguien de otra Familia. | COMPLETE |
+| 144 | 4634–4675 | Freya observa la calle y reconoce a Bell a distancia. | COMPLETE |
+| 145 | 4676–4719 | Freya se marcha; comienza escena separada de Hephaistos/Hestia. Divisor en línea 4698 como encabezado. | PARTIAL |
+| 146 | 4720–4759 | Debate sobre el nombre de la daga; Hestia propone «Daga del Amor». | COMPLETE |
+| 147 | 4760–4793 | Hestia ve el folleto y decide dirigirse al Festival. | COMPLETE |
+| 148 | 4794–4829 | Traslado en carruaje y avance entre la multitud. | COMPLETE |
+| 149 | 4830–4873 | Encuentro/diálogo en la ruta al Festival; divisor en línea 4870 como encabezado. | PARTIAL |
+| 150 | 4874–4913 | Bell reconoce a Hestia y se reencuentran. | COMPLETE |
+| 151 | 4914–4953 | Hestia propone una cita; Bell recuerda el encargo y van por crepes. | COMPLETE |
+| 152 | 4954–4997 | Interacción con los crepes y reacción avergonzada de Bell. | COMPLETE |
+
+#### Hallazgos aceptados
+
+| ID | PDF | Línea MD | Categoría | Estado |
+|---|---:|---:|---|---|
+| `V1-MDPDF-138-001` | 138 | 4434 | FORMATTING_LOSS: divisor físico `× × ×` representado como encabezado Markdown. | ACEPTADO |
+| `V1-MDPDF-145-001` | 145 | 4698 | FORMATTING_LOSS: divisor físico `× × ×` representado como encabezado Markdown. | ACEPTADO |
+| `V1-MDPDF-149-001` | 149 | 4870 | FORMATTING_LOSS: divisor físico `× × ×` representado como encabezado Markdown. | ACEPTADO |
+
+- **Resultado:** 13 COMPLETE y 3 PARTIAL (pp.138, 145 y 149). No se demuestra TRANSCRIPTION_ERROR, ORDER_ERROR, DUPLICATION, IMAGE_MISSING ni IMAGE_MISMATCH.
+- **Límite:** la traducción privada española no ha sido cotejada con japonés. No se modifican PDF, Markdown fuente, DMR-061 ni destinos funcionales.
+- **Estado:** DMR-062 y V1 permanecen `PARTIAL / IN_PROGRESS`; pruebas automatizadas locales no ejecutadas.
+- **Siguiente tanda:** cotejo independiente MD↔PDF, pp.153–168. No iniciar Volumen 2.

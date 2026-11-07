@@ -941,3 +941,11 @@
 - **Hallazgos aceptados:** `V1-MDPDF-123-001`, `V1-MDPDF-129-001`, `V1-MDPDF-134-001`. No se demuestra error textual, orden, duplicación ni imagen ausente.
 - **Límites:** la traducción privada española continúa sin cotejo con japonés. No se modifican DMR-061, PDF, Markdown fuente ni destinos funcionales.
 - **Continuidad:** siguiente tanda DMR-062 pp.137–152; no iniciar Volumen 2. V1 permanece PARTIAL / IN_PROGRESS.
+
+
+### CONV-DM-2026-11-06-004 — Auditoría independiente MD↔PDF V1 pp.137–152
+
+- **Fecha:** 2026-11-06. **Estado:** ACCEPTED para el registro de hallazgos.
+- **Resultado:** 16/16 folios con texto cotejados; tres `FORMATTING_LOSS` en pp.138, 145 y 149. IDs: `V1-MDPDF-138-001`, `V1-MDPDF-145-001`, `V1-MDPDF-149-001`.
+- **Límites:** no se demuestra error textual, orden, duplicación ni imagen ausente. Traducción privada española sin cotejo japonés. No se modifican fuentes ni destinos funcionales.
+- **Continuidad:** siguiente rango pp.153–168; DMR-062 y V1 permanecen PARTIAL / IN_PROGRESS.

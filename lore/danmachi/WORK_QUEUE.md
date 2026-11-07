@@ -2033,6 +2033,16 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - [x] Registrar `V1-MDPDF-123-001`, `V1-MDPDF-129-001` y `V1-MDPDF-134-001` (`FORMATTING_LOSS`, separadores físicos `× × ×` convertidos en encabezados Markdown).
 - [x] Confirmar 13 COMPLETE y 3 PARTIAL; no se demuestra error textual, de orden, duplicación ni imagen ausente.
 - [x] Preservar PDF, Markdown, DMR-061 y destinos funcionales; no reabrir P1/P2/P3.
-- **Siguiente tanda DMR-062:** cotejo independiente Markdown↔PDF, pp.137–152.
+- **Siguiente tanda DMR-062:** cotejo independiente Markdown↔PDF, pp.153–168.
 - **Estado:** DMR-062 y Volumen 1 continúan `PARTIAL / IN_PROGRESS`; no iniciar Volumen 2.
 - **Validación:** cotejo textual y visual manual efectuados; pruebas locales automatizadas no ejecutadas; CI del nuevo SHA pendiente de comprobación.
+
+
+### DMR-062 — auditoría independiente MD↔PDF · Volumen 1 · checkpoint 2026-11-06 · pp.137–152
+
+- [x] Cotejar 16/16 folios físicos PDF pp.137–152; todos contienen texto.
+- [x] Registrar `V1-MDPDF-138-001`, `V1-MDPDF-145-001`, `V1-MDPDF-149-001` (`FORMATTING_LOSS`).
+- [x] Confirmar 13 COMPLETE y 3 PARTIAL; no se demuestra error textual, orden, duplicación ni imagen ausente.
+- [x] Preservar originales, DMR-061 y destinos funcionales; no repetir P1/P2/P3.
+- **Siguiente tanda DMR-062:** PDF pp.153–168.
+- **Estado:** DMR-062 y V1 siguen `PARTIAL / IN_PROGRESS`; no iniciar Volumen 2.
