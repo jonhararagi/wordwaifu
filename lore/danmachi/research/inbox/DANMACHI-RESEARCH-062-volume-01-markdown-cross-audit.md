@@ -1176,3 +1176,44 @@ En las posiciones correspondientes no hay bloques de imagen Markdown. Los siete 
 - **Límites:** el cotejo valida la traducción privada española contra su PDF, no contra el original japonés. No se modifican PDF, Markdown fuente, DMR-061 ni destinos funcionales. No se repiten P1/P2/P3.
 - **Validación:** inspección/render manual y comparación textual página por página efectuados. Pruebas automatizadas locales no ejecutadas. CI debe comprobarse sobre el SHA final de los cambios documentales.
 - **Siguiente tanda:** cotejo independiente Markdown↔PDF, PDF pp.185–200. DMR-062 y Volumen 1 permanecen PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
+
+### DMR-062 — undécima tanda de cotejo independiente MD↔PDF · Volumen 1 · PDF pp.185–200 · 2026-11-07
+
+- **Fuentes e integridad:** PDF original recuperado de la Biblioteca, 7.495.544 bytes, 215 páginas; SHA-1 comprobado 13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3. Markdown original recuperado desde el blob Git d2b3306b1661584d9a42d651f57dca8a6814b20b. Ninguna fuente original fue modificada.
+- **Método:** extracción de texto por página física del PDF, comparación secuencial de contenido y orden contra el blob Markdown después de retirar marcado Markdown/escapes y normalizar espacios; render e inspección visual del rango. La imagen incrustada de Markdown se comparó visualmente con el folio ilustrado del PDF.
+- **Cobertura:** 16/16 folios físicos inspeccionados. Quince folios contienen texto (pp.185–198 y p.200); p.199 es una ilustración de página completa. Los quince folios con texto conservan el contenido y el orden. En p.189 aparece una diferencia de espaciado junto al guion de diálogo; en p.195 los espacios alrededor de las flechas de los valores de Estado son tipográficos y no alteran los valores ni su secuencia. No se demuestra pérdida textual.
+- **Resultado:** **13 COMPLETE y 3 PARTIAL**. Los tres parciales son exclusivamente pérdidas de jerarquía/estilo por convertir separadores físicos centrados × × × en encabezados Markdown de nivel 1.
+
+#### Matriz por folio físico
+
+| PDF | Contenido cotejado | Resultado |
+|---:|---|---|
+| 185 | Bell separa a Hestia del Silverback, bebe una poción de Miach y atrae al monstruo hacia sí. | COMPLETE |
+| 186 | Bell sigue las señales de la Calle Dédalo; aparecen las miradas de los residentes y una mirada distinta que no identifica. | COMPLETE |
+| 187 | El Silverback ataca con sus cadenas; Bell queda gravemente golpeado y reconoce que no puede vencerlo. | COMPLETE |
+| 188 | Bell recuerda el rescate de Wallenstein; Hestia vuelve a encontrarlo y el Silverback cambia su objetivo hacia ella. | COMPLETE |
+| 189 | Bell intercepta al monstruo, escapa con Hestia por una pendiente y ambos caen; Hestia se niega a abandonarlo. | COMPLETE |
+| 190 | Bell recuerda la promesa mutua; Hestia presenta una idea y saca una pequeña caja, pero el Silverback reaparece. | COMPLETE |
+| 191 | Bell carga a Hestia y continúa huyendo; llegan a un callejón sin salida en la Calle Dédalo. | COMPLETE |
+| 192 | Los residentes evitan intervenir; Hestia afirma que Bell puede derrotar al monstruo y propone actualizar su Estado. | COMPLETE |
+| 193 | Bell expresa sus dudas; Hestia le muestra la Daga de Hestia y reafirma su confianza en él. | COMPLETE |
+| 194 | Hestia anima a Bell; tras su respuesta afirmativa, la escena cambia a la actualización de Estado y la explicación de la daga. | PARTIAL — separador × × × convertido en encabezado Markdown, línea 6602. |
+| 195 | Hestia explica el Estado propio y el crecimiento de la Daga de Hestia; se muestran los valores de Bell antes y después de la actualización. | COMPLETE |
+| 196 | Bell inicia el combate; recuerda el consejo de Eina sobre el punto débil de los monstruos y apunta a la Piedra Mágica. | PARTIAL — separador × × × convertido en encabezado Markdown, línea 6684. |
+| 197 | Bell atraviesa el pecho del Silverback con la Daga de Hestia y destruye su Piedra Mágica. | COMPLETE |
+| 198 | Bell aterriza tras el impacto; el Silverback cae y Hestia se desploma después de la victoria. | COMPLETE |
+| 199 | Ilustración monocroma de Bell sentado en el suelo junto a la daga; la imagen de Markdown en línea 6774 coincide visualmente con el PDF. | COMPLETE — ilustración coincidente. |
+| 200 | El Silverback se convierte en cenizas; los residentes aplauden, Bell recoge a Hestia y se marcha; Freya observa desde una azotea. | PARTIAL — separador × × × convertido en encabezado Markdown, línea 6796. |
+
+#### Hallazgos aceptados
+
+| ID | PDF | Línea Markdown | Categoría | Evidencia | Estado |
+|---|---:|---:|---|---|---|
+| V1-MDPDF-194-001 | 194 | 6602 | FORMATTING_LOSS | El separador físico centrado × × × entre la respuesta de Bell y la escena de actualización de Estado aparece como encabezado Markdown de nivel 1. | ACEPTADO |
+| V1-MDPDF-196-001 | 196 | 6684 | FORMATTING_LOSS | El separador físico centrado × × × entre la actualización de Estado y el inicio del combate aparece como encabezado Markdown de nivel 1. | ACEPTADO |
+| V1-MDPDF-200-001 | 200 | 6796 | FORMATTING_LOSS | El separador físico centrado × × × entre la escena posterior a la victoria y la observación de Freya aparece como encabezado Markdown de nivel 1. | ACEPTADO |
+
+- **Controles:** no se demuestra TRANSCRIPTION_ERROR, ORDER_ERROR, DUPLICATION, IMAGE_MISSING, IMAGE_MISMATCH ni PAGE_MAPPING_UNRESOLVED en este rango. La ilustración p.199 está presente y coincide visualmente. Las diferencias de espaciado en pp.189 y 195 no cambian el contenido.
+- **Alcance y límites:** cotejo de la traducción privada española contra su PDF, no contra el original japonés. No se crean fichas, eventos ni IDs funcionales; no se modifican el PDF, el Markdown fuente, DMR-061 ni los destinos funcionales. No se repiten P1/P2/P3.
+- **Validación:** extracción textual, cotejo secuencial página por página y render/inspección visual manual efectuados. Pruebas automatizadas locales no ejecutadas. El estado de CI debe comprobarse sobre el SHA documental final.
+- **Siguiente tanda:** cotejo independiente Markdown↔PDF, pp.201–214. El folio 215 contiene créditos y no forma parte del siguiente rango narrativo. DMR-062 y Volumen 1 continúan PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
