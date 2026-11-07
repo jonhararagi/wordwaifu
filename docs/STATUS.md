@@ -1479,3 +1479,13 @@ El cotejo inicial cubre PDF pp.1–24. Se confirmó visualmente la correspondenc
 - **Cobertura:** 16/16 folios físicos con texto cotejados; 13 COMPLETE y 3 PARTIAL por FORMATTING_LOSS en pp.138, 145 y 149.
 - **Hallazgos aceptados:** `V1-MDPDF-138-001`, `V1-MDPDF-145-001`, `V1-MDPDF-149-001`. No se demuestra error textual, de orden, duplicación ni imagen ausente.
 - **Siguiente tanda:** PDF pp.153–168. DMR-062 y V1 siguen `PARTIAL / IN_PROGRESS`; traducción privada sin cotejo japonés.
+
+
+## DMR-062 — auditoría independiente MD↔PDF V1 pp.153–168 (2026-11-07)
+
+- **Fuente:** PDF original recuperado de la Biblioteca; 7.495.544 bytes, 215 páginas, SHA-1 verificado 13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3. Markdown fuente blob d2b3306b1661584d9a42d651f57dca8a6814b20b; ambas fuentes originales intactas.
+- **Resultado:** 16/16 folios inspeccionados; quince folios con texto coinciden exactamente tras retirar marcado Markdown y normalizar espacios/escapes; p.154 es una ilustración cuya imagen Markdown de línea 5032 coincide visualmente.
+- **Hallazgos aceptados:** V1-MDPDF-156-001, V1-MDPDF-160-001, V1-MDPDF-165-001, V1-MDPDF-166-001, V1-MDPDF-167-001 (FORMATTING_LOSS: separadores físicos × × × representados como encabezados Markdown). 11 COMPLETE y 5 PARTIAL.
+- **No demostrados:** TRANSCRIPTION_ERROR, ORDER_ERROR, DUPLICATION, IMAGE_MISSING, IMAGE_MISMATCH y PAGE_MAPPING_UNRESOLVED en este rango.
+- **Límites:** cotejo de la traducción privada española contra su PDF, no contra el original japonés. No se modificaron fuentes, DMR-061 ni destinos funcionales. Pruebas automatizadas locales no ejecutadas.
+- **Siguiente tanda:** DMR-062 PDF pp.169–184. V1 y DMR-062 continúan PARTIAL / IN_PROGRESS; no iniciar Volumen 2. CI del nuevo SHA pendiente de consulta.
