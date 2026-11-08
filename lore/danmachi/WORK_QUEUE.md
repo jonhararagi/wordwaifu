@@ -2115,3 +2115,12 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - **V1-AUD-008 — Verificado parcialmente / Pendiente:** el texto narrativo de PDF p.195 registra Agilidad D512; la ficha visual del mismo volumen en p.208 muestra D521. DMR-061 mantiene ambos valores y DMR-062 confirma que la imagen de p.208 coincide con la transcripción Markdown; esa coincidencia no resuelve la discordancia interna del PDF.
 - **Dictamen del cribado:** ambos casos quedan conservados como discrepancias de la fuente española de trabajo. Su resolución requiere cotejo con una edición japonesa/licenciada independiente o evidencia primaria adicional. No se crean IDs ni se altera DMR-061, DMR-062, el PDF ni el Markdown original.
 - **Siguiente foco:** revalidar por separado el recuento de bajas Kobold y la ambigüedad de traducción de p.18. Después comprobar si siguen abiertas las condiciones económicas de la Daga de Hestia y la devolución del monedero de Seal. No iniciar Volumen 2.
+
+
+## Resultado parcial · Tarea 1: recuento de Kobolds · 2026-11-08
+
+- **Estado:** Verificado parcialmente; total exacto Pendiente.
+- **Fuente:** transcripción original blob `d2b3306b1661584d9a42d651f57dca8a6814b20b`, líneas 1118–1264; DMR-061 y archivos funcionales existentes.
+- **Resultado:** ocho integrantes iniciales; dos abatidos antes de la persecución de los seis restantes. En la emboscada, los ordinales de p.48–49 junto con la acción posterior sobre «el último» apuntan a una lectura de siete bajas, pero la frase «sólo quedan dos» tras el cuarto y la mención posterior de un solo «último» no explican el destino del otro. No afirmar ocho bajas ni que alguien escapó.
+- **Registros reutilizados:** `EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001` y `MON-DM-KOBOLD-001`. No se crean IDs. PDF y Markdown originales intactos; DMR-062 pp.41–56 no se repite.
+- **Siguiente tarea exacta:** Tarea 2, p.18: reexaminar el contexto de «decimoquinto piso o por debajo» y clasificar la ambigüedad traductora sin corregir el texto por inferencia.
