@@ -1509,3 +1509,14 @@ El cotejo inicial cubre PDF pp.1–24. Se confirmó visualmente la correspondenc
 - **Fuentes:** PDF original 7.495.544 bytes, 215 páginas, SHA-1 13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3; Markdown original blob d2b3306b1661584d9a42d651f57dca8a6814b20b. Fuentes originales intactas.
 - **Límites:** cotejo de traducción privada española contra PDF, no contra japonés. No se modificaron DMR-061 ni destinos funcionales. Pruebas automatizadas locales no ejecutadas.
 - **Siguiente tanda:** DMR-062 PDF pp.201–214; p.215 contiene créditos. V1 y DMR-062 permanecen PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
+
+
+## DMR-062 — auditoría independiente MD↔PDF V1 · checkpoint 2026-11-08 · pp.201–214
+
+- **Cobertura:** 14/14 folios físicos inspeccionados. Once contienen texto (pp.201–207 y 211–214); pp.208–210 son ilustraciones.
+- **Imágenes:** las tres imágenes Markdown (líneas 7100, 7102 y 7104) coinciden visualmente con los folios 208–210 del PDF, incluidos los textos integrados en las dos fichas.
+- **Resultado:** 12 COMPLETE y 2 PARTIAL por FORMATTING_LOSS en pp.201 y 203, donde separadores físicos ××× aparecen como encabezados Markdown.
+- **Hallazgos aceptados:** V1-MDPDF-201-001 y V1-MDPDF-203-001. No se demuestra pérdida textual, orden, duplicación ni imagen ausente en este rango.
+- **Fuentes:** PDF 7.495.544 bytes, 215 páginas, SHA-1 13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3; Markdown blob d2b3306b1661584d9a42d651f57dca8a6814b20b. Fuentes originales intactas.
+- **Límites:** cotejo de traducción privada española contra PDF, no contra japonés. No se modificaron DMR-061 ni destinos funcionales. Pruebas automatizadas locales no ejecutadas.
+- **Cobertura narrativa DMR-062:** alcanzado el último folio narrativo p.214; p.215 contiene créditos. DMR-062 y V1 permanecen PARTIAL / IN_PROGRESS por hallazgos parciales acumulados y pendientes globales.
