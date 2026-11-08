@@ -57,3 +57,14 @@ En p.50 retira los Fragmentos de Piedra Mágica, explica su valor y recuerda que
 - **Resultado:** tres pasadas completas por pp.46–51; se reexaminó p.49 de forma correctiva por la cuenta de bajas y pp.50–51 para separar núcleo, fragmentos, botín y equipo.
 - **Decisión:** mantener este único evento y esta ficha de especie. No crear individuos, nivel numérico, objeto único ni cifra final de bajas.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF pp.46–51.
+
+
+## Cribado residual del recuento de Kobolds · 2026-11-08
+
+- **Fuente primaria examinada:** blob Markdown `d2b3306b1661584d9a42d651f57dca8a6814b20b`, líneas 1118–1264, correspondiente a la secuencia de PDF pp.47–51. No se modificó el archivo fuente.
+- **Cantidad de partida (explícita):** Bell describe ocho Kobolds en total; dos ya habían sido abatidos antes de que los seis restantes lo rodearan y persiguieran (p.47).
+- **Secuencia de la emboscada:** el texto ordinaliza al primero, dice «dos abajo» tras la puñalada en la garganta, luego «tres» tras romper el cuello de otro y «cuarto Kobold» al cortar el abdomen. Después afirma «sólo quedan dos» y, poco más tarde, dice que aplasta al «último Kobold» que lo mira con terror (pp.48–49).
+- **Lectura parcial:** la secuencia literal apunta a dos bajas previas más cuatro ordinales y una acción final adicional —una lectura de siete—, pero no explica qué ocurre con el otro de los dos que aún quedaban después del cuarto. La frase plural sobre los Kobolds inmóviles y la recuperación posterior de fragmentos no identifica de manera independiente el destino de ese individuo.
+- **Dictamen:** **Verificado parcialmente** para el grupo inicial (8), las dos bajas anteriores y la secuencia ordinal citada; **Pendiente** para el total final exacto y el destino del último integrante no explicado. Siete es una lectura mínima de la secuencia española, no una cifra total aprobada; no declarar ocho bajas ni que uno escapó.
+- **Alcance:** p.50 confirma la extracción de Fragmentos de Piedra Mágica y la necesidad de volver por los dos cadáveres anteriores; p.51 confirma la garra como botín. Esos datos no cierran el recuento. La traducción privada sigue sin cotejo japonés.
+- **No se crea ID ni evento:** se reutilizan `EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001` y `MON-DM-KOBOLD-001`. El cotejo textual/visual previo DMR-062 pp.41–56 se conserva; no se repite P1/P2/P3.
