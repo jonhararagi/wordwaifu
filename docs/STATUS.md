@@ -1520,3 +1520,12 @@ El cotejo inicial cubre PDF pp.1–24. Se confirmó visualmente la correspondenc
 - **Fuentes:** PDF 7.495.544 bytes, 215 páginas, SHA-1 13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3; Markdown blob d2b3306b1661584d9a42d651f57dca8a6814b20b. Fuentes originales intactas.
 - **Límites:** cotejo de traducción privada española contra PDF, no contra japonés. No se modificaron DMR-061 ni destinos funcionales. Pruebas automatizadas locales no ejecutadas.
 - **Cobertura narrativa DMR-062:** alcanzado el último folio narrativo p.214; p.215 contiene créditos. DMR-062 y V1 permanecen PARTIAL / IN_PROGRESS por hallazgos parciales acumulados y pendientes globales.
+
+
+## WordWaifu — checkpoint operativo V1 y discrepancias estadísticas · 2026-11-08
+
+- **Estado general:** V1, DMR-061 y DMR-062 permanecen `PARTIAL / IN_PROGRESS`. DMR-061: pasada 1 reconciliada pp.9–156; pasadas 2 y 3 completadas pp.9–156; tres pasadas previas pp.157–214 conservadas. DMR-062: cotejo independiente MD↔PDF documentado hasta el último folio narrativo p.214; p.215 contiene créditos.
+- **Cribado parcial de estadísticas:** `V1-AUD-007` conserva H120 (p.54) frente a H123 como valor anterior en p.91; no hay evidencia suficiente para explicar o corregir la diferencia. `V1-AUD-008` conserva D512 narrativo (p.195) frente a D521 visual (p.208); la imagen coincide con el Markdown, pero la discordancia interna del PDF persiste.
+- **Clasificación:** ambos casos quedan `Verificado parcialmente / Pendiente`; no se crean identificadores ni se modifican los expedientes fuente, el PDF o el Markdown original. La traducción española sigue sin cotejo con japonés.
+- **Siguiente tarea:** revisar el recuento de bajas Kobold y la ambigüedad traductora de p.18; luego revalidar el estado de la economía de la Daga de Hestia y la devolución del monedero de Seal. No repetir P1/P2/P3, no iniciar Volumen 2.
+- **Cola sincronizada:** `lore/danmachi/WORK_QUEUE.md` contiene el inventario corregido y el dictamen de los dos conflictos.
