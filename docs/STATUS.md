@@ -1553,3 +1553,10 @@ El cotejo inicial cubre PDF pp.1–24. Se confirmó visualmente la correspondenc
 - **Pendiente:** precio total, interés/tasa, importe de cada cuota y calendario de vencimientos no están establecidos por los registros/source extract examinados. La ficha existente ya conserva esta limitación; no se crean eventos ni objetos.
 - **Siguiente tarea:** Tarea 4 — verificar la devolución explícita del monedero de Seal, sin confundir el encargo y la posesión con su entrega efectiva.
 - **Estado global:** V1 y DMR-061/062 continúan `PARTIAL / IN_PROGRESS`; no iniciar Volumen 2.
+
+
+## Auditoría residual V1 — Tarea 4, monedero de Seal · 2026-11-08
+
+- **Resultado:** verificado parcialmente. Anya/Ryuu encargan a Bell llevar el monedero (PDF pp.136–138); Bell aún lo recuerda como tarea en p.151. El reencuentro con Seal en pp.203–204 y la disculpa de ella por olvidar el bolso no describen explícitamente el traspaso ni confirman recepción.
+- **Límite:** no marcar como devuelto; la escena anterior `EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001` (pp.98–102) es otro episodio. No crear ID de devolución sin pasaje claro.
+- **Estado:** las cuatro tareas del orden solicitado se cribaron; T1 y T4 tienen resultados parcialmente verificados con detalles pendientes, T2 requiere cotejo lingüístico independiente y T3 conserva términos no publicados. V1, DMR-061 y DMR-062 siguen `PARTIAL / IN_PROGRESS`.
