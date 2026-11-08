@@ -26,7 +26,7 @@ Conteos aproximados de palabras tras excluir las cargas base64 de imágenes y el
 
 | Volumen | Archivo fuente | Palabras aprox. | Imágenes incrustadas | Estado de análisis |
 |---|---|---:|---:|---|
-| 1 | `Volumen [01] • DanMachi.md` | 63.168 | 16 | DMR-061: P1 PDF↔DMR-061/DMR-062/destinos funcionales pp.9–156 completa; P2/P3 pp.9–156 completas; tres pasadas pp.157–214 conservadas. DMR-062 MD↔PDF: pp.1–72 examinadas; texto de pp.9–11, 13–14, 16–21, 23–69, 71–72 cotejado; IMAGE_MISSING pp.12, 15, 22, 37, 40 y 70; FORMATTING_LOSS pp.9, 13, 14, 35, 46, 54, 68 y 71; TRANSLATION_AMBIGUITY p.18. Próxima tanda MD↔PDF pp.73–88. PDF físico: 215 folios (p.8 blanca; p.215 créditos). V1 sigue PARTIAL / IN_PROGRESS. |
+| 1 | `Volumen [01] • DanMachi.md` | 63.168 | 16 | DMR-061: P1 PDF↔DMR-061/DMR-062/destinos funcionales pp.9–156 reconciliada; P2/P3 pp.9–156 completas; tres pasadas pp.157–214 conservadas. DMR-062 MD↔PDF: cotejo físico/textual/visual de todos los folios narrativos pp.1–214 documentado en 13 tandas; IMAGE_MISSING pp.12, 15, 22, 37, 40, 70, 73 y 86; FORMATTING_LOSS y demás hallazgos aceptados detallados en DMR-062; TRANSLATION_AMBIGUITY p.18 sigue abierta. PDF físico: 215 folios (p.8 blanca; p.215 créditos). DMR-061, DMR-062 y V1 siguen PARTIAL / IN_PROGRESS. Siguiente: reconciliar los hallazgos globales pendientes sin repetir páginas ni modificar las fuentes originales; no iniciar V2. |
 | 2 | `Volumen [02] • DanMachi.md` | 74.125 | 19 | DMR-060 contiene extracción parcial; falta certificar las tres pasadas completas. |
 | 3 | `Volumen [03] • DanMachi.md` | 53.883 | 21 | Fuente cargada; análisis integral pendiente. |
 | 4 | `Volumen [04] • DanMachi.md` | 64.892 | 23 | Fuente cargada; análisis integral pendiente. |
@@ -2099,3 +2099,11 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - **Cobertura de esta tanda:** cotejo físico pp.201–214 completado. p.215 contiene créditos y queda fuera del rango narrativo.
 - **Estado global:** DMR-062 y Volumen 1 continúan PARTIAL / IN_PROGRESS por hallazgos parciales acumulados y pendientes globales. No iniciar Volumen 2.
 - **Validación:** cotejo textual secuencial y visual manual efectuados; pruebas automatizadas locales no ejecutadas; CI pendiente sobre el SHA documental final.
+
+
+## Próxima acción exacta · V1 · 2026-11-08
+
+- **Checkpoint verificado:** `main` estaba en `afbf28e6f9bb6f87b7d09810f14570320c88fa66`; DMR-062 llegó al último folio narrativo (PDF p.214). P1 pp.9–156 está reconciliada; P2/P3 pp.9–156 están completas; las tres pasadas de pp.157–214 se conservan.
+- **Estado:** DMR-061, DMR-062 y Volumen 1 permanecen `PARTIAL / IN_PROGRESS`. Los hallazgos visuales/formales aceptados no autorizan a modificar la transcripción fuente ni a marcar el volumen como completo.
+- **Siguiente tarea:** consolidar el registro de discrepancias residuales de V1, contrastándolo con los registros funcionales y los localizadores ya existentes. Empezar por `V1-AUD-007` (H120/H123) y `V1-AUD-008` (D512/D521): comprobar si cada diferencia corresponde a snapshots temporales distintos o a una discrepancia real; no resolver por inferencia. Después revalidar el recuento de bajas Kobold y la ambigüedad traductora de p.18, y comprobar si siguen abiertos los detalles económicos de la Daga de Hestia y la devolución del monedero de Seal.
+- **Restricciones:** trabajar solo en `main`; no crear ramas ni PR, no hacer force-push, no alterar PDF/Markdown fuente, no duplicar IDs ni iniciar Volumen 2. Registrar `Pendiente` cuando falte evidencia primaria suficiente.
