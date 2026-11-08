@@ -1545,3 +1545,11 @@ El cotejo inicial cubre PDF pp.1–24. Se confirmó visualmente la correspondenc
 - **Límite:** la traducción privada no está cotejada con japonés; la dirección de «por debajo» sigue pendiente lingüísticamente. No se modifica la cita ni se crea ID.
 - **Siguiente tarea:** revisar la economía de la Daga de Hestia, préstamos, deuda y condiciones en los registros existentes.
 - **Estado global:** V1, DMR-061 y DMR-062 siguen `PARTIAL / IN_PROGRESS`; no iniciar Volumen 2.
+
+
+## Auditoría residual V1 — Tarea 3, economía de la Daga de Hestia · 2026-11-08
+
+- **Resultado:** verificado parcialmente. La obligación de pagar incluso si toma décadas/siglos aparece en pp.132–133; la entrega confirma que el préstamo no se condona en pp.145–146; la tarjeta visual p.208 da 35 años / 420 plazos y trabajo en la sucursal Babel de Hephaistos Familia.
+- **Pendiente:** precio total, interés/tasa, importe de cada cuota y calendario de vencimientos no están establecidos por los registros/source extract examinados. La ficha existente ya conserva esta limitación; no se crean eventos ni objetos.
+- **Siguiente tarea:** Tarea 4 — verificar la devolución explícita del monedero de Seal, sin confundir el encargo y la posesión con su entrega efectiva.
+- **Estado global:** V1 y DMR-061/062 continúan `PARTIAL / IN_PROGRESS`; no iniciar Volumen 2.
