@@ -1217,3 +1217,42 @@ En las posiciones correspondientes no hay bloques de imagen Markdown. Los siete 
 - **Alcance y límites:** cotejo de la traducción privada española contra su PDF, no contra el original japonés. No se crean fichas, eventos ni IDs funcionales; no se modifican el PDF, el Markdown fuente, DMR-061 ni los destinos funcionales. No se repiten P1/P2/P3.
 - **Validación:** extracción textual, cotejo secuencial página por página y render/inspección visual manual efectuados. Pruebas automatizadas locales no ejecutadas. El estado de CI debe comprobarse sobre el SHA documental final.
 - **Siguiente tanda:** cotejo independiente Markdown↔PDF, pp.201–214. El folio 215 contiene créditos y no forma parte del siguiente rango narrativo. DMR-062 y Volumen 1 continúan PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
+
+
+### DMR-062 — duodécima tanda de cotejo independiente MD↔PDF · Volumen 1 · PDF pp.201–214 · 2026-11-08
+
+- **Fuentes e integridad:** PDF original de 215 páginas, 7.495.544 bytes, SHA-1 13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3; Markdown original blob d2b3306b1661584d9a42d651f57dca8a6814b20b. Se recuperaron ambos sin modificar sus contenidos.
+- **Método:** extracción de texto por folio físico, cotejo secuencial contra el blob Markdown y render/inspección visual de pp.201–214. Se verificaron individualmente las imágenes incrustadas de Markdown contra los folios ilustrados del PDF.
+- **Cobertura:** 14/14 folios físicos inspeccionados. Once contienen texto (pp.201–207 y 211–214); tres son páginas ilustradas (pp.208–210). Las tres imágenes Markdown de líneas 7100, 7102 y 7104 coinciden visualmente con las páginas 208, 209 y 210 del PDF, incluidos los textos integrados en las imágenes de Estado/Daga y ficha de Bell.
+- **Resultado:** 12 COMPLETE y 2 PARTIAL. Los dos parciales son pérdidas de jerarquía/estilo en separadores físicos ××× representados como encabezados Markdown # × × ×; no se demuestra pérdida de texto narrativo.
+
+#### Matriz por folio físico
+
+| PDF | Markdown | Contenido cotejado | Resultado |
+|---:|---|---|---|
+| 201 | 6818–6858 | Cierre de la escena del Troll; Aizu y Loki comprueban que queda el Silverback y siguen la información de los civiles. El separador inicial físico ××× aparece como encabezado Markdown. | PARTIAL — FORMATTING_LOSS. |
+| 202 | texto | Loki pregunta por el monstruo; un civil informa que un aventurero de cabello blanco y ojos rojos derrotó al Silverback. Aizu reconoce a Bell y recuerda el rescate del Minotauro. | COMPLETE |
+| 203 | 6891–6914 | Aizu felicita mentalmente a Bell por su crecimiento y decide que necesita verlo para disculparse. El separador físico ××× al cierre del folio se representa como encabezado Markdown. | PARTIAL — FORMATTING_LOSS. |
+| 204 | texto | Bell encuentra a Seal en la Señora de la Abundancia; Seal confirma que Hestia no corre peligro mortal y comenta los rumores sobre la victoria de Bell. | COMPLETE |
+| 205 | texto | Seal se despide; Bell va a ver a Hestia y la encuentra caída junto a la cama tras intentar levantarse. | COMPLETE |
+| 206 | texto | Hestia explica la dogeza de 30 horas; Bell identifica la marca de Hefesto en la daga y escucha por qué Hestia no quería depender de otros. | COMPLETE |
+| 207 | texto | Hestia explica el significado de la Daga de Hestia y reafirma su afecto; Bell llora y la abraza. | COMPLETE |
+| 208 | imagen, línea 7100 | Imagen de Estado actualizado y ficha explicativa de la Daga de Hestia; la imagen Markdown coincide visualmente con el PDF, incluidos valores y texto integrado. | COMPLETE — ilustración coincidente. |
+| 209 | imagen, línea 7102 | Ilustración de Bell con su ficha de aventurero y detalles de la daga; imagen Markdown coincidente visualmente con el PDF. | COMPLETE — ilustración coincidente. |
+| 210 | imagen, línea 7104 | Ilustración monocroma de Hestia con el título japonés de la Familia Mista; imagen Markdown coincidente visualmente con el PDF. | COMPLETE — ilustración coincidente. |
+| 211 | texto, inicio de epílogo | Inicio de El Mito de la Familia: Hestia observa a Bell y recuerda su intento número 50 de reclutar a alguien. | COMPLETE |
+| 212 | texto | Hestia y Bell hablan de sus Familias; Bell solicita ingresar y Hestia confirma que desea aceptarlo. | COMPLETE |
+| 213 | texto | Hestia concede la Gracia a Bell en la habitación llena de libros; conversan sobre su deseo de ser aventurero y los encuentros predestinados. | COMPLETE |
+| 214 | texto final | Cierre del epílogo: historia de los Aventureros, los Mitos de un Héroe y La Historia de una Familia. | COMPLETE |
+
+#### Hallazgos aceptados
+
+| ID | PDF | Línea Markdown | Categoría | Evidencia | Estado |
+|---|---:|---:|---|---|---|
+| V1-MDPDF-201-001 | 201 | 6818 | FORMATTING_LOSS | El separador físico centrado ××× aparece como encabezado Markdown de nivel 1 # × × ×. No se demuestra pérdida narrativa. | ACEPTADO |
+| V1-MDPDF-203-001 | 203 | 6914 | FORMATTING_LOSS | El separador físico centrado ××× aparece como encabezado Markdown de nivel 1 # × × ×. No se demuestra pérdida narrativa. | ACEPTADO |
+
+- **Controles:** no se demuestra TRANSCRIPTION_ERROR, ORDER_ERROR, DUPLICATION, IMAGE_MISSING, IMAGE_MISMATCH ni PAGE_MAPPING_UNRESOLVED en este rango. Las imágenes de pp.208–210 están presentes y coinciden visualmente. Se inspeccionaron los textos integrados en las imágenes, sin tratarlos como texto extraíble del PDF.
+- **Alcance y límites:** cotejo de la traducción privada española contra su PDF, no contra el original japonés. No se modifican PDF, Markdown fuente, DMR-061 ni destinos funcionales. No se repiten P1/P2/P3. La p.215 de créditos queda fuera del rango narrativo.
+- **Validación:** extracción textual por página, cotejo secuencial, render e inspección visual manual efectuados; pruebas automatizadas locales no ejecutadas. CI pendiente de comprobar sobre el SHA documental final.
+- **Continuidad:** DMR-062 alcanza el último folio narrativo solicitado (p.214); el volumen y la auditoría permanecen PARTIAL / IN_PROGRESS por los hallazgos acumulados y pendientes globales. No iniciar Volumen 2.
