@@ -2132,3 +2132,12 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - **Evidencia:** PDF p.18 / Markdown blob `d2b3306b1661584d9a42d651f57dca8a6814b20b`, línea 262. «Decimoquinto piso o por debajo» expresa un umbral/rango, no un piso único. En pp.63–66 la misma novela describe la progresión desde el piso 17 hacia pisos superiores hasta el quinto, lo que favorece entender «por debajo» como piso 15 y más profundo.
 - **Límite:** la orientación contextual no prueba el matiz de la traducción española frente al japonés. Se conserva la frase exacta; no corregir la fuente ni convertir la lectura probable en canon aceptado.
 - **Siguiente tarea:** Tarea 3, auditar los términos económicos de la Daga de Hestia y contrastarlos con el evento `EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001` y la ficha `OBJ-DM-HESTIA-DAGGER-001`.
+
+
+## Resultado parcial · Tarea 3: economía de la Daga de Hestia · 2026-11-08
+
+- **Estado:** Verificado parcialmente; condiciones no expuestas Pendientes.
+- **Evidencia existente:** obligación de pagar el préstamo incluso si requiere décadas o siglos (PDF pp.132–133); entrega sin condonación (pp.145–146); tarjeta visual p.208: 35 años / 420 plazos y trabajo en la sucursal Babel de Hephaistos Familia.
+- **Datos no establecidos:** precio total, tasa/interés, importe por cuota y calendario de pagos. No se inventan cifras ni interpretación contractual.
+- **IDs reutilizados:** `OBJ-DM-HESTIA-DAGGER-001`, `EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001`, `EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001`, `EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001`. Sin IDs nuevos y sin duplicación.
+- **Siguiente tarea exacta:** Tarea 4, comprobar si existe un pasaje explícito que confirme la devolución del monedero de Seal; diferenciar encargo, posesión, búsqueda, entrega y disculpa.
