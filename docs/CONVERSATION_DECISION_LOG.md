@@ -996,3 +996,14 @@
 - **Controles:** no se demuestra TRANSCRIPTION_ERROR, ORDER_ERROR, DUPLICATION, IMAGE_MISSING, IMAGE_MISMATCH ni PAGE_MAPPING_UNRESOLVED en este rango. Los textos integrados en las imágenes de pp.208–209 fueron inspeccionados visualmente.
 - **Límites:** traducción privada española cotejada contra PDF, no contra japonés. No se modifican PDF, Markdown fuente, DMR-061 ni destinos funcionales. Pruebas automatizadas locales no ejecutadas.
 - **Continuidad:** último folio narrativo p.214; p.215 contiene créditos. No iniciar Volumen 2. V1 y DMR-062 siguen PARTIAL / IN_PROGRESS.
+
+
+### CONV-DM-2026-11-08-002 — Continuar auditoría residual de V1 en orden controlado
+
+- **Fecha:** 2026-11-08.
+- **Estado:** ACCEPTED como instrucción operativa; el resultado factual de cada tarea mantiene su propia clasificación de evidencia.
+- **Orden aceptado:** (1) recuento de Kobolds pp.47–54; (2) ambigüedad traductora p.18; (3) economía de la Daga de Hestia; (4) devolución del monedero de Seal. No iniciar Volumen 2 ni repetir P1/P2/P3 ya verificadas.
+- **Restricciones:** trabajar solo en `main`, sin ramas ni PR, sin force-push, sin modificar archivos fuente originales y sin duplicar IDs. El texto de `volumes/main/` conserva prioridad como fuente de trabajo de `CONT-MAIN-LN`; la traducción privada no cotejada con japonés mantiene sus ambigüedades.
+- **Resultado de Tarea 1 (cribado 2026-11-08):** grupo inicial de ocho; dos bajas expresas previas y seis perseguidores. La secuencia de p.48–49 contiene cuatro ordinales y una acción posterior sobre «el último», pero tras «sólo quedan dos» no aclara el destino del otro. La lectura literal apunta a siete bajas, no a un total exacto verificable. Tarea clasificada `Verificado parcialmente`; total exacto `Pendiente`.
+- **Documentos afectados:** DMR-061, evento `EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001`, ficha `MON-DM-KOBOLD-001`, WORK_QUEUE y STATUS. No se altera la transcripción ni el PDF.
+- **Siguiente acción:** Tarea 2, reevaluar p.18 y su formulación «decimoquinto piso o por debajo» sin normalizarla por conocimiento externo.
