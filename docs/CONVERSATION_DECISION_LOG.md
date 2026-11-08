@@ -1017,3 +1017,13 @@
 - **Decisión operativa:** conservar la cita literal y el nivel de incertidumbre. No modificar el Markdown fuente, no normalizar la dirección por intuición y no crear ID. La confirmación lingüística queda Pendiente.
 - **Documentos afectados:** DMR-061, ficha Minotauro, evento Bell–Ais–Minotauro, WORK_QUEUE y STATUS. No se alteran las pasadas P1/P2/P3 ni DMR-062.
 - **Siguiente tarea:** Tarea 3, revisar la economía de la Daga de Hestia.
+
+
+### CONV-DM-2026-11-08-004 — Cribado económico de la Daga de Hestia en V1
+
+- **Fecha:** 2026-11-08.
+- **Estado:** ACCEPTED para el registro de evidencia; factualidad Verificada parcialmente.
+- **Resultado:** pp.132–133 establecen que el préstamo debe pagarse íntegramente incluso si requiere décadas/siglos; pp.145–146 confirman que no se condona; la tarjeta visual p.208 consigna 35 años / 420 plazos y trabajo en la sucursal Babel de Hephaistos Familia.
+- **Límites:** no fijar precio total, interés, importe por cuota ni calendario de pagos porque no están establecidos en la extracción disponible. La traducción privada no se cotejó con japonés; la tarjeta p.208 se conserva como evidencia visual.
+- **IDs y documentos:** se reutilizan OBJ-DM-HESTIA-DAGGER-001 y los eventos existentes de petición, entrega y explicación del préstamo. No se crean IDs ni se modifica la fuente original.
+- **Siguiente acción:** Tarea 4, comprobar si existe evidencia explícita de devolución del monedero de Seal.
