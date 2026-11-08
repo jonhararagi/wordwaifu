@@ -1537,3 +1537,11 @@ El cotejo inicial cubre PDF pp.1–24. Se confirmó visualmente la correspondenc
 - **Registros:** se reutilizan `EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001` y `MON-DM-KOBOLD-001`; sin IDs nuevos, sin modificar fuentes originales y sin repetir las pasadas P1/P2/P3 ni el cotejo DMR-062 pp.41–56.
 - **Siguiente tarea:** Tarea 2, p.18 — determinar el alcance de la frase traducida «decimoquinto piso o por debajo», conservando la ambigüedad si no hay prueba suficiente.
 - **Estado global:** V1, DMR-061 y DMR-062 continúan `PARTIAL / IN_PROGRESS`; no iniciar Volumen 2.
+
+
+## Auditoría residual V1 — Tarea 2, frase del piso 15 · 2026-11-08
+
+- **Resultado:** verificado parcialmente. «Decimoquinto piso o por debajo» en p.18 es un umbral/rango, no una ubicación única. El contexto del mismo volumen (pp.63–66) favorece la lectura piso 15 y niveles más profundos, pues el relato describe Minotauros que suben desde el 17 hacia el 5.
+- **Límite:** la traducción privada no está cotejada con japonés; la dirección de «por debajo» sigue pendiente lingüísticamente. No se modifica la cita ni se crea ID.
+- **Siguiente tarea:** revisar la economía de la Daga de Hestia, préstamos, deuda y condiciones en los registros existentes.
+- **Estado global:** V1, DMR-061 y DMR-062 siguen `PARTIAL / IN_PROGRESS`; no iniciar Volumen 2.
