@@ -1529,3 +1529,11 @@ El cotejo inicial cubre PDF pp.1–24. Se confirmó visualmente la correspondenc
 - **Clasificación:** ambos casos quedan `Verificado parcialmente / Pendiente`; no se crean identificadores ni se modifican los expedientes fuente, el PDF o el Markdown original. La traducción española sigue sin cotejo con japonés.
 - **Siguiente tarea:** revisar el recuento de bajas Kobold y la ambigüedad traductora de p.18; luego revalidar el estado de la economía de la Daga de Hestia y la devolución del monedero de Seal. No repetir P1/P2/P3, no iniciar Volumen 2.
 - **Cola sincronizada:** `lore/danmachi/WORK_QUEUE.md` contiene el inventario corregido y el dictamen de los dos conflictos.
+
+
+## Auditoría residual V1 — Tarea 1, Kobolds · 2026-11-08
+
+- **Resultado:** verificado parcialmente. El texto parte de ocho Kobolds; dos ya estaban abatidos antes de que seis persiguieran a Bell. Los ordinales de pp.48–49 y la mención posterior del «último» apuntan a una lectura de siete bajas, pero después de «sólo quedan dos» no se explica el destino del otro. El total exacto permanece pendiente.
+- **Registros:** se reutilizan `EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001` y `MON-DM-KOBOLD-001`; sin IDs nuevos, sin modificar fuentes originales y sin repetir las pasadas P1/P2/P3 ni el cotejo DMR-062 pp.41–56.
+- **Siguiente tarea:** Tarea 2, p.18 — determinar el alcance de la frase traducida «decimoquinto piso o por debajo», conservando la ambigüedad si no hay prueba suficiente.
+- **Estado global:** V1, DMR-061 y DMR-062 continúan `PARTIAL / IN_PROGRESS`; no iniciar Volumen 2.
