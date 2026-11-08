@@ -2141,3 +2141,11 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - **Datos no establecidos:** precio total, tasa/interés, importe por cuota y calendario de pagos. No se inventan cifras ni interpretación contractual.
 - **IDs reutilizados:** `OBJ-DM-HESTIA-DAGGER-001`, `EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001`, `EVT-DM-V01-HEPHAISTOS-GIVES-DAGA-HESTIA-001`, `EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001`. Sin IDs nuevos y sin duplicación.
 - **Siguiente tarea exacta:** Tarea 4, comprobar si existe un pasaje explícito que confirme la devolución del monedero de Seal; diferenciar encargo, posesión, búsqueda, entrega y disculpa.
+
+
+## Resultado parcial · Tarea 4: devolución del monedero de Seal · 2026-11-08
+
+- **Estado:** Verificado parcialmente; devolución efectiva Pendiente.
+- **Evidencia:** Anya/Ryuu entregan el monedero a Bell (PDF pp.136–138); Bell mantiene la tarea en mente (p.151). Más adelante encuentra a Seal al regresar ella del Festival (pp.203–204), pero el texto solo registra que Seal se disculpa por haber olvidado su bolso y por haberlo involucrado en la conmoción. No se narra explícitamente el traspaso de Bell a Seal ni se confirma recepción.
+- **No confundir:** `EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001` (pp.98–102) es la visita anterior para disculparse y pagar la comida, no devolución del monedero. No se crea ID de evento ni se reutiliza aquel evento.
+- **Cierre de esta tanda:** completado el cribado de las cuatro tareas ordenadas. V1 sigue PARTIAL / IN_PROGRESS por la cuenta Kobold, el cotejo japonés y otras discrepancias conocidas. Próxima tarea posterior a este cribado: determinar si hay evidencia primaria japonesa/licenciada para los casos aún pendientes; no iniciar Volumen 2.
