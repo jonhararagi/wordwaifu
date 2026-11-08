@@ -1027,3 +1027,12 @@
 - **Límites:** no fijar precio total, interés, importe por cuota ni calendario de pagos porque no están establecidos en la extracción disponible. La traducción privada no se cotejó con japonés; la tarjeta p.208 se conserva como evidencia visual.
 - **IDs y documentos:** se reutilizan OBJ-DM-HESTIA-DAGGER-001 y los eventos existentes de petición, entrega y explicación del préstamo. No se crean IDs ni se modifica la fuente original.
 - **Siguiente acción:** Tarea 4, comprobar si existe evidencia explícita de devolución del monedero de Seal.
+
+
+### CONV-DM-2026-11-08-005 — Mantener pendiente la devolución del monedero de Seal
+
+- **Fecha:** 2026-11-08.
+- **Estado:** ACCEPTED como clasificación de evidencia.
+- **Resultado:** Anya/Ryuu entregan el monedero a Bell en pp.136–138; Bell recuerda que debe devolverlo en p.151. El reencuentro con Seal en pp.203–204 registra la disculpa por haber olvidado el bolso, pero no una acción explícita de Bell entregando el monedero ni una confirmación de recepción.
+- **Límite:** devolución efectiva = PENDIENTE; no inferirla desde el reencuentro o la disculpa. El evento `EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001` (pp.98–102) cubre la disculpa y el pago de la comida en una visita distinta, no el monedero. No crear ID de devolución sin pasaje localizado.
+- **Documentos:** DMR-061, WORK_QUEUE, STATUS y este registro; fuente original intacta.
