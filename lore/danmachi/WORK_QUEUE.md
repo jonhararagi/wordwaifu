@@ -2086,3 +2086,16 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - **Siguiente tanda DMR-062:** cotejo independiente Markdown↔PDF, pp.201–214. El folio 215 contiene créditos.
 - **Estado:** DMR-062 y Volumen 1 continúan PARTIAL / IN_PROGRESS; no iniciar Volumen 2.
 - **Validación:** cotejo textual y render/inspección visual manual efectuados; pruebas automatizadas locales no ejecutadas; CI pendiente de comprobación sobre el SHA documental final.
+
+
+### DMR-062 — auditoría independiente MD↔PDF · Volumen 1 · checkpoint 2026-11-08 · pp.201–214
+
+- [x] Recuperar el PDF original y verificar 215 páginas, 7.495.544 bytes y SHA-1 13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3; preservar la fuente.
+- [x] Recuperar el Markdown original blob d2b3306b1661584d9a42d651f57dca8a6814b20b; preservar la fuente.
+- [x] Inspeccionar 14/14 folios físicos pp.201–214; cotejar los folios textuales y revisar visualmente las tres ilustraciones pp.208–210 contra sus imágenes Markdown (líneas 7100, 7102 y 7104).
+- [x] Registrar V1-MDPDF-201-001 y V1-MDPDF-203-001 (FORMATTING_LOSS por separadores físicos ××× representados como encabezados Markdown).
+- [x] Confirmar 12 COMPLETE y 2 PARTIAL; no se demuestra pérdida narrativa, error de transcripción, orden, duplicación ni imagen ausente en este rango.
+- [x] Preservar PDF, Markdown fuente, DMR-061 y destinos funcionales; no repetir P1/P2/P3.
+- **Cobertura de esta tanda:** cotejo físico pp.201–214 completado. p.215 contiene créditos y queda fuera del rango narrativo.
+- **Estado global:** DMR-062 y Volumen 1 continúan PARTIAL / IN_PROGRESS por hallazgos parciales acumulados y pendientes globales. No iniciar Volumen 2.
+- **Validación:** cotejo textual secuencial y visual manual efectuados; pruebas automatizadas locales no ejecutadas; CI pendiente sobre el SHA documental final.
