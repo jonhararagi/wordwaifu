@@ -2124,3 +2124,11 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - **Resultado:** ocho integrantes iniciales; dos abatidos antes de la persecución de los seis restantes. En la emboscada, los ordinales de p.48–49 junto con la acción posterior sobre «el último» apuntan a una lectura de siete bajas, pero la frase «sólo quedan dos» tras el cuarto y la mención posterior de un solo «último» no explican el destino del otro. No afirmar ocho bajas ni que alguien escapó.
 - **Registros reutilizados:** `EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001` y `MON-DM-KOBOLD-001`. No se crean IDs. PDF y Markdown originales intactos; DMR-062 pp.41–56 no se repite.
 - **Siguiente tarea exacta:** Tarea 2, p.18: reexaminar el contexto de «decimoquinto piso o por debajo» y clasificar la ambigüedad traductora sin corregir el texto por inferencia.
+
+
+## Resultado parcial · Tarea 2: ambigüedad del piso 15 · 2026-11-08
+
+- **Estado:** Verificado parcialmente; cotejo lingüístico Pendiente.
+- **Evidencia:** PDF p.18 / Markdown blob `d2b3306b1661584d9a42d651f57dca8a6814b20b`, línea 262. «Decimoquinto piso o por debajo» expresa un umbral/rango, no un piso único. En pp.63–66 la misma novela describe la progresión desde el piso 17 hacia pisos superiores hasta el quinto, lo que favorece entender «por debajo» como piso 15 y más profundo.
+- **Límite:** la orientación contextual no prueba el matiz de la traducción española frente al japonés. Se conserva la frase exacta; no corregir la fuente ni convertir la lectura probable en canon aceptado.
+- **Siguiente tarea:** Tarea 3, auditar los términos económicos de la Daga de Hestia y contrastarlos con el evento `EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001` y la ficha `OBJ-DM-HESTIA-DAGGER-001`.
