@@ -1007,3 +1007,13 @@
 - **Resultado de Tarea 1 (cribado 2026-11-08):** grupo inicial de ocho; dos bajas expresas previas y seis perseguidores. La secuencia de p.48–49 contiene cuatro ordinales y una acción posterior sobre «el último», pero tras «sólo quedan dos» no aclara el destino del otro. La lectura literal apunta a siete bajas, no a un total exacto verificable. Tarea clasificada `Verificado parcialmente`; total exacto `Pendiente`.
 - **Documentos afectados:** DMR-061, evento `EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001`, ficha `MON-DM-KOBOLD-001`, WORK_QUEUE y STATUS. No se altera la transcripción ni el PDF.
 - **Siguiente acción:** Tarea 2, reevaluar p.18 y su formulación «decimoquinto piso o por debajo» sin normalizarla por conocimiento externo.
+
+
+### CONV-DM-2026-11-08-003 — Mantener ambigüedad traductora de p.18 sin corregir el texto
+
+- **Fecha:** 2026-11-08.
+- **Estado:** ACCEPTED como criterio de auditoría; lectura factual Verificado parcialmente.
+- **Resultado:** la expresión «decimoquinto piso o por debajo» es un umbral/rango y no un piso concreto. El contexto del propio V1 (piso 17 → pisos superiores → piso 5 en el relato de pp.63–66) favorece entenderla como piso 15 o más profundo; el sentido de la traducción no queda cotejado con japonés.
+- **Decisión operativa:** conservar la cita literal y el nivel de incertidumbre. No modificar el Markdown fuente, no normalizar la dirección por intuición y no crear ID. La confirmación lingüística queda Pendiente.
+- **Documentos afectados:** DMR-061, ficha Minotauro, evento Bell–Ais–Minotauro, WORK_QUEUE y STATUS. No se alteran las pasadas P1/P2/P3 ni DMR-062.
+- **Siguiente tarea:** Tarea 3, revisar la economía de la Daga de Hestia.
