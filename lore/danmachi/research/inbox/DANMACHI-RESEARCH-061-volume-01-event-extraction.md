@@ -1871,3 +1871,12 @@ La siguiente matriz separa lo que los checkpoints permiten certificar de la extr
 - **Dictamen:** **Verificado parcialmente** para el grupo inicial (8), las dos bajas anteriores y la secuencia ordinal citada; **Pendiente** para el total final exacto y el destino del último integrante no explicado. Siete es una lectura mínima de la secuencia española, no una cifra total aprobada; no declarar ocho bajas ni que uno escapó.
 - **Alcance:** p.50 confirma la extracción de Fragmentos de Piedra Mágica y la necesidad de volver por los dos cadáveres anteriores; p.51 confirma la garra como botín. Esos datos no cierran el recuento. La traducción privada sigue sin cotejo japonés.
 - **No se crea ID ni evento:** se reutilizan `EVT-DM-V01-BELL-DEFEATS-KOBOLD-PARTY-001` y `MON-DM-KOBOLD-001`. El cotejo textual/visual previo DMR-062 pp.41–56 se conserva; no se repite P1/P2/P3.
+
+
+## Revisión residual de la expresión del piso 15 · 2026-11-08
+
+- **Localizador principal:** PDF p.18; transcripción Markdown exacta blob `d2b3306b1661584d9a42d651f57dca8a6814b20b`, línea 262.
+- **Forma conservada:** «Por conocimiento común, ese monstruo sólo debe salir en el decimoquinto piso o por debajo». La frase no señala un único piso: su forma expresa un umbral/rango abierto desde el piso 15 en una dirección aún sensible a la ambigüedad de «por debajo».
+- **Contexto de la misma fuente:** Eina califica extraordinario el Minotauro de nivel 2 encontrado por Bell en el piso 5 (p.18). En el relato posterior oído por Bell, la Familia Loki desciende al piso 17, persigue Minotauros que escaparon hacia pisos superiores y el último llega al piso 5 (pp.63–66; transcripción Markdown líneas 1808–1824). Ese uso narrativo confirma que el piso 17 es más profundo que el quinto y favorece interpretar «por debajo» como piso 15 y niveles más profundos.
+- **Límite lingüístico:** el contexto favorece esa lectura, pero no demuestra qué matiz exacto pretendía el traductor ni permite cotejar la frase con el japonés. No reescribir «por debajo» ni cambiar la cita del texto fuente.
+- **Dictamen:** **Verificado parcialmente**: rango/umbral, no localización exacta; lectura contextual más probable = piso 15 o niveles más profundos. **Pendiente**: confirmación del sentido direccional frente al original japonés o una edición licenciada independiente. No crear ID ni alterar la fuente.
