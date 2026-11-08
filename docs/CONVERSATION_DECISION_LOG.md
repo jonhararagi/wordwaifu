@@ -984,3 +984,15 @@
 - **Límites:** la traducción privada española continúa sin cotejo con japonés. No se modifican PDF, Markdown fuente, DMR-061 ni destinos funcionales. No se repiten P1/P2/P3.
 - **Validación:** cotejo textual secuencial y render/inspección visual manual realizados; pruebas automatizadas locales no ejecutadas. La CI debe comprobarse sobre el SHA documental final.
 - **Continuidad:** siguiente rango DMR-062 pp.201–214; p.215 contiene créditos. No iniciar Volumen 2.
+
+
+### CONV-DM-2026-11-08-001 — Auditoría independiente MD↔PDF V1 pp.201–214
+
+- **Fecha:** 2026-11-08.
+- **Estado:** ACCEPTED para el registro de los dos hallazgos; DMR-062 y V1 permanecen PARTIAL / IN_PROGRESS.
+- **Alcance:** cotejo de PDF físico pp.201–214 contra Markdown blob d2b3306b1661584d9a42d651f57dca8a6814b20b; PDF original de 215 páginas, 7.495.544 bytes, SHA-1 13ceaeb94727698f7e8c3b0e607a1ba4ffbd98c3. Fuentes originales preservadas.
+- **Resultado:** 14/14 folios inspeccionados; once con texto cotejado y tres ilustraciones pp.208–210 verificadas visualmente contra sus imágenes Markdown (líneas 7100, 7102 y 7104). Resultado: 12 COMPLETE y 2 PARTIAL por pérdida de formato en pp.201 y 203.
+- **Hallazgos aceptados:** V1-MDPDF-201-001 y V1-MDPDF-203-001, ambos FORMATTING_LOSS por convertir separadores físicos ××× en encabezados Markdown de nivel 1.
+- **Controles:** no se demuestra TRANSCRIPTION_ERROR, ORDER_ERROR, DUPLICATION, IMAGE_MISSING, IMAGE_MISMATCH ni PAGE_MAPPING_UNRESOLVED en este rango. Los textos integrados en las imágenes de pp.208–209 fueron inspeccionados visualmente.
+- **Límites:** traducción privada española cotejada contra PDF, no contra japonés. No se modifican PDF, Markdown fuente, DMR-061 ni destinos funcionales. Pruebas automatizadas locales no ejecutadas.
+- **Continuidad:** último folio narrativo p.214; p.215 contiene créditos. No iniciar Volumen 2. V1 y DMR-062 siguen PARTIAL / IN_PROGRESS.
