@@ -14,6 +14,7 @@ source_locators:
   - PDF pp. 119–120
 encounter_event_ids:
   - EVT-DM-V01-BELL-DEFEATS-GOBLIN-AND-GETS-TOOTH-001
+  - EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001
 aliases:
   - Goblin
 spoiler_level: mild
