@@ -1036,3 +1036,16 @@
 - **Resultado:** Anya/Ryuu entregan el monedero a Bell en pp.136–138; Bell recuerda que debe devolverlo en p.151. El reencuentro con Seal en pp.203–204 registra la disculpa por haber olvidado el bolso, pero no una acción explícita de Bell entregando el monedero ni una confirmación de recepción.
 - **Límite:** devolución efectiva = PENDIENTE; no inferirla desde el reencuentro o la disculpa. El evento `EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001` (pp.98–102) cubre la disculpa y el pago de la comida en una visita distinta, no el monedero. No crear ID de devolución sin pasaje localizado.
 - **Documentos:** DMR-061, WORK_QUEUE, STATUS y este registro; fuente original intacta.
+
+
+### CONV-DM-2026-11-11-001 — Reconciliar relaciones entre monstruos y acontecimientos V1
+
+- **Fecha:** 2026-11-11.
+- **Estado:** ACCEPTED como instrucción operativa; cada vínculo conserva su propio dictamen factual.
+- **Alcance:** comprobar únicamente las fichas objetivo Frog Shooter, War Shadow, Dungeon Lizard y Battle Jabalí contra acontecimientos ya existentes de `CONT-MAIN-LN`; no crear eventos/IDs ni repetir DMR-061/DMR-062.
+- **Convención verificada:** las fichas de monstruos implementan `encounter_event_ids` como enlace saliente al evento. Las fichas de eventos examinadas no usan un campo recíproco `related_monster_ids`; no se añade por intuición.
+- **Resultado:** se autoriza la relación de Dungeon Lizard con `EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001`, por participación explícita y localizadores PDF pp.117–119. Se conserva la fuente DMR-061-SRC-001 y `CONT-MAIN-LN`.
+- **No se enlaza:** Frog Shooter, porque DMR-061 documenta su muerte en p.76 pero excluye expresamente un evento aislado; War Shadow, porque pp.79–85 dejan abierto el combate y el evento de actualización de pp.91–97 no es el encuentro; Battle Jabalí, porque p.156 muestra una demostración de domesticación y no el encuentro de Bell, y no debe confundirse con los monstruos fugados.
+- **Límite fuera de alcance:** el evento de pp.117–120 también incluye un Goblin; su ficha cita el evento en el cuerpo, pero no en `encounter_event_ids`. Se deja intacta por no pertenecer a las cuatro fichas objetivo.
+- **Documentos afectados:** ficha Dungeon Lizard, STATUS y este registro. DMR-061, DMR-062, catálogo, índice de monstruos, eventos y fuente original permanecen sin cambios.
+- **Próximo checkpoint:** resolver exclusivamente la referencia del Goblin al evento combinado, con autorización de alcance antes de editar esa ficha.

@@ -1,3 +1,13 @@
+## Reconciliación de relaciones monstruo–evento V1 (2026-11-11)
+
+- **Estado remoto inicial:** `main` en `deaf22afc230dfef2d634396ee8242367659ea26`; idéntico al checkpoint recibido. Sin cambios posteriores al inicio de la tarea.
+- **Alcance:** cuatro fichas objetivo; eventos V1 existentes; convención `encounter_event_ids` en fichas de monstruos. No se modifican DMR-061, DMR-062, la fuente del volumen ni índices.
+- **Resultado:** se confirma una relación nueva en alcance: `MON-DM-DUNGEON-LIZARD-001` → `EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-AND-RETURNS-001` [typo sentinel]. La referencia se basa en la participación explícita del Dungeon Lizard en PDF pp.117–119 y el expediente del evento en pp.117–120. (Nota: el ID real se conserva como `EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001`.)
+- **No se añadieron relaciones** para Frog Shooter (p.76: DMR-061 indica que no se crea evento aislado para su muerte), War Shadow (pp.79–85: combate sin desenlace/evento de encuentro cerrado; la actualización de pp.91–97 es posterior y no identifica monstruos como participantes) ni Battle Jabalí (p.156: demostración de domesticación, no encuentro de Bell; no confundir con la fuga posterior).
+- **Límite detectado fuera de las cuatro fichas objetivo:** el evento Dungeon Lizard/Goblin también identifica al Goblin como participante; su ficha contiene la referencia en el texto narrativo, pero su frontmatter no enumera este evento. No se modifica por quedar fuera del conjunto objetivo explícito. Considerar como siguiente reconciliación acotada.
+- **Estado técnico:** un solo archivo de monstruo actualizado; sin IDs/eventos nuevos, sin cambios en DMR-061/062 ni en el índice. CI pendiente de consultar sobre el SHA resultante.
+- **Volumen 1:** permanece `PARTIAL / IN_PROGRESS`.
+
 ## DMR-062 — auditoría independiente Markdown↔PDF, Volumen 1, pp.57–72 (2026-11-06)
 
 - **Integración directa en main**, sin rama ni PR. SHA inicial comprobado: 5c1ef56ae14b4112e5fb8f23dc4f4f19ab942f00; main comparado con ese SHA = identical antes de los cambios.

@@ -10,6 +10,8 @@ source_refs:
   - DMR-061-SRC-001
 source_locators:
   - PDF pp. 117–119
+encounter_event_ids:
+  - EVT-DM-V01-BELL-FIGHTS-DUNGEON-LIZARD-GOBLIN-AND-RETURNS-001
 aliases:
   - Dungeon Lizard
 spoiler_level: mild
