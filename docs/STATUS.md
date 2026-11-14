@@ -1580,3 +1580,12 @@ El cotejo inicial cubre PDF pp.1–24. Se confirmó visualmente la correspondenc
 - **Integración:** tres acontecimientos nuevos, ficha Ant Killer, dos fichas descriptivas de equipo y enlaces a fichas existentes; Daga de Hestia y entidades previas reutilizadas.
 - **Commits directos en main:** `f84b7e86f91f760d5537bc28942ff15aab9e5e82` (extracción funcional), `3a74834ee6ab8540077db95e7f930c66670a1f5e` (Babel en el modelo temporal), `d70b553d4802cde02c30eda7952b50a17534ee3d` (métricas y rótulo de test), `c94e1e31a1ba1c3e6aa8ac8d17e1e4dc52a080dc` (conteos de ubicaciones/eventos) y `17a215513a056d07a3e05dc479d1f2bc7608b4a1` (indexación del objeto Daga existente). La sincronización de métricas y los ajustes del test quedaron incorporados en commits posteriores de esta misma tanda.
 - **Pendiente:** identidad del narrador, afiliación del perseguidor, contratación formal de Lili, equivalencia «Welf Crosso»/Welf Crozzo, nombre y material de la protección de muñeca y cotejo de matices lingüísticos.
+
+
+### DMR-063 — reconciliación de referencias del perfil de Bell · 2026-11-14
+
+- La revisión de referencias detectó que el perfil de Bell ya enlazaba los registros del combate Ant Killer y la compra de equipo, pero omitía el primer encuentro con Liliruca aunque Bell participa en ese acontecimiento.
+- Se añadió el enlace interno al evento existente `EVT-DM-V02-BELL-FIRST-MEETS-LILI-001`, junto con el resumen ya documentado en DMR-063 (Markdown lines 1049–1391).
+- No se creó ningún ID ni registro nuevo; el evento, índice, fichas de Liliruca y Ryuu y la fuente permanecen intactos. El Markdown fuente no se modificó.
+- **Commit funcional directo en main:** `3cb37a845b746cd2845af63ceaf8530bd3b79044`.
+- **Checkpoint de lectura:** sin cambios; primera línea pendiente 1395, encabezado del Capítulo 02. El Volumen 2 continúa parcial.
