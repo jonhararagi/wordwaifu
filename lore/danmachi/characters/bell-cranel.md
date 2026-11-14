@@ -346,6 +346,8 @@ Bell derrota una Ant Killer en una Habitación del séptimo piso con la Daga de 
 
 En una salida posterior con Eina, Bell compra una armadura ligera por 9.900 Varisu y recibe de ella una protección de muñeca color jade (lines 867–1045). La coraza lleva la firma «Welf Crosso»; su correspondencia con la ficha `CHAR-WELF-CROZZO` queda Pendiente.
 
-- **Eventos:** `EVT-DM-V02-BELL-DEFEATS-ANT-KILLER-001`, `EVT-DM-V02-BELL-EINA-ARMOR-SHOPPING-001`.
-- **Fuente:** DMR-063-SRC-001; Markdown lines 75–1045. Traducción privada no cotejada con japonés.
+Al cierre del Capítulo 01, Bell se interpone para proteger a una joven Hobbit perseguida por un aventurero desconocido. Ryuu interviene, muestra una kodachi y consigue que el hombre se retire; el texto no describe que Ryuu lo hiera. A la mañana siguiente, la joven se presenta como Liliruca Arde y ofrece trabajar como Ayudante. El fragmento no confirma una contratación formal (Markdown lines 1049–1391).
+
+- **Eventos:** `EVT-DM-V02-BELL-DEFEATS-ANT-KILLER-001`, `EVT-DM-V02-BELL-EINA-ARMOR-SHOPPING-001` y [Bell protege a una joven Hobbit y conoce a Liliruca Arde](../events/timeline/EVT-DM-V02-BELL-FIRST-MEETS-LILI-001.md).
+- **Fuente:** DMR-063-SRC-001; Markdown lines 75–1391. Traducción privada no cotejada con japonés.
 - **Snapshots:** no sobrescribir los estados de Bell ya documentados; estos valores corresponden a este momento de la narración.
