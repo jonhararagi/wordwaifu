@@ -134,7 +134,7 @@ const expectedLabels={
  "EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001":"Exactamente dos días después del Banquete de Ganesha; Bell regresa del Dungeon y pasa por la sede del Gremio."
 };
 const events=new Map(data.events.map(e=>[e.id,e]));
-assert.deepEqual([...events.keys()].sort(),Object.keys(expectedKinds).sort(),"All 51 timeline event IDs must be retained exactly.");
+assert.deepEqual([...events.keys()].sort(),Object.keys(expectedKinds).sort(),"All 55 timeline event IDs must be retained exactly.");
 for(const [id,kind] of Object.entries(expectedKinds)){
  const event=events.get(id);
  assert.equal(event.temporal.kind,kind,id+" temporal variant");

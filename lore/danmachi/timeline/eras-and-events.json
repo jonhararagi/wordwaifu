@@ -4308,13 +4308,13 @@
       },
       "locationAssessment": {
         "status": "verified",
-        "spatialPrecision": "building_level",
+        "spatialPrecision": "city_level",
         "reason": "Compras y visita a las tiendas de Hephaistos Familia dentro de Babel."
       },
       "locationRefs": [
         {
           "locationId": "LOC-BABEL",
-          "spatialPrecision": "building_level",
+          "spatialPrecision": "city_level",
           "context": "Compras y visita a las tiendas de Hephaistos Familia dentro de Babel.",
           "relationship": "event_place",
           "verificationStatus": "verified",
@@ -4477,6 +4477,29 @@
             "https://ga.sbcr.jp/product/9784797372809/"
           ],
           "label": "El Dungeon está asociado geográfica y narrativamente a Orario."
+        }
+      ]
+    },
+    {
+      "id": "LOC-BABEL",
+      "type": "location",
+      "recordPath": "places/babel.md",
+      "name": "Babel",
+      "verificationStatus": "verified",
+      "spatialPrecision": "city_level",
+      "description": "Torre de Orario. El bloque del Volumen 2 documenta locales de Hephaistos Familia en pisos concretos y un ascensor con mecanismo de Piedras Mágicas; no se infiere un plano interior completo.",
+      "sourceUrls": [
+        "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-063-volume-02-markdown-extraction-part-1.md",
+        "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/places/babel.md"
+      ],
+      "relationships": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "associated_with",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-063-volume-02-markdown-extraction-part-1.md"
+          ],
+          "label": "Babel se localiza en Orario; el bloque documenta visitas y locales del edificio sin ampliar su cartografía."
         }
       ]
     }
