@@ -306,3 +306,15 @@ No se ha aprobado aún ninguna excepción de canon en este paquete. La secuencia
 - **Separación de eventos:** la actualización de Estado posterior al Minotauro (PDF pp. 30–36), la concesión inicial de Falna (pp. 211–214) y la actualización con entrega de Daga de Hestia (pp. 193–196) permanecen como tres eventos separados.
 - **Límite:** el nombre español «Deseo Inquebrantable» procede de una traducción privada no cotejada con japonés. No inventar una forma japonesa ni elevar el snapshot a una ficha atemporal.
 
+
+
+### DEC-DM-033 — Extracción de Volumen 2 limitada al Markdown existente · Parte 1
+
+- **Fecha:** 2026-11-14.
+- **Estado:** ACCEPTED como criterio operativo; Parte 1 registrada en DMR-063.
+- **Decisión:** para la tarea de Volumen 2 solicitada en esta fecha, usar exclusivamente el archivo Markdown existente en `lore/danmachi/volumes/main/Volumen [02] • DanMachi.md`. No consultar ni usar PDF, capturas, imágenes, wikis, páginas externas, otras ediciones/traducciones ni material derivado de otras continuidades.
+- **Bloque autorizado en esta tanda:** prólogo y Capítulo 01, Markdown lines 13–1391; detenerse antes del encabezado del Capítulo 02 en la línea 1395.
+- **Modelado:** reutilizar IDs existentes; crear IDs solo cuando el bloque revele una entidad o acontecimiento sin registro previo. Mantener `CONT-MAIN-LN`, `CONT-GAME`, `CONT-AR`, `CONT-SECONDARY` y `CONT-AU` separados.
+- **Evidencia insuficiente:** registrar `Pendiente`; no completar por conocimiento externo ni inferir identidades, afiliaciones, fechas o equivalencias de objetos.
+- **Preservación:** el Markdown fuente no se modifica y el Volumen 2 no se declara completado por el avance parcial.
+- **Documentos afectados:** DMR-063, DMR-063-SRC-001, índices y registros funcionales V2, WORK_QUEUE.md, STATUS.md y CONVERSATION_DECISION_LOG.md.

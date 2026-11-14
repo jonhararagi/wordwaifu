@@ -77,3 +77,17 @@ La traducción dice que antes del descenso de los dioses la magia era privilegio
 - **Continuidad:** el Estado de Bell de p.33 tiene Magia I0 y copia con la sección de Habilidades vacía; la habilidad [Deseo Inquebrantable] solo se revela al lector desde la perspectiva de Hestia en pp.35–36.
 - **Fuente:** DMR-061-SRC-001, PDF pp.33–36.
 
+
+
+## CONT-MAIN-LN · Volumen 2 · explicación de Eina sobre Habilidades de Desarrollo, Herrería, Espadas Mágicas y Enigma
+
+**Fuente:** DMR-063-SRC-001, Markdown lines 587–667. Se registra el contenido como explicación de Eina a Bell en el recorrido por Babel, no como una ficha técnica exhaustiva ni como verificación independiente de todas las leyendas que narra.
+
+- **Habilidades de Desarrollo:** Eina explica que pueden aparecer aleatoriamente después de un aumento de nivel y que son más especializadas que las Habilidades Básicas. La elección depende de los puntos de experiencia del individuo.
+- **Herrería:** aparece como ejemplo de Habilidad de Desarrollo. Según Eina, la mayoría de los herreros de la generación actual de Hephaistos Familia la poseen. La explicación le atribuye la capacidad de agregar atributos a las armas mediante la Gracia, incluidos efectos especiales.
+- **Espadas Mágicas:** armas capaces de producir efectos semejantes a la magia. Eina explica que solo algunos herreros pueden crearlas; son consumibles, se rompen al llegar a su límite, no requieren canto para activarse y su poder queda por debajo de la Magia.
+- **Otras habilidades mencionadas:** Resistencia anormal, Magia y Enigma. Eina describe Enigma como una habilidad asociada a activar los 18 Milagros de los dioses y la llama también «Técnica de Dios».
+- **Relato de la Piedra Filosofal:** Eina cuenta una historia antigua sobre un Sabio que habría creado el concepto de la Piedra Filosofal y presentado un objeto a su dios, que lo rompió. Se conserva como relato contado por Eina; no se registra como hecho histórico independiente ni se crea una entidad de objeto.
+- **Dominio de Habilidades de Desarrollo:** Eina dice que no tiene escala numérica como las Habilidades Básicas, sino rangos con letras de S a I; llegar al rango siguiente es extremadamente difícil.
+
+**Límites:** no inferir costes, tasas de adquisición, requisitos universales, efectos adicionales, nombres de habilidades no mencionados ni estadísticas de un usuario. La Piedra Filosofal y el episodio del Sabio quedan como relato dentro del diálogo. La traducción del Markdown no se ha cotejado con el japonés.

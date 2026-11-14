@@ -125,7 +125,7 @@
 
 
 <!-- DANMACHI-METRICS:BEGIN -->
-- **Corpus DanMachi:** 242 registros activos; 28 IDs reservados; 109 documentos de apoyo.
+- **Corpus DanMachi:** 243 registros activos; 28 IDs reservados; 109 documentos de apoyo.
 - **Grafo de conocimiento:** 263 relaciones explícitas; 263/263 con ambos extremos activos y distintos; IDs de relación únicos.
 - **Roster de adaptación:** 63 identidades; 63/63 tienen registro, ruta Markdown e expediente UI con el mismo ID.
 - **Expedientes de interfaz:** 93 perfiles; 93/93 enlazados a catálogo y Markdown por ID.
@@ -1578,5 +1578,5 @@ El cotejo inicial cubre PDF pp.1–24. Se confirmó visualmente la correspondenc
 - **Fuente:** `lore/danmachi/volumes/main/Volumen [02] • DanMachi.md`; blob de entrada `9b884520a3b5aa30d25b8b2dfc8721d54b52464e`. Solo se utilizó texto del Markdown, sin PDF ni imágenes.
 - **Cobertura:** prólogo y Capítulo 01, líneas Markdown 13–1391. Próximo encabezado: Capítulo 02, línea 1395.
 - **Integración:** tres acontecimientos nuevos, ficha Ant Killer, dos fichas descriptivas de equipo y enlaces a fichas existentes; Daga de Hestia y entidades previas reutilizadas.
-- **Commits directos en main:** `f84b7e86f91f760d5537bc28942ff15aab9e5e82` (extracción funcional) y `3a74834ee6ab8540077db95e7f930c66670a1f5e` (Babel en el modelo temporal). La sincronización de métricas y ajuste del test se registra en el siguiente commit de esta tanda.
+- **Commits directos en main:** `f84b7e86f91f760d5537bc28942ff15aab9e5e82` (extracción funcional), `3a74834ee6ab8540077db95e7f930c66670a1f5e` (Babel en el modelo temporal), `d70b553d4802cde02c30eda7952b50a17534ee3d` (métricas y rótulo de test), `c94e1e31a1ba1c3e6aa8ac8d17e1e4dc52a080dc` (conteos de ubicaciones/eventos) y `17a215513a056d07a3e05dc479d1f2bc7608b4a1` (indexación del objeto Daga existente). La sincronización de métricas y los ajustes del test quedaron incorporados en commits posteriores de esta misma tanda.
 - **Pendiente:** identidad del narrador, afiliación del perseguidor, contratación formal de Lili, equivalencia «Welf Crosso»/Welf Crozzo, nombre y material de la protección de muñeca y cotejo de matices lingüísticos.
