@@ -125,7 +125,7 @@
 
 
 <!-- DANMACHI-METRICS:BEGIN -->
-- **Corpus DanMachi:** 235 registros activos; 28 IDs reservados; 109 documentos de apoyo.
+- **Corpus DanMachi:** 242 registros activos; 28 IDs reservados; 109 documentos de apoyo.
 - **Grafo de conocimiento:** 263 relaciones explícitas; 263/263 con ambos extremos activos y distintos; IDs de relación únicos.
 - **Roster de adaptación:** 63 identidades; 63/63 tienen registro, ruta Markdown e expediente UI con el mismo ID.
 - **Expedientes de interfaz:** 93 perfiles; 93/93 enlazados a catálogo y Markdown por ID.
@@ -1570,3 +1570,13 @@ El cotejo inicial cubre PDF pp.1–24. Se confirmó visualmente la correspondenc
 - **Resultado:** verificado parcialmente. Anya/Ryuu encargan a Bell llevar el monedero (PDF pp.136–138); Bell aún lo recuerda como tarea en p.151. El reencuentro con Seal en pp.203–204 y la disculpa de ella por olvidar el bolso no describen explícitamente el traspaso ni confirman recepción.
 - **Límite:** no marcar como devuelto; la escena anterior `EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001` (pp.98–102) es otro episodio. No crear ID de devolución sin pasaje claro.
 - **Estado:** las cuatro tareas del orden solicitado se cribaron; T1 y T4 tienen resultados parcialmente verificados con detalles pendientes, T2 requiere cotejo lingüístico independiente y T3 conserva términos no publicados. V1, DMR-061 y DMR-062 siguen `PARTIAL / IN_PROGRESS`.
+
+
+## DMR-063 — extracción Markdown del Volumen 2, Parte 1 · 2026-11-14
+
+- **Estado:** Parte 1 integrada y verificada parcialmente. Volumen 2 continúa parcial; no se declara cerrado.
+- **Fuente:** `lore/danmachi/volumes/main/Volumen [02] • DanMachi.md`; blob de entrada `9b884520a3b5aa30d25b8b2dfc8721d54b52464e`. Solo se utilizó texto del Markdown, sin PDF ni imágenes.
+- **Cobertura:** prólogo y Capítulo 01, líneas Markdown 13–1391. Próximo encabezado: Capítulo 02, línea 1395.
+- **Integración:** tres acontecimientos nuevos, ficha Ant Killer, dos fichas descriptivas de equipo y enlaces a fichas existentes; Daga de Hestia y entidades previas reutilizadas.
+- **Commits directos en main:** `f84b7e86f91f760d5537bc28942ff15aab9e5e82` (extracción funcional) y `3a74834ee6ab8540077db95e7f930c66670a1f5e` (Babel en el modelo temporal). La sincronización de métricas y ajuste del test se registra en el siguiente commit de esta tanda.
+- **Pendiente:** identidad del narrador, afiliación del perseguidor, contratación formal de Lili, equivalencia «Welf Crosso»/Welf Crozzo, nombre y material de la protección de muñeca y cotejo de matices lingüísticos.

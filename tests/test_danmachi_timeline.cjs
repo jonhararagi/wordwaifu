@@ -86,7 +86,7 @@ const expectedLabels={
  "EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001":"Inmediatamente antes del combate final contra el Silverback.",
  "EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001":"Inmediatamente después de la actualización del Estado y la entrega de la daga.",
  "EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001":"Después de la derrota del Silverback y durante la recuperación de Hestia.",
- "EVT-DM-V02-BELL-DEFEATS-ANT-KILLER-001":"Capítulo 01 · combate en el séptimo piso; fecha absoluta desconocida.",
+ "EVT-DM-V02-BELL-DEFEATS-ANT-KILLER-001":"Volumen 2 · comienzo del Capítulo 01; fecha de calendario desconocida.",
  "EVT-DM-V02-BELL-EINA-ARMOR-SHOPPING-001":"El día posterior a la reprimenda de Eina; fecha absoluta desconocida.",
  "EVT-DM-V02-BELL-FIRST-MEETS-LILI-001":"La misma tarde de las compras y la mañana siguiente; fecha absoluta desconocida.",
  "EVT-DM-V02-AIS-UDAEUS-001":"Volumen 2 · día absoluto no fijado.",
