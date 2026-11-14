@@ -26,8 +26,8 @@ Conteos aproximados de palabras tras excluir las cargas base64 de imágenes y el
 
 | Volumen | Archivo fuente | Palabras aprox. | Imágenes incrustadas | Estado de análisis |
 |---|---|---:|---:|---|
-| 1 | `Volumen [01] • DanMachi.md` | 63.168 | 16 | DMR-061: P1 PDF↔DMR-061/DMR-062/destinos funcionales pp.9–156 reconciliada; P2/P3 pp.9–156 completas; tres pasadas pp.157–214 conservadas. DMR-062 MD↔PDF: cotejo físico/textual/visual de todos los folios narrativos pp.1–214 documentado en 13 tandas; IMAGE_MISSING pp.12, 15, 22, 37, 40, 70, 73 y 86; FORMATTING_LOSS y demás hallazgos aceptados detallados en DMR-062; TRANSLATION_AMBIGUITY p.18 sigue abierta. PDF físico: 215 folios (p.8 blanca; p.215 créditos). DMR-061, DMR-062 y V1 siguen PARTIAL / IN_PROGRESS. Siguiente: reconciliar los hallazgos globales pendientes sin repetir páginas ni modificar las fuentes originales; no iniciar V2. |
-| 2 | `Volumen [02] • DanMachi.md` | 74.125 | 19 | DMR-060 contiene extracción parcial; falta certificar las tres pasadas completas. |
+| 1 | `Volumen [01] • DanMachi.md` | 63.168 | 16 | DMR-061: P1 PDF↔DMR-061/DMR-062/destinos funcionales pp.9–156 reconciliada; P2/P3 pp.9–156 completas; tres pasadas pp.157–214 conservadas. DMR-062 MD↔PDF: cotejo físico/textual/visual de todos los folios narrativos pp.1–214 documentado en 13 tandas; IMAGE_MISSING pp.12, 15, 22, 37, 40, 70, 73 y 86; FORMATTING_LOSS y demás hallazgos aceptados detallados en DMR-062; TRANSLATION_AMBIGUITY p.18 sigue abierta. PDF físico: 215 folios (p.8 blanca; p.215 créditos). DMR-061, DMR-062 y V1 siguen PARTIAL / IN_PROGRESS. Siguiente: reconciliar los hallazgos globales pendientes sin repetir páginas ni modificar las fuentes originales. El checkpoint Markdown-only de V2 queda documentado por separado en DMR-063. |
+| 2 | `Volumen [02] • DanMachi.md` | 74.125 | 19 | DMR-060 conserva una extracción anterior separada. DMR-063 cubre el prólogo y Capítulo 01 (Markdown lines 13–1391): tres eventos, Ant Killer, dos objetos descriptivos, snapshot temporal de Bell y reutilización de personajes/lugares/Familia. `CONT-MAIN-LN`; fuente exclusiva Markdown. V2 permanece PARTIAL / IN_PROGRESS. Siguiente fragmento: `## Capítulo 02 – Las Circunstancias de la Ayudante` (línea 1395); no repetir Parte 1 ni usar DMR-060/PDF como fuente de esta línea de trabajo. |
 | 3 | `Volumen [03] • DanMachi.md` | 53.883 | 21 | Fuente cargada; análisis integral pendiente. |
 | 4 | `Volumen [04] • DanMachi.md` | 64.892 | 23 | Fuente cargada; análisis integral pendiente. |
 | 5 | `Volumen [05] • DanMachi.md` | 83.074 | 23 | Fuente cargada; análisis integral pendiente. |
@@ -37,7 +37,7 @@ Inventario verificado sobre `main` SHA `0946ace89a29e7439fbcbe4e0d4315aec8418f62
 ### Orden de ejecución
 
 1. **Volumen 1:** reconciliar DMR-061, conservar los tres pases ya documentados en pp. 157–214 y auditar los rangos anteriores sin repetir a ciegas lo ya verificado. Marcar por rango qué pasada está completa y cuál falta.
-2. **Volumen 2:** reutilizar DMR-060 y los IDs/eventos existentes; completar las tres pasadas sobre todo el texto.
+2. **Volumen 2 (alcance Markdown-only vigente, DEC-DM-033):** continuar DMR-063 consecutivamente desde `## Capítulo 02 – Las Circunstancias de la Ayudante` (Markdown line 1395), utilizando exclusivamente el archivo Markdown existente. Reutilizar los IDs y registros funcionales ya existentes; conservar DMR-060 como antecedente separado, sin usar sus PDF/localizadores para esta línea de trabajo. No reextraer la Parte 1 ni declarar completo el volumen hasta procesar y reconciliar el resto.
 3. **Volúmenes 3, 4 y 5:** comenzar las tres pasadas desde el principio, uno por uno, sin convertir una sinopsis previa en extracción primaria.
 4. Tras cada volumen, actualizar su expediente, las fichas/relaciones/eventos afectados, la bitácora y los localizadores. No crear IDs si el hecho ya existe.
 
