@@ -3535,6 +3535,20 @@
       ],
       "status": "source_checked_partial",
       "priority": "normal"
+    },
+    {
+      "id": "OBJ-DM-HESTIA-DAGGER-001",
+      "path": "equipment/daga-de-hestia.md",
+      "type": "equipment",
+      "tags": [
+        "Daga de Hestia",
+        "Bell Cranel",
+        "Hephaistos",
+        "CONT-MAIN-LN"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high",
+      "name": "Daga de Hestia"
     }
   ],
   "reservedIds": [
