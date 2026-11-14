@@ -106,3 +106,13 @@ Ryuu ayuda a Anya a explicar que Seal salió durante su día libre para visitar 
 - **Localizadores:** PDF pp.137–138; la forma «Ryu» también aparece en el relato de Mia-mama de p.101.
 - **Nombre y continuidad:** se conservan las formas «Ryu» / «Ryuu» que usa la traducción. Estas páginas no confirman apellido, nivel, magia, técnicas propias ni los antecedentes de Astrea Familia.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
+
+
+## CONT-MAIN-LN · Volumen 2 · intervención en el primer encuentro de Bell y Lili (DMR-063-SRC-001)
+
+Al volver de comprar suministros para el negocio nocturno de la Señora de la Abundancia, Ryuu ve a Bell frente a un aventurero que perseguía a una joven Hobbit. Habla con el hombre, muestra una kodachi y lo intimida hasta que se retira. El texto no describe un golpe ni una lesión. Bell la reconoce como Ryuu-san, empleada de la Señora de la Abundancia (Markdown lines 1203–1289).
+
+- **Evento:** `EVT-DM-V02-BELL-FIRST-MEETS-LILI-001`.
+- **Límite:** no asignar afiliación al perseguidor ni ampliar el resultado más allá de la retirada descrita.
+- **Continuidad:** esta nota es CONT-MAIN-LN; otros perfiles o afirmaciones de continuidad mantienen sus etiquetas independientes.

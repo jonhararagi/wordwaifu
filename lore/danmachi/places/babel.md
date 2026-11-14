@@ -52,3 +52,14 @@ Bell llega al vestíbulo subterráneo y ve aventureros, Partidarios y cajas de t
 
 **Límites:** el texto no detalla la planta interior, la altura de los pisos del edificio, la ubicación exacta de oficinas o el mapa de conexiones. La función de «cubierta» y la razón histórica se registran bajo CONT-MAIN-LN sin ampliar los datos de adaptación o Prototype.
 
+
+
+
+## CONT-MAIN-LN · Volumen 2 · locales de Hephaistos Familia y ascensor (DMR-063-SRC-001)
+
+Eina explica que Babel ofrece instalaciones públicas para aventureros y alquila espacios comerciales; en el recorrido de Bell, los pisos cuarto a octavo aparecen ocupados por tiendas de Hephaistos Familia (Markdown lines 511–707). El edificio dispone de pedestales/ascensores que ascienden entre pisos; Bell observa Piedras Mágicas instaladas en la base y Eina explica que deben reemplazarse periódicamente (lines 679–695).
+
+El evento de compras de Bell y Eina se registra en `EVT-DM-V02-BELL-EINA-ARMOR-SHOPPING-001`.
+
+- **Alcance:** recorrido y explicación observados en este pasaje; no se infiere un plano completo, dimensiones, coordenadas ni distribución exhaustiva de Babel.
+- **Fuente:** DMR-063-SRC-001, Markdown lines 511–707.

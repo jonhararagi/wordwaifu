@@ -64,3 +64,13 @@ Bell observa una sucursal de la Familia en la Calle Principal del Noreste. La ti
 - **Continuidad:** CONT-MAIN-LN.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF p.128.
 
+
+
+
+## CONT-MAIN-LN · Volumen 2 · tiendas en Babel y sistema de herreros (DMR-063-SRC-001)
+
+Eina explica que Hephaistos Familia alquila locales comerciales de Babel entre los pisos cuarto y octavo. Bell visita tiendas de armas y armaduras; Eina describe un sistema en el que los productos de herreros de menor rango se exponen a la venta después de una evaluación, permitiendo que aventureros y herreros novatos formen vínculos (Markdown lines 535–549 y 695–849).
+
+- **Evento relacionado:** `EVT-DM-V02-BELL-EINA-ARMOR-SHOPPING-001`.
+- **Límite:** esta descripción de un recorrido y de la explicación de Eina no equivale a un censo de miembros, locales o pisos de toda la Familia.
+- **Fuente:** DMR-063-SRC-001, Markdown lines 535–849.

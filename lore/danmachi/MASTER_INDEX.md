@@ -617,3 +617,6 @@ Se inspeccionaron 16/16 folios físicos; quince contienen texto cotejado y p.199
 ## DMR-062 — cobertura MD↔PDF añadida · Volumen 1 · PDF pp.201–214 · 2026-11-08
 
 Se inspeccionaron los 14 folios físicos. Once contienen texto cotejado (pp.201–207 y 211–214); pp.208–210 son ilustraciones cuyas imágenes Markdown de líneas 7100, 7102 y 7104 coinciden visualmente con el PDF, incluidos los textos integrados en las fichas de Estado/Daga y Bell. Se registran V1-MDPDF-201-001 y V1-MDPDF-203-001 (FORMATTING_LOSS) por separadores físicos ××× convertidos en encabezados Markdown. Resultado: 12 COMPLETE y 2 PARTIAL. No se demuestra error de transcripción, orden, duplicación ni imagen ausente. Fuentes originales intactas; traducción privada española sin cotejo japonés. El último folio narrativo es p.214; p.215 contiene créditos. V1 y DMR-062 permanecen PARTIAL / IN_PROGRESS.
+
+
+- [DANMACHI-RESEARCH-063](research/inbox/DANMACHI-RESEARCH-063-volume-02-markdown-extraction-part-1.md) — extracción incremental del Markdown existente de V2, Parte 1: prólogo y Capítulo 01 (líneas 13–1391); límite anterior al Capítulo 02. Fuente registrada como DMR-063-SRC-001, sin PDF ni imágenes.

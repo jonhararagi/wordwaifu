@@ -86,3 +86,14 @@ La ficha p. 244 describe Guantes de Ayudante: desechar tras el uso; permiten man
 - **Guantes de Ayudante:** equipo de apoyo para manipular cadáveres de monstruos; desechables después de su uso. Protegen la piel contra corrosión de ácidos fuertes y tienen resistencia a efectos anormales. La ficha menciona varios colores y dice que marrón es el favorito de Lili.
 
 **Reserva:** las descripciones proceden de las fichas traducidas del PDF, no de cotejo japonés. No mezclar con los reportes de wiki de Cinder Ella, Artel Assist, Command Call o equipo secundario; esos siguen separados bajo CONT-SECONDARY hasta cotejo propio.
+
+
+
+## CONT-MAIN-LN · Volumen 2 · primer encuentro con Bell (DMR-063-SRC-001)
+
+En el cierre del Capítulo 01, una joven Hobbit perseguida por un aventurero desconocido huye después de que Bell se interpone y Ryuu ahuyenta al hombre. A la mañana siguiente la joven se acerca a Bell en el entorno de Babel, se presenta como Liliruca Arde y ofrece trabajar como Ayudante. Dice no recordar el encuentro de la noche anterior. Bell expresa que probablemente querría un Ayudante, pero el fragmento termina antes de confirmar una contratación formal (Markdown lines 1049–1391).
+
+- **Evento:** `EVT-DM-V02-BELL-FIRST-MEETS-LILI-001`.
+- **Límite:** no atribuir afiliación a Soma Familia al perseguidor ni afirmar que Bell haya contratado ya a Lili.
+- **Continuidad:** exclusivamente CONT-MAIN-LN para esta nota; las secciones CONT-ANIME y CONT-SECONDARY existentes conservan sus propios alcances.
+- **Fuente:** DMR-063-SRC-001, Markdown lines 1049–1391; traducción privada no cotejada con japonés.

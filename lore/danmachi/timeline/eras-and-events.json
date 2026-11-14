@@ -4136,6 +4136,302 @@
           ]
         }
       ]
+    },
+    {
+      "id": "EVT-DM-V02-BELL-DEFEATS-ANT-KILLER-001",
+      "recordId": "EVT-DM-V02-BELL-DEFEATS-ANT-KILLER-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 690,
+      "title": "Bell derrota a una Ant Killer en el séptimo piso",
+      "dateLabel": "Volumen 2 · comienzo del Capítulo 01; fecha de calendario desconocida.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Bell derrota una Ant Killer en una Habitación del séptimo piso con la Daga de Hestia. El monstruo posee un caparazón duro y cuatro garras en el brazo delantero; al verse en peligro emite una señal hormonal que atrae a otras Ant Killers. Bell corta una garra y remata al monstruo atravesándole la cabeza. Recupera la Piedra Mágica y continúa la exploración.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "combate y derrota a la Ant Killer"
+        }
+      ],
+      "relatedEntities": [
+        {
+          "id": "MON-DM-ANT-KILLER-001",
+          "name": "Ant Killer",
+          "kind": "monster",
+          "role": "monstruo derrotado"
+        },
+        {
+          "id": "OBJ-DM-HESTIA-DAGGER-001",
+          "name": "Daga de Hestia",
+          "kind": "equipment",
+          "role": "arma utilizada"
+        }
+      ],
+      "detailPath": "events/timeline/EVT-DM-V02-BELL-DEFEATS-ANT-KILLER-001.md",
+      "sources": [
+        {
+          "label": "DMR-063 · Volumen 2, Markdown del repositorio, Parte 1",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-063-volume-02-markdown-extraction-part-1.md",
+          "kind": "repository_markdown",
+          "note": "Fuente usada exclusivamente como Markdown; lines 13–1391. No se usaron PDF, imágenes ni fuentes ajenas."
+        },
+        {
+          "label": "Registro individual EVT-DM-V02-BELL-DEFEATS-ANT-KILLER-001",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-DEFEATS-ANT-KILLER-001.md",
+          "kind": "internal",
+          "note": "Ficha individual con alcance y límites del acontecimiento."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "T0-BELL-ARRIVAL"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "Acontecimiento del comienzo del Capítulo 01; el texto no fija fecha ni orden cuantificado respecto de otros episodios del volumen.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-063-volume-02-markdown-extraction-part-1.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-DEFEATS-ANT-KILLER-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "floor_context",
+        "reason": "Combate en una Habitación del séptimo piso del Dungeon."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "spatialPrecision": "floor_context",
+          "context": "Combate en una Habitación del séptimo piso del Dungeon.",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-063-volume-02-markdown-extraction-part-1.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-DEFEATS-ANT-KILLER-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-BELL-EINA-ARMOR-SHOPPING-001",
+      "recordId": "EVT-DM-V02-BELL-EINA-ARMOR-SHOPPING-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 691,
+      "title": "Bell y Eina compran equipo en Babel",
+      "dateLabel": "El día posterior a la reprimenda de Eina; fecha absoluta desconocida.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Eina acompaña a Bell a los locales de Hephaistos Familia en Babel. Bell compra una armadura ligera por 9.900 Varisu; la firma de la coraza aparece transcrita como «Welf Crosso». Eina le regala una protección de muñeca color jade. Durante la visita Bell ve a Hestia trabajando en una tienda, donde la narración menciona una paga de 30 Varisu por hora. Eina explica el sistema de herrería, las Habilidades de Desarrollo, las Espadas Mágicas y Enigma.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "compra armadura y recibe un regalo"
+        },
+        {
+          "id": "DM-CHAR-EINA",
+          "name": "Eina Tulle",
+          "kind": "character",
+          "role": "acompaña a Bell y le regala protección de muñeca"
+        },
+        {
+          "id": "DM-CHAR-HESTIA",
+          "name": "Hestia",
+          "kind": "character",
+          "role": "trabaja en una tienda de Babel"
+        }
+      ],
+      "relatedEntities": [
+        {
+          "id": "OBJ-DM-BELL-LIGHT-ARMOR-001",
+          "name": "Armadura ligera de Bell",
+          "kind": "equipment",
+          "role": "equipo comprado por 9.900 Varisu"
+        },
+        {
+          "id": "OBJ-DM-BELL-JADE-WRIST-GUARD-001",
+          "name": "Protección de muñeca color jade",
+          "kind": "equipment",
+          "role": "regalo de Eina"
+        },
+        {
+          "id": "FAM-HEPHAISTOS",
+          "name": "Hephaistos Familia",
+          "kind": "family",
+          "role": "Familia que alquila locales comerciales en Babel"
+        }
+      ],
+      "detailPath": "events/timeline/EVT-DM-V02-BELL-EINA-ARMOR-SHOPPING-001.md",
+      "sources": [
+        {
+          "label": "DMR-063 · Volumen 2, Markdown del repositorio, Parte 1",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-063-volume-02-markdown-extraction-part-1.md",
+          "kind": "repository_markdown",
+          "note": "Fuente usada exclusivamente como Markdown; lines 13–1391. No se usaron PDF, imágenes ni fuentes ajenas."
+        },
+        {
+          "label": "Registro individual EVT-DM-V02-BELL-EINA-ARMOR-SHOPPING-001",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-EINA-ARMOR-SHOPPING-001.md",
+          "kind": "internal",
+          "note": "Ficha individual con alcance y límites del acontecimiento."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V02-BELL-DEFEATS-ANT-KILLER-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "El encuentro de compras ocurre después de la jornada en que Eina reprende a Bell; el texto lo presenta como el día siguiente al encuentro anterior.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-063-volume-02-markdown-extraction-part-1.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-EINA-ARMOR-SHOPPING-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "building_level",
+        "reason": "Compras y visita a las tiendas de Hephaistos Familia dentro de Babel."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-BABEL",
+          "spatialPrecision": "building_level",
+          "context": "Compras y visita a las tiendas de Hephaistos Familia dentro de Babel.",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-063-volume-02-markdown-extraction-part-1.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-EINA-ARMOR-SHOPPING-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-BELL-FIRST-MEETS-LILI-001",
+      "recordId": "EVT-DM-V02-BELL-FIRST-MEETS-LILI-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 692,
+      "title": "Bell protege a una joven Hobbit y conoce a Liliruca Arde",
+      "dateLabel": "La misma tarde de las compras y la mañana siguiente; fecha absoluta desconocida.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Tras acompañar a Eina, Bell encuentra al anochecer a una joven Hobbit perseguida por un aventurero desconocido y se interpone para protegerla. Ryuu interviene, muestra una kodachi y consigue que el hombre se retire sin que el texto describa un combate físico. La joven huye. A la mañana siguiente, cerca de Babel, vuelve a acercarse a Bell, se presenta como Liliruca Arde y ofrece trabajar como su Ayudante. En este bloque no se confirma todavía un acuerdo de contratación.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "protege a la joven y escucha su oferta"
+        },
+        {
+          "id": "CHAR-LILIRUCA-ARDE",
+          "name": "Liliruca Arde",
+          "kind": "character",
+          "role": "joven Hobbit que ofrece sus servicios como Ayudante"
+        },
+        {
+          "id": "CHAR-RYUU-LION",
+          "name": "Ryuu Lion",
+          "kind": "character",
+          "role": "interviene y ahuyenta al perseguidor"
+        }
+      ],
+      "relatedEntities": [
+        {
+          "id": "LOC-ORARIO",
+          "name": "Orario",
+          "kind": "location",
+          "role": "lugar del primer encuentro al anochecer"
+        },
+        {
+          "id": "LOC-BABEL",
+          "name": "Babel",
+          "kind": "location",
+          "role": "entorno donde Lili se acerca a Bell a la mañana siguiente"
+        }
+      ],
+      "detailPath": "events/timeline/EVT-DM-V02-BELL-FIRST-MEETS-LILI-001.md",
+      "sources": [
+        {
+          "label": "DMR-063 · Volumen 2, Markdown del repositorio, Parte 1",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-063-volume-02-markdown-extraction-part-1.md",
+          "kind": "repository_markdown",
+          "note": "Fuente usada exclusivamente como Markdown; lines 13–1391. No se usaron PDF, imágenes ni fuentes ajenas."
+        },
+        {
+          "label": "Registro individual EVT-DM-V02-BELL-FIRST-MEETS-LILI-001",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-FIRST-MEETS-LILI-001.md",
+          "kind": "internal",
+          "note": "Ficha individual con alcance y límites del acontecimiento."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V02-BELL-EINA-ARMOR-SHOPPING-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "La primera confrontación ocurre al anochecer después de las compras; Lili vuelve a acercarse a Bell a la mañana siguiente.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-063-volume-02-markdown-extraction-part-1.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-FIRST-MEETS-LILI-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "El primer encuentro y la persecución ocurren en un callejón de Orario. La oferta de Lili se produce a la mañana siguiente en el entorno de Babel."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "spatialPrecision": "city_level",
+          "context": "El primer encuentro y la persecución ocurren en un callejón de Orario.",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-063-volume-02-markdown-extraction-part-1.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-FIRST-MEETS-LILI-001.md"
+          ]
+        },
+        {
+          "locationId": "LOC-BABEL",
+          "spatialPrecision": "city_level",
+          "context": "La oferta de Lili se produce a la mañana siguiente en el entorno de Babel.",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-063-volume-02-markdown-extraction-part-1.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-FIRST-MEETS-LILI-001.md"
+          ]
+        }
+      ]
     }
   ],
   "temporalModelVersion": 1,

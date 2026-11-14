@@ -1049,3 +1049,15 @@
 - **Límite fuera de alcance:** el evento de pp.117–120 también incluye un Goblin; su ficha cita el evento en el cuerpo, pero no en `encounter_event_ids`. Se deja intacta por no pertenecer a las cuatro fichas objetivo.
 - **Documentos afectados:** ficha Dungeon Lizard, STATUS y este registro. DMR-061, DMR-062, catálogo, índice de monstruos, eventos y fuente original permanecen sin cambios.
 - **Próximo checkpoint:** resolver exclusivamente la referencia del Goblin al evento combinado, con autorización de alcance antes de editar esa ficha.
+
+
+
+### CONV-DM-2026-11-14-001 — Volumen 2, primera parte solo desde Markdown
+
+- **Fecha:** 2026-11-14.
+- **Estado:** ACCEPTED como alcance operativo; avance de Parte 1 documentado en DMR-063.
+- **Instrucción:** iniciar el Volumen 2 utilizando exclusivamente el Markdown existente del repositorio. No consultar PDF, imágenes, páginas web, wikis, otras traducciones/ediciones ni continuidades derivadas.
+- **Bloque:** prólogo y Capítulo 01 del Markdown fuente, líneas 13–1391; detenerse antes de `## Capítulo 02 – Las Circunstancias de la Ayudante`, línea 1395.
+- **Integración:** reutilizar entidades e IDs existentes; mantener `CONT-MAIN-LN` separado de `CONT-GAME`, `CONT-AR`, `CONT-SECONDARY` y `CONT-AU`. Los datos no demostrables desde el Markdown quedan Pendientes.
+- **Límite:** no modificar el Markdown fuente; no declarar completo el Volumen 2 por haber procesado este bloque.
+- **Documentos afectados:** DMR-063, registro de fuentes, índices de eventos/monstruos, cola de trabajo y registros funcionales vinculados.

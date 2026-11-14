@@ -117,3 +117,13 @@ Estos registros facilitan la siguiente tanda, pero las seis entradas de canon si
 - EVT-DM-V01-BELL-RECEIVES-RECOVERY-POTIONS-FROM-MIACH-001 — Miach entrega a Bell dos pociones de recuperación como cortesía, dos días después del Banquete (PDF pp.124–127).
 
 - EVT-DM-V01-HESTIA-SEARCHES-BELL-AND-CARES-FOR-HIM-001 — Hestia busca a Bell durante la noche, lo recibe herido y lo cuida; Bell expresa que quiere hacerse más fuerte (PDF pp.87–90).
+
+
+
+### V2 · Parte 1, extracción exclusiva del Markdown (CONT-MAIN-LN)
+
+- `EVT-DM-V02-BELL-DEFEATS-ANT-KILLER-001` — Bell derrota una Ant Killer en el séptimo piso; Markdown lines 75–173.
+- `EVT-DM-V02-BELL-EINA-ARMOR-SHOPPING-001` — Bell y Eina compran equipo en Babel; Markdown lines 397–1045.
+- `EVT-DM-V02-BELL-FIRST-MEETS-LILI-001` — Bell protege a una joven Hobbit, Ryuu ahuyenta al perseguidor y al día siguiente Lili ofrece ser Ayudante; Markdown lines 1049–1391.
+
+Estos tres eventos son distintos de los sucesos posteriores ya indexados en V2. En particular, el primer encuentro con Lili no se fusiona con `EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001`.

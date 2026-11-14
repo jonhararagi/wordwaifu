@@ -337,3 +337,15 @@ En p.61 Bell recuerda que su daga actual costó **3.600 Varisu**, que la compró
 - **Conocimiento y límites:** esta experiencia pertenece a Bell y al lector. Hestia no conoce el combate ni cómo Bell salió del sexto piso; en pp.87–88 solo ve su estado al regresar y oye que entró al Dungeon. No se atribuyen estadísticas o poderes al dedo ni se registra un nuevo valor de Estado.
 - **Continuidad y duplicados:** se reutiliza `MON-DM-WAR-SHADOW-001`. No se crea un ejemplar individual ni un evento de combate cerrado, porque la lucha continúa fuera del tramo. La búsqueda y recepción de Bell por Hestia permanece en `EVT-DM-V01-HESTIA-SEARCHES-BELL-AND-CARES-FOR-HIM-001` (PDF pp.87–90), separada de la actualización de Estado de pp.91–97.
 - **Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés, PDF pp.79–85.
+
+
+
+## CONT-MAIN-LN · Volumen 2 · comienzo del Capítulo 01 (DMR-063-SRC-001)
+
+Bell derrota una Ant Killer en una Habitación del séptimo piso con la Daga de Hestia y continúa explorando después de recuperar la Piedra Mágica (Markdown lines 75–173). Más tarde informa a Eina de que ha alcanzado el séptimo piso y le permite leer el Estado grabado en su espalda. El snapshot que Eina ve indica Lv.1: Fuerza E403, Resistencia H199, Destreza E412, Agilidad D521 y Magia I0 (lines 217–339). Eina no puede leer el contenido protegido de las ventanas de Magia y Habilidades; no atribuirle ese conocimiento.
+
+En una salida posterior con Eina, Bell compra una armadura ligera por 9.900 Varisu y recibe de ella una protección de muñeca color jade (lines 867–1045). La coraza lleva la firma «Welf Crosso»; su correspondencia con la ficha `CHAR-WELF-CROZZO` queda Pendiente.
+
+- **Eventos:** `EVT-DM-V02-BELL-DEFEATS-ANT-KILLER-001`, `EVT-DM-V02-BELL-EINA-ARMOR-SHOPPING-001`.
+- **Fuente:** DMR-063-SRC-001; Markdown lines 75–1045. Traducción privada no cotejada con japonés.
+- **Snapshots:** no sobrescribir los estados de Bell ya documentados; estos valores corresponden a este momento de la narración.

@@ -205,3 +205,13 @@ Después de despertarse, Hestia abraza a Bell y se muestra especialmente cariño
 - **Separación de perspectivas:** el contacto físico se narra desde la experiencia de Bell; el comentario final de Hestia queda después de su salida. No atribuir a Bell conocimiento de esas palabras.
 - **Evento:** continúa la convivencia doméstica ya registrada; no crear un evento romántico ni un cambio de estado de Falna.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF pp.39–41.
+
+
+
+## CONT-MAIN-LN · Volumen 2 · trabajo de Hestia en una tienda de Babel (DMR-063-SRC-001)
+
+Durante la visita de Bell y Eina a las tiendas de Babel, Bell descubre que Hestia trabaja en uno de los establecimientos. El diálogo menciona que recibe 30 Varisu por hora y que preparaba croquetas de patata (Markdown lines 725–777).
+
+- **Evento relacionado:** `EVT-DM-V02-BELL-EINA-ARMOR-SHOPPING-001`.
+- **Límite:** el fragmento no define condiciones contractuales, duración del empleo, horario ni otros términos; quedan Pendientes.
+- **Fuente:** DMR-063-SRC-001, Markdown lines 725–777.

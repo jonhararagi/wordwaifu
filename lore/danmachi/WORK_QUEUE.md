@@ -2149,3 +2149,16 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - **Evidencia:** Anya/Ryuu entregan el monedero a Bell (PDF pp.136–138); Bell mantiene la tarea en mente (p.151). Más adelante encuentra a Seal al regresar ella del Festival (pp.203–204), pero el texto solo registra que Seal se disculpa por haber olvidado su bolso y por haberlo involucrado en la conmoción. No se narra explícitamente el traspaso de Bell a Seal ni se confirma recepción.
 - **No confundir:** `EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001` (pp.98–102) es la visita anterior para disculparse y pagar la comida, no devolución del monedero. No se crea ID de evento ni se reutiliza aquel evento.
 - **Cierre de esta tanda:** completado el cribado de las cuatro tareas ordenadas. V1 sigue PARTIAL / IN_PROGRESS por la cuenta Kobold, el cotejo japonés y otras discrepancias conocidas. Próxima tarea posterior a este cribado: determinar si hay evidencia primaria japonesa/licenciada para los casos aún pendientes; no iniciar Volumen 2.
+
+
+
+## DMR-063 — extracción Markdown V2, Parte 1 · 2026-11-14
+
+- [x] Recuperar el contenido del Markdown fuente desde su blob Git sin inspeccionar ni utilizar imágenes incrustadas.
+- [x] Delimitar el primer bloque narrativo real: prólogo y Capítulo 01, líneas 13–1391; detenerse antes del encabezado del Capítulo 02, línea 1395.
+- [x] Reconciliar el bloque con personajes, ubicaciones y Familia ya existentes; reutilizar Bell, Eina, Hestia, Liliruca, Ryuu, Babel, Dungeon y Hephaistos Familia.
+- [x] Crear registros separados para el combate Ant Killer, la compra de equipo en Babel y el primer encuentro con Liliruca; no confundir el último con el posterior hostigamiento de Lili.
+- [x] Registrar como nuevos únicamente la ficha de Ant Killer, la armadura ligera descriptiva y la protección de muñeca color jade. La Daga de Hestia se reutiliza.
+- [ ] Continuar desde `## Capítulo 02 – Las Circunstancias de la Ayudante` (Markdown line 1395), en una tanda nueva y consecutiva.
+- **Pendientes conservados:** identidad del narrador del prólogo; identidad/afiliación del perseguidor; contratación formal de Lili; equivalencia «Welf Crosso» ↔ Welf Crozzo; nombre y material de la protección de muñeca; términos completos del trabajo de Hestia; matices de traducción sin cotejo japonés.
+- **Límite:** solo Markdown del repositorio; no PDF, imágenes ni fuentes externas. El archivo fuente no se modifica. El Volumen 2 permanece parcial.

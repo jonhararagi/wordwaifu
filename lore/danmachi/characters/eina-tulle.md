@@ -109,3 +109,13 @@ En el espectáculo aparece un Battle Jabalí de unos dos metros frente a una dom
 
 - **Límites:** no identificar a la domadora, no asignarle ficha o ID y no atribuir a Eina participación en el combate. Eina presencia/oye el evento desde su puesto de trabajo.
 - **Fuente:** DMR-061-SRC-001, traducción privada española no cotejada con japonés.
+
+
+
+## CONT-MAIN-LN · Volumen 2 · asesoramiento, compra de equipo y primer encuentro con Lili (DMR-063)
+
+Eina reprende a Bell por haber llegado al séptimo piso y le solicita ver su Estado. Lee los cinco atributos numéricos del snapshot, pero no consigue descifrar las ventanas protegidas de Magia y Habilidades (Markdown lines 181–393). Al día siguiente acompaña a Bell a Babel para comprar equipo; le explica el sistema de herrería y le regala una protección de muñeca color jade (lines 397–1045).
+
+- **Eventos:** `EVT-DM-V02-BELL-EINA-ARMOR-SHOPPING-001`; el episodio previo del reporte de Estado permanece en esta sección narrativa, sin crear un acontecimiento separado innecesario.
+- **Límite:** el nombre propio y material de la protección de muñeca no están indicados. Los textos protegidos del Estado no son conocimiento de Eina.
+- **Fuente:** DMR-063-SRC-001, Markdown lines 181–1045; traducción privada sin cotejo japonés.

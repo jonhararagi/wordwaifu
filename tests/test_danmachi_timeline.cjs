@@ -14,8 +14,8 @@ assert.equal(report.valid,true,report.errors.join("\n"));
 assert.equal(report.temporalModelVersion,1);
 assert.equal(report.legacyTemporalModel,false);
 assert.equal(report.eraCount,10);
-assert.equal(report.eventCount,52);
-assert.equal(report.temporalEventCount,52);
+assert.equal(report.eventCount,55);
+assert.equal(report.temporalEventCount,55);
 assert.equal(data.anchor.id,"T0-BELL-ARRIVAL");
 assert.equal(data.anchor.eventId,"EVT-DM-BELL-ARRIVAL-001");
 
@@ -29,6 +29,9 @@ const expectedKinds={
  "EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001":"relative_order",
  "EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001":"relative_order",
  "EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001":"relative_order",
+ "EVT-DM-V02-BELL-DEFEATS-ANT-KILLER-001":"relative_order",
+ "EVT-DM-V02-BELL-EINA-ARMOR-SHOPPING-001":"relative_order",
+ "EVT-DM-V02-BELL-FIRST-MEETS-LILI-001":"relative_order",
  "EVT-DM-V02-AIS-UDAEUS-001":"relative_order",
  "EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001":"relative_offset",
  "EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001":"relative_order",
@@ -83,6 +86,9 @@ const expectedLabels={
  "EVT-DM-V01-HESTIA-UPDATES-BELL-GIVES-DAGA-001":"Inmediatamente antes del combate final contra el Silverback.",
  "EVT-DM-V01-BELL-DEFEATS-SILVERBACK-001":"Inmediatamente después de la actualización del Estado y la entrega de la daga.",
  "EVT-DM-V01-HESTIA-EXPLAINS-DAGA-AND-LOAN-001":"Después de la derrota del Silverback y durante la recuperación de Hestia.",
+ "EVT-DM-V02-BELL-DEFEATS-ANT-KILLER-001":"Capítulo 01 · combate en el séptimo piso; fecha absoluta desconocida.",
+ "EVT-DM-V02-BELL-EINA-ARMOR-SHOPPING-001":"El día posterior a la reprimenda de Eina; fecha absoluta desconocida.",
+ "EVT-DM-V02-BELL-FIRST-MEETS-LILI-001":"La misma tarde de las compras y la mañana siguiente; fecha absoluta desconocida.",
  "EVT-DM-V02-AIS-UDAEUS-001":"Volumen 2 · día absoluto no fijado.",
  "EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001":"Exactamente una semana después del combate de Ais contra Udaeus.",
  "EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001":"Volumen 2 · fecha exacta no fijada.",

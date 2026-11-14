@@ -59,3 +59,8 @@ No asignar pisos, niveles de peligro, estadísticas ni cronología hasta cotejar
 
 ## Regla
 Una variante, nombre local o aparición excepcional no debe convertirse en una especie separada sin evidencia.
+
+
+## Especie localizada en V2 · Markdown · CONT-MAIN-LN
+
+- [Ant Killer](../monsters/ant-killer.md) — `MON-DM-ANT-KILLER-001`; el Markdown la presenta después de entrar en el séptimo piso y describe caparazón, garras y señal hormonal de llamada. Fuente: DMR-063-SRC-001, lines 85–111. No se infiere parentesco taxonómico con War Shadow.

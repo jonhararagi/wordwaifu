@@ -4802,3 +4802,32 @@ verification_status: stub
 - verified_by: DANMACHI-RESEARCH-061
 - verification_status: source_checked_translation_unverified
 - `EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001` — evento narrativo derivado de DMR-061-SRC-001, traducción privada V1, PDF pp. 57–72.
+
+
+
+## DMR-063-SRC-001 · Volumen 2, transcripción Markdown existente en el repositorio
+
+- source_id: DMR-063-SRC-001
+- title: Volumen [02] • DanMachi.md — Markdown del proyecto
+- creator_or_publisher: Repositorio WordWaifu; el documento contiene una traducción española privada de la novela ligera principal.
+- source_type: REPOSITORY_MARKDOWN_TRANSCRIPTION_OF_PRIVATE_TRANSLATION
+- series: DanMachi, novela ligera principal
+- volume_or_edition: Volumen 2
+- language: Español
+- repository_path: lore/danmachi/volumes/main/Volumen [02] • DanMachi.md
+- repository_branch: main
+- source_blob_sha_at_checkpoint: 9b884520a3b5aa30d25b8b2dfc8721d54b52464e
+- repository_head_at_checkpoint: 338f79f0bde5495bf57df72e53dbaba782291dd3
+- locator_type: markdown_line
+- locator: Líneas 13–1391; inicio narrativo en línea 13; límite antes del encabezado del Capítulo 02 en línea 1395.
+- claims_supported: []
+- events_supported:
+  - EVT-DM-V02-BELL-DEFEATS-ANT-KILLER-001
+  - EVT-DM-V02-BELL-EINA-ARMOR-SHOPPING-001
+  - EVT-DM-V02-BELL-FIRST-MEETS-LILI-001
+- continuity_scope: CONT-MAIN-LN
+- reliability_note: Se utilizó exclusivamente el texto del Markdown del repositorio. Las líneas con imágenes incrustadas/Base64 no se inspeccionaron ni se usaron. La traducción privada no se ha cotejado con el japonés; el registro acredita lo que dice el Markdown, no la fidelidad de la traducción.
+- conflicting_sources: []
+- rights_note: Conservar paráfrasis y localizadores; no reproducir pasajes extensos.
+- verified_by: DANMACHI-RESEARCH-063
+- verification_status: source_checked_translation_unverified

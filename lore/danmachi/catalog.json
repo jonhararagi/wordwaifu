@@ -3439,6 +3439,102 @@
         "búsqueda",
         "regreso herido"
       ]
+    },
+    {
+      "id": "DANMACHI-RESEARCH-063",
+      "path": "research/inbox/DANMACHI-RESEARCH-063-volume-02-markdown-extraction-part-1.md",
+      "type": "research",
+      "tags": [
+        "Volumen 2",
+        "Markdown",
+        "Parte 1",
+        "CONT-MAIN-LN"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "name": "DMR-063 · V2 Markdown Parte 1"
+    },
+    {
+      "id": "EVT-DM-V02-BELL-DEFEATS-ANT-KILLER-001",
+      "path": "events/timeline/EVT-DM-V02-BELL-DEFEATS-ANT-KILLER-001.md",
+      "type": "event",
+      "tags": [
+        "Bell",
+        "Ant Killer",
+        "Dungeon",
+        "floor 7",
+        "volumen 2"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-V02-BELL-EINA-ARMOR-SHOPPING-001",
+      "path": "events/timeline/EVT-DM-V02-BELL-EINA-ARMOR-SHOPPING-001.md",
+      "type": "event",
+      "tags": [
+        "Bell",
+        "Eina",
+        "Babel",
+        "Hephaistos Familia",
+        "volumen 2"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-V02-BELL-FIRST-MEETS-LILI-001",
+      "path": "events/timeline/EVT-DM-V02-BELL-FIRST-MEETS-LILI-001.md",
+      "type": "event",
+      "tags": [
+        "Bell",
+        "Liliruca Arde",
+        "Ryuu Lion",
+        "primer encuentro",
+        "volumen 2"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
+    },
+    {
+      "id": "MON-DM-ANT-KILLER-001",
+      "path": "monsters/ant-killer.md",
+      "type": "monster",
+      "tags": [
+        "Ant Killer",
+        "Dungeon",
+        "floor 7",
+        "CONT-MAIN-LN"
+      ],
+      "status": "source_checked_partial",
+      "priority": "high"
+    },
+    {
+      "id": "OBJ-DM-BELL-LIGHT-ARMOR-001",
+      "path": "equipment/armadura-ligera-bell-v2.md",
+      "type": "equipment",
+      "tags": [
+        "Bell",
+        "armadura ligera",
+        "Welf Crosso",
+        "volumen 2"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "OBJ-DM-BELL-JADE-WRIST-GUARD-001",
+      "path": "equipment/proteccion-muneca-jade-eina.md",
+      "type": "equipment",
+      "tags": [
+        "Bell",
+        "Eina",
+        "protección de muñeca",
+        "jade",
+        "volumen 2"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
     }
   ],
   "reservedIds": [
