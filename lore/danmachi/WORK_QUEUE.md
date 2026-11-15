@@ -2170,10 +2170,11 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - [x] Leer consecutivamente el Capítulo 02, líneas 1395–3470, solo desde el blob Markdown existente.
 - [x] Distinguir la prueba contractual de un día de la contratación sin fecha límite del día siguiente.
 - [x] Documentar por separado la devolución de la Daga de Hestia por Ryuu, sin afirmar una confesión de robo.
+- [x] Ampliar el mismo evento hasta la advertencia puntual de Seal a Lili y conservar su referente como pendiente, reutilizando DM-CHAR-SEAL-FLOVER.
 - [x] Reconciliar la segunda jornada, el reparto de ingresos y el snapshot temporal de Bell.
 - [x] Registrar el interludio y la salida interrumpida de Bell y Hestia sin crear una relación permanente.
-- [x] Reutilizar los perfiles Bell, Lili, Eina, Hestia y Ryuu; actualizar la ficha existente de Soma Familia y el objeto de protección de muñeca.
+- [x] Reutilizar los perfiles Bell, Lili, Eina, Hestia, Ryuu y Seal (DM-CHAR-SEAL-FLOVER); actualizar la ficha existente de Soma Familia y el objeto de protección de muñeca.
 - [x] Incorporar los cuatro nuevos eventos en los índices de eventos, catálogo y modelo cronológico; actualizar la prueba de integridad correspondiente.
 - [ ] Continuar desde el Capítulo 03, primera línea pendiente 3471.
-- **Pendientes preservados:** discrepancia de apariencia Hobbit/Dogman; acto e intención de la desaparición de la daga; sentido del comentario sobre el reparto; habilidad de apoyo no nombrada; equivalencia de la armadura; correspondencia del Protector de Jade con el evento posterior de Ais; traducción no cotejada.
+- **Pendientes preservados:** discrepancia de apariencia Hobbit/Dogman; acto e intención de la desaparición de la daga; referente de la advertencia de Seal y motivo de la petición de Lili; sentido del comentario sobre el reparto; habilidad de apoyo no nombrada; equivalencia de la armadura; correspondencia del Protector de Jade con el evento posterior de Ais; traducción no cotejada.
 - **Límite:** no modificar la fuente Markdown ni DMR-060. El Volumen 2 sigue PARTIAL / IN_PROGRESS.
