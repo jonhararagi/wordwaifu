@@ -103,9 +103,9 @@ Bell acepta que Lili lo acompañe únicamente durante ese día de prueba y acuer
 
 Después Bell consulta a Eina sobre Lili y Soma Familia. La descripción del vino, del tamaño y fuerza de la Familia, de la conducta de sus miembros y de la aparente distancia de Soma respecto de otros dioses se conserva como información que Eina atribuye al expediente del Gremio o a lo que ha oído (1951–2027). Eina señala el bajo prestigio social de los Ayudantes y deja a Bell la decisión final (2033–2079).
 
-### Daga de Hestia: ausencia, tasación y devolución · líneas 2115–2459
+### Daga de Hestia: ausencia, tasación y devolución · líneas 2115–2501
 
-Bell descubre que la Daga de Hestia ya no está en su funda (2115–2137). En una escena paralela, Lili aparece en una tienda antigua con la daga; el comerciante ofrece 30 Varisu, oferta que no se acepta (2163–2223). Ryuu reconoce el símbolo de la daga, persigue a la persona que la lleva y luego comprende que ha confundido a Lili, de apariencia Dogman, con el Hobbit masculino que buscaba. Finalmente devuelve el arma a Bell (2233–2459).
+Bell descubre que la Daga de Hestia ya no está en su funda (2115–2137). En una escena paralela, Lili aparece en una tienda antigua con la daga; el comerciante ofrece 30 Varisu, oferta que no se acepta (2139–2223). Ryuu, que vuelve de hacer compras junto a Seal, reconoce el grabado del arma, persigue a quien la lleva y luego comprende que ha confundido a Lili, de apariencia Dogman, con el Hobbit masculino que buscaba. Finalmente devuelve la daga a Bell (2225–2459). Después de que Bell se aleja, Seal susurra a Lili «No te dejes llevar»; Lili reacciona con temor y pide a Bell que no la lleve a la Señora de la Abundancia (2463–2501). El texto no aclara el referente de la advertencia ni la razón completa de la petición.
 
 **Límite de inferencia:** el capítulo muestra a Lili con la daga y luego la devolución, pero no narra directamente el acto inicial de tomarla ni contiene una confesión explícita de Lili ante Bell. El evento se denomina por la devolución de Ryuu, no por un robo presentado como hecho confesado.
 
@@ -125,7 +125,7 @@ Hestia se prepara y cuenta a Deméter y a otras diosas que la otra persona es un
 
 ## Reconciliación funcional de la Parte 2
 
-- **Personajes reutilizados:** Bell (DM-CHAR-BELL), Eina (DM-CHAR-EINA), Hestia (DM-CHAR-HESTIA), Liliruca (CHAR-LILIRUCA-ARDE) y Ryuu (CHAR-RYUU-LION). No se crea ninguna ficha nueva de personaje.
+- **Personajes reutilizados:** Bell (DM-CHAR-BELL), Eina (DM-CHAR-EINA), Hestia (DM-CHAR-HESTIA), Liliruca (CHAR-LILIRUCA-ARDE), Ryuu (CHAR-RYUU-LION) y Seal (DM-CHAR-SEAL-FLOVER). No se crea ninguna ficha nueva de personaje.
 - **Familia reutilizada:** Soma Familia (FAM-SOMA); el capítulo añade observaciones atribuidas a Eina y a personal del Gremio, no una descripción universal de sus miembros.
 - **Objetos reutilizados:** Daga de Hestia (OBJ-DM-HESTIA-DAGGER-001) y protección de muñeca color jade (OBJ-DM-BELL-JADE-WRIST-GUARD-001). El perfil la denomina Protector de Jade; no se duplica.
 - **Eventos nuevos:** EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001; EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001; EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001; EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001.
@@ -138,11 +138,12 @@ Hestia se prepara y cuenta a Deméter y a otras diosas que la otra persona es un
 
 1. Discrepancia de apariencia Hobbit/Dogman presentada entre el cierre del Capítulo 01 y el Capítulo 02; mecanismo no explicado en este bloque.
 2. Acto inicial e intención de la desaparición de la Daga de Hestia: inferidos por la secuencia, no confesados.
-3. Sentido exacto del comentario sarcástico de Lili sobre el reparto: no resuelto.
-4. Nombre de la habilidad de apoyo de Lili y su contenido de Estado: no revelados.
-5. Equivalencia nominal de Armadura de Conejo MK-II con la armadura comprada en el bloque anterior: pendiente.
-6. Correspondencia del Protector de Jade con el objeto encontrado posteriormente por Ais: pendiente.
-7. Matices de traducción española no cotejados con japonés.
+3. Referente de la advertencia que Seal susurra a Lili («No te dejes llevar») y motivo de la petición de evitar la Señora de la Abundancia: no resueltos; no inferir una causa ni una relación permanente.
+4. Sentido exacto del comentario sarcástico de Lili sobre el reparto: no resuelto.
+5. Nombre de la habilidad de apoyo de Lili y su contenido de Estado: no revelados.
+6. Equivalencia nominal de Armadura de Conejo MK-II con la armadura comprada en el bloque anterior: pendiente.
+7. Correspondencia del Protector de Jade con el objeto encontrado posteriormente por Ais: pendiente.
+8. Matices de traducción española no cotejados con japonés.
 
 ## Checkpoint vigente · después de la Parte 2
 
