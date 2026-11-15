@@ -3549,6 +3549,64 @@
       "status": "source_checked_partial",
       "priority": "high",
       "name": "Daga de Hestia"
+    },
+    {
+      "id": "EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001",
+      "path": "events/timeline/EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001.md",
+      "type": "event",
+      "tags": [
+        "Bell",
+        "Liliruca Arde",
+        "Soma Familia",
+        "helper",
+        "first expedition",
+        "volume 2"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001",
+      "path": "events/timeline/EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001.md",
+      "type": "event",
+      "tags": [
+        "Ryuu Lion",
+        "Bell",
+        "Liliruca Arde",
+        "Dagger of Hestia",
+        "volume 2"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001",
+      "path": "events/timeline/EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001.md",
+      "type": "event",
+      "tags": [
+        "Bell",
+        "Liliruca Arde",
+        "second expedition",
+        "26,000 Varisu",
+        "volume 2"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "high"
+    },
+    {
+      "id": "EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001",
+      "path": "events/timeline/EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001.md",
+      "type": "event",
+      "tags": [
+        "Bell",
+        "Hestia",
+        "Miach",
+        "Demeter",
+        "Orario",
+        "volume 2"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "high"
     }
   ],
   "reservedIds": [
@@ -4346,6 +4404,12 @@
       "path": "volumes/familia-chronicle/README.md",
       "type": "volume_series_index",
       "status": "folder_prepared_sources_pending"
+    },
+    {
+      "document_id": "RESEARCH-DM-063",
+      "path": "research/inbox/DANMACHI-RESEARCH-063-volume-02-markdown-extraction-part-1.md",
+      "type": "source_extraction_report",
+      "status": "source_checked_partial_translation_unverified"
     }
   ],
   "lastStructuredSync": "2026-10-31",

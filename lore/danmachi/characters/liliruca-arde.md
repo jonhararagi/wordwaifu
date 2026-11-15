@@ -97,3 +97,21 @@ En el cierre del Capítulo 01, una joven Hobbit perseguida por un aventurero des
 - **Límite:** no atribuir afiliación a Soma Familia al perseguidor ni afirmar que Bell haya contratado ya a Lili.
 - **Continuidad:** exclusivamente CONT-MAIN-LN para esta nota; las secciones CONT-ANIME y CONT-SECONDARY existentes conservan sus propios alcances.
 - **Fuente:** DMR-063-SRC-001, Markdown lines 1049–1391; traducción privada no cotejada con japonés.
+
+
+## CONT-MAIN-LN · Volumen 2 · Capítulo 02 (DMR-063-SRC-001)
+
+Al continuar la conversación iniciada cerca de Babel, Lili afirma que pertenece a Soma Familia y que sus miembros la excluyen; dice que no puede permanecer en la residencia de la Familia y que busca alojamiento barato (Markdown lines 1405–1447). Bell acepta inicialmente que lo acompañe durante un solo día de prueba, con una participación propuesta del 30 % de los ingresos (lines 1537–1549). En el séptimo piso, Lili demuestra experiencia como Ayudante al recuperar piedras mágicas y botín, mover restos de monstruos y escoger rutas con tránsito de otros aventureros; también advierte sobre las esporas venenosas de las Polillas Púrpuras (lines 1651–1707, 1871–1913).
+
+Al día siguiente, Bell acepta un contrato sin fecha límite y la reconoce como miembro de su equipo (lines 2505–2513). Lili menciona que tiene una habilidad de apoyo, pero no proporciona su nombre; también afirma que no ha obtenido Magia (lines 2567–2585). No se completa la habilidad a partir de otras continuidades.
+
+### Apariencia y objetos durante la secuencia de la daga
+
+El cierre del Capítulo 01 había presentado a la joven como Hobbit (Markdown lines 1049–1391). En el Capítulo 02, Bell ve orejas de animal y una apariencia de Dogman cuando Lili se descubre la capucha; posteriormente Ryuu distingue a Lili, de apariencia Dogman, del Hobbit masculino al que perseguía (lines 1485–1511, 2371–2453). El capítulo no explica aquí el mecanismo ni resuelve por sí solo la discrepancia de apariencia. No se sustituye la identidad ya registrada ni se atribuye una magia concreta a partir de esta escena.
+
+Bell descubre que la Daga de Hestia ha desaparecido. Más tarde Ryuu la devuelve después de encontrarla en manos de Lili; Lili no confiesa ante Bell haberla tomado y el pasaje no muestra directamente el acto inicial de sustracción (lines 2115–2137, 2233–2459). El intento de tasación en una tienda antigua termina con una oferta de 30 Varisu que no se acepta (lines 2163–2191).
+
+- **Eventos:** prueba y primera expedición (../events/timeline/EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001.md), devolución de la Daga de Hestia por Ryuu (../events/timeline/EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001.md) y contratación sin fecha límite y segunda expedición (../events/timeline/EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001.md).
+- **Límite:** la posesión de la daga por Lili está narrada; su sustracción inicial y su intención final no se formulan como confesión explícita.
+- **Continuidad:** exclusivamente CONT-MAIN-LN; no importar desde CONT-SECONDARY una explicación de la apariencia o habilidades.
+- **Fuente:** DMR-063-SRC-001, Markdown lines 1395–2821; traducción privada no cotejada con japonés.

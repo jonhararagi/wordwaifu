@@ -351,3 +351,20 @@ Al cierre del Capítulo 01, Bell se interpone para proteger a una joven Hobbit p
 - **Eventos:** `EVT-DM-V02-BELL-DEFEATS-ANT-KILLER-001`, `EVT-DM-V02-BELL-EINA-ARMOR-SHOPPING-001` y [Bell protege a una joven Hobbit y conoce a Liliruca Arde](../events/timeline/EVT-DM-V02-BELL-FIRST-MEETS-LILI-001.md).
 - **Fuente:** DMR-063-SRC-001; Markdown lines 75–1391. Traducción privada no cotejada con japonés.
 - **Snapshots:** no sobrescribir los estados de Bell ya documentados; estos valores corresponden a este momento de la narración.
+
+
+## CONT-MAIN-LN · Volumen 2 · Capítulo 02 (DMR-063-SRC-001)
+
+Tras conocer la oferta de Liliruca, Bell acepta primero una prueba limitada a una sola jornada y acuerda una participación inicial del 30 % de los ingresos para ella (Markdown lines 1537–1549). La exploración del séptimo piso muestra que Lili puede recuperar piedras mágicas y botín, transportar restos y escoger rutas de retirada; Bell decide consultar a Eina sobre Soma Familia antes de resolver el vínculo a más largo plazo (lines 1555–1947, 1955–2095).
+
+Al día siguiente, Bell confirma que Lili será su Ayudante sin fecha límite y que formarán un equipo de dos personas (lines 2505–2513). En la segunda jornada conjunta obtienen 26.000 Varisu; Bell entrega 13.000 a Lili como su mitad (lines 2695–2821). Esta contratación inicial no se fusiona con el evento posterior de recontratación tras el rescate, EVT-DM-V02-BELL-AND-LILI-REHIRE-001 (DMR-060).
+
+### Snapshot de Estado y equipo · cierre del Capítulo 02
+
+El perfil incluido al final del capítulo registra a Bell en Lv. 1: Fuerza D 591, Resistencia G 233, Destreza C 607, Agilidad B 702 y Magia I 0. La ficha muestra [Deseo Inquebrantable] y describe su aceleración del crecimiento; no se atribuye a Bell conocimiento consciente del nombre o de los efectos porque el pasaje presenta una ficha de Estado, no una escena en que él lea esa entrada (Markdown lines 2823–2853).
+
+El mismo perfil enumera la Armadura de Conejo MK-II y el Protector de Jade (lines 2855–2869). Se amplían los registros descriptivos de equipo, pero se mantiene pendiente la equivalencia nominal entre la armadura listada y la armadura comprada en el bloque anterior.
+
+- **Acontecimientos nuevos:** prueba y primera expedición con Lili (../events/timeline/EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001.md), devolución de la Daga de Hestia por Ryuu (../events/timeline/EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001.md), contratación sin fecha límite y segunda expedición (../events/timeline/EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001.md) y salida interrumpida con Hestia (../events/timeline/EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001.md).
+- **Fuente:** DMR-063-SRC-001, Markdown lines 1395–3470; traducción privada no cotejada con japonés.
+- **Límite:** no se asignan fechas de calendario ni se convierten interacciones puntuales en relaciones permanentes.

@@ -116,3 +116,12 @@ Al volver de comprar suministros para el negocio nocturno de la Señora de la Ab
 - **Evento:** `EVT-DM-V02-BELL-FIRST-MEETS-LILI-001`.
 - **Límite:** no asignar afiliación al perseguidor ni ampliar el resultado más allá de la retirada descrita.
 - **Continuidad:** esta nota es CONT-MAIN-LN; otros perfiles o afirmaciones de continuidad mantienen sus etiquetas independientes.
+
+
+## CONT-MAIN-LN · Volumen 2 · recuperación de la Daga de Hestia (DMR-063-SRC-001)
+
+Mientras vuelve de comprar suministros con Seal, Ryuu reconoce una daga que cree perteneciente a un conocido. La persona que la lleva, de apariencia Dogman, niega que sea ajena y trata de marcharse; Ryuu la persigue, la alcanza con una manzana y después la patea cuando intenta huir (Markdown lines 2233–2313). Al encontrarse después con Bell y ver a Lili, Ryuu comprende que ha perseguido a la persona equivocada: explica que buscaba a un Hobbit masculino que llevaba la daga, no a la joven de apariencia Dogman que tenía delante (lines 2353–2453). Ryuu devuelve la Daga de Hestia a Bell.
+
+- **Evento:** Ryuu devuelve la Daga de Hestia (../events/timeline/EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001.md).
+- **Límite:** la escena muestra una identificación errónea y una devolución puntual; no demuestra una relación permanente entre Ryuu y Lili ni que Ryuu conociera todos los motivos de la posesión de la daga.
+- **Fuente:** DMR-063-SRC-001, Markdown lines 2233–2459; traducción privada no cotejada con japonés.

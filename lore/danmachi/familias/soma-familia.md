@@ -43,3 +43,16 @@ La afiliación anterior de Lili a Soma Familia se mantiene marcada como secundar
 Los cargos históricos se modelan como relaciones distintas, acotadas al período y a su estado de verificación. Una acusación reportada sobre Canoe no demuestra culpabilidad ni determina causa o destino. Una intervención atribuida a Chandra no crea automáticamente una amistad permanente.
 
 Consulta el [expediente de investigación y red relacional](../research/inbox/DANMACHI-RESEARCH-025-soma-relationship-network.md) antes de promover afirmaciones a nivel de canon primario.
+
+
+## CONT-MAIN-LN · Volumen 2 · información atribuida a Eina y observación del Gremio (DMR-063-SRC-001)
+
+En su conversación con Bell, Eina describe a Soma Familia como una Familia dedicada a explorar el Dungeon y vinculada también a la producción de vino. Según la información que ella consulta, su vino se produce en cantidades reducidas, tiene buen sabor y una demanda elevada en Orario (Markdown lines 1985–1997). Eina habla de una Familia con numerosos miembros y una fuerza que considera intermedia; sus comentarios sobre la pasión por las Piedras Mágicas y los objetos, y sobre la escasa interacción de Soma respecto de otros dioses, son información atribuida a su expediente y a lo que ha oído, no una descripción omnisciente de cada integrante (lines 2001–2027).
+
+Más adelante, una empleada del Gremio comenta a Eina que vuelve a haber una disputa con un aventurero de Soma Familia por el valor asignado a su botín. El texto presenta las reclamaciones en el intercambio de oro como repetidas y frecuentes, pero la escena muestra a un aventurero concreto y una observación general de Eina; no demuestra que todos los miembros actúen igual ni permite identificar a los implicados no nombrados (lines 2643–2694).
+
+Lili afirma que pertenece a Soma Familia y que sus miembros la excluyen de la residencia (lines 1405–1447). Esta declaración se registra como su experiencia narrada en ese momento, no como descripción exhaustiva de toda la estructura familiar.
+
+- **Continuidad:** CONT-MAIN-LN.
+- **Fuente:** DMR-063-SRC-001, Markdown lines 1405–1447, 1985–2027 y 2643–2694.
+- **Límites:** no inferir política institucional de Soma, culpabilidad colectiva, jerarquías no nombradas ni una relación personal con la deidad Soma.

@@ -4432,6 +4432,378 @@
           ]
         }
       ]
+    },
+    {
+      "id": "EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001",
+      "recordId": "EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 693,
+      "title": "Bell acepta una prueba de un día con Lili y realizan su primera expedición",
+      "dateLabel": "Capítulo 02 · primera jornada de prueba en el séptimo piso; fecha absoluta desconocida.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Bell acepta inicialmente a Lili como Ayudante durante una jornada de prueba y acuerdan un 30 % de los ingresos para ella. En el séptimo piso, Lili demuestra conocimientos prácticos de recuperación y seguridad. Al regresar, Bell consulta a Eina sobre Soma Familia; Eina le ofrece información atribuida a su expediente y deja la decisión final a Bell.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "acepta la prueba y realiza la expedición"
+        },
+        {
+          "id": "CHAR-LILIRUCA-ARDE",
+          "name": "Liliruca Arde",
+          "kind": "character",
+          "role": "trabaja como Ayudante durante la jornada"
+        },
+        {
+          "id": "DM-CHAR-EINA",
+          "name": "Eina Tulle",
+          "kind": "character",
+          "role": "orienta a Bell después de la expedición"
+        }
+      ],
+      "relatedEntities": [
+        {
+          "id": "FAM-SOMA",
+          "name": "Soma Familia",
+          "kind": "family",
+          "role": "Familia a la que Lili dice pertenecer"
+        }
+      ],
+      "detailPath": "events/timeline/EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001.md",
+      "sources": [
+        {
+          "label": "DMR-063 · Volumen 2, Markdown del repositorio, Capítulo 02",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "kind": "repository_markdown",
+          "note": "Fuente usada exclusivamente como Markdown; lines 1395–3470. No se usaron PDF, imágenes ni fuentes ajenas."
+        },
+        {
+          "label": "Registro individual EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001.md",
+          "kind": "internal",
+          "note": "Ficha individual con localizadores Markdown y límites de inferencia."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V02-BELL-FIRST-MEETS-LILI-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "La prueba comienza después de que Lili ofrece sus servicios y Bell acepta una jornada de trabajo; no se fija una distancia adicional.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "floor_context",
+        "reason": "La exploración en el Dungeon y la consulta posterior en Babel están identificadas explícitamente en el capítulo."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "spatialPrecision": "floor_context",
+          "context": "Primera jornada de trabajo de Bell y Lili en el séptimo piso del Dungeon.",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001.md"
+          ]
+        },
+        {
+          "locationId": "LOC-BABEL",
+          "spatialPrecision": "city_level",
+          "context": "Bell regresa a Babel y consulta a Eina después de la exploración.",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001",
+      "recordId": "EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 694,
+      "title": "Ryuu devuelve a Bell la Daga de Hestia",
+      "dateLabel": "Durante el regreso de la primera jornada de prueba y antes de la jornada siguiente; fecha absoluta desconocida.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Bell descubre que la Daga de Hestia ha desaparecido. Lili aparece con el arma en una tienda antigua, donde no se completa una venta. Ryuu reconoce la daga, persigue a quien la lleva y luego comprende que confundió a Lili, de apariencia Dogman, con el Hobbit masculino al que buscaba. Finalmente devuelve el arma a Bell. El acto inicial de sustracción no se muestra directamente.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "descubre la ausencia y recibe la daga"
+        },
+        {
+          "id": "CHAR-LILIRUCA-ARDE",
+          "name": "Liliruca Arde",
+          "kind": "character",
+          "role": "aparece en posesión de la daga"
+        },
+        {
+          "id": "CHAR-RYUU-LION",
+          "name": "Ryuu Lion",
+          "kind": "character",
+          "role": "reconoce el arma y la devuelve"
+        }
+      ],
+      "relatedEntities": [
+        {
+          "id": "OBJ-DM-HESTIA-DAGGER-001",
+          "name": "Daga de Hestia",
+          "kind": "equipment",
+          "role": "arma recuperada"
+        }
+      ],
+      "detailPath": "events/timeline/EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001.md",
+      "sources": [
+        {
+          "label": "DMR-063 · Volumen 2, Markdown del repositorio, Capítulo 02",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "kind": "repository_markdown",
+          "note": "Fuente usada exclusivamente como Markdown; lines 1395–3470. No se usaron PDF, imágenes ni fuentes ajenas."
+        },
+        {
+          "label": "Registro individual EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001.md",
+          "kind": "internal",
+          "note": "Ficha individual con localizadores Markdown y límites de inferencia."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "La ausencia de la daga se descubre después de la primera expedición y su devolución ocurre antes del regreso de Bell y Lili al Dungeon al día siguiente.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "La secuencia urbana se ubica en Orario; el texto no exige una calle o edificio más preciso."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "spatialPrecision": "city_level",
+          "context": "La tienda antigua y la persecución de Ryuu tienen lugar en Orario.",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001",
+      "recordId": "EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 695,
+      "title": "Bell confirma el equipo con Lili y comparte los ingresos de la segunda expedición",
+      "dateLabel": "El día siguiente a la primera jornada de prueba; fecha absoluta desconocida.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Bell confirma que Lili será su Ayudante sin fecha límite y que formarán un equipo de dos personas. En la segunda expedición, el intercambio de oro produce 26.000 Varisu y Bell entrega 13.000 a Lili como su mitad. El snapshot de equipo y Estado al cierre del capítulo se conserva como dato temporal.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "confirma el equipo y comparte los ingresos"
+        },
+        {
+          "id": "CHAR-LILIRUCA-ARDE",
+          "name": "Liliruca Arde",
+          "kind": "character",
+          "role": "acepta el equipo y recibe la mitad del dinero"
+        },
+        {
+          "id": "DM-CHAR-HESTIA",
+          "name": "Hestia",
+          "kind": "character",
+          "role": "acepta la decisión de Bell"
+        }
+      ],
+      "relatedEntities": [
+        {
+          "id": "OBJ-DM-BELL-JADE-WRIST-GUARD-001",
+          "name": "Protector de Jade",
+          "kind": "equipment",
+          "role": "objeto listado en el perfil de Bell"
+        }
+      ],
+      "detailPath": "events/timeline/EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001.md",
+      "sources": [
+        {
+          "label": "DMR-063 · Volumen 2, Markdown del repositorio, Capítulo 02",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "kind": "repository_markdown",
+          "note": "Fuente usada exclusivamente como Markdown; lines 1395–3470. No se usaron PDF, imágenes ni fuentes ajenas."
+        },
+        {
+          "label": "Registro individual EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001.md",
+          "kind": "internal",
+          "note": "Ficha individual con localizadores Markdown y límites de inferencia."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_offset",
+        "anchorId": "EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001",
+        "anchorLabel": "primera jornada de prueba de Bell y Lili",
+        "direction": "after",
+        "amount": 1,
+        "unit": "day",
+        "precision": "exact",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "floor_context",
+        "reason": "La jornada de equipo y la exploración se identifican explícitamente en el Dungeon."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "spatialPrecision": "floor_context",
+          "context": "La segunda expedición de Bell y Lili se desarrolla en el Dungeon.",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001",
+      "recordId": "EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 696,
+      "title": "La salida de Bell y Hestia se interrumpe por la llegada de otras diosas",
+      "dateLabel": "Después de la segunda expedición de Bell y Lili; la comida acordada se fija para las 18:00, sin fecha de calendario.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Hestia malinterpreta ver a Bell caminando de la mano con Lili y luego expresa celos ante Miach. Bell la cuida durante la resaca y la invita a comer. Hestia vive la invitación con ilusión romántica; en la Plaza del Amor, otras diosas rodean a Bell y la salida se interrumpe. Bell promete que volverán a salir y contemplarán juntos la vista nocturna de Orario.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "cuida a Hestia y propone la salida"
+        },
+        {
+          "id": "DM-CHAR-HESTIA",
+          "name": "Hestia",
+          "kind": "character",
+          "role": "acepta la invitación y vive la salida con ilusión"
+        },
+        {
+          "id": "CHAR-MIACH",
+          "name": "Miach",
+          "kind": "character",
+          "role": "aconseja a Hestia durante la bebida"
+        },
+        {
+          "name": "Deméter y otras diosas",
+          "kind": "faction_members",
+          "role": "escuchan a Hestia e interrumpen la salida"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001.md",
+      "sources": [
+        {
+          "label": "DMR-063 · Volumen 2, Markdown del repositorio, Capítulo 02",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "kind": "repository_markdown",
+          "note": "Fuente usada exclusivamente como Markdown; lines 1395–3470. No se usaron PDF, imágenes ni fuentes ajenas."
+        },
+        {
+          "label": "Registro individual EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001.md",
+          "kind": "internal",
+          "note": "Ficha individual con localizadores Markdown y límites de inferencia."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "El interludio comienza después de que Hestia ve a Bell junto a Lili; la invitación y salida se suceden en los días siguientes sin fecha de calendario.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "Los escenarios de la invitación y la salida se ubican en Orario sin localización geográfica más precisa en el registro."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "spatialPrecision": "city_level",
+          "context": "La Plaza del Amor, el Baño Sagrado y la torre del reloj se encuentran en Orario; no se añade una ficha para cada punto.",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001.md"
+          ]
+        }
+      ]
     }
   ],
   "temporalModelVersion": 1,

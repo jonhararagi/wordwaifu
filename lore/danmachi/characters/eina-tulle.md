@@ -119,3 +119,16 @@ Eina reprende a Bell por haber llegado al séptimo piso y le solicita ver su Est
 - **Eventos:** `EVT-DM-V02-BELL-EINA-ARMOR-SHOPPING-001`; el episodio previo del reporte de Estado permanece en esta sección narrativa, sin crear un acontecimiento separado innecesario.
 - **Límite:** el nombre propio y material de la protección de muñeca no están indicados. Los textos protegidos del Estado no son conocimiento de Eina.
 - **Fuente:** DMR-063-SRC-001, Markdown lines 181–1045; traducción privada sin cotejo japonés.
+
+
+## CONT-MAIN-LN · Volumen 2 · consulta de Bell sobre Lili y Soma Familia (DMR-063-SRC-001)
+
+Después de la primera jornada de prueba con Lili, Bell acude a Eina al regresar a Babel y le pide orientación sobre la Ayudante y la Familia a la que pertenece (Markdown lines 1951–1981). Eina consulta un expediente del Gremio y describe a Soma Familia como una Familia de exploración que también participa en negocios: produce vino en cantidades reducidas, de sabor muy apreciado y con demanda en Orario (lines 1985–1997).
+
+La información que Eina ofrece sobre sus integrantes es una valoración atribuida a ella y al expediente que consulta. Habla de muchos miembros, de una fuerza que sitúa en un rango intermedio y de una actitud inusualmente intensa respecto de las Piedras Mágicas y los objetos; también menciona que Soma rara vez interactúa con otros dioses, según lo que ha oído (lines 2001–2027). No convertir esos comentarios en propiedades universales de cada integrante ni en hechos omniscientes.
+
+Eina considera aceptable que Bell contrate a Lili, advierte que evite conflictos con los demás miembros y recalca que la decisión y la responsabilidad final son de Bell (lines 2033–2049). También explica el estatus social limitado de los Ayudantes y que algunos aventureros que abandonan la progresión de combate terminan desempeñando esa función (lines 2055–2079).
+
+- **Evento relacionado:** prueba y primera expedición de Bell y Lili (../events/timeline/EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001.md).
+- **Límite:** esta conversación no es la posterior petición de Eina a Hestia para que convenza a Bell de romper el vínculo; ese acontecimiento se conserva en EVT-DM-V02-HESTIA-EINA-DISCUSS-LILI-001 (DMR-060).
+- **Fuente:** DMR-063-SRC-001, Markdown lines 1951–2095.

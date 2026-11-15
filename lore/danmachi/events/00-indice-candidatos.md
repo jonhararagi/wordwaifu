@@ -104,3 +104,13 @@ Antes de crear otro evento, compara ID, nombres alternativos, participantes, per
 
 - [Segunda actualización del Estado de Bell y promesa con Hestia](timeline/EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001.md) — EVT-DM-V01-HESTIA-UPDATES-BELL-AFTER-WAR-SHADOW-001 · CONT-MAIN-LN · PDF pp.91–97; snapshot, Habilidad oculta y promesa. Distinto de las actualizaciones de pp.30–36 y pp.193–196.
 - [Bell regresa a La Señora de la Abundancia y se disculpa con Seal](timeline/EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001.md) — EVT-DM-V01-BELL-RETURNS-TO-SEAL-AND-APOLOGIZES-001 · CONT-MAIN-LN · PDF pp.98–100; devolución del dinero y cesta de comida. La escena continúa al cierre de p.100.
+
+
+## Volumen 2 · Capítulo 02 · extracción DMR-063 (CONT-MAIN-LN)
+
+- [Bell y Lili acuerdan una prueba de un día y realizan su primera expedición](timeline/EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001.md) · DMR-063-SRC-001 · Markdown lines 1537–2095.
+- [Ryuu devuelve a Bell la Daga de Hestia después de encontrarla en manos de Lili](timeline/EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001.md) · DMR-063-SRC-001 · Markdown lines 2115–2459; la sustracción inicial queda como inferencia narrativa.
+- [Bell confirma el equipo con Lili y comparte los ingresos de la segunda expedición](timeline/EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001.md) · DMR-063-SRC-001 · Markdown lines 2505–2821.
+- [La salida de Bell y Hestia se interrumpe por la llegada de otras diosas](timeline/EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001.md) · DMR-063-SRC-001 · Markdown lines 2873–3470.
+
+Estos eventos se mantienen separados de EVT-DM-V02-BELL-FIRST-MEETS-LILI-001, que registra la oferta inicial sin contratación confirmada, y de EVT-DM-V02-BELL-AND-LILI-REHIRE-001, que corresponde a la nueva contratación después del rescate en DMR-060. No se añaden relaciones permanentes.

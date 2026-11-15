@@ -14,8 +14,8 @@ assert.equal(report.valid,true,report.errors.join("\n"));
 assert.equal(report.temporalModelVersion,1);
 assert.equal(report.legacyTemporalModel,false);
 assert.equal(report.eraCount,10);
-assert.equal(report.eventCount,55);
-assert.equal(report.temporalEventCount,55);
+assert.equal(report.eventCount,59);
+assert.equal(report.temporalEventCount,59);
 assert.equal(data.anchor.id,"T0-BELL-ARRIVAL");
 assert.equal(data.anchor.eventId,"EVT-DM-BELL-ARRIVAL-001");
 
@@ -74,7 +74,11 @@ const expectedKinds={
  "EVT-DM-V01-GANESHA-GOD-BANQUET-001":"relative_order",
  "EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001":"relative_order",
  "EVT-DM-V01-BELL-RECEIVES-RECOVERY-POTIONS-FROM-MIACH-001":"relative_offset",
- "EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001":"relative_offset"
+ "EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001":"relative_offset",
+ "EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001":"relative_order",
+ "EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001":"relative_order",
+ "EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001":"relative_offset",
+ "EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001":"relative_order"
 };
 const expectedLabels={
  "EVT-DM-V01-BELL-RECEIVES-FALNA-001":"Después del primer encuentro Bell–Hestia; intervalo exacto no cuantificado.",
@@ -131,10 +135,14 @@ const expectedLabels={
  "EVT-DM-V01-GANESHA-GOD-BANQUET-001":"Por la noche, después de la salida de Hestia y de la visita de Bell a Seal; fecha absoluta desconocida.",
  "EVT-DM-V01-HESTIA-PETITIONS-HEPHAISTOS-DAGGER-001":"Comienza durante el Banquete de Ganesha y continúa durante los dos días posteriores; fecha absoluta desconocida.",
  "EVT-DM-V01-BELL-RECEIVES-RECOVERY-POTIONS-FROM-MIACH-001":"Exactamente dos días después del Banquete de Ganesha; después de que Bell vuelve desde el Dungeon.",
- "EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001":"Exactamente dos días después del Banquete de Ganesha; Bell regresa del Dungeon y pasa por la sede del Gremio."
+ "EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001":"Exactamente dos días después del Banquete de Ganesha; Bell regresa del Dungeon y pasa por la sede del Gremio.",
+ "EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001":"Capítulo 02 · primera jornada de prueba en el séptimo piso; fecha absoluta desconocida.",
+ "EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001":"Durante el regreso de la primera jornada de prueba y antes de la jornada siguiente; fecha absoluta desconocida.",
+ "EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001":"El día siguiente a la primera jornada de prueba; fecha absoluta desconocida.",
+ "EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001":"Después de la segunda expedición de Bell y Lili; la comida acordada se fija para las 18:00, sin fecha de calendario."
 };
 const events=new Map(data.events.map(e=>[e.id,e]));
-assert.deepEqual([...events.keys()].sort(),Object.keys(expectedKinds).sort(),"All 55 timeline event IDs must be retained exactly.");
+assert.deepEqual([...events.keys()].sort(),Object.keys(expectedKinds).sort(),"All 59 timeline event IDs must be retained exactly.");
 for(const [id,kind] of Object.entries(expectedKinds)){
  const event=events.get(id);
  assert.equal(event.temporal.kind,kind,id+" temporal variant");

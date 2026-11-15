@@ -2159,6 +2159,21 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - [x] Reconciliar el bloque con personajes, ubicaciones y Familia ya existentes; reutilizar Bell, Eina, Hestia, Liliruca, Ryuu, Babel, Dungeon y Hephaistos Familia.
 - [x] Crear registros separados para el combate Ant Killer, la compra de equipo en Babel y el primer encuentro con Liliruca; no confundir el último con el posterior hostigamiento de Lili.
 - [x] Registrar como nuevos únicamente la ficha de Ant Killer, la armadura ligera descriptiva y la protección de muñeca color jade. La Daga de Hestia se reutiliza.
-- [ ] Continuar desde `## Capítulo 02 – Las Circunstancias de la Ayudante` (Markdown line 1395), en una tanda nueva y consecutiva.
+- [x] Procesar consecutivamente el Capítulo 02, desde la línea 1395 hasta la 3470, y reconciliar los hechos funcionales respaldados por el Markdown.
 - **Pendientes conservados:** identidad del narrador del prólogo; identidad/afiliación del perseguidor; contratación formal de Lili; equivalencia «Welf Crosso» ↔ Welf Crozzo; nombre y material de la protección de muñeca; términos completos del trabajo de Hestia; matices de traducción sin cotejo japonés.
 - **Límite:** solo Markdown del repositorio; no PDF, imágenes ni fuentes externas. El archivo fuente no se modifica. El Volumen 2 permanece parcial.
+
+
+## DMR-063 — extracción Markdown V2, Parte 2 · 2026-11-14
+
+- [x] Verificar HEAD de main contra el checkpoint 1d4104ec160ab4bb634fe2ead2794cd9470077c9 antes de editar.
+- [x] Leer consecutivamente el Capítulo 02, líneas 1395–3470, solo desde el blob Markdown existente.
+- [x] Distinguir la prueba contractual de un día de la contratación sin fecha límite del día siguiente.
+- [x] Documentar por separado la devolución de la Daga de Hestia por Ryuu, sin afirmar una confesión de robo.
+- [x] Reconciliar la segunda jornada, el reparto de ingresos y el snapshot temporal de Bell.
+- [x] Registrar el interludio y la salida interrumpida de Bell y Hestia sin crear una relación permanente.
+- [x] Reutilizar los perfiles Bell, Lili, Eina, Hestia y Ryuu; actualizar la ficha existente de Soma Familia y el objeto de protección de muñeca.
+- [x] Incorporar los cuatro nuevos eventos en los índices de eventos, catálogo y modelo cronológico; actualizar la prueba de integridad correspondiente.
+- [ ] Continuar desde el Capítulo 03, primera línea pendiente 3471.
+- **Pendientes preservados:** discrepancia de apariencia Hobbit/Dogman; acto e intención de la desaparición de la daga; sentido del comentario sobre el reparto; habilidad de apoyo no nombrada; equivalencia de la armadura; correspondencia del Protector de Jade con el evento posterior de Ais; traducción no cotejada.
+- **Límite:** no modificar la fuente Markdown ni DMR-060. El Volumen 2 sigue PARTIAL / IN_PROGRESS.

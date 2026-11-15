@@ -6,9 +6,9 @@ status: source_checked_translation_unverified
 continuity_scope: CONT-MAIN-LN
 source_refs:
   - DMR-063-SRC-001
-tags: [volume-02, markdown-only, part-1, Bell, Eina, Liliruca, Ryuu, Ant Killer]
+tags: [volume-02, markdown-only, parts-1-2, Bell, Eina, Liliruca, Ryuu, Ant Killer]
 ---
-# DANMACHI-RESEARCH-063 — Volumen 2: extracción Markdown, Parte 1
+# DANMACHI-RESEARCH-063 — Volumen 2: extracción Markdown, Partes 1 y 2
 
 ## Alcance y método
 
@@ -17,7 +17,7 @@ tags: [volume-02, markdown-only, part-1, Bell, Eina, Liliruca, Ryuu, Ant Killer]
 - **Blob Git de la fuente al inicio:** `9b884520a3b5aa30d25b8b2dfc8721d54b52464e`.
 - **Checkpoint inicial de main:** `338f79f0bde5495bf57df72e53dbaba782291dd3`.
 - **Localizador:** líneas Markdown 13–1391.
-- **Límite:** el bloque termina antes de `## Capítulo 02 – Las Circunstancias de la Ayudante` (línea 1395). No se ha procesado contenido posterior.
+- **Límite de la Parte 1:** prólogo y Capítulo 01, líneas 13–1391; se detuvo antes del encabezado de Capítulo 02 (línea 1395). La Parte 2 de este expediente procesa ese capítulo, líneas 1395–3470.
 - **Regla de fuente:** se leyó el texto del blob Markdown; las líneas que contienen imágenes incrustadas/Base64 no se inspeccionaron ni se usaron. No se consultaron PDF, imágenes, sitios externos ni otras continuidades.
 - **Reserva:** la traducción que contiene el Markdown no ha sido cotejada con el original japonés. Este expediente demuestra lo que expresa el Markdown del proyecto, no la fidelidad de la traducción frente al original.
 - **Continuidad:** toda integración narrativa nueva de esta tanda se etiqueta `CONT-MAIN-LN`. No se importan hechos de `CONT-GAME`, `CONT-AR`, `CONT-SECONDARY` o `CONT-AU`.
@@ -86,8 +86,69 @@ Al anochecer, Bell ve a una joven Hobbit perseguida por un aventurero desconocid
 6. Condiciones laborales completas de Hestia en la tienda.
 7. Traducción y matices lingüísticos no verificados contra el japonés.
 
-## Checkpoint
+## Checkpoint de Parte 1
 
-- **Última línea procesada:** 1391.
-- **Primer encabezado pendiente:** `## Capítulo 02 – Las Circunstancias de la Ayudante`, línea 1395.
-- **Estado:** Parte 1 delimitada y documentada; Volumen 2 continúa parcial.
+- **Última línea procesada en la Parte 1:** 1391.
+- **Primer encabezado de continuación:** `## Capítulo 02 – Las Circunstancias de la Ayudante`, línea 1395.
+- **Estado de aquella tanda:** prólogo y Capítulo 01 delimitados y documentados.
+
+
+## Parte 2 · Capítulo 02 — Las Circunstancias de la Ayudante · líneas 1395–3470
+
+### Contrato de prueba y primera expedición · líneas 1395–2095
+
+Lili confirma que pertenece a Soma Familia y describe la exclusión que sufre dentro de ella: dice que no puede permanecer en la residencia y busca un alojamiento barato (1405–1447). Su apariencia al descubrirse la capucha lleva a Bell a pensar que es Dogman y no la joven Hobbit que había visto la víspera; el capítulo no explica todavía esta discrepancia de apariencia (1461–1511).
+
+Bell acepta que Lili lo acompañe únicamente durante ese día de prueba y acuerdan inicialmente una participación del 30 % de los ingresos (1537–1549). En el séptimo piso, Bell combate mientras Lili recupera piedras mágicas y botín, mueve restos de monstruos y aplica conocimientos de rutas y seguridad. El texto contabiliza cuatro Ant Killers, tres Polillas Púrpuras y cinco Needle Rabbits en la secuencia (1555–1795). Lili avisa del peligro de las esporas de las Polillas Púrpuras y propone regresar cuando el antídoto que llevaba ya se había utilizado (1871–1913). Al final ofrece los objetos recuperados para demostrar confianza; Bell no formaliza aún un vínculo sin límite temporal (1915–1947).
+
+Después Bell consulta a Eina sobre Lili y Soma Familia. La descripción del vino, del tamaño y fuerza de la Familia, de la conducta de sus miembros y de la aparente distancia de Soma respecto de otros dioses se conserva como información que Eina atribuye al expediente del Gremio o a lo que ha oído (1951–2027). Eina señala el bajo prestigio social de los Ayudantes y deja a Bell la decisión final (2033–2079).
+
+### Daga de Hestia: ausencia, tasación y devolución · líneas 2115–2459
+
+Bell descubre que la Daga de Hestia ya no está en su funda (2115–2137). En una escena paralela, Lili aparece en una tienda antigua con la daga; el comerciante ofrece 30 Varisu, oferta que no se acepta (2163–2223). Ryuu reconoce el símbolo de la daga, persigue a la persona que la lleva y luego comprende que ha confundido a Lili, de apariencia Dogman, con el Hobbit masculino que buscaba. Finalmente devuelve el arma a Bell (2233–2459).
+
+**Límite de inferencia:** el capítulo muestra a Lili con la daga y luego la devolución, pero no narra directamente el acto inicial de tomarla ni contiene una confesión explícita de Lili ante Bell. El evento se denomina por la devolución de Ryuu, no por un robo presentado como hecho confesado.
+
+### Contrato sin fecha límite y segunda expedición · líneas 2505–2872
+
+Al día siguiente Bell vuelve al Dungeon con Lili y afirma que la contrata sin fecha límite, como integrante de un equipo de dos personas (2505–2513). Lili menciona que posee una habilidad de apoyo, sin decir su nombre, y afirma que no ha obtenido Magia (2567–2585). La conversación posterior sobre el reparto y las palabras sarcásticas de Lili no reciben una explicación definitiva; se conservan como ambigüedad (2595–2635).
+
+Una escena intercalada en el Gremio muestra una disputa de un aventurero de Soma Familia por la tasación de su botín; Eina y una compañera comentan que incidentes semejantes se repiten (2639–2694). El pasaje no permite generalizar la conducta a cada miembro. En la segunda expedición, la ayuda de Lili permite a Bell permanecer más tiempo en el Dungeon. El intercambio de oro entrega 26.000 Varisu; Bell divide el dinero y da 13.000 a Lili (2695–2821). El apretón de manos y el agradecimiento se registran como interacción de esa jornada, no como vínculo romántico permanente.
+
+El perfil final de Bell presenta Lv. 1, Fuerza D 591, Resistencia G 233, Destreza C 607, Agilidad B 702 y Magia I 0. Incluye la habilidad [Deseo Inquebrantable], pero no demuestra que Bell conozca su nombre o efectos (2823–2853). El equipo listado incluye Armadura de Conejo MK-II y Protector de Jade (2855–2869). La posible equivalencia de la armadura listada con la pieza comprada antes permanece pendiente; el Protector de Jade amplía la descripción del objeto que Eina entregó a Bell.
+
+### Interludio y salida de Bell y Hestia · líneas 2873–3470
+
+Hestia ve a Bell junto a Lili, los ve sostenerse de la mano y malinterpreta momentáneamente la escena como una aventura amorosa (2903–2929). Habla con Miach y expresa celos, pero él advierte que no hay pruebas de infidelidad ni de una relación de pareja (2933–2981). A la mañana siguiente Bell la cuida durante la resaca, decide descansar y la invita a comer como agradecimiento (3015–3145). La cita se fija para las 18:00 en la Plaza del Amor.
+
+Hestia se prepara y cuenta a Deméter y a otras diosas que la otra persona es un humano de su Familia; expresa que le gusta todo de él (3165–3281). En la plaza, otras diosas rodean a Bell e interrumpen la salida. Hestia y Bell escapan hacia una torre del reloj; Bell promete que volverán a salir, comerán algo rico y contemplarán otra vez la vista nocturna de Orario (3283–3457). El texto no confirma que la comida se realizara esa noche ni una relación exclusiva o formal.
+
+## Reconciliación funcional de la Parte 2
+
+- **Personajes reutilizados:** Bell (DM-CHAR-BELL), Eina (DM-CHAR-EINA), Hestia (DM-CHAR-HESTIA), Liliruca (CHAR-LILIRUCA-ARDE) y Ryuu (CHAR-RYUU-LION). No se crea ninguna ficha nueva de personaje.
+- **Familia reutilizada:** Soma Familia (FAM-SOMA); el capítulo añade observaciones atribuidas a Eina y a personal del Gremio, no una descripción universal de sus miembros.
+- **Objetos reutilizados:** Daga de Hestia (OBJ-DM-HESTIA-DAGGER-001) y protección de muñeca color jade (OBJ-DM-BELL-JADE-WRIST-GUARD-001). El perfil la denomina Protector de Jade; no se duplica.
+- **Eventos nuevos:** EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001; EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001; EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001; EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001.
+- **No duplicados:** el encuentro inicial del Capítulo 01 permanece separado del período de prueba; la contratación sin fecha límite del Capítulo 02 permanece separada de la recontratación tras el rescate registrada en DMR-060.
+- **Sin relaciones nuevas:** no se crea una relación permanente Bell–Lili ni se transforma la salida con Hestia en una pareja formal.
+- **Continuidad:** solo CONT-MAIN-LN. No se importa Cinder Ella, skills o atributos de otras continuidades.
+- **Traducción:** los nombres y matices se conservan según el Markdown español privado; no están cotejados independientemente con japonés.
+
+## Pendientes preservados
+
+1. Discrepancia de apariencia Hobbit/Dogman presentada entre el cierre del Capítulo 01 y el Capítulo 02; mecanismo no explicado en este bloque.
+2. Acto inicial e intención de la desaparición de la Daga de Hestia: inferidos por la secuencia, no confesados.
+3. Sentido exacto del comentario sarcástico de Lili sobre el reparto: no resuelto.
+4. Nombre de la habilidad de apoyo de Lili y su contenido de Estado: no revelados.
+5. Equivalencia nominal de Armadura de Conejo MK-II con la armadura comprada en el bloque anterior: pendiente.
+6. Correspondencia del Protector de Jade con el objeto encontrado posteriormente por Ais: pendiente.
+7. Matices de traducción española no cotejados con japonés.
+
+## Checkpoint vigente · después de la Parte 2
+
+- **Última línea procesada:** 3470.
+- **Primer punto pendiente:** Capítulo 03, encabezado del Markdown en la línea 3471.
+- **Bloque reconciliado:** Capítulo 02, líneas 1395–3470.
+- **Estado de DMR-063:** Parte 1 y Parte 2 documentadas; el expediente sigue abierto.
+- **Estado global del Volumen 2:** PARTIAL / IN_PROGRESS.
+- **Fuente original:** no modificada.
