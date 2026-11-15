@@ -109,7 +109,7 @@ Antes de crear otro evento, compara ID, nombres alternativos, participantes, per
 ## Volumen 2 · Capítulo 02 · extracción DMR-063 (CONT-MAIN-LN)
 
 - [Bell y Lili acuerdan una prueba de un día y realizan su primera expedición](timeline/EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001.md) · DMR-063-SRC-001 · Markdown lines 1537–2095.
-- [Ryuu devuelve a Bell la Daga de Hestia después de encontrarla en manos de Lili](timeline/EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001.md) · DMR-063-SRC-001 · Markdown lines 2115–2459; la sustracción inicial queda como inferencia narrativa.
+- [Ryuu devuelve a Bell la Daga de Hestia después de encontrarla en manos de Lili](timeline/EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001.md) · DMR-063-SRC-001 · Markdown lines 2115–2501; la sustracción inicial queda como inferencia narrativa y el referente de la advertencia de Seal permanece pendiente.
 - [Bell confirma el equipo con Lili y comparte los ingresos de la segunda expedición](timeline/EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001.md) · DMR-063-SRC-001 · Markdown lines 2505–2821.
 - [La salida de Bell y Hestia se interrumpe por la llegada de otras diosas](timeline/EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001.md) · DMR-063-SRC-001 · Markdown lines 2873–3470.
 
