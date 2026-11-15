@@ -558,3 +558,12 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - **Primer CI del SHA 5b8a6ad5452886a611f81f314be1ae98c7f168fd:** FAIL. DanMachi Lore and Retrieval Integrity [run #43659745329](https://github.com/jonhararagi/wordwaifu/actions/runs/43659745329): el test de timeline esperaba 47 referencias de ubicación y recibió 52. Validate WordWaifu [run #43659745259](https://github.com/jonhararagi/wordwaifu/actions/runs/43659745259): falló la sincronización de métricas en docs/STATUS.md tras aumentar el catálogo.
 - **Correcciones de CI aplicadas:** expectativas actualizadas a 52 referencias y 59 eventos; métricas de STATUS sincronizadas. El validador descubrió que DMR-063 ya estaba en catalog.records como DANMACHI-RESEARCH-063; se amplió esa entrada existente a Partes 1–2 y se retiró el documento extra que duplicaba su ruta, preservando 109 documentos.
 - **Estado editorial:** DMR-063 continúa abierto; Volumen 2 = PARTIAL / IN_PROGRESS. Traducción española no cotejada con japonés.
+
+## DMR-063 · Verificación independiente del Capítulo 02 · 2026-11-14
+
+- **Revisión de cobertura:** al verificar el pasaje posterior a la devolución de la Daga de Hestia, se detectó que la ficha del evento terminaba en la línea 2459 y no recogía la advertencia puntual de Seal a Lili ni la petición posterior de evitar la Señora de la Abundancia.
+- **Corrección sin duplicación:** se amplió `EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001` hasta las líneas 2501; se reutilizó `DM-CHAR-SEAL-FLOVER` para la participación de Seal y se sincronizó su perfil y la entrada de timeline. No se creó otro acontecimiento ni una relación permanente.
+- **Límite de inferencia:** «No te dejes llevar» y la petición de Lili quedan con referente/motivo pendientes. No se atribuye a Seal conocimiento no demostrado de la desaparición de la daga.
+- **Commits de la verificación:** `e64836eab790cc08eb79e66e0d3ed051bb93c6cd`, `5c732c135035ae27b0b52e7dd17e35d9bc052849`, `0071b76b97eaee1d0ee665497235e7120f66a160`, `ceff647bc9ee399c9eda8928df5edb2420209fea` y `1e8a0578e8eb77abb7da3d34dcaef09537d6eb5e`.
+- **Fuente protegida:** el blob original del volumen continúa siendo `9b884520a3b5aa30d25b8b2dfc8721d54b52464e`; no se modificó el Markdown original ni DMR-060.
+- **Checkpoint:** la lectura del Capítulo 02 sigue cerrando en la línea 3470; Capítulo 03, línea 3471, permanece como próximo punto. Estado global: PARTIAL / IN_PROGRESS. CI posterior a estos commits: pendiente de consulta sobre el HEAD final.
