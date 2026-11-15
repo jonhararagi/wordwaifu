@@ -9,7 +9,7 @@ source_verification: repository_markdown_checked_translation_unverified
 source_refs:
   - DMR-063-SRC-001
 source_locators:
-  - Markdown lines 2505–2629
+  - Markdown lines 2505–2635
   - Markdown lines 2639–2821
   - Markdown lines 2823–2869
 spoiler_level: major
@@ -20,7 +20,7 @@ spoiler_level: major
 ## Alcance y fuente
 
 - **Fuente:** DMR-063-SRC-001, Markdown existente del Volumen 2.
-- **Localizadores:** líneas 2505–2629, 2639–2821 y 2823–2869.
+- **Localizadores:** líneas 2505–2635, 2639–2821 y 2823–2869.
 - **Continuidad:** CONT-MAIN-LN.
 - **Ancla temporal:** el día siguiente a la primera jornada de prueba; fecha de calendario desconocida.
 
@@ -32,6 +32,7 @@ Al día siguiente, Bell vuelve al Dungeon con Lili y afirma que la contrata sin 
 
 - Bell declara que Lili será su Ayudante sin límite de tiempo y que ambos formarán un equipo de dos personas. Hestia acepta la decisión en la escena.
 - Lili explica que tiene una habilidad de apoyo, pero no revela su nombre; afirma que no ha obtenido Magia. No se completa su perfil de habilidades a partir de otras fuentes.
+- Durante la conversación sobre el reparto, Lili cambia brevemente a una expresión fría y formula «será más conveniente para ti, ¿verdad, Bell-sama?» con una mirada descrita como sarcástica; Bell no comprende qué intenta decir y el pasaje no resuelve el sentido de la observación (Markdown lines 2595–2635).
 - Una escena intercalada en el Gremio muestra una disputa de un aventurero de Soma Familia por la tasación del botín. La observación de que incidentes similares se repiten no autoriza a generalizar la conducta a todos los miembros.
 - En la segunda expedición, la ayuda de Lili permite a Bell continuar explorando durante más tiempo.
 - El intercambio de oro produce 26.000 Varisu. Bell entrega 13.000 a Lili y explica que el equipo comparte el resultado.
@@ -54,4 +55,5 @@ El perfil de Bell muestra Lv. 1: Fuerza D 591, Resistencia G 233, Destreza C 607
 - Este es el acuerdo inicial sin fecha límite, distinto de la nueva contratación dos días después del rescate, registrada en EVT-DM-V02-BELL-AND-LILI-REHIRE-001.
 - No se asigna fecha absoluta.
 - La habilidad de apoyo de Lili no recibe nombre ni descripción adicional.
+- El comentario de Lili sobre que la situación sería más conveniente para Bell y su mirada fría/sarcástica no reciben explicación explícita; no atribuirles intención o motivo (Markdown lines 2595–2635).
 - La traducción española del Markdown no ha sido cotejada con el japonés.
