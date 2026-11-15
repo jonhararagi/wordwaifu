@@ -545,3 +545,16 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - CI de PR: [Validate #40841939859](https://github.com/jonhararagi/wordwaifu/actions/runs/40841939859) y [Lore/Integrity #40841939917](https://github.com/jonhararagi/wordwaifu/actions/runs/40841939917), ambos success. Browser smoke pasó.
 - **CI post-merge:** [Lore/Integrity #40842144964](https://github.com/jonhararagi/wordwaifu/actions/runs/40842144964) y [Validate #40842144977](https://github.com/jonhararagi/wordwaifu/actions/runs/40842144977), ambos `success` sobre el SHA exacto `f50f8ab4d63fe2d57a0f0fcc057babd489be0424`.
 - Mantener la diferencia EN/ES de Remiste Felis; no modificar personalidad, relaciones ni claims primarios. DMR-045 sigue abierto.
+
+## DMR-063 — Volumen 2, Parte 2 · Capítulo 02 · 2026-11-14
+
+- **Checkpoint de entrada:** main 1d4104ec160ab4bb634fe2ead2794cd9470077c9, coincidente con la referencia de la sesión.
+- **Fuente:** blob Markdown 9b884520a3b5aa30d25b8b2dfc8721d54b52464e, sin modificaciones.
+- **Lectura:** Capítulo 02, líneas 1395–3470; próximo punto pendiente, Capítulo 03 línea 3471.
+- **Integración inicial directa en main:** commit 5b8a6ad5452886a611f81f314be1ae98c7f168fd, 18 archivos; cuatro eventos nuevos, perfiles/fichas ampliados y sincronización de cronología/catálogo/índices.
+- **Eventos nuevos:** EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001; EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001; EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001; EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001.
+- **Reconciliación:** contratación de un día separada del contrato sin fecha límite del día siguiente; este último separado de la recontratación tras el rescate de DMR-060. La devolución de la daga se registra desde la acción de Ryuu y la sustracción de Lili queda como inferencia no confesada. No se crean relaciones permanentes.
+- **Verificación de fuente protegida:** en el árbol posterior a la integración, el Markdown original conserva blob 9b884520a3b5aa30d25b8b2dfc8721d54b52464e; DMR-060 conserva blob cd5bf0f862a42311aa91429421a2d8868c9ad071.
+- **Primer CI del SHA 5b8a6ad5452886a611f81f314be1ae98c7f168fd:** FAIL. DanMachi Lore and Retrieval Integrity [run #43659745329](https://github.com/jonhararagi/wordwaifu/actions/runs/43659745329): el test de timeline esperaba 47 referencias de ubicación y recibió 52. Validate WordWaifu [run #43659745259](https://github.com/jonhararagi/wordwaifu/actions/runs/43659745259): falló la sincronización de métricas en docs/STATUS.md tras aumentar el catálogo.
+- **Correcciones de CI preparadas:** actualizar la expectativa a 52 referencias y 59 eventos, y sincronizar solo el bloque marcado de métricas (247 registros, 28 IDs reservados y 110 documentos).
+- **Estado editorial:** DMR-063 continúa abierto; Volumen 2 = PARTIAL / IN_PROGRESS. Traducción española no cotejada con japonés.

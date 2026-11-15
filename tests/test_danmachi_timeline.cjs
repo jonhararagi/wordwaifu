@@ -331,10 +331,10 @@ assert.equal(legacyReport.valid,true,"legacy v1 data must remain loadable throug
 assert.equal(legacyReport.legacyTemporalModel,true);
 assert.equal(timeline.temporalKindLabel(null),"Tiempo sin normalizar");
 assert.equal(report.locationCount,3);
-assert.equal(report.locationRefCount,47);
+assert.equal(report.locationRefCount,52);
 assert.equal(report.unknownEventCount,9,"Six existing unknown-location candidates plus three Hestia status updates without a catalogued home location remain spatially unknown.");
 assert.equal(report.provisionalEventCount,10);
-assert.equal(data.events.length,55,"All 55 indexed event IDs must remain.");
+assert.equal(data.events.length,59,"All 59 indexed event IDs must remain.");
 const banquet=events.get("EVT-DM-V01-GANESHA-GOD-BANQUET-001");
 const festivalPrep=events.get("EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001");
 assert.equal(festivalPrep.temporal.kind,"relative_offset");
