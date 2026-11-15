@@ -95,6 +95,16 @@ Bell recibe de Anya el monedero que Seal olvidó en La Señora de la Abundancia.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
 
 
+## CONT-MAIN-LN · Volumen 2 · encuentro durante la devolución de la Daga de Hestia (DMR-063-SRC-001)
+
+Seal acompaña a Ryuu mientras ambas llevan compras por un callejón. Durante el encuentro con Bell y Lili, permanece junto a Ryuu mientras esta devuelve la Daga de Hestia. Después de que Bell se aleja, Seal se acerca a Lili y le susurra «No te dejes llevar»; el texto describe una reacción física de Lili, pero no aclara a qué se refiere Seal. Lili luego pide a Bell que no la lleve a la Señora de la Abundancia (Markdown lines 2225–2501).
+
+- **Evento relacionado:** [Ryuu devuelve a Bell la Daga de Hestia](../events/timeline/EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001.md).
+- **Límite:** no atribuir a Seal un conocimiento no expresado de la desaparición de la daga ni interpretar el referente de su advertencia. Tampoco inferir una relación permanente con Lili a partir de esta interacción.
+- **Continuidad:** CONT-MAIN-LN.
+- **Fuente:** DMR-063-SRC-001, Markdown lines 2225–2501; traducción privada no cotejada con japonés.
+
+
 ## CONT-MAIN-LN · conversación durante la primera cena · Volumen 1 · PDF p.62
 
 Durante la cena, Seal explica a Bell que no trabaja en el establecimiento únicamente por el sueldo: dice que disfruta encontrarse con personas desconocidas, conversar con ellas y observar cómo cambian con el paso del tiempo. Esta es una motivación que ella expresa en esa conversación, no una descripción exhaustiva de toda su personalidad ni prueba de que conozca los antecedentes completos de cada cliente.
