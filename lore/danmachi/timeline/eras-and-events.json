@@ -4546,7 +4546,7 @@
         "CONT-MAIN-LN"
       ],
       "evidenceStatus": "source_checked_translation_unverified",
-      "summary": "Bell descubre que la Daga de Hestia ha desaparecido. Lili aparece con el arma en una tienda antigua, donde no se completa una venta. Ryuu reconoce la daga, persigue a quien la lleva y luego comprende que confundió a Lili, de apariencia Dogman, con el Hobbit masculino al que buscaba. Finalmente devuelve el arma a Bell. El acto inicial de sustracción no se muestra directamente.",
+      "summary": "Bell descubre que la Daga de Hestia ha desaparecido. Lili aparece con el arma en una tienda antigua, donde no se completa una venta. Ryuu reconoce la daga, persigue a quien la lleva y luego comprende que confundió a Lili, de apariencia Dogman, con el Hobbit masculino al que buscaba. Finalmente devuelve el arma a Bell. Después de que Bell se aleja, Seal susurra a Lili «No te dejes llevar»; el texto no aclara el referente de la advertencia y Lili pide que Bell no la lleve a la Señora de la Abundancia. El acto inicial de sustracción no se muestra directamente.",
       "participants": [
         {
           "id": "DM-CHAR-BELL",
@@ -4565,6 +4565,12 @@
           "name": "Ryuu Lion",
           "kind": "character",
           "role": "reconoce el arma y la devuelve"
+        },
+        {
+          "id": "DM-CHAR-SEAL-FLOVER",
+          "name": "Seal Flover",
+          "kind": "character",
+          "role": "acompaña a Ryuu y susurra a Lili «No te dejes llevar»; el referente de la advertencia no se aclara"
         }
       ],
       "relatedEntities": [
