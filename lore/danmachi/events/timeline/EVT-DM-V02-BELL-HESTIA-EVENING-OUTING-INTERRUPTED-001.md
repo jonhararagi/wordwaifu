@@ -10,8 +10,9 @@ source_refs:
   - DMR-063-SRC-001
 source_locators:
   - Markdown lines 2873–2981
+  - Markdown lines 2983–3013
   - Markdown lines 3015–3145
-  - Markdown lines 3165–3470
+  - Markdown lines 3147–3470
 spoiler_level: major
 ---
 
@@ -20,7 +21,7 @@ spoiler_level: major
 ## Alcance y fuente
 
 - **Fuente:** DMR-063-SRC-001, Markdown existente del Volumen 2.
-- **Localizadores:** líneas 2873–2981, 3015–3145 y 3165–3470.
+- **Localizadores:** líneas 2873–2981, 2983–3013, 3015–3145 y 3147–3470.
 - **Continuidad:** CONT-MAIN-LN.
 - **Ancla temporal:** después de que Hestia ve a Bell junto a Lili; la invitación se concreta a las 18:00 del día siguiente, sin fecha de calendario.
 
