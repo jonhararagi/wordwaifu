@@ -3447,12 +3447,12 @@
       "tags": [
         "Volumen 2",
         "Markdown",
-        "Parte 1",
+        "Partes 1–2",
         "CONT-MAIN-LN"
       ],
       "status": "source_checked_translation_unverified",
       "priority": "high",
-      "name": "DMR-063 · V2 Markdown Parte 1"
+      "name": "DMR-063 · V2 Markdown Partes 1–2"
     },
     {
       "id": "EVT-DM-V02-BELL-DEFEATS-ANT-KILLER-001",
@@ -4404,12 +4404,6 @@
       "path": "volumes/familia-chronicle/README.md",
       "type": "volume_series_index",
       "status": "folder_prepared_sources_pending"
-    },
-    {
-      "document_id": "RESEARCH-DM-063",
-      "path": "research/inbox/DANMACHI-RESEARCH-063-volume-02-markdown-extraction-part-1.md",
-      "type": "source_extraction_report",
-      "status": "source_checked_partial_translation_unverified"
     }
   ],
   "lastStructuredSync": "2026-10-31",
