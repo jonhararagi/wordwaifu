@@ -9,6 +9,7 @@ source_verification: repository_markdown_checked_translation_unverified
 source_refs:
   - DMR-063-SRC-001
 source_locators:
+  - Markdown lines 1405–1447
   - Markdown lines 1537–1549
   - Markdown lines 1555–1947
   - Markdown lines 1951–2095
@@ -20,7 +21,7 @@ spoiler_level: major
 ## Alcance y fuente
 
 - **Fuente:** DMR-063-SRC-001, Markdown existente del Volumen 2.
-- **Localizadores:** líneas 1537–1549, 1555–1947 y 1951–2095.
+- **Localizadores:** líneas 1405–1447, 1537–1549, 1555–1947 y 1951–2095.
 - **Continuidad:** CONT-MAIN-LN.
 - **Ancla temporal:** después de que Lili se presenta a Bell junto a Babel; primera jornada conjunta, sin fecha absoluta.
 
