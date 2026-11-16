@@ -10,6 +10,7 @@ source_refs:
   - DMR-013-SRC-001
   - DMR-013-SRC-002
   - DMR-061-SRC-001
+  - DMR-063-SRC-001
 claim_refs:
   - DMR-001-CLM-005
   - DMR-001-CLM-010

@@ -5,7 +5,7 @@ type: character
 status: provisional
 confidence: high for general role; medium for age/timeline
 tags: [Eina Tulle, Guild, asesora, Bell]
-source_refs: [DMR-061-SRC-001]
+source_refs: [DMR-061-SRC-001, DMR-063-SRC-001]
 claim_refs:
   - DMR-002-CLM-007
   - DMR-002-CLM-008
