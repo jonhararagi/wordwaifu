@@ -5,7 +5,7 @@ type: character
 status: provisional
 confidence: high for identity; medium for time-specific details
 tags: [Bell Cranel, protagonista, Familia Hestia, identidad]
-source_refs: [DMR-061-SRC-001]
+source_refs: [DMR-061-SRC-001, DMR-063-SRC-001]
 claim_refs:
   - DMR-002-CLM-001
   - DMR-002-CLM-002
@@ -368,3 +368,17 @@ El mismo perfil enumera la Armadura de Conejo MK-II y el Protector de Jade (line
 - **Acontecimientos nuevos:** prueba y primera expedición con Lili (../events/timeline/EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001.md), devolución de la Daga de Hestia por Ryuu (../events/timeline/EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001.md), contratación sin fecha límite y segunda expedición (../events/timeline/EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001.md) y salida interrumpida con Hestia (../events/timeline/EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001.md).
 - **Fuente:** DMR-063-SRC-001, Markdown lines 1395–3470; traducción privada no cotejada con japonés.
 - **Límite:** no se asignan fechas de calendario ni se convierten interacciones puntuales en relaciones permanentes.
+
+
+## Estado y equipo al cierre del Capítulo 02 · CONT-MAIN-LN
+
+**Fuente:** DMR-063-SRC-001, Volumen 2, Markdown lines 2823–2869. Este snapshot es posterior a la segunda expedición de Bell y Lili; no sobrescribe los estados anteriores.
+
+- **Nivel y progreso:** Lv. 1; piso alcanzado 7.
+- **Atributos:** Fuerza D 591, Resistencia G 233, Destreza C 607, Agilidad B 702 y Magia I 0.
+- **Habilidad listada:** [Deseo Inquebrantable], descrita en el panel como aceleración del crecimiento, con efectos que duran mientras los sentimientos de Bell no cambien y cuya intensidad depende de esos sentimientos. La ficha del Estado no demuestra por sí sola que Bell haya leído o conozca el nombre y los efectos.
+- **Armas:** Daga de Hestia y Daga.
+- **Dinero mostrado:** 18.900 Varisu.
+- **Equipo:** Armadura de Conejo MK-II y Protector de Jade. Se reutiliza `OBJ-DM-BELL-JADE-WRIST-GUARD-001` para el Protector de Jade. La identidad de Armadura de Conejo MK-II respecto de la armadura ligera comprada antes no queda resuelta; véase `OBJ-DM-BELL-LIGHT-ARMOR-001`.
+
+**Límites:** no convertir los datos del panel en conocimiento consciente de Bell; no normalizar «Welf Crosso» con «Welf Crozzo» ni fusionar objetos sin evidencia textual suficiente.

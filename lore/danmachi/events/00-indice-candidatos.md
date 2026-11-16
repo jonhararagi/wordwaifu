@@ -108,9 +108,9 @@ Antes de crear otro evento, compara ID, nombres alternativos, participantes, per
 
 ## Volumen 2 · Capítulo 02 · extracción DMR-063 (CONT-MAIN-LN)
 
-- [Bell y Lili acuerdan una prueba de un día y realizan su primera expedición](timeline/EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001.md) · DMR-063-SRC-001 · Markdown lines 1405–1447, 1537–2095.
-- [Ryuu devuelve a Bell la Daga de Hestia después de encontrarla en manos de Lili](timeline/EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001.md) · DMR-063-SRC-001 · Markdown lines 2115–2501; la sustracción inicial queda como inferencia narrativa y el referente de la advertencia de Seal permanece pendiente.
-- [Bell confirma el equipo con Lili y comparte los ingresos de la segunda expedición](timeline/EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001.md) · DMR-063-SRC-001 · Markdown lines 2505–2821.
-- [La salida de Bell y Hestia se interrumpe por la llegada de otras diosas](timeline/EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001.md) · DMR-063-SRC-001 · Markdown lines 2873–2981, 2983–3013, 3015–3145 y 3147–3470.
+- [Bell y Lili acuerdan una prueba de un día y realizan su primera expedición](timeline/EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001.md) · DMR-063-SRC-001 · Markdown lines 1405–1447, 1537–1549, 1555–1947 y 1951–2095; trato profesional 1709–1749, indicio no identificado 1859–1867 y susurro ambiguo 1933–1939.
+- [Ryuu devuelve a Bell la Daga de Hestia después de encontrarla en manos de Lili](timeline/EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001.md) · DMR-063-SRC-001 · Markdown lines 1859–1867 y 2115–2501; el indicio de algo retirado de la cintura no identifica objeto ni autor, la sustracción inicial queda como inferencia y el referente de la advertencia de Seal permanece pendiente.
+- [Bell confirma el equipo con Lili y comparte los ingresos de la segunda expedición](timeline/EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001.md) · DMR-063-SRC-001 · Markdown lines 2505–2821 y snapshot 2823–2869; almacenamiento de la daga 2519–2527, habilidad/no magia 2567–2585 y comentarios ambiguos 2595–2635, 2795–2821.
+- [La salida de Bell y Hestia se interrumpe por la llegada de otras diosas](timeline/EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001.md) · DMR-063-SRC-001 · Markdown lines 2873–2981 (trabajo en Babel: 2883–2891), 2983–3013, 3015–3145 (cuidado durante la resaca: 3047–3065) y 3147–3470.
 
 Estos eventos se mantienen separados de EVT-DM-V02-BELL-FIRST-MEETS-LILI-001, que registra la oferta inicial sin contratación confirmada, y de EVT-DM-V02-BELL-AND-LILI-REHIRE-001, que corresponde a la nueva contratación después del rescate en DMR-060. No se añaden relaciones permanentes.

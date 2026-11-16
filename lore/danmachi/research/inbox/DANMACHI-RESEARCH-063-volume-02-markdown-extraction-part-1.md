@@ -123,6 +123,20 @@ Hestia ve a Bell junto a Lili, los ve sostenerse de la mano y malinterpreta mome
 
 Hestia se prepara y cuenta a Deméter y a otras diosas que la otra persona es un humano de su Familia; expresa que le gusta todo de él (3165–3281). En la plaza, otras diosas rodean a Bell e interrumpen la salida. Hestia y Bell escapan hacia una torre del reloj; Bell promete que volverán a salir, comerán algo rico y contemplarán otra vez la vista nocturna de Orario (3283–3457). El texto no confirma que la comida se realizara esa noche ni una relación exclusiva o formal.
 
+### Auditoría de detalle complementaria · Capítulo 02
+
+La lectura directa del blob fuente permitió documentar detalles que la síntesis inicial mantenía demasiado comprimidos. Se incorporan como precisiones de los cuatro eventos y de fichas existentes, sin crear IDs adicionales:
+
+- **Convenciones de trato de los Ayudantes (1709–1749):** Lili pide a Bell que la llame «Lili» y no añada «-san». Explica que los Ayudantes deben conservar una posición subordinada y una distancia formal para no perder futuras oportunidades de contratación. Se registra como explicación de Lili en esta escena, no como regla universal verificada fuera del pasaje.
+- **Indicio físico no identificado durante la primera expedición (1859–1867):** mientras Bell corta el cuerpo de la Ant Killer incrustada en la pared, siente que algo es retirado de su cintura. Al volverse, ve a Lili junto al monstruo, pero el texto no identifica el objeto ni narra expresamente el acto de extracción. La posterior desaparición de la Daga de Hestia y la aparición de una daga en manos de Lili contextualizan el indicio, pero no permiten convertirlo aisladamente en una sustracción demostrada.
+- **Susurro al terminar la prueba (1933–1939):** aparece un murmullo «te lo daré como regalo de despedida»; Bell pregunta a Lili si dijo algo y ella responde que no. La voz, el referente y el significado no se atribuyen como hechos concluyentes.
+- **Almacenamiento de la daga y reacción de Lili (2519–2527):** Bell explica que guarda la Daga de Hestia junto con su vaina dentro del brazal/protector de jade para no perderla otra vez. Lili inclina la cabeza con decepción y ya parecía poco animada; el pasaje no explica el motivo. Se reutiliza `OBJ-DM-BELL-JADE-WRIST-GUARD-001`.
+- **Comentarios ambiguos durante la segunda jornada (2795–2821):** Lili pregunta «¿No vas a monopolizarlas…?» cuando Bell propone ir a un bar. El referente de «las» y el sentido de la pregunta no quedan claros; después coloca su mano sobre la de Bell y murmura «Qué extraño», frase que Bell no oye. No se convierte el intercambio en relación permanente.
+- **Snapshot y equipo al cierre del capítulo (2823–2869):** además de los atributos ya resumidos, la ficha muestra piso alcanzado 7, las armas Daga de Hestia y Daga, dinero 18.900 Varisu y el equipo Armadura de Conejo MK-II y Protector de Jade. La primera figura como serie defensiva creada por «Welf Crosso», usa Piel del Conejo de Metal y se describe con defensa alta; el pasaje menciona un incidente y un cambio de nombre, sin explicar el incidente. No se resuelve su equivalencia con la armadura comprada antes ni la variante nominal Crosso/Crozzo. El Protector de Jade se integra en la ficha de objeto existente.
+- **Interludio de Hestia (2883–2891; 3047–3065):** Hestia regresa de trabajar en la sucursal de Hephaistos Familia en Babel y vuelve agotada por el trabajo. A la mañana siguiente Bell la alimenta con trozos de manzana; Hestia se apoya y lo abraza durante el cuidado de la resaca. Es una interacción doméstica puntual, no evidencia de exclusividad o relación formal.
+
+**Resultado de la auditoría:** los indicios ambiguos permanecen pendientes; los datos verificables se añaden a registros existentes bajo `CONT-MAIN-LN`. No se crea ningún evento, personaje, objeto, relación permanente ni estadística adicional fuera del snapshot ya presente.
+
 ## Reconciliación funcional de la Parte 2
 
 - **Personajes reutilizados:** Bell (DM-CHAR-BELL), Eina (DM-CHAR-EINA), Hestia (DM-CHAR-HESTIA), Liliruca (CHAR-LILIRUCA-ARDE), Ryuu (CHAR-RYUU-LION) y Seal (DM-CHAR-SEAL-FLOVER). No se crea ninguna ficha nueva de personaje.
@@ -144,6 +158,11 @@ Hestia se prepara y cuenta a Deméter y a otras diosas que la otra persona es un
 6. Equivalencia nominal de Armadura de Conejo MK-II con la armadura comprada en el bloque anterior: pendiente.
 7. Correspondencia del Protector de Jade con el objeto encontrado posteriormente por Ais: pendiente.
 8. Matices de traducción española no cotejados con japonés.
+9. Indicio de que algo fue retirado de la cintura de Bell durante la primera expedición (1859–1867): objeto y autor no identificados.
+10. Susurro «te lo daré como regalo de despedida» (1933–1939): hablante, destinatario y significado no confirmados.
+11. Comentario «¿No vas a monopolizarlas…?» y murmullo «Qué extraño» (2795–2821): referente e intención no resueltos; la segunda frase no es oída por Bell.
+12. Reacción decepcionada de Lili cuando Bell explica dónde guarda la Daga de Hestia (2519–2527): causa desconocida.
+13. Identidad de «Armadura de Conejo MK-II» frente a la armadura comprada en Babel y correspondencia «Welf Crosso»/«Welf Crozzo» (2855–2862): pendientes.
 
 ## Checkpoint vigente · después de la Parte 2
 

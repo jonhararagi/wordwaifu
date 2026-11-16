@@ -12,6 +12,9 @@ source_locators:
   - Markdown lines 1405–1447
   - Markdown lines 1537–1549
   - Markdown lines 1555–1947
+  - Markdown lines 1709–1749
+  - Markdown lines 1859–1867
+  - Markdown lines 1933–1939
   - Markdown lines 1951–2095
 spoiler_level: major
 ---
@@ -35,6 +38,9 @@ Bell acepta inicialmente a Lili como Ayudante durante una única jornada de prue
 - Bell acepta probar el trabajo conjunto solo durante ese día. El acuerdo de reparto inicial es del 30 % para Lili.
 - La expedición se desarrolla en el séptimo piso. El pasaje cuenta cuatro Ant Killers, tres Polillas Púrpuras y cinco Needle Rabbits en la secuencia; no se asigna a cada uno una acción no descrita.
 - Lili recoge los restos y piedras mágicas, utiliza una cuerda de Ayudante y evita rutas peligrosas. Advierte sobre las esporas de las Polillas Púrpuras cuando el antídoto que llevaba ya se había utilizado.
+- Lili pide que Bell la llame «Lili» y no añada «-san»; explica que la distancia formal entre Aventurero y Ayudante protege sus posibilidades de contratación con otros grupos. La explicación se atribuye a Lili en esta escena (Markdown lines 1709–1749).
+- Mientras Bell corta el cuerpo de la Ant Killer incrustada en la pared, siente que algo es retirado de su cintura. Al volverse, ve a Lili junto al monstruo, pero no se identifica el objeto ni se describe expresamente quién lo tomó (lines 1859–1867). Este indicio se conserva sin afirmar que fuese la Daga de Hestia.
+- Al final de la jornada se oye un susurro «te lo daré como regalo de despedida». Bell pregunta a Lili si ha dicho algo y ella lo niega; no se identifica concluyentemente el hablante, referente o significado (lines 1933–1939).
 - Al volver, Lili ofrece a Bell lo recuperado y explica que la jornada también servía para demostrar que podía confiar en él. Bell considera la posibilidad de contratarla de nuevo, pero aún no establece un contrato sin límite.
 - Bell pide a Eina información sobre Soma Familia. Los comentarios de Eina acerca de la producción de vino, la fuerza de la Familia y la conducta de sus miembros se atribuyen a su expediente o a lo que ha oído.
 - Eina deja a Bell la decisión y la responsabilidad; también explica el bajo estatus social de los Ayudantes.
@@ -50,6 +56,8 @@ Bell acepta inicialmente a Lili como Ayudante durante una única jornada de prue
 ## Límites de evidencia
 
 - El acuerdo de ese día es una prueba, no la contratación sin fecha límite del día siguiente.
+- El movimiento percibido en la cintura de Bell no identifica el objeto retirado y no demuestra por sí solo la sustracción de la Daga de Hestia.
+- El susurro de despedida permanece sin hablante ni significado confirmados.
 - El 30 % es la propuesta inicial para esta jornada; no se convierte en condición permanente del futuro contrato.
 - La información sobre Soma Familia es atribuida a Eina y no describe universalmente a todos sus integrantes.
 - No se asigna fecha de calendario ni se completa el nombre de habilidades de Lili.

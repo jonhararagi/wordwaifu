@@ -5,7 +5,7 @@ type: character
 status: provisional
 confidence: high for general identity; medium for exact dates
 tags: [Hestia, deidad, Familia Hestia, cronología]
-source_refs: [DMR-061-SRC-001]
+source_refs: [DMR-061-SRC-001, DMR-063-SRC-001]
 claim_refs:
   - DMR-002-CLM-003
   - DMR-002-CLM-004
@@ -210,7 +210,7 @@ Después de despertarse, Hestia abraza a Bell y se muestra especialmente cariño
 
 ## CONT-MAIN-LN · Volumen 2 · trabajo de Hestia en una tienda de Babel (DMR-063-SRC-001)
 
-Durante la visita de Bell y Eina a las tiendas de Babel, Bell descubre que Hestia trabaja en uno de los establecimientos. El diálogo menciona que recibe 30 Varisu por hora y que preparaba croquetas de patata (Markdown lines 725–777).
+Durante la visita de Bell y Eina a las tiendas de Babel, Bell descubre que Hestia trabaja en uno de los establecimientos. El diálogo menciona que recibe 30 Varisu por hora y que preparaba croquetas de patata (Markdown lines 725–777). Más adelante, el interludio indica que Hestia regresa de trabajar en una sucursal de Hephaistos Familia dentro de Babel y está agotada por varios días de tareas pesadas; el narrador atribuye ese régimen a la intención de Hephaistos de corregir la costumbre de Hestia de depender de otros (lines 2883–2891). Esta explicación se conserva como atribución del narrador, no como una declaración directa de Hephaistos.
 
 - **Evento relacionado:** `EVT-DM-V02-BELL-EINA-ARMOR-SHOPPING-001`.
 - **Límite:** el fragmento no define condiciones contractuales, duración del empleo, horario ni otros términos; quedan Pendientes.
@@ -219,10 +219,10 @@ Durante la visita de Bell y Eina a las tiendas de Babel, Bell descubre que Hesti
 
 ## CONT-MAIN-LN · Volumen 2 · interludio y salida con Bell (DMR-063-SRC-001)
 
-Al ver a Bell caminando junto a Lili y sosteniéndole la mano, Hestia interpreta momentáneamente la escena como una posible aventura amorosa y se marcha abatida (Markdown lines 2903–2929). Más tarde bebe con Miach y expresa celos; Miach le recuerda que esa escena no demuestra una infidelidad ni que Bell tenga pareja (lines 2933–2981). A la mañana siguiente Bell la cuida durante la resaca y le propone invitarla a comer como agradecimiento por sus esfuerzos; acuerdan encontrarse a las 18:00 en la Plaza del Amor (lines 3015–3145).
+Al ver a Bell caminando junto a Lili y sosteniéndole la mano, Hestia interpreta momentáneamente la escena como una posible aventura amorosa y se marcha abatida (Markdown lines 2903–2929). Más tarde bebe con Miach y expresa celos; Miach le recuerda que esa escena no demuestra una infidelidad ni que Bell tenga pareja (lines 2933–2981). A la mañana siguiente Bell la cuida durante la resaca, le da agua y la alimenta con trozos de manzana. Hestia se apoya en su pecho y lo abraza durante ese cuidado (lines 3015–3065). Bell le propone invitarla a comer como agradecimiento por sus esfuerzos; acuerdan encontrarse a las 18:00 en la Plaza del Amor (lines 3067–3145). El contacto físico se limita a esta escena doméstica y no demuestra exclusividad ni una relación formal.
 
 Hestia interpreta la invitación desde su ilusión romántica y se prepara para ella. En el Baño Sagrado habla con Deméter y otras diosas sobre el joven humano de su Familia al que quiere; la conversación y la aglomeración posterior son episodios puntuales, no una relación nueva con esas diosas (lines 3165–3281). En la plaza, varias diosas rodean a Bell y la salida se interrumpe. Hestia y Bell escapan hacia una antigua torre del reloj; Bell promete que volverán a salir, comerán algo rico y contemplarán de nuevo la vista nocturna de Orario (lines 3283–3457).
 
 - **Evento:** salida de Bell y Hestia interrumpida (../events/timeline/EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001.md).
 - **Límite:** el texto presenta el encuentro como una invitación a comer y una salida que Hestia vive como cita; no confirma exclusividad, noviazgo ni que la comida se realice esa noche.
-- **Fuente:** DMR-063-SRC-001, Markdown lines 2873–3470; traducción privada no cotejada con japonés.
+- **Fuente:** DMR-063-SRC-001, Markdown lines 2873–3470, con detalle de trabajo en 2883–2891 y cuidado durante la resaca en 3015–3065; traducción privada no cotejada con japonés.

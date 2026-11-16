@@ -1589,3 +1589,15 @@ El cotejo inicial cubre PDF pp.1–24. Se confirmó visualmente la correspondenc
 - No se creó ningún ID ni registro nuevo; el evento, índice, fichas de Liliruca y Ryuu y la fuente permanecen intactos. El Markdown fuente no se modificó.
 - **Commit funcional directo en main:** `3cb37a845b746cd2845af63ceaf8530bd3b79044`.
 - **Checkpoint de lectura:** sin cambios; primera línea pendiente 1395, encabezado del Capítulo 02. El Volumen 2 continúa parcial.
+
+
+## DMR-063 — auditoría de detalle y reconciliación del Capítulo 02 · 2026-11-16
+
+- **HEAD verificado antes de la reconciliación:** `9e1693ec8f8d2679611b58cbcf12cc004aacc988`; descendiente lineal del checkpoint `1d4104ec160ab4bb634fe2ead2794cd9470077c9`. El último commit previo había ampliado el localizador del comentario ambiguo de Lili hasta Markdown line 2635.
+- **Fuente exclusiva:** `lore/danmachi/volumes/main/Volumen [02] • DanMachi.md`, blob `9b884520a3b5aa30d25b8b2dfc8721d54b52464e`. Se leyó el texto del blob por bloques; no se modificó el original ni se utilizaron PDFs, imágenes o fuentes externas.
+- **Cobertura auditada:** Capítulo 02, líneas 1395–3470. Se revisaron con atención los subrangos 1709–1749, 1859–1867, 1933–1939, 2519–2527, 2795–2821, 2823–2869, 2883–2891 y 3015–3065.
+- **Reconciliación:** se ampliaron los cuatro eventos ya existentes y las fichas existentes de Bell, Liliruca, Hestia y la armadura; el Protector de Jade continúa asociado a su objeto existente. No se creó ningún nuevo personaje, objeto, evento, relación permanente o snapshot adicional.
+- **Ambigüedades conservadas:** objeto/persona del indicio en la cintura de Bell; hablante/referente del susurro de despedida; referente de «monopolizarlas» y significado de «Qué extraño»; causa de la reacción de Lili al almacenamiento de la daga; equivalencia Armadura de Conejo MK-II/armadura comprada y variante «Welf Crosso»/«Welf Crozzo».
+- **Continuidad y traducción:** `CONT-MAIN-LN` únicamente. La traducción española no se ha cotejado independientemente con el japonés.
+- **Próximo punto:** Capítulo 03, línea 3471. DMR-063 y Volumen 2 permanecen `PARTIAL / IN_PROGRESS`.
+- **CI del HEAD de entrada `9e1693ec8f8d2679611b58cbcf12cc004aacc988`:** DanMachi Lore and Retrieval Integrity [run #43693946402](https://github.com/jonhararagi/wordwaifu/actions/runs/43693946402) y Validate WordWaifu [run #43693946516](https://github.com/jonhararagi/wordwaifu/actions/runs/43693946516), ambos `success` para ese SHA. El CI del nuevo SHA de esta reconciliación debe consultarse por separado.

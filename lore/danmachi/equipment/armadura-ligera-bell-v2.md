@@ -33,3 +33,13 @@ Armadura ligera de color blanco plateado que Bell compra en una tienda de Hephai
 - No se atribuye marca de Hephaistos: el Markdown indica que la coraza no parece llevar esa marca.
 - La relación entre la firma «Welf Crosso» y la ficha existente `CHAR-WELF-CROZZO` queda Pendiente.
 - No se infieren material, rareza, estadísticas defensivas ni propiedades especiales.
+
+
+## Denominación del equipo al cierre del Capítulo 02 · CONT-MAIN-LN
+
+El panel de equipo de Bell lista una «Armadura de Conejo MK-II» y describe una primera serie defensiva creada por «Welf Crosso», fabricada con el Botín «Piel del Conejo de Metal», de defensa muy alta y peso ligero. También dice que el nombre de la creación cambió a raíz de un incidente no explicado y que la pieza se guardó en una caja por ese incidente (DMR-063-SRC-001, Markdown lines 2855–2862).
+
+- **Reconciliación:** se conserva este dato en el registro descriptivo existente, sin crear otra ficha de equipo.
+- **Identidad con la armadura comprada por 9.900 Varisu:** pendiente. El panel no declara expresamente en estas líneas que la «Armadura de Conejo MK-II» sea la pieza comprada y descrita en las líneas 905–967.
+- **Nombre de creador:** se conserva «Welf Crosso» como aparece en el Markdown. No se normaliza con `CHAR-WELF-CROZZO` sin evidencia adicional.
+- **Pendientes:** naturaleza del incidente, motivo exacto del cambio de nombre y relación entre ambas denominaciones.

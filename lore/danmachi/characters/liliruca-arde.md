@@ -5,7 +5,9 @@ type: character
 status: provisional
 confidence: high for the DanMachi V official adaptation profile; chapter-level novel verification pending
 tags: [Liliruca Arde, Lili, Hestia Familia, Bell, tactical support]
-source_refs: [Official DanMachi V character profile; chapter/page locator for novel continuity pending]
+source_refs:
+  - Official DanMachi V character profile
+  - DMR-063-SRC-001
 claim_refs:
   - DMR-006-CLM-010
   - DMR-006-CLM-011
@@ -105,6 +107,14 @@ Al continuar la conversación iniciada cerca de Babel, Lili afirma que pertenece
 
 Al día siguiente, Bell acepta un contrato sin fecha límite y la reconoce como miembro de su equipo (lines 2505–2513). Lili menciona que tiene una habilidad de apoyo, pero no proporciona su nombre; también afirma que no ha obtenido Magia (lines 2567–2585). No se completa la habilidad a partir de otras continuidades.
 
+### Trato profesional y detalles ambiguos de la relación laboral
+
+Durante la primera jornada, Lili pide que Bell la llame «Lili» y no añada «-san». Explica que los Ayudantes deben conservar una distancia formal frente a los Aventureros para evitar que otros empleadores los consideren arrogantes o poco contratables (Markdown lines 1709–1749). Se registra como explicación de Lili en esa escena, sin convertirla en regla absoluta fuera de lo narrado.
+
+Al finalizar la jornada aparece un susurro «te lo daré como regalo de despedida»; Bell pregunta si Lili dijo algo y ella lo niega. El hablante y el referente de la frase no quedan establecidos de forma concluyente (lines 1933–1939).
+
+Al día siguiente, Bell dice que guarda la Daga de Hestia y su vaina dentro del protector/brazal de jade. Lili reacciona con decepción, pero la narración no declara la causa (lines 2519–2527). Más tarde pregunta «¿No vas a monopolizarlas…?» al hablar de ir a un bar; no se identifica el referente de «las». Tras el apretón de manos murmura «Qué extraño», frase que Bell no oye (lines 2795–2821). No interpretar estas intervenciones como declaración romántica ni como relación permanente.
+
 ### Apariencia y objetos durante la secuencia de la daga
 
 El cierre del Capítulo 01 había presentado a la joven como Hobbit (Markdown lines 1049–1391). En el Capítulo 02, Bell ve orejas de animal y una apariencia de Dogman cuando Lili se descubre la capucha; posteriormente Ryuu distingue a Lili, de apariencia Dogman, del Hobbit masculino al que perseguía (lines 1485–1511, 2371–2453). El capítulo no explica aquí el mecanismo ni resuelve por sí solo la discrepancia de apariencia. No se sustituye la identidad ya registrada ni se atribuye una magia concreta a partir de esta escena.
@@ -114,4 +124,4 @@ Bell descubre que la Daga de Hestia ha desaparecido. Más tarde Ryuu la devuelve
 - **Eventos:** prueba y primera expedición (../events/timeline/EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001.md), devolución de la Daga de Hestia por Ryuu (../events/timeline/EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001.md) y contratación sin fecha límite y segunda expedición (../events/timeline/EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001.md).
 - **Límite:** la posesión de la daga por Lili está narrada; su sustracción inicial y su intención final no se formulan como confesión explícita.
 - **Continuidad:** exclusivamente CONT-MAIN-LN; no importar desde CONT-SECONDARY una explicación de la apariencia o habilidades.
-- **Fuente:** DMR-063-SRC-001, Markdown lines 1395–2821; traducción privada no cotejada con japonés.
+- **Fuente:** DMR-063-SRC-001, Markdown lines 1395–2821, en particular lines 1709–1749, 1933–1939, 2519–2527 y 2795–2821. Traducción privada no cotejada con japonés.

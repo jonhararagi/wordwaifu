@@ -10,7 +10,9 @@ source_refs:
   - DMR-063-SRC-001
 source_locators:
   - Markdown lines 2505–2635
+  - Markdown lines 2519–2527
   - Markdown lines 2639–2821
+  - Markdown lines 2795–2821
   - Markdown lines 2823–2869
 spoiler_level: major
 ---
@@ -31,7 +33,9 @@ Al día siguiente, Bell vuelve al Dungeon con Lili y afirma que la contrata sin 
 ## Hechos narrados
 
 - Bell declara que Lili será su Ayudante sin límite de tiempo y que ambos formarán un equipo de dos personas. Hestia acepta la decisión en la escena.
-- Lili explica que tiene una habilidad de apoyo, pero no revela su nombre; afirma que no ha obtenido Magia. No se completa su perfil de habilidades a partir de otras fuentes.
+- Lili explica que tiene una habilidad de apoyo, pero no revela su nombre; la califica de inútil, sin describir su efecto. Afirma que no ha obtenido Magia. No se completa su perfil de habilidades a partir de otras fuentes.
+- Bell explica que guarda la Daga de Hestia junto con su vaina dentro del protector/brazal de jade para no perderla otra vez. Lili muestra una reacción de decepción y poca animación; el texto no explica la causa (Markdown lines 2519–2527).
+- Al hablar de ir a un bar, Lili pregunta «¿No vas a monopolizarlas…?». El referente de «las» y el significado no se resuelven; después toma la mano de Bell y murmura «Qué extraño», frase que él no oye (lines 2795–2821).
 - Durante la conversación sobre el reparto, Lili cambia brevemente a una expresión fría y formula «será más conveniente para ti, ¿verdad, Bell-sama?» con una mirada descrita como sarcástica; Bell no comprende qué intenta decir y el pasaje no resuelve el sentido de la observación (Markdown lines 2595–2635).
 - Una escena intercalada en el Gremio muestra una disputa de un aventurero de Soma Familia por la tasación del botín. La observación de que incidentes similares se repiten no autoriza a generalizar la conducta a todos los miembros.
 - En la segunda expedición, la ayuda de Lili permite a Bell continuar explorando durante más tiempo.
@@ -40,7 +44,7 @@ Al día siguiente, Bell vuelve al Dungeon con Lili y afirma que la contrata sin 
 
 ## Snapshot incluido al final del capítulo
 
-El perfil de Bell muestra Lv. 1: Fuerza D 591, Resistencia G 233, Destreza C 607, Agilidad B 702 y Magia I 0. La ficha incluye [Deseo Inquebrantable], sin demostrar que Bell conozca conscientemente el nombre o los efectos. El equipo listado incluye Armadura de Conejo MK-II y Protector de Jade (Markdown lines 2823–2869).
+El perfil de Bell muestra Lv. 1: Fuerza D 591, Resistencia G 233, Destreza C 607, Agilidad B 702 y Magia I 0. La ficha incluye [Deseo Inquebrantable], sin demostrar que Bell conozca conscientemente el nombre o los efectos. También muestra piso alcanzado 7, armas Daga de Hestia y Daga y 18.900 Varisu. El equipo listado incluye Armadura de Conejo MK-II y Protector de Jade (Markdown lines 2823–2869). La denominación MK-II, el creador escrito como «Welf Crosso» y la relación con la armadura comprada antes quedan pendientes de reconciliación (lines 2855–2869).
 
 ## Participantes y objetos
 
@@ -55,5 +59,7 @@ El perfil de Bell muestra Lv. 1: Fuerza D 591, Resistencia G 233, Destreza C 607
 - Este es el acuerdo inicial sin fecha límite, distinto de la nueva contratación dos días después del rescate, registrada en EVT-DM-V02-BELL-AND-LILI-REHIRE-001.
 - No se asigna fecha absoluta.
 - La habilidad de apoyo de Lili no recibe nombre ni descripción adicional.
+- El comentario de Lili sobre «monopolizarlas» y su murmullo «Qué extraño» conservan referente e intención pendientes; no convertirlos en afirmaciones relacionales.
+- La ficha de equipo no confirma por sí sola que Armadura de Conejo MK-II sea el objeto comprado en Babel ni resuelve «Welf Crosso»/«Welf Crozzo».
 - El comentario de Lili sobre que la situación sería más conveniente para Bell y su mirada fría/sarcástica no reciben explicación explícita; no atribuirles intención o motivo (Markdown lines 2595–2635).
 - La traducción española del Markdown no ha sido cotejada con el japonés.

@@ -9,6 +9,7 @@ source_verification: repository_markdown_checked_translation_unverified
 source_refs:
   - DMR-063-SRC-001
 source_locators:
+  - Markdown lines 1859–1867
   - Markdown lines 2115–2137
   - Markdown lines 2139–2223
   - Markdown lines 2225–2501
@@ -30,7 +31,7 @@ Bell descubre que la Daga de Hestia ya no está en su funda. En una escena paral
 
 ## Hechos narrados
 
-- Bell comprueba que la Daga de Hestia ha desaparecido y que solo queda la funda.
+- Durante la primera jornada con Lili, mientras corta una Ant Killer incrustada en la pared, Bell siente que algo es retirado de su cintura. Al volverse ve a Lili junto al monstruo, pero el texto no identifica qué objeto falta ni narra expresamente una extracción (Markdown lines 1859–1867). Más tarde, Bell comprueba que la Daga de Hestia ya no está y que solo queda la funda (lines 2115–2137). Este detalle previo puede relacionarse como indicio contextual, no como prueba aislada de autoría o de qué se retiró.
 - Lili aparece con el arma en una tienda antigua. El comerciante la considera de poco valor y ofrece 30 Varisu; el pasaje no muestra que Lili acepte la oferta.
 - Ryuu reconoce el símbolo de la daga como algo relacionado con una persona conocida y pide verla.
 - Lili intenta marcharse. Ryuu la alcanza, la golpea con una manzana y después la patea cuando intenta huir.
@@ -49,7 +50,7 @@ Bell descubre que la Daga de Hestia ya no está en su funda. En una escena paral
 
 ## Límites de evidencia
 
-- El capítulo muestra a Lili en posesión de la daga y su devolución posterior, pero no narra directamente el acto inicial de tomarla ni contiene una confesión explícita ante Bell. La sustracción se mantiene como inferencia narrativa, no como hecho confesado.
+- El capítulo muestra a Lili en posesión de la daga y su devolución posterior, pero no narra directamente el acto inicial de tomarla ni contiene una confesión explícita ante Bell. La sustracción se mantiene como inferencia narrativa, no como hecho confesado. El indicio de algo retirado de la cintura de Bell (lines 1859–1867) no identifica el objeto ni al autor del acto.
 - La oferta de 30 Varisu no equivale a una venta.
 - No se identifica al Hobbit masculino buscado por Ryuu.
 - No se determina a qué se refiere Seal con «No te dejes llevar» ni por qué Lili pide evitar la Señora de la Abundancia; no inferir una causa, complicidad ni relación permanente a partir de estas frases.

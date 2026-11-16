@@ -568,3 +568,14 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - **Commits de la verificación:** `e64836eab790cc08eb79e66e0d3ed051bb93c6cd`, `5c732c135035ae27b0b52e7dd17e35d9bc052849`, `0071b76b97eaee1d0ee665497235e7120f66a160`, `ceff647bc9ee399c9eda8928df5edb2420209fea` y `1e8a0578e8eb77abb7da3d34dcaef09537d6eb5e`.
 - **Fuente protegida:** el blob original del volumen continúa siendo `9b884520a3b5aa30d25b8b2dfc8721d54b52464e`; no se modificó el Markdown original ni DMR-060.
 - **Checkpoint:** la lectura del Capítulo 02 sigue cerrando en la línea 3470; Capítulo 03, línea 3471, permanece como próximo punto. Estado global: PARTIAL / IN_PROGRESS. CI posterior a estos commits: pendiente de consulta sobre el HEAD final.
+
+
+## DMR-063 — auditoría de detalle y reconciliación correctiva del Capítulo 02 · 2026-11-16
+
+- **HEAD de entrada:** `9e1693ec8f8d2679611b58cbcf12cc004aacc988`, lineal desde el checkpoint original. La sesión recuperó el estado vigente en lugar de repetir la extracción del Capítulo 02.
+- **Fuente y cobertura:** blob Markdown `9b884520a3b5aa30d25b8b2dfc8721d54b52464e`, líneas 1395–3470. El original permanece intacto. Lectura adicional de detalle: 1709–1749, 1859–1867, 1933–1939, 2519–2527, 2795–2821, 2823–2869, 2883–2891 y 3015–3065.
+- **Hallazgos incorporados en registros existentes:** jerarquía de trato de Ayudantes expresada por Lili; indicio no identificado de extracción desde la cintura de Bell; susurro ambiguo de despedida; almacenamiento de la Daga de Hestia en el protector de jade; comentarios de Lili «monopolizarlas» y «Qué extraño»; detalle ampliado del snapshot de Bell; perfil MK-II sin fusionar automáticamente la armadura comprada; contexto laboral de Hestia y cuidado durante la resaca.
+- **Cambios funcionales:** ampliación de los cuatro eventos existentes y de perfiles de Bell, Liliruca y Hestia, así como del registro ya existente de armadura. No se crean IDs ni relaciones permanentes. Continuidad exclusiva `CONT-MAIN-LN`.
+- **Verificador:** mantiene como pendientes el objeto y autor del indicio en la cintura, el hablante/referente del susurro, el referente de «monopolizarlas», el significado de «Qué extraño», la razón de la reacción de Lili y la identidad exacta Armadura de Conejo MK-II/armadura comprada y la variante Crosso/Crozzo.
+- **CI del HEAD de entrada `9e1693ec8f8d2679611b58cbcf12cc004aacc988`:** Lore/Integrity [#43693946402](https://github.com/jonhararagi/wordwaifu/actions/runs/43693946402) y Validate [#43693946516](https://github.com/jonhararagi/wordwaifu/actions/runs/43693946516), ambos success sobre ese SHA; no extrapolar estos resultados al nuevo commit.
+- **Checkpoint:** última línea procesada 3470; primera pendiente 3471 (Capítulo 03). Volumen 2 y DMR-063 permanecen `PARTIAL / IN_PROGRESS`.
