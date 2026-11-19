@@ -64,3 +64,9 @@ Una variante, nombre local o aparición excepcional no debe convertirse en una e
 ## Especie localizada en V2 · Markdown · CONT-MAIN-LN
 
 - [Ant Killer](../monsters/ant-killer.md) — `MON-DM-ANT-KILLER-001`; el Markdown la presenta después de entrar en el séptimo piso y describe caparazón, garras y señal hormonal de llamada. Fuente: DMR-063-SRC-001, lines 85–111. No se infiere parentesco taxonómico con War Shadow.
+
+
+## Monstruos del Volumen 2 · Markdown · CONT-MAIN-LN
+
+- [Spartoi](../monsters/spartoi.md) — `MON-DM-SPARTOI-001`; esqueletos humanoides armados con huesos, comparados con un monstruo fuerte de nivel 4; más de diez son derrotados por Ais en el piso 37. Fuente DMR-063-SRC-001, lines 3479–3483 y 3491–3495.
+- [Udaeus](../monsters/udaeus.md) — `MON-DM-UDAEUS-001`; monstruo especial del piso 37, de huesos negros y más de diez metros, clasificado en el pasaje como «Rey Solitario del Dungeon». Fuente DMR-063-SRC-001, lines 3629–3681. El bloque no muestra el resultado del combate.

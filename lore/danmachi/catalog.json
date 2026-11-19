@@ -2651,7 +2651,10 @@
         "Ais Wallenstein",
         "Udaeus",
         "volume 2",
-        "fight"
+        "fight",
+        "Spartoi",
+        "Familia Loki",
+        "Markdown lines 3471–3681"
       ],
       "status": "source_checked_partial",
       "priority": "high",
@@ -3447,12 +3450,12 @@
       "tags": [
         "Volumen 2",
         "Markdown",
-        "Partes 1–2",
+        "Partes 1–3",
         "CONT-MAIN-LN"
       ],
       "status": "source_checked_translation_unverified",
       "priority": "high",
-      "name": "DMR-063 · V2 Markdown Partes 1–2"
+      "name": "DMR-063 · V2 Markdown Partes 1–3"
     },
     {
       "id": "EVT-DM-V02-BELL-DEFEATS-ANT-KILLER-001",
@@ -3605,6 +3608,35 @@
         "Demeter",
         "Orario",
         "volume 2"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "high"
+    },
+    {
+      "id": "MON-DM-SPARTOI-001",
+      "path": "monsters/spartoi.md",
+      "type": "monster",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volume 2",
+        "Spartoi",
+        "floor 37"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "medium"
+    },
+    {
+      "id": "MON-DM-UDAEUS-001",
+      "path": "monsters/udaeus.md",
+      "type": "monster",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volume 2",
+        "Udaeus",
+        "floor 37",
+        "floor boss"
       ],
       "status": "source_checked_translation_unverified",
       "priority": "high"

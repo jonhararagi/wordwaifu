@@ -172,3 +172,60 @@ La lectura directa del blob fuente permitió documentar detalles que la síntesi
 - **Estado de DMR-063:** Parte 1 y Parte 2 documentadas; el expediente sigue abierto.
 - **Estado global del Volumen 2:** PARTIAL / IN_PROGRESS.
 - **Fuente original:** no modificada.
+
+
+## Parte 3 · Capítulo 03 — primera escena: Spartoi, Udaeus y rumor · líneas 3471–3685
+
+### Derrota de Spartoi y composición del grupo · líneas 3475–3535
+
+El fragmento abre con Ais Wallenstein derrotando a más de diez Spartoi en el piso 37. El Markdown describe a los Spartoi como monstruos esqueleto de base humanoide, con una forma semejante a armadura y varias armas de hueso blanco; la narración los compara con un monstruo fuerte de nivel 4. No se infieren armas concretas, habilidades ni debilidades que el texto no nombra.
+
+La escena identifica un grupo de siete integrantes de Loki Familia, incluidos Ayudantes: cinco aventureros de Primera Clase y dos Ayudantes que habían alcanzado recientemente el nivel 3. Entre los presentes nombrados están Ais, Finn, Riveria, Tiona y Tione. Los dos Ayudantes no reciben nombre. La actividad se distingue de una Expedición formal: se presenta como una exploración personal entre compañeros, con el propósito adicional de pasar el tiempo.
+
+Tiona y Tione conversan sobre la posible ausencia de «Bate» y sobre una referencia de Tione a que Ais lo había rechazado; el contenido llega como diálogo de los personajes, no como escena directa del rechazo. Se conserva la grafía «Bate» del Markdown sin identificarla automáticamente con la ficha existente de Bete Loga.
+
+### Ais pide permanecer en el piso 37 · líneas 3537–3613
+
+Ais pide a Finn y Riveria quedarse sola un poco más. Tiona y Tione objetan que dejarla sola en los Pisos Inferiores sería peligroso. Finn inicialmente no lo permite. Riveria propone quedarse con Ais; Finn termina autorizándolo y pasa al lado de apoyo, alejándose de Ais junto con el resto del equipo. El diálogo deja ver confianza entre Ais y Riveria, pero no se crea una relación nueva ni se amplía una relación permanente a partir de esta escena.
+
+### Aparición de Udaeus · líneas 3615–3681
+
+El suelo del piso 37 tiembla y emerge un monstruo gigantesco de huesos negros, de más de diez metros, con la parte inferior todavía bajo tierra y una Piedra Mágica flotando en el aire. La narración lo compara con una versión ampliada de Spartoi. Ais reconoce que han pasado «3 meses» y el texto explica a continuación la categoría de monstruos especiales que el Gremio llama «Rey Solitario del Dungeon»: solo uno de ellos puede aparecer en cada piso y su reaparición requiere un intervalo especial. El pasaje no fija por sí solo el punto inicial de esos tres meses ni autoriza a convertirlo en una regla exacta de reaparición para Udaeus.
+
+El texto describe a estos monstruos como extraordinariamente fuertes y refiere que su nivel se calcularía agregando dos al nivel del piso; también registra las denominaciones «Jefe de piso» y «Jefe Nivel B» en la traducción. Ais pide a Riveria que no la ayude, se aproxima a Udaeus y afirma que terminará rápidamente.
+
+**Límite decisivo:** las líneas 3471–3681 terminan cuando Ais se acerca a Udaeus. Este bloque Markdown no narra el resultado del combate. La ficha preexistente del enfrentamiento conserva su propia procedencia DMR-060; DMR-063 solo añade el contexto preparatorio y no se utiliza aquí para certificar la victoria.
+
+### Rumor posterior · línea 3683
+
+El texto indica que, una semana después, se extendió por las calles de Orario el rumor de que la Princesa de la Espada había alcanzado el nivel 6. Se reutiliza el evento existente `EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001`; el rumor no se convierte en un Estado confirmado.
+
+### Reconciliación funcional de este bloque
+
+- **Eventos reutilizados:** `EVT-DM-V02-AIS-UDAEUS-001` y `EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001`. No se crean eventos duplicados.
+- **Personajes reutilizados:** Ais (`DM-CHAR-AIS`), Finn (`CHAR-FINN-DEIMNE`), Riveria (`CHAR-RIVERIA-LJOS-ALF`), Tiona (`CHAR-TIONA-HIRYUTE`) y Tione (`CHAR-TIONE-HIRYUTE`). Los dos Ayudantes permanecen anónimos; no se crean fichas.
+- **Familia reutilizada:** Loki Familia (`DM-FAM-LOKI`).
+- **Monstruos nuevos:** `MON-DM-SPARTOI-001` y `MON-DM-UDAEUS-001`, porque no existían fichas ni IDs activos equivalentes en el catálogo. Udaeus no se fusiona con Spartoi: el texto lo compara con una versión ampliada de esa especie.
+- **Lugar:** Dungeon (`LOC-DUNGEON`), piso 37.
+- **Continuidad:** `CONT-MAIN-LN` exclusivamente. Los perfiles existentes mantienen separados sus datos de `CONT-ANIME` y `CONT-SO`.
+- **Fuente:** `DMR-063-SRC-001`, Markdown del repositorio, líneas 3471–3685. La traducción española no se ha cotejado independientemente con japonés.
+
+### Pendientes preservados
+
+1. Resultado del combate contra Udaeus dentro de este bloque Markdown: no aparece en las líneas 3471–3681.
+2. Referente exacto de «Ya han pasado 3 meses» y cómputo del intervalo de reaparición de Udaeus.
+3. Matiz y alcance terminológico de «Rey Solitario del Dungeon», «Jefe de piso» y «Jefe Nivel B» en la traducción.
+4. Variante «Bate» y su correspondencia exacta con «Bete»; no se normaliza automáticamente.
+5. Identidad y datos de los dos Ayudantes anónimos.
+6. Título del capítulo: el Markdown lo divide entre dos encabezados consecutivos en las líneas 3471 y 3473; no se corrige el original.
+7. Traducción española sin cotejo independiente con japonés.
+
+## Checkpoint vigente · después del primer bloque de Parte 3
+
+- **Última línea narrativa procesada:** 3683.
+- **Separador revisado:** línea 3685 (`# × × ×`).
+- **Primera línea pendiente:** 3687.
+- **Bloque reconciliado:** Capítulo 03, líneas 3471–3685.
+- **Estado de DMR-063:** Partes 1, 2 y primer bloque de Parte 3 documentadas; expediente abierto.
+- **Estado global del Volumen 2:** `PARTIAL / IN_PROGRESS`.
+- **Fuente original:** blob `9b884520a3b5aa30d25b8b2dfc8721d54b52464e`, sin modificación.

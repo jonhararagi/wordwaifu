@@ -8,15 +8,17 @@ time_anchor: relative_sequence
 source_verification: user_supplied_private_translation_not_crosschecked
 source_refs:
   - DMR-060-SRC-001
+  - DMR-063-SRC-001
 source_locators:
-  - PDF p. 111
+  - PDF p. 111 (DMR-060)
+  - Markdown line 3683 (DMR-063)
 spoiler_level: major
 ---
 
 # Se difunde el rumor de que Ais alcanzó el nivel 6
 
 ## Localizador y alcance
-- **Fuente:** DMR-060-SRC-001.
+- **Fuentes:** DMR-060-SRC-001 (localizador físico preexistente) y DMR-063-SRC-001 (Markdown line 3683).
 - **Localizador:** PDF p. 111.
 - **Continuidad:** CONT-MAIN-LN.
 - **Verificación:** la obra original es oficial; la traducción española consultada es privada y no se ha cotejado con el japonés.
@@ -42,3 +44,10 @@ Ais Wallenstein y habitantes de Orario (difusión del rumor)
 - No añadir fecha de calendario si el texto no la proporciona.
 - Las páginas citadas son páginas físicas del PDF, no necesariamente la paginación impresa de la edición original.
 - No convertir un rumor en un hecho confirmado ni una descripción parcial en una escena completamente observada.
+
+
+## Comprobación complementaria en el Markdown · DMR-063
+
+- **Localizador:** Volumen [02] • DanMachi.md, línea 3683.
+- El texto expresa «Una semana después» y dice que el rumor de que la Princesa de la Espada había alcanzado LV.6 se extendió por las calles de Orario.
+- La nueva lectura confirma la formulación del rumor y su ancla temporal relativa; no muestra un Estado de Ais ni convierte el rumor en confirmación.

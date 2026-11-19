@@ -7,6 +7,7 @@ confidence: high for listed role descriptions in cited adaptation; incomplete fo
 continuity_scope: CONT-ANIME; CONT-SO
 source_refs:
   - DMR-005-SRC-001
+  - DMR-063-SRC-001
 claim_refs:
   - DMR-005-CLM-001
   - DMR-005-CLM-002
@@ -117,3 +118,14 @@ El resumen editorial del volumen 21 presenta una expedición de Loki Familia que
 - **Claim de sinopsis:** DMR-008-CLM-022, estado `provisional_summary`.
 - **Relación explícita:** `REL-LOKI-V21-EXPEDITION-FAILURE`.
 - **Límite:** no se presume la lista completa de atrapados, el rescate final, el estado de cada miembro ni la secuencia de capítulos. Los datos de esta historia pertenecen a CONT-MAIN-LN y no se sustituyen por la adaptación del anime o Sword Oratoria.
+
+
+## Snapshot narrativo · Volumen 2, Capítulo 03 · CONT-MAIN-LN · DMR-063
+
+En el piso 37, el texto sitúa a siete integrantes de Loki Familia en una exploración personal entre compañeros, distinta de una Expedición formal. El grupo incluye cinco aventureros de Primera Clase y dos Ayudantes que habían alcanzado recientemente el nivel 3. La escena nombra a Ais Wallenstein, Finn Deimne, Riveria, Tiona y Tione; no identifica por nombre a los dos Ayudantes.
+
+Ais derrota a más de diez Spartoi y pide permanecer un poco más en el piso. Finn inicialmente no lo permite. Riveria ofrece quedarse con ella y Finn autoriza la decisión; Finn pasa al equipo de apoyo. Cuando aparece Udaeus, Ais pide que Riveria no intervenga.
+
+- **Fuente:** DMR-063-SRC-001, Markdown lines 3475–3613 y 3621–3681.
+- **Límite:** es un snapshot de una escena concreta en CONT-MAIN-LN, no un roster completo ni permanente. Las descripciones procedentes de CONT-ANIME y CONT-SO arriba conservan su alcance original.
+- **Ayudantes:** sus identidades no aparecen en el bloque; no crear perfiles.

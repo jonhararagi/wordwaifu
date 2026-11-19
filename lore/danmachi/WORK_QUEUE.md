@@ -2175,6 +2175,19 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - [x] Registrar el interludio y la salida interrumpida de Bell y Hestia sin crear una relación permanente.
 - [x] Reutilizar los perfiles Bell, Lili, Eina, Hestia, Ryuu y Seal (DM-CHAR-SEAL-FLOVER); actualizar la ficha existente de Soma Familia y el objeto de protección de muñeca.
 - [x] Incorporar los cuatro nuevos eventos en los índices de eventos, catálogo y modelo cronológico; actualizar la prueba de integridad correspondiente.
-- [ ] Continuar desde el Capítulo 03, primera línea pendiente 3471.
+- [x] Recuperar la fuente por blob Git y procesar el primer bloque consecutivo del Capítulo 03, líneas 3471–3685 (Parte 3).
 - **Pendientes preservados:** discrepancia de apariencia Hobbit/Dogman; acto e intención de la desaparición de la daga; referente de la advertencia de Seal y motivo de la petición de Lili; sentido del comentario sobre el reparto; habilidad de apoyo no nombrada; equivalencia de la armadura; correspondencia del Protector de Jade con el evento posterior de Ais; traducción no cotejada.
 - **Límite:** no modificar la fuente Markdown ni DMR-060. El Volumen 2 sigue PARTIAL / IN_PROGRESS.
+
+
+## DMR-063 — extracción Markdown V2, Parte 3 · primer bloque de Capítulo 03
+
+- [x] Recuperar el contenido de la fuente existente por su Git blob `9b884520a3b5aa30d25b8b2dfc8721d54b52464e`; no alterar el archivo original.
+- [x] Leer el primer bloque consecutivo del Capítulo 03, líneas 3471–3685, incluidos los localizadores exactos de la aparición de Udaeus y el rumor una semana después.
+- [x] Reutilizar los eventos existentes `EVT-DM-V02-AIS-UDAEUS-001` y `EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001`; no crear duplicados.
+- [x] Añadir procedencia DMR-063 a los dos eventos sin modificar DMR-060 ni atribuir a las líneas 3471–3681 un desenlace que no muestran.
+- [x] Crear fichas nuevas para Spartoi y Udaeus al comprobar que no existían IDs activos ni reservados equivalentes.
+- [x] Actualizar catálogo, cronología, índice de monstruos, índice de acontecimientos, perfil de Ais, expediente de Loki Familia y continuidad operativa.
+- [ ] Continuar después del separador, desde la línea 3687.
+- **Pendientes:** resultado del enfrentamiento en el alcance de este bloque; referente de los tres meses; matiz de «Rey Solitario del Dungeon»/«Jefe Nivel B»; variante «Bate»/«Bete»; identidad de los dos Ayudantes; título del capítulo separado en dos encabezados; traducción sin cotejo japonés.
+- **Límite:** fuente original y DMR-060 intactos; únicamente CONT-MAIN-LN. Volumen 2 permanece `PARTIAL / IN_PROGRESS`.

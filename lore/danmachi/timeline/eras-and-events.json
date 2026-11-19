@@ -2534,9 +2534,51 @@
           "name": "Ais Wallenstein",
           "kind": "character",
           "role": "derrota a Udaeus"
+        },
+        {
+          "id": "CHAR-FINN-DEIMNE",
+          "name": "Finn Deimne",
+          "kind": "character",
+          "role": "lidera el grupo, decide la retirada y autoriza que Riveria se quede con Ais"
+        },
+        {
+          "id": "CHAR-RIVERIA-LJOS-ALF",
+          "name": "Riveria Ljos Alf",
+          "kind": "character",
+          "role": "se queda con Ais y luego recibe la petición de no intervenir ante Udaeus"
+        },
+        {
+          "id": "CHAR-TIONA-HIRYUTE",
+          "name": "Tiona Hiryute",
+          "kind": "character",
+          "role": "acompaña al grupo y expresa preocupación por dejar sola a Ais"
+        },
+        {
+          "id": "CHAR-TIONE-HIRYUTE",
+          "name": "Tione Hiryute",
+          "kind": "character",
+          "role": "acompaña al grupo y conversa con Tiona sobre Bate"
+        },
+        {
+          "name": "Dos Ayudantes sin identificar",
+          "kind": "supporters",
+          "role": "recuperan las Piedras Mágicas de los Spartoi; el Markdown no proporciona sus nombres"
         }
       ],
-      "relatedEntities": [],
+      "relatedEntities": [
+        {
+          "id": "MON-DM-SPARTOI-001",
+          "name": "Spartoi",
+          "kind": "monster",
+          "role": "más de diez ejemplares derrotados por Ais antes de la aparición de Udaeus"
+        },
+        {
+          "id": "MON-DM-UDAEUS-001",
+          "name": "Udaeus",
+          "kind": "monster",
+          "role": "monstruo especial que emerge en el piso 37"
+        }
+      ],
       "detailPath": "events/timeline/EVT-DM-V02-AIS-UDAEUS-001.md",
       "sources": [
         {
@@ -2550,6 +2592,12 @@
           "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-AIS-UDAEUS-001.md",
           "kind": "internal",
           "note": "Ficha con localizador físico y límites de traducción."
+        },
+        {
+          "label": "DMR-063 · Volumen 2, Markdown del repositorio, Capítulo 03",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "kind": "repository_markdown",
+          "note": "Lines 3471–3681 document the Spartoi sequence, the Loki Familia group and Ais approaching Udaeus; they do not show the combat outcome."
         }
       ],
       "temporal": {
@@ -2563,7 +2611,8 @@
         "qualifier": "En el tramo temprano de la historia principal, tras la llegada de Bell a Orario; el texto no fija la distancia ni el orden exacto respecto del Festival.",
         "sourceUrls": [
           "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
-          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-AIS-UDAEUS-001.md"
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-AIS-UDAEUS-001.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md"
         ]
       },
       "narrativeOrigin": {
@@ -2583,7 +2632,8 @@
           "context": "Udaeus aparece en el piso 37 del Dungeon.",
           "sourceUrls": [
             "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
-            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-AIS-UDAEUS-001.md"
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-AIS-UDAEUS-001.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md"
           ]
         }
       ]
@@ -2622,6 +2672,12 @@
           "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001.md",
           "kind": "internal",
           "note": "Ficha con localizador físico y límites de traducción."
+        },
+        {
+          "label": "DMR-063 · Volumen 2, Markdown del repositorio, Capítulo 03",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "kind": "repository_markdown",
+          "note": "Line 3683 states that one week later the level-6 rumor spread through Orario; it remains a rumor, not a confirmed Status."
         }
       ],
       "temporal": {
@@ -2634,7 +2690,8 @@
         "precision": "exact",
         "sourceUrls": [
           "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
-          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001.md"
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md"
         ]
       },
       "narrativeOrigin": {
@@ -2654,7 +2711,8 @@
           "context": "El rumor se extiende por las calles de Orario.",
           "sourceUrls": [
             "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
-            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001.md"
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md"
           ]
         }
       ]

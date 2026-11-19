@@ -579,3 +579,17 @@ Una tanda se cierra por calidad y evidencia, no por cantidad de archivos. No tra
 - **Verificador:** mantiene como pendientes el objeto y autor del indicio en la cintura, el hablante/referente del susurro, el referente de «monopolizarlas», el significado de «Qué extraño», la razón de la reacción de Lili y la identidad exacta Armadura de Conejo MK-II/armadura comprada y la variante Crosso/Crozzo.
 - **CI del HEAD de entrada `9e1693ec8f8d2679611b58cbcf12cc004aacc988`:** Lore/Integrity [#43693946402](https://github.com/jonhararagi/wordwaifu/actions/runs/43693946402) y Validate [#43693946516](https://github.com/jonhararagi/wordwaifu/actions/runs/43693946516), ambos success sobre ese SHA; no extrapolar estos resultados al nuevo commit.
 - **Checkpoint:** última línea procesada 3470; primera pendiente 3471 (Capítulo 03). Volumen 2 y DMR-063 permanecen `PARTIAL / IN_PROGRESS`.
+
+
+## DMR-063 — Volumen 2, Parte 3 · primer bloque del Capítulo 03 · 2026-11-19
+
+- **HEAD de entrada:** `c9158770d4ec2980e6772f01f2d711cf3eba61c8`, rama `main`.
+- **Fuente exclusiva:** Markdown existente `lore/danmachi/volumes/main/Volumen [02] • DanMachi.md`, blob `9b884520a3b5aa30d25b8b2dfc8721d54b52464e`. El contenido se recuperó mediante Git blob; no se utilizaron PDF, anime, wikis ni fuentes externas.
+- **Cobertura:** líneas 3471–3685. Lectura narrativa hasta la línea 3683; línea 3685 es separador. Próxima línea narrativa pendiente: 3687.
+- **Contenido:** Ais derrota más de diez Spartoi en el piso 37; grupo de Loki Familia de siete integrantes (cinco aventureros de Primera Clase y dos Ayudantes); Ais pide quedarse; Finn autoriza que Riveria permanezca con ella; emerge Udaeus, Ais pide que no la ayuden y se aproxima; una semana después se difunde el rumor de nivel 6.
+- **Reconciliación:** se reutilizan `EVT-DM-V02-AIS-UDAEUS-001` y `EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001`. DMR-063 añade la procedencia Markdown, pero no presenta el desenlace del combate dentro de 3471–3681; el dato preexistente de DMR-060 no se reescribe ni se revalida.
+- **Registros nuevos justificados:** `MON-DM-SPARTOI-001` y `MON-DM-UDAEUS-001`; no existían fichas/IDs activos ni reservados equivalentes. Ambos quedan etiquetados `CONT-MAIN-LN`.
+- **Registros reutilizados:** Ais, Finn, Riveria, Tiona, Tione y Loki Familia. Los dos Ayudantes quedan sin identificar y no reciben fichas.
+- **Ambigüedades:** referente de «Ya han pasado 3 meses»; matices de los términos «Rey Solitario del Dungeon» y «Jefe Nivel B»; «Bate» frente a Bete; identidades de los Ayudantes; título del capítulo dividido entre líneas 3471 y 3473.
+- **Protección de fuente:** no se modificó el Markdown original ni el expediente DMR-060. No se añadió fecha absoluta, nivel confirmado para Ais, relación permanente ni resultado no visible en el bloque.
+- **Estado:** DMR-063 y Volumen 2 permanecen `PARTIAL / IN_PROGRESS`. CI del nuevo commit pendiente de consulta sobre el SHA exacto.

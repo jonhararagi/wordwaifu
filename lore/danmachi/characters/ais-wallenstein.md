@@ -5,7 +5,7 @@ type: character
 status: provisional
 confidence: high for general role; time-specific facts need verification
 tags: [Ais Wallenstein, Familia Loki, aventurera, Bell]
-source_refs: [DMR-061-SRC-001]
+source_refs: [DMR-061-SRC-001, DMR-063-SRC-001]
 claim_refs:
   - DMR-002-CLM-005
   - DMR-002-CLM-006
@@ -101,3 +101,13 @@ Cuando Bete ridiculiza a Bell, Ais considera que el miedo del novato fue normal 
 
 - **Evento:** EVT-DM-V01-BELL-HEARS-LOKI-RETELL-MINOTAUR-001.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés, PDF pp.67–68.
+
+
+## CONT-MAIN-LN · Volumen 2 · contexto del enfrentamiento con Udaeus · DMR-063
+
+El Markdown del Capítulo 03 muestra a Ais derrotando más de diez Spartoi en el piso 37 y pidiendo permanecer allí un poco más después de que el grupo de Loki Familia decide retirarse. Finn inicialmente se opone; Riveria se queda con Ais tras recibir autorización. Cuando Udaeus emerge, Ais pide a Riveria que no intervenga y se aproxima al monstruo.
+
+- **Evento existente:** [Ais se enfrenta a Udaeus en el piso 37](../events/timeline/EVT-DM-V02-AIS-UDAEUS-001.md).
+- **Fuente:** DMR-063-SRC-001, Markdown lines 3471–3681.
+- **Límite:** estas líneas no muestran el resultado del enfrentamiento. El evento ya existente conserva por separado su procedencia DMR-060; esta nota no usa DMR-063 para afirmar la victoria.
+- **Continuidad:** CONT-MAIN-LN. Las etiquetas y perfiles de adaptación permanecen en sus continuidades originales.

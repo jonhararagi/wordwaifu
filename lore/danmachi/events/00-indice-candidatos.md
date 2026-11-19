@@ -10,7 +10,7 @@ Este índice separa historias parciales respaldadas por sinopsis/perfiles oficia
 
 ## Volumen 2 — eventos narrativos extraídos de traducción aportada
 
-- [Volumen 2: enfrentamiento de Ais con Udaeus](timeline/EVT-DM-V02-AIS-UDAEUS-001.md) · `EVT-DM-V02-AIS-UDAEUS-001` · `CONT-MAIN-LN` · PDF pp. 106–111; rumor de nivel 6 conservado como rumor.
+- [Volumen 2: enfrentamiento de Ais con Udaeus](timeline/EVT-DM-V02-AIS-UDAEUS-001.md) · `EVT-DM-V02-AIS-UDAEUS-001` · `CONT-MAIN-LN` · PDF pp. 106–111 (DMR-060); Markdown lines 3471–3681 (DMR-063, contexto previo y aproximación; no muestra el desenlace).
 - [Volumen 2: Bell obtiene Firebolt](timeline/EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001.md) · `EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001` · `CONT-MAIN-LN` · PDF pp. 136–149.
 - [Volumen 2: Bell prueba Firebolt y agota Mind](timeline/EVT-DM-V02-BELL-FIREBOLT-TEST-001.md) · `EVT-DM-V02-BELL-FIREBOLT-TEST-001` · `CONT-MAIN-LN` · PDF pp. 150–155 y 167–169.
 - [Volumen 2: emboscada de Ogros en el piso 10](timeline/EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001.md) · `EVT-DM-V02-FLOOR10-OGRE-AMBUSH-001` · `CONT-MAIN-LN` · PDF pp. 195–213.
@@ -85,7 +85,7 @@ Antes de crear otro evento, compara ID, nombres alternativos, participantes, per
 
 ## Volumen 2 — eventos y anclas ampliadas
 
-- [Rumor de nivel 6 de Ais](timeline/EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001.md) — una semana después de Udaeus; rumor, no confirmación.
+- [Rumor de nivel 6 de Ais](timeline/EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001.md) — una semana después de Udaeus; PDF p. 111 (DMR-060) y Markdown line 3683 (DMR-063); rumor, no confirmación.
 - [Pociones agotadas](timeline/EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001.md) y [compra de poción de Mind](timeline/EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001.md) — tres días antes de la visita y visita pp. 167–169.
 - [Bell ve a Lili acosada](timeline/EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001.md) — pp. 169–170.
 - [Lili observa Firebolt](timeline/EVT-DM-V02-LILI-OBSERVES-BELL-FIREBOLT-001.md) — un día antes de la incursión al piso 10.
