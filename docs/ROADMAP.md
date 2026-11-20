@@ -1,5 +1,26 @@
 # Hoja de ruta
 
+## Snapshot vigente — 2026-11-19
+
+**Base de referencia:** `main` en `f19207beda7a3e1619bdab7111e008dcc64603c1`. Los snapshots 2026-10-18 que siguen son históricos y no describen por sí solos el estado actual.
+
+| Área | Estado vigente | Evidencia y límite |
+|---|---|---|
+| Aplicación local offline-first | Implementada | Prototipo HTML/CSS/JS y módulos locales; no implica validación manual en todos los entornos. |
+| Datos y persistencia | Implementados con gates manuales abiertos | IndexedDB, respaldo local, import/export, snapshots, papelera y recuperación. WF-004-A.3 automatizó pruebas de escrituras lentas, fallo inyectado y protección de importación; [CI #37963611180](https://github.com/jonhararagi/wordwaifu/actions/runs/37963611180). Cuota real y revisión Windows: NOT_RUN. |
+| Atlas, canon y grafo | Parciales | Catálogo y relaciones explícitas existentes; faltan cobertura de otras familias y recorridos temporales/causales completos. |
+| Story Forge | Implementado para planificación | Estructuras de 1–500 capítulos y pruebas/benchmark; no equivale a generación de prosa final. |
+| Continuity Guard | Parcial | Validación estructural; motor causal global aún pendiente. |
+| DanMachi V2 | PARTIAL / IN_PROGRESS | DMR-063 Partes 1–3; Capítulo 03 cubierto hasta línea 3685. Próxima línea narrativa: 3687. |
+| CI del checkpoint de referencia | No acreditado en esta auditoría | Los checks de SHA anteriores no se extrapolan a `f19207b...`; la PR de reconciliación debe aportar runs exactos. |
+
+### Criterio de lectura
+
+La resiliencia automatizada no debe volver a aparecer como implementación pendiente: WF-004-A.3 está documentada como DONE. Mantener separados los gates de cuota real, revisión manual de Windows y CI del SHA actual. No declarar un porcentaje global de finalización.
+
+---
+
+
 ## Snapshot operativo — 2026-10-18
 
 | Fase | Estado en `main` | Evidencia / bloqueo |
