@@ -1,3 +1,23 @@
+# Estado operativo vigente — 2026-11-19
+
+**Checkpoint de referencia:** `main` = `f19207beda7a3e1619bdab7111e008dcc64603c1`.
+**Auditoría de reconciliación:** rama `work/critical-priority-reconciliation-2026-11-19`; esta sección prevalece sobre snapshots históricos posteriores que no reflejen este checkpoint.
+
+## Diagnóstico y correcciones de prioridad crítica
+
+- **DMR-063 / Volumen 2:** Parte 3 ya está documentada e integrada en el checkpoint. El primer bloque del Capítulo 03 cubre Markdown lines 3471–3685; última línea narrativa procesada 3683; separador 3685; próxima línea pendiente 3687. No volver a empezar en 3471.
+- **Expediente DMR-063:** el cuerpo ya contiene la Parte 3 y el checkpoint 3687. Se corrige su frontmatter/título para que diga Partes 1–3, no Partes 1–2.
+- **WORK_QUEUE:** la tabla de inventario y el orden de ejecución deben reflejar la Parte 3 y la continuación desde 3687. El volumen 2 permanece `PARTIAL / IN_PROGRESS`.
+- **Persistencia:** no se identifica una ausencia de resiliencia automatizada en el estado documentado. WF-004-A.3 figura como DONE: pruebas de escrituras IndexedDB lentas, fallback con fallo de escritura inyectado y protección de importación cuando fallan IndexedDB y localStorage. Evidencia histórica específica: [CI #37963611180](https://github.com/jonhararagi/wordwaifu/actions/runs/37963611180). Esto no acredita una cuota real agotada ni revisión manual en Windows; ambos gates siguen `NOT_RUN`.
+- **CI actual:** los checks exitosos registrados en el commit anterior `9e1693e...` no se extrapolan a `f19207b...`. La validación de esta reconciliación debe ejecutarse sobre el HEAD de la PR.
+- **No certificar:** no se declara el volumen 2 completo, no se declara cuota real comprobada, no se declara revisión Windows realizada y no se declara CI PASS hasta observar los resultados exactos.
+
+## Próxima acción inequívoca
+
+Continuar DMR-063 exclusivamente desde la línea Markdown 3687 de `lore/danmachi/volumes/main/Volumen [02] • DanMachi.md`, preservar IDs/eventos existentes y mantener `CONT-MAIN-LN). Antes de cualquier nueva extracción, consultar este bloque y el checkpoint del expediente DMR-063.
+
+---
+
 ## Reconciliación de relaciones monstruo–evento V1 (2026-11-11)
 
 - **Estado remoto inicial:** `main` en `deaf22afc230dfef2d634396ee8242367659ea26`; idéntico al checkpoint recibido. Sin cambios posteriores al inicio de la tarea.

@@ -1,5 +1,23 @@
 # Auditoría de finalización de WordWaifu
 
+# Addendum de reconciliación — 2026-11-19
+
+**Base de referencia:** `main` en `f19207beda7a3e1619bdab7111e008dcc64603c1`.
+Este addendum prevalece sobre las cifras y estados históricos del corte 2026-10-18 que sigue.
+
+## Correcciones al diagnóstico anterior
+
+1. **Persistencia automatizada:** WF-004-A.3 está documentada como DONE. La suite cubre escrituras IndexedDB lentas, fallback ante fallo de escritura inyectado y protección de importación cuando fallan IndexedDB y localStorage. Evidencia registrada: [CI #37963611180](https://github.com/jonhararagi/wordwaifu/actions/runs/37963611180). Por tanto, no corresponde clasificar la resiliencia automatizada como una implementación crítica ausente.
+2. **Gates todavía abiertos:** cuota real del navegador y revisión manual en Windows 11 permanecen NOT_RUN. Una simulación de fallo no demuestra agotamiento real de cuota.
+3. **Continuidad DMR-063:** el commit `f19207beda7a3e1619bdab7111e008dcc64603c1` ya integró la Parte 3 del Volumen 2, Capítulo 03, líneas Markdown 3471–3685. La próxima línea narrativa es 3687. La fila de inventario y el orden operativo de WORK_QUEUE se corrigen en esta iteración.
+4. **Documentación histórica:** los snapshots fechados 2026-10-18 y los registros previos no se borran; se conservan como evidencia histórica. El estado vigente está en el snapshot 2026-11-19 de STATUS.md y ROADMAP.md.
+5. **CI:** no se certifica CI para el SHA base `f19207b...` ni para esta rama hasta que GitHub Actions publique ejecuciones asociadas a los commits exactos de la PR.
+
+## Dictamen corregido
+
+El riesgo crítico inmediato identificado en la auditoría era de continuidad operativa/documental: el expediente DMR-063 ya había avanzado, pero WORK_QUEUE y sus metadatos todavía indicaban que el Capítulo 03 debía empezar en 3471. Se corrige a 3687. La persistencia automatizada ya tenía cobertura y evidencia histórica; solo quedan los gates manuales explícitamente separados.
+
+
 **Fecha:** 2026-10-18  
 **Base revisada:** `main`; grafo explícito expandido en main, con 49 relaciones registradas; la optimización lineal de Story Forge sigue en `d51990d5a54b70f2a161ec41acba15b59684bb1b`.
 

@@ -6,9 +6,9 @@ status: source_checked_translation_unverified
 continuity_scope: CONT-MAIN-LN
 source_refs:
   - DMR-063-SRC-001
-tags: [volume-02, markdown-only, parts-1-2, Bell, Eina, Liliruca, Ryuu, Ant Killer]
+tags: [volume-02, markdown-only, parts-1-3, Bell, Eina, Liliruca, Ryuu, Ant Killer, Spartoi, Udaeus]
 ---
-# DANMACHI-RESEARCH-063 — Volumen 2: extracción Markdown, Partes 1 y 2
+# DANMACHI-RESEARCH-063 — Volumen 2: extracción Markdown, Partes 1–3
 
 ## Alcance y método
 
