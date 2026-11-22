@@ -286,7 +286,7 @@ async function run() {
     await page.locator("#universe-search").fill("Lelouch");
     await page.locator('#universe-search-results [data-explorer-open="CG-CHAR-LELOUCH"]').click();
     assert.match(await page.locator("#universe-entity-panel").innerText(), /Lelouch/i);
-    await page.locator('[data-explorer-action="open:CG-CHAR-CC"]').click();
+    await page.locator('[data-explorer-action="open:CG-CHAR-CC"]').first().click();
     assert.match(await page.locator("#universe-entity-panel").innerText(), /C\.C\./i);
     await page.locator("#universe-search").fill("Ryu Lion");
     await page.locator('#universe-search-results [data-explorer-open="CHAR-RYUU-LION"]').click();
