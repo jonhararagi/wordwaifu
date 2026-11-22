@@ -20,6 +20,7 @@
     lore: ["Enciclopedia de personajes", "Explorá fichas, etapas de vida, vínculos y fuentes documentales."],
     art: ["Panel de arte", "Administrá imágenes, prompts y asignaciones visuales por entidad."],
     "mythic-catalog": ["Catálogo mítico", "Explorá entidades, armas, reliquias y pactos conectados por relaciones."],
+    universes: ["Explorador de universos", "Seguí personajes, familias, poderes y acontecimientos a través de sus relaciones y continuidades."],
     powers: ["Poderes y habilidades", "Guardá cada poder como una ficha conectada a personajes e historias."]
   };
   const demo = {
@@ -981,7 +982,7 @@
     $("#global-search").placeholder = activeView === "lore"
       ? "Buscar en la enciclopedia de personajes…"
       : "Buscar personajes, lugares o DanMachi…";
-    $("#global-search").closest(".search-box").classList.toggle("hidden", activeView === "mythic-catalog");
+    $("#global-search").closest(".search-box").classList.toggle("hidden", ["mythic-catalog", "universes"].includes(activeView));
     $$(".nav-item").forEach((button) => button.classList.toggle("active", button.dataset.view === activeView));
     $("#atlas-layout").classList.toggle("hidden", activeView !== "atlas");
     $("#directory-view").classList.toggle("hidden", !["characters", "relationships", "places", "timeline", "organizations", "stories"].includes(activeView));
@@ -990,9 +991,10 @@
     $("#art-view").classList.toggle("hidden", activeView !== "art");
     $("#mythic-catalog-view").classList.toggle("hidden", activeView !== "mythic-catalog");
     $("#powers-view").classList.toggle("hidden", activeView !== "powers");
+    $("#universe-explorer-view").classList.toggle("hidden", activeView !== "universes");
     $(".toolbar").classList.toggle("hidden", activeView !== "atlas");
     $("#layers-panel").classList.add("hidden");
-    $("#add-button").classList.toggle("hidden", ["commands", "stories", "lore", "art", "mythic-catalog", "powers"].includes(activeView));
+    $("#add-button").classList.toggle("hidden", ["commands", "stories", "lore", "art", "mythic-catalog", "powers", "universes"].includes(activeView));
     renderMap();
     renderDetails();
     renderDirectory();
@@ -3940,9 +3942,9 @@
     if (lower === "ayuda" || lower === "help") {
       response = "Comandos disponibles: listar personajes, listar lugares, buscar personaje NOMBRE, buscar lugar NOMBRE, mostrar personaje NOMBRE, mostrar lugar NOMBRE, validar continuidad y exportar proyecto.";
     } else if (lower.includes("listar personajes")) {
-      response = state.characters.map((character) => "• " + character.name + " · " + character.role + " · " + (characterLocationAt(character, currentTime())?.name || "ubicación desconocida")).join("<br>") || "No hay personajes.";
+      response = state.characters.map((character) => escapeHTML("• " + character.name + " · " + character.role + " · " + (characterLocationAt(character, currentTime())?.name || "ubicación desconocida"))).join("<br>") || "No hay personajes.";
     } else if (lower.includes("listar lugares")) {
-      response = state.locations.map((location) => "• " + location.name + " · " + location.type).join("<br>") || "No hay lugares.";
+      response = state.locations.map((location) => escapeHTML("• " + location.name + " · " + location.type)).join("<br>") || "No hay lugares.";
     } else if (lower.includes("validar continuidad")) {
       const issues = [];
       const knownLocationIds = new Set(state.locations.map((location) => location.id));
@@ -4352,6 +4354,10 @@
     getProject: () => state,
     onSave: saveProject
   });
+
+  if (window.WordWaifuUniverseExplorer && window.WordWaifuUniverseGraph) {
+    window.WordWaifuUniverseExplorer.mount({ root: $("#universe-explorer-view"), graph: window.WordWaifuUniverseGraph });
+  }
 
   initializeApplication();
 })(); 
