@@ -32,6 +32,9 @@ jobs:
           node --check src/mythic-catalog.js
           node --check src/power-catalog.js
           node --check src/power-workbench.js
+          node --check src/code-geass-lore.js
+          node --check src/universe-graph.js
+          node --check src/universe-explorer.js
           node --check src/project-schema.js
           node --check src/project-repository.js
           node --check src/story-outline.js
@@ -59,6 +62,8 @@ jobs:
         run: node tests/test_mythic_catalog.cjs
       - name: Test power catalog generator
         run: node tests/test_power_catalog.cjs
+      - name: Test connected universe graph
+        run: node tests/test_universe_graph.cjs
       - name: Test story outline generation
         run: node tests/test_story_outline.cjs
       - name: Test Story Forge outline and audit

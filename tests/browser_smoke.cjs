@@ -126,6 +126,59 @@ async function run() {
     process.stdout.write("PASS app recovery migration: empty central store preserves legacy character links in the local backup.\\n");
     await legacyRecoveryContext.close();
 
+    // Command list output must display imported project strings as text, never parse them as markup.
+    const xssFixture = JSON.parse(JSON.stringify(legacyRecoveryFixture));
+    xssFixture.project.id = "command-xss-regression";
+    xssFixture.project.name = "Command XSS Regression";
+    const xssCharacterPayload = '<img src=x onerror="window.__wordwaifuXssExecuted=1">';
+    const xssLocationPayload = '<svg onload="window.__wordwaifuXssExecuted=2"></svg>';
+    xssFixture.characters[0].name = xssCharacterPayload;
+    xssFixture.characters[0].role = xssLocationPayload;
+    xssFixture.locations[0].name = xssLocationPayload;
+    xssFixture.locations[0].type = xssCharacterPayload;
+    const xssContext = await browser.newContext();
+    await xssContext.addInitScript((fixture) => {
+      window.__wordwaifuXssExecuted = 0;
+      try {
+        Object.defineProperty(window, "indexedDB", { configurable: true, writable: true, value: null });
+      } catch {
+        try { window.indexedDB.open = () => { throw new Error("IndexedDB disabled for command XSS regression."); }; } catch { /* localStorage fallback is asserted below */ }
+      }
+      localStorage.setItem("wordwaifu.project.v1", JSON.stringify(fixture));
+    }, xssFixture);
+    const xssPage = await xssContext.newPage();
+    await xssPage.goto("http://127.0.0.1:" + address.port + "/", { waitUntil: "networkidle" });
+    await xssPage.waitForFunction(() => document.querySelector("#project-name")?.textContent === "Command XSS Regression", { timeout: 10000 });
+    await xssPage.locator('.nav-item[data-view="commands"]').click();
+    await xssPage.locator("#command-input").fill("listar personajes");
+    await xssPage.locator("#command-form button[type=submit]").click();
+    await xssPage.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+    const characterCommandReport = await xssPage.evaluate(() => ({
+      text: document.querySelector("#command-log").textContent,
+      injectedElements: document.querySelectorAll("#command-log img, #command-log svg, #command-log script").length,
+      executed: window.__wordwaifuXssExecuted
+    }));
+    assert.ok(characterCommandReport.text.includes(xssCharacterPayload));
+    assert.ok(characterCommandReport.text.includes(xssLocationPayload));
+    assert.equal(characterCommandReport.injectedElements, 0, "Character list must not parse project names, roles or locations as HTML.");
+    assert.equal(characterCommandReport.executed, 0, "Character list must not execute imported event-handler markup.");
+
+    await xssPage.locator("#command-input").fill("listar lugares");
+    await xssPage.locator("#command-form button[type=submit]").click();
+    await xssPage.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+    const locationCommandReport = await xssPage.evaluate(() => ({
+      text: document.querySelector("#command-log").textContent,
+      injectedElements: document.querySelectorAll("#command-log img, #command-log svg, #command-log script").length,
+      executed: window.__wordwaifuXssExecuted
+    }));
+    assert.ok(locationCommandReport.text.includes(xssLocationPayload));
+    assert.ok(locationCommandReport.text.includes(xssCharacterPayload));
+    assert.equal(locationCommandReport.injectedElements, 0, "Location list must not parse project names or types as HTML.");
+    assert.equal(locationCommandReport.executed, 0, "Location list must not execute imported event-handler markup.");
+    process.stdout.write("PASS command output XSS regression: imported character/location markup stays inert text.\\n");
+    await xssContext.close();
+
+
     const context = await browser.newContext();
     const page = await context.newPage();
     page.on("pageerror", (error) => pageErrors.push(error.stack || error.message));
@@ -224,6 +277,23 @@ async function run() {
     assert.equal(appPersistence.activeProjectId, "project-asteria");
     assert.equal(appPersistence.backupName, appPersistence.projectName, "The local backup must match the loaded project.");
     process.stdout.write("PASS app persistence boot: IndexedDB record, active pointer and local backup agree.\n");
+
+    // Selectively ported universe explorer: real current DanMachi registry + researched Code Geass graph.
+    assert.equal(scriptSources.filter(source => source === "/src/universe-graph.js").length, 1);
+    assert.equal(scriptSources.filter(source => source === "/src/universe-explorer.js").length, 1);
+    await page.locator('.nav-item[data-view="universes"]').click();
+    await page.locator("#universe-search").waitFor();
+    await page.locator("#universe-search").fill("Lelouch");
+    await page.locator('#universe-search-results [data-explorer-open="CG-CHAR-LELOUCH"]').click();
+    assert.match(await page.locator("#universe-entity-panel").innerText(), /Lelouch/i);
+    await page.locator('[data-explorer-action="open:CG-CHAR-CC"]').first().click();
+    assert.match(await page.locator("#universe-entity-panel").innerText(), /C\.C\./i);
+    await page.locator("#universe-search").fill("Ryu Lion");
+    await page.locator('#universe-search-results [data-explorer-open="CHAR-RYUU-LION"]').click();
+    assert.match(await page.locator("#universe-entity-panel").innerText(), /Ryu Lion/i);
+    assert.ok(await page.locator("#universe-entity-panel").innerText().then(text => text.includes("Astrea Familia")));
+    process.stdout.write("PASS universe explorer: search, source-aware details and relationship navigation work for Code Geass and DanMachi.\\n");
+
     // Mythic catalog: monster forms expose the three mandatory design pillars and are searchable by form details.
     await page.locator('.nav-item[data-view="mythic-catalog"]').click();
     await page.locator("#mythic-search").fill("Hidra de Lerna");

@@ -32,6 +32,7 @@
         <button class="nav-item" data-view="lore"><span>⌕</span> Enciclopedia de personajes</button>
         <button class="nav-item" data-view="mythic-catalog"><span>✧</span> Catálogo mítico</button>
         <button class="nav-item" data-view="powers"><span>✦</span> Poderes y habilidades</button>
+        <button class="nav-item" data-view="universes"><span>◎</span> Explorador de universos</button>
         <button class="nav-item" data-view="art"><span>▧</span> Panel de arte</button>
       </nav>
       <div class="sidebar-bottom">
@@ -120,6 +121,7 @@
         <div id="mythic-catalog-content" class="mythic-catalog-content" aria-live="polite"><p class="field-help">Cargando fichas…</p></div>
       </section>
       <section id="powers-view" class="powers-view hidden" aria-label="Catálogo editable de poderes"></section>
+      <section id="universe-explorer-view" class="universe-explorer-view hidden" aria-label="Explorador conectado de universos"></section>
       <section id="art-view" class="art-view hidden" aria-labelledby="art-studio-title">
         <header class="art-studio-header"><div><p class="eyebrow">WORDWAIFU · ASSET STUDIO</p><h2 id="art-studio-title">Panel de arte</h2><p>Vinculá imágenes locales o externas, guardá prompts y asigná cada recurso a una entidad por ID estable.</p></div><div class="art-studio-stat"><strong id="art-assignment-count">0</strong><span>recursos asignados</span></div></header>
         <div class="art-studio-grid">
@@ -371,6 +373,9 @@
   <script src="./src/project-repository.js" defer></script>
   <script src="./src/official-character-roster.js" defer></script>
   <script src="./src/character-dossiers.js" defer></script>
+  <script src="./src/code-geass-lore.js" defer></script>
+  <script src="./src/universe-graph.js" defer></script>
+  <script src="./src/universe-explorer.js" defer></script>
   <script src="./src/character-alignments.js" defer></script>
   <script src="./src/art-studio.js" defer></script>
   <script src="./src/lore-corpus.js" defer></script>
