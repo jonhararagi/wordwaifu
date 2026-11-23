@@ -382,3 +382,22 @@ El mismo perfil enumera la Armadura de Conejo MK-II y el Protector de Jade (line
 - **Equipo:** Armadura de Conejo MK-II y Protector de Jade. Se reutiliza `OBJ-DM-BELL-JADE-WRIST-GUARD-001` para el Protector de Jade. La identidad de Armadura de Conejo MK-II respecto de la armadura ligera comprada antes no queda resuelta; véase `OBJ-DM-BELL-LIGHT-ARMOR-001`.
 
 **Límites:** no convertir los datos del panel en conocimiento consciente de Bell; no normalizar «Welf Crosso» con «Welf Crozzo» ni fusionar objetos sin evidencia textual suficiente.
+
+## Snapshot de Estado tras la lectura del Grimorio · DMR-063 · CONT-MAIN-LN
+
+**Fuente:** DMR-063-SRC-001, Volumen 2, Markdown lines 5065–5127.
+
+Después de que Bell lee el libro que Seal le presta, Hestia detecta que ha aprendido Magia. El snapshot registra Firebolt y la descripción «Magia de Lanzamiento Rápido». La ventana de Habilidad aparece vacía.
+
+| Atributo | Valor anterior | Valor nuevo |
+|---|---:|---:|
+| Fuerza | B 701 | B 734 |
+| Resistencia | G 287 | F 355 |
+| Destreza | B 715 | B 719 |
+| Agilidad | B 799 | A 817 |
+| Magia | I 0 | I 0 |
+
+Este snapshot es independiente del Estado al cierre del Capítulo 02 y de las actualizaciones anteriores. No sobrescribe ninguno. Hestia plantea como hipótesis que Firebolt podría no requerir canto porque el Estado no muestra uno; la escena no acredita una regla universal.
+
+- Eventos relacionados: adquisición de Firebolt; prueba y agotamiento de Mind; hallazgo y atención por Ais/Riveria.
+- DMR-063 usa exclusivamente el Markdown del repositorio y no coteja este snapshot con la edición japonesa.
