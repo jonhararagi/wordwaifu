@@ -1,6 +1,6 @@
 ## Addendum de continuidad DMR-063 — 2026-11-22
 
-Base de partida: main SHA ffd989c39ed9d9c076223bcb24c42f3a41b931ce. DMR-063 avanzó desde la línea 3687 hasta 5575 y cerró el Capítulo 03. Próximo punto narrativo: 5579, después del encabezado del Capítulo 04 en 5577. El Volumen 2 sigue PARTIAL / IN_PROGRESS. PR, CI y merge se comprobarán por SHA y no se extrapolan de ejecuciones anteriores.
+Base de partida: main SHA ffd989c39ed9d9c076223bcb24c42f3a41b931ce. DMR-063 avanzó desde la línea 3687 hasta 5575 y cerró el Capítulo 03. Próximo punto narrativo: 5579, después del encabezado del Capítulo 04 en 5577. El Volumen 2 sigue PARTIAL / IN_PROGRESS. Validación PASS sobre HEAD `887f4bda089dfa75ea6c1528b769ba62b19d35d0`: [Validate WordWaifu #45099349265](https://github.com/jonhararagi/wordwaifu/actions/runs/45099349265) y [DanMachi Lore and Retrieval Integrity #45099349289](https://github.com/jonhararagi/wordwaifu/actions/runs/45099349289). [PR #236](https://github.com/jonhararagi/wordwaifu/pull/236) permanece abierta y mergeable; no integrada en main.
 
 # Hoja de ruta
 
@@ -15,7 +15,7 @@ Base de partida: main SHA ffd989c39ed9d9c076223bcb24c42f3a41b931ce. DMR-063 avan
 | Atlas, canon y grafo | Parciales | Catálogo y relaciones explícitas existentes; faltan cobertura de otras familias y recorridos temporales/causales completos. |
 | Story Forge | Implementado para planificación | Estructuras de 1–500 capítulos y pruebas/benchmark; no equivale a generación de prosa final. |
 | Continuity Guard | Parcial | Validación estructural; motor causal global aún pendiente. |
-| DanMachi V2 | PARTIAL / IN_PROGRESS | DMR-063 Partes 1–4; Capítulo 03 cubierto hasta línea 5575. Capítulo 04 comienza en 5577; próxima línea narrativa 5579. Esta actualización está en rama; no acredita aún merge ni CI. |
+| DanMachi V2 | PARTIAL / IN_PROGRESS | DMR-063 Partes 1–4; Capítulo 03 cubierto hasta línea 5575. Capítulo 04 comienza en 5577; próxima línea narrativa 5579. PR #236 abierta; CI PASS sobre `887f4bda089dfa75ea6c1528b769ba62b19d35d0` (Validate #45099349265 y Lore #45099349289). No integrada en main. |
 | CI del checkpoint de referencia | No acreditado en esta auditoría | Los checks de SHA anteriores no se extrapolan a `f19207b...`; la PR de reconciliación debe aportar runs exactos. |
 
 ### Criterio de lectura
