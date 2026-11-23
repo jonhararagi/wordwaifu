@@ -125,3 +125,12 @@ Bell descubre que la Daga de Hestia ha desaparecido. Más tarde Ryuu la devuelve
 - **Límite:** la posesión de la daga por Lili está narrada; su sustracción inicial y su intención final no se formulan como confesión explícita.
 - **Continuidad:** exclusivamente CONT-MAIN-LN; no importar desde CONT-SECONDARY una explicación de la apariencia o habilidades.
 - **Fuente:** DMR-063-SRC-001, Markdown lines 1395–2821, en particular lines 1709–1749, 1933–1939, 2519–2527 y 2795–2821. Traducción privada no cotejada con japonés.
+
+
+## CONT-MAIN-LN · Volumen 2 · propuesta de traición rechazada por Bell · DMR-063
+
+En la Plaza Central, tres aventureros increpan a Lili. Bell los observa y un hombre que había encontrado antes en un callejón le propone que finja explorar con ella y la deje caer en una trampa a cambio de una parte del dinero. Bell se niega. Lili aparece ilesa, evita explicar qué ocurrió y continúa hacia Babel con Bell (Markdown lines 5967–6105).
+
+- **Límite:** el hombre no es nombrado ni se confirma su afiliación a Soma Familia. Bell se pregunta si los tres aventureros podrían pertenecer a esa Familia; esa pregunta no convierte la afiliación en hecho. No confundir esta propuesta rechazada con el episodio posterior de Kanu y Gedo.
+- **Evento reutilizado:** `EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001`.
+- **Fuente:** DMR-063-SRC-001; traducción privada no cotejada con japonés.
