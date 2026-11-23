@@ -1,3 +1,15 @@
+## Reconciliación operativa crítica — 2026-11-22
+
+**Base de partida:** main en ffd989c39ed9d9c076223bcb24c42f3a41b931ce. **Rama:** work/dmr-063-volume2-markdown-part4-2026-11-22.
+
+- DMR-063 Parte 4 documenta la continuación y cierre del Capítulo 03, Markdown lines 3687–5575.
+- Capítulo 04 comienza en 5577; primera línea narrativa pendiente **5579**.
+- No repetir Partes 1–4 ni procesar de nuevo 3471–5575. Continuar únicamente desde 5579 del Markdown original.
+- El Volumen 2 sigue PARTIAL / IN_PROGRESS. Capítulo 04 y posteriores aún no están extraídos.
+- Se amplían adquisición/prueba de Firebolt sin duplicar IDs. Se añaden tres eventos: EVT-DM-V02-FREYA-OBSERVES-BELL-AND-LEAVES-BOOK-001, EVT-DM-V02-LILI-SAVES-BELL-WITH-MAGIC-SWORD-001 y EVT-DM-V02-AIS-RIVERIA-FIND-BELL-AFTER-MIND-EXHAUSTION-001.
+- DMR-060 sigue separado. DMR-063 es Markdown-only y CONT-MAIN-LN; no usa PDF, imágenes ni otras continuidades para llenar huecos.
+- PR, CI y merge de esta tanda quedan pendientes de comprobar el SHA exacto.
+
 # Cola de trabajo para futuras tandas de lore
 
 Esta cola sigue la cobertura cronológica, desde las eras antiguas hasta el último volumen principal publicado que se pueda verificar. Las tareas se dividen para no mezclar épocas, fuentes o continuidades. Ningún número de volumen ni final se inventará para llenar huecos.
@@ -38,7 +50,7 @@ Conteos aproximados de palabras tras excluir las cargas base64 de imágenes y el
 | Volumen | Archivo fuente | Palabras aprox. | Imágenes incrustadas | Estado de análisis |
 |---|---|---:|---:|---|
 | 1 | `Volumen [01] • DanMachi.md` | 63.168 | 16 | DMR-061: P1 PDF↔DMR-061/DMR-062/destinos funcionales pp.9–156 reconciliada; P2/P3 pp.9–156 completas; tres pasadas pp.157–214 conservadas. DMR-062 MD↔PDF: cotejo físico/textual/visual de todos los folios narrativos pp.1–214 documentado en 13 tandas; IMAGE_MISSING pp.12, 15, 22, 37, 40, 70, 73 y 86; FORMATTING_LOSS y demás hallazgos aceptados detallados en DMR-062; TRANSLATION_AMBIGUITY p.18 sigue abierta. PDF físico: 215 folios (p.8 blanca; p.215 créditos). DMR-061, DMR-062 y V1 siguen PARTIAL / IN_PROGRESS. Siguiente: reconciliar los hallazgos globales pendientes sin repetir páginas ni modificar las fuentes originales. El checkpoint Markdown-only de V2 queda documentado por separado en DMR-063. |
-| 2 | `Volumen [02] • DanMachi.md` | 74.125 | 19 | DMR-060 conserva su extracción anterior separada. DMR-063 documenta el prólogo y Capítulo 01 (Markdown lines 13–1391), Capítulo 02 (1395–3470) y el primer bloque de Capítulo 03 (3471–3685): cuatro eventos nuevos de Capítulo 02, reconciliación de Bell, Lili, Ryuu, Seal, Hestia y Soma Familia, más el contexto de Ais/Udaeus y el rumor de nivel 6. `CONT-MAIN-LN`; fuente exclusiva Markdown. V2 permanece PARTIAL / IN_PROGRESS. **Siguiente línea narrativa: 3687**; no repetir Partes 1–3 ni usar DMR-060/PDF como fuente de esta línea de trabajo. |
+| 2 | `Volumen [02] • DanMachi.md` | 74.125 | 19 | DMR-060 conserva su extracción anterior separada. DMR-063 documenta prólogo y Capítulo 01 (13–1391), Capítulo 02 (1395–3470) y Capítulo 03 completo (3471–5575, Partes 3–4). Parte 4 desde 3687: Freya y el libro, rescate de Bell por Lili con Espada Mágica, reunión mensual de Soma, adquisición/prueba de Firebolt y encuentro de Ais/Riveria con Bell. CONT-MAIN-LN; fuente exclusiva Markdown, traducción sin cotejo japonés. V2 permanece PARTIAL / IN_PROGRESS. **Siguiente línea narrativa: 5579**, tras el encabezado del Capítulo 04 en 5577. No repetir Partes 1–4 ni usar DMR-060/PDF como fuente. |
 | 3 | `Volumen [03] • DanMachi.md` | 53.883 | 21 | Fuente cargada; análisis integral pendiente. |
 | 4 | `Volumen [04] • DanMachi.md` | 64.892 | 23 | Fuente cargada; análisis integral pendiente. |
 | 5 | `Volumen [05] • DanMachi.md` | 83.074 | 23 | Fuente cargada; análisis integral pendiente. |
