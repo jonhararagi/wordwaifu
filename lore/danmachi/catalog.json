@@ -3640,6 +3640,54 @@
       ],
       "status": "source_checked_translation_unverified",
       "priority": "high"
+    },
+    {
+      "id": "EVT-DM-V02-FREYA-OBSERVES-BELL-AND-LEAVES-BOOK-001",
+      "path": "events/timeline/EVT-DM-V02-FREYA-OBSERVES-BELL-AND-LEAVES-BOOK-001.md",
+      "type": "event",
+      "tags": [
+        "Freya",
+        "Bell Cranel",
+        "Ottar",
+        "book",
+        "Babel",
+        "volume 2"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "name": "Freya observa a Bell y decide dejar un libro"
+    },
+    {
+      "id": "EVT-DM-V02-LILI-SAVES-BELL-WITH-MAGIC-SWORD-001",
+      "path": "events/timeline/EVT-DM-V02-LILI-SAVES-BELL-WITH-MAGIC-SWORD-001.md",
+      "type": "event",
+      "tags": [
+        "Bell",
+        "Liliruca Arde",
+        "Ant Killer",
+        "Needle Rabbit",
+        "Magic Sword",
+        "volume 2"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "name": "Lili salva a Bell con una Espada Mágica"
+    },
+    {
+      "id": "EVT-DM-V02-AIS-RIVERIA-FIND-BELL-AFTER-MIND-EXHAUSTION-001",
+      "path": "events/timeline/EVT-DM-V02-AIS-RIVERIA-FIND-BELL-AFTER-MIND-EXHAUSTION-001.md",
+      "type": "event",
+      "tags": [
+        "Ais",
+        "Riveria",
+        "Bell",
+        "Firebolt",
+        "Mind",
+        "volume 2"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "name": "Ais y Riveria encuentran a Bell tras el agotamiento de Mind"
     }
   ],
   "reservedIds": [
