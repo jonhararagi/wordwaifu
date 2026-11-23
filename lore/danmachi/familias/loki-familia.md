@@ -129,3 +129,12 @@ Ais derrota a más de diez Spartoi y pide permanecer un poco más en el piso. Fi
 - **Fuente:** DMR-063-SRC-001, Markdown lines 3475–3613 y 3621–3681.
 - **Límite:** es un snapshot de una escena concreta en CONT-MAIN-LN, no un roster completo ni permanente. Las descripciones procedentes de CONT-ANIME y CONT-SO arriba conservan su alcance original.
 - **Ayudantes:** sus identidades no aparecen en el bloque; no crear perfiles.
+
+
+## CONT-MAIN-LN · Volumen 2 · visita de Eina a la sede · DMR-063
+
+Riviera recibe a Eina como invitada y la acompaña a la sede de Loki Familia. En la sala de recepción también está Ais, que se encuentra deprimida tras la huida del hombre que le preocupaba. Loki llega atraída por el aroma del vino Soma que Riviera lleva consigo y responde a las preguntas de Eina sobre esa Familia (Markdown lines 6397–6679). Al final de la conversación, Loki propone actualizar el Estado de Ais; ella acepta (lines 6881–6907).
+
+- **Eventos:** EVT-DM-V02-EINA-CONSULTS-LOKI-ABOUT-SOMA-001 y EVT-DM-V02-AIS-STATUS-UPDATE-LV6-001.
+- **Límite:** el episodio documenta una visita y una conversación concreta, no un roster completo ni una cronología exhaustiva de la sede. Las opiniones de Loki sobre Soma se conservan como testimonio.
+- **Fuente:** DMR-063-SRC-001; traducción privada no cotejada con japonés.
