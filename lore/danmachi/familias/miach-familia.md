@@ -46,3 +46,11 @@ La novela principal muestra a Miach dirigiendo una Familia de recursos limitados
 
 - Fuente: DMR-061-SRC-001, traducción privada no cotejada con japonés.
 - Este pasaje no constituye un censo completo de Miach Familia ni define todos sus miembros o actividades por época.
+
+
+## CONT-MAIN-LN · Volumen 2 · Naaza en la tienda/base
+
+El Capítulo 04 identifica expresamente a Naaza como integrante de Miach Familia. Durante la ausencia de Miach, Naaza atiende la tienda, ofrece pociones a Bell y le explica el agotamiento de Mind (Markdown lines 5883–5949).
+
+- **Fuente:** DMR-063-SRC-001; traducción privada no cotejada con japonés.
+- **Límite:** el pasaje confirma a Naaza como miembro, pero no establece un roster completo ni una estructura jerárquica de la Familia.
