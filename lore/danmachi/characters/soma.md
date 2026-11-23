@@ -32,3 +32,12 @@ Soma se conserva como ficha de deidad vinculada con Soma Familia. El compendio c
 ## Límites de certeza
 
 No completar poderes, personalidad, historia completa, motivos, miembros ni detalles del proceso de elaboración sin pasajes fuente. La sinopsis editorial no reemplaza los capítulos de la novela.
+
+
+## CONT-MAIN-LN · Volumen 2 · caracterización atribuida por Loki · DMR-063
+
+En una conversación con Eina, Loki describe a Soma como un dios centrado en su afición por elaborar vino. Según su relato, la Familia fue creada para sostener esa actividad y el vino terminado se convirtió en un premio que incentivaba a los miembros a competir por dinero. Loki también sostiene que el vino produce una embriaguez emocional intensa, pero temporal, y diferencia ese efecto de una droga que dañe el cerebro o genere un síndrome permanente de abstinencia (Markdown lines 6713–6799).
+
+- **Naturaleza de la evidencia:** testimonio de Loki, no narración omnisciente ni verificación independiente de la personalidad, motivaciones o conducta de Soma.
+- **Límite:** no inferir que Soma planeara deliberadamente explotar a todos los integrantes ni que todos estén afectados por igual.
+- **Fuente:** DMR-063-SRC-001; traducción privada no cotejada con japonés.
