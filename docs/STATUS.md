@@ -1,3 +1,17 @@
+# Actualización operativa — 2026-11-22
+
+**Base de partida verificada:** main en ffd989c39ed9d9c076223bcb24c42f3a41b931ce.  
+**Rama de trabajo:** work/dmr-063-volume2-markdown-part4-2026-11-22.
+
+- DMR-063 Partes 1–4: prólogo y Capítulo 01 (13–1391), Capítulo 02 (1395–3470) y Capítulo 03 completo (3471–5575).
+- Capítulo 04 comienza en Markdown line 5577; primera línea narrativa pendiente **5579**.
+- Volumen 2 sigue PARTIAL / IN_PROGRESS. No se certifica el cierre del volumen.
+- Se conservan los IDs de adquisición/prueba de Firebolt; se incorporan tres eventos nuevos y sus entradas temporales.
+- DMR-063 sigue limitado al Markdown del repositorio y CONT-MAIN-LN. No se inspeccionan imágenes incrustadas ni se coteja la traducción con japonés.
+- Esta actualización se prepara en rama; PR, CI y merge quedan pendientes.
+
+---
+
 # Estado operativo vigente — 2026-11-19
 
 **Checkpoint de referencia:** `main` = `f19207beda7a3e1619bdab7111e008dcc64603c1`.
