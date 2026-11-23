@@ -7,7 +7,7 @@ continuity_scope: CROSS-CONTINUITY
 source_refs: [DMR-061-SRC-001]
 claim_refs: ["DMR-006-CLM-124","DMR-006-CLM-127"]
 verification_status: source_checked_partial
-tags: ["Miach Familia","Daphne Lauros","Cassandra Ilion"]
+tags: ["Miach Familia","Daphne Lauros","Cassandra Ilion","Naaza"]
 ---
 # Miach Familia
 
@@ -20,6 +20,7 @@ Este registro convierte la Familia en un nodo navegable para consultar miembros,
 - [Miach](../characters/miach.md) — deidad dirigente; la ficha separa la evidencia de novela principal de los datos de adaptación.
 - [Daphne Lauros](../characters/daphnelauros.md) — abrir ficha individual para ver fuentes, intervalo y continuidad.
 - [Cassandra Ilion](../characters/cassandrailion.md) — abrir ficha individual para ver fuentes, intervalo y continuidad.
+- [Naaza](../characters/naaza.md) — integrante que atiende la tienda/base y vende pociones; evidencia directa de CONT-MAIN-LN en Volumen 2.
 
 ## Cómo interpretar el roster
 
