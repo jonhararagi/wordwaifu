@@ -8,7 +8,7 @@
 - El Volumen 2 sigue PARTIAL / IN_PROGRESS. Capítulo 04 y posteriores aún no están extraídos.
 - Se amplían adquisición/prueba de Firebolt sin duplicar IDs. Se añaden tres eventos: EVT-DM-V02-FREYA-OBSERVES-BELL-AND-LEAVES-BOOK-001, EVT-DM-V02-LILI-SAVES-BELL-WITH-MAGIC-SWORD-001 y EVT-DM-V02-AIS-RIVERIA-FIND-BELL-AFTER-MIND-EXHAUSTION-001.
 - DMR-060 sigue separado. DMR-063 es Markdown-only y CONT-MAIN-LN; no usa PDF, imágenes ni otras continuidades para llenar huecos.
-- PR, CI y merge de esta tanda quedan pendientes de comprobar el SHA exacto.
+- **Validación:** HEAD `887f4bda089dfa75ea6c1528b769ba62b19d35d0`; Validate WordWaifu #45099349265 PASS y DanMachi Lore and Retrieval Integrity #45099349289 PASS. PR [#236](https://github.com/jonhararagi/wordwaifu/pull/236) está abierta y mergeable; main no se modificó. No fusionar ni cerrar sin autorización expresa.
 
 # Cola de trabajo para futuras tandas de lore
 
