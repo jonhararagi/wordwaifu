@@ -1,20 +1,31 @@
-# Estado operativo vigente — 2026-11-19
+# Estado operativo vigente — 2026-11-23
 
-**Checkpoint de referencia:** `main` = `f19207beda7a3e1619bdab7111e008dcc64603c1`.
-**Auditoría de reconciliación:** rama `work/critical-priority-reconciliation-2026-11-19`; esta sección prevalece sobre snapshots históricos posteriores que no reflejen este checkpoint.
+**Base remoto verificado:** main = ffd989c39ed9d9c076223bcb24c42f3a41b931ce.
+**Rama de trabajo:** work/dmr-063-part5-from-5579-2026-11-23.
+**Alcance:** continuación DMR-063, Volumen 2, Parte 5; validación CI del candidato pendiente.
 
-## Diagnóstico y correcciones de prioridad crítica
+## Continuidad DMR-063
 
-- **DMR-063 / Volumen 2:** Parte 3 ya está documentada e integrada en el checkpoint. El primer bloque del Capítulo 03 cubre Markdown lines 3471–3685; última línea narrativa procesada 3683; separador 3685; próxima línea pendiente 3687. No volver a empezar en 3471.
-- **Expediente DMR-063:** el cuerpo ya contiene la Parte 3 y el checkpoint 3687. Se corrige su frontmatter/título para que diga Partes 1–3, no Partes 1–2.
-- **WORK_QUEUE:** la tabla de inventario y el orden de ejecución deben reflejar la Parte 3 y la continuación desde 3687. El volumen 2 permanece `PARTIAL / IN_PROGRESS`.
-- **Persistencia:** no se identifica una ausencia de resiliencia automatizada en el estado documentado. WF-004-A.3 figura como DONE: pruebas de escrituras IndexedDB lentas, fallback con fallo de escritura inyectado y protección de importación cuando fallan IndexedDB y localStorage. Evidencia histórica específica: [CI #37963611180](https://github.com/jonhararagi/wordwaifu/actions/runs/37963611180). Esto no acredita una cuota real agotada ni revisión manual en Windows; ambos gates siguen `NOT_RUN`.
-- **CI actual:** los checks exitosos registrados en el commit anterior `9e1693e...` no se extrapolan a `f19207b...`. La validación de esta reconciliación debe ejecutarse sobre el HEAD de la PR.
-- **No certificar:** no se declara el volumen 2 completo, no se declara cuota real comprobada, no se declara revisión Windows realizada y no se declara CI PASS hasta observar los resultados exactos.
+- **Partes 1–4:** se preservan como trabajo previo. La instrucción del usuario establece que ya fueron completadas; no se repiten ni se reauditan en esta tanda.
+- **Parte 5 procesada:** Capítulo 04, “Vino de Dios”, Markdown lines 5579–6913.
+- **Última línea narrativa:** 6913. El separador termina en 6915.
+- **Siguiente punto exacto:** línea 6917, Capítulo 05 — “Reinicio”.
+- **Fuente:** blob Git 9b884520a3b5aa30d25b8b2dfc8721d54b52464e; el Markdown fuente permanece intacto.
+- **Eventos reutilizados:** Firebolt/Grimorio, agotamiento de pociones, compra a Naaza y encuentro de Bell con Lili. Se amplían sus localizadores sin duplicar IDs.
+- **Eventos nuevos:** consulta de Eina a Loki sobre Soma Familia y actualización del Estado de Ais con anuncio del nivel 6.
+- **Entidad nueva:** Naaza, ficha parcial respaldada por el Capítulo 04; Miach Familia actualizada.
+- **Límites:** cliente Hobbit, ladrona Hobbit, comprador del objeto de jade y Aventurero que propone tender una trampa a Lili permanecen sin identificar. El testimonio sobre Soma se atribuye a Loki. La traducción privada no se ha cotejado con japonés.
+
+## Validación y protección
+
+- **main:** no se modifica; la rama de trabajo parte del HEAD indicado arriba.
+- **Archivos narrativos fuente:** sin cambios.
+- **Estado CI:** pendiente de ejecución/verificación sobre el HEAD exacto de la rama/PR. No declarar PASS hasta disponer de resultados remotos.
+- **Estado del volumen:** PARTIAL / IN_PROGRESS; esta Parte 5 no completa el Volumen 2.
 
 ## Próxima acción inequívoca
 
-Continuar DMR-063 exclusivamente desde la línea Markdown 3687 de `lore/danmachi/volumes/main/Volumen [02] • DanMachi.md`, preservar IDs/eventos existentes y mantener `CONT-MAIN-LN). Antes de cualquier nueva extracción, consultar este bloque y el checkpoint del expediente DMR-063.
+Continuar DMR-063 desde Markdown line 6917, Capítulo 05 “Reinicio”, sin repetir las Partes 1–5. Mantener CONT-MAIN-LN, reutilizar IDs existentes y no convertir inferencias o testimonios de personajes en hechos omniscientes.
 
 ---
 
