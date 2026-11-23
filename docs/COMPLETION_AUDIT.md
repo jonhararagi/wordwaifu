@@ -7,7 +7,7 @@
 - Se agregan eventos individualizados de Freya y el libro, Lili y la Espada Mágica, y Ais/Riveria encontrando a Bell.
 - DMR-060 sigue separado; DMR-063 solo usa el Markdown del repositorio en CONT-MAIN-LN.
 - Volumen 2 sigue PARTIAL / IN_PROGRESS. Capítulo 04 y capítulos posteriores no se han procesado.
-- PR, CI y merge se declararán tras comprobar el SHA exacto de los resultados.
+- **CI:** PASS sobre HEAD `887f4bda089dfa75ea6c1528b769ba62b19d35d0`: [Validate WordWaifu #45099349265](https://github.com/jonhararagi/wordwaifu/actions/runs/45099349265) y [DanMachi Lore and Retrieval Integrity #45099349289](https://github.com/jonhararagi/wordwaifu/actions/runs/45099349289). [PR #236](https://github.com/jonhararagi/wordwaifu/pull/236) sigue abierta/mergeable; main conserva su SHA base y no se fusionó.
 
 ---
 
