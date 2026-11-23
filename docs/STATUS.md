@@ -156,12 +156,12 @@ Continuar DMR-063 desde Markdown line 6917, Capítulo 05 “Reinicio”, sin rep
 
 
 <!-- DANMACHI-METRICS:BEGIN -->
-- **Corpus DanMachi:** 249 registros activos; 28 IDs reservados; 109 documentos de apoyo.
+- **Corpus DanMachi:** 252 registros activos; 28 IDs reservados; 109 documentos de apoyo.
 - **Grafo de conocimiento:** 263 relaciones explícitas; 263/263 con ambos extremos activos y distintos; IDs de relación únicos.
 - **Roster de adaptación:** 63 identidades; 63/63 tienen registro, ruta Markdown e expediente UI con el mismo ID.
 - **Expedientes de interfaz:** 93 perfiles; 93/93 enlazados a catálogo y Markdown por ID.
-- **Tipos en el catálogo:** 84 personajes; 5 grupos; 14 deidades con registro de personaje.
-- **Marcadas `complete`:** 0/84 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
+- **Tipos en el catálogo:** 85 personajes; 5 grupos; 14 deidades con registro de personaje.
+- **Marcadas `complete`:** 0/85 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
 <!-- DANMACHI-METRICS:END -->
 
 ## DMR-045 — lectores BinB enlazados desde la tienda oficial de SB Creative (2026-10-25)
