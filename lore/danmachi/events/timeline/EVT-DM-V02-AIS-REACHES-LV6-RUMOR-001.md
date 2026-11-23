@@ -51,3 +51,8 @@ Ais Wallenstein y habitantes de Orario (difusión del rumor)
 - **Localizador:** Volumen [02] • DanMachi.md, línea 3683.
 - El texto expresa «Una semana después» y dice que el rumor de que la Princesa de la Espada había alcanzado LV.6 se extendió por las calles de Orario.
 - La nueva lectura confirma la formulación del rumor y su ancla temporal relativa; no muestra un Estado de Ais ni convierte el rumor en confirmación.
+
+
+## Distinción frente a la revelación posterior · DMR-063
+
+El rumor de la línea 3683 conserva su naturaleza de rumor en ese punto de la secuencia. Más adelante, al final del Capítulo 04, Loki propone actualizar el Estado de Ais; Ais acepta y la escena termina con una exclamación que declara que ha alcanzado el nivel 6 (Markdown lines 6881–6907). Esa revelación verbal posterior se registra por separado en `EVT-DM-V02-AIS-STATUS-UPDATE-LV6-001`; no convierte retroactivamente el rumor inicial en una confirmación ya conocida por Orario.
