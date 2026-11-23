@@ -4,7 +4,7 @@ universe: danmachi
 type: deity_character
 status: provisional
 continuity_scope: CROSS-CONTINUITY
-source_refs: [DMR-002-SRC-001, DMR-061-SRC-001]
+source_refs: [DMR-002-SRC-001, DMR-061-SRC-001, DMR-063-SRC-001]
 claim_refs: [DMR-002-CLM-011, DMR-002-CLM-012]
 verification_status: source_checked
 tags: [Freya, Freya Familia, Bell, motivación, spoiler-major]
@@ -64,3 +64,13 @@ El encuentro casual comienza en p.148: Hestia, después de bajar del carruaje, c
 - **Límite de inferencia:** el pasaje no explica por qué cambia la expresión de Freya ni su motivo para dar las indicaciones. No afirmar que miente, que manipula a Hestia o que organiza deliberadamente el encuentro.
 - **Separación:** Hestia encuentra a Bell después de seguir la ruta; Freya no participa en el reencuentro ni conversa con Bell en estas páginas.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
+## CONT-MAIN-LN · Volumen 2 · observación de Bell · DMR-063
+
+En el Capítulo 03, Freya observa a Bell desde Babel y decide seguir observando su crecimiento en vez de reclamarlo de inmediato. Al ver que su ventana de Magia todavía está vacía, considera que quizá esté cerca de aprenderla. También decide dejar un libro grueso en la tienda de la calle donde conoció a Bell (Markdown lines 3897–4103).
+
+Más tarde, un libro aparece en el asiento reservado para Bell en la Señora de la Abundancia (lines 4211–4297). La secuencia sugiere que es el mismo volumen, pero no se identifica inequívocamente. Se mantiene como inferencia, no como propiedad o autoría confirmada.
+
+- Evento: EVT-DM-V02-FREYA-OBSERVES-BELL-AND-LEAVES-BOOK-001.
+- Continuidad: esta nota corresponde solo a CONT-MAIN-LN y no modifica los perfiles de adaptación existentes.
+- Fuente: DMR-063-SRC-001, Markdown lines 3897–4103 y 4211–4297; traducción privada sin cotejo japonés.
