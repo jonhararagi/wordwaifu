@@ -8,7 +8,7 @@
 - El Volumen 2 permanece PARTIAL / IN_PROGRESS. Capítulo 04 y capítulos posteriores siguen pendientes.
 - Se conservaron los IDs existentes de adquisición/prueba de Firebolt y se incorporaron tres eventos nuevos con ficha, catálogo e índice temporal.
 - Fuente exclusiva Markdown del repositorio; continuidad CONT-MAIN-LN. No se inspeccionaron imágenes incrustadas ni se cotejó la traducción con japonés.
-- PR #236 permanece abierta. Las primeras ejecuciones encontraron requisitos de validación que se están corrigiendo; no se declara PASS ni merge.
+- **PR #236:** abierta y mergeable; no se ha fusionado. HEAD validado: `887f4bda089dfa75ea6c1528b769ba62b19d35d0`. Ambos workflows están en PASS sobre ese SHA: [Validate WordWaifu #45099349265](https://github.com/jonhararagi/wordwaifu/actions/runs/45099349265) y [DanMachi Lore and Retrieval Integrity #45099349289](https://github.com/jonhararagi/wordwaifu/actions/runs/45099349289).
 
 ---
 
