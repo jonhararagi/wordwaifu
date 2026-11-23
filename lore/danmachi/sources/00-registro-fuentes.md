@@ -4819,13 +4819,19 @@ verification_status: stub
 - source_blob_sha_at_checkpoint: 9b884520a3b5aa30d25b8b2dfc8721d54b52464e
 - repository_head_at_checkpoint: 338f79f0bde5495bf57df72e53dbaba782291dd3
 - locator_type: markdown_line
-- locator: Líneas 13–1391; inicio narrativo en línea 13; límite antes del encabezado del Capítulo 02 en línea 1395.
+- locator: Líneas 13–1391 (Parte 1), 1395–3470 (Parte 2), 3471–3685 (Parte 3) y 5579–6913 (Parte 5). La Parte 4 se conserva como checkpoint previo según instrucción de continuidad y no se reaudita en esta pasada.
 - claims_supported: []
 - events_supported:
   - EVT-DM-V02-BELL-DEFEATS-ANT-KILLER-001
   - EVT-DM-V02-BELL-EINA-ARMOR-SHOPPING-001
   - EVT-DM-V02-BELL-FIRST-MEETS-LILI-001
-- continuity_scope: CONT-MAIN-LN
+  - EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001
+  - EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001
+  - EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001
+  - EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001
+  - EVT-DM-V02-EINA-CONSULTS-LOKI-ABOUT-SOMA-001
+  - EVT-DM-V02-AIS-STATUS-UPDATE-LV6-001
+  - EVT-DM-V02-AIS-REACHES-LV6-RUMOR-001
 - reliability_note: Se utilizó exclusivamente el texto del Markdown del repositorio. Las líneas con imágenes incrustadas/Base64 no se inspeccionaron ni se usaron. La traducción privada no se ha cotejado con el japonés; el registro acredita lo que dice el Markdown, no la fidelidad de la traducción.
 - conflicting_sources: []
 - rights_note: Conservar paráfrasis y localizadores; no reproducir pasajes extensos.
