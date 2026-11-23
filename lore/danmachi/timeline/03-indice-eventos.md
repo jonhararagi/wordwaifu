@@ -127,3 +127,11 @@ Estos registros facilitan la siguiente tanda, pero las seis entradas de canon si
 - `EVT-DM-V02-BELL-FIRST-MEETS-LILI-001` — Bell protege a una joven Hobbit, Ryuu ahuyenta al perseguidor y al día siguiente Lili ofrece ser Ayudante; Markdown lines 1049–1391.
 
 Estos tres eventos son distintos de los sucesos posteriores ya indexados en V2. En particular, el primer encuentro con Lili no se fusiona con `EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001`.
+
+### V2 · Parte 4 del Capítulo 03 (DMR-063 · CONT-MAIN-LN)
+
+- EVT-DM-V02-FREYA-OBSERVES-BELL-AND-LEAVES-BOOK-001 — Freya observa a Bell y decide dejar un libro; la identidad con el volumen que aparece después en la Señora de la Abundancia es inferencial (Markdown lines 3897–4103, 4211–4297).
+- EVT-DM-V02-LILI-SAVES-BELL-WITH-MAGIC-SWORD-001 — Lili salva a Bell con una Espada Mágica durante una emboscada del séptimo piso (Markdown lines 4301–4475).
+- EVT-DM-V02-AIS-RIVERIA-FIND-BELL-AFTER-MIND-EXHAUSTION-001 — Ais y Riveria encuentran a Bell inconsciente en el quinto piso tras la prueba de Firebolt y agotamiento de Mind (Markdown lines 5395–5573).
+- Los eventos existentes de adquisición/prueba de Firebolt se amplían con evidencia Markdown, sin duplicar sus IDs ni reemplazar la procedencia DMR-060.
+- Checkpoint DMR-063: Capítulo 03 hasta línea 5575; Capítulo 04 inicia en 5577; próxima línea narrativa 5579. Volumen 2 sigue PARTIAL / IN_PROGRESS.
