@@ -111,3 +111,12 @@ El Markdown del Capítulo 03 muestra a Ais derrotando más de diez Spartoi en el
 - **Fuente:** DMR-063-SRC-001, Markdown lines 3471–3681.
 - **Límite:** estas líneas no muestran el resultado del enfrentamiento. El evento ya existente conserva por separado su procedencia DMR-060; esta nota no usa DMR-063 para afirmar la victoria.
 - **Continuidad:** CONT-MAIN-LN. Las etiquetas y perfiles de adaptación permanecen en sus continuidades originales.
+
+
+## CONT-MAIN-LN · Volumen 2 · actualización del Estado y nivel 6 · DMR-063
+
+Al final de la visita de Eina a la sede de Loki Familia, Loki propone actualizar el Estado de Ais y ella acepta. La escena concluye con una exclamación que declara que Ais alcanzó el nivel 6 (Markdown lines 6881–6907). Esta es una revelación verbal posterior al rumor de la línea 3683: el rumor continúa registrado como rumor en su momento narrativo, mientras que el nuevo pasaje ofrece una declaración directa del ascenso.
+
+- **Evento:** `EVT-DM-V02-AIS-STATUS-UPDATE-LV6-001`.
+- **Límite:** el Markdown no presenta en estas líneas una tabla completa del Estado ni valores numéricos de atributos. No se inventa un snapshot.
+- **Fuente:** DMR-063-SRC-001; traducción privada no cotejada con japonés.
