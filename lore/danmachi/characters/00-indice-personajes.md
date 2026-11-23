@@ -94,6 +94,7 @@ Consulta el [índice narrativo de la Era Oscura](dark-era/00-indice-era-oscura.m
 | Miach | `CHAR-MIACH` | Deidad | `provisional` | [Abrir](miach.md) |
 | Mikoto Yamato | `CHAR-MIKOTO-YAMATO` | Personaje | `provisional` | [Abrir](mikoto-yamato.md) |
 | Neze Rankett | `CHAR-NEZE-RANKETT` | Personaje | `provisional` | [Abrir](neze-rankett.md) |
+| Naaza | `CHAR-NAAZA` | Personaje | `source_checked_partial` | [Abrir](naaza.md) |
 | Nina Tulle | `CHAR-NINA-TULLE` | Personaje | `secondary_reference_partial_primary_check_pending` | [Abrir](nina-tulle.md) |
 | Noin Unic | `CHAR-NOIN-UNIC` | Personaje | `provisional` | [Abrir](noin-unic.md) |
 | Olivas Act | `CHAR-OLIVAS-ACT` | Personaje | `secondary_reference_primary_locator_pending` | [Abrir](olivas-act.md) |

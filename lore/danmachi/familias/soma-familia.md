@@ -57,3 +57,12 @@ Lili afirma que pertenece a Soma Familia y que sus miembros la excluyen de la re
 - **Continuidad:** CONT-MAIN-LN.
 - **Fuente:** DMR-063-SRC-001, Markdown lines 1405–1447, 1985–2027 y 2643–2694.
 - **Límites:** no inferir política institucional de Soma, culpabilidad colectiva, jerarquías no nombradas ni una relación personal con la deidad Soma.
+
+
+## CONT-MAIN-LN · Volumen 2 · testimonio de Loki sobre el vino Soma · DMR-063
+
+Loki explica a Eina que el vino terminado de Soma se empleaba como recompensa para incentivar a los integrantes a competir por ingresos. Según Loki, muchos miembros estaban más atraídos por la posibilidad de obtener el vino que por la devoción a Soma como deidad; la búsqueda del premio intensificaba las disputas por dinero y recursos (Markdown lines 6713–6799).
+
+- **Atribución:** explicación de Loki, no afirmación omnisciente sobre cada miembro ni prueba de que toda la Familia se comporte igual.
+- **Distinción:** la explicación no debe confundirse con la posterior traición concreta de Kanu y otros integrantes contra Lili y Gedo (EVT-DM-V02-SOMA-ABANDONS-LILI-AS-BAIT-001).
+- **Fuente:** DMR-063-SRC-001; traducción privada no cotejada con japonés.

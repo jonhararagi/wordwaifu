@@ -8,8 +8,10 @@ time_anchor: relative_sequence
 source_verification: user_supplied_private_translation_not_crosschecked
 source_refs:
   - DMR-060-SRC-001
+  - DMR-063-SRC-001
 source_locators:
   - PDF p. 167 (recuerdo narrado durante la visita a Naaza)
+  - Markdown lines 5855–5857 (DMR-063; Bell vuelve a recordar que las agotó tres días antes)
 spoiler_level: major
 ---
 

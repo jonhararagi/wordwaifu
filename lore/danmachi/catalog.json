@@ -2172,7 +2172,8 @@
       "tags": [
         "Miach Familia",
         "Daphne Lauros",
-        "Cassandra Ilion"
+        "Cassandra Ilion",
+        "Naaza"
       ],
       "status": "source_checked_partial",
       "priority": "normal"
@@ -3450,12 +3451,12 @@
       "tags": [
         "Volumen 2",
         "Markdown",
-        "Partes 1–3",
+        "Partes 1–5",
         "CONT-MAIN-LN"
       ],
       "status": "source_checked_translation_unverified",
       "priority": "high",
-      "name": "DMR-063 · V2 Markdown Partes 1–3"
+      "name": "DMR-063 · V2 Markdown Partes 1–5"
     },
     {
       "id": "EVT-DM-V02-BELL-DEFEATS-ANT-KILLER-001",
@@ -3640,6 +3641,49 @@
       ],
       "status": "source_checked_translation_unverified",
       "priority": "high"
+    },
+    {
+      "id": "CHAR-NAAZA",
+      "path": "characters/naaza.md",
+      "type": "character",
+      "tags": [
+        "Naaza",
+        "Miach Familia",
+        "Beastman",
+        "pociones"
+      ],
+      "status": "source_checked_partial",
+      "priority": "normal"
+    },
+    {
+      "id": "EVT-DM-V02-EINA-CONSULTS-LOKI-ABOUT-SOMA-001",
+      "path": "events/timeline/EVT-DM-V02-EINA-CONSULTS-LOKI-ABOUT-SOMA-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 2",
+        "event",
+        "EINA CONSULTS",
+        "SOMA"
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-AIS-STATUS-UPDATE-LV6-001",
+      "path": "events/timeline/EVT-DM-V02-AIS-STATUS-UPDATE-LV6-001.md",
+      "type": "event",
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "tags": [
+        "DanMachi",
+        "CONT-MAIN-LN",
+        "volumen 2",
+        "event",
+        "AIS STATUS",
+        "LV6"
+      ]
     }
   ],
   "reservedIds": [

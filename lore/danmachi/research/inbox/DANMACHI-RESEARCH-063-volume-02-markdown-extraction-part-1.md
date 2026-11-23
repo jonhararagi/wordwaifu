@@ -6,9 +6,9 @@ status: source_checked_translation_unverified
 continuity_scope: CONT-MAIN-LN
 source_refs:
   - DMR-063-SRC-001
-tags: [volume-02, markdown-only, parts-1-3, Bell, Eina, Liliruca, Ryuu, Ant Killer, Spartoi, Udaeus]
+tags: [volume-02, markdown-only, parts-1-5, Bell, Eina, Liliruca, Ryuu, Ant Killer, Spartoi, Udaeus]
 ---
-# DANMACHI-RESEARCH-063 — Volumen 2: extracción Markdown, Partes 1–3
+# DANMACHI-RESEARCH-063 — Volumen 2: extracción Markdown, Partes 1–5
 
 ## Alcance y método
 
@@ -220,12 +220,94 @@ El texto indica que, una semana después, se extendió por las calles de Orario 
 6. Título del capítulo: el Markdown lo divide entre dos encabezados consecutivos en las líneas 3471 y 3473; no se corrige el original.
 7. Traducción española sin cotejo independiente con japonés.
 
-## Checkpoint vigente · después del primer bloque de Parte 3
+## Checkpoint histórico · cierre de Parte 3 (superado por Partes 4–5)
 
 - **Última línea narrativa procesada:** 3683.
 - **Separador revisado:** línea 3685 (`# × × ×`).
-- **Primera línea pendiente:** 3687.
+- **Primera línea pendiente en aquel momento:** 3687; el checkpoint fue superado por la continuación posterior y no se reabre en esta actualización.
 - **Bloque reconciliado:** Capítulo 03, líneas 3471–3685.
-- **Estado de DMR-063:** Partes 1, 2 y primer bloque de Parte 3 documentadas; expediente abierto.
+- **Estado de DMR-063 en aquel checkpoint:** Partes 1, 2 y primer bloque de Parte 3 documentadas; la continuación posterior se registra en los bloques añadidos a continuación.
 - **Estado global del Volumen 2:** `PARTIAL / IN_PROGRESS`.
 - **Fuente original:** blob `9b884520a3b5aa30d25b8b2dfc8721d54b52464e`, sin modificación.
+
+
+## Parte 4 · checkpoint de continuidad heredado
+
+La instrucción de continuidad recibida para esta tarea establece que las Partes 1–4 ya están realizadas y que el siguiente trabajo debe comenzar en Markdown line 5579. En consecuencia, la Parte 4 se conserva como trabajo previo y no se reabre, repite ni reconstruye en esta pasada. El checkpoint antiguo de la Parte 3 (línea 3687) queda superado. Esta anotación no vuelve a certificar detalles internos de la Parte 4; solo preserva la instrucción de continuidad.
+
+## Parte 5 · Capítulo 04, “Vino de Dios” · Markdown lines 5579–6913
+
+### Inicio y fragmento comercial sin identidad resuelta · lines 5579–5637
+
+El bloque abre con una transacción en una tienda de artículos de un Gnomo: un cliente Hobbit masculino adquiere un objeto de jade que el vendedor describe como apoyo frente a efectos de veneno. La etiqueta muestra 48.000 Varisu. El vendedor comenta la reputación de una ladrona Hobbit, pero el pasaje no identifica al cliente, a la mujer ni el objeto con suficiente precisión para enlazarlos a una ficha. No se atribuye el fragmento a Liliruca ni se crea un objeto nuevo.
+
+### Bell y el Grimorio · lines 5671–5853
+
+Hestia identifica como Grimorio el libro que Bell había leído antes de obtener Firebolt. Explica que su uso se consume tras una lectura y que se trata de un objeto de valor muy elevado, sin dar una cifra. Bell consulta a Seal y le explica lo ocurrido; Mia le aconseja no angustiarse por el descuido del propietario del libro. Bell deja el volumen en la sede de su Familia antes de ir al Dungeon.
+
+- **Reconciliación:** se amplía el evento existente EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001; no se crea otro evento para la adquisición de Firebolt ni una ficha genérica de Grimorio.
+- **Límites:** Seal prestó el libro, pero la fuente no demuestra que sea su propietaria. El dueño, el precio exacto y la devolución efectiva al propietario siguen sin establecerse.
+
+### Agotamiento de Mind y compra a Naaza · lines 5855–5949
+
+Bell recuerda que había agotado sus pociones de recuperación tres días antes. Visita la tienda/base de Miach Familia, donde Naaza identifica su problema como agotamiento de Mind tras usar magia. Le ofrece una poción de recuperación de Poder Mental por 8.700 Varisu con descuento y dos pociones normales, con un total acordado de 9.000 Varisu.
+
+- **Reconciliación:** se amplían EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001 y EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001 con localizadores Markdown; no se duplican.
+- **Entidad nueva:** se crea CHAR-NAAZA y se enlaza a Miach Familia. Su ficha solo incorpora identidad, afiliación y descripción visibles en este pasaje; no agrega nivel, magia, edad exacta ni biografía externa.
+
+### Bell rechaza una propuesta de usar a Lili como cebo · lines 5967–6105
+
+Bell ve a Lili rodeada por tres aventureros y un hombre que reconoce del callejón lo aborda. El hombre pregunta si Bell la contrató y le ofrece dinero para fingir una expedición con ella y abandonarla en una trampa. Bell se niega. Lili no explica el conflicto y ambos continúan hacia Babel.
+
+- **Reconciliación:** se amplía EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001; no se crea un evento duplicado.
+- **Límites:** el hombre no tiene nombre ni afiliación confirmada. La conjetura de Bell sobre los tres aventureros y Soma Familia en el Markdown se conserva junto al dato distinto del registro PDF DMR-060, sin resolver la diferencia. Esta propuesta rechazada no es la posterior traición de Kanu y otros miembros contra Gedo y Lili (EVT-DM-V02-SOMA-ABANDONS-LILI-AS-BAIT-001).
+
+### Eina consulta a Loki sobre Soma Familia · lines 6107–6871
+
+Eina decide investigar por su cuenta. En Lee Tail observa una botella de vino Soma marcada a 60.000 Varisu, pero no la compra. Allí se encuentra con Riviera, quien la invita a la sede de Loki Familia. Eina pregunta a Loki por la situación de Soma Familia. Loki relata su afición por el vino y explica que Soma habría convertido el producto terminado en una recompensa para impulsar la competencia por dinero entre los miembros.
+
+Loki distingue el vino de una droga que dañe el cerebro o genere una abstinencia permanente, aunque describe un efecto de embriaguez emocional intensa y temporal. También advierte que la competencia por el premio puede perjudicar a miembros más débiles. Todo ello se conserva como testimonio y valoración de Loki, no como voz omnisciente ni diagnóstico clínico.
+
+- **Evento nuevo:** EVT-DM-V02-EINA-CONSULTS-LOKI-ABOUT-SOMA-001.
+- **Reconciliación:** se amplían las fichas de Eina, Loki, Soma, Soma Familia y Loki Familia. No se convierte la explicación de Loki en una descripción universal de todos los miembros.
+- **Límite:** Eina no compra la botella de Lee Tail; no se fija fecha absoluta ni se afirma una dependencia clínica permanente.
+
+### Actualización de Estado de Ais · lines 6881–6907
+
+Al final de la visita, Loki propone actualizar el Estado de Ais y ella acepta. La secuencia termina con una exclamación que anuncia que Ais alcanzó el nivel 6.
+
+- **Evento nuevo:** EVT-DM-V02-AIS-STATUS-UPDATE-LV6-001.
+- **Distinción:** la línea 3683 continúa siendo un rumor en su momento narrativo. Este pasaje posterior proporciona una declaración directa del ascenso, pero no muestra una tabla completa del Estado ni valores de atributos.
+- **Reconciliación:** se amplía la ficha de Ais y se añade el evento al modelo temporal.
+
+### Reconciliación funcional de la Parte 5
+
+- **Eventos reutilizados:** EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001; EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001; EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001; EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001.
+- **Eventos nuevos:** EVT-DM-V02-EINA-CONSULTS-LOKI-ABOUT-SOMA-001 y EVT-DM-V02-AIS-STATUS-UPDATE-LV6-001.
+- **Personajes reutilizados:** Bell, Hestia, Seal, Eina, Loki, Riviera, Ais, Liliruca, Miach.
+- **Personaje nuevo:** Naaza (CHAR-NAAZA), con perfil parcial respaldado por el Markdown.
+- **Familias reutilizadas:** Miach Familia, Soma Familia y Loki Familia.
+- **Lugares mencionados:** Orario, Lee Tail y sede de Loki Familia; no se crean ubicaciones sin identificador y localizador espacial suficiente.
+- **Continuidad:** CONT-MAIN-LN exclusivamente.
+- **Fuente:** DMR-063-SRC-001, Markdown lines 5579–6913. No se usaron imágenes incrustadas ni Base64. Traducción privada no cotejada con japonés.
+
+### Pendientes de Parte 5 preservados
+
+1. Identidad del comprador Hobbit, de la ladrona Hobbit y del objeto de jade vendido por 48.000 Varisu.
+2. Propietario real del Grimorio, su precio exacto y si llegó a ser devuelto; no se presume que Seal fuera la propietaria.
+3. Nombre y afiliación del Aventurero que propone tenderle una trampa a Lili.
+4. Diferencia de formulación entre el registro PDF DMR-060 y el Markdown DMR-063 sobre la marca/posible afiliación de los aventureros a Soma Familia.
+5. Explicación sobre Soma y el vino atribuida a Loki; pendiente de cotejo lingüístico y no generalizada a cada integrante.
+6. El anuncio del nivel 6 de Ais no incluye un snapshot completo de Estado.
+7. Traducción española privada sin cotejo independiente con el japonés.
+
+## Checkpoint vigente · cierre de Parte 5
+
+- **Última línea narrativa procesada:** 6913.
+- **Separador posterior:** línea 6915, antes del siguiente encabezado.
+- **Próxima línea de trabajo:** 6917, Capítulo 05 — “Reinicio”.
+- **Alcance de esta pasada:** Capítulo 04, lines 5579–6913.
+- **Partes 1–4:** preservadas; no se repitieron ni reauditaron en esta tanda.
+- **Estado de DMR-063:** Partes 1–5; extracción en curso.
+- **Estado global del Volumen 2:** PARTIAL / IN_PROGRESS.
+- **Fuente original:** blob 9b884520a3b5aa30d25b8b2dfc8721d54b52464e, intacto.

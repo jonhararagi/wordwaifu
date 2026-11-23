@@ -2849,6 +2849,12 @@
           "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001.md",
           "kind": "internal",
           "note": "Ficha con localizador físico y límites de traducción."
+        },
+        {
+          "label": "DMR-063 · Capítulo 04 · identificación del Grimorio",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/work/dmr-063-part5-from-5579-2026-11-23/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md#L5671-L5853",
+          "kind": "repository_markdown",
+          "note": "Hestia identifica el libro como un Grimorio de un solo uso; Bell consulta a Seal. El propietario y el valor exacto siguen sin determinarse."
         }
       ],
       "temporal": {
@@ -2862,7 +2868,8 @@
         "qualifier": "Durante el arco inicial de Bell en Orario; la distancia desde T0 y el orden paralelo respecto de la escena de Udaeus no quedan fijados aquí.",
         "sourceUrls": [
           "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
-          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001.md"
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/work/dmr-063-part5-from-5579-2026-11-23/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md#L5671-L5853"
         ]
       },
       "narrativeOrigin": {
@@ -2921,6 +2928,12 @@
           "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001.md",
           "kind": "internal",
           "note": "Ficha con localizador físico y límites de traducción."
+        },
+        {
+          "label": "DMR-063 · Capítulo 04 · recuerdo de agotamiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/work/dmr-063-part5-from-5579-2026-11-23/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md#L5855-L5857",
+          "kind": "repository_markdown",
+          "note": "Bell vuelve a recordar que agotó sus pociones tres días antes."
         }
       ],
       "temporal": {
@@ -2933,7 +2946,8 @@
         "precision": "exact",
         "sourceUrls": [
           "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
-          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001.md"
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/work/dmr-063-part5-from-5579-2026-11-23/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md#L5855-L5857"
         ]
       },
       "narrativeOrigin": {
@@ -3130,7 +3144,8 @@
         {
           "name": "Naaza",
           "kind": "character",
-          "role": "vendedora de Miach Familia"
+          "role": "vendedora de Miach Familia",
+          "id": "CHAR-NAAZA"
         }
       ],
       "relatedEntities": [],
@@ -3147,6 +3162,12 @@
           "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001.md",
           "kind": "internal",
           "note": "Ficha con localizador físico y límites de traducción."
+        },
+        {
+          "label": "DMR-063 · Capítulo 04 · compra a Naaza",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/work/dmr-063-part5-from-5579-2026-11-23/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md#L5889-L5949",
+          "kind": "repository_markdown",
+          "note": "El Markdown confirma la oferta: poción de Mind por 8.700 Varisu y dos pociones normales, total 9.000."
         }
       ],
       "temporal": {
@@ -3160,7 +3181,8 @@
         "qualifier": "La visita sigue al uso de Firebolt de la noche anterior; la fecha absoluta no se especifica.",
         "sourceUrls": [
           "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
-          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001.md"
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/work/dmr-063-part5-from-5579-2026-11-23/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md#L5889-L5949"
         ]
       },
       "narrativeOrigin": {
@@ -3196,7 +3218,7 @@
         "CONT-MAIN-LN"
       ],
       "evidenceStatus": "source_checked_translation_unverified",
-      "summary": "Bell observa a Lili rodeada por aventureros asociados a Soma Familia y un hombre lo detiene para preguntarle si la ha contratado.",
+      "summary": "En la Plaza Central, Bell ve a Lili rodeada por tres aventureros. Un hombre que conoce del callejón le propone tenderle una trampa a cambio de dinero; Bell rechaza la propuesta. La afiliación del hombre no queda confirmada.",
       "participants": [
         {
           "id": "DM-CHAR-BELL",
@@ -3225,6 +3247,12 @@
           "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001.md",
           "kind": "internal",
           "note": "Ficha con localizador físico y límites de traducción."
+        },
+        {
+          "label": "DMR-063 · Capítulo 04 · Bell rechaza la trampa",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/work/dmr-063-part5-from-5579-2026-11-23/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md#L5967-L6105",
+          "kind": "repository_markdown",
+          "note": "Bell rechaza usar a Lili como cebo. El hombre no tiene nombre ni afiliación confirmada; la diferencia de formulación entre PDF y Markdown sobre Soma Familia queda abierta."
         }
       ],
       "temporal": {
@@ -3238,7 +3266,8 @@
         "qualifier": "El encuentro sigue a la visita de Bell a la tienda de Naaza.",
         "sourceUrls": [
           "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
-          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001.md"
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/work/dmr-063-part5-from-5579-2026-11-23/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md#L5967-L6105"
         ]
       },
       "narrativeOrigin": {
@@ -4868,6 +4897,145 @@
           ]
         }
       ]
+    },
+    {
+      "id": "EVT-DM-V02-EINA-CONSULTS-LOKI-ABOUT-SOMA-001",
+      "recordId": "EVT-DM-V02-EINA-CONSULTS-LOKI-ABOUT-SOMA-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 732,
+      "title": "Eina consulta a Loki sobre Soma Familia y el Vino de Dios",
+      "dateLabel": "Capítulo 04 · después del encuentro de Bell y Lili en la Plaza Central; fecha absoluta desconocida.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Eina visita la sede de Loki Familia y pregunta a Loki por Soma Familia. Loki atribuye al vino terminado el papel de recompensa que incentiva a los miembros a competir por dinero; la explicación se conserva como testimonio de Loki.",
+      "participants": [
+        {
+          "id": "DM-CHAR-EINA",
+          "name": "Eina Tulle",
+          "kind": "character",
+          "role": "investiga el caso y formula las preguntas"
+        },
+        {
+          "id": "CHAR-RIVERIA-LJOS-ALF",
+          "name": "Riveria Ljos Alf",
+          "kind": "character",
+          "role": "invita a Eina y facilita el encuentro"
+        },
+        {
+          "id": "DM-CHAR-LOKI",
+          "name": "Loki",
+          "kind": "deity",
+          "role": "ofrece su testimonio sobre Soma y el vino"
+        },
+        {
+          "id": "DM-CHAR-AIS",
+          "name": "Ais Wallenstein",
+          "kind": "character",
+          "role": "está presente en la sala de recepción"
+        }
+      ],
+      "relatedEntities": [
+        {
+          "id": "FAM-SOMA",
+          "name": "Soma Familia",
+          "kind": "family",
+          "role": "Familia objeto de la consulta"
+        }
+      ],
+      "detailPath": "events/timeline/EVT-DM-V02-EINA-CONSULTS-LOKI-ABOUT-SOMA-001.md",
+      "sources": [
+        {
+          "label": "DMR-063 · Volumen 2, Capítulo 04",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/work/dmr-063-part5-from-5579-2026-11-23/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md#L6107-L6871",
+          "kind": "repository_markdown",
+          "note": "Markdown lines 6107–6871. La conversación contiene el testimonio de Loki, no una voz omnisciente."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/work/dmr-063-part5-from-5579-2026-11-23/lore/danmachi/events/timeline/EVT-DM-V02-EINA-CONSULTS-LOKI-ABOUT-SOMA-001.md",
+          "kind": "internal",
+          "note": "Ficha individual y límites de evidencia."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "La visita de Eina ocurre después de la escena de la Plaza Central dentro de la secuencia del Capítulo 04; no se fija un intervalo.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/work/dmr-063-part5-from-5579-2026-11-23/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/work/dmr-063-part5-from-5579-2026-11-23/lore/danmachi/events/timeline/EVT-DM-V02-EINA-CONSULTS-LOKI-ABOUT-SOMA-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      }
+    },
+    {
+      "id": "EVT-DM-V02-AIS-STATUS-UPDATE-LV6-001",
+      "recordId": "EVT-DM-V02-AIS-STATUS-UPDATE-LV6-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 733,
+      "title": "Loki actualiza el Estado de Ais y se anuncia su nivel 6",
+      "dateLabel": "Al cierre de la visita de Eina a Loki Familia; fecha absoluta desconocida.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Loki propone actualizar el Estado de Ais y ella acepta. La escena termina con una exclamación que declara que alcanzó el nivel 6; no se muestra un panel completo ni valores de atributos.",
+      "participants": [
+        {
+          "id": "DM-CHAR-AIS",
+          "name": "Ais Wallenstein",
+          "kind": "character",
+          "role": "acepta la actualización de su Estado"
+        },
+        {
+          "id": "DM-CHAR-LOKI",
+          "name": "Loki",
+          "kind": "deity",
+          "role": "propone actualizar el Estado"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V02-AIS-STATUS-UPDATE-LV6-001.md",
+      "sources": [
+        {
+          "label": "DMR-063 · Volumen 2, Capítulo 04",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/work/dmr-063-part5-from-5579-2026-11-23/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md#L6881-L6907",
+          "kind": "repository_markdown",
+          "note": "La actualización y la declaración verbal se localizan en Markdown lines 6881–6907."
+        },
+        {
+          "label": "Registro individual del acontecimiento",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/work/dmr-063-part5-from-5579-2026-11-23/lore/danmachi/events/timeline/EVT-DM-V02-AIS-STATUS-UPDATE-LV6-001.md",
+          "kind": "internal",
+          "note": "Ficha individual; separa la revelación posterior del rumor previo."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V02-EINA-CONSULTS-LOKI-ABOUT-SOMA-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "La actualización ocurre al cierre de la visita de Eina; no se proporciona intervalo.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/work/dmr-063-part5-from-5579-2026-11-23/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/work/dmr-063-part5-from-5579-2026-11-23/lore/danmachi/events/timeline/EVT-DM-V02-AIS-STATUS-UPDATE-LV6-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      }
     }
   ],
   "temporalModelVersion": 1,

@@ -17,6 +17,7 @@
 
 - [Volumen 2 — eventos temporales y localizadores](volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md) — acontecimientos individuales de `CONT-MAIN-LN`, con páginas físicas del PDF y segmentación de combate, adquisición/prueba de magia, pasado de Lili, captura, traición, rescate y reencuentro. La traducción española aportada es privada y no está cotejada.
 - [DANMACHI-RESEARCH-060](research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md) — registro de procedencia, localizadores y límites de los acontecimientos de V2, incluida la secuencia de Lili segmentada; no fija fechas absolutas ni convierte rumores en hechos confirmados.
+- [DANMACHI-RESEARCH-063](research/inbox/DANMACHI-RESEARCH-063-volume-02-markdown-extraction-part-1.md) — extracción secuencial exclusiva del Markdown del Volumen 2; Partes 1–5 documentadas hasta la línea 6913 del Capítulo 04. La Parte 4 se conserva como checkpoint heredado sin reauditoría en la Parte 5; siguiente inicio: línea 6917.
 
 ## Índices de personajes e historias por continuidad
 

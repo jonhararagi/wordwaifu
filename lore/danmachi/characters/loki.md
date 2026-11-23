@@ -57,3 +57,13 @@ Loki llega a la cafetería con Ais y la presenta ante Freya. Dice que Ais acaba 
 - **Evento:** EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001.
 - **Límite:** se registra cercanía protectora, sin inferir romance ni dependencia. La mirada a Bell no acredita reconocimiento consciente, diálogo ni encuentro.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
+
+## CONT-MAIN-LN · Volumen 2 · testimonio sobre Soma Familia · DMR-063
+
+Durante la visita de Eina a Loki Familia, Loki relata su propio interés por el vino Soma y explica que, según su experiencia, el producto acabado provoca una embriaguez emocional intensa. Describe a Soma como un dios dedicado a su afición por elaborar vino y dice que el producto terminado se usaba como premio para incentivar a los miembros de su Familia a ganar más dinero. Loki interpreta que la devoción por el vino, la competencia por obtenerlo y la falta de dirección de Soma explican parte de la obsesión económica que Eina observa (Markdown lines 6635–6799).
+
+- **Atribución:** es el testimonio y la valoración de Loki; no se eleva a conocimiento omnisciente ni se asigna la misma conducta a todos los miembros.
+- **Continuidad:** `CONT-MAIN-LN`.
+- **Evento:** `EVT-DM-V02-EINA-CONSULTS-LOKI-ABOUT-SOMA-001`.
+- **Fuente:** DMR-063-SRC-001; traducción privada no cotejada con japonés.

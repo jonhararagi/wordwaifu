@@ -516,3 +516,12 @@ Fuentes consultadas:
 - **Seal Flover:** se añade el regreso de Bell, la disculpa, la devolución del dinero y la cesta de comida (pp.98–100). No se infiere romance ni biografía más amplia.
 - **Mia-mama y empleadas:** se mantienen sin transferencia automática desde CONT-ANIME y sin fichas nuevas para figuras anónimas.
 - **Procedencia:** DMR-061-SRC-001, traducción privada no cotejada con japonés. Esta actualización por bloque no equivale a una auditoría individual exhaustiva de cada personaje.
+
+## DMR-063 — Volumen 2, Parte 5 · revisión grupal de personajes (2026-11-23)
+
+- **Alcance:** actualización por bloque narrativo del Capítulo 04, Markdown lines 5579–6913. No equivale a una auditoría individual exhaustiva de cada personaje.
+- **Fichas ampliadas:** Bell, Hestia, Eina, Liliruca Arde, Ais, Loki y Soma; se añaden observaciones temporales y atribuciones específicas de la escena.
+- **Ficha nueva:** Naaza (CHAR-NAAZA), perfil parcial por aparición en CONT-MAIN-LN; no se importan edad exacta, nivel, magia ni biografía de fuentes no consultadas.
+- **Familias:** Miach Familia incorpora a Naaza; Soma Familia y Loki Familia reciben el testimonio contextual de esta escena.
+- **Límite de revisión:** no se marca ninguna ficha como auditoría individual completa ni se asigna el signo + por esta pasada grupal. No se reabre la búsqueda de Partes 1–4.
+- **Procedencia:** DMR-063-SRC-001, traducción española privada del Markdown, no cotejada con el japonés.

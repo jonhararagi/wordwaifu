@@ -72,3 +72,12 @@ undefined
 - **Controles:** tres controles completos por cada página pp.119–128 (extracción, visual y continuidad); cuarta revisión puntual en p.119, pp.121–123, p.125, p.126 y p.128.
 - **Siguiente folio:** PDF p.129.
 - **Estado:** tercera pasada completada pp.9–128 (120 folios); pasada 2 pp.9–156 completada; reconciliación de pasada 1 pendiente; V1 IN_PROGRESS. Traducción privada no cotejada con japonés.
+
+
+## CONT-MAIN-LN · Volumen 2 · Naaza y la tienda de la Familia
+
+El Capítulo 04 identifica a Naaza como otra integrante de Miach Familia y sitúa la tienda de pociones como base del grupo. Miach no está presente durante la visita de Bell; Naaza indica que tiene asuntos personales hasta la noche. Bell compra a Naaza una poción de recuperación de Poder Mental y dos pociones de recuperación normales (Markdown lines 5883–5949).
+
+- **Vínculo:** afiliación institucional de Naaza a Miach Familia, explícita en el pasaje.
+- **Límite:** el episodio no informa dónde está Miach, qué asuntos atiende ni si dirige personalmente esa venta.
+- **Fuente:** DMR-063-SRC-001; traducción privada no cotejada con japonés.
