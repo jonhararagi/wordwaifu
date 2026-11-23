@@ -226,3 +226,11 @@ Hestia interpreta la invitación desde su ilusión romántica y se prepara para 
 - **Evento:** salida de Bell y Hestia interrumpida (../events/timeline/EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001.md).
 - **Límite:** el texto presenta el encuentro como una invitación a comer y una salida que Hestia vive como cita; no confirma exclusividad, noviazgo ni que la comida se realice esa noche.
 - **Fuente:** DMR-063-SRC-001, Markdown lines 2873–3470, con detalle de trabajo en 2883–2891 y cuidado durante la resaca en 3015–3065; traducción privada no cotejada con japonés.
+
+
+## CONT-MAIN-LN · Volumen 2 · identificación del Grimorio · DMR-063
+
+Hestia examina el libro que Seal había prestado a Bell y lo identifica como un Grimorio. Le explica que el efecto se consume después de una lectura y que el libro es extremadamente valioso; también pregunta cómo llegó a manos de Bell. Cuando Bell pregunta qué debe hacer, Hestia le propone que, si aparece el propietario, se lo entregue directamente. Bell rechaza la idea de ocultar lo ocurrido y decide explicarlo a Seal (Markdown lines 5671–5759).
+
+- **Límite:** el pasaje no identifica al dueño del libro ni establece que Seal sea su propietaria. La intervención de Hestia se conserva como consejo de esa escena, no como regla moral o legal universal.
+- **Fuente:** DMR-063-SRC-001; traducción privada no cotejada con japonés.
