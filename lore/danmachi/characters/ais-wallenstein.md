@@ -111,3 +111,11 @@ El Markdown del Capítulo 03 muestra a Ais derrotando más de diez Spartoi en el
 - **Fuente:** DMR-063-SRC-001, Markdown lines 3471–3681.
 - **Límite:** estas líneas no muestran el resultado del enfrentamiento. El evento ya existente conserva por separado su procedencia DMR-060; esta nota no usa DMR-063 para afirmar la victoria.
 - **Continuidad:** CONT-MAIN-LN. Las etiquetas y perfiles de adaptación permanecen en sus continuidades originales.
+
+## CONT-MAIN-LN · Volumen 2 · encuentra a Bell tras Firebolt · DMR-063
+
+A su regreso desde el piso 37, Ais y Riveria encuentran a Bell inconsciente en el quinto piso del Dungeon. Riveria interpreta su estado como agotamiento de Mind por uso imprudente de magia. Ais reconoce a Bell por el incidente del Minotauro, expresa que quiere compensarlo y permanece con él. Bell despierta y huye avergonzado al reconocerla (Markdown lines 5395–5573).
+
+- Evento: EVT-DM-V02-AIS-RIVERIA-FIND-BELL-AFTER-MIND-EXHAUSTION-001.
+- Límite: el retorno desde el piso 37 tomó alrededor de tres días según la traducción. No se infiere fecha absoluta ni vínculo romántico confirmado.
+- Fuente: DMR-063-SRC-001, Markdown lines 5395–5573; traducción privada sin cotejo japonés.
