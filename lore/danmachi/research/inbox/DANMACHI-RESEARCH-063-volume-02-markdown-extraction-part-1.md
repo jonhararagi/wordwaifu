@@ -6,9 +6,9 @@ status: source_checked_translation_unverified
 continuity_scope: CONT-MAIN-LN
 source_refs:
   - DMR-063-SRC-001
-tags: [volume-02, markdown-only, parts-1-3, Bell, Eina, Liliruca, Ryuu, Ant Killer, Spartoi, Udaeus]
+tags: [volume-02, markdown-only, parts-1-4, Bell, Eina, Liliruca, Ryuu, Ant Killer, Spartoi, Udaeus]
 ---
-# DANMACHI-RESEARCH-063 — Volumen 2: extracción Markdown, Partes 1–3
+# DANMACHI-RESEARCH-063 — Volumen 2: extracción Markdown, Partes 1–4
 
 ## Alcance y método
 
@@ -229,3 +229,125 @@ El texto indica que, una semana después, se extendió por las calles de Orario 
 - **Estado de DMR-063:** Partes 1, 2 y primer bloque de Parte 3 documentadas; expediente abierto.
 - **Estado global del Volumen 2:** `PARTIAL / IN_PROGRESS`.
 - **Fuente original:** blob `9b884520a3b5aa30d25b8b2dfc8721d54b52464e`, sin modificación.
+
+
+## Parte 4 · Capítulo 03, continuación y cierre · líneas 3687–5575
+
+**Alcance:** continuación desde la primera línea narrativa pendiente 3687 hasta la última línea del Capítulo 03, 5575. El encabezado del Capítulo 04 aparece en 5577 y su texto comienza en 5579.
+
+### Bell y Lili después de varias jornadas · líneas 3687–3895
+
+Bell y Lili terminan una jornada de exploración. Lili consulta su reloj y señala que ya es medianoche; llevan varios días trabajando juntos desde que iniciaron el contrato. Bell reconoce que su eficiencia de caza aumentó gracias al apoyo de Lili. El texto confirma que en esta etapa reparten las ganancias por igual, sin convertirlo en una regla contractual permanente fuera del pasaje.
+
+Al salir y pasar por Babel, hablan de la torre, sus pisos superiores, la Guild y el uso de Babel como residencia de los dioses. Bell pregunta por el destino de las almas y Lili expone su comprensión de la muerte y del juicio divino. Recuerda que hubo un momento en que quiso morir y se preguntó si una próxima vida podría ser mejor. Bell reacciona con preocupación; Lili aclara que aquello pertenece al pasado y afirma que ahora tiene vitalidad y quiere regresar a su Familia.
+
+- El texto no explica la causa completa de aquel deseo pasado ni permite diagnosticar a Lili.
+- Bell siente algo parecido a un temblor al bajar las escaleras, pero Lili no percibe movimiento (3691–3703); el origen no se identifica.
+
+### Freya observa a Bell y decide dejar un libro · líneas 3897–4103; aparición posterior · 4211–4297
+
+Desde una habitación de Babel, Freya observa a Bell en la calle y describe la impresión excepcional que le produce su alma y su crecimiento. Recuerda que la ventana de Magia de Bell estaba vacía y considera que quizá esté cerca de poder utilizarla. Decide seguir observándolo en vez de reclamarlo de inmediato. Ottar está presente. Freya toma un libro grueso, considera entregárselo a Ottar y finalmente decide dejarlo en la tienda de la calle donde conoció a Bell.
+
+Más tarde, en la Señora de la Abundancia, el personal comenta que Seal ha preparado comidas para Bell. Aparece un libro en el asiento especial que Seal había reservado para él. Mia indica que se mantenga visible para que su propietario pueda recuperarlo; el local lo trata como un objeto olvidado por un cliente desconocido.
+
+- La secuencia sugiere que el libro que Freya decide dejar y el que aparece después son el mismo volumen, pero el pasaje no identifica ambos objetos de forma inequívoca. No se registra la autoría de Freya como hecho confirmado.
+
+### Bell y Lili sobreviven a una emboscada · líneas 4301–4475
+
+En el séptimo piso, Bell se prepara para atacar una Ant Killer sin advertir que un Needle Rabbit se aproxima desde un ángulo ciego. La protección de rodilla de su armadura evita que reciba el golpe directamente, pero el impacto y la intervención de dos Ant Killers lo desequilibran. El Protector de Jade le protege la cara, aunque el brazo recibe el golpe. Bell reconoce que la situación pudo matarlo y queda paralizado por el miedo.
+
+Lili interviene con una pequeña Espada Mágica roja y lanza una bola de fuego contra uno de los monstruos. Bell recupera la iniciativa, derrota a las dos Ant Killers y elimina al Needle Rabbit con su daga. Después agradece a Lili y reconoce que su descuido lo puso en peligro.
+
+- Evento nuevo: EVT-DM-V02-LILI-SAVES-BELL-WITH-MAGIC-SWORD-001.
+- Bell, Liliruca, Ant Killer, Daga de Hestia, armadura de Bell, Protector de Jade y Dungeon conservan sus IDs.
+- Needle Rabbit se menciona sin crear una ficha individual; la Espada Mágica no recibe ID de objeto porque el pasaje no da nombre propio, fabricante, coste ni ficha individual.
+- No se deducen límite de usos, precio ni durabilidad exacta del arma.
+
+### Lili explica la reunión mensual de Soma Familia · líneas 4477–4607
+
+Lili cuenta que acudió a una reunión mensual de Soma Familia. Según su explicación, allí se comunica a los miembros la cuota de ingresos que deberán alcanzar durante el mes siguiente. Lili cuestiona la dureza de esa exigencia para Ayudantes y aventureros novatos. También explica que el vino enviado al mercado puede considerarse producción fallida y aun así resultar sabroso; presenta la elaboración del vino como el interés principal de Soma y a la Familia como la estructura que la sostiene.
+
+- Son explicaciones de Lili en esta conversación, no una auditoría independiente de cada miembro de Soma Familia.
+- El pasaje no especifica sanciones, montos individuales, cuotas exactas ni un mecanismo concreto de coacción. No se generaliza la conducta de algunos miembros a toda la Familia.
+
+### Bell devuelve la cesta a Seal y recibe el libro · líneas 4611–4787
+
+Tras dos días, Bell reconoce que lleva un tiempo sin ir al Dungeon. Lili le había comunicado que algo había ocurrido y no podría acompañarlo; Bell tampoco había ido al día siguiente y se siente desmotivado. Al decidir limpiar la residencia recuerda la cesta prestada por Seal, que todavía no había devuelto.
+
+Bell visita la Señora de la Abundancia, se disculpa por retener la cesta durante varios días y Seal acepta sus disculpas. Bell pregunta por el libro que está detrás de él. Seal explica que un cliente desconocido lo dejó en el local y, tras conversar con Bell, se lo ofrece para que lo lea. Dice que también quiere poder ayudarlo. Bell acepta el préstamo.
+
+### Lectura del libro y nuevo snapshot de Bell · líneas 4791–5215
+
+Bell abre el libro blanco, sin título impreso en la cubierta. La obra contiene un título extravagante relacionado con una chica mágica y capítulos sobre magia moderna. Expone una división entre magia innata y adquirida; describe la magia adquirida como ligada a la Gracia de Dios, a la experiencia y a los intereses, deseos y sentimientos interiores. El texto adopta un diálogo con una imagen/máscara que refleja el rostro de Bell y le pregunta qué significa la magia para él. Bell asocia la magia con llamas, con hacerse más fuerte y ágil para alcanzar a la persona que admira y con convertirse en un héroe reconocido por ella. Después su conciencia se oscurece.
+
+Bell despierta en la residencia cuando Hestia lo llama. Cree que se había quedado dormido leyendo, pero conserva recuerdos imprecisos y una sensación similar a un sueño. El libro permanece abierto sobre la mesa. Hestia menciona que le gustaría leerlo más tarde.
+
+Durante la actualización de Estado, Hestia observa que Bell ha aprendido Magia. El snapshot registra:
+
+| Atributo | Antes | Después |
+|---|---:|---:|
+| Fuerza | B 701 | B 734 |
+| Resistencia | G 287 | F 355 |
+| Destreza | B 715 | B 719 |
+| Agilidad | B 799 | A 817 |
+| Magia | I 0 | I 0 |
+
+La ventana de Magia registra Firebolt y la descripción «Magia de Lanzamiento Rápido». La ventana de Habilidad aparece vacía. Hestia especula que quizá no necesite canto porque el Estado no muestra uno, pero lo plantea como hipótesis.
+
+- Este snapshot es independiente del Estado al cierre del Capítulo 02 y no reemplaza actualizaciones anteriores.
+- La pérdida de conciencia y los recuerdos imprecisos no demuestran control mental ni alteración permanente de voluntad. La teoría de Hestia no se convierte en regla universal.
+
+### Primera prueba de Firebolt y agotamiento de Mind · líneas 5217–5391
+
+Aunque Hestia le recomienda probar la magia al día siguiente, Bell sale de la residencia esa misma noche. En el primer piso del Dungeon lanza Firebolt contra un Goblin; la descarga con forma de rayo de llamas carboniza al monstruo. Bell continúa lanzando la magia mientras avanza hasta el quinto piso.
+
+El uso repetido le provoca mareo y pérdida de conciencia. El texto no da un coste numérico por lanzamiento ni una cantidad máxima segura de usos.
+
+- El evento preexistente EVT-DM-V02-BELL-FIREBOLT-TEST-001 se amplía con estos localizadores; no se crea una segunda adquisición de Firebolt.
+
+### Ais y Riveria encuentran a Bell · líneas 5395–5573
+
+Ais y Riveria regresan desde el piso 37 y llegan al quinto piso. El texto dice que el trayecto les tomó alrededor de tres días. Encuentran a Bell inconsciente y sin heridas externas. Riveria examina su estado y concluye que parece agotamiento mental por uso imprudente de magia; explica que la magia consume Mind y que este recurso puede agotarse, de manera comparable a la resistencia.
+
+Ais reconoce a Bell por el incidente del Minotauro y expresa que quiere compensarlo. Riveria le propone permanecer con él y protegerlo mientras ella se retira. Bell despierta con la cabeza apoyada en el regazo de Ais, la confunde brevemente con su madre y después la reconoce. Se avergüenza y huye; Ais se pregunta por qué siempre escapa.
+
+- Evento nuevo: EVT-DM-V02-AIS-RIVERIA-FIND-BELL-AFTER-MIND-EXHAUSTION-001, separado del combate de Ais contra Udaeus y del evento de prueba de Firebolt.
+- Ais, Riveria, Bell y Dungeon conservan sus registros. No se crea relación romántica ni vínculo permanente nuevo.
+- El Markdown usa «Aizu» para Ais y «Riviera» para Riveria. Se conservan como variantes de la traducción, no como personajes o aliases independientes.
+
+## Reconciliación funcional de la Parte 4
+
+- Personajes reutilizados: Bell, Liliruca, Freya, Ottar, Seal, Hestia, Ais y Riveria.
+- Familias y lugares reutilizados: Hestia Familia, Soma Familia, Loki Familia, Babel, Orario, Señora de la Abundancia y Dungeon.
+- Monstruos y equipo: se reutilizan Ant Killer, Daga de Hestia, armadura de Bell y Protector de Jade. Needle Rabbit y la Espada Mágica roja de Lili se mencionan sin crear registros especulativos.
+- Eventos nuevos: EVT-DM-V02-FREYA-OBSERVES-BELL-AND-LEAVES-BOOK-001; EVT-DM-V02-LILI-SAVES-BELL-WITH-MAGIC-SWORD-001; EVT-DM-V02-AIS-RIVERIA-FIND-BELL-AFTER-MIND-EXHAUSTION-001.
+- Eventos existentes ampliados: adquisición de Firebolt y prueba/agote de Mind. DMR-060 conserva su procedencia independiente; DMR-063 aporta solo sus localizadores Markdown.
+- Cronología: se conserva el orden narrativo y la referencia aproximada de tres días para el regreso de Ais/Riveria; no se asignan fechas de calendario.
+- Continuidad: exclusivamente CONT-MAIN-LN para hechos nuevos.
+
+## Pendientes específicos de la Parte 4
+
+1. Causa de la sensación de temblor de Bell al bajar las escaleras (3691–3703): no identificada.
+2. El deseo pasado de Lili de morir se menciona sin explicar por completo su causa; ella misma lo sitúa en el pasado.
+3. Términos exactos de las cuotas de Soma Familia, montos y posibles sanciones: no detallados.
+4. Nombre propio, fabricante, precio, durabilidad y límite de uso de la Espada Mágica de Lili: desconocidos.
+5. Needle Rabbit aparece, pero no se crea una ficha individual ni se completan propiedades no descritas.
+6. La identidad del libro que Freya decide dejar y el que aparece en el asiento de Bell es una inferencia narrativa fuerte, no una identificación expresa.
+7. El título editorial exacto del libro no se normaliza a partir de la traducción del Markdown.
+8. Capacidades y límites precisos de los ojos de Freya: no extrapolados más allá de esta escena.
+9. Costo numérico de Mind por lanzamiento de Firebolt y cantidad exacta de lanzamientos antes del colapso: no cuantificados.
+10. El tiempo de retorno de Ais y Riveria desde el piso 37 se expresa como «alrededor de tres días»; no se convierte en intervalo exacto.
+11. Las variantes «Aizu» y «Riviera» se conservan como formas de esta traducción.
+12. Las líneas con imágenes incrustadas/Base64 no se inspeccionaron visualmente ni se usaron para atribuir identidades, equipo o información adicional.
+13. La traducción española del Markdown continúa sin cotejo independiente con el original japonés.
+
+## Checkpoint vigente · después de la Parte 4
+
+- Última línea narrativa procesada: 5573; última línea del bloque incluido: 5575.
+- Capítulo 03: cubierto desde la continuación de 3687 hasta 5575.
+- Siguiente encabezado: Capítulo 04 – Vino de Dios, línea 5577.
+- Primera línea narrativa pendiente: **5579**.
+- Siguiente tarea: continuar exclusivamente desde 5579 del mismo Markdown. No repetir Partes 1–4 ni reabrir 3471–5575.
+- Estado del Volumen 2: PARTIAL / IN_PROGRESS. Capítulo 04 y capítulos posteriores siguen pendientes.
+- Fuente original: el blob 9b884520a3b5aa30d25b8b2dfc8721d54b52464e no se modifica.
+- Continuidad: CONT-MAIN-LN.
