@@ -132,3 +132,13 @@ Eina considera aceptable que Bell contrate a Lili, advierte que evite conflictos
 - **Evento relacionado:** prueba y primera expedición de Bell y Lili (../events/timeline/EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001.md).
 - **Límite:** esta conversación no es la posterior petición de Eina a Hestia para que convenza a Bell de romper el vínculo; ese acontecimiento se conserva en EVT-DM-V02-HESTIA-EINA-DISCUSS-LILI-001 (DMR-060).
 - **Fuente:** DMR-063-SRC-001, Markdown lines 1951–2095.
+
+
+## CONT-MAIN-LN · Volumen 2 · investigación sobre Soma Familia · DMR-063
+
+Después de su jornada en el Gremio, Eina decide investigar por cuenta propia la situación de Soma Familia. En la tienda Lee Tail observa una botella de vino Soma por 60.000 Varisu, pero no la compra. Allí se encuentra con Riviera, quien la invita a la sede de Loki Familia. Eina consulta a Loki sobre la conducta de Soma Familia y el efecto del vino; recibe una explicación que atribuye a Loki, no una investigación independiente ni un dictamen clínico (Markdown lines 6109–6871).
+
+- **Atribución:** las afirmaciones sobre el proceso de Soma, el uso del vino como recompensa y sus efectos proceden del relato de Loki. Eina las escucha y las considera útiles para su preocupación por Bell y Lili.
+- **Límite:** no se fija fecha absoluta ni se generaliza la conducta de todos los miembros de Soma Familia.
+- **Evento:** `EVT-DM-V02-EINA-CONSULTS-LOKI-ABOUT-SOMA-001`.
+- **Fuente:** DMR-063-SRC-001, traducción privada no cotejada con japonés.
