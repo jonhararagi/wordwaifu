@@ -3384,8 +3384,7 @@
         "kind": "relative_order",
         "relation": "after",
         "referenceIds": [
-          "EVT-DM-V02-BELL-FIREBOLT-TEST-001",
-          "EVT-DM-V02-AIS-UDAEUS-001"
+          "EVT-DM-V02-BELL-FIREBOLT-TEST-001"
         ],
         "distanceKnown": false,
         "precision": "order_only",
