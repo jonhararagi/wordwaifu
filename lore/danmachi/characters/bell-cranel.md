@@ -382,3 +382,13 @@ El mismo perfil enumera la Armadura de Conejo MK-II y el Protector de Jade (line
 - **Equipo:** Armadura de Conejo MK-II y Protector de Jade. Se reutiliza `OBJ-DM-BELL-JADE-WRIST-GUARD-001` para el Protector de Jade. La identidad de Armadura de Conejo MK-II respecto de la armadura ligera comprada antes no queda resuelta; véase `OBJ-DM-BELL-LIGHT-ARMOR-001`.
 
 **Límites:** no convertir los datos del panel en conocimiento consciente de Bell; no normalizar «Welf Crosso» con «Welf Crozzo» ni fusionar objetos sin evidencia textual suficiente.
+
+
+## CONT-MAIN-LN · Volumen 2 · Capítulo 04 · DMR-063
+
+La continuación del Capítulo 04 aporta dos comprobaciones sobre Bell. Primero, Hestia identifica como Grimorio el libro que Bell había leído para obtener Firebolt; le explica que el uso se consume con una sola lectura y que el objeto es de valor muy alto. Bell acude a Seal para explicar el hecho y Mia le aconseja no angustiarse por el descuido del propietario (Markdown lines 5671–5853; evento `EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001`). El dueño del libro y su valor exacto siguen sin establecerse; que Seal lo prestara no demuestra que fuera suyo.
+
+Más tarde, un Aventurero no identificado propone a Bell fingir una expedición con Lili y abandonarla en una trampa a cambio de dinero. Bell rechaza la propuesta; el texto lo reconoce como el hombre del callejón, pero no ofrece nombre ni afiliación confirmada (Markdown lines 5997–6105; evento `EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001`). No se confunde este episodio con la traición posterior de Kanu y otros miembros de Soma Familia.
+
+- **Fuente:** DMR-063-SRC-001, traducción privada no cotejada con japonés.
+- **Límite de revisión:** esta es una actualización derivada de la extracción del capítulo, no una auditoría individual exhaustiva de Bell.
