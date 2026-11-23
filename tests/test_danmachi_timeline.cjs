@@ -14,8 +14,8 @@ assert.equal(report.valid,true,report.errors.join("\n"));
 assert.equal(report.temporalModelVersion,1);
 assert.equal(report.legacyTemporalModel,false);
 assert.equal(report.eraCount,10);
-assert.equal(report.eventCount,59);
-assert.equal(report.temporalEventCount,59);
+assert.equal(report.eventCount,62);
+assert.equal(report.temporalEventCount,62);
 assert.equal(data.anchor.id,"T0-BELL-ARRIVAL");
 assert.equal(data.anchor.eventId,"EVT-DM-BELL-ARRIVAL-001");
 
@@ -78,7 +78,11 @@ const expectedKinds={
  "EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001":"relative_order",
  "EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001":"relative_order",
  "EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001":"relative_offset",
- "EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001":"relative_order"
+ "EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001":"relative_order",
+
+ "EVT-DM-V02-FREYA-OBSERVES-BELL-AND-LEAVES-BOOK-001":"relative_order",
+ "EVT-DM-V02-LILI-SAVES-BELL-WITH-MAGIC-SWORD-001":"relative_order",
+ "EVT-DM-V02-AIS-RIVERIA-FIND-BELL-AFTER-MIND-EXHAUSTION-001":"relative_order",
 };
 const expectedLabels={
  "EVT-DM-V01-BELL-RECEIVES-FALNA-001":"Después del primer encuentro Bell–Hestia; intervalo exacto no cuantificado.",
@@ -139,7 +143,10 @@ const expectedLabels={
  "EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001":"Capítulo 02 · primera jornada de prueba en el séptimo piso; fecha absoluta desconocida.",
  "EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001":"Durante el regreso de la primera jornada de prueba y antes de la jornada siguiente; fecha absoluta desconocida.",
  "EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001":"El día siguiente a la primera jornada de prueba; fecha absoluta desconocida.",
- "EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001":"Después de la segunda expedición de Bell y Lili; la comida acordada se fija para las 18:00, sin fecha de calendario."
+ "EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001":"Después de la segunda expedición de Bell y Lili; la comida acordada se fija para las 18:00, sin fecha de calendario.",
+ "EVT-DM-V02-FREYA-OBSERVES-BELL-AND-LEAVES-BOOK-001":"Volumen 2 · Capítulo 03 · fecha absoluta desconocida.",
+ "EVT-DM-V02-LILI-SAVES-BELL-WITH-MAGIC-SWORD-001":"Volumen 2 · Capítulo 03 · fecha absoluta desconocida.",
+ "EVT-DM-V02-AIS-RIVERIA-FIND-BELL-AFTER-MIND-EXHAUSTION-001":"Volumen 2 · Capítulo 03 · quinto piso; retorno desde piso 37 de alrededor de tres días."
 };
 const events=new Map(data.events.map(e=>[e.id,e]));
 assert.deepEqual([...events.keys()].sort(),Object.keys(expectedKinds).sort(),"All 59 timeline event IDs must be retained exactly.");
