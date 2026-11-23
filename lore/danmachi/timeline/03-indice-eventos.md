@@ -127,3 +127,15 @@ Estos registros facilitan la siguiente tanda, pero las seis entradas de canon si
 - `EVT-DM-V02-BELL-FIRST-MEETS-LILI-001` — Bell protege a una joven Hobbit, Ryuu ahuyenta al perseguidor y al día siguiente Lili ofrece ser Ayudante; Markdown lines 1049–1391.
 
 Estos tres eventos son distintos de los sucesos posteriores ya indexados en V2. En particular, el primer encuentro con Lili no se fusiona con `EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001`.
+
+
+### V2 · Parte 5 · Capítulo 04 · DMR-063 · CONT-MAIN-LN
+
+- EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001 — ampliado con la identificación posterior del Grimorio como libro de un solo uso y de valor elevado; Markdown lines 5671–5853. Propietario y precio exacto pendientes.
+- EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001 — corroborado por el recuerdo de Bell, Markdown lines 5855–5857.
+- EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001 — ampliado con la visita a Naaza y el total de 9.000 Varisu; Markdown lines 5889–5949.
+- EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001 — ampliado: Bell rechaza la propuesta de tenderle una trampa a Lili; Markdown lines 5967–6105. El hombre no tiene identidad ni afiliación confirmadas.
+- EVT-DM-V02-EINA-CONSULTS-LOKI-ABOUT-SOMA-001 — nuevo: Eina consulta a Loki sobre el vino y la dinámica de Soma Familia; Markdown lines 6107–6871. El relato queda atribuido a Loki.
+- EVT-DM-V02-AIS-STATUS-UPDATE-LV6-001 — nuevo: al final de la visita se actualiza el Estado de Ais y se anuncia su nivel 6; Markdown lines 6881–6907. No se inventa un snapshot numérico.
+
+**Entidades y límites:** se crea la ficha parcial de Naaza (CHAR-NAAZA) y se añade a Miach Familia. No se crean fichas para el cliente Hobbit, la ladrona mencionada ni el Aventurero anónimo. El anuncio posterior de Ais no elimina el carácter de rumor de la línea 3683 en su momento narrativo. La Parte 4 no se reabre; el siguiente capítulo pendiente comienza en Markdown line 6917.
