@@ -1,3 +1,16 @@
+# Addendum de continuidad DMR-063 — 2026-11-22
+
+**Base de partida:** main en ffd989c39ed9d9c076223bcb24c42f3a41b931ce.  
+**Resultado documental:** DMR-063 avanza desde el checkpoint 3687 hasta la última línea del Capítulo 03, 5575. Capítulo 04 inicia en 5577; primera línea narrativa pendiente 5579.
+
+- Se amplían las fichas existentes de adquisición y prueba de Firebolt; no se duplican.
+- Se agregan eventos individualizados de Freya y el libro, Lili y la Espada Mágica, y Ais/Riveria encontrando a Bell.
+- DMR-060 sigue separado; DMR-063 solo usa el Markdown del repositorio en CONT-MAIN-LN.
+- Volumen 2 sigue PARTIAL / IN_PROGRESS. Capítulo 04 y capítulos posteriores no se han procesado.
+- PR, CI y merge se declararán tras comprobar el SHA exacto de los resultados.
+
+---
+
 # Auditoría de finalización de WordWaifu
 
 # Addendum de reconciliación — 2026-11-19
