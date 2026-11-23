@@ -6,7 +6,7 @@ status: source_checked_partial
 continuity_scope: CONT-MAIN-LN
 time_anchor: volume_02_internal_order_absolute_date_unknown
 source_verification: private_translation_not_crosschecked
-source_refs: ["DMR-060-SRC-001"]
+source_refs: ["DMR-060-SRC-001", "DMR-063-SRC-001"]
 spoiler_level: major
 tags: [Bell Cranel, Firebolt, Mind, Dungeon, volumen 2]
 ---
@@ -42,3 +42,15 @@ No inventar coste numérico por lanzamiento, número máximo de usos ni reglas u
 
 - `DMR-060-SRC-001` — [expediente de extracción del volumen 2](../../research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md).
 - Fuente material: `Volumen [02] • DanMachi.pdf`, archivo adjunto proporcionado por el usuario. La obra original es oficial; la traducción consultada es privada/no editorial.
+
+
+## Corroboración desde el Markdown · DMR-063
+
+- **Fuente:** DMR-063-SRC-001, Volumen 2, Markdown lines 5217–5391.
+- Bell sale de la residencia esa misma noche, aunque Hestia le había sugerido probar la magia al día siguiente. En el primer piso utiliza Firebolt contra un Goblin; la descarga con forma de rayo de llamas lo carboniza.
+- Bell repite los lanzamientos mientras avanza por el Dungeon y llega al quinto piso. Allí pierde el equilibrio y la conciencia por agotamiento.
+- Riveria examina a Bell y atribuye su estado a agotamiento de Mind provocado por el uso imprudente de magia. El capítulo explica que Mind es un recurso consumible y que puede agotarse; no da un costo numérico por lanzamiento.
+- El evento EVT-DM-V02-AIS-RIVERIA-FIND-BELL-AFTER-MIND-EXHAUSTION-001 conserva por separado el encuentro, el diagnóstico y la atención de Ais y Riveria.
+- No se inventa un máximo de lanzamientos ni una tasa universal de consumo o recuperación.
+
+DMR-060-SRC-001 conserva la extracción previa. DMR-063-SRC-001 añade la lectura del Markdown y no reemplaza la procedencia anterior.
