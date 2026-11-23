@@ -2199,6 +2199,21 @@ Los checkpoints por rango que siguen son una bitácora histórica y deben leerse
 - [x] Añadir procedencia DMR-063 a los dos eventos sin modificar DMR-060 ni atribuir a las líneas 3471–3681 un desenlace que no muestran.
 - [x] Crear fichas nuevas para Spartoi y Udaeus al comprobar que no existían IDs activos ni reservados equivalentes.
 - [x] Actualizar catálogo, cronología, índice de monstruos, índice de acontecimientos, perfil de Ais, expediente de Loki Familia y continuidad operativa.
-- [ ] Continuar después del separador, desde la línea 3687.
+- [x] Continuación desde la línea 3687 preservada como Parte 4 previa según instrucción de continuidad; no se reabre en la Parte 5. El checkpoint operativo recibido para la Parte 5 comienza en 5579.
 - **Pendientes:** resultado del enfrentamiento en el alcance de este bloque; referente de los tres meses; matiz de «Rey Solitario del Dungeon»/«Jefe Nivel B»; variante «Bate»/«Bete»; identidad de los dos Ayudantes; título del capítulo separado en dos encabezados; traducción sin cotejo japonés.
 - **Límite:** fuente original y DMR-060 intactos; únicamente CONT-MAIN-LN. Volumen 2 permanece `PARTIAL / IN_PROGRESS`.
+
+## DMR-063 — extracción Markdown V2, Parte 5 · Capítulo 04 · 2026-11-23
+
+- [x] Verificar el HEAD remoto de main: ffd989c39ed9d9c076223bcb24c42f3a41b931ce; crear rama de trabajo sin modificar main.
+- [x] Respetar el checkpoint recibido: las Partes 1–4 se consideran completadas; no se repitieron ni reauditaron. Inicio directo en Markdown line 5579.
+- [x] Leer el Capítulo 04 de forma secuencial desde el blob fuente existente hasta la última línea narrativa 6913; no inspeccionar ni usar imágenes/Base64.
+- [x] Reutilizar y ampliar los eventos existentes de Firebolt/Grimorio, agotamiento de pociones, compra de Mind Potion a Naaza y hostigamiento a Lili.
+- [x] Registrar dos eventos nuevos: consulta de Eina a Loki sobre Soma Familia y actualización del Estado de Ais con anuncio del nivel 6.
+- [x] Crear ficha parcial CHAR-NAAZA desde el pasaje primario del Markdown e incorporarla al índice de personajes y Miach Familia.
+- [x] Actualizar perfiles de Bell, Hestia, Eina, Liliruca, Ais, Loki y Soma; actualizar los expedientes de Miach, Miach Familia, Loki Familia y Soma Familia.
+- [x] Sincronizar registro de fuentes, catálogo, modelo temporal, índice de eventos, Master Index, DMR-063, STATUS y CHARACTER_UPDATE_LEDGER.
+- [ ] Verificar CI sobre el HEAD exacto de la rama/PR; no certificar PASS antes del resultado remoto.
+- **Pendientes preservados:** identidad del comprador Hobbit y de la ladrona mencionada; propietario/valor exacto del Grimorio; identidad y afiliación del Aventurero que propone usar a Lili como cebo; diferencia de formulación PDF/Markdown sobre la posible afiliación a Soma; traducción privada sin cotejo japonés.
+- **Siguiente línea:** 6917, Capítulo 05 — “Reinicio”.
+- **Límite:** Markdown fuente intacto; Partes 1–4 no reabiertas; CONT-MAIN-LN exclusivamente. Volumen 2 sigue PARTIAL / IN_PROGRESS.
