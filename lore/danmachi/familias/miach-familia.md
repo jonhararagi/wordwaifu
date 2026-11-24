@@ -4,10 +4,10 @@ universe: danmachi
 type: familia
 status: source_checked_partial
 continuity_scope: CROSS-CONTINUITY
-source_refs: [DMR-061-SRC-001]
+source_refs: [DMR-061-SRC-001, DMR-063-SRC-001]
 claim_refs: ["DMR-006-CLM-124","DMR-006-CLM-127"]
 verification_status: source_checked_partial
-tags: ["Miach Familia","Daphne Lauros","Cassandra Ilion"]
+tags: ["Miach Familia","Miach","Naaza","Daphne Lauros","Cassandra Ilion"]
 ---
 # Miach Familia
 
@@ -20,6 +20,7 @@ Este registro convierte la Familia en un nodo navegable para consultar miembros,
 - [Miach](../characters/miach.md) — deidad dirigente; la ficha separa la evidencia de novela principal de los datos de adaptación.
 - [Daphne Lauros](../characters/daphnelauros.md) — abrir ficha individual para ver fuentes, intervalo y continuidad.
 - [Cassandra Ilion](../characters/cassandrailion.md) — abrir ficha individual para ver fuentes, intervalo y continuidad.
+- [Naaza](../characters/naaza.md) — aparece como integrante que atiende la tienda y vende pociones a Bell en el Volumen 2.
 
 ## Cómo interpretar el roster
 
@@ -46,3 +47,11 @@ La novela principal muestra a Miach dirigiendo una Familia de recursos limitados
 
 - Fuente: DMR-061-SRC-001, traducción privada no cotejada con japonés.
 - Este pasaje no constituye un censo completo de Miach Familia ni define todos sus miembros o actividades por época.
+
+## CONT-MAIN-LN · Volumen 2 · Naaza en la tienda de pociones
+
+El Markdown identifica expresamente a Naaza como integrante de Miach Familia y la muestra atendiendo la tienda de la Familia cuando Miach está ausente. Naaza asesora a Bell sobre el agotamiento de Mind y le vende una poción de recuperación de Poder Mental (DMR-063-SRC-001, Markdown lines 5867–5953).
+
+- Ficha individual: [Naaza](../characters/naaza.md).
+- Límite: este localizador documenta su presencia y función en esta escena; no completa el roster de Miach Familia por época.
+- Fuente: DMR-063-SRC-001, Markdown lines 5867–5953; traducción privada sin cotejo japonés.
