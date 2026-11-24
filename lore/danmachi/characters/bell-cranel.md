@@ -401,3 +401,13 @@ Este snapshot es independiente del Estado al cierre del Capítulo 02 y de las ac
 
 - Eventos relacionados: adquisición de Firebolt; prueba y agotamiento de Mind; hallazgo y atención por Ais/Riveria.
 - DMR-063 usa exclusivamente el Markdown del repositorio y no coteja este snapshot con la edición japonesa.
+
+## CONT-MAIN-LN · Volumen 2 · Capítulo 04: Grimorio, Naaza y la propuesta contra Lili
+
+Tras huir avergonzado de Ais, Bell regresa a la sede de Hestia Familia. A la mañana siguiente Hestia identifica como Grimorio el libro que Seal le había prestado y explica que el efecto se consume con una sola lectura. Bell decide confesar lo ocurrido. En la Señora de la Abundancia cuenta a Seal que tomó prestado el libro creyendo que alguien lo había olvidado; Mia confirma que ya fue leído y le aconseja no atormentarse. Seal le entrega una cesta antes de que se marche. El pasaje no identifica al propietario original ni demuestra una devolución a esa persona (Markdown lines 5641–5853).
+
+Más tarde Bell visita la tienda de Miach Familia y compra a Naaza una poción de Poder Mental junto con dos pociones normales. Tres días antes había agotado sus pociones de recuperación habituales. Después, en la Plaza Central, un aventurero sin nombre intenta reclutar a Bell para fingir que se asocia con Lili y abandonarla en el Dungeon. Bell rechaza la propuesta de forma tajante y defiende a Lili (lines 5855–6103).
+
+- Eventos existentes ampliados: adquisición de Firebolt/Grimorio, compra de la poción a Naaza y confrontación de Bell con los aventureros que increpan a Lili. No se crean IDs duplicados.
+- Límites: no identificar al dueño original del Grimorio; no vincular con certeza el libro a Freya; no atribuir a los hombres de la Plaza una afiliación no confirmada; no convertir la frase de Naaza en una relación formal.
+- Fuente: DMR-063-SRC-001, Markdown lines 5641–6103; traducción privada sin cotejo japonés.
