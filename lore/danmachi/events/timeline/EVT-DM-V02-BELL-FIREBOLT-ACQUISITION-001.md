@@ -56,3 +56,14 @@ No asignar coste universal de Mind, rango, duración o condiciones no mostradas.
 - No se afirma control mental por el libro, autoría de Freya ni una regla universal sobre ausencia de canto.
 
 DMR-060-SRC-001 conserva su procedencia anterior basada en el PDF. DMR-063-SRC-001 aporta exclusivamente la corroboración del Markdown.
+
+
+## Identificación del Grimorio y conversación con Seal · DMR-063 · Capítulo 04
+
+A la mañana siguiente, Hestia reconoce el volumen prestado por Seal como un Grimorio. Explica que se trata de un objeto excepcional y que sus efectos desaparecen tras una única lectura. Bell comprende que ha consumido un objeto de enorme valor sin conocer su naturaleza (Markdown lines 5671–5729).
+
+Bell decide contarle directamente a Seal lo ocurrido. En la Señora de la Abundancia explica que tomó prestado el libro al creer que alguien lo había olvidado. Mia confirma que era un Grimorio ya leído y sostiene que quien deja un objeto así sin vigilancia debe asumir el riesgo; aconseja a Bell no atormentarse. Seal le entrega una cesta antes de que se marche (lines 5763–5853).
+
+**Límites:** el pasaje no identifica al propietario original ni confirma que el libro fuera recuperado físicamente por esa persona. La relación entre este volumen y el libro que Freya decide dejar en Babel sigue siendo una inferencia narrativa, no una identidad expresa. La lectura única explica el consumo del Grimorio, no una regla general sobre todos los libros mágicos.
+
+- Fuente: DMR-063-SRC-001, Markdown lines 5641–5853; traducción privada sin cotejo japonés.
