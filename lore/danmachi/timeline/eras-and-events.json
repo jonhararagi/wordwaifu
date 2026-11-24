@@ -3062,7 +3062,7 @@
           "label": "DMR-063 · Volumen 2, Markdown del repositorio, Parte 4",
           "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
           "kind": "repository_markdown",
-          "note": "Fuente exclusiva Markdown, líneas 4647–4943 y 5065–5127. Traducción privada sin cotejo con japonés."
+          "note": "Markdown lines 4647–4943, 5065–5127 y 5641–5853; traducción privada sin cotejo japonés."
         }
       ],
       "temporal": {
@@ -3454,6 +3454,12 @@
           "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001.md",
           "kind": "internal",
           "note": "Ficha con localizador físico y límites de traducción."
+        },
+        {
+          "label": "DMR-063 · Volumen 2, Markdown del repositorio, Capítulo 04",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "kind": "repository_markdown",
+          "note": "Markdown lines 5855–5957; traducción privada sin cotejo japonés. Imágenes/Base64 no inspeccionadas."
         }
       ],
       "temporal": {
@@ -3467,7 +3473,8 @@
         "qualifier": "La visita sigue al uso de Firebolt de la noche anterior; la fecha absoluta no se especifica.",
         "sourceUrls": [
           "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
-          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001.md"
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md"
         ]
       },
       "narrativeOrigin": {
@@ -3487,7 +3494,8 @@
           "context": "La tienda de Miach Familia está en Orario.",
           "sourceUrls": [
             "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
-            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001.md"
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md"
           ]
         }
       ]
@@ -3532,6 +3540,12 @@
           "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001.md",
           "kind": "internal",
           "note": "Ficha con localizador físico y límites de traducción."
+        },
+        {
+          "label": "DMR-063 · Volumen 2, Markdown del repositorio, Capítulo 04",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "kind": "repository_markdown",
+          "note": "Markdown lines 5959–6103; traducción privada sin cotejo japonés. Imágenes/Base64 no inspeccionadas."
         }
       ],
       "temporal": {
@@ -3545,7 +3559,8 @@
         "qualifier": "El encuentro sigue a la visita de Bell a la tienda de Naaza.",
         "sourceUrls": [
           "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
-          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001.md"
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md"
         ]
       },
       "narrativeOrigin": {
@@ -3565,7 +3580,8 @@
           "context": "La escena ocurre en la Plaza Central de Orario.",
           "sourceUrls": [
             "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
-            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001.md"
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md"
           ]
         }
       ]
