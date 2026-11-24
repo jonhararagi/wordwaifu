@@ -14,8 +14,8 @@ assert.equal(report.valid,true,report.errors.join("\n"));
 assert.equal(report.temporalModelVersion,1);
 assert.equal(report.legacyTemporalModel,false);
 assert.equal(report.eraCount,10);
-assert.equal(report.eventCount,59);
-assert.equal(report.temporalEventCount,59);
+assert.equal(report.eventCount,64);
+assert.equal(report.temporalEventCount,64);
 assert.equal(data.anchor.id,"T0-BELL-ARRIVAL");
 assert.equal(data.anchor.eventId,"EVT-DM-BELL-ARRIVAL-001");
 
@@ -78,7 +78,13 @@ const expectedKinds={
  "EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001":"relative_order",
  "EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001":"relative_order",
  "EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001":"relative_offset",
- "EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001":"relative_order"
+ "EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001":"relative_order",
+
+ "EVT-DM-V02-FREYA-OBSERVES-BELL-AND-LEAVES-BOOK-001":"relative_order",
+ "EVT-DM-V02-LILI-SAVES-BELL-WITH-MAGIC-SWORD-001":"relative_order",
+ "EVT-DM-V02-AIS-RIVERIA-FIND-BELL-AFTER-MIND-EXHAUSTION-001":"relative_order",
+ "EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001":"relative_order",
+ "EVT-DM-V02-AIS-CONFIRMS-LV6-STATUS-UPDATE-001":"relative_order",
 };
 const expectedLabels={
  "EVT-DM-V01-BELL-RECEIVES-FALNA-001":"Después del primer encuentro Bell–Hestia; intervalo exacto no cuantificado.",
@@ -139,10 +145,15 @@ const expectedLabels={
  "EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001":"Capítulo 02 · primera jornada de prueba en el séptimo piso; fecha absoluta desconocida.",
  "EVT-DM-V02-RYUU-RETURNS-HESTIA-DAGGER-001":"Durante el regreso de la primera jornada de prueba y antes de la jornada siguiente; fecha absoluta desconocida.",
  "EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001":"El día siguiente a la primera jornada de prueba; fecha absoluta desconocida.",
- "EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001":"Después de la segunda expedición de Bell y Lili; la comida acordada se fija para las 18:00, sin fecha de calendario."
+ "EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001":"Después de la segunda expedición de Bell y Lili; la comida acordada se fija para las 18:00, sin fecha de calendario.",
+ "EVT-DM-V02-FREYA-OBSERVES-BELL-AND-LEAVES-BOOK-001":"Volumen 2 · Capítulo 03 · fecha absoluta desconocida.",
+ "EVT-DM-V02-LILI-SAVES-BELL-WITH-MAGIC-SWORD-001":"Volumen 2 · Capítulo 03 · fecha absoluta desconocida.",
+ "EVT-DM-V02-AIS-RIVERIA-FIND-BELL-AFTER-MIND-EXHAUSTION-001":"Volumen 2 · Capítulo 03 · quinto piso; retorno desde piso 37 de alrededor de tres días.",
+ "EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001":"Volumen 2 · Capítulo 04 · investigación de Eina en Orario; fecha absoluta desconocida.",
+ "EVT-DM-V02-AIS-CONFIRMS-LV6-STATUS-UPDATE-001":"Volumen 2 · Capítulo 04 · actualización del Estado en la sede de Loki Familia; fecha absoluta desconocida."
 };
 const events=new Map(data.events.map(e=>[e.id,e]));
-assert.deepEqual([...events.keys()].sort(),Object.keys(expectedKinds).sort(),"All 59 timeline event IDs must be retained exactly.");
+assert.deepEqual([...events.keys()].sort(),Object.keys(expectedKinds).sort(),"All 64 timeline event IDs must be retained exactly.");
 for(const [id,kind] of Object.entries(expectedKinds)){
  const event=events.get(id);
  assert.equal(event.temporal.kind,kind,id+" temporal variant");
@@ -190,6 +201,15 @@ assert.equal(weeklyRumor.temporal.amount,1);
 assert.equal(weeklyRumor.temporal.unit,"week");
 assert.equal(weeklyRumor.temporal.precision,"exact");
 assert.match(weeklyRumor.summary,/rumor/i,"The one-week follow-up must remain a rumor, not a confirmed Level 6.");
+const confirmedAis=events.get("EVT-DM-V02-AIS-CONFIRMS-LV6-STATUS-UPDATE-001");
+assert.ok(confirmedAis,"Later Level 6 confirmation has its own event.");
+assert.notEqual(confirmedAis.id,weeklyRumor.id,"Confirmation must not overwrite the earlier rumor.");
+assert.match(confirmedAis.summary,/nivel 6/i);
+assert.equal(confirmedAis.temporal.referenceIds[0],"EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001");
+const einaSomaEvent=events.get("EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001");
+assert.equal(einaSomaEvent.temporal.referenceIds[0],"EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001");
+assert.ok(einaSomaEvent.participants.some(p=>p.id==="CHAR-RIVERIA-LJOS-ALF"));
+
 const potionExhaustion=events.get("EVT-DM-V02-BELL-EXHAUSTS-RECOVERY-POTIONS-001");
 assert.equal(potionExhaustion.temporal.anchorId,"EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001");
 assert.equal(potionExhaustion.temporal.amount,3);
@@ -331,10 +351,10 @@ assert.equal(legacyReport.valid,true,"legacy v1 data must remain loadable throug
 assert.equal(legacyReport.legacyTemporalModel,true);
 assert.equal(timeline.temporalKindLabel(null),"Tiempo sin normalizar");
 assert.equal(report.locationCount,3);
-assert.equal(report.locationRefCount,52);
+assert.equal(report.locationRefCount,58);
 assert.equal(report.unknownEventCount,9,"Six existing unknown-location candidates plus three Hestia status updates without a catalogued home location remain spatially unknown.");
 assert.equal(report.provisionalEventCount,10);
-assert.equal(data.events.length,59,"All 59 indexed event IDs must remain.");
+assert.equal(data.events.length,64,"All 64 indexed event IDs must remain.");
 const banquet=events.get("EVT-DM-V01-GANESHA-GOD-BANQUET-001");
 const festivalPrep=events.get("EVT-DM-V01-BELL-OBSERVES-MONSTER-FESTIVAL-PREPARATIONS-001");
 assert.equal(festivalPrep.temporal.kind,"relative_offset");

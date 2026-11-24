@@ -1,4 +1,33 @@
-# Estado operativo vigente — 2026-11-19
+## Addendum de continuidad DMR-063 — 2026-11-24 · Parte 5
+
+Base de trabajo: main ffd989c39ed9d9c076223bcb24c42f3a41b931ce. Rama: work/dmr-063-volume2-markdown-part4-2026-11-22. PR: [#236](https://github.com/jonhararagi/wordwaifu/pull/236), abierta y sin fusionar.
+
+- DMR-063 cubre Partes 1–5: prólogo/Capítulo 01 (13–1391), Capítulo 02 (1395–3470), Capítulo 03 (3471–5575) y Capítulo 04 (5579–6913).
+- Capítulo 05 comienza en 6917; primera línea narrativa pendiente 6919.
+- Eventos nuevos: EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001 y EVT-DM-V02-AIS-CONFIRMS-LV6-STATUS-UPDATE-001.
+- Se amplían sin duplicar IDs los eventos existentes del Grimorio/Firebolt, la compra de la poción de Mind a Naaza y la confrontación de Bell con quienes increpan a Lili.
+- Se crea CHAR-NAAZA. Catálogo: 255 registros. Cronología: 64 eventos y 58 referencias de lugar.
+- La confirmación de Lv.6 de Ais se mantiene separada del rumor anterior. El relato de Loki sobre el vino conserva atribución.
+- Fuente exclusiva: blob Markdown 9b884520a3b5aa30d25b8b2dfc8721d54b52464e; CONT-MAIN-LN. No se modificó la fuente, no se inspeccionaron imágenes ni se cotejó la traducción con japonés.
+- CI de esta revisión: pendiente de comprobar sobre el nuevo SHA. El PASS de Partes 1–4 no se extrapola.
+- main no se modifica. No fusionar ni cerrar PR #236 sin autorización expresa.
+
+---
+
+# Estado operativo vigente — 2026-11-22
+
+**Base de partida verificada:** main en ffd989c39ed9d9c076223bcb24c42f3a41b931ce.  
+**Rama de trabajo:** work/dmr-063-volume2-markdown-part4-2026-11-22.
+
+- DMR-063 Partes 1–4: prólogo y Capítulo 01 (13–1391), Capítulo 02 (1395–3470) y Capítulo 03 completo (3471–5575).
+- Capítulo 04 comienza en Markdown line 5577; primera línea narrativa pendiente **5579**.
+- El Volumen 2 permanece PARTIAL / IN_PROGRESS. Capítulo 04 y capítulos posteriores siguen pendientes.
+- Se conservaron los IDs existentes de adquisición/prueba de Firebolt y se incorporaron tres eventos nuevos con ficha, catálogo e índice temporal.
+- Fuente exclusiva Markdown del repositorio; continuidad CONT-MAIN-LN. No se inspeccionaron imágenes incrustadas ni se cotejó la traducción con japonés.
+- **PR #236:** abierta y mergeable; no se ha fusionado. HEAD validado: `887f4bda089dfa75ea6c1528b769ba62b19d35d0`. Ambos workflows están en PASS sobre ese SHA: [Validate WordWaifu #45099349265](https://github.com/jonhararagi/wordwaifu/actions/runs/45099349265) y [DanMachi Lore and Retrieval Integrity #45099349289](https://github.com/jonhararagi/wordwaifu/actions/runs/45099349289).
+
+---
+
 
 **Checkpoint de referencia:** `main` = `f19207beda7a3e1619bdab7111e008dcc64603c1`.
 **Auditoría de reconciliación:** rama `work/critical-priority-reconciliation-2026-11-19`; esta sección prevalece sobre snapshots históricos posteriores que no reflejen este checkpoint.
@@ -145,12 +174,12 @@ Continuar DMR-063 exclusivamente desde la línea Markdown 3687 de `lore/danmachi
 
 
 <!-- DANMACHI-METRICS:BEGIN -->
-- **Corpus DanMachi:** 249 registros activos; 28 IDs reservados; 109 documentos de apoyo.
+- **Corpus DanMachi:** 255 registros activos; 28 IDs reservados; 109 documentos de apoyo.
 - **Grafo de conocimiento:** 263 relaciones explícitas; 263/263 con ambos extremos activos y distintos; IDs de relación únicos.
 - **Roster de adaptación:** 63 identidades; 63/63 tienen registro, ruta Markdown e expediente UI con el mismo ID.
 - **Expedientes de interfaz:** 93 perfiles; 93/93 enlazados a catálogo y Markdown por ID.
-- **Tipos en el catálogo:** 84 personajes; 5 grupos; 14 deidades con registro de personaje.
-- **Marcadas `complete`:** 0/84 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
+- **Tipos en el catálogo:** 85 personajes; 5 grupos; 14 deidades con registro de personaje.
+- **Marcadas `complete`:** 0/85 registros `character`; esto no define el universo de personajes esperados ni autoriza un porcentaje global de canon.
 <!-- DANMACHI-METRICS:END -->
 
 ## DMR-045 — lectores BinB enlazados desde la tienda oficial de SB Creative (2026-10-25)

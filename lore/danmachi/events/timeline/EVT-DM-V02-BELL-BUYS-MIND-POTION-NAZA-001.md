@@ -8,8 +8,10 @@ time_anchor: relative_sequence
 source_verification: user_supplied_private_translation_not_crosschecked
 source_refs:
   - DMR-060-SRC-001
+  - DMR-063-SRC-001
 source_locators:
   - PDF pp. 167–169
+  - Markdown lines 5855–5957
 spoiler_level: major
 ---
 
@@ -44,3 +46,12 @@ Bell Cranel y Naaza
 - No añadir fecha de calendario si el texto no la proporciona.
 - Las páginas citadas son páginas físicas del PDF, no necesariamente la paginación impresa de la edición original.
 - No convertir un rumor en un hecho confirmado ni una descripción parcial en una escena completamente observada.
+
+
+## Comprobación adicional de la compra · DMR-063 · Capítulo 04
+
+El Markdown vuelve a narrar esta misma compra: Bell recuerda que agotó sus pociones normales tres días antes; Naaza explica que el uso de magia consume Poder Mental y que el exceso puede provocar desmayos. Le ofrece una poción de recuperación de Mind, todavía en sus primeras etapas, por 8.700 Varisu, más dos pociones normales por un total de 9.000 Varisu. Bell acepta para contar con una opción ante emergencias (Markdown lines 5855–5953).
+
+Naaza se despide diciendo «Te amo»; Bell se sonroja y se marcha deprisa. La frase se registra como diálogo de la escena, sin convertirla por sí sola en una relación formal ni determinar la intención completa de Naaza.
+
+- DMR-063-SRC-001 aporta la corroboración de Markdown; DMR-060-SRC-001 conserva por separado sus páginas PDF 167–169.

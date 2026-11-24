@@ -111,3 +111,20 @@ El Markdown del Capítulo 03 muestra a Ais derrotando más de diez Spartoi en el
 - **Fuente:** DMR-063-SRC-001, Markdown lines 3471–3681.
 - **Límite:** estas líneas no muestran el resultado del enfrentamiento. El evento ya existente conserva por separado su procedencia DMR-060; esta nota no usa DMR-063 para afirmar la victoria.
 - **Continuidad:** CONT-MAIN-LN. Las etiquetas y perfiles de adaptación permanecen en sus continuidades originales.
+
+## CONT-MAIN-LN · Volumen 2 · encuentra a Bell tras Firebolt · DMR-063
+
+A su regreso desde el piso 37, Ais y Riveria encuentran a Bell inconsciente en el quinto piso del Dungeon. Riveria interpreta su estado como agotamiento de Mind por uso imprudente de magia. Ais reconoce a Bell por el incidente del Minotauro, expresa que quiere compensarlo y permanece con él. Bell despierta y huye avergonzado al reconocerla (Markdown lines 5395–5573).
+
+- Evento: EVT-DM-V02-AIS-RIVERIA-FIND-BELL-AFTER-MIND-EXHAUSTION-001.
+- Límite: el retorno desde el piso 37 tomó alrededor de tres días según la traducción. No se infiere fecha absoluta ni vínculo romántico confirmado.
+- Fuente: DMR-063-SRC-001, Markdown lines 5395–5573; traducción privada sin cotejo japonés.
+
+## CONT-MAIN-LN · Volumen 2 · actualización de Estado tras una expedición
+
+En el Capítulo 04, Loki propone actualizar el Estado de Ais, que no se había actualizado desde su regreso de la expedición. Ais acepta y, al concluir el procedimiento, Loki anuncia que alcanzó el nivel 6 (Markdown lines 6881–6913).
+
+- Evento: [Loki actualiza el Estado de Ais y confirma que alcanzó el nivel 6](../events/timeline/EVT-DM-V02-AIS-CONFIRMS-LV6-STATUS-UPDATE-001.md).
+- Distinción temporal: el rumor que circuló una semana después del combate contra Udaeus permanece como acontecimiento previo y separado. Esta escena contiene la confirmación posterior.
+- Límite: el fragmento solo da el nivel 6; no aporta valores numéricos de atributos.
+- Fuente: DMR-063-SRC-001, Markdown lines 6399–6499 y 6881–6913; traducción privada sin cotejo japonés.

@@ -3640,6 +3640,102 @@
       ],
       "status": "source_checked_translation_unverified",
       "priority": "high"
+    },
+    {
+      "id": "EVT-DM-V02-FREYA-OBSERVES-BELL-AND-LEAVES-BOOK-001",
+      "path": "events/timeline/EVT-DM-V02-FREYA-OBSERVES-BELL-AND-LEAVES-BOOK-001.md",
+      "type": "event",
+      "tags": [
+        "Freya",
+        "Bell Cranel",
+        "Ottar",
+        "book",
+        "Babel",
+        "volume 2"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "name": "Freya observa a Bell y decide dejar un libro"
+    },
+    {
+      "id": "EVT-DM-V02-LILI-SAVES-BELL-WITH-MAGIC-SWORD-001",
+      "path": "events/timeline/EVT-DM-V02-LILI-SAVES-BELL-WITH-MAGIC-SWORD-001.md",
+      "type": "event",
+      "tags": [
+        "Bell",
+        "Liliruca Arde",
+        "Ant Killer",
+        "Needle Rabbit",
+        "Magic Sword",
+        "volume 2"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "name": "Lili salva a Bell con una Espada Mágica"
+    },
+    {
+      "id": "EVT-DM-V02-AIS-RIVERIA-FIND-BELL-AFTER-MIND-EXHAUSTION-001",
+      "path": "events/timeline/EVT-DM-V02-AIS-RIVERIA-FIND-BELL-AFTER-MIND-EXHAUSTION-001.md",
+      "type": "event",
+      "tags": [
+        "Ais",
+        "Riveria",
+        "Bell",
+        "Firebolt",
+        "Mind",
+        "volume 2"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "name": "Ais y Riveria encuentran a Bell tras el agotamiento de Mind"
+    },
+    {
+      "id": "CHAR-NAAZA",
+      "path": "characters/naaza.md",
+      "type": "character",
+      "tags": [
+        "Naaza",
+        "Miach Familia",
+        "Beastman",
+        "pociones",
+        "CONT-MAIN-LN"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "name": "Naaza"
+    },
+    {
+      "id": "EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001",
+      "path": "events/timeline/EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001.md",
+      "type": "event",
+      "tags": [
+        "Eina Tulle",
+        "Riveria Ljos Alf",
+        "Loki",
+        "Soma Familia",
+        "vino de Soma",
+        "volumen 2",
+        "CONT-MAIN-LN"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "name": "Eina consulta a Riveria y Loki sobre el vino de Soma Familia"
+    },
+    {
+      "id": "EVT-DM-V02-AIS-CONFIRMS-LV6-STATUS-UPDATE-001",
+      "path": "events/timeline/EVT-DM-V02-AIS-CONFIRMS-LV6-STATUS-UPDATE-001.md",
+      "type": "event",
+      "tags": [
+        "Ais Wallenstein",
+        "Loki",
+        "nivel 6",
+        "actualización de Estado",
+        "volumen 2",
+        "CONT-MAIN-LN"
+      ],
+      "status": "source_checked_translation_unverified",
+      "priority": "high",
+      "name": "Loki actualiza el Estado de Ais y confirma que alcanzó el nivel 6"
     }
   ],
   "reservedIds": [

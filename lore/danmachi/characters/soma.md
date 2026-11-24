@@ -8,6 +8,7 @@ continuity_scope: CONT-MAIN-LN
 source_refs:
   - DMR-025-SRC-002
   - DMR-025-SRC-006
+  - DMR-063-SRC-001
 claim_refs:
   - DMR-025-CLM-001
   - DMR-025-CLM-007
@@ -32,3 +33,13 @@ Soma se conserva como ficha de deidad vinculada con Soma Familia. El compendio c
 ## Límites de certeza
 
 No completar poderes, personalidad, historia completa, motivos, miembros ni detalles del proceso de elaboración sin pasajes fuente. La sinopsis editorial no reemplaza los capítulos de la novela.
+
+## CONT-MAIN-LN · Volumen 2 · explicación de Loki sobre Soma Familia
+
+La ficha conserva la evidencia secundaria previa y añade por separado la explicación que Loki ofrece a Eina en el Capítulo 04. Según Loki, Soma está obsesionado con elaborar un vino perfeccionado, cultiva personalmente sus ingredientes y dirige a su Familia alrededor de esa actividad. Loki dice que introdujo un sistema de recompensas que vincula el acceso a la bebida con el rango y los recursos de los miembros (DMR-063-SRC-001, Markdown lines 6627–6801).
+
+Loki atribuye al vino perfeccionado un efecto embriagador temporal. En su relato, el consumo repetido puede estimular nuevas ansias y agravar la competencia por conseguir recompensas; no se presenta como una droga con efectos permanentes. La advertencia sobre miembros fuertes que despojan a otros de su equipo se formula mediante una metáfora (lines 6707–6859).
+
+- Evento: [Eina consulta a Riveria y Loki sobre el vino de Soma Familia](../events/timeline/EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001.md).
+- Límite: esto es testimonio de Loki dentro de la novela, no una verificación omnisciente.
+- Fuente: DMR-063-SRC-001, Markdown lines 6627–6859; traducción privada sin cotejo japonés.

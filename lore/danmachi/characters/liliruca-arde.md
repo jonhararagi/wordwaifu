@@ -125,3 +125,21 @@ Bell descubre que la Daga de Hestia ha desaparecido. Más tarde Ryuu la devuelve
 - **Límite:** la posesión de la daga por Lili está narrada; su sustracción inicial y su intención final no se formulan como confesión explícita.
 - **Continuidad:** exclusivamente CONT-MAIN-LN; no importar desde CONT-SECONDARY una explicación de la apariencia o habilidades.
 - **Fuente:** DMR-063-SRC-001, Markdown lines 1395–2821, en particular lines 1709–1749, 1933–1939, 2519–2527 y 2795–2821. Traducción privada no cotejada con japonés.
+
+## CONT-MAIN-LN · Volumen 2 · Capítulo 03 · DMR-063
+
+Lili y Bell llevan varios días trabajando juntos y el texto dice que reparten las ganancias por igual (Markdown lines 3705–3741). Durante una expedición en el séptimo piso, Lili advierte el ataque que Bell no percibe y utiliza una pequeña Espada Mágica roja para lanzar una bola de fuego. Su intervención permite que Bell recupere la iniciativa y sobreviva a la emboscada de dos Ant Killers y un Needle Rabbit (lines 4301–4475).
+
+Lili también cuenta que asistió a una reunión mensual de Soma Familia en la que se comunicaron cuotas de ingresos para el mes siguiente. Ella considera que las exigencias son duras para Ayudantes y aventureros novatos, y explica que la actividad de la Familia está ligada a la producción de vino (lines 4511–4607).
+
+- Evento: EVT-DM-V02-LILI-SAVES-BELL-WITH-MAGIC-SWORD-001.
+- Límites: no se da nombre propio, precio, fabricante ni límites de uso de la Espada Mágica. Tampoco se identifican montos o sanciones de las cuotas. No se crea ficha de arma ni se generaliza sobre todos los miembros de Soma Familia.
+- Fuente: DMR-063-SRC-001, Markdown lines 3705–3741, 4301–4475 y 4511–4607; traducción privada sin cotejo japonés.
+
+## CONT-MAIN-LN · Volumen 2 · Capítulo 04 · Bell rechaza la propuesta contra Lili
+
+En la Plaza Central, Bell vuelve a encontrar a Lili rodeada por aventureros. Un hombre que Bell reconoce como el mismo que lo abordó antes en un callejón intenta reclutarlo para fingir que se une a Lili y después abandonarla en el Dungeon. Bell se niega de forma tajante y afirma que Lili no es la Hobbit ladrona que el hombre describe. Lili dice solamente que ella también fue objeto de una propuesta de reclutamiento y que la rechazó (Markdown lines 5959–6103).
+
+- Evento: la escena amplía [Bell ve a Lili rodeada por aventureros y es confrontado](../events/timeline/EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001.md), sin crear un segundo ID.
+- Límites: no se confirma que los tres hombres pertenezcan a Soma Familia ni que la descripción de la supuesta Hobbit ladrona identifique inequívocamente a Lili. El hombre sigue sin nombre.
+- Fuente: DMR-063-SRC-001, Markdown lines 5959–6103; traducción privada sin cotejo japonés.

@@ -1,3 +1,31 @@
+## Addendum de continuidad DMR-063 — 2026-11-24 · Parte 5
+
+Base de trabajo: main ffd989c39ed9d9c076223bcb24c42f3a41b931ce. Rama: work/dmr-063-volume2-markdown-part4-2026-11-22. PR: [#236](https://github.com/jonhararagi/wordwaifu/pull/236), abierta y sin fusionar.
+
+- DMR-063 cubre Partes 1–5: prólogo/Capítulo 01 (13–1391), Capítulo 02 (1395–3470), Capítulo 03 (3471–5575) y Capítulo 04 (5579–6913).
+- Capítulo 05 comienza en 6917; primera línea narrativa pendiente 6919.
+- Eventos nuevos: EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001 y EVT-DM-V02-AIS-CONFIRMS-LV6-STATUS-UPDATE-001.
+- Se amplían sin duplicar IDs los eventos existentes del Grimorio/Firebolt, la compra de la poción de Mind a Naaza y la confrontación de Bell con quienes increpan a Lili.
+- Se crea CHAR-NAAZA. Catálogo: 255 registros. Cronología: 64 eventos y 58 referencias de lugar.
+- La confirmación de Lv.6 de Ais se mantiene separada del rumor anterior. El relato de Loki sobre el vino conserva atribución.
+- Fuente exclusiva: blob Markdown 9b884520a3b5aa30d25b8b2dfc8721d54b52464e; CONT-MAIN-LN. No se modificó la fuente, no se inspeccionaron imágenes ni se cotejó la traducción con japonés.
+- CI de esta revisión: pendiente de comprobar sobre el nuevo SHA. El PASS de Partes 1–4 no se extrapola.
+- main no se modifica. No fusionar ni cerrar PR #236 sin autorización expresa.
+
+---
+
+## Reconciliación operativa crítica — 2026-11-22
+
+**Base de partida:** main en ffd989c39ed9d9c076223bcb24c42f3a41b931ce. **Rama:** work/dmr-063-volume2-markdown-part4-2026-11-22.
+
+- DMR-063 Parte 4 documenta la continuación y cierre del Capítulo 03, Markdown lines 3687–5575.
+- Capítulo 04 comienza en 5577; primera línea narrativa pendiente **5579**.
+- No repetir Partes 1–4 ni procesar de nuevo 3471–5575. Continuar únicamente desde 5579 del Markdown original.
+- El Volumen 2 sigue PARTIAL / IN_PROGRESS. Capítulo 04 y posteriores aún no están extraídos.
+- Se amplían adquisición/prueba de Firebolt sin duplicar IDs. Se añaden tres eventos: EVT-DM-V02-FREYA-OBSERVES-BELL-AND-LEAVES-BOOK-001, EVT-DM-V02-LILI-SAVES-BELL-WITH-MAGIC-SWORD-001 y EVT-DM-V02-AIS-RIVERIA-FIND-BELL-AFTER-MIND-EXHAUSTION-001.
+- DMR-060 sigue separado. DMR-063 es Markdown-only y CONT-MAIN-LN; no usa PDF, imágenes ni otras continuidades para llenar huecos.
+- **Validación:** HEAD `887f4bda089dfa75ea6c1528b769ba62b19d35d0`; Validate WordWaifu #45099349265 PASS y DanMachi Lore and Retrieval Integrity #45099349289 PASS. PR [#236](https://github.com/jonhararagi/wordwaifu/pull/236) está abierta y mergeable; main no se modificó. No fusionar ni cerrar sin autorización expresa.
+
 # Cola de trabajo para futuras tandas de lore
 
 Esta cola sigue la cobertura cronológica, desde las eras antiguas hasta el último volumen principal publicado que se pueda verificar. Las tareas se dividen para no mezclar épocas, fuentes o continuidades. Ningún número de volumen ni final se inventará para llenar huecos.
@@ -38,7 +66,7 @@ Conteos aproximados de palabras tras excluir las cargas base64 de imágenes y el
 | Volumen | Archivo fuente | Palabras aprox. | Imágenes incrustadas | Estado de análisis |
 |---|---|---:|---:|---|
 | 1 | `Volumen [01] • DanMachi.md` | 63.168 | 16 | DMR-061: P1 PDF↔DMR-061/DMR-062/destinos funcionales pp.9–156 reconciliada; P2/P3 pp.9–156 completas; tres pasadas pp.157–214 conservadas. DMR-062 MD↔PDF: cotejo físico/textual/visual de todos los folios narrativos pp.1–214 documentado en 13 tandas; IMAGE_MISSING pp.12, 15, 22, 37, 40, 70, 73 y 86; FORMATTING_LOSS y demás hallazgos aceptados detallados en DMR-062; TRANSLATION_AMBIGUITY p.18 sigue abierta. PDF físico: 215 folios (p.8 blanca; p.215 créditos). DMR-061, DMR-062 y V1 siguen PARTIAL / IN_PROGRESS. Siguiente: reconciliar los hallazgos globales pendientes sin repetir páginas ni modificar las fuentes originales. El checkpoint Markdown-only de V2 queda documentado por separado en DMR-063. |
-| 2 | `Volumen [02] • DanMachi.md` | 74.125 | 19 | DMR-060 conserva su extracción anterior separada. DMR-063 documenta el prólogo y Capítulo 01 (Markdown lines 13–1391), Capítulo 02 (1395–3470) y el primer bloque de Capítulo 03 (3471–3685): cuatro eventos nuevos de Capítulo 02, reconciliación de Bell, Lili, Ryuu, Seal, Hestia y Soma Familia, más el contexto de Ais/Udaeus y el rumor de nivel 6. `CONT-MAIN-LN`; fuente exclusiva Markdown. V2 permanece PARTIAL / IN_PROGRESS. **Siguiente línea narrativa: 3687**; no repetir Partes 1–3 ni usar DMR-060/PDF como fuente de esta línea de trabajo. |
+| 2 | `Volumen [02] • DanMachi.md` | 74.125 | 19 | DMR-060 conserva su extracción anterior separada. DMR-063 documenta prólogo y Capítulo 01 (13–1391), Capítulo 02 (1395–3470) y Capítulo 03 completo (3471–5575, Partes 3–4). Parte 4 desde 3687: Freya y el libro, rescate de Bell por Lili con Espada Mágica, reunión mensual de Soma, adquisición/prueba de Firebolt y encuentro de Ais/Riveria con Bell. CONT-MAIN-LN; fuente exclusiva Markdown, traducción sin cotejo japonés. V2 permanece PARTIAL / IN_PROGRESS. **Siguiente línea narrativa: 5579**, tras el encabezado del Capítulo 04 en 5577. No repetir Partes 1–4 ni usar DMR-060/PDF como fuente. |
 | 3 | `Volumen [03] • DanMachi.md` | 53.883 | 21 | Fuente cargada; análisis integral pendiente. |
 | 4 | `Volumen [04] • DanMachi.md` | 64.892 | 23 | Fuente cargada; análisis integral pendiente. |
 | 5 | `Volumen [05] • DanMachi.md` | 83.074 | 23 | Fuente cargada; análisis integral pendiente. |

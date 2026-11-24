@@ -6,7 +6,7 @@ status: provisional
 continuity_scope: CROSS-CONTINUITY
 confidence: high for general identity; medium for exact chronology
 tags: [Loki, deidad, Familia Loki, Orario]
-source_refs: [DMR-061-SRC-001]
+source_refs: [DMR-061-SRC-001, DMR-063-SRC-001]
 ---
 # Loki
 
@@ -57,3 +57,13 @@ Loki llega a la cafetería con Ais y la presenta ante Freya. Dice que Ais acaba 
 - **Evento:** EVT-DM-V01-FREYA-LOKI-CAFE-MEETING-001.
 - **Límite:** se registra cercanía protectora, sin inferir romance ni dependencia. La mirada a Bell no acredita reconocimiento consciente, diálogo ni encuentro.
 - **Fuente:** DMR-061-SRC-001, traducción privada no cotejada con japonés.
+
+## CONT-MAIN-LN · Volumen 2 · relato de Loki sobre el vino de Soma
+
+En la conversación con Eina, Loki cuenta que probó el vino de Soma y quedó cautivada por su sabor, hasta el punto de buscar la bebida perfeccionada. Según su relato, Soma cultivaba personalmente los ingredientes y su Familia terminó organizada alrededor de su obsesión por elaborar ese vino. Loki explica que estableció un sistema de recompensas que condiciona el acceso de los miembros a la bebida mediante su posición y recursos (DMR-063-SRC-001, Markdown lines 6627–6801).
+
+Loki describe el vino perfeccionado como una bebida con un efecto embriagador o encantador de corta duración. Según lo que cuenta, el consumo repetido puede hacer que los miembros busquen otra dosis y compitan por recursos, mientras que el efecto inmediato no equivale a una alteración permanente. También advierte a Eina, mediante una metáfora sobre «burros que persiguen zanahorias», que los más fuertes pueden aprovecharse de los más débiles (lines 6707–6859).
+
+- Evento: [Eina consulta a Riveria y Loki sobre el vino de Soma Familia](../events/timeline/EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001.md).
+- Límite: todos estos detalles se atribuyen al relato de Loki; no se convierten en hechos comprobados independientemente ni en una descripción uniforme.
+- Fuente: DMR-063-SRC-001, Markdown lines 6627–6859; traducción privada sin cotejo japonés.

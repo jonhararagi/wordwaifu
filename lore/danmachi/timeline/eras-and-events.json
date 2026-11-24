@@ -2718,6 +2718,214 @@
       ]
     },
     {
+      "id": "EVT-DM-V02-FREYA-OBSERVES-BELL-AND-LEAVES-BOOK-001",
+      "recordId": "EVT-DM-V02-FREYA-OBSERVES-BELL-AND-LEAVES-BOOK-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 702,
+      "title": "Freya observa a Bell y decide dejar un libro",
+      "dateLabel": "Volumen 2 · Capítulo 03 · fecha absoluta desconocida.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Freya observa a Bell desde Babel y decide seguir su crecimiento. Deja decidido que un libro grueso se coloque en la tienda de la calle donde lo conoció. Más tarde aparece un libro en el asiento reservado a Bell en la Señora de la Abundancia; que sea el mismo volumen es una inferencia, no una identificación expresa.",
+      "participants": [
+        {
+          "id": "CHAR-FREYA",
+          "name": "Freya",
+          "kind": "character",
+          "role": "observa a Bell y decide dejar un libro"
+        },
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "es observado por Freya"
+        },
+        {
+          "id": "CHAR-OTTAR",
+          "name": "Ottar",
+          "kind": "character",
+          "role": "está presente en Babel"
+        }
+      ],
+      "relatedEntities": [
+        {
+          "name": "Libro grueso sin título identificado",
+          "kind": "object",
+          "role": "la identidad con el libro que Bell recibe después es inferencial",
+          "registered": false
+        }
+      ],
+      "detailPath": "events/timeline/EVT-DM-V02-FREYA-OBSERVES-BELL-AND-LEAVES-BOOK-001.md",
+      "sources": [
+        {
+          "label": "DMR-063 · Volumen 2, Markdown del repositorio, Parte 4",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "kind": "repository_markdown",
+          "note": "Fuente exclusiva Markdown, líneas 3897–4103 y 4211–4297. Traducción privada sin cotejo con japonés."
+        },
+        {
+          "label": "Registro individual EVT-DM-V02-FREYA-OBSERVES-BELL-AND-LEAVES-BOOK-001",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-FREYA-OBSERVES-BELL-AND-LEAVES-BOOK-001.md",
+          "kind": "internal",
+          "note": "Ficha individual con localizadores y límites de evidencia."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "Escena del Capítulo 03 después de consolidarse el equipo Bell–Lili; fecha de calendario desconocida.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-FREYA-OBSERVES-BELL-AND-LEAVES-BOOK-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "La observación ocurre desde Babel y la decisión sitúa la tienda en una calle de Orario."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-BABEL",
+          "spatialPrecision": "city_level",
+          "context": "Freya observa a Bell desde Babel.",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md"
+          ]
+        },
+        {
+          "locationId": "LOC-ORARIO",
+          "spatialPrecision": "city_level",
+          "context": "Freya decide dejar el libro en una tienda de la calle donde conoció a Bell.",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-LILI-SAVES-BELL-WITH-MAGIC-SWORD-001",
+      "recordId": "EVT-DM-V02-LILI-SAVES-BELL-WITH-MAGIC-SWORD-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 705,
+      "title": "Lili salva a Bell con una Espada Mágica en el séptimo piso",
+      "dateLabel": "Volumen 2 · Capítulo 03 · fecha absoluta desconocida.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Bell no advierte que un Needle Rabbit se acerca desde un ángulo ciego y queda expuesto a dos Ant Killers. Lili interviene con una Espada Mágica pequeña y roja; Bell recupera la iniciativa y derrota a los monstruos. Se documenta la ayuda concreta de Lili sin convertirla en un vínculo permanente.",
+      "participants": [
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "queda expuesto a la emboscada y derrota a los monstruos"
+        },
+        {
+          "id": "CHAR-LILIRUCA-ARDE",
+          "name": "Liliruca Arde",
+          "kind": "character",
+          "role": "advierte el peligro y usa una Espada Mágica"
+        }
+      ],
+      "relatedEntities": [
+        {
+          "id": "MON-DM-ANT-KILLER-001",
+          "name": "Ant Killer",
+          "kind": "monster",
+          "role": "dos ejemplares participan en la emboscada"
+        },
+        {
+          "name": "Needle Rabbit",
+          "kind": "monster",
+          "role": "ataca a Bell; se menciona sin ficha individual",
+          "registered": false
+        },
+        {
+          "id": "OBJ-DM-BELL-LIGHT-ARMOR-001",
+          "name": "Armadura ligera de Bell",
+          "kind": "equipment",
+          "role": "protección de rodilla"
+        },
+        {
+          "id": "OBJ-DM-BELL-JADE-WRIST-GUARD-001",
+          "name": "Protector de Jade",
+          "kind": "equipment",
+          "role": "protege la cara de Bell"
+        },
+        {
+          "id": "OBJ-DM-HESTIA-DAGGER-001",
+          "name": "Daga de Hestia",
+          "kind": "equipment",
+          "role": "arma que Bell lleva"
+        }
+      ],
+      "detailPath": "events/timeline/EVT-DM-V02-LILI-SAVES-BELL-WITH-MAGIC-SWORD-001.md",
+      "sources": [
+        {
+          "label": "DMR-063 · Volumen 2, Markdown del repositorio, Parte 4",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "kind": "repository_markdown",
+          "note": "Fuente exclusiva Markdown, líneas 4301–4475. Traducción privada sin cotejo con japonés."
+        },
+        {
+          "label": "Registro individual EVT-DM-V02-LILI-SAVES-BELL-WITH-MAGIC-SWORD-001",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-LILI-SAVES-BELL-WITH-MAGIC-SWORD-001.md",
+          "kind": "internal",
+          "note": "Ficha individual con localizadores y límites de evidencia."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V02-BELL-CONFIRMS-LILI-TEAM-AND-SHARES-REWARDS-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "Después de consolidarse el trabajo en equipo; fecha absoluta desconocida.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-LILI-SAVES-BELL-WITH-MAGIC-SWORD-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "floor_context",
+        "reason": "El texto identifica expresamente el séptimo piso del Dungeon."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "spatialPrecision": "floor_context",
+          "context": "Emboscada en el séptimo piso.",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md"
+          ]
+        }
+      ]
+    },
+    {
       "id": "EVT-DM-JUGGERNAUT-RETURN-001",
       "recordId": "EVT-DM-JUGGERNAUT-RETURN-001",
       "eraId": "ERA-06-MAIN-V13-14",
@@ -2849,6 +3057,12 @@
           "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001.md",
           "kind": "internal",
           "note": "Ficha con localizador físico y límites de traducción."
+        },
+        {
+          "label": "DMR-063 · Volumen 2, Markdown del repositorio, Parte 4",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "kind": "repository_markdown",
+          "note": "Markdown lines 4647–4943, 5065–5127 y 5641–5853; traducción privada sin cotejo japonés."
         }
       ],
       "temporal": {
@@ -2862,7 +3076,8 @@
         "qualifier": "Durante el arco inicial de Bell en Orario; la distancia desde T0 y el orden paralelo respecto de la escena de Udaeus no quedan fijados aquí.",
         "sourceUrls": [
           "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
-          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001.md"
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md"
         ]
       },
       "narrativeOrigin": {
@@ -2882,7 +3097,8 @@
           "context": "La lectura del Grimorio ocurre en la base de Hestia Familia, Orario.",
           "sourceUrls": [
             "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
-            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001.md"
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md"
           ]
         }
       ]
@@ -3070,6 +3286,12 @@
           "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-FIREBOLT-TEST-001.md",
           "kind": "internal",
           "note": "Ficha con localizador físico y límites de traducción."
+        },
+        {
+          "label": "DMR-063 · Volumen 2, Markdown del repositorio, Parte 4",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "kind": "repository_markdown",
+          "note": "Fuente exclusiva Markdown, líneas 5217–5391. Traducción privada sin cotejo con japonés."
         }
       ],
       "temporal": {
@@ -3083,7 +3305,8 @@
         "qualifier": "Después de obtener Firebolt; el volumen menciona varias pruebas y no reduce todos los ensayos a un solo momento.",
         "sourceUrls": [
           "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
-          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-FIREBOLT-TEST-001.md"
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-FIREBOLT-TEST-001.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md"
         ]
       },
       "narrativeOrigin": {
@@ -3103,7 +3326,91 @@
           "context": "Bell prueba la magia durante una exploración del Dungeon.",
           "sourceUrls": [
             "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
-            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-FIREBOLT-TEST-001.md"
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-FIREBOLT-TEST-001.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-AIS-RIVERIA-FIND-BELL-AFTER-MIND-EXHAUSTION-001",
+      "recordId": "EVT-DM-V02-AIS-RIVERIA-FIND-BELL-AFTER-MIND-EXHAUSTION-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 725,
+      "title": "Ais y Riveria encuentran a Bell tras el agotamiento de Mind",
+      "dateLabel": "Volumen 2 · Capítulo 03 · quinto piso; retorno desde piso 37 de alrededor de tres días.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Ais y Riveria encuentran a Bell inconsciente en el quinto piso cuando regresan desde el piso 37. Riveria no detecta heridas externas y atribuye su estado al agotamiento de Mind por uso imprudente de magia. Ais reconoce a Bell y permanece junto a él. Al despertar, Bell la reconoce, se avergüenza y huye.",
+      "participants": [
+        {
+          "id": "DM-CHAR-AIS",
+          "name": "Ais Wallenstein",
+          "kind": "character",
+          "role": "reconoce a Bell y permanece a su lado"
+        },
+        {
+          "id": "CHAR-RIVERIA-LJOS-ALF",
+          "name": "Riveria Ljos Alf",
+          "kind": "character",
+          "role": "examina a Bell y explica el agotamiento de Mind"
+        },
+        {
+          "id": "DM-CHAR-BELL",
+          "name": "Bell Cranel",
+          "kind": "character",
+          "role": "es encontrado inconsciente y despierta junto a Ais"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V02-AIS-RIVERIA-FIND-BELL-AFTER-MIND-EXHAUSTION-001.md",
+      "sources": [
+        {
+          "label": "DMR-063 · Volumen 2, Markdown del repositorio, Parte 4",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "kind": "repository_markdown",
+          "note": "Fuente exclusiva Markdown, líneas 5395–5573. Traducción privada sin cotejo con japonés."
+        },
+        {
+          "label": "Registro individual EVT-DM-V02-AIS-RIVERIA-FIND-BELL-AFTER-MIND-EXHAUSTION-001",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-AIS-RIVERIA-FIND-BELL-AFTER-MIND-EXHAUSTION-001.md",
+          "kind": "internal",
+          "note": "Ficha individual con localizadores y límites de evidencia."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V02-BELL-FIREBOLT-TEST-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "Sigue a la prueba de Firebolt y sucede tras el regreso de Ais/Riveria desde el piso 37; el texto indica alrededor de tres días.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-AIS-RIVERIA-FIND-BELL-AFTER-MIND-EXHAUSTION-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "floor_context",
+        "reason": "El texto identifica el quinto piso como el lugar donde encuentran a Bell."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-DUNGEON",
+          "spatialPrecision": "floor_context",
+          "context": "Ais y Riveria encuentran a Bell en el quinto piso.",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md"
           ]
         }
       ]
@@ -3147,6 +3454,12 @@
           "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001.md",
           "kind": "internal",
           "note": "Ficha con localizador físico y límites de traducción."
+        },
+        {
+          "label": "DMR-063 · Volumen 2, Markdown del repositorio, Capítulo 04",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "kind": "repository_markdown",
+          "note": "Markdown lines 5855–5957; traducción privada sin cotejo japonés. Imágenes/Base64 no inspeccionadas."
         }
       ],
       "temporal": {
@@ -3160,7 +3473,8 @@
         "qualifier": "La visita sigue al uso de Firebolt de la noche anterior; la fecha absoluta no se especifica.",
         "sourceUrls": [
           "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
-          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001.md"
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md"
         ]
       },
       "narrativeOrigin": {
@@ -3180,7 +3494,8 @@
           "context": "La tienda de Miach Familia está en Orario.",
           "sourceUrls": [
             "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
-            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001.md"
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md"
           ]
         }
       ]
@@ -3225,6 +3540,12 @@
           "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001.md",
           "kind": "internal",
           "note": "Ficha con localizador físico y límites de traducción."
+        },
+        {
+          "label": "DMR-063 · Volumen 2, Markdown del repositorio, Capítulo 04",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "kind": "repository_markdown",
+          "note": "Markdown lines 5959–6103; traducción privada sin cotejo japonés. Imágenes/Base64 no inspeccionadas."
         }
       ],
       "temporal": {
@@ -3238,7 +3559,8 @@
         "qualifier": "El encuentro sigue a la visita de Bell a la tienda de Naaza.",
         "sourceUrls": [
           "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
-          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001.md"
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md"
         ]
       },
       "narrativeOrigin": {
@@ -3258,7 +3580,8 @@
           "context": "La escena ocurre en la Plaza Central de Orario.",
           "sourceUrls": [
             "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/research/inbox/DANMACHI-RESEARCH-060-volume-02-event-extraction.md",
-            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001.md"
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001.md",
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md"
           ]
         }
       ]
@@ -4865,6 +5188,179 @@
           "sourceUrls": [
             "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
             "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-BELL-HESTIA-EVENING-OUTING-INTERRUPTED-001.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001",
+      "recordId": "EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 732,
+      "title": "Eina consulta a Riveria y Loki sobre el vino de Soma Familia",
+      "dateLabel": "Volumen 2 · Capítulo 04 · investigación de Eina en Orario; fecha absoluta desconocida.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Eina investiga la anomalía de Soma Familia. Ve una botella del vino a 60.000 Varisu en Lee Tail y Riveria la acompaña a la sede de Loki Familia. Allí Loki relata su experiencia, la obsesión de Soma por producir el vino y el sistema de recompensas. Los efectos quedan atribuidos a Loki, sin generalizarlos a todos los miembros.",
+      "participants": [
+        {
+          "id": "DM-CHAR-EINA",
+          "name": "Eina Tulle",
+          "kind": "character",
+          "role": "investiga la anomalía"
+        },
+        {
+          "id": "CHAR-RIVERIA-LJOS-ALF",
+          "name": "Riveria Ljos Alf",
+          "kind": "character",
+          "role": "acompaña a Eina y la presenta ante Loki"
+        },
+        {
+          "id": "DM-CHAR-LOKI",
+          "name": "Loki",
+          "kind": "character",
+          "role": "explica su experiencia y conocimiento sobre el vino"
+        }
+      ],
+      "relatedEntities": [
+        {
+          "id": "CHAR-SOMA",
+          "name": "Soma",
+          "kind": "character",
+          "role": "deidad de Soma Familia"
+        },
+        {
+          "id": "FAM-SOMA",
+          "name": "Soma Familia",
+          "kind": "familia",
+          "role": "objeto de la investigación"
+        }
+      ],
+      "detailPath": "events/timeline/EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001.md",
+      "sources": [
+        {
+          "label": "DMR-063 · Volumen 2, Markdown del repositorio, Capítulo 04",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "kind": "repository_markdown",
+          "note": "DMR-063-SRC-001 · Markdown lines 6109–6395, 6415–6435 y 6515–6859; traducción privada sin cotejo japonés. Imágenes/Base64 no inspeccionadas."
+        },
+        {
+          "label": "Registro individual EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001.md",
+          "kind": "internal",
+          "note": "Ficha individual con localizadores y límites de evidencia."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "Sigue a la escena de la Plaza Central en el orden narrativo del Capítulo 04; no se conoce intervalo de calendario.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "Lee Tail y la sede de Loki Familia están en Orario; la fuente no da direcciones ni coordenadas."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "city_level",
+          "context": "Investigación en Lee Tail y conversación posterior en la sede de Loki Familia, ambas en Orario.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-AIS-CONFIRMS-LV6-STATUS-UPDATE-001",
+      "recordId": "EVT-DM-V02-AIS-CONFIRMS-LV6-STATUS-UPDATE-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 733,
+      "title": "Loki actualiza el Estado de Ais y confirma que alcanzó el nivel 6",
+      "dateLabel": "Volumen 2 · Capítulo 04 · actualización del Estado en la sede de Loki Familia; fecha absoluta desconocida.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Tras regresar de una expedición, Ais acepta que Loki actualice su Estado. Loki anuncia que Ais alcanzó el nivel 6. Esta escena confirma el nivel y es distinta del rumor difundido una semana después del combate contra Udaeus. El Markdown no aporta valores numéricos de atributos.",
+      "participants": [
+        {
+          "id": "DM-CHAR-AIS",
+          "name": "Ais Wallenstein",
+          "kind": "character",
+          "role": "acepta la actualización de su Estado"
+        },
+        {
+          "id": "DM-CHAR-LOKI",
+          "name": "Loki",
+          "kind": "character",
+          "role": "actualiza el Estado y anuncia el nivel alcanzado"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V02-AIS-CONFIRMS-LV6-STATUS-UPDATE-001.md",
+      "sources": [
+        {
+          "label": "DMR-063 · Volumen 2, Markdown del repositorio, Capítulo 04",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "kind": "repository_markdown",
+          "note": "DMR-063-SRC-001 · Markdown lines 6881–6913; traducción privada sin cotejo japonés. Imágenes/Base64 no inspeccionadas."
+        },
+        {
+          "label": "Registro individual EVT-DM-V02-AIS-CONFIRMS-LV6-STATUS-UPDATE-001",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-AIS-CONFIRMS-LV6-STATUS-UPDATE-001.md",
+          "kind": "internal",
+          "note": "Ficha individual con localizadores y límites de evidencia."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "Ocurre al cierre de la conversación de Eina con Loki en la sede de Loki Familia; fecha absoluta desconocida.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-AIS-CONFIRMS-LV6-STATUS-UPDATE-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "La actualización tiene lugar en la sede de Loki Familia en Orario; no se conoce una dirección precisa."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "city_level",
+          "context": "Actualización del Estado de Ais en la sede de Loki Familia, registrada a escala de ciudad.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md"
           ]
         }
       ]

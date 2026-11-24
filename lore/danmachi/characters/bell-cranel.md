@@ -382,3 +382,32 @@ El mismo perfil enumera la Armadura de Conejo MK-II y el Protector de Jade (line
 - **Equipo:** Armadura de Conejo MK-II y Protector de Jade. Se reutiliza `OBJ-DM-BELL-JADE-WRIST-GUARD-001` para el Protector de Jade. La identidad de Armadura de Conejo MK-II respecto de la armadura ligera comprada antes no queda resuelta; véase `OBJ-DM-BELL-LIGHT-ARMOR-001`.
 
 **Límites:** no convertir los datos del panel en conocimiento consciente de Bell; no normalizar «Welf Crosso» con «Welf Crozzo» ni fusionar objetos sin evidencia textual suficiente.
+
+## Snapshot de Estado tras la lectura del Grimorio · DMR-063 · CONT-MAIN-LN
+
+**Fuente:** DMR-063-SRC-001, Volumen 2, Markdown lines 5065–5127.
+
+Después de que Bell lee el libro que Seal le presta, Hestia detecta que ha aprendido Magia. El snapshot registra Firebolt y la descripción «Magia de Lanzamiento Rápido». La ventana de Habilidad aparece vacía.
+
+| Atributo | Valor anterior | Valor nuevo |
+|---|---:|---:|
+| Fuerza | B 701 | B 734 |
+| Resistencia | G 287 | F 355 |
+| Destreza | B 715 | B 719 |
+| Agilidad | B 799 | A 817 |
+| Magia | I 0 | I 0 |
+
+Este snapshot es independiente del Estado al cierre del Capítulo 02 y de las actualizaciones anteriores. No sobrescribe ninguno. Hestia plantea como hipótesis que Firebolt podría no requerir canto porque el Estado no muestra uno; la escena no acredita una regla universal.
+
+- Eventos relacionados: adquisición de Firebolt; prueba y agotamiento de Mind; hallazgo y atención por Ais/Riveria.
+- DMR-063 usa exclusivamente el Markdown del repositorio y no coteja este snapshot con la edición japonesa.
+
+## CONT-MAIN-LN · Volumen 2 · Capítulo 04: Grimorio, Naaza y la propuesta contra Lili
+
+Tras huir avergonzado de Ais, Bell regresa a la sede de Hestia Familia. A la mañana siguiente Hestia identifica como Grimorio el libro que Seal le había prestado y explica que el efecto se consume con una sola lectura. Bell decide confesar lo ocurrido. En la Señora de la Abundancia cuenta a Seal que tomó prestado el libro creyendo que alguien lo había olvidado; Mia confirma que ya fue leído y le aconseja no atormentarse. Seal le entrega una cesta antes de que se marche. El pasaje no identifica al propietario original ni demuestra una devolución a esa persona (Markdown lines 5641–5853).
+
+Más tarde Bell visita la tienda de Miach Familia y compra a Naaza una poción de Poder Mental junto con dos pociones normales. Tres días antes había agotado sus pociones de recuperación habituales. Después, en la Plaza Central, un aventurero sin nombre intenta reclutar a Bell para fingir que se asocia con Lili y abandonarla en el Dungeon. Bell rechaza la propuesta de forma tajante y defiende a Lili (lines 5855–6103).
+
+- Eventos existentes ampliados: adquisición de Firebolt/Grimorio, compra de la poción a Naaza y confrontación de Bell con los aventureros que increpan a Lili. No se crean IDs duplicados.
+- Límites: no identificar al dueño original del Grimorio; no vincular con certeza el libro a Freya; no atribuir a los hombres de la Plaza una afiliación no confirmada; no convertir la frase de Naaza en una relación formal.
+- Fuente: DMR-063-SRC-001, Markdown lines 5641–6103; traducción privada sin cotejo japonés.

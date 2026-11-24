@@ -57,3 +57,11 @@ Lili afirma que pertenece a Soma Familia y que sus miembros la excluyen de la re
 - **Continuidad:** CONT-MAIN-LN.
 - **Fuente:** DMR-063-SRC-001, Markdown lines 1405–1447, 1985–2027 y 2643–2694.
 - **Límites:** no inferir política institucional de Soma, culpabilidad colectiva, jerarquías no nombradas ni una relación personal con la deidad Soma.
+
+## CONT-MAIN-LN · Volumen 2 · explicación de Loki sobre el vino
+
+La conversación de Eina con Loki aporta un testimonio directo sobre el funcionamiento que la diosa atribuye a Soma Familia. Loki dice que Soma está obsesionado con elaborar el vino perfeccionado, que cultiva sus ingredientes y que el sistema de recompensas condiciona qué miembros pueden acceder a la bebida. Según Loki, el vino produce un efecto embriagador de corta duración y el consumo repetido puede alimentar el deseo de obtener más, lo que intensifica la competencia por los recursos (DMR-063-SRC-001, Markdown lines 6627–6801).
+
+- Evento: [Eina consulta a Riveria y Loki sobre el vino de Soma Familia](../events/timeline/EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001.md).
+- Límite: no se afirma que cada miembro de Soma Familia tenga dependencia; el detalle permanece atribuido a su testimonio.
+- Fuente: DMR-063-SRC-001, Markdown lines 6627–6859; traducción privada sin cotejo japonés.

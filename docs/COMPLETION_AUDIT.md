@@ -1,3 +1,32 @@
+## Addendum de continuidad DMR-063 — 2026-11-24 · Parte 5
+
+Base de trabajo: main ffd989c39ed9d9c076223bcb24c42f3a41b931ce. Rama: work/dmr-063-volume2-markdown-part4-2026-11-22. PR: [#236](https://github.com/jonhararagi/wordwaifu/pull/236), abierta y sin fusionar.
+
+- DMR-063 cubre Partes 1–5: prólogo/Capítulo 01 (13–1391), Capítulo 02 (1395–3470), Capítulo 03 (3471–5575) y Capítulo 04 (5579–6913).
+- Capítulo 05 comienza en 6917; primera línea narrativa pendiente 6919.
+- Eventos nuevos: EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001 y EVT-DM-V02-AIS-CONFIRMS-LV6-STATUS-UPDATE-001.
+- Se amplían sin duplicar IDs los eventos existentes del Grimorio/Firebolt, la compra de la poción de Mind a Naaza y la confrontación de Bell con quienes increpan a Lili.
+- Se crea CHAR-NAAZA. Catálogo: 255 registros. Cronología: 64 eventos y 58 referencias de lugar.
+- La confirmación de Lv.6 de Ais se mantiene separada del rumor anterior. El relato de Loki sobre el vino conserva atribución.
+- Fuente exclusiva: blob Markdown 9b884520a3b5aa30d25b8b2dfc8721d54b52464e; CONT-MAIN-LN. No se modificó la fuente, no se inspeccionaron imágenes ni se cotejó la traducción con japonés.
+- CI de esta revisión: pendiente de comprobar sobre el nuevo SHA. El PASS de Partes 1–4 no se extrapola.
+- main no se modifica. No fusionar ni cerrar PR #236 sin autorización expresa.
+
+---
+
+# Addendum de continuidad DMR-063 — 2026-11-22
+
+**Base de partida:** main en ffd989c39ed9d9c076223bcb24c42f3a41b931ce.  
+**Resultado documental:** DMR-063 avanza desde el checkpoint 3687 hasta la última línea del Capítulo 03, 5575. Capítulo 04 inicia en 5577; primera línea narrativa pendiente 5579.
+
+- Se amplían las fichas existentes de adquisición y prueba de Firebolt; no se duplican.
+- Se agregan eventos individualizados de Freya y el libro, Lili y la Espada Mágica, y Ais/Riveria encontrando a Bell.
+- DMR-060 sigue separado; DMR-063 solo usa el Markdown del repositorio en CONT-MAIN-LN.
+- Volumen 2 sigue PARTIAL / IN_PROGRESS. Capítulo 04 y capítulos posteriores no se han procesado.
+- **CI:** PASS sobre HEAD `887f4bda089dfa75ea6c1528b769ba62b19d35d0`: [Validate WordWaifu #45099349265](https://github.com/jonhararagi/wordwaifu/actions/runs/45099349265) y [DanMachi Lore and Retrieval Integrity #45099349289](https://github.com/jonhararagi/wordwaifu/actions/runs/45099349289). [PR #236](https://github.com/jonhararagi/wordwaifu/pull/236) sigue abierta/mergeable; main conserva su SHA base y no se fusionó.
+
+---
+
 # Auditoría de finalización de WordWaifu
 
 # Addendum de reconciliación — 2026-11-19
