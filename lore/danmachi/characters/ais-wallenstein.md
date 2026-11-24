@@ -119,3 +119,12 @@ A su regreso desde el piso 37, Ais y Riveria encuentran a Bell inconsciente en e
 - Evento: EVT-DM-V02-AIS-RIVERIA-FIND-BELL-AFTER-MIND-EXHAUSTION-001.
 - Límite: el retorno desde el piso 37 tomó alrededor de tres días según la traducción. No se infiere fecha absoluta ni vínculo romántico confirmado.
 - Fuente: DMR-063-SRC-001, Markdown lines 5395–5573; traducción privada sin cotejo japonés.
+
+## CONT-MAIN-LN · Volumen 2 · actualización de Estado tras una expedición
+
+En el Capítulo 04, Loki propone actualizar el Estado de Ais, que no se había actualizado desde su regreso de la expedición. Ais acepta y, al concluir el procedimiento, Loki anuncia que alcanzó el nivel 6 (Markdown lines 6881–6913).
+
+- Evento: [Loki actualiza el Estado de Ais y confirma que alcanzó el nivel 6](../events/timeline/EVT-DM-V02-AIS-CONFIRMS-LV6-STATUS-UPDATE-001.md).
+- Distinción temporal: el rumor que circuló una semana después del combate contra Udaeus permanece como acontecimiento previo y separado. Esta escena contiene la confirmación posterior.
+- Límite: el fragmento solo da el nivel 6; no aporta valores numéricos de atributos.
+- Fuente: DMR-063-SRC-001, Markdown lines 6399–6499 y 6881–6913; traducción privada sin cotejo japonés.
