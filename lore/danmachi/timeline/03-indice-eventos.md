@@ -135,3 +135,11 @@ Estos tres eventos son distintos de los sucesos posteriores ya indexados en V2. 
 - EVT-DM-V02-AIS-RIVERIA-FIND-BELL-AFTER-MIND-EXHAUSTION-001 — Ais y Riveria encuentran a Bell inconsciente en el quinto piso tras la prueba de Firebolt y agotamiento de Mind (Markdown lines 5395–5573).
 - Los eventos existentes de adquisición/prueba de Firebolt se amplían con evidencia Markdown, sin duplicar sus IDs ni reemplazar la procedencia DMR-060.
 - Checkpoint DMR-063: Capítulo 03 hasta línea 5575; Capítulo 04 inicia en 5577; próxima línea narrativa 5579. Volumen 2 sigue PARTIAL / IN_PROGRESS.
+
+### V2 · Parte 5, Capítulo 04: Vino de Dios (DMR-063 · CONT-MAIN-LN)
+- EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001 — Eina consulta a Riveria y Loki sobre el vino de Soma Familia; el relato sobre sus efectos queda atribuido a Loki (Markdown lines 6109–6859).
+- EVT-DM-V02-AIS-CONFIRMS-LV6-STATUS-UPDATE-001 — Loki actualiza el Estado de Ais y anuncia que alcanzó el nivel 6 (Markdown lines 6881–6913), distinto del rumor anterior.
+- EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001 — ampliado con precios, explicación del agotamiento de Mind y despedida de Naaza (5855–5957); DMR-060 y DMR-063 conservan procedencias independientes.
+- EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001 — ampliado con la propuesta de tender una trampa a Lili y la negativa de Bell (5959–6103), sin duplicar ID.
+- EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001 — ampliado con la identificación del Grimorio y la confesión a Seal/Mia (5641–5853).
+- Nueva ficha: CHAR-NAAZA. El encuentro del comerciante Gnomo y el cliente Hobbit queda como pista ambigua, sin fichas especulativas.
