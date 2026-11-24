@@ -132,3 +132,13 @@ Eina considera aceptable que Bell contrate a Lili, advierte que evite conflictos
 - **Evento relacionado:** prueba y primera expedición de Bell y Lili (../events/timeline/EVT-DM-V02-BELL-LILI-TRIAL-AND-FIRST-EXPEDITION-001.md).
 - **Límite:** esta conversación no es la posterior petición de Eina a Hestia para que convenza a Bell de romper el vínculo; ese acontecimiento se conserva en EVT-DM-V02-HESTIA-EINA-DISCUSS-LILI-001 (DMR-060).
 - **Fuente:** DMR-063-SRC-001, Markdown lines 1951–2095.
+
+## CONT-MAIN-LN · Volumen 2 · investigación de Soma Familia y conversación con Loki
+
+Eina sale del Gremio para investigar la anomalía de Soma Familia. En Lee Tail ve una botella de vino de Soma cuyo precio indicado es 60.000 Varisu. Allí se encuentra con Riveria, a quien la traducción presenta como amiga suya desde la infancia y compañera de su tierra natal. Riveria la lleva a la sede de Loki Familia después de comentar que varios integrantes de su Familia disfrutan del vino sin mostrar el comportamiento que Eina investiga (Markdown lines 6109–6499).
+
+Eina pregunta directamente a Loki por Soma. La explicación de la diosa relaciona la anomalía con la obsesión de Soma por elaborar el vino perfeccionado y con un sistema de recompensas que condiciona el acceso a la bebida. Loki atribuye al vino un efecto embriagador de corta duración que, con consumo repetido, puede alimentar el deseo de obtener más y la competencia entre miembros (lines 6515–6859).
+
+- Evento: [Eina consulta a Riveria y Loki sobre el vino de Soma Familia](../events/timeline/EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001.md).
+- Límite: la explicación sobre Soma y los efectos del vino es el relato de Loki; no es una verificación independiente.
+- Fuente: DMR-063-SRC-001, Markdown lines 6109–6395, 6415–6435 y 6515–6859; traducción privada sin cotejo japonés.
