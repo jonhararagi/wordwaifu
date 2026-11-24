@@ -5175,6 +5175,179 @@
           ]
         }
       ]
+    },
+    {
+      "id": "EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001",
+      "recordId": "EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 732,
+      "title": "Eina consulta a Riveria y Loki sobre el vino de Soma Familia",
+      "dateLabel": "Volumen 2 · Capítulo 04 · investigación de Eina en Orario; fecha absoluta desconocida.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Eina investiga la anomalía de Soma Familia. Ve una botella del vino a 60.000 Varisu en Lee Tail y Riveria la acompaña a la sede de Loki Familia. Allí Loki relata su experiencia, la obsesión de Soma por producir el vino y el sistema de recompensas. Los efectos quedan atribuidos a Loki, sin generalizarlos a todos los miembros.",
+      "participants": [
+        {
+          "id": "DM-CHAR-EINA",
+          "name": "Eina Tulle",
+          "kind": "character",
+          "role": "investiga la anomalía"
+        },
+        {
+          "id": "CHAR-RIVERIA-LJOS-ALF",
+          "name": "Riveria Ljos Alf",
+          "kind": "character",
+          "role": "acompaña a Eina y la presenta ante Loki"
+        },
+        {
+          "id": "DM-CHAR-LOKI",
+          "name": "Loki",
+          "kind": "character",
+          "role": "explica su experiencia y conocimiento sobre el vino"
+        }
+      ],
+      "relatedEntities": [
+        {
+          "id": "CHAR-SOMA",
+          "name": "Soma",
+          "kind": "character",
+          "role": "deidad de Soma Familia"
+        },
+        {
+          "id": "FAM-SOMA",
+          "name": "Soma Familia",
+          "kind": "familia",
+          "role": "objeto de la investigación"
+        }
+      ],
+      "detailPath": "events/timeline/EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001.md",
+      "sources": [
+        {
+          "label": "DMR-063 · Volumen 2, Markdown del repositorio, Capítulo 04",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "kind": "repository_markdown",
+          "note": "DMR-063-SRC-001 · Markdown lines 6109–6395, 6415–6435 y 6515–6859; traducción privada sin cotejo japonés. Imágenes/Base64 no inspeccionadas."
+        },
+        {
+          "label": "Registro individual EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001.md",
+          "kind": "internal",
+          "note": "Ficha individual con localizadores y límites de evidencia."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "Sigue a la escena de la Plaza Central en el orden narrativo del Capítulo 04; no se conoce intervalo de calendario.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "Lee Tail y la sede de Loki Familia están en Orario; la fuente no da direcciones ni coordenadas."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "city_level",
+          "context": "Investigación en Lee Tail y conversación posterior en la sede de Loki Familia, ambas en Orario.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EVT-DM-V02-AIS-CONFIRMS-LV6-STATUS-UPDATE-001",
+      "recordId": "EVT-DM-V02-AIS-CONFIRMS-LV6-STATUS-UPDATE-001",
+      "eraId": "ERA-05-MAIN-START",
+      "sortIndex": 733,
+      "title": "Loki actualiza el Estado de Ais y confirma que alcanzó el nivel 6",
+      "dateLabel": "Volumen 2 · Capítulo 04 · actualización del Estado en la sede de Loki Familia; fecha absoluta desconocida.",
+      "continuityScopes": [
+        "CONT-MAIN-LN"
+      ],
+      "evidenceStatus": "source_checked_translation_unverified",
+      "summary": "Tras regresar de una expedición, Ais acepta que Loki actualice su Estado. Loki anuncia que Ais alcanzó el nivel 6. Esta escena confirma el nivel y es distinta del rumor difundido una semana después del combate contra Udaeus. El Markdown no aporta valores numéricos de atributos.",
+      "participants": [
+        {
+          "id": "DM-CHAR-AIS",
+          "name": "Ais Wallenstein",
+          "kind": "character",
+          "role": "acepta la actualización de su Estado"
+        },
+        {
+          "id": "DM-CHAR-LOKI",
+          "name": "Loki",
+          "kind": "character",
+          "role": "actualiza el Estado y anuncia el nivel alcanzado"
+        }
+      ],
+      "relatedEntities": [],
+      "detailPath": "events/timeline/EVT-DM-V02-AIS-CONFIRMS-LV6-STATUS-UPDATE-001.md",
+      "sources": [
+        {
+          "label": "DMR-063 · Volumen 2, Markdown del repositorio, Capítulo 04",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "kind": "repository_markdown",
+          "note": "DMR-063-SRC-001 · Markdown lines 6881–6913; traducción privada sin cotejo japonés. Imágenes/Base64 no inspeccionadas."
+        },
+        {
+          "label": "Registro individual EVT-DM-V02-AIS-CONFIRMS-LV6-STATUS-UPDATE-001",
+          "url": "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-AIS-CONFIRMS-LV6-STATUS-UPDATE-001.md",
+          "kind": "internal",
+          "note": "Ficha individual con localizadores y límites de evidencia."
+        }
+      ],
+      "temporal": {
+        "kind": "relative_order",
+        "relation": "after",
+        "referenceIds": [
+          "EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001"
+        ],
+        "distanceKnown": false,
+        "precision": "order_only",
+        "qualifier": "Ocurre al cierre de la conversación de Eina con Loki en la sede de Loki Familia; fecha absoluta desconocida.",
+        "sourceUrls": [
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md",
+          "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/events/timeline/EVT-DM-V02-AIS-CONFIRMS-LV6-STATUS-UPDATE-001.md"
+        ]
+      },
+      "narrativeOrigin": {
+        "kind": "published_reference"
+      },
+      "locationAssessment": {
+        "status": "verified",
+        "spatialPrecision": "city_level",
+        "reason": "La actualización tiene lugar en la sede de Loki Familia en Orario; no se conoce una dirección precisa."
+      },
+      "locationRefs": [
+        {
+          "locationId": "LOC-ORARIO",
+          "relationship": "event_place",
+          "verificationStatus": "verified",
+          "spatialPrecision": "city_level",
+          "context": "Actualización del Estado de Ais en la sede de Loki Familia, registrada a escala de ciudad.",
+          "sourceUrls": [
+            "https://github.com/jonhararagi/wordwaifu/blob/main/lore/danmachi/volumes/main/Volumen%20%5B02%5D%20%E2%80%A2%20DanMachi.md"
+          ]
+        }
+      ]
     }
   ],
   "temporalModelVersion": 1,
