@@ -6,9 +6,9 @@ status: source_checked_translation_unverified
 continuity_scope: CONT-MAIN-LN
 source_refs:
   - DMR-063-SRC-001
-tags: [volume-02, markdown-only, parts-1-4, Bell, Eina, Liliruca, Ryuu, Ant Killer, Spartoi, Udaeus]
+tags: [volume-02, markdown-only, parts-1-5, Bell, Eina, Liliruca, Ryuu, Ant Killer, Spartoi, Udaeus]
 ---
-# DANMACHI-RESEARCH-063 — Volumen 2: extracción Markdown, Partes 1–4
+# DANMACHI-RESEARCH-063 — Volumen 2: extracción Markdown, Partes 1–5
 
 ## Alcance y método
 
@@ -341,7 +341,7 @@ Ais reconoce a Bell por el incidente del Minotauro y expresa que quiere compensa
 12. Las líneas con imágenes incrustadas/Base64 no se inspeccionaron visualmente ni se usaron para atribuir identidades, equipo o información adicional.
 13. La traducción española del Markdown continúa sin cotejo independiente con el original japonés.
 
-## Checkpoint vigente · después de la Parte 4
+## Checkpoint histórico · después de la Parte 4
 
 - Última línea narrativa procesada: 5573; última línea del bloque incluido: 5575.
 - Capítulo 03: cubierto desde la continuación de 3687 hasta 5575.
@@ -350,4 +350,75 @@ Ais reconoce a Bell por el incidente del Minotauro y expresa que quiere compensa
 - Siguiente tarea: continuar exclusivamente desde 5579 del mismo Markdown. No repetir Partes 1–4 ni reabrir 3471–5575.
 - Estado del Volumen 2: PARTIAL / IN_PROGRESS. Capítulo 04 y capítulos posteriores siguen pendientes.
 - Fuente original: el blob 9b884520a3b5aa30d25b8b2dfc8721d54b52464e no se modifica.
+- Continuidad: CONT-MAIN-LN.
+
+---
+## Parte 5 · Capítulo 04 — Vino de Dios · líneas 5579–6913
+
+### Intercambio ambiguo en la tienda de un Gnomo · 5579–5637
+Un cliente Hobbit masculino negocia con un comerciante Gnomo y obtiene un artículo o servicio relacionado con resistencia al veneno por 48.000 Varisu. La conversación deriva hacia rumores sobre una mujer Hobbit acusada de robar objetos y dejar sin equipo a aventureros. La identidad de los tres interlocutores no se determina. No se asigna el rumor a Lili ni se crean fichas o eventos especulativos.
+
+### Hestia identifica el Grimorio y Bell confiesa a Seal · 5641–5853
+A la mañana siguiente, Hestia reconoce como Grimorio el libro que Seal prestó a Bell. Explica que es un objeto excepcional y que su efecto se consume tras una lectura (5671–5729). Bell decide confesar lo ocurrido a Seal. En la Señora de la Abundancia explica que tomó prestado el volumen al creer que alguien lo había olvidado. Mia confirma que ya fue leído y aconseja a Bell no atormentarse; Seal le entrega una cesta al despedirlo (5763–5853).
+
+- Se amplía EVT-DM-V02-BELL-FIREBOLT-ACQUISITION-001, que ya documenta la lectura del mismo libro y la obtención de Firebolt.
+- No se identifica al propietario original ni se confirma su devolución física. La conexión entre el Grimorio y el libro que Freya decide dejar permanece como inferencia.
+
+### Bell compra a Naaza una poción de recuperación de Mind · 5855–5957
+Bell recuerda que agotó sus pociones normales tres días antes. En la tienda de Miach Familia encuentra a Naaza, identificada expresamente como integrante de la Familia y encargada del local en ausencia de Miach. Naaza explica que la magia consume Poder Mental y que el exceso puede causar desmayos. Ofrece una poción temprana de recuperación de Mind por 8.700 Varisu, más dos pociones normales por 9.000 Varisu en total. Bell acepta para emergencias. Naaza dice «Te amo» y Bell se sonroja.
+
+- Se amplía EVT-DM-V02-BELL-BUYS-MIND-POTION-NAZA-001, conservando DMR-060 y DMR-063 como procedencias independientes.
+- Se crea CHAR-NAAZA y se enlaza con Miach Familia. No se infiere una relación formal a partir de la frase de despedida.
+
+### Bell rechaza la propuesta para tenderle una trampa a Lili · 5959–6103
+Bell ve a Lili rodeada por tres aventureros. Un hombre que reconoce de un encuentro previo en un callejón intenta reclutarlo para fingir que se une a Lili y luego abandonarla en el Dungeon. Bell rechaza la propuesta. Lili solo dice que también recibió una propuesta de reclutamiento y la rechazó.
+
+- Se amplía EVT-DM-V02-BELL-WITNESSES-LILI-HARASSMENT-001, sin duplicar el acontecimiento.
+- No se confirma la afiliación de los tres hombres ni que la supuesta Hobbit ladrona sea Lili.
+
+### Eina investiga el vino de Soma y consulta a Riveria y Loki · 6109–6859
+Eina investiga la anomalía de Soma Familia. En Lee Tail ve una botella de vino de Soma a 60.000 Varisu. Allí se encuentra con Riveria, amiga suya desde la infancia según la traducción. Riveria comenta que varios miembros de Loki Familia disfrutan del vino sin mostrar el comportamiento que Eina investiga y la invita a la sede de su Familia (6109–6499).
+
+Loki cuenta que probó el vino y quedó cautivada, que buscó la bebida perfeccionada y que Soma se negó a compartirla. Según Loki, Soma cultiva los ingredientes y su Familia gira en torno a su obsesión por producir el vino. Explica un sistema de recompensas que condiciona el acceso de los miembros y atribuye al vino perfeccionado un efecto embriagador temporal; el consumo repetido puede alimentar el deseo de obtener más y la competencia por recursos (6515–6801). Cierra con una metáfora sobre los miembros fuertes que se aprovechan de los débiles y los dejan sin equipo (6823–6859).
+
+- Nuevo evento: EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001.
+- La explicación sobre los efectos y el sistema de recompensas queda atribuida a Loki. No se aplica a todos los integrantes ni se trata como comprobación omnisciente. La advertencia metafórica no identifica directamente a Lili.
+
+### Loki actualiza el Estado de Ais y confirma el nivel 6 · 6881–6913
+Ais acepta que Loki actualice su Estado. Tras el procedimiento, Loki anuncia que Ais alcanzó el nivel 6.
+
+- Nuevo evento: EVT-DM-V02-AIS-CONFIRMS-LV6-STATUS-UPDATE-001.
+- Esta confirmación posterior se registra aparte del rumor de nivel 6 una semana después del combate contra Udaeus. El rumor conserva su ID y su condición.
+- No se inventan valores numéricos de atributos.
+
+## Reconciliación funcional de la Parte 5
+- Se reutilizan Bell, Hestia, Seal, Mia, Eina, Riveria, Loki, Ais, Lili, Soma, Soma Familia y Miach Familia.
+- Nueva ficha: CHAR-NAAZA.
+- Eventos existentes ampliados: Firebolt/Grimorio; compra a Naaza; confrontación de Bell con quienes increpan a Lili.
+- Eventos nuevos: EVT-DM-V02-EINA-INVESTIGATES-SOMA-WINE-001 y EVT-DM-V02-AIS-CONFIRMS-LV6-STATUS-UPDATE-001.
+- Fuente exclusiva DMR-063-SRC-001, Markdown del repositorio y continuidad CONT-MAIN-LN. DMR-060 conserva sus localizadores PDF por separado.
+
+## Pendientes de la Parte 5
+1. Identidad del cliente Hobbit y del comerciante Gnomo: no indicada.
+2. Especificación completa del objeto o servicio de resistencia al veneno: no establecida.
+3. Identidad de la mujer Hobbit de los rumores: no demostrada ni vinculada a Lili.
+4. Propietario original y destino físico del Grimorio: no confirmados.
+5. Identidad entre el Grimorio y el libro que Freya decide dejar: inferencia.
+6. Intención completa de Naaza al decir «Te amo»: abierta.
+7. Afiliación de los tres hombres de la Plaza: no confirmada.
+8. Identidad del aventurero que intenta reclutar a Bell: sigue sin nombre.
+9. Los efectos del vino y el sistema de recompensas proceden del relato de Loki.
+10. La advertencia sobre la pérdida de equipo es metafórica y no identifica víctima.
+11. La actualización confirma Lv.6, pero no ofrece un cuadro numérico.
+12. No se asignan fechas absolutas a los sucesos.
+13. Aizu y Riviera se conservan como variantes de esta traducción.
+14. Imágenes/Base64 no inspeccionadas y traducción sin cotejo japonés.
+
+## Checkpoint vigente · después de la Parte 5
+- Capítulo 04: procesado desde la línea narrativa 5579 hasta 6913.
+- Encabezado del Capítulo 05, Reinicio: línea 6917.
+- Primera línea narrativa pendiente: **6919**.
+- Continuar exclusivamente desde 6919; no repetir Partes 1–5 ni reabrir 5579–6913.
+- Volumen 2 permanece PARTIAL / IN_PROGRESS.
+- Fuente original: blob 9b884520a3b5aa30d25b8b2dfc8721d54b52464e, sin modificar.
 - Continuidad: CONT-MAIN-LN.
